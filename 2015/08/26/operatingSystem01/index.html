@@ -1,0 +1,2225 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="hRzEYlh3gL">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=7.1.1">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1. 前言华中科技大学的讲义很不错主要备份了此讲义的内容[1]文中用到的一些概念：  原语：操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。">
+<meta name="keywords" content="operating system">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统一">
+<meta property="og:url" content="https://blog.xuwei.fun/2015/08/26/operatingSystem01/index.html">
+<meta property="og:site_name" content="霁月荒馆">
+<meta property="og:description" content="1. 前言华中科技大学的讲义很不错主要备份了此讲义的内容[1]文中用到的一些概念：  原语：操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_1.jpg">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_2.jpg">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_3.jpg">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_4.jpg">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_5.gif">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_6.gif">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_7.jpg">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_8.jpg">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_9.gif">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_10.jpg">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_11.jpg">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_12.gif">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_13.jpg">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_14.jpg">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_15.gif">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_16.gif">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_17.gif">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_18.gif">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_19.gif">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_20.gif">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_21.jpg">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_22.jpg">
+<meta property="og:updated_time" content="2019-05-18T14:24:33.178Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="操作系统一">
+<meta name="twitter:description" content="1. 前言华中科技大学的讲义很不错主要备份了此讲义的内容[1]文中用到的一些概念：  原语：操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。">
+<meta name="twitter:image" content="https://blog.xuwei.fun/images/operatingSystem01_1.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="霁月荒馆" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://blog.xuwei.fun/2015/08/26/operatingSystem01/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>操作系统一 | 霁月荒馆</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">霁月荒馆</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">以今日之我与昨日之我战</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-thoughts">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/thoughts/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>Thoughts</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-excerpt">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/excerpt/" rel="section"><i class="menu-item-icon fa fa-fw fa-paperclip"></i> <br>Excerpt</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404.html/" rel="section"><i class="menu-item-icon fa fa-fw fa-child"></i> <br>Commonweal 404</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-foryou">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/foryou/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>ForYou</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2015/08/26/operatingSystem01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kino">
+      <meta itemprop="description" content="Amor Fati">
+      <meta itemprop="image" content="/images/site/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="霁月荒馆">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">操作系统一
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2015-08-26 15:30:00" itemprop="dateCreated datePublished" datetime="2015-08-26T15:30:00+08:00">2015-08-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/science/" itemprop="url" rel="index"><span itemprop="name">science</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/science/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p><strong>华中科技大学的讲义很不错</strong><br>主要备份了此讲义的内容<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="<http://202.114.32.200:8080/courseware/208310/20831011/>
+">[1]</span></a></sup><br>文中用到的一些概念：</p>
+<ul>
+<li>原语：操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。</li>
+</ul>
+<a id="more"></a>
+<h3 id="2-操作系统简介"><a href="#2-操作系统简介" class="headerlink" title="2. 操作系统简介"></a>2. 操作系统简介</h3><h4 id="2-1-发展过程"><a href="#2-1-发展过程" class="headerlink" title="2.1 发展过程"></a>2.1 发展过程</h4><p>无操作系统:人工操作-&gt;脱机I/O方式<br>单道批处理系统-&gt;多道批处理系统-&gt;分时系统-&gt;实时系统-&gt;网络操作系统-&gt;分布式操作系统</p>
+<h4 id="2-2-基本特性"><a href="#2-2-基本特性" class="headerlink" title="2.2 基本特性"></a>2.2 基本特性</h4><ul>
+<li>并发</li>
+<li>共享: 互斥共享模式和同时访问模式</li>
+<li>虚拟</li>
+<li>异步</li>
+</ul>
+<h4 id="2-3-主要功能"><a href="#2-3-主要功能" class="headerlink" title="2.3 主要功能"></a>2.3 主要功能</h4><ul>
+<li>处理机管理功能: 进程控制、进程同步、进程通信</li>
+<li>存储器管理功能: 内存分配、内存保护、地址映射、内存扩充</li>
+<li>设备管理功能: 缓冲管理、设备分配、设备处理</li>
+<li>文件管理功能: 文件存储空间的管理、目录管理、文件的读/写管理和保护</li>
+<li>用户接口: 命令接口、程序接口、图形接口</li>
+</ul>
+<h3 id="3-进程"><a href="#3-进程" class="headerlink" title="3. 进程"></a>3. 进程</h3><h4 id="3-1-进程的特征与状态"><a href="#3-1-进程的特征与状态" class="headerlink" title="3.1 进程的特征与状态"></a>3.1 进程的特征与状态</h4><p>为使程序能够并发执行，且为了对并发执行的程序加以描述和控制,因此引入了”进程”的概念:</p>
+<ul>
+<li>结构特征</li>
+<li>动态性</li>
+<li>并发性</li>
+<li>独立性</li>
+<li>异步性</li>
+</ul>
+<h5 id="3-1-1-定义"><a href="#3-1-1-定义" class="headerlink" title="3.1.1 定义"></a>3.1.1 定义</h5><ul>
+<li>1) 进程是程序的一次执行</li>
+<li>2) 进程是一个程序及其数据在处理机上顺序执行所发生的活动</li>
+<li>3) 进程是程序在一个数据集合上运行的过程，它是系统进行资源分配和调度的一个独立单位</li>
+</ul>
+<h5 id="3-1-2-三种基本状态"><a href="#3-1-2-三种基本状态" class="headerlink" title="3.1.2 三种基本状态"></a>3.1.2 三种基本状态</h5><ul>
+<li>就绪状态</li>
+<li>运行状态</li>
+<li>等待(阻塞)状态</li>
+</ul>
+<h5 id="3-1-3-挂起状态"><a href="#3-1-3-挂起状态" class="headerlink" title="3.1.3 挂起状态"></a>3.1.3 挂起状态</h5><h5 id="3-1-4-进程控制块-PCB"><a href="#3-1-4-进程控制块-PCB" class="headerlink" title="3.1.4 进程控制块(PCB)"></a>3.1.4 进程控制块(PCB)</h5><p>进程是程序的一次执行过程，程序是完成该进程的操作的算法描述。当程序并发执行时，产生了动态特征，并由于并发程序之间的相互制约关系而形成了一个比较复杂的外界环境。为了描述一个进程和其他进程以及系统资源的关系，刻画了一个进程在各个不同时期所处的状态，人们采用了一个与进程相联系的数据块来描述，称为进程控制块(Process Control Block, PCB)或进程描述器(Process Descriptor)。进程控制块是一个数据结构，是标识进程存在的实体。当系统创建一个进程时，必须为它设置一个PCB，然后根据PCB的信息对进程实施控制和管理，进程任务完成时，系统撤销它的PCB，进程也随之消亡。对一般系统而言，PCB应具有以下信息：</p>
+<ul>
+<li>进程标识符</li>
+<li>进程的状态</li>
+<li>当前队列指针next</li>
+<li>进程优先级priority</li>
+<li>CPU现场保护区cpustatus</li>
+<li>通信信息communication infomation</li>
+<li>家族联系process family</li>
+<li>占用资源清单own_resource</li>
+</ul>
+<h5 id="3-1-5-总结"><a href="#3-1-5-总结" class="headerlink" title="3.1.5 总结"></a>3.1.5 总结</h5><p>从结构上说，每个进程都由一个程序段(包括数据)和一个进程控制块PCB组成。程序和数据描述进程本身应该完成的功能，而PCB则描述进程的动态特征，进程与其他进程和系统资源的关系</p>
+<h4 id="3-2-进程控制"><a href="#3-2-进程控制" class="headerlink" title="3.2 进程控制"></a>3.2 进程控制</h4><h5 id="3-2-1-进程创建"><a href="#3-2-1-进程创建" class="headerlink" title="3.2.1 进程创建"></a>3.2.1 进程创建</h5><p>在系统初启时，创建并产生一些必须的、承担系统资源分配和管理工作的系统进程，而用户进程是在用户程序提交给系统时创建的。当用户程序进入系统时，系统为该程序创建一个进程，这个进程还可以创建一些子进程，以完成一些并行的工作，创建者称为父进程，被创建者称为子进程，创建父进程的进程被称为祖父进程，这样就构成了一个进程家族。<br>进程管理的基本功能之一就是提供创建进程的支持，这些新进程是一个与现有进程不同的实体。用户不能直接创建进程，只能通过操作系统提供的进程创建原语，以系统请求的方式向操作系统申请创建一个进程</p>
+<h5 id="3-2-2-进程撤销"><a href="#3-2-2-进程撤销" class="headerlink" title="3.2.2 进程撤销"></a>3.2.2 进程撤销</h5><p>进程撤销的功能包括：撤销本进程、撤销一个指定标识符的进程或者撤销一组子进程，后面两个撤销命令只能用于父进程撤销子进程。撤销本进程的功能是将当前运行的进程(因为是自我撤销)的PCB结构归还到PCB结构池，所占用的资源归还给父进程，然后转进程调度程序。</p>
+<h5 id="3-2-3-进程阻塞"><a href="#3-2-3-进程阻塞" class="headerlink" title="3.2.3 进程阻塞"></a>3.2.3 进程阻塞</h5><p>当进程要等待某一事件完成时，它可以调用阻塞原语将自己挂起。进程一旦挂起，就只能由另一个进程唤醒，进程阻塞的原语形式为<code>susp(chan)</code>，参数chan是进程等待的原因。<br>阻塞命令的功能是停止调用进程的执行，将CPU现场保留到该进程的PCB现场保护区，然后改变其状态为”等待”，并插入到等待chan的等待队列，最后使控制转向进程调度</p>
+<h5 id="3-2-4-进程唤醒"><a href="#3-2-4-进程唤醒" class="headerlink" title="3.2.4 进程唤醒"></a>3.2.4 进程唤醒</h5><p>进程由”运行”变为”阻塞”状态是由于进程必须等待某一事件的发生，所以处于阻塞状态的进程是不可能唤醒自己的。例如，某进程正在等待I/O操作完成或等待其他进程发消息给它，只有当该进程所期待的事件出现时，才由发现者进程用唤醒原语叫醒它。一般来说，发现者进程和被唤醒进程是合作的并发进程，唤醒原语的形式为<code>wakeup(chan)</code><br>唤醒原语的功能是当进程等待的事件发生时，唤醒等待该事件的进程</p>
+<h4 id="3-3-进程间的约束关系"><a href="#3-3-进程间的约束关系" class="headerlink" title="3.3 进程间的约束关系"></a>3.3 进程间的约束关系</h4><h5 id="3-3-1-进程竞争与合作"><a href="#3-3-1-进程竞争与合作" class="headerlink" title="3.3.1 进程竞争与合作"></a>3.3.1 进程竞争与合作</h5><ul>
+<li>竞争系统资源<br>进程间的相互制约关系，有一种情况是由于竞争系统资源而引起的间接的相互制约关系。进程共享系统资源，他们对共享资源的使用是通过操作系统的资源管理程序来协调的。凡需使用共享资源的进程，先向系统提出申请，然后由资源管理程序根据资源状况，按一定的策略来实施分配。</li>
+<li>进程协作<br>当进程之间存在有共享数据时，将引起直接的相互制约关系。例如，并发进程共享了某些数据、变量、队列等，为了保证数据的完整性，需要正确地处理进程协作的问题。解决进程协作问题的方法是操作系统提供一种同步机构，各进程利用这些同步机构来使用共享数据，来实现正确的协作。进程在以下两种情况下需要协作：<ul>
+<li>信息共享<br>由于多个用户可能对同样的信息感兴趣，所以操作系统必须提供支持，以允许这些资源类型的并发访问。由于对多个信息(数据)共享，这些进程是合作进程。</li>
+<li>并行处理<br>如果一个任务在逻辑上可以分为多个子任务，这些子任务可以并发执行以加快该任务的处理速度。由于这些子任务是为了完成一个整体任务而并发执行的，他们之间一定有直接的相互制约关系。这些进程称为合作进程<br>协调进程间的直接相互制约关系就是要协调各进程前进的步伐，即实现进程的同步，而要实现进程正确的同步，则必须支持进程间的信息传递，这就是进程间的通信。进程同步可细分为：进程互斥、进程同步和进程的直接通信</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-3-2-进程互斥的概念"><a href="#3-3-2-进程互斥的概念" class="headerlink" title="3.3.2 进程互斥的概念"></a>3.3.2 进程互斥的概念</h5><p>进程同步是通过进程间的通信来实现的，他们之间需要交换信息以便达到协调的目的。进程同步广义上是指对于进程操作的时间顺序所加的某种限制。在这些同步规则中有一个比较特殊的规则是”多个操作绝不能再同一时刻执行”，这种同步规则成为互斥。所以同步是一个大的范畴，互斥是同步的一个特例，但二者又有区别。为理解进程互斥的概念，先讨论临界资源和临界区的概念。</p>
+<ul>
+<li>临界资源<br>通常把一次仅允许一个进程使用的资源称为临界资源。</li>
+<li>临界区<br>一组进程共享某一临界资源，这组进程中的每一个进程对应的程序中都包含了一个访问该临界资源的程序段。在每个进程中，访问该临界资源的那段程序能够从概念上分离出来，称为临界区或临界段。<br>临界区是进程中队公共变量(或存储区)进行访问与修改的程序段，成为相对于该公共变量的临界区。关于临界区的概念需要注意以下几点：<ul>
+<li>临界区是针对某一临界资源而言的</li>
+<li>相对于某临界资源的临界区个数就是共享该临界资源的进程个数</li>
+<li>相对于同一公共变量的若干临界区，必须是互斥地进入，即一个进程执行完毕且出了临界区，另一个进程才能进入他的临界区。<br>为禁止两个进程同时进入临界区所采用的方法必须遵循下列准则：</li>
+<li>当有若干进程欲进入它的临界区时，应在有限时间内使进程进入临界区。换言之，他们不应相互阻塞而致使彼此都不能进入临界区。</li>
+<li>每次至多有一个进程处于临界区</li>
+<li>进程在临界区内仅逗留有限时间</li>
+</ul>
+</li>
+<li>互斥<br>进程互斥可描述为：在操作系统中，当某一进程正在访问某一存储区域时，就不允许其他进程来读出或者修改该存储区的内容，否则会发生无法估计的错误。进程间的这种相互制约的关系称为互斥</li>
+</ul>
+<h5 id="3-3-3-进程同步的概念"><a href="#3-3-3-进程同步的概念" class="headerlink" title="3.3.3 进程同步的概念"></a>3.3.3 进程同步的概念</h5><ul>
+<li>什么是同步<br>所谓同步，是指多个相互合作的进程，在一些关键点上可能需要相互等待或相互交换信息，这种互相制约的关系称为进程同步。</li>
+<li>同步的例子<br>系统中有两个合作的进程，他们共用一个单缓冲区。这两个进程一个是计算进程，负责对数据进行计算；另一个为打印进程，负责对计算结果进行打印。当计算进程没有计算完毕，计算结果没有送到缓冲区的时候，打印进程就不能打印。一旦计算进程把计算结果送入缓冲区，就应该给打印进程发送一个信号，打印进程收到信号后就可以从缓冲区中取出计算结果进行打印。</li>
+</ul>
+<h4 id="3-4-同步机构"><a href="#3-4-同步机构" class="headerlink" title="3.4 同步机构"></a>3.4 同步机构</h4><p>要实现进程间正确的协作，必须具备两个条件:</p>
+<ul>
+<li>应用程序的编制者必须十分清楚并发进程之间的同步关系，知道何处需要等待，何处需要给对方发消息</li>
+<li>操作系统必须提供实现进程协作的措施和方法，称为同步机构。用户程序利用操作系统提供的同步机构来实现正确的同步。</li>
+</ul>
+<p>操作系统提供的同步机构有以下两种：</p>
+<ul>
+<li>锁和上锁、开锁操作</li>
+<li>信号灯(或称之为信号量)和P、V操作</li>
+</ul>
+<p>锁和信号灯是一个物理实体，采用一个标志位代表某种资源的状态或并发程序当前的状态。而基于标志上的操作是为了询问资源或进程的当前状态，以便进行正确的控制。这两个同步机构都可以实现进程互斥，而信号灯比锁的功能更强一些，它还可以方便的实现进程同步。</p>
+<h5 id="3-4-1-锁和上锁、开锁操作"><a href="#3-4-1-锁和上锁、开锁操作" class="headerlink" title="3.4.1 锁和上锁、开锁操作"></a>3.4.1 锁和上锁、开锁操作</h5><p>在锁同步机构中，对应于每一个共享的临界资源(如数据块或设备)都要有一个单独的锁位。常用锁位值为”0”表示资源可用，为”1”表示资源已被占用<br>进程使用共享资源之前必须完成以下操作，称为关锁操作：</p>
+<ul>
+<li>检测锁位的值</li>
+<li>如果原来是0，将其置为1</li>
+<li>如果原来是1，再次返回到检测锁位值的步骤</li>
+</ul>
+<p>当进程使用完资源后，它将锁位置为0，称为开锁操作<br>系统提供一个在锁位w上的两个原语操作lock(w)和unlock(w)，其算法描述分别见下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">算法 lock</span><br><span class="line">输入: 锁变量w</span><br><span class="line">输出: 无</span><br><span class="line">&#123;</span><br><span class="line">    test;</span><br><span class="line">    if(w==1):</span><br><span class="line">        goto test  //测试锁位的值</span><br><span class="line">    else:</span><br><span class="line">        w=1         //上锁</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">算法 unlock</span><br><span class="line">输入: 锁变量w</span><br><span class="line">输出: 无</span><br><span class="line">&#123;</span><br><span class="line">    w=0     //开锁</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在测试锁位值和置锁位的值为1这两步间，锁位不得被其他进程所改变。<br>在上述上锁原语中，goto语句使执行lock(w)原语的进程可能要循环测试而占用处理机时间(称为”忙等待”)。为此，可将上锁原语和开锁原语做进一步修改。修改后的上锁过程和开锁过程如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">算法 lock1</span><br><span class="line">输入: 锁变量w</span><br><span class="line">输出: 无</span><br><span class="line">&#123;</span><br><span class="line">    while(w==1):</span><br><span class="line">        保护现行进程的CPU现场</span><br><span class="line">        将现行进程的PCB插入w的等待队列</span><br><span class="line">        置该进程为&quot;等待&quot;状态</span><br><span class="line">        转进程调度</span><br><span class="line">    w=1     //上锁</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">算法 unlock1</span><br><span class="line">输入: 锁变量w</span><br><span class="line">输出: 无</span><br><span class="line">&#123;</span><br><span class="line">    if(w等待队列不空):</span><br><span class="line">        移出等待队列首元素</span><br><span class="line">        将该进程的PCB插入就绪队列</span><br><span class="line">        置该进程为&quot;就绪&quot;状态</span><br><span class="line">    w=0     //开锁</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3-4-2-信号灯和P、V操作"><a href="#3-4-2-信号灯和P、V操作" class="headerlink" title="3.4.2 信号灯和P、V操作"></a>3.4.2 信号灯和P、V操作</h5><ul>
+<li>信号灯<br>信号灯是一个确定的二元组(s,q)，s是一个具有非负初值的整形变量，q是一个初始状态为空的队列。整形变量s代表代表资源的实体或者并发进程的状态。操作系统利用信号灯的状态对并发进程和共享资源进行管理。<br>一个信号灯的建立必须经过说明，即应该准确说明信号灯s的意义和初值(非负)。每个信号灯都有相应的一个队列，在建立信号灯时，队列为空。当信号灯的值大于或等于0时，表示绿灯，表示进程可以继续推进，若小于0，表示红灯，进程被阻。整形变量s的值可以改变，以反映资源或并发进程状态的改变。操作系统提供称为P、V操作原语来实施对信号灯的操作。需要提及的是，信号灯的值只能由P、V操作原语来改变，由用户程序给出信号灯的初值，其后信号灯在进程同步过程中的值不能由用户程序直接修改。</li>
+<li><p>P、V操作</p>
+<ul>
+<li><p>P操作<br>对信号灯的P操作记为P(s)，P(s)是个不可分割的原语操作，即取信号灯值减1，若结果为负，则调用P(s)的进程被阻，并插入到该信号灯的等待队列中，否则可以继续执行<br>P操作的主要动作如下：</p>
+<ul>
+<li>s值减1</li>
+<li>若结果大于等于0，则进程继续执行</li>
+<li>若相减结果小于0，该进程被封锁，并将它插入到该信号灯的等待队列中，然后转进程调度程序<br>具体算法描述：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">算法 P</span><br><span class="line">输入: 变量s</span><br><span class="line">输出: 无</span><br><span class="line">&#123;</span><br><span class="line">    s--</span><br><span class="line">    if(s&lt;0):</span><br><span class="line">        保留调用进程CPU现场</span><br><span class="line">        将该进程的PCB插入s的等待队列</span><br><span class="line">        置该进程为&quot;等待&quot;状态</span><br><span class="line">        转进程调度</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>V操作<br>对信号灯的V操作记为V(s)，V(s)是个不可分割的原语操作，即取信号灯值加1，若结果大于0，进程继续执行，否则，唤醒在信号灯等待队列上的一个进程。<br>V操作的主要动作如下：</p>
+<ul>
+<li>s值加1</li>
+<li>若结果大于0，则进程继续执行</li>
+<li>若相减小于或等于0，则从信号灯的等待队列中移出一个进程，解除它的等待状态，然后返回本进程继续执行<br>具体算法描述：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">算法 V</span><br><span class="line">输入: 变量s</span><br><span class="line">输出: 无</span><br><span class="line">&#123;</span><br><span class="line">    s++</span><br><span class="line">    if(s&lt;=0):</span><br><span class="line">        移出s等待队首元素</span><br><span class="line">        将该进程的PCB插入就绪队列</span><br><span class="line">        置该进程为&quot;就绪&quot;状态</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-5-进程互斥与同步的实现"><a href="#3-5-进程互斥与同步的实现" class="headerlink" title="3.5 进程互斥与同步的实现"></a>3.5 进程互斥与同步的实现</h4><p>主要就是通过以上讲解的锁和信号灯方法。</p>
+<h5 id="3-5-1-上锁原语和开锁原语实现进程互斥"><a href="#3-5-1-上锁原语和开锁原语实现进程互斥" class="headerlink" title="3.5.1 上锁原语和开锁原语实现进程互斥"></a>3.5.1 上锁原语和开锁原语实现进程互斥</h5><p>两进程使用上锁原语和开锁原语实现临界资源的操作可描述为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">程序 task1</span><br><span class="line">main() &#123;</span><br><span class="line">    int w=0;    //互斥锁</span><br><span class="line">    cobegin</span><br><span class="line">        pp1();</span><br><span class="line">        pp2();</span><br><span class="line">    coend</span><br><span class="line">&#125;</span><br><span class="line">pp1() &#123;</span><br><span class="line">    ...</span><br><span class="line">    lock(w);</span><br><span class="line">    cs1;</span><br><span class="line">    unlock(w);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">pp2() &#123;</span><br><span class="line">    ...</span><br><span class="line">    lock(w);</span><br><span class="line">    cs2;</span><br><span class="line">    unlock(w);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="3-5-2-信号灯实现进程互斥"><a href="#3-5-2-信号灯实现进程互斥" class="headerlink" title="3.5.2 信号灯实现进程互斥"></a>3.5.2 信号灯实现进程互斥</h5><p>用信号灯及P、V操作解决并发进程临界区问题，方法是：</p>
+<ol>
+<li>设互斥信号灯，一般记为mutex(mutual exclusion)，赋初值为，表示初始时刻临界资源未被占用</li>
+<li><p>将进入临界区的操作置于P(mutux)和V(mutux)之间，即可实现进程互斥<br>上述方法能正确实现进程互斥。任何欲进入临界区的进程，必先在互斥信号灯上执行P操作，在完成对临界资源区的访问后才执行V操作。由于互斥信号灯初值为1，当第一个进程执行P操作后mutux变为0，说明临界资源可分配给该进程，使之进入临界区。若此时又有第二个进程进入临界区，也应先执行P操作，结果使mutux变为负值，这就意味着临界资源已被占用，因此第二个进程被阻塞。直到第一个进程执行V操作，释放临界资源而恢复mutux值为0后，方可唤醒第二个进程，使之进入临界区，待他完成临界资源的访问时，又执行V操作，mutux恢复初值<br>设两个并发进程pa和pb，具有相对于变量n的临界段csa和csb，用信号灯实现他们的互斥措施：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">程序 task2</span><br><span class="line">main() &#123;</span><br><span class="line">    int mutux=1;</span><br><span class="line">    cobegin</span><br><span class="line">        pa();</span><br><span class="line">        pb();</span><br><span class="line">    coend</span><br><span class="line">&#125;</span><br><span class="line">pa() &#123;</span><br><span class="line">    ...</span><br><span class="line">    p(mutux);</span><br><span class="line">    csa;</span><br><span class="line">    v(mutux);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">pb() &#123;</span><br><span class="line">    ...</span><br><span class="line">    p(mutux);</span><br><span class="line">    csb;</span><br><span class="line">    v(mutux);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于两个并发进程，互斥信号灯值仅取1、0、-1三个值<br>若mutux=1，表示没有进程进入临界区<br>若mutux=0，表示有一个进程进入临界区<br>若mutux=-1，表示有一个进程进入临界区，另一个进程等待进入</p>
+</li>
+</ol>
+<h5 id="3-5-3-进程同步的实现"><a href="#3-5-3-进程同步的实现" class="headerlink" title="3.5.3 进程同步的实现"></a>3.5.3 进程同步的实现</h5><p>用信号灯的P、V操作实现进程同步的关键是要分析清楚同步进程之间的相互关系，即什么时候某个进程需要等候，什么情况下需要给对方发一个消息，还需要分析清楚同步进程各自关心的状态，依据分析的结果就可以知道如何设置信号灯，如何安排P、V操作<br>在病员就诊例子中，医生看病活动与化验室化验活动的同步关系分析：</p>
+<ul>
+<li>看病进程开出化验单，并发送给化验进程，化验进程才能开始工作，否则化验进程等待</li>
+<li>化验进程化验完毕必须得到化验结果，并发送给看病进程，看病进程才能根据化验结果确定医疗方案，否则看病进程必须等待</li>
+</ul>
+<p>用信号灯的P、V操作来实现这两个进程的同步：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">程序 task3</span><br><span class="line">main() &#123;</span><br><span class="line">    int s1=0;       //表示有无化验单</span><br><span class="line">    int s2=0;       //表示有无化验结果</span><br><span class="line">    cobegin</span><br><span class="line">        labora();</span><br><span class="line">        diagnosis();</span><br><span class="line">    coend</span><br><span class="line">&#125;</span><br><span class="line">labora() &#123;</span><br><span class="line">    while(化验工作未完成) &#123;</span><br><span class="line">        p(s1);      //询问有无化验单,若无则等待</span><br><span class="line">        化验工作;       //送出化验结果</span><br><span class="line">        v(s2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">diagnosis() &#123;</span><br><span class="line">    while(看病未完成) &#123;</span><br><span class="line">        看病;</span><br><span class="line">        v(s1);      //送出化验单</span><br><span class="line">        p(s2);      //等化验结果</span><br><span class="line">        diagnosis;  //诊断</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>实际应用中同步问题很多，按特点不同一般分为两类，一类保证一组合作进程按逻辑需要所确定的执行次序，另一类是保证共享缓存区(或共享数据)的合作进程的同步。</p>
+<ol>
+<li><p>合作进程的执行次序<br>为了完成一个共同的任务，可能有多个进程并发执行。然而，这些并发进程根据逻辑上的需要，有的没有时间上的先后次序，有的则有先后次序。也就是说它们必须遵循一定的同步规则，才能得出最后正确得结果。<br>为了描述方便，我们用一个图来表示进程集合的执行时间轨迹。图的连接描述了进程间开始和结束的次序约束。此图称为进程流程图。如用s表示系统中某一任务启动，f表示完成，则可用下图所示的进程流程图来表示这一组合作进程执行的先后次序。<br><img src="/images/operatingSystem01_1.jpg" alt="first"><br>图片从左至右依次是 串行、并行、一般<br>a)说明P1、P2、P3、P4这四个进程依次顺序执行，只有在前一个进程结束后，后一个进程才能开始执行，当P4完成时，这一组进程全部结束。而图b)则表示P1、P2、P3、P4这四个进程可以同时执行。图c)中描述的进程执行次序时混合式的，既有串行的、也有并行的。<br>例：Pa、Pb、Pc为一组合作进程，其进程流程图如下:<br><img src="/images/operatingSystem01_2.jpg" alt="second"><br>试用信号灯的p、v操作实现这三个进程的同步。进程流图说明任务启动后Pa先执行，当它结束后Pb、Pc可以开始执行。为了确保这一执行顺序，设两个同步信号灯Sb、Sc分别表示进程Pb和Pc能否开始执行，其初值均为0。<br>这三个进程的同步描述如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">main() &#123;</span><br><span class="line">    int Sb=0;       //表示Pb进程能否开始执行</span><br><span class="line">　int Sc=0;       //表示Pc进程能否开始执行</span><br><span class="line">    cobegin</span><br><span class="line">        Pa();</span><br><span class="line">        Pb();</span><br><span class="line">        Pc();</span><br><span class="line">    coend</span><br><span class="line">&#125;</span><br><span class="line">Pa()                               Pb()                          Pc()</span><br><span class="line">&#123;                                   &#123;                               &#123;</span><br><span class="line">    ...                                  p(Sb);                       p(Sc);</span><br><span class="line">    v(Sb);                           ...                              ...</span><br><span class="line">    v(Sc);                           ...                              ...</span><br><span class="line">&#125;                                   &#125;                               &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>共享缓存区的合作进程的同步<br>多进程的另一类同步问题是共享缓冲区的同步。我们以下例说明这类问题的同步规则及信号量解法。设计算进程cp和打印进程iop公用一个单缓冲buft，如下图所示:<br><img src="/images/operatingSystem01_3.jpg" alt="third"><br>进程cp不断的计算数据并送入缓冲区buft中,iop进程负责从缓冲区buft中取出数据去打印。<br>这两各进程可以并发执行，但由于它们公用一个缓冲区，因此,进程cp和进程iop必须遵循下面同步规则:</p>
+<ul>
+<li>当cp进程把计算结果送入buft时, iop进程才能从buft中取出结果去打印,否则必须等待。</li>
+<li>当iop进程把buft中的数据取出打印后,cp进程才能把下一个计算结果数据送入buft中,否则必须等待。<br>算法描述：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">main() &#123;</span><br><span class="line">    Sa=0;   //表示缓冲区中是否有可供打应的计算结果</span><br><span class="line">    Sb=0;   //表示缓冲区中有无空位置存放新信息</span><br><span class="line">    cobegin</span><br><span class="line">        cp( );</span><br><span class="line">        iop( );</span><br><span class="line">    coend</span><br><span class="line">&#125;</span><br><span class="line">iop()                                                            cp()</span><br><span class="line">&#123;                                                                 &#123;</span><br><span class="line">    while(打印机工作未完成)                             while(计算未完成)</span><br><span class="line">    &#123;                                                                  &#123;</span><br><span class="line">        P(Sa);                                                          得到一个计算结果;</span><br><span class="line">        从缓冲区中取一数据;                                     P(Sb);</span><br><span class="line">        V(Sb);                                                          将数据送入缓冲区;</span><br><span class="line">        从打印机上输出;                                            V(Sa);</span><br><span class="line">    &#125;                                                                  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h5 id="3-5-4-生产者—消费者问题"><a href="#3-5-4-生产者—消费者问题" class="headerlink" title="3.5.4 生产者—消费者问题"></a>3.5.4 生产者—消费者问题</h5><p>生产者-消费者问题是一种同步问题的抽象描述。系统中的进程当它使用某一资源时，可以认为它是消费，所以称该进程为消费者。系统中的进程将它所使用的资源释放时，可以看作它在生产。所以称该进程为生产者。<br>因此，计算机系统中的每个进程都可以消费或生产某些资源。这些资源包括硬资源(CPU,外设,主存缓冲区等)和软资源(临界区,消息等)。我们可以通过一个有界缓冲区把一群生产者P1、P2、…、Pm和一群消费者C1、C2、….、Ck联系起来，如图所示：<br><img src="/images/operatingSystem01_4.jpg" alt="fourth"><br>一组生产者P1,P2,….Pm只要buft不满，便可将产品放入其中；只要缓冲区buft未空，消费者便可从中取走产品。因此, 生产者和消费者是同步关系。这种关系禁止生产者向满缓冲区输入产品，也禁止消费者从空缓冲区中提取物品 。<br>在生产者-消费者问题中，信号灯具有两种功能。首先，它是跟踪资源的生产和消费的计数器，其次它是协调资源的生产者和消费者之间的同步器。在生产者和消费者问题中，既有同步，又有互斥问题,所以既要设置公用信号量，也要设置私用信号量。<br>所以，为了解决这一类生产者－消费者问题，应该设置两个同步信号灯，一个说明空缓冲区的数目，用empty表示，其初值为有界缓冲区的大小n，另一个说明满缓冲区(即信息)的数目，用full表示，其初值为0。由于有界缓冲区是一个临界资源，必须互斥使用，所以，另外还需要设置一个互斥信号灯mutex，其初值为1。<br>其算法描述与演示如下:<br><img src="/images/operatingSystem01_5.gif" alt="fifth"></p>
+<h5 id="3-5-5-管程机制"><a href="#3-5-5-管程机制" class="headerlink" title="3.5.5 管程机制"></a>3.5.5 管程机制</h5><ul>
+<li>管程的引入<br>尽管信号量机制是一种既方便又有效的同步机制，每个要访问临界资源的进程都必须自备P、V操作，这就使大量的同步操作分散在各个进程中，这不仅给系统管理带来麻烦，而且也会引同步操作的使用不当产生死锁。为了解决上述问题，便产生了进程同步工具—管程(MONITOR)。</li>
+<li><p>管程的概念<br>管程的定义为：一个管程定义了一个数据结构和能为并发进程所执行的、在该数据结构上的一组操作，这组操作能同步进程和改变管理中的数据。也就是说，当共享资源用共享数据结构表示时，资源管理程序可用对该数据结构进行操作的一组过程来表示，这样一组相关的数据结构和过程称为管程。<br>管程的结构：管程相当于围墙，它把共享变量和对它进行操作的若干过程围起来，所有进程要访问临界资源时，都必须经过管程（相当于通过围墙的门）才能进入，而管程每次只准许一个进程进入管程，从而实现了进程。<br>管程示意图：<br><img src="/images/operatingSystem01_6.gif" alt="sixth"><br>管程的语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">type monitor_name=monitor</span><br><span class="line">    variable declarations</span><br><span class="line">    procedure entry p1(...);</span><br><span class="line">        begin...end;</span><br><span class="line">    procedure entry p2(...);</span><br><span class="line">        begin...end;</span><br><span class="line">    ．．．．．．</span><br><span class="line">    procedure entry pn(...);</span><br><span class="line">        begin...end;</span><br><span class="line">    begin</span><br><span class="line">        initialization code</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>利用管程解决生产者-消费者问题<br>利用管程解决生产者-消费者问题的管程 Producer-Consumer描述如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Type producer-consumer=monitor</span><br><span class="line">    var in,out,count:integer;</span><br><span class="line">    buffer:array[0..n-1] of item;</span><br><span class="line">    notfull.notempty:condition;</span><br><span class="line">    pricedure entry put(item)</span><br><span class="line">    begin</span><br><span class="line">        if count&gt;=n then notfull.wait;</span><br><span class="line">            buffer(in):=nextp;</span><br><span class="line">            in:=(in+1) mod n;</span><br><span class="line">            count :=count+1;</span><br><span class="line">            if notempty.queue then notempty.signal;</span><br><span class="line">    end</span><br><span class="line">    procedure entry get(item)</span><br><span class="line">    begin</span><br><span class="line">        if count&lt;=0 then notempty.wait;</span><br><span class="line">            nextc:=buffer(out);</span><br><span class="line">            out:=(out+1) mod n;</span><br><span class="line">            count:=count-1;</span><br><span class="line">            if notfull.queue then notfull.signal;</span><br><span class="line">    end</span><br><span class="line">    begin in:=out:=0;</span><br><span class="line">        count:=0;</span><br><span class="line">    end</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在利用管程解决生产者-消费者问题时，其中的生产者和消费者可描述为:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">producer:</span><br><span class="line">    begin</span><br><span class="line">        repeat</span><br><span class="line">            produce and item in nextp;</span><br><span class="line">            produce-consumer.put(item);</span><br><span class="line">        until false;</span><br><span class="line">    end</span><br><span class="line">consumer:</span><br><span class="line">    begin</span><br><span class="line">        repeat</span><br><span class="line">            produce-consumer.get(item);</span><br><span class="line">            consumer the item it nextc;</span><br><span class="line">        until false;</span><br><span class="line">    end</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-6-进程通信"><a href="#3-6-进程通信" class="headerlink" title="3.6 进程通信"></a>3.6 进程通信</h4><h5 id="3-6-1-引言"><a href="#3-6-1-引言" class="headerlink" title="3.6.1 引言"></a>3.6.1 引言</h5><p>前面我们介绍了几种同步装置，如锁和信号量，并发进程通过这些装置达到协调同步的目的。但这些装置常常限制为一个或几个字的信息存贮，因而进程间传递的只能是单一的信号。这种通信方式是一种较低级的、间接的通信方式。然而，进程之间的信息交换包含着更复杂的结构，它们可能要传递大量的信息。为了提高效率，我们应采用直接的进程通信方式。 </p>
+<ul>
+<li>a)进程通信的概念<br>所谓进程通信是指进程之间可直接以较高的效率传递较多数据的信息交换方式。这种方式中采用的是通信机构，如信息发送和接收、邮箱结构等，在进程通信时往往以消息形式传递信息。<br>所谓消息是指进程之间相互传送的赖以发生交互作用的有结构的数据。</li>
+<li>b)从进程的观点看<ul>
+<li>(i)OS是由各种进程组成的<br>从进程观点来看，一幅OS运行时刻的“快照”会给我们呈现:系统进程、用户进程、计算进程、打印进程…</li>
+<li>(ii) 进程可产生通信,如已知的互斥,同步<br>从进程观点来看，OS中的有关进程因共享资源而相互竞争，“互斥”;会为了完成某一共同任务，进程会相互合作，“同步”。</li>
+<li>(iii) 对进程通信的分类<br>从本质上看依进程间的通信内容有 : <ul>
+<li>控制信息的传送(即”低级通信”) 　其目的是控制进程执行速度</li>
+<li>大批量数据传送(即”高级通信”) 　其目的是交换信息</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-6-2-进程通信的实现方式"><a href="#3-6-2-进程通信的实现方式" class="headerlink" title="3.6.2 进程通信的实现方式"></a>3.6.2 进程通信的实现方式</h5><p>(1)锁<br>(2)信号量<br>(3)主从式通信系统<br>(4)会话式通信系统<br>(5)消息或信箱机制式通信系统<br>(6)共享存储区方式通信系统<br>进程通信(Interprocess Communication,IPC)是一个进程与另一个进程间共享消息的一种方式。消息(message)是发送进程形成的一个信息块，通过信息的语法表示形成所需传送的内容给接收进程。IPC机制是消息从一个进程的地址空间拷贝到另一个进程的地址空间的过程，而不使用共享存储器的方法。IPC通信机制适用于分布环境下处于不同节点上进程间的通信，应用范围比较广。<br>由于现代操作系统都提供存储保护手段，一个用户程序执行时只能在自己的存储空间范围内访问，不能进入另一个用户的存储空间。所以上述的消息传递只能通过操作系统提供的支持才能实现，这就是IPC机制。即信息在一个进程的地址空间打包形成消息，然后从消息中拷贝信息到另一个进程的地址空间，这些工作是由操作系统提供的IPC机制来实现的，发送或接收消息需要操作系统的干预。</p>
+<ul>
+<li>消息缓冲通信<br>在消息通信中，接收方和发送方有明确的协议，双方都认可其中的消息格式。在大多数消息传递机制中都使用消息头用于标识与消息相关的信息，包括发送进程的标识符、接收进程的标识符以及消息中传送的字节数等。消息头能够被系统中所有进程理解。<br>消息缓冲通信方式包括消息缓冲、发送原语和接收原语。每当发送进程欲发送消息时，便形成一个消息缓冲区(包括消息头和消息内容)，然后用发送原语把消息发送出去。接收进程在接收消息之前，在本进程的主存空间中设置一个接收区，然后用接收原语接收消息。<br>两通信进程必须满足的条件：<ul>
+<li>a.在发送进程把消息写入缓冲区和把缓冲区挂入消息队时，应禁止其它进程对该缓冲区消息队列的访问。同理对接收进程。</li>
+<li>b.当缓冲区中已有消息存在时，接收进程不能接收到任何消息</li>
+</ul>
+</li>
+</ul>
+<p>在消息缓冲通信方式中，发送原语的形式为：<br>send(m)<br>这里的m是发送区开始地址。<br>发送原语的功能是把欲发送之消息从发送区复制到消息缓冲区，并将它挂到接收消息队列的末尾。如果接收进程正因等待消息而处于等待状态，则被唤醒。<br>发送原语的算法描述为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">算法 send</span><br><span class="line">输入: 发送区首址m </span><br><span class="line">输出: 无 </span><br><span class="line">&#123;</span><br><span class="line">    从发送区id域得接收进程id号;</span><br><span class="line">    以此id号得接收进程pcb的消息队列头;</span><br><span class="line">    从发送区size域得缓冲区大小;</span><br><span class="line">    以此大小加上缓冲区头得area;</span><br><span class="line">    向存贮管理模块申请一个消息缓冲区area;</span><br><span class="line">    发送进程id送area的sptr域;      //建立新的消息缓冲区</span><br><span class="line">    缓冲区大小送area的size域;</span><br><span class="line">    发送区的text送area的text域;</span><br><span class="line">    置area的勾链字为链尾标记;</span><br><span class="line">    p(mutex);                               //封锁消息队列</span><br><span class="line">    将area入消息队列</span><br><span class="line">    v(mutex);                               //解琐消息队列</span><br><span class="line">    v(Si);                                      //与接收进程同步</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>接收原语的形式为:<br>receive(n,sid)<br>这里n为接收开始地址，sid为发送进程的id号。接收原语的功能是将所要的消息缓冲区中的信息读到接收区。接收原语的实现为：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">算法 receive</span><br><span class="line">输入: 接受区首址n,发送进程id号</span><br><span class="line">输出: 无</span><br><span class="line">&#123;</span><br><span class="line">    p(si);          //有无消息可取</span><br><span class="line">    p(mutex);   //封锁消息队列</span><br><span class="line">    在消息队列中找到发送者为sid的消息;</span><br><span class="line">    从消息队列中摘下此消息缓冲区area;</span><br><span class="line">    v(mutex);   //解琐消息队列</span><br><span class="line">    area的sptr送接收区的id域;</span><br><span class="line">    area的size送接收区的size域;</span><br><span class="line">    area的text送接收区的text域;</span><br><span class="line">    释放area给存贮管理模块;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>信箱通信<br>在信息通信中，除了定义信箱结构外，还包括消息发送和接收功能模块，提供发送原语和接收原语。使用信箱传递消息时，所使用的信箱可以位于用户空间中，是接收进程地址空间的一部分，也可以位于操作系统的空间中，具体由操作系统的设计者根据需求来决定。<br>下图所示为使用用户空间中的信箱实现消息传递:<br><img src="/images/operatingSystem01_7.jpg" alt="seventh"><br>下图所示为系统空间中的信箱实现消息传递:<br><img src="/images/operatingSystem01_8.jpg" alt="eighth"><br>在操作系统空间中存放接收进程的信箱，并且消息的拷贝是在接收进程发出接收消息的系统调用时进行，这种方法中信箱的管理由操作系统负责，这就防止了对消息和信箱数据结构的随意破坏，因为任何一个进程都不能之间访问信箱。这种方法的缺点是要求操作系统为所有的进程分配主存信箱，由于系统空间有限，可能对通信进程数有限制。<br>此外，通信进程间应满足的条件：<ul>
+<li>a、发送进程发送消息时，邮箱中至少要有一个空格能存放该消息。</li>
+<li>b、接收进程接收消息时，邮箱中至少要有一个消息存在。</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-6-3-经典IPC问题"><a href="#3-6-3-经典IPC问题" class="headerlink" title="3.6.3. 经典IPC问题"></a>3.6.3. 经典IPC问题</h5><p>哲学家进餐问题 ——对多个竞争进程互斥地访问有限资源这类问题的建模</p>
+<ul>
+<li>A.问题描述<br>1965年，Dijkstra提出一个他称为“哲学家进餐”的同步问题。问题如下：五个哲学家围坐在一张圆桌周围，每个哲学家面前都有一碟通心面，由于面很滑，所以要两把叉子才能夹住。相邻两个碟子之间有一把叉子，如下图：<br><img src="/images/operatingSystem01_9.gif" alt="nineth"><br>哲学家的活动如下：<br>吃饭与思考。当一个哲学家觉得饿时，他就试图分两次去取他左边和右边的叉子，每次拿一把，但不分次序。如果成功地获得了两把叉子，他就开始吃饭，吃完以后放下叉子继续思考。现要解决地问题是：为每一位哲学家写一段程序来描述其行为，要求不死锁。</li>
+<li>B.一种不正确的哲学家进餐问题解决方案<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#define N 5                         //哲学家数目</span><br><span class="line">void philospher(int i)          //i:哲学家号从0到4</span><br><span class="line">&#123;</span><br><span class="line">    while(TRUE) &#123;</span><br><span class="line">        think();                        //正在思考</span><br><span class="line">        take-fork(i);                //取左叉</span><br><span class="line">        take-fork((i+1)%n);   //取右叉</span><br><span class="line">        eat();                           //吃面</span><br><span class="line">        put_fork(i);                 //放回左叉</span><br><span class="line">        put_fork((i+1)%n);    //放回右叉</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>当５位哲学家都同时拿起左叉，则他们都拿不到右叉，于是死锁发生。<br>规则修改１：规定在拿到左叉后，查看右面的叉子是否可用，若不可用，则先放下左叉，等待一段时间再重复整个过程。上述解法仍无法回避某一个瞬时间，所有哲学家都同时启动这个算法，取左叉，看到右叉不可用，放下左叉；等待一会儿，又同时拿起左叉，如此这样重复下去于是死锁。<br>规则修改２：哲学家在拿不到右叉时等待一段随机的时间，而不是等待相同的时间，发生上述死锁的概率就很小了。实际情况确实如此，但在一些要害部分，如武器系统，核反应系统，这仍不能达到要求。</p>
+<ul>
+<li><p>C.正确的哲学家就餐问题的较好解决方案</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#define N 5                                 //哲学家数目</span><br><span class="line">#define LEFT(i+1)%N               //i的左边</span><br><span class="line">#define RIGHT(i+1)%N            //i的右边</span><br><span class="line">#define THINKING 0                //正在思考</span><br><span class="line">#define HUNGRY 1                   //想取得叉</span><br><span class="line">#define EATING 2                     //正吃面子</span><br><span class="line">typedef int semaphore              //信号量是一个特殊的整型变量</span><br><span class="line">int state[N];                               //记录每个人状态的数组</span><br><span class="line">semaphore mutex=1;               //临界区互斥</span><br><span class="line">semaphore s[N];                       //每个哲学家一个信号量</span><br><span class="line">Void philosopher(int i)              //i:某位哲学家</span><br><span class="line">&#123;</span><br><span class="line">    while(TRUE) &#123;</span><br><span class="line">        think();                                //思考</span><br><span class="line">        take_forks(i);                      //或者取得两叉，或者阻塞</span><br><span class="line">        eat();                                   //吃面</span><br><span class="line">        put_forks(i);                       //将两叉同时放回</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Void take_fork(int i) &#123;</span><br><span class="line">    down(&amp;mutex);                      //进入临界区</span><br><span class="line">    state[i]=HUNGRY;                 //记录状态</span><br><span class="line">    test(i);                                     //试图取得两只叉子</span><br><span class="line">    up(&amp;mutex);                           //离开临界区</span><br><span class="line">    down(&amp;s[i]);                           //若得不到叉子就阻塞</span><br><span class="line">&#125;</span><br><span class="line">Void test(semaphore i) &#123;</span><br><span class="line">    if (state[i]==HUNGRY &amp;&amp;state(LEFT)!=EATING &amp;&amp;state(RIGHT)!=EATING)</span><br><span class="line">        state[i]=EATING;</span><br><span class="line">    up(&amp;S[i]);</span><br><span class="line">&#125;</span><br><span class="line">Void put_forks(int i) &#123;</span><br><span class="line">    down(&amp;mutex);                   //进入临界区</span><br><span class="line">    state[i]=THINKING;          //进餐结束</span><br><span class="line">    test(LEFT);                         //看一下左邻居现在是否能进餐</span><br><span class="line">    test(RIGHT);                       //看一下右邻居现在是否能进餐</span><br><span class="line">    up(&amp;mutex);                       //离开临界区</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>D.利用管程解决哲学家进餐问题<br>用于解决哲学家进餐问题的管程描述如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Type dining-philosophers=monitor</span><br><span class="line">    var</span><br><span class="line">        state:array[0..4]of(think,hungry,eating);   //可利用pickup过程进餐</span><br><span class="line">    var self:array[0..4] of condition;</span><br><span class="line">        produre entry pickup(i:0..4);</span><br><span class="line">begin</span><br><span class="line">    state[i]:=hungry;   //测试是否具备进餐条件不具备进餐条件则执行self[i].wait,推迟进餐</span><br><span class="line">    if state(i)&lt;&gt;eating then self(i).wait;</span><br><span class="line">        produre entry putdown(i:0..4);</span><br><span class="line">    begin                           //当哲学家进餐完毕,便放下筷子,继续思考</span><br><span class="line">        state[i]=thinking;</span><br><span class="line">        test(i+1 mod 5);</span><br><span class="line">        test(i+1 mod 5);</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line">    if state[k+4 mod 5]&lt;&gt;eating     //条件为真表示具备进餐条件</span><br><span class="line">        and state[k]=hungry</span><br><span class="line">        and state[k+1 mod 5]&lt;&gt;eating</span><br><span class="line">    then begin</span><br><span class="line">        state[k]:=eating;</span><br><span class="line">        self[k].signal</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line">begin</span><br><span class="line">    for i=0 to 4 do</span><br><span class="line">    state[i]:=thinking;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="3-7-线程概念及特点"><a href="#3-7-线程概念及特点" class="headerlink" title="3.7 线程概念及特点"></a>3.7 线程概念及特点</h4><h5 id="3-7-1-线程的概念"><a href="#3-7-1-线程的概念" class="headerlink" title="3.7.1 线程的概念"></a>3.7.1 线程的概念</h5><p>线程(threads &amp; lightweight processes)是进程中的一个实体，是被独立调度和分派的基本单位，线程除拥有运行中必不可少的程序记数器，一组寄存器和栈外，基本上不拥有系统资源。<br>为了提高系统内程序并发执行的程度，从而可进一步提高系统的吞吐量，在现代的操作系统中引入了比进程更小的能独立运行的基本单位—线程(threads)。<br>多线程的概念首先是在多处理机系统的并行处理中提出来的。传统的多处理机由若干台处理机组成，每台处理机每次运行单个现场，也就是说，每台处理机有一个有限硬件资源的单一控制线索。这样的多处理机系统在进行远程访问时会出现等待现象，处理机在这段时间间隔内处于空闲。为了提高处理机的并行操作能力，提出了多线程的概念。在每台处理机上建立多个运行现场，这样每台处理机有多个控制线程。在多线程系统结构中，多线程控制为实现隐藏处理机长时间等待提供了一种有效的机制，线程可以用一个现场(context)表示，现场由程序计数器、寄存器组和所要求的现场状态字组成。<br>线程是比进程更小的活动单位，它是进程中的一个执行路径。一个进程可以有多条执行路径即线程。这样在一个进程内部就可以有多个可以独立活动的单位，可以加快进程处理的速度，进一步提高系统的并行处理能力。<br>线程也可以这样来描述：</p>
+<ul>
+<li>线程是进程中的一条执行路径</li>
+<li>它有自己私有的堆栈和处理机执行环境(尤其是处理器寄存器)</li>
+<li>它共享父进程的主存</li>
+<li>它是单个进程所创建的许多个同时存在的线程中的一个</li>
+</ul>
+<p>进程与线程既有联系也有区别，可以进一步将进程的组成概括为以下几个方面：</p>
+<ul>
+<li>一个可执行程序，它定义了初始代码和数据</li>
+<li>一个私有地址空间(address space)，它是进程可以使用的一组虚拟主存地址</li>
+<li>进程执行时所需的系统资源(如文件、信号灯、通信端口等)是由操作系统分配给进程的</li>
+<li>若系统支持线程运行，那么每个进程至少有一个执行线程</li>
+</ul>
+<p>当系统支持多线程处理时，线程是任务调度的单位而不是系统资源的分配单位，进程是系统资源的分配单位，也是任务调度的单位。<br>线程实例：</p>
+<ul>
+<li>例1、浏览器在取一副Web页面时会设立多个线程，以便可以同时请求传输多副图象,以组合成一副完整的Web页面。</li>
+<li>例2、在Windows下，用户启动画图程序后，Windows系统将创建进程并启动执行该进程的主执行线程，当主执行线程终止时，进程也终止。</li>
+<li>字处理程序中，可以一个线程显示图形，另一个线程用来读入用户的输入，还有一个线程进行拼写和语法检查。</li>
+</ul>
+<h5 id="3-7-2-线程的特点和状态"><a href="#3-7-2-线程的特点和状态" class="headerlink" title="3.7.2 线程的特点和状态"></a>3.7.2 线程的特点和状态</h5><ul>
+<li>线程的特点<br>在进程内创建多个线程，可以提高系统的并行处理能力。例如，一个文件服务器，某时刻正好封锁在等待磁盘操作上，如果这个服务器进程具有多个控制线程，那么当一个线程在等待磁盘操作时，另一个线程就可以运行，比如它可以接收一个新的文件服务请求，这样可以提高系统的性能。<br>又比如:<br><img src="/images/operatingSystem01_10.jpg" alt="tenth"> <img src="/images/operatingSystem01_11.jpg" alt="eleventh"><br>前者各线程在不同的地址空间中操作，后者所有三个线程共享同一个地址空间，因此，线程的同步和通讯的实现容易。</li>
+<li>线程的状态变迁<br>如果一个系统支持线程的创建与线程的活动，那么处理机调度的最小单位是线程而不是进程。一个进程可以创建一个线程，那么它具有单一的控制路径，也可以创建多个那么就具有多个控制路径，这时线程是争夺CPU的单位。线程中也有一个从创建到消亡的生命过程，在这一过程中它具有运行、等待、就绪或终止几个状态。<ul>
+<li>创建。建立一个新线程</li>
+<li>就绪。线程处于线程就绪队列中，等待被调度。</li>
+<li>运行。一个线程正在占用CPU，执行它的程序</li>
+<li>等待。一个正在执行的线程如果发生某些事件，如被挂起或需要执行费时的输入/输出操作时，将让出CPU，暂时中断自己的执行，进入等待状态，等待另一个线程唤醒它。</li>
+<li>终止。一个线程已经退出，但该信息还没有被其他线程所收集(在UNIX术语中，父进程还没有做wait)</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/operatingSystem01_12.gif" alt="twelfth"><br>线程在活动过程中状态是不断变化的。</p>
+<ul>
+<li>用户线程和内核线程<br>用户线程是在内核的支持下，在用户层通过线程库实现的。线程库提供对线程创建、调度和管理等方面的支持。用户线程的创建和调度是在用户空间内进行的，不需要内核干预，因此，用户级线程通常能快速的创建和管理。用户线程存在的缺点是:如果内核是单线程的，那么任何一个用户级线程执行了一个线程等待的系统调用，就会引起整个进程的阻塞，即使还有其他线程可以在应用程序内运行。用户线程库的例子有: POSIX Pthread、Mach C-thread和Solaris 2 UI-thread。<br>内核线程由操作系统直接支持，对内核线程的管理是由操作系统完成的，内核在其空间内执行进程创建、调度和管理。内核线程的创建和管理比在用户级创建和管理用户线程要慢，但正是由于内核管理线程，当一个线程执行等待的系统调用时，内核能调度应用程序内的另一个线程去运行。而且，在多处理器环境下，内核能在不同的处理器上调度线程，大多数现代操作系统都支持内核线程。</li>
+</ul>
+<h5 id="3-7-3-引入线程后带来的问题"><a href="#3-7-3-引入线程后带来的问题" class="headerlink" title="3.7.3 引入线程后带来的问题"></a>3.7.3 引入线程后带来的问题</h5><p>线程的引入，改变了编程模型。多线程共享的数据结构的操作，会带来意想不到的问题，如系统崩溃。 多线程对全局变量的使用，会带来不可预知的结果，可能引起混乱。多线程对堆栈管理带来了麻烦。但这些问题不是不可以克服，但应对OS作彻底设计，起码是对系统调用的语义重新定义，库函数也应重写。</p>
+<h4 id="3-8-操作系统的并发机制实例"><a href="#3-8-操作系统的并发机制实例" class="headerlink" title="3.8 操作系统的并发机制实例"></a>3.8 操作系统的并发机制实例</h4><h5 id="3-8-1-创建进程及应用实例"><a href="#3-8-1-创建进程及应用实例" class="headerlink" title="3.8.1 创建进程及应用实例"></a>3.8.1 创建进程及应用实例</h5><p>UNIX/Linux系统的核心为系统调用fork完成以下操作：</p>
+<pre><code>+ 为新进程分配一个新的PCB结构
++ 为子进程赋一个唯一的进程标识号(PID)
++ 做一个父进程上下文的逻辑副本。由于进程的正文区(代码段)可被几个进程所共享，所以核心只需要增加某个正文区的引用数即可，而不是真的将该区拷贝到一个新的物理内存区。这意味着父子进程将执行相同的代码。但数据段和堆栈段属于进程的私有数据，需要拷贝到新的内存区中。
++ 增加与该进程相关联的文件表和索引节点表的引用数。这意味着父进程打开的文件子进程可以继续使用。
++ 对父进程返回子进程的进程号，对子进程返回0
+</code></pre><p>在从系统调用fork中返回时，两个进程除了返回值PID不同外，具有完全一样的用户级上下文。在子进程中，PID的值为0,父进程中PID为子进程的PID。在系统启动时由核心内部建的0#进程是唯一不通过系统调用fork而创建的进程。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;sys/types.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;unistd.h&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    pid_t child;</span><br><span class="line">    int i = 2;</span><br><span class="line">    if( (child=fork()) == -1 ) &#123;</span><br><span class="line">        printf(&quot;fork error.\n&quot;);</span><br><span class="line">        exit(EXIT_SUCCESS);</span><br><span class="line">    &#125;</span><br><span class="line">    if( child == 0 ) &#123;</span><br><span class="line">        i = i+3;</span><br><span class="line">        printf(&quot;i=%d\n&quot;,i);</span><br><span class="line">    &#125;</span><br><span class="line">    i += 5;</span><br><span class="line">    printf(&quot;i=%d\n&quot;,i);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>该程序多次运行时理论上可能输出以下4种情况:</p>
+<pre><code>+ fork error
++ i = 5
+  i = 10
+  i = 7
++ i = 7
+  i = 5
+  i = 10
++ i = 5
+  i = 7
+  i = 10
+</code></pre><p>只有当前进程数达到系统规定上限或系统内存不足，才会出现第一种情况。第二种情况对应子进程先调度运行并执行完两条打印语句后才执行父进程的情况，而第三种则是先执行父进程的打印语句再调度执行子进程的情况，第四种结果对应着穿插的情况。<br>之所以说是理论情况下，是因为: 1)进程创建一般都很成功，第一种很少出现 2)父子进程一般执行时间很短，中间一般不会出现进程调度，可以在程序中适当的地方加入系统调用函数sleep()，引起进程调度从而得到后面三种情况。例如可以在<code>i+=5</code>前加入<code>sleep(1)</code>。<br>父进程为了启动一个新的程序的执行，在UNIX/Linux系统中需要用到exec()类函数，在Linux中有execl()、execlp()、execle()、execv()、execvp()、execve()。exec()函数族的作用是根据参数指定的文件名找到可执行文件，并用它来取代调用进程的内容，换句话说，就是在调用进程内部执行一个可执行文件。一个进程一旦调用了exec()类函数，系统将该进程的代码替换为新的程序代码，废弃原有的数据段和堆栈段，并根据新程序分配新的数据段和堆栈段，唯一留下的就是进程的PCB结构和进程号，也就是说，，对系统来说还是同一个进程，只是已经是一个新程序了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;sys/types.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;unistd.h&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    if( fork() == 0 ) &#123;</span><br><span class="line">        printf(&quot;a&quot;);</span><br><span class="line">        execlp(&quot;./file1&quot;,NULL,(char *)NULL);</span><br><span class="line">        printf(&quot;b&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;c&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中file1对应的源码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    printf(&quot;d&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>程序运行结果可能是acd、cad、adc三种，可在某些位置添加sleep()验证，但是无论如何b不会print。<br>Windows提供了CreateProcess()函数用于创建进程，如果需要运行一个新程序，只需要改变该API函数的cmdLine参数即可。</p>
+<h5 id="3-8-2-创建线程及应用实例"><a href="#3-8-2-创建线程及应用实例" class="headerlink" title="3.8.2 创建线程及应用实例"></a>3.8.2 创建线程及应用实例</h5><p>Linux系统下多线程遵循POSIX线程接口，称为pthread。编写Linux下多线程的程序，需要头文件pthread.h，连接时需要使用库libpthread.a。Linux下pthread的实现是通过系统调用clone实现的，clone()是Linux特有的系统调用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;pthread.h&gt;</span><br><span class="line"></span><br><span class="line">void thread() &#123;</span><br><span class="line">    int i;</span><br><span class="line">    for(i = 0; i &lt; 3; i++) &#123;</span><br><span class="line">        printf(&quot;This is a pthread.\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main(void) &#123;</span><br><span class="line">    pthread_t id;</span><br><span class="line">    int i,ret;</span><br><span class="line">    ret = pthread_create(&amp;id,NULL,(void *) thread,NULL);</span><br><span class="line">    if(ret!=0) &#123;</span><br><span class="line">        printf(&quot;Create pthread error!\n&quot;);</span><br><span class="line">        exit(1);</span><br><span class="line">    &#125;</span><br><span class="line">    for(i=0;i&lt;3;i++) &#123;</span><br><span class="line">        printf(&quot;This is the main process.\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    pthread_join(id,NULL);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>gcc test.c -o test -lpthread</code>编译后运行即可看出结果。</p>
+<h5 id="3-8-3-等待进程、线程的终止及其应用"><a href="#3-8-3-等待进程、线程的终止及其应用" class="headerlink" title="3.8.3 等待进程、线程的终止及其应用"></a>3.8.3 等待进程、线程的终止及其应用</h5><p>在UNIX/Linux中，一个进程可以通过系统调用wait使它的执行与子进程的终止同步，wait调用格式: <code>pid=wait(stat_addr)</code><br>wait()函数使父进程暂停执行，直到它的一个子进程结束为止，该函数返回值是终止运行的子进程的pid。参数status所指向的变量存放子进程的退出码，即从子进程的main()函数返回的值或子进程exit函数的参数。如果status不是一个空指针，状态信息将被写入它所指向的变量。<br>在Linux中，<code>waitpid(pid_t pid, int* status, int options)</code>也用来等待子进程结束，但它用于等待某个特定进程的结束。参数pid指明要等待的子进程的PID，参数status的含义与wait()函数一致。<br><img src="/images/operatingSystem01_13.jpg" alt="thirteenth"><br>上图所示的进程流图可以由下列程序实现:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;sys/types.h&gt;</span><br><span class="line">#include &lt;sys/wait.h&gt;</span><br><span class="line">int main() &#123;</span><br><span class="line">    pid_t pid;</span><br><span class="line">    int status;</span><br><span class="line">    pid = fork();</span><br><span class="line">    if( pid==0 ) &#123;</span><br><span class="line">        //To execute P2;</span><br><span class="line">        exit();</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        //To execute P1;</span><br><span class="line">    &#125;</span><br><span class="line">    wait(&amp;status);</span><br><span class="line">    //To execute P3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>类似的，pthread线程库也提供了pthread_join()函数来等待线程的终止。示例程序:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;pthread.h&gt;</span><br><span class="line"></span><br><span class="line">int A;</span><br><span class="line"></span><br><span class="line">void subp1() &#123;</span><br><span class="line">    printf(&quot;A in thread is %\n&quot;, A);</span><br><span class="line">    A = 10;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">    pthread_t p1;</span><br><span class="line">    int pid;</span><br><span class="line">    A = 0;</span><br><span class="line">    pid = fork();</span><br><span class="line">    if( pid == 0 ) &#123;</span><br><span class="line">        printf(&quot;A in son process is %d\n&quot;, A);</span><br><span class="line">        A = 100;</span><br><span class="line">        exit(0);</span><br><span class="line">    &#125;</span><br><span class="line">    wait();</span><br><span class="line">    pthread_create(&amp;p1,NULL,subp1,NULL);</span><br><span class="line">    pthread_join(p1,NULL);</span><br><span class="line">    printf(&quot;A in father process is %d\n&quot;, A);</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Windows提供了WaitForSingleObject()函数可以实现类似功能。</p>
+<h5 id="3-8-4-信号量与使用方法"><a href="#3-8-4-信号量与使用方法" class="headerlink" title="3.8.4 信号量与使用方法"></a>3.8.4 信号量与使用方法</h5><p>Linux信号量函数在通用的信号量数组上进行操作，而不是一个单一的二值信号量上进行操作。这些系统调用主要包括: semget、semop和semctl。使用时需<code>#include&lt;sys/sem.h&gt;</code></p>
+<ul>
+<li>信号量创建<br>semget函数来创建一个新的信号量或是获得一个已存在的信号量键值。函数原型<code>int semget(key_t _key,int _nsems,int _semflg)</code>，<ul>
+<li>返回值:成功的返回信号量的标识码，如果函数调用失败返回-1</li>
+<li>第一个参数_key,为整型值，是允许其他的进程访问信号量的一个整型的变量。所以的信号都是通过间接的方式获得的，运行的程序会提供一个信号的键值，系统为每一个键值赋予一个信号量，其他的处理函数只能通过对semget函数的返回值进行处理。</li>
+<li>第二个参数_nsems,参数表示所需要信号量的数目，几乎总是取值为1。semget()创建的是一个信号量数组，数组元素个数即为_nsems</li>
+<li>第三个参数_semflg是一个标记集合，与open()函数的标记十分类似，低9位是信号量的权限，其作用与文件权限类似。另外这些标记可以与IPC_CREATE进行或操作来创建新的信号量。</li>
+</ul>
+</li>
+<li>信号量控制<br>Linux提供了semctl函数来直接控制信号量的信息。函数原型<code>int semctl(int sem_id,int sem_num,int command,...)</code><ul>
+<li>返回值：成功返回0，失败返回-1</li>
+<li>参数sem_id: 信号量标识码，还是通过semget来获得的，是semget函数的一个返回值</li>
+<li>参数sem_num: 信号量数组元素的下标，即指定对第几个信号量进行控制。</li>
+<li>参数command: 是要执行的动作，常用值有两个:<ul>
+<li>SETVAL: 用于为信号量赋初值</li>
+<li>IPC_RMID: 当信号量不再需要时用于删除一个信号量标识</li>
+</ul>
+</li>
+<li>如果有第四个参数则是union semun。对信号量赋值时，需要提供该参数，其值通过union中的val指定。</li>
+</ul>
+</li>
+<li><p>信号量操作<br>LInux提供semop()来操作信号量。函数原型<code>int semop(int sem_id, struct sembuf *sem_ops, size_t num_sem_ops)</code></p>
+<ul>
+<li>返回值：函数调用成功返回0，失败返回-1</li>
+<li>参数semid: 由semget()函数所返回的信号量标识符</li>
+<li><p>参数sops: 一个指向信号量结构体数组的指针，信号量的结构体至少有3个成员。其结构如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">struct sembuf &#123;</span><br><span class="line">    unsigned short sem_num;</span><br><span class="line">    short sem_op;</span><br><span class="line">    short sem_flg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此结构中，第一个成员sem_num是信号量数组下标；sem_op是信号量的变化量值，通常两个值，-1对应P操作，+1对应V操作；sem_flg是信号操作标志，有两种状态，一个是SEM_UNDO,另一个是SEM_NOWAIT，通常设为0</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Windows提供了一组API函数实现信号量及其操作</p>
+<h5 id="3-8-5-共享内存及应用实例"><a href="#3-8-5-共享内存及应用实例" class="headerlink" title="3.8.5 共享内存及应用实例"></a>3.8.5 共享内存及应用实例</h5><p>共享内存是进程间通信中最简单的方式之一。共享内存允许两个或更多进程访问同一块内存，就如同 malloc() 函数向不同进程返回了指向同一个物理内存区域的指针。当一个进程改变了这块地址中的内容的时候，其它进程都会察觉到这个更改。<br>因为所有进程共享同一块内存，共享内存在各种进程间通信方式中具有最高的效率。访问共享内存区域和访问进程独有的内存区域一样快，并不需要通过系统调用或者其它需要切入内核的过程来完成。同时它也避免了对数据的各种不必要的复制。<br>因为系统内核没有对访问共享内存进行同步，您必须提供自己的同步措施。例如，在数据被写入之前不允许进程从共享内存中读取信息、不允许两个进程同时向同一个共享内存地址写入数据等。解决这些问题的常用方法是通过使用信号量进行同步。<br>在 Linux 系统中，每个进程的虚拟内存是被分为许多页面的。这些内存页面中包含了实际的数据。每个进程都会维护一个从内存地址到虚拟内存页面之间的映射关系。尽管每个进程都有自己的内存地址，不同的进程可以同时将同一个内存页面映射到自己的地址空间中，从而达到共享内存的目的。<br>要使用一块共享内存，进程必须首先分配它。随后需要访问这个共享内存块的每一个进程都必须将这个共享内存绑定到自己的地址空间中。当完成通信之后，所有进程都将脱离共享内存，并且由一个进程释放该共享内存块。</p>
+<ul>
+<li>共享内存的分配<br>分配一个新的共享内存块会创建新的内存页面。因为所有进程都希望共享对同一块内存的访问，只应由一个进程创建一块新的共享内存。再次分配一块已经存在的内存块不会创建新的页面，而只是会返回一个标识该内存块的标识符。一个进程如需使用这个共享内存块，则首先需要将它绑定到自己的地址空间中。这样会创建一个从进程本身虚拟地址到共享页面的映射关系。当对共享内存的使用结束之后，这个映射关系将被删除。当再也没有进程需要使用这个共享内存块的时候，必须有一个(且只能是一个)进程负责释放这个被共享的内存页面。<br>进程通过调用shmget(Shared Memory GET，获取共享内存)来分配一个共享内存块。<br>该函数的第一个参数是一个用来标识共享内存块的键值。彼此无关的进程可以通过指定同一个键以获取对同一个共享内存块的访问。不幸的是，其它程序也可能挑选了同样的特定值作为自己分配共享内存的键值，从而产生冲突。用特殊常量IPC_PRIVATE作为键值可以保证系统建立一个全新的共享内存块。<br>该函数的第二个参数指定了所申请的内存块的大小。因为这些内存块是以页面为单位进行分配的，实际分配的内存块大小将被扩大到页面大小的整数倍。<br>第三个参数是一组标志，通过特定常量的按位或操作来shmget。这些特定常量包括：<ul>
+<li>IPC_CREAT：这个标志表示应创建一个新的共享内存块。通过指定这个标志，我们可以创建一个具有指定键值的新共享内存块。</li>
+<li>IPC_EXCL：这个标志只能与 IPC_CREAT 同时使用。当指定这个标志的时候，如果已有一个具有这个键值的共享内存块存在，则shmget会调用失败。也就是说，这个标志将使线程获得一个“独有”的共享内存块。如果没有指定这个标志而系统中存在一个具有相同键值的共享内存块，shmget会返回这个已经建立的共享内存块，而不是重新创建一个。</li>
+<li>模式标志：这个值由9个位组成，分别表示属主、属组和其它用户对该内存块的访问权限。其中表示执行权限的位将被忽略。指明访问权限的一个简单办法是利用&lt;sys/stat.h&gt;中指定，并且在手册页第二节stat条目中说明了的常量指定。例如，S_IRUSR和S_IWUSR分别指定了该内存块属主的读写权限，而 S_IROTH和S_IWOTH则指定了其它用户的读写权限。 下面例子中shmget函数创建了一个新的共享内存块(当shm_key已被占用时则获取对一个已经存在共享内存块的访问)，且只有属主对该内存块具有读写权限，其它用户不可读写。</li>
+</ul>
+</li>
+</ul>
+<p>int segment_id = shmget (shm_key, getpagesize (), IPC_CREAT | S_IRUSR| S_IWUSR ); 如果调用成功，shmget将返回一个共享内存标识符。如果该共享内存块已经存在，系统会检查访问权限，同时会检查该内存块是否被标记为等待摧毁状态。</p>
+<ul>
+<li>共享内存的绑定<br>要让一个进程获取对一块共享内存的访问，这个进程必须先调用 shmat(SHared Memory Attach，绑定到共享内存)。将 shmget 返回的共享内存标识符 SHMID 传递给这个函数作为第一个参数。该函数的第二个参数是一个指针，指向您希望用于映射该共享内存块的进程内存地址；如果您指定NULL则Linux会自动选择一个合适的地址用于映射。第三个参数是一个标志位，包含了以下选项：<ul>
+<li>SHM_RND表示第二个参数指定的地址应被向下靠拢到内存页面大小的整数倍。如果您不指定这个标志，您将不得不在调用shmat的时候手工将共享内存块的大小按页面大小对齐。 </li>
+<li>SHM_RDONLY表示这个内存块将仅允许读取操作而禁止写入。</li>
+</ul>
+</li>
+</ul>
+<p>如果这个函数调用成功则会返回绑定的共享内存块对应的地址。通过 fork函数创建的子进程同时继承这些共享内存块；如果需要，它们可以主动脱离这些共享内存块。当一个进程不再使用一个共享内存块的时候应通过调用 shmdt(Shared Memory Detach，脱离共享内存块)函数与该共享内存块脱离。将由 shmat 函数返回的地址传递给这个函数。如果当释放这个内存块的进程是最后一个使用该内存块的进程，则这个内存块将被删除。对exit或任何exec族函数的调用都会自动使进程脱离共享内存块。</p>
+<ul>
+<li>共享内存的释放<br>调用 shmctl(“Shared Memory Control”，控制共享内存)函数会返回一个共享内存块的相关信息。同时shmctl允许程序修改这些信息。该函数的第一个参数是一个共享内存块标识。<br>要获取一个共享内存块的相关信息，则为该函数传递 IPC_STAT作为第二个参数，同时传递一个指向一个 struct shmid_ds 对象的指针作为第三个参数。<br>要删除一个共享内存块，则应将 IPC_RMID 作为第二个参数，而将NULL作为第三个参数。当最后一个绑定该共享内存块的进程与其脱离时，该共享内存块将被删除<br>在结束使用每个共享内存块的时候都使用shmctl进行释放，以防止超过系统所允许的共享内存块的总数限制。调用 exit 和 exec 会使进程脱离共享内存块，但不会删除这个内存块。要查看其它有关共享内存块的操作的描述，请参考shmctl函数的手册页。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;sys/shm.h&gt;</span><br><span class="line">#include &lt;sys/stat.h&gt;</span><br><span class="line">int main() &#123;</span><br><span class="line">    int segment_id;</span><br><span class="line">    char* shared_memory;</span><br><span class="line">    struct shmid_ds shmbuffer;</span><br><span class="line">    int segment_size;</span><br><span class="line">    const int shared_segment_size = 0x6400; //分配一个共享内存块</span><br><span class="line">    segment_id = shmget(IPC_PRIVATE, shared_segment_size, IPC_CREAT|IPC_EXCL|S_IRUSR|S_IWUSR ); //绑定到共享内存块</span><br><span class="line">    shared_memory = (char*)shmat(segment_id, 0, 0);</span><br><span class="line">    printf(&quot;shared memory attached at address %p\n&quot;, shared_memory); //确定共享内存的大小</span><br><span class="line"></span><br><span class="line">    shmctl(segment_id, IPC_STAT, &amp;shmbuffer);</span><br><span class="line">    segment_size = shmbuffer.shm_segsz;</span><br><span class="line">    printf(&quot;segment size: %d\n&quot;, segment_size);</span><br><span class="line">    sprintf(shared_memory, &quot;Hello, world.&quot;); //在共享内存中写入一个字符串</span><br><span class="line">    shmdt(shared_memory); //脱离该共享内存块</span><br><span class="line">    shared_memory = (char*)shmat(segment_id, (void*) 0x500000, 0); //重新绑定该内存块</span><br><span class="line"></span><br><span class="line">    printf(&quot;shared memory reattached at address %p\n&quot;, shared_memory);</span><br><span class="line">    printf(&quot;%s\n&quot;, shared_memory); //输出共享内存中的字符串</span><br><span class="line">    shmdt(shared_memory); //脱离该共享内存块</span><br><span class="line">    shmctl(segment_id, IPC_RMID, 0); //释放这个共享内存块</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Windows提供了FileMapping机制来实现共享内存的功能</p>
+<h4 id="3-9-进程调度"><a href="#3-9-进程调度" class="headerlink" title="3.9 进程调度"></a>3.9 进程调度</h4><h5 id="3-9-1-调度-分派结构"><a href="#3-9-1-调度-分派结构" class="headerlink" title="3.9.1 调度/分派结构"></a>3.9.1 调度/分派结构</h5><p>系统中处于就绪状态的进程是处理机的竞争是由进程调度程序来协调的，进程调度的功能可以分为调度和分派两部分。其中调度的含义是依照确定的策略将一批进程排序，排在首位的进程一定是满足调度原则的、可被选择的进程。而分派则是当调度时机到来时，从就绪队列中移出一个进程并给它提供处理机的使用权。<br>相应的调度程序和分派程序的功能是：调度程序负责将一个进程插入到就绪队列并按一定原则保持队列结构；分派程序是将进程从就绪队列中移出并建立该进程执行的机器状态。调度/分派结构如下图所示：<br><img src="/images/operatingSystem01_14.jpg" alt="fourteenth"></p>
+<h5 id="3-9-2-进程调度的功能"><a href="#3-9-2-进程调度的功能" class="headerlink" title="3.9.2 进程调度的功能"></a>3.9.2 进程调度的功能</h5><ul>
+<li>各进程PCB中记录该进程的执行情况，根据各进程的状态特征和资源需求情况，动态调整各PCB队列</li>
+<li>当CPU空闲时，按照一定的策略从就绪队列上选择一个进程，确定其占用CPU的时间，准备进入CPU上去执行</li>
+<li>进行进程上下文切换，即实施CPU的分配与回收进程上下文:<ul>
+<li>一个进程的上下文(contex)是进程的状态、数据结构和有关变量的值、CPU寄存器值、PCB和相关的程序等内容的集合;</li>
+<li>任何进程是在其上下文中执行的，所以当某进程退出CPU时，必须及时保留其上下文的值尔后能顺利恢复该进程的执行</li>
+<li>装入被调度进程的上下文，使其拥有CPU的执行控制权。</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-9-3-调度方式"><a href="#3-9-3-调度方式" class="headerlink" title="3.9.3 调度方式"></a>3.9.3 调度方式</h5><ul>
+<li>非剥夺方式: 当有优先级更高的进程转变为就绪状态时，仍然让正在执行的进程继续执行，直到该进程完成或发生某事件(如提出I/O请求)而进入完成或阻塞状态时，才把处理机分配给重要而紧迫的进程，使之执行</li>
+<li>可剥夺方式: 当有优先级更高的进程转变为就绪状态时，便暂停正在执行的进程，立即把处理机分配给高优先级的进程，这种方式称为可剥夺调度方式。所实施的策略就是可抢占调度策略</li>
+</ul>
+<h5 id="3-9-4-进程优先度调度算法"><a href="#3-9-4-进程优先度调度算法" class="headerlink" title="3.9.4 进程优先度调度算法"></a>3.9.4 进程优先度调度算法</h5><p>较简单的进程状态变迁图如下:<br><img src="/images/operatingSystem01_15.gif" alt="fifteenth"><br>在此例中，指出了两种就绪状态：低优先就绪和高优先就绪。一个进程如果在运行中超过了它的时间量就进入低优先就绪，而当它从阻塞状态变为就绪状态时则进入高优先就绪队列。由此我们可以看出，进入低优先就绪队列的进程一般是计算量比较大的，即称受CPU限制的进程；而有阻塞状态变为高优先就绪的进程一般是输入量比较大的进程，即称受I/O现在的进程。<br>图所示的状态变迁图说明的进程调度算法是：</p>
+<pre><code>- 1.从高优先就绪队列中选择一个进程来进行。
+- 2.如果高优先就绪队列为空，则从低优先就绪队列中选择一个进程运行。
+</code></pre><p>这种调度策略优先照顾了I/O量大的进程。<br>一种较为复杂的状态变迁图如下图所示：<br><img src="/images/operatingSystem01_16.gif" alt="sixteenth"><br>这种调度算法可用于具有页面存贮管理的分时操作系统中。在变迁图中，阻塞进程分为三组：等待终端I/O受阻，等待盘或带I/O受阻和等待页面I/O受阻。就绪进程页分为三组：高优先就绪、中优先就绪和低优先就绪。其调度策略是从高优先就绪队列中选取进程去运行，若此队列为空，则从较低优先就绪队列中选择进程。只有在无较高优先级的进程时才运行低优先级的就绪进程。<br>进程先进先出调度算法(FIFO)</p>
+<pre><code>- a.基本思想：进行进程调度时，每次从就绪队列中选择一个最先进入该队列的进程，把处理机分配给它，使之投入运行。直到它运行完毕或因等待I/O而处于阻塞状，才放弃处理机。
+- b.优点：
+    + 实现简单
+    + 适合于长作业，CPU 繁忙的作业
+- c.缺点：
+    + 若一个短作业在长作业之后到达就绪队列,将等待较长时间才能投入运行
+    + I/O繁忙型的作业，在CPU处理时，需要频繁地请求I/O，而每次I/O的操作时间较短，它们放弃CPU之后，不易再次获得CPU而需等待较长时间。
+</code></pre><h5 id="3-9-5-循环轮转调度"><a href="#3-9-5-循环轮转调度" class="headerlink" title="3.9.5 循环轮转调度"></a>3.9.5 循环轮转调度</h5><ul>
+<li>a. 基本思想: CPU处理时间分成固定大小的时间片，如果一个进程在进程调度过程中获得CPU之后用完了系统规定的时间片，但仍未运行完毕，则它自行释放CPU，由执行状态就绪状态，排在就绪队列尾，等待下一次调度。同时,进程调度又去调度当前就绪队列中的第一个进程。</li>
+<li>b. 时间片选择: 时间片的选择非常重要，关系到整个系统的性能。选择时间片的原则：适当地选择，不仅要齐头并进 ，还要利益均等。</li>
+<li>c. 确定时间片的四个因素:<ul>
+<li>1、系统响应时间(与时间片q成正比,与就绪队列中进程数目成反比)</li>
+<li>2、当前就绪队列中进程数目</li>
+<li>3 、进程转换时间</li>
+<li>4、CPU处理能力: CPU速度越高，q越大；CPU速度越低，q越小。</li>
+</ul>
+</li>
+<li>d. 简单轮转法<br>该算法是以就绪队列中的所有进程均以相等的速度向前进栈为特征的。时间片长度选择根据系统对响应时间要求T响和就绪队列中的最大进程数Nmax确定，即q=T响/Nmax。如果就绪队列中有k个就绪进程，时间片的长度为q秒，则每个进程在每kq的时间内可获得q秒的CPU时间，亦即每个进程是以1/K的实际CPU速度运行在处理机上。<ul>
+<li>优点: 使用和设计都较简单。</li>
+<li>缺点: 没有考虑到特殊的有紧急事件的进程的发生。<br><img src="/images/operatingSystem01_17.gif" alt="seventeenth"></li>
+</ul>
+</li>
+<li>e. 可变时间片<br>基本思想: 时间片不固定，而是动态地确定时间片q=T响/Nmax,即按照用户响应时间的要求，按就绪队列中实际的进程数目来动态的确定时间片。当就绪队列中进程多时，时间片小；若就绪队列中进程少时，设置时间片大。<ul>
+<li>优点: 避免了进程调来调去，降低了系统关于进程交换的开销。</li>
+<li>缺点: 设计及实现较复杂，而且系统在判断过程中也有较大的开销(判断当前就绪队列中有多少个进程)<br><img src="/images/operatingSystem01_18.gif" alt="eighteenth"></li>
+</ul>
+</li>
+<li>f. 多队列轮转法<br>基本思想: 给出两种就绪状态高优先就绪和低优先就绪一个进程若在运行过程中系统分配给它的时间片用完，但它还未完成任务,则进入低优先就绪队列，而且因请求I/O而阻塞的进程I/O完成之后，它进入高优先就绪队列<br>它的调度算法是：<ul>
+<li>1)CPU空闲时，首先从高优先就绪队列中选择一个进程运行，赋予时间片为100ms</li>
+<li>2)如果高优先就绪队列为空，则从低优先就绪队列中选择一个进程运行，赋予时间片500ms<br><img src="/images/operatingSystem01_19.gif" alt="nineteenth"></li>
+<li>优点: 这种策略优先照顾了I/O量大的进程，使它们处高优先就绪队列，可以较快地被调度；而计算量比较大的进程，如果一个时间片用完后，就进入低优先就绪队列等待较长时间，但若它一旦被调度，则可以在CPU上较长时间(系统赋予它的时间片较大)，这样减少了交换次数</li>
+<li>缺点: 增加了队列，系统开销增大了。<br><img src="/images/operatingSystem01_20.gif" alt="twentieth"></li>
+</ul>
+</li>
+</ul>
+<h5 id="3-9-6-优先级调度算法"><a href="#3-9-6-优先级调度算法" class="headerlink" title="3.9.6 优先级调度算法"></a>3.9.6 优先级调度算法</h5><p>优先级调度算法又称优先权调度算法，该算法既可以用于作业调度，也可以用于进程调度，该算法中的优先级用于描述作业运行的紧迫程度。<br>在作业调度中，优先级调度算法每次从后备作业队列中选择优先级最髙的一个或几个作业，将它们调入内存，分配必要的资源，创建进程并放入就绪队列。在进程调度中，优先级调度算法每次从就绪队列中选择优先级最高的进程，将处理机分配给它，使之投入运行。<br>根据新的更高优先级进程能否抢占正在执行的进程，可将该调度算法分为：</p>
+<pre><code>+ 非剥夺式优先级调度算法。当某一个进程正在处理机上运行时，即使有某个更为重要或紧迫的进程进入就绪队列，仍然让正在运行的进程继续运行，直到由于其自身的原因而主动让出处理机时(任务完成或等待事件)，才把处理机分配给更为重要或紧迫的进程。
++ 剥夺式优先级调度算法。当一个进程正在处理机上运行时，若有某个更为重要或紧迫的进程进入就绪队列，则立即暂停正在运行的进程，将处理机分配给更重要或紧迫的进程。
+</code></pre><p>而根据进程创建后其优先级是否可以改变，可以将进程优先级分为以下两种：</p>
+<ul>
+<li>静态优先级。优先级是在创建进程时确定的，且在进程的整个运行期间保持不变。确定静态优先级的主要依据有进程类型、进程对资源的要求、用户要求。</li>
+<li>动态优先级。在进程运行过程中，根据进程情况的变化动态调整优先级。动态调整优先级的主要依据为进程占有CPU时间的长短、就绪进程等待CPU时间的长短。</li>
+</ul>
+<h5 id="3-9-7-多级反馈队列调度"><a href="#3-9-7-多级反馈队列调度" class="headerlink" title="3.9.7 多级反馈队列调度"></a>3.9.7 多级反馈队列调度</h5><p>多级反馈队列调度算法是时间片轮转调度算法和优先级调度算法的综合和发展，通过动态调整进程优先级和时间片大小，多级反馈队列调度算法可以兼顾多方面的系统目标。例如，为提高系统吞吐量和缩短平均周转时间而照顾短进程；为获得较好的I/O设备利用率和缩短响应时间而照顾I/O型进程；同时，也不必事先估计进程的执行时间<br><img src="/images/operatingSystem01_21.jpg" alt="twenty first"><br>多级反馈队列调度算法的实现思想如下：</p>
+<pre><code>+ 应设置多个就绪队列，并为各个队列赋予不同的优先级，第1级队列的优先级最高，第2级队列次之，其余队列的优先级逐次降低。
++ 赋予各个队列中进程执行时间片的大小也各不相同，在优先级越高的队列中，每个进程的运行时间片就越小。例如，第2级队列的时间片要比第1级队列的时间片长一倍，……第i+1级队列的时间片要比第i级队列的时间片长一倍。
++ 当一个新进程进入内存后，首先将它放入第1级队列的末尾，按FCFS原则排队等待调度。当轮到该进程执行时，如它能在该时间片内完成，便可准备撤离系统；如果它在一个时间片结束时尚未完成，调度程序便将该进程转入第2级队列的末尾，再同样地按FCFS 原则等待调度执行；如果它在第2级队列中运行一个时间片后仍未完成，再以同样的方法放入第3级队列……如此下去，当一个长进程从第1级队列依次降到第 n 级队列后，在第n级队列中便釆用时间片轮转的方式运行。
++ 仅当第1级队列为空时，调度程序才调度第2级队列中的进程运行；仅当第1 ~ (i-1)级队列均为空时，才会调度第i级队列中的进程运行。如果处理机正在执行第i级队列中的某进程时，又有新进程进入优先级较高的队列（第 1 ~ (i-1)中的任何一个队列），则此时新进程将抢占正在运行进程的处理机，即由调度程序把正在运行的进程放回到第i级队列的末尾，把处理机分配给新到的更高优先级的进程。
+</code></pre><p>多级反馈队列的优势有：</p>
+<pre><code>- 终端型作业用户：短作业优先。
+- 短批处理作业用户：周转时间较短。
+- 长批处理作业用户：经过前面几个队列得到部分执行，不会长期得不到处理。
+</code></pre><h5 id="3-9-8-线程调度"><a href="#3-9-8-线程调度" class="headerlink" title="3.9.8 线程调度"></a>3.9.8 线程调度</h5><p>为了提高并行处理能力，现代操作系统多采用多线程技术，一般对线程调度采用优先调度算法。<br>线程就绪队列按优先级的高低排序。对于优先级相同的进程，则遵从队列”先进先出”的原则，当一个在就绪队列中排列的线程分配到了处理机进入运行状态之后，这个线程称为是被调度的。<br>WIndows中线程总共分为32个优先级，具体看下图：<br><img src="/images/operatingSystem01_22.jpg" alt="twenty second"><br>每个线程都会被赋予一个从0到31的优先级号码。当系统要分配线程时间片的时候，它首先是找到所有线程中优先级别最高的一个线程进行运行，在运行期间，如果出现一个可被调度的更高优先级的线程，则会中断当前的运行，而执行更高优先级的线程，否则，一直执行到时间片用完，这时，系统会查看所有的可调度线程。</p>
+<pre><code>+ 如果这些线程的优先级都比当前的线程优先级低，那么系统将继续执行当前的线程，其他的线程将不会得到CPU，如果经过3~5秒一直处于这样的状态，那么系统会动态的提升某些渴求调度线程的优先级，让他们占用CPU一定时间，然后再降回原来的优先级。
++ 如果存在相同优先级的线程，则系统会将CPU分配给那个线程。
+</code></pre><p>总的来说，优先级高的线程基本上会一直占有CPU，而不给低优先级线程以机会。同时不管当前线程的时间片是否用完，如果出现可调度的更高优先级的线程，那么就会打断当前的线程，去执行高优先级的线程。因此，高优先级的线程不应该一直占有CPU，应该注意时常将其挂起。</p>
+<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)"><a href="http://202.114.32.200:8080/courseware/208310/20831011/" target="_blank" rel="noopener">http://202.114.32.200:8080/courseware/208310/20831011/</a><a href="#fnref:1" rev="footnote"> ↩</a></span></div></div></div>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/operating-system/" rel="tag"># operating system</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/08/26/gameTheory/" rel="next" title="Game Theory">
+                <i class="fa fa-chevron-left"></i> Game Theory
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/08/29/machineLearning05/" rel="prev" title="机器学习五">
+                机器学习五 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/site/avatar.png" alt="Kino">
+            
+              <p class="site-author-name" itemprop="name">Kino</p>
+              <div class="site-description motion-element" itemprop="description">Amor Fati</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">111</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">109</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/WoeiSheu" title="GitHub &rarr; https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/KafuuKino" title="Twitter &rarr; https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/u/2613432527" title="Weibo &rarr; http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-前言"><span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-操作系统简介"><span class="nav-text">2. 操作系统简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-发展过程"><span class="nav-text">2.1 发展过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-基本特性"><span class="nav-text">2.2 基本特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-主要功能"><span class="nav-text">2.3 主要功能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-进程"><span class="nav-text">3. 进程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-进程的特征与状态"><span class="nav-text">3.1 进程的特征与状态</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-1-定义"><span class="nav-text">3.1.1 定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-2-三种基本状态"><span class="nav-text">3.1.2 三种基本状态</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-3-挂起状态"><span class="nav-text">3.1.3 挂起状态</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-4-进程控制块-PCB"><span class="nav-text">3.1.4 进程控制块(PCB)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-5-总结"><span class="nav-text">3.1.5 总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-进程控制"><span class="nav-text">3.2 进程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-1-进程创建"><span class="nav-text">3.2.1 进程创建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-2-进程撤销"><span class="nav-text">3.2.2 进程撤销</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-3-进程阻塞"><span class="nav-text">3.2.3 进程阻塞</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-4-进程唤醒"><span class="nav-text">3.2.4 进程唤醒</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-进程间的约束关系"><span class="nav-text">3.3 进程间的约束关系</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3-1-进程竞争与合作"><span class="nav-text">3.3.1 进程竞争与合作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3-2-进程互斥的概念"><span class="nav-text">3.3.2 进程互斥的概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3-3-进程同步的概念"><span class="nav-text">3.3.3 进程同步的概念</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-同步机构"><span class="nav-text">3.4 同步机构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-1-锁和上锁、开锁操作"><span class="nav-text">3.4.1 锁和上锁、开锁操作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-2-信号灯和P、V操作"><span class="nav-text">3.4.2 信号灯和P、V操作</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-进程互斥与同步的实现"><span class="nav-text">3.5 进程互斥与同步的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-1-上锁原语和开锁原语实现进程互斥"><span class="nav-text">3.5.1 上锁原语和开锁原语实现进程互斥</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-2-信号灯实现进程互斥"><span class="nav-text">3.5.2 信号灯实现进程互斥</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-3-进程同步的实现"><span class="nav-text">3.5.3 进程同步的实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-4-生产者—消费者问题"><span class="nav-text">3.5.4 生产者—消费者问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-5-管程机制"><span class="nav-text">3.5.5 管程机制</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-进程通信"><span class="nav-text">3.6 进程通信</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-1-引言"><span class="nav-text">3.6.1 引言</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-2-进程通信的实现方式"><span class="nav-text">3.6.2 进程通信的实现方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-3-经典IPC问题"><span class="nav-text">3.6.3. 经典IPC问题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-线程概念及特点"><span class="nav-text">3.7 线程概念及特点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-7-1-线程的概念"><span class="nav-text">3.7.1 线程的概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-7-2-线程的特点和状态"><span class="nav-text">3.7.2 线程的特点和状态</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-7-3-引入线程后带来的问题"><span class="nav-text">3.7.3 引入线程后带来的问题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-操作系统的并发机制实例"><span class="nav-text">3.8 操作系统的并发机制实例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-1-创建进程及应用实例"><span class="nav-text">3.8.1 创建进程及应用实例</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-2-创建线程及应用实例"><span class="nav-text">3.8.2 创建线程及应用实例</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-3-等待进程、线程的终止及其应用"><span class="nav-text">3.8.3 等待进程、线程的终止及其应用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-4-信号量与使用方法"><span class="nav-text">3.8.4 信号量与使用方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-5-共享内存及应用实例"><span class="nav-text">3.8.5 共享内存及应用实例</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-9-进程调度"><span class="nav-text">3.9 进程调度</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-9-1-调度-分派结构"><span class="nav-text">3.9.1 调度/分派结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-9-2-进程调度的功能"><span class="nav-text">3.9.2 进程调度的功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-9-3-调度方式"><span class="nav-text">3.9.3 调度方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-9-4-进程优先度调度算法"><span class="nav-text">3.9.4 进程优先度调度算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-9-5-循环轮转调度"><span class="nav-text">3.9.5 循环轮转调度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-9-6-优先级调度算法"><span class="nav-text">3.9.6 优先级调度算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-9-7-多级反馈队列调度"><span class="nav-text">3.9.7 多级反馈队列调度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-9-8-线程调度"><span class="nav-text">3.9.8 线程调度</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footnotes"><span class="nav-text">Footnotes</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kino</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/canvas_lines.min.js"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    <script>
+  window.livereOptions = {
+    refer: '2015/08/26/operatingSystem01/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "box";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "topCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "vertical";
+      
+        flOptions.position = "middleRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('Copied');
+        else $(this).text('Copy failed');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('Copy');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/clickup.js"></script>
+</body>
+</html>

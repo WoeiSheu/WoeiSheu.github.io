@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="hRzEYlh3gL">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=7.1.1">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前言最近在协助一个团队做一个和区块链相关的项目，虽然比较边缘性，和区块链联系没那么紧密，但区块链本身还是需要了解一下的。 花了一天阅读了一下区块链技术指南[1]">
+<meta name="keywords" content="blockchain,cryptocurrency,digital currency">
+<meta property="og:type" content="article">
+<meta property="og:title" content="区块链学习一">
+<meta property="og:url" content="https://blog.xuwei.fun/2018/03/24/blockchain01/index.html">
+<meta property="og:site_name" content="霁月荒馆">
+<meta property="og:description" content="前言最近在协助一个团队做一个和区块链相关的项目，虽然比较边缘性，和区块链联系没那么紧密，但区块链本身还是需要了解一下的。 花了一天阅读了一下区块链技术指南[1]">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-05-18T14:24:32.981Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="区块链学习一">
+<meta name="twitter:description" content="前言最近在协助一个团队做一个和区块链相关的项目，虽然比较边缘性，和区块链联系没那么紧密，但区块链本身还是需要了解一下的。 花了一天阅读了一下区块链技术指南[1]">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="霁月荒馆" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://blog.xuwei.fun/2018/03/24/blockchain01/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>区块链学习一 | 霁月荒馆</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">霁月荒馆</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">以今日之我与昨日之我战</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-thoughts">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/thoughts/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>Thoughts</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-excerpt">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/excerpt/" rel="section"><i class="menu-item-icon fa fa-fw fa-paperclip"></i> <br>Excerpt</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404.html/" rel="section"><i class="menu-item-icon fa fa-fw fa-child"></i> <br>Commonweal 404</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-foryou">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/foryou/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>ForYou</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2018/03/24/blockchain01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kino">
+      <meta itemprop="description" content="Amor Fati">
+      <meta itemprop="image" content="/images/site/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="霁月荒馆">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">区块链学习一
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-03-24 15:28:37" itemprop="dateCreated datePublished" datetime="2018-03-24T15:28:37+08:00">2018-03-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-05-18 22:24:32" itemprop="dateModified" datetime="2019-05-18T22:24:32+08:00">2019-05-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/techonology/blockchain/" itemprop="url" rel="index"><span itemprop="name">blockchain</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在协助一个团队做一个和区块链相关的项目，虽然比较边缘性，和区块链联系没那么紧密，但区块链本身还是需要了解一下的。</p>
+<p>花了一天阅读了一下区块链技术指南<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[区块链技术指南](https://github.com/yeasy/blockchain_guide)
+">[1]</span></a></sup><br><a id="more"></a></p>
+<h2 id="1-区块链思想的诞生与概念"><a href="#1-区块链思想的诞生与概念" class="headerlink" title="1. 区块链思想的诞生与概念"></a>1. 区块链思想的诞生与概念</h2><p>这一章从数字货币入手，比较了传统纸币和数字货币之间的优劣，概述了设计数字货币时需要解决的技术难点，进而引入了区块链的概念。<br>其中一些以前不了解的细节有:</p>
+<ul>
+<li>严格来讲, 货币（money）不等于现金或通货（cash，currency），货币的范围更广，维基百科里的相关解释:<ul>
+<li>Money: Money is any item or verifiable record that is generally accepted as payment for goods and services and repayment of debts in a particular country or socio-economic context.</li>
+<li>Currency: A currency is a system of money (monetary units) in common use, especially in a nation.</li>
+<li>Cash: In economics, cash is money in the physical form of currency, such as banknotes and coins. In bookkeeping and finance, cash is current assets comprising currency or currency equivalents that can be accessed immediately or near-immediately (as in the case of money market accounts).</li>
+</ul>
+</li>
+<li>去中心化场景下，数字货币的实现存在的难点:<ul>
+<li>货币的防伪:谁来负责验证货币</li>
+<li>货币交易:如何确定货币从一方转移到另外一方</li>
+<li>避免双重支付:如何避免出现双重支付</li>
+</ul>
+</li>
+<li>区块链技术雏形最早出现在比特币项目中，作为比特币背后的分布式记账平台，从记账的角度来看，区块链是首个自带对账功能的数字记账技术实现。跟传统的记账技术相比，其特点应该包括:<ul>
+<li>维护一条不断增长的链，只可能添加记录，而发生过的记录都不可篡改</li>
+<li>去中心化，或者说多中心化，无需集中的控制而能达成共识，实现上尽量分布式</li>
+<li>通过密码学的机制来确保交易无法抵赖和破坏，并尽量保护用户信息和记录的隐私性</li>
+</ul>
+</li>
+<li>当前区块链技术的三种典型应用场景:<ul>
+<li>比特币为代表的公信的数字货币</li>
+<li>以太坊为代表的公信的交易处理</li>
+<li>Hyperleger为代表的带权限的交易处理</li>
+</ul>
+</li>
+<li>区块链的基本概念:<ul>
+<li>交易(Transaction):一次操作，导致账本状态的一次改变，如添加一条记录</li>
+<li>区块(Block):记录一段时间内发生的交易和状态结果，是对当前账本状态的一次共识</li>
+<li>链(Chain):由一个个区块按照发生顺序串联而成，是整个状态变化的日志记录</li>
+</ul>
+</li>
+<li>nonce: In cryptography, a nonce is an arbitrary number that can only be used once. It is similar in spirit to a nonce word, hence the name. It is often a random or pseudo-random number issued in an authentication protocol to ensure that old communications cannot be reused in replay attacks. They can also be useful as initialization vectors and in cryptographic hash functions.</li>
+<li>分类:<ul>
+<li>根据参与者的不同，可以分为公开(Public)链、联盟(Consortium)链和私有(Private)链</li>
+<li>根据使用目的和场景的不同，又可以分为以数字货币为目的的货币链，以记录产权为目的的产权链，以众筹为目的的众筹链等</li>
+</ul>
+</li>
+<li>借(Debit): 意味着债务，表示从其他方转移到本科目内; 贷(Credit): 意味着债权，代表从该科目转移出去</li>
+</ul>
+<h2 id="2-区块链技术的价值、挑战和展望"><a href="#2-区块链技术的价值、挑战和展望" class="headerlink" title="2. 区块链技术的价值、挑战和展望"></a>2. 区块链技术的价值、挑战和展望</h2><ul>
+<li>从技术特点上，区块链一般被认为具有:<ul>
+<li>分布式容错性:网络极其鲁棒，容错 1/3 左右节点的异常状态</li>
+<li>不可篡改性:一致提交后的数据会一直存在，不可被销毁或修改</li>
+<li>隐私保护性:密码学保证了未经授权者能访问到数据，但无法解析</li>
+</ul>
+</li>
+<li>随之带来的业务特性将可能包括:<ul>
+<li>可信任性:区块链技术可以提供天然可信的分布式账本平台，不需要额外第三方中介机构</li>
+<li>降低成本:跟传统技术相比，区块链技术可能带来更短的时间、更少的人力和维护成本</li>
+<li>增强安全:区块链技术将有利于安全可靠的审计管理和账目清算，减少犯罪可能性，和各种风险</li>
+</ul>
+</li>
+<li>能否最终带来成本的降低，将是一项技术能否被深入应用的关键</li>
+<li>所有跟信息、价值（包括货币、证券、专利、版权、数字商品、实际物品等）、信用等相关的交换过程，都将可能从区块链技术中得到启发或直接受益</li>
+<li>涉及领域: 分布式、存储、密码学、心理学、经济学、博弈论、网络协议、系统安全等, 相关限制: 处理性能、扩展性等</li>
+<li>常见的分布式系统，可以通过增加节点来扩展整个系统的处理能力。区块链并非如此。</li>
+</ul>
+<h2 id="3-应用场景"><a href="#3-应用场景" class="headerlink" title="3. 应用场景"></a>3. 应用场景</h2><ul>
+<li>有直接或间接依赖于第三方担保信任机构的活动，均可能从区块链技术中获益<ul>
+<li>金融服务<ul>
+<li>银行金融管理</li>
+<li>证券交易</li>
+</ul>
+</li>
+<li>征信和权属管理</li>
+<li>资源共享</li>
+<li>投资管理</li>
+<li>物联网与供应链</li>
+</ul>
+</li>
+<li>制约区块链技术进一步应用的因素:<ul>
+<li>首先就是谁来为区块链上的合同担保？特别在金融、法律等领域，实际执行的生活往往还得是由人来做</li>
+<li>另外就是物品的数字化。非数字化的物品很难放到数字世界中进行管理。</li>
+</ul>
+</li>
+<li>一些对于上述观点的补充:<ul>
+<li>做任何应用层面的东西，都要意识到这个社会中最重要的永远是人的存在，所以人性永远在考虑范围内，而区块链的应用脱离了人只考虑数字世界必然是行不通的，需要对人性有所分析，对区块链应用涉及的社会活动所影响到的人的心理都要有充分估计，否则只是空谈而已。</li>
+<li>关于物品的数字化，的确是个问题，主要体现在物联网与供应链应用上，因为无法完全数字化，就必然会涉及到人，比如物流过程中从一级到另一级，一个物流人员将一个商品掉包如何确认？肯定不能够通过商品上贴的二维码来保证吧。其实就相当于得找到一个Hash算法，将实际物体映射到数字世界，或者思维转变，不考虑实际物体的数字化，而是着手与供应链过程中涉及到的人的信任保证。</li>
+<li>是不是区块链、叫不叫区块链，其实都不重要，主要是利用技术解决在没有”中介”的情况下如何促成一项交易的完成，确保一件物品的归属。减少交易环节是一个实实在在的需求，能够通过一项技术去减少交易环节，最好是P2P且能够保证双方信任的，这项技术的综合成本比原先的交易流程中间过程成本低，就是有价值的，而技术本身的实现并不唯一，但是技术必然需要实现以上需求的核心要求，其中最重要的就是去中心化，反观现在很多产品是打着区块链幌子的积分制而已，根本没有去中心化。</li>
+<li>以上观点都是一时的想法… 接触了更多知识有了更多思考之后应该有很多地方需要更正吧</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-分布式系统的核心问题"><a href="#4-分布式系统的核心问题" class="headerlink" title="4. 分布式系统的核心问题"></a>4. 分布式系统的核心问题</h2><ul>
+<li>一致性问题: <ul>
+<li>概念: 在分布式系统中，一致性(Consistency，早期也叫 Agreement)是指对于系统中的多个服务节点，给定一系列操作，在协议（往往通过某种共识算法）保障下，试图使得它们对处理结果达成某种程度的一致。</li>
+<li>解决分布式系统一致性问题的核心思想是: 将可能引发不一致的并行操作进行串行化</li>
+<li>一致性需要满足的要求:<ul>
+<li>可终止性(Termination): 一致的结果在有限时间内能完成</li>
+<li>共识性(Consensus): 不同节点最终完成决策的结果应该相同</li>
+<li>合法性(Validity): 决策的结果必须是其它进程提出的提案</li>
+</ul>
+</li>
+<li>强一致性: 顺序一致性(Sequential Consistency)、线性一致性(Linearizability Consistency)</li>
+<li>弱一致性</li>
+<li>关于一致性问题，在学习多智能体协同控制相关知识的时候，也是重点研究的，其实本质上都是相似的，因为多智能体系统也是一个分布式系统，只是在多智能体问题中，一致性通常是更为严格地被数学模型所表达，最简单的就是多个智能体之间某一变量的一致，如位置、速度、加速度等，以方便最后理论证明提出的控制算法是否满足一致性，而计算机分布式系统中将所有进程看成一个序列，考虑序列的一致性，通常是保证序列元素的执行顺序。</li>
+</ul>
+</li>
+<li>共识算法: 保障系统满足不同程度的一致性的解决方法。即便在网络通信可靠情况下，一个可扩展的分布式系统的共识问题的下限是无解。</li>
+<li>FLP不可能原理: 在网络可靠，存在节点失效(即便只有一个)的最小化异步模型系统中，不存在一个可以解决一致性问题的确定性算法。PS: 如果套用多智能体系统里的概念，相当于，若节点间组成的网络拓扑是不连通的，则系统无法达到一致性，但是如果长时间来看，即使某一时间段某个节点down掉了，只要下一时间段可以恢复，从而保证连续时间上的连通性，系统最终还是可以达到一致的。</li>
+<li>CAP原理: 分布式计算系统不可能同时确保一致性(Consistency)、可用性(Availablity)和分区容忍性(Partition)，设计中往往需要弱化对某个特性的保证。<ul>
+<li>一致性(Consistency): 任何操作应该都是原子的，发生在后面的事件能看到前面事件发生导致的结果，注意这里指的是强一致性</li>
+<li>可用性(Availablity): 在有限时间内，任何非失败节点都能应答请求</li>
+<li>分区容忍性(Partition): 网络可能发生分区，即节点之间的通信不可保障</li>
+</ul>
+</li>
+<li>ACID原则: 即Atomicity(原子性)、Consistency(一致性)、Isolation(隔离性)、Durability(持久性)。ACID原则描述了对分布式数据库的一致性需求，同时付出了可用性的代价。</li>
+<li>BASE原则: Basic Availiability，Soft state，Eventually Consistency，牺牲掉对一致性的约束(最终一致性)，来换取一定的可用性。</li>
+<li>PAXOS算法:<ul>
+<li>三种节点: proposer, acceptor, learner</li>
+<li>两个阶段: 准备阶段、提交阶段</li>
+</ul>
+</li>
+<li>Raft算法: Paxos算法的一种简化实现，包括三种角色: leader、candidate和follower，其基本过程为:<ul>
+<li>Leader选举: 每个candidate随机经过一定时间都会提出选举方案，最近阶段中得票最多者被选为leader</li>
+<li>同步log: leader会找到系统中log最新的记录，并强制所有的follower来刷新到这个记录</li>
+</ul>
+</li>
+<li>拜占庭问题: 讨论的是允许存在少数节点作恶(消息可能被伪造)场景下的一致性达成问题<ul>
+<li>PBFT算法: 包括三个阶段来达成共识, Pre-Prepare、Prepare 和 Commit</li>
+<li>PoW算法 </li>
+</ul>
+</li>
+</ul>
+<h2 id="5-密码学与安全技术"><a href="#5-密码学与安全技术" class="headerlink" title="5. 密码学与安全技术"></a>5. 密码学与安全技术</h2><ul>
+<li>工程领域从来没有黑科技；密码学不是工程。目的是保证信息的机密性、完整性、认证性和不可抵赖性</li>
+<li>Hash算法与数字摘要</li>
+<li>加解密算法: 保证机密性</li>
+<li>数字签名: 用于证实某数字内容的完整性(integrity)和来源(或不可抵赖，non-repudiation)<ul>
+<li>HMAC(Hash-based Message Authentication Code): 即”基于 Hash 的消息认证码”，HMAC(K, H, Message)，其中，K为提前共享的对称密钥，H为提前商定的Hash算法，Message为要处理的消息内容。HMAC 一般用于证明身份的场景</li>
+<li>盲签名: 主要是为了实现防止追踪(unlinkability)，签名者无法将签名内容和结果进行对应，且消息的内容对签名者是不可见的</li>
+<li>多重签名: 想象成一份文件被n个人管理，需要m个人签名才有效，这就是多重签名。可以用于电子商务、财产分割、资金监管等场景中，实际上类似电子商务这种需要中介担保的场景都可以用到多重签名</li>
+<li>群签名</li>
+<li>环签名: 属于一种简化的群签名</li>
+</ul>
+</li>
+<li>数字证书: 用来证明某个公钥是谁的，并且内容是正确的</li>
+<li>PKI体系: 在非对称加密中，公钥则可以通过证书机制来进行保护，如何管理和分发证书则可以通过 PKI(Public Key Infrastructure)来保障。PKI至少包含以下组件:<ul>
+<li>CA(Certification Authority): 负责证书的颁发和作废，接收来自RA的请求，是最核心的部分</li>
+<li>RA(Registration Authority): 对用户身份进行验证，校验数据合法性，负责登记，审核过了就发给CA</li>
+<li>证书数据库: 存放证书，一般采用LDAP目录服务，标准格式采用X.500系列</li>
+</ul>
+</li>
+<li>Merkle树，其特点是，底层数据的任何变动，都会传递到其父亲节点，一直到树根。典型应用场景包括:<ul>
+<li>快速比较大量数据</li>
+<li>快速定位修改</li>
+<li>零知识证明</li>
+</ul>
+</li>
+<li>同态加密，函数加密: 相关内容可以参考<a href="http://blog.sciencenet.cn/blog-411071-707426.html" target="_blank" rel="noopener">这里</a></li>
+<li>零知识证明(zero knowledge validation): 证明者在不向验证者提供任何有用的信息的前提下，使验证者相信某个论断是正确的</li>
+</ul>
+<h2 id="6-比特币项目"><a href="#6-比特币项目" class="headerlink" title="6. 比特币项目"></a>6. 比特币项目</h2><ul>
+<li>以前以为比特币交易是没有下限的，原来是有的，交易的最小单位是”聪”，即10exp-8比特币</li>
+<li>原理和设计、挖矿、工具、共识机制、闪电网络、侧链</li>
+</ul>
+<h2 id="7-Ethereum-以太坊项目"><a href="#7-Ethereum-以太坊项目" class="headerlink" title="7. Ethereum(以太坊项目)"></a>7. Ethereum(以太坊项目)</h2><ul>
+<li>智能合约</li>
+</ul>
+<h2 id="8-Hyperledger-超级账本项目"><a href="#8-Hyperledger-超级账本项目" class="headerlink" title="8. Hyperledger(超级账本项目)"></a>8. Hyperledger(超级账本项目)</h2><ul>
+<li>Fabric</li>
+</ul>
+<h2 id="9-区块链服务平台设计"><a href="#9-区块链服务平台设计" class="headerlink" title="9. 区块链服务平台设计"></a>9. 区块链服务平台设计</h2><ul>
+<li>区块链即服务（Blockchain as a Service，BaaS），是部署在云计算基础设施之上，对外提供区块链网络的生命周期管理和运行时服务管理等功能的一套工具</li>
+<li>IBM Bluemix云区块链服务</li>
+<li>微软Azure云区块链服务</li>
+<li>使用超级账本Cello搭建区块链服务</li>
+<li>一个看法是，若是区块链应用都建立在少数厂商的云上，那岂不是该云厂商就是实际的中心，区块链要解决的去中心化就不复存在了，私以为还是有一定道理的</li>
+</ul>
+<h2 id="10-一些想法"><a href="#10-一些想法" class="headerlink" title="10. 一些想法"></a>10. 一些想法</h2><p>区块链实际需要解决的还是去中心化(多中心化)场景下的信任问题，而涉及到现实世界中时，事情总不是那么容易解决的。一方面现实世界中永远是少部分人掌握大多数资源(生产资料)，无论是号称哪种体制，进行何种革命，到头来不过是一个轮回，而区块链目前看来也不可能是革命的手段，毕竟现在控制人类社会运转的资源并不会因为区块链而进行转移和改变，所以区块链若要大规模应用，如何避免其变成实际上的中心化是个很重要的问题，而这个问题很有可能无解，需要找到一种大多数人都有且数量级相当的资源来作为惩罚或奖励，Kino能想到的是生命值，不过这是不可能的。另一方面就是现在都是靠博弈来保证利益的最大化，保证实际结果的可信，而这些独立于数字世界之外的问题会对现实生活产生的影响有多少，也没有充分论证，博弈某种程度上也许就是把人类的恶拿了出来，而整个世界的社会实验，把整个社会的恶都反映了出来，会有什么情况，也是未知的。所以对于区块链技术将会革命整个现有生产关系的说法，Kino觉得不可能，或者保守点，近几十年年不可能。区块链当前最可能的应用大概还是资源相当的企业间的相关应用，其涉及的相关方需要数量偏少且资源没有数量级上的差别，比如汽车行业供应链上的资金流转。</p>
+<h2 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)"><a href="https://github.com/yeasy/blockchain_guide" target="_blank" rel="noopener">区块链技术指南</a><a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)"><a href="https://bitcoin.org/" target="_blank" rel="noopener">比特币官网</a><a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)"><a href="https://www.ethereum.org/" target="_blank" rel="noopener">以太坊官网</a><a href="#fnref:3" rev="footnote"> ↩</a></span></div></div></div>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/blockchain/" rel="tag"># blockchain</a>
+          
+            <a href="/tags/cryptocurrency/" rel="tag"># cryptocurrency</a>
+          
+            <a href="/tags/digital-currency/" rel="tag"># digital currency</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/19/listening03/" rel="next" title="用音乐逃离尘世">
+                <i class="fa fa-chevron-left"></i> 用音乐逃离尘世
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/01/japanese04/" rel="prev" title="日语学习三">
+                日语学习三 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/site/avatar.png" alt="Kino">
+            
+              <p class="site-author-name" itemprop="name">Kino</p>
+              <div class="site-description motion-element" itemprop="description">Amor Fati</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">111</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">109</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/WoeiSheu" title="GitHub &rarr; https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/KafuuKino" title="Twitter &rarr; https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/u/2613432527" title="Weibo &rarr; http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-区块链思想的诞生与概念"><span class="nav-text">1. 区块链思想的诞生与概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-区块链技术的价值、挑战和展望"><span class="nav-text">2. 区块链技术的价值、挑战和展望</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-应用场景"><span class="nav-text">3. 应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-分布式系统的核心问题"><span class="nav-text">4. 分布式系统的核心问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-密码学与安全技术"><span class="nav-text">5. 密码学与安全技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-比特币项目"><span class="nav-text">6. 比特币项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Ethereum-以太坊项目"><span class="nav-text">7. Ethereum(以太坊项目)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Hyperledger-超级账本项目"><span class="nav-text">8. Hyperledger(超级账本项目)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-区块链服务平台设计"><span class="nav-text">9. 区块链服务平台设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-一些想法"><span class="nav-text">10. 一些想法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnotes"><span class="nav-text">Footnotes</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kino</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/canvas_lines.min.js"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    <script>
+  window.livereOptions = {
+    refer: '2018/03/24/blockchain01/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "box";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "topCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "vertical";
+      
+        flOptions.position = "middleRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('Copied');
+        else $(this).text('Copy failed');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('Copy');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/clickup.js"></script>
+</body>
+</html>

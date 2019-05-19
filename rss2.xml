@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>霁月荒馆</title>
+    <link>https://blog.xuwei.fun/</link>
+    <copyright></copyright>
+    <itunes:subtitle></itunes:subtitle>
+    <itunes:author>Kino</itunes:author>
+    <itunes:summary>Amor Fati</itunes:summary>
+    <itunes:owner>
+      <itunes:name></itunes:name>
+      <itunes:email></itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://blog.xuwei.fun" />
+    <itunes:category text="">
+      <itunes:category text="" />
+    </itunes:category>
+    <itunes:explicit>no</itunes:explicit>
+    <language></language>
+    
+  </channel>
+</rss>

@@ -1,0 +1,2116 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="hRzEYlh3gL">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=7.1.1">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1. 资源管理概述1.1 资源管理的目的和任务 资源的静态分配和动态分配  资源的静态分配 系统对作业一级采用资源静态分配方法。 系统在调度作业时，根据作业所需资源进行分配；并在作业运行完毕时，收回所分配的全部资源。称为资源的静态分配。   资源的动态分配 系统对进程一级采用资源动态分配方法。 系统在进程运行中，根据进程提出的资源需求，进行资源的动态分配和回收。称为资源的动态分配。     资源管">
+<meta name="keywords" content="operating system">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统二——资源分配与调度">
+<meta property="og:url" content="https://blog.xuwei.fun/2015/09/16/operatingSystem02/index.html">
+<meta property="og:site_name" content="霁月荒馆">
+<meta property="og:description" content="1. 资源管理概述1.1 资源管理的目的和任务 资源的静态分配和动态分配  资源的静态分配 系统对作业一级采用资源静态分配方法。 系统在调度作业时，根据作业所需资源进行分配；并在作业运行完毕时，收回所分配的全部资源。称为资源的静态分配。   资源的动态分配 系统对进程一级采用资源动态分配方法。 系统在进程运行中，根据进程提出的资源需求，进行资源的动态分配和回收。称为资源的动态分配。     资源管">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem02_1.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem02_2.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem02_3.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem02_4.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem02_5.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem02_6.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem02_7.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem02_8.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem02_9.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem02_10.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem02_10.png">
+<meta property="og:updated_time" content="2019-05-18T14:24:33.182Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="操作系统二——资源分配与调度">
+<meta name="twitter:description" content="1. 资源管理概述1.1 资源管理的目的和任务 资源的静态分配和动态分配  资源的静态分配 系统对作业一级采用资源静态分配方法。 系统在调度作业时，根据作业所需资源进行分配；并在作业运行完毕时，收回所分配的全部资源。称为资源的静态分配。   资源的动态分配 系统对进程一级采用资源动态分配方法。 系统在进程运行中，根据进程提出的资源需求，进行资源的动态分配和回收。称为资源的动态分配。     资源管">
+<meta name="twitter:image" content="https://blog.xuwei.fun/images/operatingSystem02_1.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="霁月荒馆" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://blog.xuwei.fun/2015/09/16/operatingSystem02/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>操作系统二——资源分配与调度 | 霁月荒馆</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">霁月荒馆</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">以今日之我与昨日之我战</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-thoughts">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/thoughts/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>Thoughts</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-excerpt">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/excerpt/" rel="section"><i class="menu-item-icon fa fa-fw fa-paperclip"></i> <br>Excerpt</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404.html/" rel="section"><i class="menu-item-icon fa fa-fw fa-child"></i> <br>Commonweal 404</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-foryou">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/foryou/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>ForYou</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2015/09/16/operatingSystem02/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kino">
+      <meta itemprop="description" content="Amor Fati">
+      <meta itemprop="image" content="/images/site/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="霁月荒馆">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">操作系统二——资源分配与调度
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2015-09-16 17:36:00" itemprop="dateCreated datePublished" datetime="2015-09-16T17:36:00+08:00">2015-09-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/science/" itemprop="url" rel="index"><span itemprop="name">science</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/science/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-资源管理概述"><a href="#1-资源管理概述" class="headerlink" title="1. 资源管理概述"></a>1. 资源管理概述</h3><h4 id="1-1-资源管理的目的和任务"><a href="#1-1-资源管理的目的和任务" class="headerlink" title="1.1 资源管理的目的和任务"></a>1.1 资源管理的目的和任务</h4><ul>
+<li><p>资源的静态分配和动态分配</p>
+<ul>
+<li>资源的静态分配<ul>
+<li>系统对作业一级采用资源静态分配方法。</li>
+<li>系统在调度作业时，根据作业所需资源进行分配；并在作业运行完毕时，收回所分配的全部资源。称为资源的静态分配。</li>
+</ul>
+</li>
+<li>资源的动态分配<ul>
+<li>系统对进程一级采用资源动态分配方法。</li>
+<li>系统在进程运行中，根据进程提出的资源需求，进行资源的动态分配和回收。称为资源的动态分配。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>资源管理的目的</p>
+<ul>
+<li>目的：为用户提供一种简单而有效地使用资源的方法，充分发挥各资源的作用。</li>
+<li>应达到的目标：<ul>
+<li>保证资源的高利用率</li>
+<li>在”合理”时间内使所有顾客有获得所需资源的机会</li>
+<li>对不可共享的资源实施互斥使用</li>
+<li>防止由资源分配不当而引起死锁</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>资源管理的任务<ul>
+<li>任务：解决资源分配问题，防止死锁；解决对资源的存取、使用方法问题</li>
+<li>资源管理的功能<ul>
+<li>资源数据结构的描述</li>
+<li>确定资源的分配原则和调度原则</li>
+<li>执行资源分配</li>
+<li>存取控制和安全保护<a id="more"></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-资源的分类方法"><a href="#1-2-资源的分类方法" class="headerlink" title="1.2 资源的分类方法"></a>1.2 资源的分类方法</h4><ul>
+<li>物理资源和程序资源(处理器、外设等；消息或文件等)</li>
+<li>单一访问入口资源(不可重入，只能为一个进程使用)和多访问入口资源(可以为多个进程共享使用)</li>
+<li>等同资源(多个完全相同的设备)</li>
+<li>虚拟资源(cpu、一定容量的主存、数量有限的外设)，如虚拟存储器</li>
+</ul>
+<h4 id="1-3-虚拟资源"><a href="#1-3-虚拟资源" class="headerlink" title="1.3 虚拟资源"></a>1.3 虚拟资源</h4><p>虚拟资源是用户使用的逻辑资源，是经过操作系统改造的、使用方便的虚拟资源，而不是那些物理的实际的资源，这样做的目的，一是要提高资源利用率，二是为了方便用户的使用</p>
+<h3 id="2-资源管理的机制和策略"><a href="#2-资源管理的机制和策略" class="headerlink" title="2. 资源管理的机制和策略"></a>2. 资源管理的机制和策略</h3><p>机制：进行资源分配的必需的基本设施和部件，它包括描述资源状态的数据结构、保证资源互斥的同步机构及资源请求排队的手段。<br>策略：这些机构所使用的方法，资源分配的原则</p>
+<h4 id="2-1-资源分配机制"><a href="#2-1-资源分配机制" class="headerlink" title="2.1 资源分配机制"></a>2.1 资源分配机制</h4><ul>
+<li>资源描述器<ul>
+<li>什么是资源描述器<br>描述各类资源的最小分配单位的数据结构称为资源描述器 RD (resource descriptor)。如：<ul>
+<li>主存最小分配单位：在分区分配中—主存分区</li>
+<li>磁盘最小分配单位：磁盘面中的一个扇区</li>
+</ul>
+</li>
+<li>描述器的组织方式取决于资源分配单位的数量和这一数量是固定不变的、还是可以变化的这一特征。</li>
+<li>资源描述器的内容<ul>
+<li>资源名</li>
+<li>资源类型</li>
+<li>最小分配单位的大小</li>
+<li>最小分配单位的地址</li>
+<li>分配标志</li>
+<li>描述器链接信息</li>
+<li>存取权限</li>
+<li>密级</li>
+<li>最后一次存取时间</li>
+<li>记账信息<br><img src="/images/operatingSystem02_1.png" alt="first"></li>
+<li>资源信息块<ul>
+<li>什么是资源信息块(rib)<br>描述某类资源的请求者、可用资源和该类资源分配程序等必要信息的数据结构。<ul>
+<li>对于每一类可利用的资源，可将其组织成可利用资源队列。在资源信息块中有指向这两个队列的队列指针，另外还有一项为该类资源分配程序的入口地址 。</li>
+</ul>
+</li>
+<li>资源分配程序是接收分配命令把资源分配给请求者的例程。<ul>
+<li>资源分配程序包括：分配程序和回收程序。</li>
+</ul>
+</li>
+<li>资源信息块的内容<br><img src="/images/operatingSystem02_2.png" alt="second"></li>
+<li>资源分配的方式取决于设计者所选择的目标，以及与应用每一类资源相联系的特定限制。目的是使吞吐率尽可能地高，响应时间尽可能地短，即既要充分地利用系统各种资源，又要尽可能地满足用户要求。 </li>
+<li>一个资源进行分配的问题，在一般情况下，是由这样两个方面组成的：管理请求的排队站（分配策略）与在等同资源间选择资源。</li>
+<li>分配程序可以用不同的策略选择进程请求<ul>
+<li>按照请求来到的次序进行查看</li>
+<li>将进程请求者的优先权结合到每一个请求中</li>
+<li>满足能更合理地应用这一资源的那个请求</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-2-资源分配策略"><a href="#2-2-资源分配策略" class="headerlink" title="2.2 资源分配策略"></a>2.2 资源分配策略</h4><ul>
+<li>1)先请求先服务(FIFO(First In First Out))<ul>
+<li>排序原则：按请求的先后次序排序。</li>
+<li>每一个新产生的请求均排在队尾，而当资源可用时，资源分配程序则从队列中选取第一个请求，并满足其需要。</li>
+<li>这种策略可用于对进程或作业的调度，或外设、主存分配<br><img src="/images/operatingSystem02_3.png" alt="third"></li>
+</ul>
+</li>
+<li>2)优先调度<ul>
+<li>在优先调度策略下，对于每一个进程要指定一个优先级，优先级反映了进程要求处理的紧迫程度。</li>
+<li>排序原则：按优先级的高低排序。</li>
+<li>每一个新产生的请求，按其优先级的高低插到相应的位置上。而当资源可用时，选取队列中第一个请求，并满足其需要。<br><img src="/images/operatingSystem02_4.png" alt="fourth"></li>
+</ul>
+</li>
+<li>3)针对设备特性的调度<br>对具有高速度、大容量的存储设备(如磁盘)而言，在繁重的输入输出负载下，会有大量的I/O请求在等待。操作系统应该采取有效的调度策略从众多的请求中按最佳的排序原则去选择。确定最佳排序的目标是降低为完成这些I/O请求服务的总时间，从而提高系统效率。<ul>
+<li>移臂调度<br>所谓移臂调度是指在满足某一个磁盘请求时，总是选取与当前移动臂前进方向上最近的那个请求，使移臂距离最短。<br>针对设备特性的调度是I/O调度。I/O调度程序是在磁盘硬件层实施的，磁盘硬件看到的是磁盘面、磁道、块号(对磁盘组为: 柱面号、盘面号、块号)。如下例所示，若磁盘组同时有5个访问请求，它们按请求的先后次序排序，要求访问的盘区位置如<strong>表1</strong>所示：<br>如果当前移动臂处于1号柱面上，若按上述次序访问磁盘，移动臂将从1号柱面移动到6号柱面，再移至48号柱面，然后回到3号柱面。显然这样移臂很不合理。<br>若按<strong>表2</strong>次序访问则可节省移动臂时间(注：当前移动臂方向是由外向里，即柱面号由小到大)</li>
+<li>旋转调度<br>所谓旋转调度是指在满足一个磁盘请求时，总是选取与当前读写头旋转方向上最近的那个请求，使旋转圈数最少。<br>对于上述示例，使用<strong>表3</strong>排序则旋转次数更少：</li>
+</ul>
+</li>
+<li>4)几种移臂调度算法<ul>
+<li>最短寻道时间优先算法</li>
+<li>扫描算法</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">柱面号</th>
+<th style="text-align:center">盘面号</th>
+<th style="text-align:center">块号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">9</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">48</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">28</td>
+</tr>
+</tbody>
+</table>
+<p align="center">表1</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">柱面号</th>
+<th style="text-align:center">盘面号</th>
+<th style="text-align:center">块号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">28</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">9</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">48</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
+</tr>
+</tbody>
+</table>
+<p align="center">表2</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">柱面号</th>
+<th style="text-align:center">盘面号</th>
+<th style="text-align:center">块号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">28</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">9</td>
+</tr>
+<tr>
+<td style="text-align:center">48</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">16</td>
+</tr>
+</tbody>
+</table>
+<p align="center">表3</p>
+
+<h3 id="3-死锁"><a href="#3-死锁" class="headerlink" title="3. 死锁"></a>3. 死锁</h3><h4 id="3-1-死锁的定义与例子"><a href="#3-1-死锁的定义与例子" class="headerlink" title="3.1 死锁的定义与例子"></a>3.1 死锁的定义与例子</h4><p>操作系统的基本特征是并发与共享。系统允许多个进程并发执行，并且共享系统的软、硬件资源。为了最大限度地利用计算机系统的资源，操作系统应用动态分配系统各资源的策略。然而，采用这种策略时，若分配不当，一旦出现对某类资源的申请数目超过了这类资源的入口数目时，就是造成进程相互封锁的危险。事实上，不同进程对资源的申请可能按某种先后次序得到部分满足，这就可能造成其中的两个或几个进程彼此间相互封锁的情况。即每个进程“抓住”一些为其它进程所等待的资源不放，其结果谁也得不到它所申请的全部资源，所有这些进程都无法继续运行。</p>
+<ul>
+<li>例子：<ul>
+<li>OS系统中的死锁例子<br><img src="/images/operatingSystem02_5.png" alt="fifth"></li>
+<li>I/O设备共享时的死锁情况<br><img src="/images/operatingSystem02_6.png" alt="sixth"><br>此图可描述I/O设备共享时的死锁情况。<br>方框代表资源，圆圈表示进程；从资源到进程的箭头(有向边)，表示该资源分配给进程，过程资源分配边；而从进程到资源的箭头表示进程请求边。<br>由图可见，进程P1、P2的资源分配边和资源请求边形成一个环路。</li>
+<li>存储器共享时的死锁情况<br><img src="/images/operatingSystem02_7.png" alt="seventh"><br>我们可以这样说，如系统中由一个包含有m个分配单位的存贮器，它为n个进程所共享，且每个进程都要求I个分配单位，当m&lt;=n(I-1)时，可能发生死锁。<br>上图绘出了一个大大简化了的存贮器共享的情况，其中m=5,n=3,I=3。当P1、P2分别获得2个单元、P3获得1个单元时，内存被分配完毕。此时，系统进入一个不安全状态，因为在它们要求下一个所需要的单元资源时，便发生死锁(此时，它们都指望其它进程释放出内存空间，但谁都也不能再向前推进一步)。</li>
+</ul>
+</li>
+<li>死锁的定义：<ul>
+<li>若一个进程集合中的每一个进程都在等候只能由本集合中的另一进程才能引发的时事件则这种情况被视为死锁。</li>
+<li>死锁是并发进程彼此互相等待对方拥有的资源，且这些并发进程在得到对方的资源之前不会释放自己所拥有得资源，这就造成了各并发进程想得到不可能得到的资源，从而不能继续向前推进进程的状态。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-2-产生死锁的原因和必要条件"><a href="#3-2-产生死锁的原因和必要条件" class="headerlink" title="3.2 产生死锁的原因和必要条件"></a>3.2 产生死锁的原因和必要条件</h4><ul>
+<li>死锁产生的原因<br>并发进程共享系统资源，在竞争资源时可能会产生称为死锁的附带后果。产生死锁的根本原因是系统能够提供的资源个数比要求该资源的进程数要少。所以，当系统中两个或多个进程没能力进一步执行时，系统就发生死锁。<br>资源竞争现象是具有活力的、是需要的，虽然它存在着发生死锁的危险，但是，竞争并不等于死锁。在并发进程的活动中，存在着一种合理的联合推进路线，这种推进路线可使每个进程都运行完毕。但如果进程推进不合理则会出现死锁。<br>由此可知，产生死锁的原因是：<ul>
+<li>a. 系统资源不足</li>
+<li>b. 进程推进顺序非法。</li>
+</ul>
+</li>
+<li>死锁发生的必要条件<ul>
+<li>a. 互斥条件，每一资源或者被分配给一个进程，或者空闲。</li>
+<li>b. 部分分配条件，已分配到了一些资源的进程可以申请新的资源。</li>
+<li>c. 非剥夺条件，已分配给一进程的资源不可剥夺，只能被占有它的进程显式地释放。</li>
+<li>d. 循环等待条件，存在一种进程的循环链，链中的每一个进程以获得的资源同时被链中下一个进程所请求。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-3-死锁模型"><a href="#3-3-死锁模型" class="headerlink" title="3.3 死锁模型"></a>3.3 死锁模型</h4><p>资源分配图的成分：<br><img src="/images/operatingSystem02_8.png" alt="eighth"><br>用资源分配图分析死锁例：<br><img src="/images/operatingSystem02_9.png" alt="nineth"><br>用资源分配图分析无死锁例：<br><img src="/images/operatingSystem02_10.png" alt="tenth"></p>
+<h4 id="3-4-解决死锁的策略"><a href="#3-4-解决死锁的策略" class="headerlink" title="3.4 解决死锁的策略"></a>3.4 解决死锁的策略</h4><p>并发进程共享系统资源时如处理不当可能发生死锁。死锁不仅会在两个进程之间发生，也可能在多个进程之间、甚至在系统全部进程之间发生。此外，死锁不仅在动态使用外设时发生，也可能在动态使用存贮器和数据库时发生，或在进程通信过程中以及在利用信号灯作同步工具时由于p操作顺序不当而产生。在早期的操作系统中，系统规模较小，结构简单，而且资源的分配常常采用静态方法，使得操作系统尚未暴露死锁问题的严重性。但是，随着系统规模的增大，软件系统变得异常庞大而复杂，系统资源的种类亦日益增多，因而，死锁的可能性将大大增加。由于死锁的发生会给系统带来严重的后果，因此，处理系统死锁问题引起了人们的普遍注意，并对它进行了深入的研究。<br>但某些类别的死锁问题的发生概率极小，这时大多数用户宁可承受在极偶然情况下发生的死锁，也不愿使其工作不便或系统性能受损–因解决这类死锁要花费很大的代价。所以，在设计上，我们不得不在方便性与正确性之间作出折衷，即象驼鸟一样对此类死锁视而不见,这就是驼鸟算法。<br>    为了使系统不发生死锁，必须设法破坏产生死锁的四个必要条件之一。可以采用下列策略之一来解决死锁问题：</p>
+<ul>
+<li>1)采用静态分配方法来预防死锁</li>
+<li>2)采用有控分配方法来避免死锁</li>
+<li>3)当死锁发生时检测出死锁，并设法修复</li>
+</ul>
+<h4 id="3-5-死锁的预防"><a href="#3-5-死锁的预防" class="headerlink" title="3.5 死锁的预防"></a>3.5 死锁的预防</h4><p>基本思想：静态防止发生死锁的方法。<br>预先分配所有共享资源是预防死锁的一种安全而由简单的方法。这种方法的基本思想是：每个用户向系统提交作业时，需一次说明它所需要的资源；并且作业调度程序只能在满足该作业所需的全部资源的前提下才能将它投入运行。当资源一旦分配给该作业后，在其整个运行期间这些资源为它独占。这样就摒弃”部分分配”了条件,摒弃”不剥夺”了条件 ,摒弃”环路等待”了条件 。<br>死锁预防的缺点：</p>
+<ul>
+<li>a.一个用户在作业运行之前可能提不出他的作业时间、将要使用的全部设备。</li>
+<li>b.用户作业必须等待，直到所有资源满足时才能投入运行。</li>
+<li>c.一个作业运行期间，对某些设备的使用时间很少，甚至不会用到。故这种分配技术对系统来说是浪费的。</li>
+</ul>
+<h4 id="3-6-死锁的避免"><a href="#3-6-死锁的避免" class="headerlink" title="3.6 死锁的避免"></a>3.6 死锁的避免</h4><p>基本思想：动态防止发生死锁的方法<br>预防死锁和避免死锁的不同在于，前者所采用的分配策略本身就否定了必要条件之一，这样来保证死锁不可能发生；而后者是在动态分配资源的策略下采用某种算法来预防可能发生的死锁，从而拒绝可能引起死锁的某个资源请求。</p>
+<ul>
+<li><p>有序资源分配法<br>系统若采用有序资源分配法，则需要为系统中的每一类资源分配唯一的号码，且系统要求每个进程：</p>
+<ul>
+<li>对它所必须使用的而且属于某一类的所有资源，必须一次性申请完</li>
+<li>在申请不同类的资源时，必须按照各类的编号依次申请。<br>优缺点：</li>
+<li>缺点：进程实际需要资源的顺序不一定与资源的编号相一致，因而仍然会造成资源的浪费。</li>
+<li>优点：对资源进行合理的排序，这种方法是有一定实用价值的。</li>
+</ul>
+</li>
+<li><p>银行家算法：<br>存在一种算法总能作出正确的选择从而避免死锁单种资源的银行家算法(Dijkstra,1965)</p>
+<ul>
+<li>问题描叙：<br>一个领域的银行家，他向一群客户分别承若了一定的货款额度，具体而言，假设有4个客户，每个客户都有一个货款额度，银行家知道不可能所有客户同时都需要最大贷款额，所以他只能保留10个单位的资金来为客户服务，而不是22个单位。这里的背景是，将客户比作进程，货款比作设备，银行家比作OS。</li>
+<li>问题图示<br><img src="/images/operatingSystem02_10.png" alt="eleventh"></li>
+<li>算法：<br>对每一个请求进行检查，检查如果满足它是否会导致不安全状态，若是，则不满足该请求；否则便满足。检查状态是否安全的方法是看他是否有足够的资源满足一个跟最大需求最近的客户，如果可以，则这笔投资认为是能够收回的，然后接着检查下一个跟最大需求最接近的客户，如此反复下去。如果所有投资最终都被收回，则该状态是安全的，最初的请求可以批准。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-7-死锁的检测与忽略"><a href="#3-7-死锁的检测与忽略" class="headerlink" title="3.7 死锁的检测与忽略"></a>3.7 死锁的检测与忽略</h4><ul>
+<li><p>检测死锁并恢复</p>
+<ul>
+<li>a.基本思想：<br>检测系统是否发生死锁,检测出死锁之后,寻找排除死锁的方法，使系统恢复正常的工作状态。<br>本策略的指导原则是允许死锁产生，且当死锁发生时能检测出死锁，并有能力实现恢复。本策略的价值取决于死锁发生的频率和能够修复的程度。<br>发现死锁的原理是考查某一时刻系统状态是否合理，即是否存在一组可以实现的系统状态，能使所有进程都得到它们所申请的资源而运行结束。</li>
+<li>b.检测死锁算法的基本思想：<br>得到某时刻t时，系统中各类可利用资源得数目向量w(t)对于系统中的一组进程｛P1,P2,…Pi,…,Pn｝,找出那些对各类资源请求数目均小于系统现在所拥有的各类资源数目的进程。并认为这样的进程可以获得它们所需要的全部资源 并运行结束。当它们运行结束后释放所占有的全部资源，从而使可用资源数目增加，这样的进程加入到可运行结束的进程序列之中，然后对剩下的进程再作上述考查，如果一组进程｛P1,P2,…,Pn｝中有几个进程不属于序列L中，则它们会被死锁。</li>
+<li>c.排除死锁的实用办法 ：<ul>
+<li>将那些陷于死锁的全部进程一律撤消。</li>
+<li>逐个作废死锁进程，直至不再存在死锁为止。</li>
+<li>从死锁进程中逐个地强迫强占一些资源,直至死锁不再存在。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>死锁的忽略<br>如果系统可能发生死锁，且不提供进行死锁的预防的方法、死锁的检测与恢复的机制，那么可能会出现这种情况：系统已经出现死锁，而又不知道发生了什么。这种情况下，死锁的发生会导致系统性能的下降，因为资源被不能运行的进程锁占有，而越来越多的进程会因为申请资源而进入死锁状态。最后整个系统停止工作需要人工重新启动。<br>由于检测死锁的算法太复杂，系统开销大，所以使用很少。实际中对死锁的检测常常由计算机操作员来处理。而不是由系统本身来完成。通常修复方法是人工抽去一些作业，释放它们占的资源，再重新启动系统。</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/operating-system/" rel="tag"># operating system</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/09/14/windows02/" rel="next" title="Windows 琐记二">
+                <i class="fa fa-chevron-left"></i> Windows 琐记二
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/09/27/operatingSystem03/" rel="prev" title="操作系统三">
+                操作系统三 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/site/avatar.png" alt="Kino">
+            
+              <p class="site-author-name" itemprop="name">Kino</p>
+              <div class="site-description motion-element" itemprop="description">Amor Fati</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">111</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">109</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/WoeiSheu" title="GitHub &rarr; https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/KafuuKino" title="Twitter &rarr; https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/u/2613432527" title="Weibo &rarr; http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-资源管理概述"><span class="nav-text">1. 资源管理概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-资源管理的目的和任务"><span class="nav-text">1.1 资源管理的目的和任务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-资源的分类方法"><span class="nav-text">1.2 资源的分类方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-虚拟资源"><span class="nav-text">1.3 虚拟资源</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-资源管理的机制和策略"><span class="nav-text">2. 资源管理的机制和策略</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-资源分配机制"><span class="nav-text">2.1 资源分配机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-资源分配策略"><span class="nav-text">2.2 资源分配策略</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-死锁"><span class="nav-text">3. 死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-死锁的定义与例子"><span class="nav-text">3.1 死锁的定义与例子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-产生死锁的原因和必要条件"><span class="nav-text">3.2 产生死锁的原因和必要条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-死锁模型"><span class="nav-text">3.3 死锁模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-解决死锁的策略"><span class="nav-text">3.4 解决死锁的策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-死锁的预防"><span class="nav-text">3.5 死锁的预防</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-死锁的避免"><span class="nav-text">3.6 死锁的避免</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-死锁的检测与忽略"><span class="nav-text">3.7 死锁的检测与忽略</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kino</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/canvas_lines.min.js"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    <script>
+  window.livereOptions = {
+    refer: '2015/09/16/operatingSystem02/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "box";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "topCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "vertical";
+      
+        flOptions.position = "middleRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('Copied');
+        else $(this).text('Copy failed');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('Copy');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/clickup.js"></script>
+</body>
+</html>

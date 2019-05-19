@@ -1,0 +1,2902 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="hRzEYlh3gL">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=7.1.1">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前言————更新于2018.05.25————上一篇文章介绍了发音系统和书写系统，这一篇文章主要介绍词类系统和句法成分。词类在语法系统中属于传统语法的范畴，英文为Part of speech，可以参考维基百科词条解释[1]。而句法成分(sentence element)应该属于功能语言学的范围，可以参考这些词条: Sentence element[2]、Grammar relation[3]、Fu">
+<meta name="keywords" content="japanese">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日语学习二">
+<meta property="og:url" content="https://blog.xuwei.fun/2017/09/30/japanese03/index.html">
+<meta property="og:site_name" content="霁月荒馆">
+<meta property="og:description" content="前言————更新于2018.05.25————上一篇文章介绍了发音系统和书写系统，这一篇文章主要介绍词类系统和句法成分。词类在语法系统中属于传统语法的范畴，英文为Part of speech，可以参考维基百科词条解释[1]。而句法成分(sentence element)应该属于功能语言学的范围，可以参考这些词条: Sentence element[2]、Grammar relation[3]、Fu">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-05-18T14:24:33.103Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="日语学习二">
+<meta name="twitter:description" content="前言————更新于2018.05.25————上一篇文章介绍了发音系统和书写系统，这一篇文章主要介绍词类系统和句法成分。词类在语法系统中属于传统语法的范畴，英文为Part of speech，可以参考维基百科词条解释[1]。而句法成分(sentence element)应该属于功能语言学的范围，可以参考这些词条: Sentence element[2]、Grammar relation[3]、Fu">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="霁月荒馆" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://blog.xuwei.fun/2017/09/30/japanese03/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>日语学习二 | 霁月荒馆</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">霁月荒馆</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">以今日之我与昨日之我战</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-thoughts">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/thoughts/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>Thoughts</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-excerpt">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/excerpt/" rel="section"><i class="menu-item-icon fa fa-fw fa-paperclip"></i> <br>Excerpt</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404.html/" rel="section"><i class="menu-item-icon fa fa-fw fa-child"></i> <br>Commonweal 404</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-foryou">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/foryou/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>ForYou</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2017/09/30/japanese03/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kino">
+      <meta itemprop="description" content="Amor Fati">
+      <meta itemprop="image" content="/images/site/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="霁月荒馆">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">日语学习二
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-09-30 00:17:14" itemprop="dateCreated datePublished" datetime="2017-09-30T00:17:14+08:00">2017-09-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/humanities/" itemprop="url" rel="index"><span itemprop="name">humanities</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/humanities/languages/" itemprop="url" rel="index"><span itemprop="name">languages</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>————<strong>更新于2018.05.25</strong>————<br><a href="/2017/09/16/japanese01/">上一篇文章</a>介绍了发音系统和书写系统，这一篇文章主要介绍词类系统和句法成分。词类在语法系统中属于传统语法的范畴，英文为<em>Part of speech</em>，可以参考<a href="https://en.wikipedia.org/wiki/Part_of_speech" target="_blank" rel="noopener">维基百科词条解释</a><sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “Part of Speech.” Wikipedia, Wikimedia Foundation, 22 June 2018, https://en.wikipedia.org/wiki/Part_of_speech.
+">[1]</span></a></sup>。而句法成分(sentence element)应该属于功能语言学的范围，可以参考这些词条: <a href="https://en.wiktionary.org/wiki/sentence_element" target="_blank" rel="noopener">Sentence element</a><sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “Sentence Element.” Servent - Wiktionary, https://en.wiktionary.org/wiki/sentence_element.
+">[2]</span></a></sup>、<a href="https://en.wikipedia.org/wiki/Grammatical_relation" target="_blank" rel="noopener">Grammar relation</a><sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “Grammatical Relation.” Wikipedia, Wikimedia Foundation, 19 June 2018, https://en.wikipedia.org/wiki/Grammatical_relation.
+">[3]</span></a></sup>、<a href="https://en.wikipedia.org/wiki/Functional_theories_of_grammar" target="_blank" rel="noopener">Functional theories of grammar-Wiki</a><sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “Functional Theories of Grammar.” Wikipedia, Wikimedia Foundation, 19 June 2018, https://en.wikipedia.org/wiki/Functional_theories_of_grammar.
+">[4]</span></a></sup>。</p>
+<a id="more"></a>
+<h2 id="1-词类系统"><a href="#1-词类系统" class="headerlink" title="1. 词类系统"></a>1. 词类系统</h2><p>词类，即把单词按其意义、型态或职能加以分类所得的种别，日语的词类被称为品詞，维基百科上也有对<a href="https://ja.wikipedia.org/wiki/%E5%93%81%E8%A9%9E" target="_blank" rel="noopener">品詞</a><sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “品詞.” Wikipedia, Wikimedia Foundation, 19 Apr. 2018, https://ja.wikipedia.org/wiki/品詞.
+">[5]</span></a></sup>的解释和划分。一般常见的一种划分方式是<a href="https://www.douban.com/note/640814003/" target="_blank" rel="noopener">十二品词</a><sup id="fnref:6"><a href="#fn:6" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="洋渔 . “日文词语分为十二种品词(品词,ひんし).” 豆瓣, https://www.douban.com/note/640814003/.
+">[6]</span></a></sup>，无论什么划分方式大体上都相似，Kino对其做了一点小改动而已。<br>本章只是对日语的词类系统进行介绍，并不涉及任何具体的变形。<br>下面在对每种词类概念进行介绍时，可能会涉及到尚未提及的概念，暂时先不用理解，只是为了概念的完整性将其置于此。</p>
+<h3 id="1-1-自立語（独立词、实词）"><a href="#1-1-自立語（独立词、实词）" class="headerlink" title="1.1 自立語（独立词、实词）"></a>1.1 自立語（独立词、实词）</h3><h4 id="1-1-1-可以活用——用言"><a href="#1-1-1-可以活用——用言" class="headerlink" title="1.1.1 可以活用——用言"></a>1.1.1 可以活用——用言</h4><h5 id="1-1-1-1-动词"><a href="#1-1-1-1-动词" class="headerlink" title="1.1.1.1 动词"></a>1.1.1.1 动词</h5><p>表示事物的存在、动作或临时状态。根据不同的分类方法可以有不同的分类方式。</p>
+<ol>
+<li>日语里的动词可以分为自动词和他动词，类似于英语里的不及物动词和及物动词，其具体说明可参考<a href="https://ja.wikipedia.org/wiki/自動詞" target="_blank" rel="noopener">自動詞</a><sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “自動詞.” Wikipedia, Wikimedia Foundation, 18 Apr. 2018, https://ja.wikipedia.org/wiki/自動詞.
+">[7]</span></a></sup>和<a href="https://ja.wikipedia.org/wiki/他動詞" target="_blank" rel="noopener">他動詞</a><sup id="fnref:8"><a href="#fn:8" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “他動詞.” Wikipedia, Wikimedia Foundation, 3 Feb. 2017, https://ja.wikipedia.org/wiki/他動詞.
+">[8]</span></a></sup>，简单介绍如下:</li>
+</ol>
+<ul>
+<li>自动词: 动词本身能完整地表达主语的某种动作的词，多用于陈述一些客观结果、动作状态。主语可以是生命体，也可以是非生命体，自动词不能带直接对象，但当地点是动作动词的直接对象，表示离开某地或者经过某地时时有例外，例如<em>部屋を出た</em>。</li>
+<li>他动词: 动词本身不能完整地表达主语的某种动作的词，多用于表述人为的动作。主语通常是生命体，重点在于表达主语做了什么，所以需要加上名词表示主语的一个动作对象。<br>对于日语中的一个自/他动词来说，根据其是否有对应的他/自动词，以及形式是否相同，又可以归类为:<ul>
+<li>绝对自动词: 即只有自动词没有相对应的他动词。</li>
+<li>绝对他动词: 即只有他动词没有相对应的自动词。</li>
+<li>自他同形词: 即该词本身既是自动词又是他动词。</li>
+<li>有对自他词: 即该词有成对出现的另一个动词，这也是最令初学者头疼的一类。首先需要记住，自他动词的意思和汉字都是相同的，只是词尾不同表示不同的自他性。虽然规律不明显，但是有对自他词还是有一些常见规律的。<ul>
+<li>「れる」结尾的都是自动词（例外: 入れる、忘れる）</li>
+<li>「す」结尾的是他动词</li>
+<li>「aru」结尾的都是自动词，「aru」变成「eru」就变成了他动词。注意此处Kino并没有用平假名表示，看几个例子就可以明白为何这样表示了: 「始まる、始める」、「まとまる、まとめる」、「かかる、かける」</li>
+<li><strong>还有一些其他规律，但是Kino认为如果规律细节条目太多，就容易陷入单纯背诵规律之中，故不一一列举了，不妨日常多背单词、多使用。进行归类不是目的，目的是为了学习者最终流畅地运用，如果只记住了规律，而连单词都没记住几个，就是纸上谈兵了。对于自他动词，Kino认为规律并不重要，多背多读多用，很容易掌握其本质。</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>按照意义，动词还可以分为意志动词、非意志动词。</li>
+</ol>
+<ul>
+<li>反映按人或“有情物”的意志去完成的动作行为，主要分为自控动作（指大脑能够控制的动作）、自控心理活动（指大脑能够控制的心理活动）两类。</li>
+<li>反映人的自发性动作、生理心理现象、能力、以及“非情物”的运动。</li>
+</ul>
+<ol start="3">
+<li>而和语法最相关的分类方式是根据变形规则上的区别将动词分为三大类，每一类有自己独特的变形规则，会影响到后续时/体/态/式等的说明，这三大类是:<ul>
+<li>特殊动词: する、~する、くる</li>
+<li>五段动词（う动词）: 不是以「る」结尾的动词肯定是五段动词。对于以「る」结尾的动词，如果「る」音前的假名包含/a/、/u/或者/o/元音，那它就是五段动词。</li>
+<li>一段动词（る动词）: 以「る」结尾，前面是/i/或者/e/元音的，大多数情况下就是一段动词，一段动词中以/i/结尾叫做上一段动词，以/e/结尾的叫下一段动词。但是也有一些例外，常见的例外如表1。</li>
+</ul>
+</li>
+</ol>
+<p align="center">表1</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">初级</th>
+<th style="text-align:center">中级</th>
+<th style="text-align:center">高级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">要る</td>
+<td style="text-align:center">煎る</td>
+<td style="text-align:center">嘲る</td>
+</tr>
+<tr>
+<td style="text-align:center">帰る</td>
+<td style="text-align:center">焦る</td>
+<td style="text-align:center">覆る</td>
+</tr>
+<tr>
+<td style="text-align:center">返る</td>
+<td style="text-align:center">限る</td>
+<td style="text-align:center">茂る</td>
+</tr>
+<tr>
+<td style="text-align:center">切る</td>
+<td style="text-align:center">蹴る</td>
+<td style="text-align:center">遮る</td>
+</tr>
+<tr>
+<td style="text-align:center">しゃべる</td>
+<td style="text-align:center">滑る</td>
+<td style="text-align:center">罵る</td>
+</tr>
+<tr>
+<td style="text-align:center">知る</td>
+<td style="text-align:center">握る</td>
+<td style="text-align:center">捻る</td>
+</tr>
+<tr>
+<td style="text-align:center">入る</td>
+<td style="text-align:center">練る</td>
+<td style="text-align:center">翻る</td>
+</tr>
+<tr>
+<td style="text-align:center">走る</td>
+<td style="text-align:center">参る</td>
+<td style="text-align:center">蘇る</td>
+</tr>
+<tr>
+<td style="text-align:center">減る</td>
+<td style="text-align:center">散る</td>
+<td style="text-align:center">漲る</td>
+</tr>
+<tr>
+<td style="text-align:center">照る</td>
+<td style="text-align:center">交じる</td>
+<td style="text-align:center">湿る</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">混じる</td>
+<td style="text-align:center">滅入る</td>
+</tr>
+</tbody>
+</table>
+<ol start="4">
+<li>动词的活用词根<br>Kino主要按照五段动词的变形形式，大体上将动词按照活用形式分为以下几类活用词根:<ul>
+<li>あ形活用词根。由于该词根常用于动词的否定形式中，故在其他文献中都被称为未然形。<ul>
+<li>五段动词: 词尾变成其所在行的あ段字。</li>
+<li>一段动词: 把「る」去掉。例: 「食べる」变为「食べ」</li>
+<li>「する」变为「し」，「くる」变为「こ」</li>
+</ul>
+</li>
+<li>一类い形活用词根，Kino还把它简称为<strong>一型词根</strong>，简化后续说明。因其常用于连接用言，故在其他文献中都被称为连用形:<ul>
+<li>五段动词: 把最后的假名从う段换成同行的い段假名，也叫一般连用形。例: 「遊ぶ」变为「遊び」</li>
+<li>一段动词: 把「る」去掉。例: 「食べる」变为「食べ」</li>
+<li>「する」变为「し」，「くる」变为「き」</li>
+</ul>
+</li>
+<li>二类い形活用词根，Kino还把它简称为<strong>二型词根</strong>，简化后续说明。因其常用于连接用言，故在其他文献中都被称为连用形:<ul>
+<li>五段动词: 结尾词不同其形式不同，分别是「す」-&gt;「し」、「く」-&gt;「い」、「ぐ」-&gt;「い」、「む/ぶ/ぬ」-&gt;「ん」、「る/う/つ」-&gt;「っ」，<strong>唯一的例外是「行く」-&gt;「行い」-&gt;「行っ」</strong>。也叫特殊连用形或音便形</li>
+<li>一段动词: 把「る」去掉</li>
+<li>「する」变为「し」，「くる」变为「き」</li>
+</ul>
+</li>
+<li>う形活用词根: 就是动词原型，由于其可以用在句子结尾处，故被称为终止形，又因为其可用于修饰体言作定语，故也被称为连体形。</li>
+<li>一类え形活用词根: 该词根变化规律不分类，任何动词只须将词最后一个假名由「う」段变为「え」段即可。由于其常用于假定语气中(如条件句等)，故被称为假定形。</li>
+<li>二类え形活用词根，由于其常用于命令语气中(一般用于军队口令、训诉等场合)，故被称为命令形。<ul>
+<li>五段动词: 将词尾假名由「う」段变为「え」段</li>
+<li>一段动词: 将词尾最后一个假名「る」去掉，并后续「ろ」或「よ」</li>
+<li>「する」有两种变形方式，即「し」和「せ」，二者还要分别后续「ろ」和「よ」，即「しろ/せよ」。「来る」变为「来い」</li>
+</ul>
+</li>
+<li>お形活用词根，由于主要用于表示第一人称的意志、愿望、决心或表示第一人称对他人的劝诱等场合，故称为推量形:<ul>
+<li>五段动词: 将词尾假名由「う」段变为「お」段，然后附上助动词「う」</li>
+<li>一段动词: 将词尾最后一个假名「る」去掉，然后附上助动词「よう」</li>
+<li>「する」变为「しよう」，「来る」变为「こよう」</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h5 id="1-1-1-2-形容词"><a href="#1-1-1-2-形容词" class="headerlink" title="1.1.1.2 形容词"></a>1.1.1.2 形容词</h5><p>说明体言（名词）的性质或固定状态，在语义上，形容词多表示性质、状态、属性、描述等含义，如大小、长短、高低、新旧、恶劣、好坏、色彩等。<br>根据变形的形式不同，可以将形容词划分为两类:</p>
+<ul>
+<li>一类形容词/い形容词: 以平假名「い」结尾的形容词被称为一类形容词，注意用汉字结尾，汉字的尾音是「い」的不算作一类形容词，例如: 「有名（ゆうめい）」、「綺麗（きれい）」等。例外情况极少，唯一常见的只有「嫌い（きらい）」。</li>
+<li>二类形容词/な形容词/形容动词: 不是一类形容词的就是二类形容词咯。</li>
+</ul>
+<h4 id="1-1-2-不可以活用"><a href="#1-1-2-不可以活用" class="headerlink" title="1.1.2 不可以活用"></a>1.1.2 不可以活用</h4><h5 id="1-1-2-1-名词——体言"><a href="#1-1-2-1-名词——体言" class="headerlink" title="1.1.2.1 名词——体言"></a>1.1.2.1 名词——体言</h5><p>表示事物名称的单词。</p>
+<ol>
+<li><p>一般: 通常用于表示特定物体，如物体、物质、人物、地点等。</p>
+</li>
+<li><p>代词: 用来代替一般名词或名词短语的术语。<br>代词又可以分为人称代词、指示代词、反身代词等。<br>除第一人称外，其他人称代词在日语中较少使用。</p>
+</li>
+<li><p>数词: 是代表数字的单词。<br>通常可以用数词修饰的一般名词可以被归类为可数名词，否则被归类为不可数名词，但是日语和汉语一样对此要求并不严格。<br>在英语中，数词可以分为基数词（描述事物数量的多少的数词）和序数词（描述顺序的数词），在汉语和日语中都是通过在基数词上附加特殊词汇表示顺序，但通常还会涉及到后续才会提及的量词，日语里<strong>通过在量词后面加上「目」（读作「め」）来表示顺序，如「一回目」表示「第一次」</strong><br>基数词的词根如表2，组合方式和汉语相同，但组合之后某些读音有变化，如图3。<br>其他一些常用的和数量相关的表达方式:</p>
+<ul>
+<li>小数用「点（てん）」来表达，如: 0.4「れいてんよん」</li>
+<li>分数用「～分（ぶん）の」的形式表示，如: 1/3「さんぷんのいち」</li>
+<li>倍数用基数词加接尾词「倍（ばい）」表示，如: 3.5倍「さんてんごばい」</li>
+<li>分数用「パーセント」表示，如: 1%「いちパーセント」</li>
+<li>负数用「マイナス」加基数词表示，如: -3「マイナスさん」</li>
+</ul>
+</li>
+</ol>
+<p align="center">表2 基本数词词根</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">–</th>
+<th style="text-align:center">–</th>
+<th style="text-align:center">–</th>
+<th style="text-align:center">–</th>
+<th style="text-align:center">–</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">一</td>
+<td style="text-align:center">二</td>
+<td style="text-align:center">三</td>
+<td style="text-align:center">四</td>
+<td style="text-align:center">五</td>
+</tr>
+<tr>
+<td style="text-align:center">いち</td>
+<td style="text-align:center">に</td>
+<td style="text-align:center">さん</td>
+<td style="text-align:center">し／よん</td>
+<td style="text-align:center">ご</td>
+</tr>
+<tr>
+<td style="text-align:center">六</td>
+<td style="text-align:center">七</td>
+<td style="text-align:center">八</td>
+<td style="text-align:center">九</td>
+<td style="text-align:center">十</td>
+</tr>
+<tr>
+<td style="text-align:center">ろく</td>
+<td style="text-align:center">しち／なな</td>
+<td style="text-align:center">はち</td>
+<td style="text-align:center">きゅう</td>
+<td style="text-align:center">じゅう</td>
+</tr>
+<tr>
+<td style="text-align:center">百</td>
+<td style="text-align:center">千</td>
+<td style="text-align:center">万</td>
+<td style="text-align:center">億</td>
+<td style="text-align:center">兆</td>
+</tr>
+<tr>
+<td style="text-align:center">ひゃく</td>
+<td style="text-align:center">せん</td>
+<td style="text-align:center">まん</td>
+<td style="text-align:center">おく</td>
+<td style="text-align:center">ちょう</td>
+</tr>
+</tbody>
+</table>
+<p align="center">表3 一些特殊读音</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">漢字</th>
+<th style="text-align:center">ひらがな</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">三百</td>
+<td style="text-align:center">さんびゃく</td>
+</tr>
+<tr>
+<td style="text-align:center">六百</td>
+<td style="text-align:center">ろっぴゃく</td>
+</tr>
+<tr>
+<td style="text-align:center">八百</td>
+<td style="text-align:center">はっぴゃく</td>
+</tr>
+<tr>
+<td style="text-align:center">三千</td>
+<td style="text-align:center">さんぜん</td>
+</tr>
+<tr>
+<td style="text-align:center">八千</td>
+<td style="text-align:center">はっせん</td>
+</tr>
+<tr>
+<td style="text-align:center">一兆</td>
+<td style="text-align:center">いっちょう</td>
+</tr>
+</tbody>
+</table>
+<ol start="4">
+<li>量词: 也叫助数词/分类词，用于区别在数词之后附加的一般名词的类型。<br>量词直接加在数词后即可，但日语里比较复杂的一点是，数词后面接不同量词时，某些特定数词的读音可能会变化，这些例外情况有时太多，甚至要专门记忆，通过下面这些常用量词说明表可见一斑。量词可以参考<a href="https://zh.wikipedia.org/wiki/日文量詞" target="_blank" rel="noopener">日文量詞</a><sup id="fnref:9"><a href="#fn:9" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “日文量詞.” Wikipedia, Wikimedia Foundation, 20 June 2018, https://zh.wikipedia.org/wiki/日文量詞.
+">[9]</span></a></sup>和<a href="https://ja.wikipedia.org/wiki/助数詞" target="_blank" rel="noopener">助数詞</a><sup id="fnref:10"><a href="#fn:10" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “助数詞.” Wikipedia, Wikimedia Foundation, 20 June 2018, https://ja.wikipedia.org/wiki/助数詞.
+">[10]</span></a></sup>，以及如果有标日第二版，初级上的P.362-P.365也有相应表格。<br><strong>需要注意的一点是0不用数，因为没东西可数，直接用「ない」或「いない」就行。</strong></li>
+</ol>
+<p align="center">表4 与时间相关的量词</p>    
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">日本語</th>
+<th style="text-align:center">例外</th>
+<th style="text-align:center">用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">年(ねん)</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">表示年份</td>
+</tr>
+<tr>
+<td style="text-align:center">月(がつ)</td>
+<td style="text-align:center">四月(しがつ)、七月(しちがつ)、九月(くがつ)</td>
+<td style="text-align:center">表示月份</td>
+</tr>
+<tr>
+<td style="text-align:center">日(にち)</td>
+<td style="text-align:center">太多，下面单独列表</td>
+<td style="text-align:center">表示日期</td>
+</tr>
+<tr>
+<td style="text-align:center">時(じ)</td>
+<td style="text-align:center">四時(よじ)、七時(しちじ)、九時(くじ)</td>
+<td style="text-align:center">表示小时</td>
+</tr>
+<tr>
+<td style="text-align:center">分(ふん)</td>
+<td style="text-align:center">「一/三/四/六/八/十」分(「いっ/さん/よん/ろっ/はっ/じゅっ」ぷん)</td>
+<td style="text-align:center">表示分钟和分钟的跨度</td>
+</tr>
+<tr>
+<td style="text-align:center">秒(びょう)</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">表示秒数和秒数的跨度</td>
+</tr>
+<tr>
+<td style="text-align:center">週(しゅう)</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">表示星期</td>
+</tr>
+<tr>
+<td style="text-align:center">年間(ねんかん)</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">表示年份跨度</td>
+</tr>
+<tr>
+<td style="text-align:center">ヶ月/箇月(かげつ)</td>
+<td style="text-align:center">「一/六/十」ヶ月(「いっ/ろっ/じゅっ」かげつ)</td>
+<td style="text-align:center">表示月份跨度</td>
+</tr>
+<tr>
+<td style="text-align:center">日間(にちかん)</td>
+<td style="text-align:center">一日(いちにち)</td>
+<td style="text-align:center">表示日期跨度</td>
+</tr>
+<tr>
+<td style="text-align:center">時間(じかん)</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">表示小时跨度</td>
+</tr>
+<tr>
+<td style="text-align:center">週間(しゅうかん)</td>
+<td style="text-align:center">「一/八」週間(「いっしゅう/はっしゅう」かん)</td>
+<td style="text-align:center">表示星期跨度</td>
+</tr>
+</tbody>
+</table>
+<p align="center">表5 表示日期的量词的例外</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">汉字</th>
+<th style="text-align:center">读音</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">?</td>
+<td style="text-align:center">何日</td>
+<td style="text-align:center">なん・にち</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">一日</td>
+<td style="text-align:center">ついたち</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">二日</td>
+<td style="text-align:center">ふつ・か</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">三日</td>
+<td style="text-align:center">みっ・か</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">四日</td>
+<td style="text-align:center">よっ・か</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">五日</td>
+<td style="text-align:center">いつ・か</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">六日</td>
+<td style="text-align:center">むい・か</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">七日</td>
+<td style="text-align:center">なの・か</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">八日</td>
+<td style="text-align:center">よう・か</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">九日</td>
+<td style="text-align:center">ここの・か</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">十日</td>
+<td style="text-align:center">とお・か</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td style="text-align:center">十四日</td>
+<td style="text-align:center">じゅう・よっ・か</td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td style="text-align:center">十七日</td>
+<td style="text-align:center">じゅう・しち・にち</td>
+</tr>
+<tr>
+<td style="text-align:center">19</td>
+<td style="text-align:center">十九日</td>
+<td style="text-align:center">じゅう・く・にち</td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td style="text-align:center">二十日</td>
+<td style="text-align:center">はつ・か</td>
+</tr>
+<tr>
+<td style="text-align:center">24</td>
+<td style="text-align:center">二十四日</td>
+<td style="text-align:center">に・じゅう・よっ・か</td>
+</tr>
+<tr>
+<td style="text-align:center">27</td>
+<td style="text-align:center">二十七日</td>
+<td style="text-align:center">に・じゅう・しち・にち</td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
+<td style="text-align:center">二十九日</td>
+<td style="text-align:center">に・じゅう・く・にち</td>
+</tr>
+</tbody>
+</table>
+<p align="center">表6 其他常用量词的用法</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">日本語</th>
+<th style="text-align:center">何时使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">～人</td>
+<td style="text-align:center">用来数人</td>
+</tr>
+<tr>
+<td style="text-align:center">～本</td>
+<td style="text-align:center">用来数长的或圆柱形的物体，例如瓶子或筷子</td>
+</tr>
+<tr>
+<td style="text-align:center">～枚</td>
+<td style="text-align:center">用来数薄的物体，比如纸或是衬衫</td>
+</tr>
+<tr>
+<td style="text-align:center">～冊</td>
+<td style="text-align:center">用来数带封面的物体，一般是书</td>
+</tr>
+<tr>
+<td style="text-align:center">～匹</td>
+<td style="text-align:center">用来数小动物，例如阿猫阿狗</td>
+</tr>
+<tr>
+<td style="text-align:center">～歳</td>
+<td style="text-align:center">用来数岁数，<strong>注意!有时为了方便写作「才」，且20岁一般读作「はたち」而非「にじゅっさい」</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">～個</td>
+<td style="text-align:center">用来数小（通常是圆的）物体</td>
+</tr>
+<tr>
+<td style="text-align:center">～回</td>
+<td style="text-align:center">用来数次数</td>
+</tr>
+<tr>
+<td style="text-align:center">ヶ所（箇所）</td>
+<td style="text-align:center">用来数地点</td>
+</tr>
+<tr>
+<td style="text-align:center">～つ</td>
+<td style="text-align:center">1~9岁的年龄，立体的物品，抽象的事物。<strong>注意!不用于10以上的数字</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">～杯</td>
+<td style="text-align:center">用作容量单位，杯、碗、桶匙</td>
+</tr>
+<tr>
+<td style="text-align:center">～台</td>
+<td style="text-align:center">用来数车辆或机器等，台、辆、架</td>
+</tr>
+<tr>
+<td style="text-align:center">～頭</td>
+<td style="text-align:center">用来数大型四蹄动物</td>
+</tr>
+<tr>
+<td style="text-align:center">～羽</td>
+<td style="text-align:center">用来数鸟、兔等，只、头</td>
+</tr>
+<tr>
+<td style="text-align:center">～着</td>
+<td style="text-align:center">用来数衣服数量，件、套</td>
+</tr>
+<tr>
+<td style="text-align:center">～番</td>
+<td style="text-align:center">顺序</td>
+</tr>
+<tr>
+<td style="text-align:center">～足</td>
+<td style="text-align:center">用来数成对物品如鞋、袜等，双</td>
+</tr>
+<tr>
+<td style="text-align:center">～度</td>
+<td style="text-align:center">角度、次数、度数</td>
+</tr>
+<tr>
+<td style="text-align:center">～キロ</td>
+<td style="text-align:center">千、千克、千米</td>
+</tr>
+</tbody>
+</table>
+<p align="center">表7 部分量词从1到10的变化</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">-</th>
+<th style="text-align:center">人</th>
+<th style="text-align:center">本</th>
+<th style="text-align:center">枚</th>
+<th style="text-align:center">冊</th>
+<th style="text-align:center">匹</th>
+<th style="text-align:center">歳</th>
+<th style="text-align:center">個</th>
+<th style="text-align:center">回</th>
+<th style="text-align:center">ヶ所（箇所）</th>
+<th style="text-align:center">つ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">ひとり</td>
+<td style="text-align:center">いっぽん</td>
+<td style="text-align:center">いちまい</td>
+<td style="text-align:center">いっさつ</td>
+<td style="text-align:center">いっぴき</td>
+<td style="text-align:center">いっさい</td>
+<td style="text-align:center">いっこ</td>
+<td style="text-align:center">いっかい</td>
+<td style="text-align:center">いっかしょ</td>
+<td style="text-align:center">ひとつ</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">ふたり</td>
+<td style="text-align:center">にほん</td>
+<td style="text-align:center">にまい</td>
+<td style="text-align:center">にさつ</td>
+<td style="text-align:center">にひき</td>
+<td style="text-align:center">にさい</td>
+<td style="text-align:center">にこ</td>
+<td style="text-align:center">にかい</td>
+<td style="text-align:center">にかしょ</td>
+<td style="text-align:center">ふたつ</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">さんにん</td>
+<td style="text-align:center">さんぼん</td>
+<td style="text-align:center">さんまい</td>
+<td style="text-align:center">さんさつ</td>
+<td style="text-align:center">さんびき</td>
+<td style="text-align:center">さんさい</td>
+<td style="text-align:center">さんこ</td>
+<td style="text-align:center">さんかい</td>
+<td style="text-align:center">さんかしょ</td>
+<td style="text-align:center">みっつ</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">よにん</td>
+<td style="text-align:center">よんほん</td>
+<td style="text-align:center">よんまい</td>
+<td style="text-align:center">よんさつ</td>
+<td style="text-align:center">よんひき</td>
+<td style="text-align:center">よんさい</td>
+<td style="text-align:center">よんこ</td>
+<td style="text-align:center">よんかい</td>
+<td style="text-align:center">よんかしょ</td>
+<td style="text-align:center">よっつ</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">ごにん</td>
+<td style="text-align:center">ごほん</td>
+<td style="text-align:center">ごまい</td>
+<td style="text-align:center">ごさつ</td>
+<td style="text-align:center">ごひき</td>
+<td style="text-align:center">ごさい</td>
+<td style="text-align:center">ごこ</td>
+<td style="text-align:center">ごかい</td>
+<td style="text-align:center">ごかしょ</td>
+<td style="text-align:center">いつつ</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">ろくにん</td>
+<td style="text-align:center">ろっぽん</td>
+<td style="text-align:center">ろくまい</td>
+<td style="text-align:center">ろくさつ</td>
+<td style="text-align:center">ろっぴき</td>
+<td style="text-align:center">ろくさい</td>
+<td style="text-align:center">ろっこ</td>
+<td style="text-align:center">ろっかい</td>
+<td style="text-align:center">ろっかしょ</td>
+<td style="text-align:center">むっつ</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">しちにん</td>
+<td style="text-align:center">ななほん</td>
+<td style="text-align:center">ななまい</td>
+<td style="text-align:center">ななさつ</td>
+<td style="text-align:center">ななひき</td>
+<td style="text-align:center">ななさい</td>
+<td style="text-align:center">ななこ</td>
+<td style="text-align:center">ななかい</td>
+<td style="text-align:center">ななかしょ</td>
+<td style="text-align:center">ななつ</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">はちにん</td>
+<td style="text-align:center">はちほん</td>
+<td style="text-align:center">はちまい</td>
+<td style="text-align:center">はっさつ</td>
+<td style="text-align:center">はっぴき</td>
+<td style="text-align:center">はっさい</td>
+<td style="text-align:center">はっこ</td>
+<td style="text-align:center">はちかい</td>
+<td style="text-align:center">はっかしょ</td>
+<td style="text-align:center">やっつ</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">きゅうにん</td>
+<td style="text-align:center">きゅうほん</td>
+<td style="text-align:center">きゅうまい</td>
+<td style="text-align:center">きゅうさつ</td>
+<td style="text-align:center">きゅうひき</td>
+<td style="text-align:center">きゅうさい</td>
+<td style="text-align:center">きゅうこ</td>
+<td style="text-align:center">きゅうかい</td>
+<td style="text-align:center">きゅうかしょ</td>
+<td style="text-align:center">ここのつ</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">じゅうにん</td>
+<td style="text-align:center">じゅっぽん</td>
+<td style="text-align:center">じゅうまい</td>
+<td style="text-align:center">じゅっさつ</td>
+<td style="text-align:center">じゅっぴき</td>
+<td style="text-align:center">じゅっさい</td>
+<td style="text-align:center">じゅっこ</td>
+<td style="text-align:center">じゅっかい</td>
+<td style="text-align:center">じゅっかしょ</td>
+<td style="text-align:center">とお</td>
+</tr>
+</tbody>
+</table>
+<p align="center"><strong>「とお」写的时候是「十」，而不是「十つ」</strong></p>
+
+<h5 id="1-1-2-2-副词"><a href="#1-1-2-2-副词" class="headerlink" title="1.1.2.2 副词"></a>1.1.2.2 副词</h5><p>修饰用言（动词、形容词）的状态、程度等。副词也可以分为两类，一类是形容词变形成的副词，一类是本身就是副词。其中形容词变为副词的规则为:</p>
+<ul>
+<li>一类形容词/い形容词: 把「い」换成「く」。例: 早い → 早く</li>
+<li>二类形容词/な形容词/形容动词: 后面加「に」。例: きれい → きれいに</li>
+</ul>
+<p>表8列举了一些本身就是副词的词汇。</p>
+<p align="center">表8 部分示例副词</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">日本語</th>
+<th style="text-align:center">汉语</th>
+<th style="text-align:center">日本語</th>
+<th style="text-align:center">汉语</th>
+<th style="text-align:center">日本語</th>
+<th style="text-align:center">汉语</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">すぐ</td>
+<td style="text-align:center">马上，立即</td>
+<td style="text-align:center">間もなく</td>
+<td style="text-align:center">马上，不久</td>
+<td style="text-align:center">もうすぐ</td>
+<td style="text-align:center">马上</td>
+</tr>
+<tr>
+<td style="text-align:center">ずいぶん</td>
+<td style="text-align:center">相当，非常</td>
+<td style="text-align:center">なかなか</td>
+<td style="text-align:center">相当，很</td>
+<td style="text-align:center">とても</td>
+<td style="text-align:center">非常，很</td>
+</tr>
+<tr>
+<td style="text-align:center">ちゃんと</td>
+<td style="text-align:center">好好地，的确</td>
+<td style="text-align:center">ゆっくり</td>
+<td style="text-align:center">好好地，安静地</td>
+<td style="text-align:center">十分</td>
+<td style="text-align:center">好好地，充足地</td>
+</tr>
+<tr>
+<td style="text-align:center">皆</td>
+<td style="text-align:center">全都</td>
+<td style="text-align:center">全部</td>
+<td style="text-align:center">全部</td>
+<td style="text-align:center">沢山</td>
+<td style="text-align:center">很多</td>
+</tr>
+<tr>
+<td style="text-align:center">更に</td>
+<td style="text-align:center">更加，更</td>
+<td style="text-align:center">もっと</td>
+<td style="text-align:center">更加，更</td>
+<td style="text-align:center">ぜひ</td>
+<td style="text-align:center">一定</td>
+</tr>
+<tr>
+<td style="text-align:center">できるだけ</td>
+<td style="text-align:center">尽可能</td>
+<td style="text-align:center">ずっと</td>
+<td style="text-align:center">~得多</td>
+<td style="text-align:center">ちょうど</td>
+<td style="text-align:center">正好，恰好</td>
+</tr>
+<tr>
+<td style="text-align:center">たまり</td>
+<td style="text-align:center">偶尔，很少</td>
+<td style="text-align:center">よく</td>
+<td style="text-align:center">经常</td>
+<td style="text-align:center">また</td>
+<td style="text-align:center">还，再，又</td>
+</tr>
+<tr>
+<td style="text-align:center">こう</td>
+<td style="text-align:center">这样，如此</td>
+<td style="text-align:center">まっすぐ</td>
+<td style="text-align:center">径直地</td>
+<td style="text-align:center">まず</td>
+<td style="text-align:center">首先</td>
+</tr>
+<tr>
+<td style="text-align:center">前に</td>
+<td style="text-align:center">以前</td>
+<td style="text-align:center">今度</td>
+<td style="text-align:center">下次，这回</td>
+<td style="text-align:center">そろそろ</td>
+<td style="text-align:center">快要</td>
+</tr>
+</tbody>
+</table>
+<h5 id="1-1-2-3-连体词"><a href="#1-1-2-3-连体词" class="headerlink" title="1.1.2.3 连体词"></a>1.1.2.3 连体词</h5><p>日语特有的一种词类，可以直接用来连接体言（名词）。其实Kino认为连体词的划分不是很必要，通过后续的助词以及各类变形，可以解释大部分连体词了。连体词主要有以下几种形式:</p>
+<ul>
+<li>「-の」型: 名词+の的形式，对所修饰的名词起限定作用，如「その」「どの」「この」「かの」「くだんの」「ほんの」「当の」「例の」</li>
+<li>「-が」型: 名词+が的形式，对所修饰的名词起限定作用，が在古语中相当于格助词の，如「我が」</li>
+<li>「-る」型: 可看作是动词的变形，对所修饰的名词起限定作用，「ある」「さる」「きたる」「あくる」「とある」「かかる」「いわゆる」「いかなる」「あらゆる」</li>
+<li>「-な」型: 可看作是形容词的变形，通常表示被修饰名词的属性，如「こんな」「そんな」「あんな」「どんな」「おおきな」「ちいさな」「おかしな」「ひょんな」「いろんな」「異な」「あじな」「ろくな」</li>
+<li>「-た（だ）」型: 可看作是动词的变形，通常表示被修饰名词的属性，如「とんだ」「ふとした」「大それた」「れっきとした」</li>
+<li>「-ぬ」型: 不常用</li>
+<li>「-き」型: 不常用</li>
+<li>「-いう」型: 不常用</li>
+</ul>
+<h5 id="1-1-2-4-接续词"><a href="#1-1-2-4-接续词" class="headerlink" title="1.1.2.4 接续词"></a>1.1.2.4 接续词</h5><p>连接句和句，表示前后句顺接，逆接，并列，转换等各种关系的词。一般来说可以分为7类: 顺接、逆接、並列、添加、説明、選択、転換。可以参考<a href="http://www.sohu.com/a/191048812_209715" target="_blank" rel="noopener">接续词总结</a><sup id="fnref:11"><a href="#fn:11" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="日语单词本 . “史上最全的日语接续词总结！考试不再是难题！.” 搜狐网, 10 Sept. 2017, https://www.sohu.com/a/191048812_209715.
+">[11]</span></a></sup></p>
+<h5 id="1-1-2-5-感叹词"><a href="#1-1-2-5-感叹词" class="headerlink" title="1.1.2.5 感叹词"></a>1.1.2.5 感叹词</h5><p>表示感叹、回应等，可以单独成句，口语中较常使用。表9给出了一些常见的感叹词。还可以参考<a href="https://www.douban.com/note/521188596/" target="_blank" rel="noopener">这里</a><sup id="fnref:12"><a href="#fn:12" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="精樱日语 . “日语中常见的一些感叹词.” 豆瓣, 19 Oct. 2015, https://www.douban.com/note/521188596/.
+">[12]</span></a></sup>。</p>
+<p align="center">表9 常用感叹词</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">分类</th>
+<th style="text-align:center">感動詞</th>
+<th style="text-align:center">感動詞</th>
+<th style="text-align:center">感動詞</th>
+<th style="text-align:center">感動詞</th>
+<th style="text-align:center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">感動（表示感叹）</td>
+<td style="text-align:center">あ</td>
+<td style="text-align:center">ああ</td>
+<td style="text-align:center">ええと</td>
+<td style="text-align:center">おお</td>
+<td style="text-align:center">啊，哦，哎呀</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">あら</td>
+<td style="text-align:center">まあ</td>
+<td style="text-align:center">おや</td>
+<td style="text-align:center">やあ</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">いや</td>
+<td style="text-align:center">やれやれ</td>
+<td style="text-align:center">これはこれは</td>
+<td style="text-align:center">それはそれは</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">ははあ</td>
+<td style="text-align:center">どれ</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">呼び掛け（表示呼唤）</td>
+<td style="text-align:center">あの</td>
+<td style="text-align:center">ねえ</td>
+<td style="text-align:center">あのね</td>
+<td style="text-align:center">おい</td>
+<td style="text-align:center">喂，嗨，我说</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">これ</td>
+<td style="text-align:center">これこれ</td>
+<td style="text-align:center">それ</td>
+<td style="text-align:center">さあ</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">よう</td>
+<td style="text-align:center">さて</td>
+<td style="text-align:center">そら</td>
+<td style="text-align:center">こら</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">ちょっと</td>
+<td style="text-align:center">もしもし</td>
+<td style="text-align:center">ほら</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">応答（表示回答）</td>
+<td style="text-align:center">はい</td>
+<td style="text-align:center">はあ</td>
+<td style="text-align:center">そう</td>
+<td style="text-align:center">うん</td>
+<td style="text-align:center">行，嗯，不行</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">いいえ</td>
+<td style="text-align:center">いや</td>
+<td style="text-align:center">ええ</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">挨拶（表示寒暄）</td>
+<td style="text-align:center">ありがとう</td>
+<td style="text-align:center">いらっしゃい</td>
+<td style="text-align:center">おはよう</td>
+<td style="text-align:center">お待ち度様</td>
+<td style="text-align:center">谢谢，您好</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">おやすみ</td>
+<td style="text-align:center">こんにちは</td>
+<td style="text-align:center">こんばんは</td>
+<td style="text-align:center">さようなら</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">はじめまして</td>
+<td style="text-align:center">おめでとう</td>
+<td style="text-align:center">ごめんなさい</td>
+<td style="text-align:center">ごきげんよう</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">掛け声（表示口号）</td>
+<td style="text-align:center">えっさ</td>
+<td style="text-align:center">よいさ</td>
+<td style="text-align:center">よいしょ</td>
+<td style="text-align:center">どっこいしょ</td>
+<td style="text-align:center">嗨哟…</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-2-付属語（附属词」虚词）"><a href="#1-2-付属語（附属词」虚词）" class="headerlink" title="1.2 付属語（附属词」虚词）"></a>1.2 付属語（附属词」虚词）</h3><h4 id="1-2-1-不可以活用——助词"><a href="#1-2-1-不可以活用——助词" class="headerlink" title="1.2.1 不可以活用——助词"></a>1.2.1 不可以活用——助词</h4><p>决定单词在句中的地位、和其他单词的关系、句子的时态、或是表示特殊的意义等。<br>下面是对各类助动词的分类总结，初次接触有个印象就行，并不是需要全部记忆，助词后续很多内容都是相关的，后续看到可以返回再查阅。更具体的助词分类汇总解释可以查阅<a href="https://wenku.baidu.com/view/9e0204ecaeaad1f346933fd6" target="_blank" rel="noopener">这里</a><sup id="fnref:13"><a href="#fn:13" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="chexiaomeng. “日语全部助词分类及汇总.” 百度文库, 7 May 2011, https://wenku.baidu.com/view/9e0204ecaeaad1f346933fd6.
+">[13]</span></a></sup></p>
+<h5 id="1-2-1-1-格助詞"><a href="#1-2-1-1-格助詞" class="headerlink" title="1.2.1.1 格助詞"></a>1.2.1.1 格助詞</h5><p>连接体言，在文中表示意思关系。</p>
+<ul>
+<li>が: 最基本的格助詞，表动作状态的主体，要求愿望的对象等。</li>
+<li>の: 表连用修饰语的动作状态的主体，所有格和連体詞的标志。</li>
+<li>を: 表动作直接的对象、思考感觉的对象、移动时所经过的路径等。另外可表示移动的起点和经由点，即在此场合中未想定到达点的状况。</li>
+<li>に: 连接名詞和動詞的连用形和连体形等。可表现：物体的存在场所或移动的目标点/到达点、动作或物品接受的一方、动作开始或结束时间、動詞的目的、物品存在的场所、基准或频率的标准、变化的结果、使动句的动作主体等，是个用处很广的助詞。</li>
+<li>へ: 用法较少，仅表示移动的目标和到达点。与「に」的区别比较暧昧。</li>
+<li>と: 表示共同的对象、作用的结果、引用、并列。</li>
+<li>から: 表示动作、移动或时刻的起点，物品的原料或最开始的状态，动作或物品授予的一方，因果关系中表示原因理由。连接動詞时表达几个动作的相继发生；在被动句中表动作主体。</li>
+<li>より: 主要作为比较的基准而使用。在文章语，尤其是信件中与「から」的意思相仿，表示来自于或起点。</li>
+<li>で: 表示复数和团体的范围、动作发生的场所和时间、动作的手段或媒介物、由材料到完成品外观变化较小时可表示原料或材料、动作或状态持续的时间等等，是个用处很广的助詞。</li>
+<li>や: 表达列举的并列关系。</li>
+</ul>
+<h5 id="1-2-1-2-並立助詞"><a href="#1-2-1-2-並立助詞" class="headerlink" title="1.2.1.2 並立助詞"></a>1.2.1.2 並立助詞</h5><p>表示两个或以上的并列关系。</p>
+<ul>
+<li>の: 表并列或列举，表示程度很糟糕很不堪忍受的语气。比较少用。</li>
+<li>と: 连接体言，列举几个事物。</li>
+<li>や: 用于名詞或带準体助詞「の」的相当于名詞的结构后、表达事物并列或列举。</li>
+<li>やら: 接在体言或活用語的連体形后，表达列举很难决定的两件事，或单纯列举事物时使用。</li>
+<li>か: 列举几个事物并从中选择一个或一部分、疑问、和某个动作同时进行或接下来进行另一动作时使用。</li>
+<li>なり: 表达列举的事物中的任意一个。有时也作副助詞用。</li>
+<li>だの: 接在体言或用言的終止形后，用于在全体中列举几个事物或事件。一般用「…だの…だの」或「…だの…など」的形式。</li>
+</ul>
+<h5 id="1-2-1-3-副助词"><a href="#1-2-1-3-副助词" class="headerlink" title="1.2.1.3 副助词"></a>1.2.1.3 副助词</h5><p>接在体言、副詞、格助詞等的后面，使其产生副词的作用。</p>
+<ul>
+<li>ばかり: 接在体言或副詞、活用語的連体形、格助詞等后面，和「だけ」一样表达将物事、程度、原因限定到一个范围内，和「くらい」一样表达物事大概的程度、分量、时刻、距离。另外，也表达马上要做的动作，或刚刚完成的动作或结束的状态。另外接在表否定的「ぬ（ん）」后可表示没做却表现得很明显想做的样态。漢字记为「許り」。</li>
+<li>まで: 接在名詞和活用語的連体形后，表示事情、动作在距离上或时间上的限度、范围或到达点。也用于对程度和动作进行限定。还可用于举极端的例子或类推到另一物事。漢字记为「迄」。</li>
+<li>だけ: 接在名詞和活用語的連体形或格助詞的后面。表示对分量、程度、限度及范围的限定。漢字记为「丈」。</li>
+<li>ほど: 表示动作、物事及状态的阶段。漢字记为「程」，接在名詞和活用語的連体形后，表示大概的分量、程度、動作、状態的程度，也可与否定相呼应表程度的比較。另外「～ば～ほど」的用法表示“越来越…”的意思。</li>
+<li>くらい: 表示大概的分量、程度、基准、事态，以强调其程度。漢字记为「位」。</li>
+<li>など: 接在名詞及活用語的連体形后面，用于在众多相似物中举一例，总括其他相似物时使用。也可用作委婉语。漢字记为「等」。</li>
+<li>なり: 接在名詞、副詞、活用形的終止形、助詞等后面，表示作为几个可选之物的例子。</li>
+<li>やら: 接在体言或相当于体言的结构、一部分的副詞、助詞等后面，表达不确定的意思（仅限疑问句或句）。还可在模棱两可无法清楚说明的时候，下接否定语无法确定是哪个的时候使用。</li>
+</ul>
+<h5 id="1-2-1-4-係助詞"><a href="#1-2-1-4-係助詞" class="headerlink" title="1.2.1.4 係助詞"></a>1.2.1.4 係助詞</h5><p>对前面的词进行叙述或表示强调的词。</p>
+<ul>
+<li>は: 接在词语、短语、活用語的連用形后，表达从很多物事中取出一个进行说明、提示主题、决定叙述的范围、叙述内容的成立条件等等意义。另外，可接在格助詞和副詞后加强语气；也用于对两个或以上的物事进行比较判断。</li>
+<li>も: 可用于提出类似事物，列举或添加，接在程度、感動、強調、不定称語后进行全面的否定和肯定。</li>
+<li>こそ: 可用在词语后面进行强调，接在動詞的仮定形和接続助詞「ば」之后进行强调并提出自己想说的重点。</li>
+<li>でも: 断定的助動詞「だ」の連用形「で」+係助詞的「も」构成。接在名詞和其他助詞后使用，用于提出一个极端条件（即使…也…）、举一个极端例子并类推到一般场合时（连…也…）、举一例以提议时（譬如…）使用。</li>
+<li>しか: 接在名詞和動詞的連体形、形容詞和形容動詞的連用形后，表示特定的物事以外全部否定。后加否定，表示“仅、只”的概念。</li>
+<li>さえ: 对已有的事物基础上又进行了追加（除…外，还…多用于负面事物），举一极端例子并暗示其他也是当然的时候（连…都…），与仮定表现一起用表示条件（只要…就）时使用。 だに ：与「さえ」大致相同。但现在多用于固定搭配。</li>
+</ul>
+<h5 id="1-2-1-5-接続助詞"><a href="#1-2-1-5-接続助詞" class="headerlink" title="1.2.1.5 接続助詞"></a>1.2.1.5 接続助詞</h5><p>用于句与句的连接，表现句与句的关系。</p>
+<ul>
+<li>や: 用在動詞和助動詞「れる・られる」和「せる・させる」的動詞形活用語的終止形之后，表示動作和作用进行时又进行其他動作和作用。</li>
+<li>が: 接在活用語的終止形之后，表示单纯的接续或逆接。</li>
+<li>けれども: 接在活用語的終止形后，对内容矛盾的事件进行対比，和放在句前和前文进行逆接时使用。另外「あれも好きだけれどもこれも好き」（也喜欢那个也喜欢这个）这样单纯的接续也可使用。</li>
+<li>ところが: 由形式名詞的「ところ」+格助詞的「が」构成，接在过去时态助動詞「た」的終止形后，在对前述事态的发生和事实的确认后表示逆接的假定状态。和「けれども」同样，也能变为接続詞，表示本想干什么却发生了与预想相反的事情。</li>
+<li>のに: 由格助詞（準体助詞）「の」+「に」构成，连接内容矛盾的两个句子，表达意外、不平、不満、不服的语气。</li>
+<li>から: 接在活用語的終止形后，除了表原因理由之外，还与終助詞的用法相似，表达强烈主張和决意。</li>
+<li>ので: 由準体助詞「の」+格助詞「で」构成，接在活用語的連体形后，表示原因、理由、根据、动机。</li>
+<li>て: 接在活用語的連用形后，表示继续。</li>
+</ul>
+<h5 id="1-2-1-6-终助词"><a href="#1-2-1-6-终助词" class="headerlink" title="1.2.1.6 终助词"></a>1.2.1.6 终助词</h5><p>用在句末表疑问、禁止、感动等的语气。</p>
+<ul>
+<li>か: 用在句末表提问、疑问、反语、责问、反驳、劝诱、请求等等语气。也可表达惊讶和感动的心情。</li>
+<li>かしら: 表示怀疑、疑问的语气，也可用在否定的「ない」和「ぬ」后面表愿望、请求的语气。现在多为女性用语，比较文雅的说法。</li>
+<li>な: 接在動詞或助動詞的終止形之后表禁止的意思，也可用在終止形和助詞后表轻微的断定和主张、确认、赞叹等语气。可用かな，以表自己不确定的推断。</li>
+<li>の: 可用于活用語的連体形之后，表缓和的断定语气（和「かしら」一样意义的女性用语）。也可表达提问、疑问或较强命令的语气。另外也可表感动；近年来常见于表古风的语言方式。</li>
+<li>とも: 接在活用語的終止形之后，口语中表达对对方强烈的肯定。不太常用。</li>
+<li>ぞ: 对自己及对方的说法的确认，也与疑问词相呼应表达反语及强调的意思。男性用语。</li>
+<li>や: 接在形容詞及形容詞型活用的助動詞、助動詞「う、よう」的終止形、動詞及動詞形活用的助動詞命令形后面，表达对同辈或晚辈的轻微催促、希望使某种事态得以实现的心情，或是表现随便说说、轻率随便的语气。另外也有表达疑问和反语的意思，但是很少用。</li>
+<li>わ: 用于活用語的終止形之后，表达轻微的决意、主张、赞叹等语气，多为女性用语。</li>
+</ul>
+<h5 id="1-2-1-7-間投助詞"><a href="#1-2-1-7-間投助詞" class="headerlink" title="1.2.1.7 間投助詞"></a>1.2.1.7 間投助詞</h5><p>用在句末用于调整语调，增加感动之类的语气。</p>
+<ul>
+<li>さ: 调整语调同时有吸引对方注意的功能，多为男性用语。</li>
+<li>よ: 用于号召和强调时。常用「だよ」「ですよ」「ますよ」。</li>
+<li>ね: 用于调整语气语调，有种寻求对方认同和回应的功能。常用よね。</li>
+</ul>
+<h5 id="1-2-1-8-準体助詞"><a href="#1-2-1-8-準体助詞" class="headerlink" title="1.2.1.8 準体助詞"></a>1.2.1.8 準体助詞</h5><p>指接在用言后用变为与体言相当的词，如「彼に聞くのがいい」「あちらに着いてからが大事だ」的「の」和「から」。这个功能与形式名詞（「こと」「もの」「ところ」等）相似，叫作準体助詞（準体言助詞）。</p>
+<h4 id="1-2-2-可以活用——助动词"><a href="#1-2-2-可以活用——助动词" class="headerlink" title="1.2.2 可以活用——助动词"></a>1.2.2 可以活用——助动词</h4><p>接续在动词后面，表达时/体/态/式等语法功能。<br>下面列举了一些分类助动词，和助词一样，也不需要刻意记忆，后续其他语法涉及到时有印象即可。具体细节可参考<a href="https://wenku.baidu.com/view/b0be1a24192e45361066f5a5.html" target="_blank" rel="noopener">此处</a><sup id="fnref:14"><a href="#fn:14" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="荷塘垚 . “常用日语助动词总汇.” 百度文库, 23 Apr. 2012, https://wenku.baidu.com/view/b0be1a24192e45361066f5a5.html.
+">[14]</span></a></sup></p>
+<ul>
+<li>断定助动词: だ、です、である</li>
+<li>过去助动词:た</li>
+<li>否定助动词: ない、ぬ</li>
+<li>敬体助动词: ます</li>
+<li>使役助动词: せる、させる、しめる</li>
+<li>被动助动词: れるられる</li>
+<li>可能助动词: れる、られる</li>
+<li>敬语助动词: れる、られる</li>
+<li>自发助动词: れる、られる</li>
+<li>推量助动词: う、よう、まい</li>
+<li>愿望助动词: たい、たがる</li>
+<li>推定助动词: らしい</li>
+<li>比况助动词: ようだ、ようです、みたいだ、みたいです</li>
+<li>样态助动词: そうだ</li>
+<li>传闻助动词: そうだ</li>
+</ul>
+<h3 id="1-3-复合词"><a href="#1-3-复合词" class="headerlink" title="1.3 复合词"></a>1.3 复合词</h3><p>除了上述的基本词类，日语中还可以通过将不同词类组合，以此形成复合词，复合后的词属于哪种词类，这决定于复合词的后半部词性。<br>主要内容来源于<a href="http://www.yayajp.com/index.php?a=shows&amp;catid=6&amp;id=190" target="_blank" rel="noopener">说说日语复合词</a><sup id="fnref:18"><a href="#fn:18" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="日语考试 . “说说日语复合词.” 丫丫日语, 31 Jan. 2015, http://www.yayajp.com/index.php?a=shows&catid=6&id=190.
+">[18]</span></a></sup>，关于日语词汇更详细的构词法可以参考<a href="https://blog.csdn.net/sinat_29315627/article/details/73484302" target="_blank" rel="noopener">此处</a><sup id="fnref:19"><a href="#fn:19" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="ASH9750. “日语语法（九）：日语的构词法.” CSDN博客, 20 June 2017, https://blog.csdn.net/sinat_29315627/article/details/73484302.
+">[19]</span></a></sup></p>
+<h3 id="1-3-1-复合名词"><a href="#1-3-1-复合名词" class="headerlink" title="1.3.1 复合名词"></a>1.3.1 复合名词</h3><h5 id="1-3-1-1-动词一型词根-名词"><a href="#1-3-1-1-动词一型词根-名词" class="headerlink" title="1.3.1.1 动词一型词根+名词"></a>1.3.1.1 动词一型词根+名词</h5><p>例: 買い物、贈り物、食べ物、読み方、食べ放題、足し算</p>
+<h5 id="1-3-1-2-名词-动词一型词根"><a href="#1-3-1-2-名词-动词一型词根" class="headerlink" title="1.3.1.2 名词+动词一型词根"></a>1.3.1.2 名词+动词一型词根</h5><p>例: 北京行き、トンボ帰り、横殴り、交通止め、共稼ぎ、田植え</p>
+<h5 id="1-3-1-3-动词一型词根-动词一型词根"><a href="#1-3-1-3-动词一型词根-动词一型词根" class="headerlink" title="1.3.1.3 动词一型词根+动词一型词根"></a>1.3.1.3 动词一型词根+动词一型词根</h5><p>例: 買い食い、立ち読み、出入り、食べ残し、すれ違い</p>
+<h5 id="1-3-1-4-名词-名词"><a href="#1-3-1-4-名词-名词" class="headerlink" title="1.3.1.4 名词+名词"></a>1.3.1.4 名词+名词</h5><p>例: 日本全土、高層ビル、万年床</p>
+<h5 id="1-3-1-5-一类形容词词干-名词"><a href="#1-3-1-5-一类形容词词干-名词" class="headerlink" title="1.3.1.5 一类形容词词干+名词"></a>1.3.1.5 一类形容词词干+名词</h5><p>例: 近頃、遠回り、長生き、久しぶり、無駄遣い、悪口</p>
+<h4 id="1-3-2-复合形容词"><a href="#1-3-2-复合形容词" class="headerlink" title="1.3.2 复合形容词"></a>1.3.2 复合形容词</h4><h5 id="1-3-2-1-动词一型词根-一类形容词"><a href="#1-3-2-1-动词一型词根-一类形容词" class="headerlink" title="1.3.2.1 动词一型词根+一类形容词"></a>1.3.2.1 动词一型词根+一类形容词</h5><p>例: 使いにくい、聞きづらい、待ち遠い、み苦しい</p>
+<h5 id="1-3-2-2-名词-一类形容词"><a href="#1-3-2-2-名词-一类形容词" class="headerlink" title="1.3.2.2 名词+一类形容词"></a>1.3.2.2 名词+一类形容词</h5><p>例: 情け深い（なさけぶかい）、欲深い（よくぶかい）、生臭い（なまくさい）、真ん丸い（まんまるい）、心細い（こころぼそい）、心強い（こころづよい）</p>
+<h5 id="1-3-2-3-一类形容词或形容词词干-一类形容词"><a href="#1-3-2-3-一类形容词或形容词词干-一类形容词" class="headerlink" title="1.3.2.3 一类形容词或形容词词干+一类形容词"></a>1.3.2.3 一类形容词或形容词词干+一类形容词</h5><p>例: 面倒くさい（めんどくさい）、青白い（あおしろい）、薄暗い（うすくらい）、薄べったい（うすべったい）</p>
+<h4 id="1-3-3-复合动词"><a href="#1-3-3-复合动词" class="headerlink" title="1.3.3 复合动词"></a>1.3.3 复合动词</h4><p>常用复合动词的整理可以参考<a href="https://jp.hjenglish.com/new/p3338/" target="_blank" rel="noopener">此处</a><sup id="fnref:20"><a href="#fn:20" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="秋谷 . “二级复合动词整理.” 沪江日语, 17 Mar. 2006, https://jp.hjenglish.com/new/p3338/.
+">[20]</span></a></sup></p>
+<h5 id="1-3-3-1-动词一型词根-动词"><a href="#1-3-3-1-动词一型词根-动词" class="headerlink" title="1.3.3.1 动词一型词根+动词"></a>1.3.3.1 动词一型词根+动词</h5><p>例: 立ち上がる（たちあがる）、立ち止まる（たちどある）、立て替える（たてかえる）、辿り着く（たどりつく）、付け加える（つけくわえる）、出来上がる（できあがる）、出迎える（でむかえる）、取り扱う（とりあつかう）、引っ張る（ひっぱる）、引っ越す（ひっこす）、引き受ける（ひきうける）</p>
+<h5 id="1-3-3-2-动词二型词根-「て」-动词"><a href="#1-3-3-2-动词二型词根-「て」-动词" class="headerlink" title="1.3.3.2 动词二型词根+「て」+动词"></a>1.3.3.2 动词二型词根+「て」+动词</h5><p>后面的动词常是「行く」、「来る」<br>例: 連れて行く、連れて来る、持って行く</p>
+<h5 id="1-3-3-3-名词、形容词词干-动词"><a href="#1-3-3-3-名词、形容词词干-动词" class="headerlink" title="1.3.3.3 名词、形容词词干+动词"></a>1.3.3.3 名词、形容词词干+动词</h5><p>例: 近付く、長引く（ながびく）、心得る（こころえる）、腰掛ける（こしかける）、首切る（くびきる）、平謝る（ひらあやまる）</p>
+<h2 id="2-句法成分"><a href="#2-句法成分" class="headerlink" title="2. 句法成分"></a>2. 句法成分</h2><p>学习句法成分可以快速分析一句话的构成，更容易理解句子的意思，其有很多不同的划分方式，可以参考<a href="https://ja.wikipedia.org/wiki/%E6%96%87%E3%81%AE%E6%88%90%E5%88%86" target="_blank" rel="noopener">文の成分</a><sup id="fnref:15"><a href="#fn:15" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “文の成分.” Wikipedia, Wikimedia Foundation, 10 May 2018, https://ja.wikipedia.org/wiki/文の成分.
+">[15]</span></a></sup>和<a href="https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E#%E6%96%87%E3%81%AE%E6%88%90%E5%88%86" target="_blank" rel="noopener">日本語文の成分</a><sup id="fnref:16"><a href="#fn:16" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “日本語#文の成分.” Wikipedia, Wikimedia Foundation, https://ja.wikipedia.org/wiki/日本語#文の成分.
+">[16]</span></a></sup>。<br>还有一点值得注意的是，日语的句法成分划分主要看格，也就是说常用格助词来区分句法成分。可以看出这些概念是有耦合的。</p>
+<h3 id="2-1-主語（しゅご）"><a href="#2-1-主語（しゅご）" class="headerlink" title="2.1 主語（しゅご）"></a>2.1 主語（しゅご）</h3><p>主语是表示动作、作用状态、性质的主体。</p>
+<h3 id="2-2-述語（じゅつご）"><a href="#2-2-述語（じゅつご）" class="headerlink" title="2.2 述語（じゅつご）"></a>2.2 述語（じゅつご）</h3><p>即谓语，用来说明主语的动作、作用、状态、性质等。</p>
+<h3 id="2-3-同格語"><a href="#2-3-同格語" class="headerlink" title="2.3 同格語"></a>2.3 同格語</h3><p>在相邻的句子成分之间存在修饰、限定或说明关系的结构，通常是两个独立的词，在意义上指同一个事物，在结构上作同一个成分，若是A修饰B，则A叫同位语，B叫本位语。</p>
+<h3 id="2-4-目的語（もくてきご）"><a href="#2-4-目的語（もくてきご）" class="headerlink" title="2.4 目的語（もくてきご）"></a>2.4 目的語（もくてきご）</h3><p>表示句子中他动词所涉及的对象。类似于英语中的宾语。</p>
+<h3 id="2-5-対象語（たいしょうご）"><a href="#2-5-対象語（たいしょうご）" class="headerlink" title="2.5 対象語（たいしょうご）"></a>2.5 対象語（たいしょうご）</h3><p>用来说明主体的感情、可能、愿望、好恶等意识的对象时。</p>
+<h3 id="2-6-補語（ほご）"><a href="#2-6-補語（ほご）" class="headerlink" title="2.6 補語（ほご）"></a>2.6 補語（ほご）</h3><p>表示时间、地点、方向、手段、场所等的成分。</p>
+<h3 id="2-7-付加語"><a href="#2-7-付加語" class="headerlink" title="2.7 付加語"></a>2.7 付加語</h3><p>是插在句子中作补充说明的句节，它与前面的句节没有直接联系。类似于汉语中用“破折号——”插入的短语。</p>
+<h3 id="2-8-修飾語（しゅうしょくご）"><a href="#2-8-修飾語（しゅうしょくご）" class="headerlink" title="2.8 修飾語（しゅうしょくご）"></a>2.8 修飾語（しゅうしょくご）</h3><p>修饰语是对主语和谓语进行详细说明的词语，其中又分为连体修饰语和连用修饰语，连体修饰语是说明体言的性质、状态等，连用修饰语是说明用言的状态、程度等，类似英语语法中所说的定语和状语。</p>
+<h3 id="2-9-独立語"><a href="#2-9-独立語" class="headerlink" title="2.9 独立語"></a>2.9 独立語</h3><p>主语、谓语、修饰语之间都有相互关联的关系，独立语则与这些成分没有之间的关联，是一个相对独立的成分。一般位于句首，表示感叹、应答或连接句子。</p>
+<h3 id="2-10-成分与词类"><a href="#2-10-成分与词类" class="headerlink" title="2.10 成分与词类"></a>2.10 成分与词类</h3><p>句法成分通常都有固定的词类，多个词组成的句节表示的句法成分除外，大部分语言都是如此（然而Kino最熟悉的汉语作为分析语在这方面没那么严格，句法成分和词类对应极其复杂）。<br>表10给出了日语的句子成分和词类的对应关系，但不是绝对对应的，只是大多数情况下都是如此而已。</p>
+<p align="center">表10 句法成分和词类</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">句法成分</th>
+<th style="text-align:center">词类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">主語</td>
+<td style="text-align:center">名词（包括一般名词、代词、数词）</td>
+</tr>
+<tr>
+<td style="text-align:center">述語</td>
+<td style="text-align:center">名词、形容词、动词</td>
+</tr>
+<tr>
+<td style="text-align:center">同格語</td>
+<td style="text-align:center">一般名词</td>
+</tr>
+<tr>
+<td style="text-align:center">目的語</td>
+<td style="text-align:center">一般名词</td>
+</tr>
+<tr>
+<td style="text-align:center">対象語</td>
+<td style="text-align:center">一般名词</td>
+</tr>
+<tr>
+<td style="text-align:center">補語</td>
+<td style="text-align:center">一般名词</td>
+</tr>
+<tr>
+<td style="text-align:center">付加語</td>
+<td style="text-align:center">通常用句节（短语）表示</td>
+</tr>
+<tr>
+<td style="text-align:center">連体修飾語</td>
+<td style="text-align:center">形容词、连体词</td>
+</tr>
+<tr>
+<td style="text-align:center">連用修飾語</td>
+<td style="text-align:center">副词</td>
+</tr>
+<tr>
+<td style="text-align:center">独立語</td>
+<td style="text-align:center">感叹词、名词</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-11-成分顺序"><a href="#2-11-成分顺序" class="headerlink" title="2.11 成分顺序"></a>2.11 成分顺序</h3><p>英语和汉语最简单的句子顺序都是<strong>主+谓+宾</strong>，日语的顺序与此不同，日语的基本语序是<strong>主語+目的語+述語</strong>。可以参考<a href="https://ja.wikipedia.org/wiki/%E8%AA%9E%E9%A0%86" target="_blank" rel="noopener">語順</a><sup id="fnref:17"><a href="#fn:17" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Wikipedians. “語順.” Wikipedia, Wikimedia Foundation, 10 June 2018, https://ja.wikipedia.org/wiki/語順.
+">[17]</span></a></sup>的介绍。</p>
+<h3 id="2-12-成分衔接"><a href="#2-12-成分衔接" class="headerlink" title="2.12 成分衔接"></a>2.12 成分衔接</h3><p>是否按照上述组成顺序，将各个成分简单堆砌在一起就构成了一个完成的句子了呢？当然不是啦，在日语中，句子的成分与成分之间通常还需要用助词实现衔接。<br>主语后常用的助词有「は」、「も」，述语通常在句子最末尾，后常用助动词有「だ」、「ます」等，目的语后常用的助词有「を」，对象语后常用的助词有「が」，补语后常用的助词有「で」。其他几种不是严格通过添加助词表示句子成分。</p>
+<h3 id="2-13-成分省略"><a href="#2-13-成分省略" class="headerlink" title="2.13 成分省略"></a>2.13 成分省略</h3><p>日语和汉语一样，根据上下文可以省略很多句子成分，基本上没有什么是不能省略的，这就需要多看多读多听了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本篇主要介绍了词类系统和句法成分，下一篇将介绍极性时态。</p>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">Wikipedians. “Part of Speech.” Wikipedia, Wikimedia Foundation, 22 June 2018, <a href="https://en.wikipedia.org/wiki/Part_of_speech" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Part_of_speech</a>.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. “Sentence Element.” Servent - Wiktionary, <a href="https://en.wiktionary.org/wiki/sentence_element" target="_blank" rel="noopener">https://en.wiktionary.org/wiki/sentence_element</a>.<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">Wikipedians. “Grammatical Relation.” Wikipedia, Wikimedia Foundation, 19 June 2018, <a href="https://en.wikipedia.org/wiki/Grammatical_relation" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Grammatical_relation</a>.<a href="#fnref:3" rev="footnote"> ↩</a></span></div><div id="fn:4" style="display:flex"><span style="width:20px">4.</span><span style="width:calc(100% - 20px)">Wikipedians. “Functional Theories of Grammar.” Wikipedia, Wikimedia Foundation, 19 June 2018, <a href="https://en.wikipedia.org/wiki/Functional_theories_of_grammar" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Functional_theories_of_grammar</a>.<a href="#fnref:4" rev="footnote"> ↩</a></span></div><div id="fn:5" style="display:flex"><span style="width:20px">5.</span><span style="width:calc(100% - 20px)">Wikipedians. “品詞.” Wikipedia, Wikimedia Foundation, 19 Apr. 2018, <a href="https://ja.wikipedia.org/wiki/品詞" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/品詞</a>.<a href="#fnref:5" rev="footnote"> ↩</a></span></div><div id="fn:6" style="display:flex"><span style="width:20px">6.</span><span style="width:calc(100% - 20px)">洋渔 . “日文词语分为十二种品词(品词,ひんし).” 豆瓣, <a href="https://www.douban.com/note/640814003/" target="_blank" rel="noopener">https://www.douban.com/note/640814003/</a>.<a href="#fnref:6" rev="footnote"> ↩</a></span></div><div id="fn:7" style="display:flex"><span style="width:20px">7.</span><span style="width:calc(100% - 20px)">Wikipedians. “自動詞.” Wikipedia, Wikimedia Foundation, 18 Apr. 2018, <a href="https://ja.wikipedia.org/wiki/自動詞" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/自動詞</a>.<a href="#fnref:7" rev="footnote"> ↩</a></span></div><div id="fn:8" style="display:flex"><span style="width:20px">8.</span><span style="width:calc(100% - 20px)">Wikipedians. “他動詞.” Wikipedia, Wikimedia Foundation, 3 Feb. 2017, <a href="https://ja.wikipedia.org/wiki/他動詞" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/他動詞</a>.<a href="#fnref:8" rev="footnote"> ↩</a></span></div><div id="fn:9" style="display:flex"><span style="width:20px">9.</span><span style="width:calc(100% - 20px)">Wikipedians. “日文量詞.” Wikipedia, Wikimedia Foundation, 20 June 2018, <a href="https://zh.wikipedia.org/wiki/日文量詞" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/日文量詞</a>.<a href="#fnref:9" rev="footnote"> ↩</a></span></div><div id="fn:10" style="display:flex"><span style="width:20px">10.</span><span style="width:calc(100% - 20px)">Wikipedians. “助数詞.” Wikipedia, Wikimedia Foundation, 20 June 2018, <a href="https://ja.wikipedia.org/wiki/助数詞" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/助数詞</a>.<a href="#fnref:10" rev="footnote"> ↩</a></span></div><div id="fn:11" style="display:flex"><span style="width:20px">11.</span><span style="width:calc(100% - 20px)">日语单词本 . “史上最全的日语接续词总结！考试不再是难题！.” 搜狐网, 10 Sept. 2017, <a href="https://www.sohu.com/a/191048812_209715" target="_blank" rel="noopener">https://www.sohu.com/a/191048812_209715</a>.<a href="#fnref:11" rev="footnote"> ↩</a></span></div><div id="fn:12" style="display:flex"><span style="width:20px">12.</span><span style="width:calc(100% - 20px)">精樱日语 . “日语中常见的一些感叹词.” 豆瓣, 19 Oct. 2015, <a href="https://www.douban.com/note/521188596/" target="_blank" rel="noopener">https://www.douban.com/note/521188596/</a>.<a href="#fnref:12" rev="footnote"> ↩</a></span></div><div id="fn:13" style="display:flex"><span style="width:20px">13.</span><span style="width:calc(100% - 20px)">chexiaomeng. “日语全部助词分类及汇总.” 百度文库, 7 May 2011, <a href="https://wenku.baidu.com/view/9e0204ecaeaad1f346933fd6" target="_blank" rel="noopener">https://wenku.baidu.com/view/9e0204ecaeaad1f346933fd6</a>.<a href="#fnref:13" rev="footnote"> ↩</a></span></div><div id="fn:14" style="display:flex"><span style="width:20px">14.</span><span style="width:calc(100% - 20px)">荷塘垚 . “常用日语助动词总汇.” 百度文库, 23 Apr. 2012, <a href="https://wenku.baidu.com/view/b0be1a24192e45361066f5a5.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/b0be1a24192e45361066f5a5.html</a>.<a href="#fnref:14" rev="footnote"> ↩</a></span></div><div id="fn:15" style="display:flex"><span style="width:20px">15.</span><span style="width:calc(100% - 20px)">Wikipedians. “文の成分.” Wikipedia, Wikimedia Foundation, 10 May 2018, <a href="https://ja.wikipedia.org/wiki/文の成分" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/文の成分</a>.<a href="#fnref:15" rev="footnote"> ↩</a></span></div><div id="fn:16" style="display:flex"><span style="width:20px">16.</span><span style="width:calc(100% - 20px)">Wikipedians. “日本語#文の成分.” Wikipedia, Wikimedia Foundation, <a href="https://ja.wikipedia.org/wiki/日本語#文の成分" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/日本語#文の成分</a>.<a href="#fnref:16" rev="footnote"> ↩</a></span></div><div id="fn:17" style="display:flex"><span style="width:20px">17.</span><span style="width:calc(100% - 20px)">Wikipedians. “語順.” Wikipedia, Wikimedia Foundation, 10 June 2018, <a href="https://ja.wikipedia.org/wiki/語順" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/語順</a>.<a href="#fnref:17" rev="footnote"> ↩</a></span></div><div id="fn:18" style="display:flex"><span style="width:20px">18.</span><span style="width:calc(100% - 20px)">日语考试 . “说说日语复合词.” 丫丫日语, 31 Jan. 2015, <a href="http://www.yayajp.com/index.php?a=shows&amp;catid=6&amp;id=190" target="_blank" rel="noopener">http://www.yayajp.com/index.php?a=shows&amp;catid=6&amp;id=190</a>.<a href="#fnref:18" rev="footnote"> ↩</a></span></div><div id="fn:19" style="display:flex"><span style="width:20px">19.</span><span style="width:calc(100% - 20px)">ASH9750. “日语语法（九）：日语的构词法.” CSDN博客, 20 June 2017, <a href="https://blog.csdn.net/sinat_29315627/article/details/73484302" target="_blank" rel="noopener">https://blog.csdn.net/sinat_29315627/article/details/73484302</a>.<a href="#fnref:19" rev="footnote"> ↩</a></span></div><div id="fn:20" style="display:flex"><span style="width:20px">20.</span><span style="width:calc(100% - 20px)">秋谷 . “二级复合动词整理.” 沪江日语, 17 Mar. 2006, <a href="https://jp.hjenglish.com/new/p3338/" target="_blank" rel="noopener">https://jp.hjenglish.com/new/p3338/</a>.<a href="#fnref:20" rev="footnote"> ↩</a></span></div></div></div>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/japanese/" rel="tag"># japanese</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/24/listening02/" rel="next" title="开始使用Podcast吧">
+                <i class="fa fa-chevron-left"></i> 开始使用Podcast吧
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/08/economics01/" rel="prev" title="个人投资与理财">
+                个人投资与理财 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/site/avatar.png" alt="Kino">
+            
+              <p class="site-author-name" itemprop="name">Kino</p>
+              <div class="site-description motion-element" itemprop="description">Amor Fati</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">111</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">109</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/WoeiSheu" title="GitHub &rarr; https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/KafuuKino" title="Twitter &rarr; https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/u/2613432527" title="Weibo &rarr; http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-词类系统"><span class="nav-text">1. 词类系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-自立語（独立词、实词）"><span class="nav-text">1.1 自立語（独立词、实词）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-可以活用——用言"><span class="nav-text">1.1.1 可以活用——用言</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-1-1-动词"><span class="nav-text">1.1.1.1 动词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-1-2-形容词"><span class="nav-text">1.1.1.2 形容词</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2-不可以活用"><span class="nav-text">1.1.2 不可以活用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-2-1-名词——体言"><span class="nav-text">1.1.2.1 名词——体言</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-2-2-副词"><span class="nav-text">1.1.2.2 副词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-2-3-连体词"><span class="nav-text">1.1.2.3 连体词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-2-4-接续词"><span class="nav-text">1.1.2.4 接续词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-2-5-感叹词"><span class="nav-text">1.1.2.5 感叹词</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-付属語（附属词」虚词）"><span class="nav-text">1.2 付属語（附属词」虚词）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-不可以活用——助词"><span class="nav-text">1.2.1 不可以活用——助词</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-1-1-格助詞"><span class="nav-text">1.2.1.1 格助詞</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-1-2-並立助詞"><span class="nav-text">1.2.1.2 並立助詞</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-1-3-副助词"><span class="nav-text">1.2.1.3 副助词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-1-4-係助詞"><span class="nav-text">1.2.1.4 係助詞</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-1-5-接続助詞"><span class="nav-text">1.2.1.5 接続助詞</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-1-6-终助词"><span class="nav-text">1.2.1.6 终助词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-1-7-間投助詞"><span class="nav-text">1.2.1.7 間投助詞</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-1-8-準体助詞"><span class="nav-text">1.2.1.8 準体助詞</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-可以活用——助动词"><span class="nav-text">1.2.2 可以活用——助动词</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-复合词"><span class="nav-text">1.3 复合词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-1-复合名词"><span class="nav-text">1.3.1 复合名词</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-1-1-动词一型词根-名词"><span class="nav-text">1.3.1.1 动词一型词根+名词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-1-2-名词-动词一型词根"><span class="nav-text">1.3.1.2 名词+动词一型词根</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-1-3-动词一型词根-动词一型词根"><span class="nav-text">1.3.1.3 动词一型词根+动词一型词根</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-1-4-名词-名词"><span class="nav-text">1.3.1.4 名词+名词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-1-5-一类形容词词干-名词"><span class="nav-text">1.3.1.5 一类形容词词干+名词</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-2-复合形容词"><span class="nav-text">1.3.2 复合形容词</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-2-1-动词一型词根-一类形容词"><span class="nav-text">1.3.2.1 动词一型词根+一类形容词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-2-2-名词-一类形容词"><span class="nav-text">1.3.2.2 名词+一类形容词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-2-3-一类形容词或形容词词干-一类形容词"><span class="nav-text">1.3.2.3 一类形容词或形容词词干+一类形容词</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-3-复合动词"><span class="nav-text">1.3.3 复合动词</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-3-1-动词一型词根-动词"><span class="nav-text">1.3.3.1 动词一型词根+动词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-3-2-动词二型词根-「て」-动词"><span class="nav-text">1.3.3.2 动词二型词根+「て」+动词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-3-3-名词、形容词词干-动词"><span class="nav-text">1.3.3.3 名词、形容词词干+动词</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#2-句法成分"><span class="nav-text">2. 句法成分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-主語（しゅご）"><span class="nav-text">2.1 主語（しゅご）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-述語（じゅつご）"><span class="nav-text">2.2 述語（じゅつご）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-同格語"><span class="nav-text">2.3 同格語</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-目的語（もくてきご）"><span class="nav-text">2.4 目的語（もくてきご）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-対象語（たいしょうご）"><span class="nav-text">2.5 対象語（たいしょうご）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-補語（ほご）"><span class="nav-text">2.6 補語（ほご）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-付加語"><span class="nav-text">2.7 付加語</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-修飾語（しゅうしょくご）"><span class="nav-text">2.8 修飾語（しゅうしょくご）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9-独立語"><span class="nav-text">2.9 独立語</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-10-成分与词类"><span class="nav-text">2.10 成分与词类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-11-成分顺序"><span class="nav-text">2.11 成分顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-12-成分衔接"><span class="nav-text">2.12 成分衔接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-13-成分省略"><span class="nav-text">2.13 成分省略</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnote"><span class="nav-text">Footnote</span></a></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kino</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/canvas_lines.min.js"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    <script>
+  window.livereOptions = {
+    refer: '2017/09/30/japanese03/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "box";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "topCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "vertical";
+      
+        flOptions.position = "middleRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('Copied');
+        else $(this).text('Copy failed');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('Copy');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/clickup.js"></script>
+</body>
+</html>
