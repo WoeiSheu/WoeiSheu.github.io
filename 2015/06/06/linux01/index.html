@@ -619,7 +619,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-音频设备"><a href="#1-音频设备" class="headerlink" title="1. 音频设备"></a>1. 音频设备</h3><p>aplay -l会列出所有设备<br>alsamixer灰常实用<br><code>/usr/bin/lspci | grep -i audio</code></p>
+        <h3 id="1-音频设备"><a href="#1-音频设备" class="headerlink" title="1. 音频设备"></a>1. 音频设备</h3><p>aplay -l会列出所有设备<br>alsamixer灰常实用<br><code>/usr/bin/lspci | grep -i audio</code></p>
 <h3 id="2-xargs"><a href="#2-xargs" class="headerlink" title="2. xargs"></a>2. xargs</h3><p>通常使用管道的范例：<code>cat test.txt | grep -E &#39;*test*&#39;</code><br>但若是前者可以作为后者的参数带入时，可以使用xargs：<br><code>echo “*test*” | xargs find / -name</code><br>上述若是不加xargs则无法使用<br>xargs的实际功能是是以行为单位读取输入数据并执行参数变化，于是可以有更强大的用处，例如：<br><code>find / -name &#39;*portaudio*&#39; | xargs ls -l</code><br><a id="more"></a></p>
 <h3 id="3-截图"><a href="#3-截图" class="headerlink" title="3. 截图"></a>3. 截图</h3><p>截图可以将PrntScr辅以Shift和Alt键，得到不同效果</p>
 <h3 id="4-ssh远程下载上传文件"><a href="#4-ssh远程下载上传文件" class="headerlink" title="4. ssh远程下载上传文件"></a>4. ssh远程下载上传文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp [-P port] username@host:/path/to/remote/<span class="built_in">source</span> /path/to/<span class="built_in">local</span>/dest</span><br><span class="line">scp [-P port] /path/to/<span class="built_in">local</span>/<span class="built_in">source</span> username@host:/path/to/remote/dest</span><br></pre></td></tr></table></figure>

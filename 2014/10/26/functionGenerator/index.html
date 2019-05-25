@@ -623,7 +623,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>进行多级放大电路和负反馈放大电路的模拟仿真时，用到了multisim里的function generator(函数发生器)，对其中的参数amplitude产生了困惑，这个amplitude(振幅)指的是峰值还是峰峰值。<br><a id="more"></a></p>
+        <h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>进行多级放大电路和负反馈放大电路的模拟仿真时，用到了multisim里的function generator(函数发生器)，对其中的参数amplitude产生了困惑，这个amplitude(振幅)指的是峰值还是峰峰值。<br><a id="more"></a></p>
 <h3 id="2-验证"><a href="#2-验证" class="headerlink" title="2. 验证"></a>2. 验证</h3><p>于是设计了一个及其简单的电路进行仿真:<br><img src="/images/analogelec_functionGenerator_1.png" alt="simple circuit 1"></p>
 <p>其中函数发生器的amplitude设为10V，可是multimeter的结果却是14.142V，出乎意料<br>于是查阅资料，发现function generator的三个引脚为正、负、接地，并不是负号出接地！这样改过之后，结果为7.071V<br><img src="/images/analogelec_functionGenerator_2.png" alt="simple circuit 2"></p>
 <p>因为multimeter(万用表)测的为正弦交流信号的有效值，可以推测出function generator的amplitude为峰值。后来看见有网友解答说: 单位为Vp时是峰值，Vpp才是峰峰值</p>

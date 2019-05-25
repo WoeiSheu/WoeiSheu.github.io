@@ -619,7 +619,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>在codewarrior写的程序本来是可以编译的, 但只是调整了一些代码的位置, 将一些变量移到块作用域里, 却发现无法编译了, 以为是编译器配置突然出了问题, 解决了很久问题仍然存在</p>
+        <h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>在codewarrior写的程序本来是可以编译的, 但只是调整了一些代码的位置, 将一些变量移到块作用域里, 却发现无法编译了, 以为是编译器配置突然出了问题, 解决了很久问题仍然存在</p>
 <h3 id="2-解决"><a href="#2-解决" class="headerlink" title="2. 解决"></a>2. 解决</h3><p>最终发现是C语言的问题, C89的标准不允许随便声明变量, 变量声明不能放在任何可执行语句之后, 只允许在函数和块的开始处。<br>这么不合理的规定在C99和C++里自然已经解除了。但是我所使用的codewarrior所用的C Compiler版本还是只支持到C89</p>
 
       

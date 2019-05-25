@@ -622,7 +622,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-Logistic回归"><a href="#1-Logistic回归" class="headerlink" title="1. Logistic回归"></a>1. Logistic回归</h3><p>利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类</p>
+        <h3 id="1-Logistic回归"><a href="#1-Logistic回归" class="headerlink" title="1. Logistic回归"></a>1. Logistic回归</h3><p>利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类</p>
 <h3 id="2-基于Logistic回归和Sigmoid函数的分类"><a href="#2-基于Logistic回归和Sigmoid函数的分类" class="headerlink" title="2. 基于Logistic回归和Sigmoid函数的分类"></a>2. 基于Logistic回归和Sigmoid函数的分类</h3><p>我们想要的函数是能接受所有的输入然后预测出类别。例如,在两个类的情况下,上述函数输出0或1,我们接触过的函数 Heaviside step function(单位阶跃函数)即是。然而此函数在跳跃点上从0瞬间跳跃到1，这个瞬间跳跃过程有时很难处理。Sigmoid函数有类似的性质但是更容易处理，其具体计算公式为：\(\sigma(z)=\frac{1}{1+e^{-z}}\)<br>为了实现Logistic回归分类器，我们可以在每个特征上都乘以一个回归系数，然后把所有的结果值相加，将这个总和代入Sigmoid函数中，进而得到一个范围在0~1之间的数值。任何大于0.5的数据被分入1类，小于0.5即被归为0类。所以，Logistic回归也可以看成是一种概率估计<br>确定了分类器的函数形式后，问题变为求最佳回归系数。<br><a id="more"></a></p>
 <h3 id="3-基于最优化方法的最佳回归系数确定"><a href="#3-基于最优化方法的最佳回归系数确定" class="headerlink" title="3. 基于最优化方法的最佳回归系数确定"></a>3. 基于最优化方法的最佳回归系数确定</h3><p>Sigmoid函数的输入记为z，由下公式得出:<br>\(z=w_0x_0+w_1x_1+\cdots+w_nx_n=w^Tx\)<br>其中向量x是分类器的输入数据，向量w就是我们要找到的最佳参数(系数)，从而使分类器尽可能精确。</p>
 <h4 id="3-1-最优化方法：梯度上升法"><a href="#3-1-最优化方法：梯度上升法" class="headerlink" title="3.1 最优化方法：梯度上升法"></a>3.1 最优化方法：梯度上升法</h4><p>梯度上升法基于的思想是:<br>要找到某函数的最大值最好的方法是沿着该函数的梯度方向做探寻，如果梯度记为\(\nabla\)，则函数\(f(x,y)\)的梯度由下式表示：\(\nabla f(x,y)=\begin{bmatrix}<br>\frac{\partial f(x,y)}{\partial x} \\<br>\frac{\partial f(x,y)}{\partial y}<br>\end{bmatrix}\)<br>其中，函数f(x,y)必须在待计算的点上有定义并可微。具体函数示例图如下:<br><img src="/images/machineLearning04_4.png" alt="fourth"></p>
