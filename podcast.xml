@@ -11,11 +11,11 @@
       <itunes:name></itunes:name>
       <itunes:email></itunes:email>
     </itunes:owner>
-    <itunes:image href="https://blog.xuwei.fun" />
+    <itunes:image href="https://blog.xuwei.fun"/>
     <itunes:category text="">
-      <itunes:category text="" />
+      <itunes:category text=""/>
     </itunes:category>
-    <itunes:explicit>no</itunes:explicit>
+    <itunes:explicit></itunes:explicit>
     <language></language>
     
   </channel>

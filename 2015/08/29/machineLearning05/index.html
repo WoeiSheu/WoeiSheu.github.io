@@ -1,109 +1,51 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="en">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="en">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-
-
-  
-  
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
-
-
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
-
-
-
-
-
-
-
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
   <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
-
-
-
-
-
-
-
   <meta name="baidu-site-verification" content="hRzEYlh3gL">
 
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 
-
-
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
-
-<link rel="stylesheet" href="/css/main.css?v=7.1.1">
-
-
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=7.1.1">
-
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    hostname: new URL('https://blog.xuwei.fun').hostname,
     root: '/',
     scheme: 'Gemini',
-    version: '7.1.1',
+    version: '7.6.0',
+    exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
-    back2top: true,
-    back2top_sidebar: false,
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
+    comments: {"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
 </script>
-
-
-  
-
-
-
 
   <meta name="description" content="1. 支持向量机(Support Vector Machines)SVM有很多实现，最流行的一种实现是序列最小优化(Sequential Minimal Optimization)算法可以使用核函数(kernel)的方式将SVM扩展到更多数据集上SVM的优缺点:  优点：泛化错误率低，计算开销不大，结果易解释 缺点：对参数调节和核函数的选择敏感，原始分类器不加修改仅适用于处理二类问题">
 <meta name="keywords" content="machine learning,SVM">
@@ -121,32 +63,29 @@
 <meta name="twitter:description" content="1. 支持向量机(Support Vector Machines)SVM有很多实现，最流行的一种实现是序列最小优化(Sequential Minimal Optimization)算法可以使用核函数(kernel)的方式将SVM扩展到更多数据集上SVM的优缺点:  优点：泛化错误率低，计算开销不大，结果易解释 缺点：对参数调节和核函数的选择敏感，原始分类器不加修改仅适用于处理二类问题">
 <meta name="twitter:image" content="https://blog.xuwei.fun/images/machineLearning05_7.png">
 
+<link rel="canonical" href="https://blog.xuwei.fun/2015/08/29/machineLearning05/">
 
 
-  <link rel="alternate" href="/atom.xml" title="霁月荒馆" type="application/atom+xml">
-
-
-
-  
-  
-  <link rel="canonical" href="https://blog.xuwei.fun/2015/08/29/machineLearning05/">
-
-
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true
   };
 </script>
 
   <title>机器学习五 | 霁月荒馆</title>
   
-
-
-
-
-
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-104049598-2');
+      }
+    </script>
 
 
 
@@ -155,7 +94,6 @@
 
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -164,9 +102,8 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -180,446 +117,212 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">霁月荒馆</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <p class="site-subtitle">以今日之我与昨日之我战</p>
-      
-    
-    
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-categories">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-tags">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-thoughts">
+        <li class="menu-item menu-item-thoughts">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/thoughts/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>Thoughts</a>
+    <a href="/thoughts/" rel="section"><i class="fa fa-fw fa-pencil"></i>thoughts</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-excerpt">
+        <li class="menu-item menu-item-excerpt">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/excerpt/" rel="section"><i class="menu-item-icon fa fa-fw fa-paperclip"></i> <br>Excerpt</a>
+    <a href="/excerpt/" rel="section"><i class="fa fa-fw fa-paperclip"></i>excerpt</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-about">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
+        <li class="menu-item menu-item-sitemap">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>Sitemap</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-commonweal">
+        <li class="menu-item menu-item-commonweal">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/404.html/" rel="section"><i class="menu-item-icon fa fa-fw fa-child"></i> <br>Commonweal 404</a>
+    <a href="/404.html/" rel="section"><i class="fa fa-fw fa-child"></i>Commonweal 404</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-foryou">
+        <li class="menu-item menu-item-foryou">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/foryou/" rel="section"><i class="menu-item-icon fa fa-fw fa-heart"></i> <br>ForYou</a>
+    <a href="/foryou/" rel="section"><i class="fa fa-fw fa-heart"></i>foryou</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
 
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
-        </li>
-      
-    </ul>
-  
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
+</div>
+<div class="search-pop-overlay"></div>
 
-
-  
-
-
-
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
+
+          <div class="content">
             
 
-          
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  
-    <div class="reading-progress-bar"></div>
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2015/08/29/machineLearning05/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/site/avatar.png">
       <meta itemprop="name" content="Kino">
       <meta itemprop="description" content="Amor Fati">
-      <meta itemprop="image" content="/images/site/avatar.png">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="霁月荒馆">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">机器学习五
-
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          机器学习五
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">Posted on</span>
 
               <time title="Created: 2015-08-29 10:00:00" itemprop="dateCreated datePublished" datetime="2015-08-29T10:00:00+08:00">2015-08-29</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
+                <span class="post-meta-item-text">Edited on</span>
                 <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a></span>
-
-                
-                
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techonology/" itemprop="url" rel="index">
+                    <span itemprop="name">techonology</span>
+                  </a>
+                </span>
                   , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/techonology/ai/" itemprop="url" rel="index"><span itemprop="name">ai</span></a></span>
-
-                
-                
-              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techonology/ai/" itemprop="url" rel="index">
+                    <span itemprop="name">ai</span>
+                  </a>
+                </span>
             </span>
-          
 
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Symbols count in article: </span>
-                
-                <span title="Symbols count in article">18k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">17 mins.</span>
-              
-            </div>
-          
-
-          
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>15k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>14 mins.</span>
+            </span>
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <h3 id="1-支持向量机-Support-Vector-Machines"><a href="#1-支持向量机-Support-Vector-Machines" class="headerlink" title="1. 支持向量机(Support Vector Machines)"></a>1. 支持向量机(Support Vector Machines)</h3><p>SVM有很多实现，最流行的一种实现是序列最小优化(Sequential Minimal Optimization)算法<br>可以使用核函数(kernel)的方式将SVM扩展到更多数据集上<br>SVM的优缺点:</p>
@@ -646,7 +349,7 @@
 <p>简化版SMO算法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">smoSimple</span><span class="params">(dataMatIn, classLabels, C, toler, maxIter)</span>:</span></span><br><span class="line">    dataMatrix = mat(dataMatIn); labelMat = mat(classLabels).transpose()</span><br><span class="line">    b = <span class="number">0</span>; m,n = shape(dataMatrix)</span><br><span class="line">    alphas = mat(zeros((m,<span class="number">1</span>)))</span><br><span class="line">    iter = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> (iter &lt; maxIter):</span><br><span class="line">        alphaPairsChanged = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">            fXi = float(multiply(alphas,labelMat).T*(dataMatrix*dataMatrix[i,:].T)) + b</span><br><span class="line">            Ei = fXi - float(labelMat[i])<span class="comment">#if checks if an example violates KKT conditions</span></span><br><span class="line">            <span class="keyword">if</span> ((labelMat[i]*Ei &lt; -toler) <span class="keyword">and</span> (alphas[i] &lt; C)) <span class="keyword">or</span> ((labelMat[i]*Ei &gt; toler) <span class="keyword">and</span> (alphas[i] &gt; <span class="number">0</span>)):</span><br><span class="line">                j = selectJrand(i,m)</span><br><span class="line">                fXj = float(multiply(alphas,labelMat).T*(dataMatrix*dataMatrix[j,:].T)) + b</span><br><span class="line">                Ej = fXj - float(labelMat[j])</span><br><span class="line">                alphaIold = alphas[i].copy(); alphaJold = alphas[j].copy();</span><br><span class="line">                <span class="keyword">if</span> (labelMat[i] != labelMat[j]):</span><br><span class="line">                    L = max(<span class="number">0</span>, alphas[j] - alphas[i])</span><br><span class="line">                    H = min(C, C + alphas[j] - alphas[i])</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    L = max(<span class="number">0</span>, alphas[j] + alphas[i] - C)</span><br><span class="line">                    H = min(C, alphas[j] + alphas[i])</span><br><span class="line">                <span class="keyword">if</span> L==H: <span class="keyword">print</span> <span class="string">"L==H"</span>; <span class="keyword">continue</span></span><br><span class="line">                eta = <span class="number">2.0</span> * dataMatrix[i,:]*dataMatrix[j,:].T - dataMatrix[i,:]*dataMatrix[i,:].T - dataMatrix[j,:]*dataMatrix[j,:].T</span><br><span class="line">                <span class="keyword">if</span> eta &gt;= <span class="number">0</span>: <span class="keyword">print</span> <span class="string">"eta&gt;=0"</span>; <span class="keyword">continue</span></span><br><span class="line">                alphas[j] -= labelMat[j]*(Ei - Ej)/eta</span><br><span class="line">                alphas[j] = clipAlpha(alphas[j],H,L)</span><br><span class="line">                <span class="keyword">if</span> (abs(alphas[j] - alphaJold) &lt; <span class="number">0.00001</span>): <span class="keyword">print</span> <span class="string">"j not moving enough"</span>; <span class="keyword">continue</span></span><br><span class="line">                alphas[i] += labelMat[j]*labelMat[i]*(alphaJold - alphas[j])<span class="comment">#update i by the same amount as j</span></span><br><span class="line">                                                                        <span class="comment">#the update is in the oppostie direction</span></span><br><span class="line">                b1 = b - Ei- labelMat[i]*(alphas[i]-alphaIold)*dataMatrix[i,:]*dataMatrix[i,:].T - labelMat[j]*(alphas[j]-alphaJold)*dataMatrix[i,:]*dataMatrix[j,:].T</span><br><span class="line">                b2 = b - Ej- labelMat[i]*(alphas[i]-alphaIold)*dataMatrix[i,:]*dataMatrix[j,:].T - labelMat[j]*(alphas[j]-alphaJold)*dataMatrix[j,:]*dataMatrix[j,:].T</span><br><span class="line">                <span class="keyword">if</span> (<span class="number">0</span> &lt; alphas[i]) <span class="keyword">and</span> (C &gt; alphas[i]): b = b1</span><br><span class="line">                <span class="keyword">elif</span> (<span class="number">0</span> &lt; alphas[j]) <span class="keyword">and</span> (C &gt; alphas[j]): b = b2</span><br><span class="line">                <span class="keyword">else</span>: b = (b1 + b2)/<span class="number">2.0</span></span><br><span class="line">                alphaPairsChanged += <span class="number">1</span></span><br><span class="line">                <span class="keyword">print</span> <span class="string">"iter: %d i:%d, pairs changed %d"</span> % (iter,i,alphaPairsChanged)</span><br><span class="line">        <span class="keyword">if</span> (alphaPairsChanged == <span class="number">0</span>): iter += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>: iter = <span class="number">0</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"iteration number: %d"</span> % iter</span><br><span class="line">    <span class="keyword">return</span> b,alphas</span><br></pre></td></tr></table></figure></p>
 <h4 id="4-3-利用完整Platt-SMO算法加速优化"><a href="#4-3-利用完整Platt-SMO算法加速优化" class="headerlink" title="4.3 利用完整Platt SMO算法加速优化"></a>4.3 利用完整Platt SMO算法加速优化</h4><p>完整版Platt SMO的支持函数：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">optStruct</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,dataMatIn, classLabels, C, toler)</span>:</span>  <span class="comment"># Initialize the structure with the parameters </span></span><br><span class="line">        self.X = dataMatIn</span><br><span class="line">        self.labelMat = classLabels</span><br><span class="line">        self.C = C</span><br><span class="line">        self.tol = toler</span><br><span class="line">        self.m = shape(dataMatIn)[<span class="number">0</span>]</span><br><span class="line">        self.alphas = mat(zeros((self.m,<span class="number">1</span>)))</span><br><span class="line">        self.b = <span class="number">0</span></span><br><span class="line">        self.eCache = mat(zeros((self.m,<span class="number">2</span>))) <span class="comment">#first column is valid flag</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calcEk</span><span class="params">(oS, k)</span>:</span></span><br><span class="line">    fXk = float(multiply(oS.alphas,oS.labelMat).T*(oS.X*oS.X[k,:].T)) + oS.b</span><br><span class="line">    Ek = fXk - float(oS.labelMat[k])</span><br><span class="line">    <span class="keyword">return</span> Ek</span><br><span class="line">        </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">selectJ</span><span class="params">(i, oS, Ei)</span>:</span>         <span class="comment">#this is the second choice -heurstic, and calcs Ej</span></span><br><span class="line">    maxK = <span class="number">-1</span>; maxDeltaE = <span class="number">0</span>; Ej = <span class="number">0</span></span><br><span class="line">    oS.eCache[i] = [<span class="number">1</span>,Ei]  <span class="comment">#set valid #choose the alpha that gives the maximum delta E</span></span><br><span class="line">    validEcacheList = nonzero(oS.eCache[:,<span class="number">0</span>].A)[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">if</span> (len(validEcacheList)) &gt; <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> validEcacheList:   <span class="comment">#loop through valid Ecache values and find the one that maximizes delta E</span></span><br><span class="line">            <span class="keyword">if</span> k == i: <span class="keyword">continue</span> <span class="comment">#don't calc for i, waste of time</span></span><br><span class="line">            Ek = calcEk(oS, k)</span><br><span class="line">            deltaE = abs(Ei - Ek)</span><br><span class="line">            <span class="keyword">if</span> (deltaE &gt; maxDeltaE):</span><br><span class="line">                maxK = k; maxDeltaE = deltaE; Ej = Ek</span><br><span class="line">        <span class="keyword">return</span> maxK, Ej</span><br><span class="line">    <span class="keyword">else</span>:   <span class="comment">#in this case (first time around) we don't have any valid eCache values</span></span><br><span class="line">        j = selectJrand(i, oS.m)</span><br><span class="line">        Ej = calcEk(oS, j)</span><br><span class="line">    <span class="keyword">return</span> j, Ej</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">updateEk</span><span class="params">(oS, k)</span>:</span><span class="comment">#after any alpha has changed update the new value in the cache</span></span><br><span class="line">    Ek = calcEk(oS, k)</span><br><span class="line">    oS.eCache[k] = [<span class="number">1</span>,Ek]</span><br></pre></td></tr></table></figure></p>
 <p>完整Platt SMO算法中的优化例程<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">innerL</span><span class="params">(i, oS)</span>:</span></span><br><span class="line">    Ei = calcEk(oS, i)</span><br><span class="line">    <span class="keyword">if</span> ((oS.labelMat[i]*Ei &lt; -oS.tol) <span class="keyword">and</span> (oS.alphas[i] &lt; oS.C)) <span class="keyword">or</span>\</span><br><span class="line">       ((oS.labelMat[i]*Ei &gt; oS.tol) <span class="keyword">and</span> (oS.alphas[i] &gt; <span class="number">0</span>)):</span><br><span class="line">        j,Ej = selectJ(i, oS, Ei)                                   </span><br><span class="line">        alphaIold = oS.alphas[i].copy(); alphaJold = oS.alphas[j].copy();</span><br><span class="line">        <span class="keyword">if</span> (oS.labelMat[i] != oS.labelMat[j]):</span><br><span class="line">            L = max(<span class="number">0</span>, oS.alphas[j] - oS.alphas[i])</span><br><span class="line">            H = min(oS.C, oS.C + oS.alphas[j] - oS.alphas[i])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            L = max(<span class="number">0</span>, oS.alphas[j] + oS.alphas[i] - oS.C)</span><br><span class="line">            H = min(oS.C, oS.alphas[j] + oS.alphas[i])</span><br><span class="line">        <span class="keyword">if</span> L==H: <span class="keyword">print</span> <span class="string">"L==H"</span>; <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        eta = <span class="number">2.0</span> * oS.X[i,:]*oS.X[j,:].T - oS.X[i,:]*oS.X[i,:].T - \</span><br><span class="line">              oS.X[j,:]*oS.X[j,:].T</span><br><span class="line">        <span class="keyword">if</span> eta &gt;= <span class="number">0</span>: <span class="keyword">print</span> <span class="string">"eta&gt;=0"</span>; <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        oS.alphas[j] -= oS.labelMat[j]*(Ei - Ej)/eta</span><br><span class="line">        oS.alphas[j] = clipAlpha(oS.alphas[j],H,L)</span><br><span class="line">        updateEk(oS, j)</span><br><span class="line">        <span class="keyword">if</span> (abs(oS.alphas[j] - alphaJold) &lt; <span class="number">0.00001</span>): </span><br><span class="line">             <span class="keyword">print</span> <span class="string">"j not moving enough"</span>; <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        oS.alphas[i] += oS.labelMat[j]*oS.labelMat[i]*\</span><br><span class="line">                      (alphaJold - oS.alphas[j])</span><br><span class="line">        updateEk(oS, i)                                      </span><br><span class="line">        b1 = oS.b - Ei- oS.labelMat[i]*(oS.alphas[i]-alphaIold)*\</span><br><span class="line">             oS.X[i,:]*oS.X[i,:].T - oS.labelMat[j]*\</span><br><span class="line">             (oS.alphas[j]-alphaJold)*oS.X[i,:]*oS.X[j,:].T</span><br><span class="line">        b2 = oS.b - Ej- oS.labelMat[i]*(oS.alphas[i]-alphaIold)*\</span><br><span class="line">             oS.X[i,:]*oS.X[j,:].T - oS.labelMat[j]*\</span><br><span class="line">             (oS.alphas[j]-alphaJold)*oS.X[j,:]*oS.X[j,:].T</span><br><span class="line">        <span class="keyword">if</span> (<span class="number">0</span> &lt; oS.alphas[i]) <span class="keyword">and</span> (oS.C &gt; oS.alphas[i]): oS.b = b1</span><br><span class="line">        <span class="keyword">elif</span> (<span class="number">0</span> &lt; oS.alphas[j]) <span class="keyword">and</span> (oS.C &gt; oS.alphas[j]): oS.b = b2</span><br><span class="line">        <span class="keyword">else</span>: oS.b = (b1 + b2)/<span class="number">2.0</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>: <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure></p>
-<p>完整版Platt SMO的外循环代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">smoP</span><span class="params">(dataMatIn, classLabels, C, toler, maxIter,kTup=<span class="params">(<span class="string">'lin'</span>, <span class="number">0</span>)</span>)</span>:</span>    <span class="comment">#full Platt SMO</span></span><br><span class="line">    oS = optStruct(mat(dataMatIn),mat(classLabels).transpose(),C,toler, kTup)</span><br><span class="line">    iter = <span class="number">0</span></span><br><span class="line">    entireSet = <span class="keyword">True</span>; alphaPairsChanged = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> (iter &lt; maxIter) <span class="keyword">and</span> ((alphaPairsChanged &gt; <span class="number">0</span>) <span class="keyword">or</span> (entireSet)):</span><br><span class="line">        alphaPairsChanged = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> entireSet:   <span class="comment">#go over all</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(oS.m):        </span><br><span class="line">                alphaPairsChanged += innerL(i,oS)</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"fullSet, iter: %d i:%d, pairs changed %d"</span> % (iter,i,alphaPairsChanged)</span><br><span class="line">            iter += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:<span class="comment">#go over non-bound (railed) alphas</span></span><br><span class="line">            nonBoundIs = nonzero((oS.alphas.A &gt; <span class="number">0</span>) * (oS.alphas.A &lt; C))[<span class="number">0</span>]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> nonBoundIs:</span><br><span class="line">                alphaPairsChanged += innerL(i,oS)</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"non-bound, iter: %d i:%d, pairs changed %d"</span> % (iter,i,alphaPairsChanged)</span><br><span class="line">            iter += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> entireSet: entireSet = <span class="keyword">False</span> <span class="comment">#toggle entire set loop</span></span><br><span class="line">        <span class="keyword">elif</span> (alphaPairsChanged == <span class="number">0</span>): entireSet = <span class="keyword">True</span>  </span><br><span class="line">        <span class="keyword">print</span> <span class="string">"iteration number: %d"</span> % iter</span><br><span class="line">    <span class="keyword">return</span> oS.b,oS.alphas</span><br></pre></td></tr></table></figure></p>
+<p>完整版Platt SMO的外循环代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">smoP</span><span class="params">(dataMatIn, classLabels, C, toler, maxIter,kTup=<span class="params">(<span class="string">'lin'</span>, <span class="number">0</span>)</span>)</span>:</span>    <span class="comment">#full Platt SMO</span></span><br><span class="line">    oS = optStruct(mat(dataMatIn),mat(classLabels).transpose(),C,toler, kTup)</span><br><span class="line">    iter = <span class="number">0</span></span><br><span class="line">    entireSet = <span class="literal">True</span>; alphaPairsChanged = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> (iter &lt; maxIter) <span class="keyword">and</span> ((alphaPairsChanged &gt; <span class="number">0</span>) <span class="keyword">or</span> (entireSet)):</span><br><span class="line">        alphaPairsChanged = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> entireSet:   <span class="comment">#go over all</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(oS.m):        </span><br><span class="line">                alphaPairsChanged += innerL(i,oS)</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"fullSet, iter: %d i:%d, pairs changed %d"</span> % (iter,i,alphaPairsChanged)</span><br><span class="line">            iter += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:<span class="comment">#go over non-bound (railed) alphas</span></span><br><span class="line">            nonBoundIs = nonzero((oS.alphas.A &gt; <span class="number">0</span>) * (oS.alphas.A &lt; C))[<span class="number">0</span>]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> nonBoundIs:</span><br><span class="line">                alphaPairsChanged += innerL(i,oS)</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"non-bound, iter: %d i:%d, pairs changed %d"</span> % (iter,i,alphaPairsChanged)</span><br><span class="line">            iter += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> entireSet: entireSet = <span class="literal">False</span> <span class="comment">#toggle entire set loop</span></span><br><span class="line">        <span class="keyword">elif</span> (alphaPairsChanged == <span class="number">0</span>): entireSet = <span class="literal">True</span>  </span><br><span class="line">        <span class="keyword">print</span> <span class="string">"iteration number: %d"</span> % iter</span><br><span class="line">    <span class="keyword">return</span> oS.b,oS.alphas</span><br></pre></td></tr></table></figure></p>
 <h3 id="5-在复杂数据上应用核函数"><a href="#5-在复杂数据上应用核函数" class="headerlink" title="5. 在复杂数据上应用核函数"></a>5. 在复杂数据上应用核函数</h3><p>核函数(kernel)将数据转换成易于分类器理解的形式</p>
 <h4 id="5-1-利用核函数将数据映射到高维空间"><a href="#5-1-利用核函数将数据映射到高维空间" class="headerlink" title="5.1 利用核函数将数据映射到高维空间"></a>5.1 利用核函数将数据映射到高维空间</h4><p><img src="/images/machineLearning05_7.png" alt="seventh"><br>Figure 6-6中，数据点位于一个圆中，人类能够意识到这点，但对于分类器而言，他只能识别分类器的结果是大于0还是小于0，如果只在x、y轴构成的坐标系中插入直线进行分类的话，我们得不到理想结果。或许可以对圆中的数据进行某种形式的转换，从而得到新变量来表示数据。在此例中，我们将数据从一个特征空间转换到另一个特征空间，在新空间下我们很容易利用已有的工具对数据进行处理，数学家们喜欢将这个过程称为<em>从一个特征空间到另一个特征空间的映射</em>。通常情况下，这种映射会将低维特征空间映射到高维特征空间。<br>这种从某个特征空间到另一个特征空间的映射是通过核函数来实现的，读者可以把核函数想象成一个包装器(wrapper)或接口(interface)，它能把数据从一个很难处理的形式转换成另一个较容易处理的形式。换种简单但不确切的方式来理解，可以把它想象成另一种距离计算的方法，距离计算的方法有很多种，核函数一样具有多种类型。经过空间转换后，我们可以在高维空间中解决线性问题，也就等价于在低维空间中解决非线性问题。<br>SVM优化中的一个有点就是所有运算都可以写成内积(inner product)的形式，我们可以把内积运算转换为核函数，而不必简化处理。将内积替换为核函数的方式称为核技巧(kernel substation)</p>
 <h4 id="5-2-径向基核函数-radial-basis-function"><a href="#5-2-径向基核函数-radial-basis-function" class="headerlink" title="5.2 径向基核函数(radial basis function)"></a>5.2 径向基核函数(radial basis function)</h4><p>核函数不仅应用于SVM，还有其他很多机器学习算法也需要用到，下面来介绍一个流行的核函数：径向基核函数<br>径向基函数是一个采用向量作为自变量的函数，能够基于向量距离运算输出一个标量。这个距离可以是从&lt;0,0&gt;向量或其他向量开始计算的距离。径向基函数的高斯版本公式为：\(k(x,y)=\exp\left(\frac{-||x-y||^2}{2\sigma^2}\right)\)<br>\(\sigma\)是用户定义的用于确定到达率(reach)或者说函数值跌落到0的速度参数<br>上述高斯核函数将数据从特征空间映射到更高维空间，具体说是映射到一个无穷维空间，使用高斯核函数会得到一个理想的结果。对于Figure 6-6中例子，可以发现直接度量数据点到原点距离即可，然而碰到一个非此类的数据集，我们便会陷入困境。在该数据集中，使用高斯核函数可以得到很好的结果，当然，该函数也可以用于许多其他的数据集，并得到较低的错误率。<br>添加函数kernelTrans()，对optStruct类进行修改：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">kernelTrans</span><span class="params">(X, A, kTup)</span>:</span> <span class="comment">#calc the kernel or transform data to a higher dimensional space</span></span><br><span class="line">    m,n = shape(X)</span><br><span class="line">    K = mat(zeros((m,<span class="number">1</span>)))</span><br><span class="line">    <span class="keyword">if</span> kTup[<span class="number">0</span>]==<span class="string">'lin'</span>: K = X * A.T   <span class="comment">#linear kernel</span></span><br><span class="line">    <span class="keyword">elif</span> kTup[<span class="number">0</span>]==<span class="string">'rbf'</span>:</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(m):</span><br><span class="line">            deltaRow = X[j,:] - A</span><br><span class="line">            K[j] = deltaRow*deltaRow.T</span><br><span class="line">        K = exp(K/(<span class="number">-1</span>*kTup[<span class="number">1</span>]**<span class="number">2</span>)) <span class="comment">#divide in NumPy is element-wise not matrix like Matlab</span></span><br><span class="line">    <span class="keyword">else</span>: <span class="keyword">raise</span> NameError(<span class="string">'Houston We Have a Problem -- \</span></span><br><span class="line"><span class="string">    That Kernel is not recognized'</span>)</span><br><span class="line">    <span class="keyword">return</span> K</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">optStruct</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,dataMatIn, classLabels, C, toler, kTup)</span>:</span>  <span class="comment"># Initialize the structure with the parameters </span></span><br><span class="line">        self.X = dataMatIn</span><br><span class="line">        self.labelMat = classLabels</span><br><span class="line">        self.C = C</span><br><span class="line">        self.tol = toler</span><br><span class="line">        self.m = shape(dataMatIn)[<span class="number">0</span>]</span><br><span class="line">        self.alphas = mat(zeros((self.m,<span class="number">1</span>)))</span><br><span class="line">        self.b = <span class="number">0</span></span><br><span class="line">        self.eCache = mat(zeros((self.m,<span class="number">2</span>))) <span class="comment">#first column is valid flag</span></span><br><span class="line">        self.K = mat(zeros((self.m,self.m)))</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(self.m):</span><br><span class="line">            self.K[:,i] = kernelTrans(self.X, self.X[i,:], kTup)</span><br></pre></td></tr></table></figure></p>
@@ -657,645 +360,211 @@
 <p>基于SVM构建多类分类器已有很多研究和对比了，感兴趣可以查看C.W.Huset等人发表的一篇论文”A Comparison of Methods for Multiclass Support Vector Machines”</p>
 <p>《机器学习实战》一书中，作者使用不同的σ值，并尝试了线性核函数，得到的结果是：<br><img src="/images/machineLearning05_9.png" alt="nineth"><br>表中结果表明，径向基函数中的参数\(\sigma=10\)左右时，可以得到最小测试错误率，该参数值比前面例子中的取值1.3大得多，这些差距是由于数据不同造成的，手写识别的数据中有1024个特征，而这些特征的值可能高达1.0，而前面的例子中只有2个特征。如何取值呢?多次尝试可以得到比较好的结果，C的设置也会影响到分类的结果。<br>当然存在另外的SVM形式，把C同时考虑进了优化过程中，例如v-SVM，这里可以参考Sergios Theodoridis和Konstantinos Koutroumbas撰写的Pattern Recognition。<br>我们还会发现，最小的训练错误率并不对应于最小的支持向量数目，另一个值得注意的点是：线性核函数的效果并不是特别差，可以牺牲线性核函数的错误率来提高分类速度，</p>
 
-      
     </div>
 
     
-
-    
-    
-    
-
-    
-
-    
-      
     
     
 
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
-          
-            <a href="/tags/SVM/" rel="tag"># SVM</a>
-          
-        </div>
-      
-
-      
-      
-        <div class="post-widgets">
-        
-
-        
-
-        
-          
-          <div class="social_share">
-            
-            
-              <div id="needsharebutton-postbottom">
-                <span class="btn">
-                  <i class="fa fa-share-alt" aria-hidden="true"></i>
-                </span>
-              </div>
-            
-            
-          </div>
-        
-        </div>
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/08/26/operatingSystem01/" rel="next" title="操作系统一">
-                <i class="fa fa-chevron-left"></i> 操作系统一
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
+              <a href="/tags/SVM/" rel="tag"># SVM</a>
           </div>
 
-          <span class="post-nav-divider"></span>
+        
 
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/09/02/simhash/" rel="prev" title="simhash与重复信息识别">
-                simhash与重复信息识别 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
 
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2015/08/26/operatingSystem01/" rel="prev" title="操作系统一">
+      <i class="fa fa-chevron-left"></i> 操作系统一
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2015/09/02/simhash/" rel="next" title="simhash与重复信息识别">
+      simhash与重复信息识别 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
   </article>
-
+  
+  
+  
 
   </div>
 
 
           </div>
           
-
-  
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
-    </div>
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
         </ul>
-      
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/site/avatar.png" alt="Kino">
-            
-              <p class="site-author-name" itemprop="name">Kino</p>
-              <div class="site-description motion-element" itemprop="description">Amor Fati</div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">111</span>
-                    <span class="site-state-item-name">posts</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">21</span>
-                    <span class="site-state-item-name">categories</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">109</span>
-                    <span class="site-state-item-name">tags</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments" id="gitalk-container"></div>
             </div>
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
+            <div class="tab-pane livere" id="comment-livere">
               
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/WoeiSheu" title="GitHub &rarr; https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://twitter.com/KafuuKino" title="Twitter &rarr; https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="http://weibo.com/u/2613432527" title="Weibo &rarr; http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                </span>
-              
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
+  </div>
+  
             </div>
-          
-
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
-          
-            
-          
-          
-
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-支持向量机-Support-Vector-Machines"><span class="nav-text">1. 支持向量机(Support Vector Machines)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-基于最大间隔分隔数据"><span class="nav-text">2. 基于最大间隔分隔数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-寻找最大间隔"><span class="nav-text">3. 寻找最大间隔</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-分类器求解的优化问题"><span class="nav-text">3.1 分类器求解的优化问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-SVM应用的一般框架"><span class="nav-text">3.2 SVM应用的一般框架</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-SMO高效优化算法"><span class="nav-text">4. SMO高效优化算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-Platt的SMO算法"><span class="nav-text">4.1 Platt的SMO算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-应用简化版SMO算法处理小规模数据集"><span class="nav-text">4.2 应用简化版SMO算法处理小规模数据集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-利用完整Platt-SMO算法加速优化"><span class="nav-text">4.3 利用完整Platt SMO算法加速优化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-在复杂数据上应用核函数"><span class="nav-text">5. 在复杂数据上应用核函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-利用核函数将数据映射到高维空间"><span class="nav-text">5.1 利用核函数将数据映射到高维空间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-径向基核函数-radial-basis-function"><span class="nav-text">5.2 径向基核函数(radial basis function)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-在测试中使用核函数"><span class="nav-text">5.3 在测试中使用核函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-示例"><span class="nav-text">6. 示例</span></a></li></ol></div>
-            
-
-          </div>
         </div>
-      <!--/noindex-->
-      
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
 
-      
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-支持向量机-Support-Vector-Machines"><span class="nav-text">1. 支持向量机(Support Vector Machines)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-基于最大间隔分隔数据"><span class="nav-text">2. 基于最大间隔分隔数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-寻找最大间隔"><span class="nav-text">3. 寻找最大间隔</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-分类器求解的优化问题"><span class="nav-text">3.1 分类器求解的优化问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-SVM应用的一般框架"><span class="nav-text">3.2 SVM应用的一般框架</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-SMO高效优化算法"><span class="nav-text">4. SMO高效优化算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-Platt的SMO算法"><span class="nav-text">4.1 Platt的SMO算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-应用简化版SMO算法处理小规模数据集"><span class="nav-text">4.2 应用简化版SMO算法处理小规模数据集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-利用完整Platt-SMO算法加速优化"><span class="nav-text">4.3 利用完整Platt SMO算法加速优化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-在复杂数据上应用核函数"><span class="nav-text">5. 在复杂数据上应用核函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-利用核函数将数据映射到高维空间"><span class="nav-text">5.1 利用核函数将数据映射到高维空间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-径向基核函数-radial-basis-function"><span class="nav-text">5.2 径向基核函数(radial basis function)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-在测试中使用核函数"><span class="nav-text">5.3 在测试中使用核函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-示例"><span class="nav-text">6. 示例</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">111</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → /atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Kino</span>
-
-  
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    
-    <span title="Symbols count total">344k</span>
-  
-
-  
+    <span title="Symbols count total">300k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    
-    <span title="Reading time total">5:13</span>
-  
+    <span title="Reading time total">4:33</span>
 </div>
-
-
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
-
-
-
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
-
-
-
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
+  </div>
 
         
 
@@ -1306,134 +575,124 @@
 
 
 
-        
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-    
-
-    
-      <div id="needsharebutton-float">
-        <span class="btn">
-          <i class="fa fa-share-alt" aria-hidden="true"></i>
-        </span>
-      </div>
-    
-
-    
-
-    
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
 
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
 <script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
   
-  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      quicklink({
+        timeout: ,
+        priority: ,
+        ignores: [uri => uri.includes('#'),uri => uri == 'https://blog.xuwei.fun/2015/08/29/machineLearning05/',]
+      });
+  </script>
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
+<script>
+NexT.utils.loadComments(() => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '58ab17a966414cd66c67',
+      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
+      repo: 'WoeiSheu.github.io',
+      owner: 'WoeiSheu',
+      admin: ['WoeiSheu'],
+      id: '5918d09c327fd38a22ed23b27ec91cc3',
+        language: '',
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
-
-
-
-
-  
-
-
-
-  
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/three/three.min.js"></script>
-
-  
-  <script src="/lib/three/canvas_lines.min.js"></script>
-
-  
-  <script src="/lib/reading_progress/reading_progress.js"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.1.1"></script>
-
-  <script src="/js/motion.js?v=7.1.1"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.1.1"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
-
-
-
-
-  
-  <script src="/js/scrollspy.js?v=7.1.1"></script>
-<script src="/js/post-details.js?v=7.1.1"></script>
-
-
-
-  
-
-
-  <script src="/js/next-boot.js?v=7.1.1"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-  
-    <script>
+<script>
+NexT.utils.loadComments(() => {
   window.livereOptions = {
-    refer: '2015/08/29/machineLearning05/'
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
@@ -1443,477 +702,9 @@
     j.async = true;
     e.parentNode.insertBefore(j, e);
   })(document, 'script');
+});
 </script>
 
-  
-
-
-  
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-  
-
-  
-  
-
-  
-    
-      <script type="text/x-mathjax-config">
-  
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
-        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
-      }
-    });
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i = 0; i < all.length; i += 1) {
-      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
-    }
-  });
-</script>
-<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
-  <script>
-    
-      pbOptions = {};
-      
-        pbOptions.iconStyle = "box";
-      
-        pbOptions.boxForm = "horizontal";
-      
-        pbOptions.position = "topCenter";
-      
-        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-postbottom', pbOptions);
-    
-    
-      flOptions = {};
-      
-        flOptions.iconStyle = "box";
-      
-        flOptions.boxForm = "vertical";
-      
-        flOptions.position = "middleRight";
-      
-        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-float', flOptions);
-    
-  </script>
-
-
-  
-
-  
-
-  
-
-  
-<script>
-  $('.highlight').not('.gist .highlight').each(function(i, e) {
-    var $wrap = $('<div>').addClass('highlight-wrap');
-    $(e).after($wrap);
-    $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
-      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
-        return $(e).text();
-      }).toArray().join('\n');
-      var ta = document.createElement('textarea');
-      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-      ta.style.top = yPosition + 'px'; // Prevent page scroll
-      ta.style.position = 'absolute';
-      ta.style.opacity = '0';
-      ta.readOnly = true;
-      ta.value = code;
-      document.body.appendChild(ta);
-      ta.select();
-      ta.setSelectionRange(0, code.length);
-      ta.readOnly = false;
-      var result = document.execCommand('copy');
-      
-        if (result) $(this).text('Copied');
-        else $(this).text('Copy failed');
-      
-      ta.blur(); // For iOS
-      $(this).blur();
-    })).on('mouseleave', function(e) {
-      var $b = $(this).find('.copy-btn');
-      setTimeout(function() {
-        $b.text('Copy');
-      }, 300);
-    }).append(e);
-  })
-</script>
-
-
-  
-
-  
 
   <script type="text/javascript" src="/js/clickup.js"></script>
 </body>
