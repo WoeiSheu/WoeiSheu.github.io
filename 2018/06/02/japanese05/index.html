@@ -12,53 +12,27 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
   <script src="/lib/pace/pace.min.js"></script>
 
-
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://blog.xuwei.fun').hostname,
-    root: '/',
-    scheme: 'Gemini',
-    version: '7.6.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
-    copycode: {"enable":true,"show_result":true,"style":"flat"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    comments: {"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1},
-    path: 'search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-  <meta name="description" content="前言上一篇文章介绍了极性和时轴，这一章主要介绍体的相关语法，体的概念在第一篇文章里已经介绍过，此处再介绍一遍: 体表示某个动作或变化在说话人所设的时间轴上处于开始、持续和完成状态中的某一阶段，是从时间角度上对动作和变化的描写或把握。需要注意的是在日语中体仅仅反映在动词上">
+  <meta name="description" content="前言上一篇文章介绍了极性和时轴，这一章主要介绍体的相关语法，体的概念在第一篇文章里已经介绍过，此处再介绍一遍: 体表示某个动作或变化在说话人所设的时间轴上处于开始、持续和完成状态中的某一阶段，是从时间角度上对动作和变化的描写或把握。需要注意的是在日语中体仅仅反映在动词上PS: 日语语法在”体”这方面的变化并不是那么明显, 虽然语法概念上可以分很细, 但实际需要进行特殊的变形转换的并不多, 更多的是">
 <meta name="keywords" content="japanese">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日语学习四">
 <meta property="og:url" content="https://blog.xuwei.fun/2018/06/02/japanese05/index.html">
 <meta property="og:site_name" content="霁月荒馆">
-<meta property="og:description" content="前言上一篇文章介绍了极性和时轴，这一章主要介绍体的相关语法，体的概念在第一篇文章里已经介绍过，此处再介绍一遍: 体表示某个动作或变化在说话人所设的时间轴上处于开始、持续和完成状态中的某一阶段，是从时间角度上对动作和变化的描写或把握。需要注意的是在日语中体仅仅反映在动词上">
+<meta property="og:description" content="前言上一篇文章介绍了极性和时轴，这一章主要介绍体的相关语法，体的概念在第一篇文章里已经介绍过，此处再介绍一遍: 体表示某个动作或变化在说话人所设的时间轴上处于开始、持续和完成状态中的某一阶段，是从时间角度上对动作和变化的描写或把握。需要注意的是在日语中体仅仅反映在动词上PS: 日语语法在”体”这方面的变化并不是那么明显, 虽然语法概念上可以分很细, 但实际需要进行特殊的变形转换的并不多, 更多的是">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-18T14:24:33.109Z">
+<meta property="og:updated_time" content="2020-05-02T10:30:20.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日语学习四">
-<meta name="twitter:description" content="前言上一篇文章介绍了极性和时轴，这一章主要介绍体的相关语法，体的概念在第一篇文章里已经介绍过，此处再介绍一遍: 体表示某个动作或变化在说话人所设的时间轴上处于开始、持续和完成状态中的某一阶段，是从时间角度上对动作和变化的描写或把握。需要注意的是在日语中体仅仅反映在动词上">
+<meta name="twitter:description" content="前言上一篇文章介绍了极性和时轴，这一章主要介绍体的相关语法，体的概念在第一篇文章里已经介绍过，此处再介绍一遍: 体表示某个动作或变化在说话人所设的时间轴上处于开始、持续和完成状态中的某一阶段，是从时间角度上对动作和变化的描写或把握。需要注意的是在日语中体仅仅反映在动词上PS: 日语语法在”体”这方面的变化并不是那么明显, 虽然语法概念上可以分很细, 但实际需要进行特殊的变形转换的并不多, 更多的是">
 
 <link rel="canonical" href="https://blog.xuwei.fun/2018/06/02/japanese05/">
 
@@ -67,11 +41,38 @@
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
   };
 </script>
-
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style><style>
+#needsharebutton-float {
+  bottom: 88px;
+  cursor: pointer;
+  left: -8px;
+  position: fixed;
+  z-index: 9999;
+}
+#needsharebutton-float .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 4px;
+  padding: 0 10px 0 14px;
+}
+</style>
   <title>日语学习四 | 霁月荒馆</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
@@ -120,18 +121,6 @@
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">霁月荒馆</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <p class="site-subtitle">以今日之我与昨日之我战</p>
-  </div>
-
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar">
       <span class="toggle-line toggle-line-first"></span>
@@ -139,60 +128,77 @@
       <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">霁月荒馆</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-thoughts">
 
-    <a href="/thoughts/" rel="section"><i class="fa fa-fw fa-pencil"></i>thoughts</a>
+    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
 
   </li>
         <li class="menu-item menu-item-excerpt">
 
-    <a href="/excerpt/" rel="section"><i class="fa fa-fw fa-paperclip"></i>excerpt</a>
+    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-sitemap">
 
-    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>Sitemap</a>
+    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
 
   </li>
         <li class="menu-item menu-item-commonweal">
 
-    <a href="/404.html/" rel="section"><i class="fa fa-fw fa-child"></i>Commonweal 404</a>
+    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
 
   </li>
         <li class="menu-item menu-item-foryou">
 
-    <a href="/foryou/" rel="section"><i class="fa fa-fw fa-heart"></i>foryou</a>
+    <a href="/foryou/" rel="section"><i class="heart fa-fw"></i>foryou</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -200,29 +206,34 @@
         </a>
       </li>
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="Searching..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -239,14 +250,13 @@
         <div class="content-wrap">
           
 
-          <div class="content">
+          <div class="content post posts-expand">
             
 
-  <div class="posts-expand">
-      
+    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2018/06/02/japanese05/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -266,7 +276,7 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
@@ -274,43 +284,39 @@
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
+                <time title="Modified: 2020-05-02 18:30:20" itemprop="dateModified" datetime="2020-05-02T18:30:20+08:00">2020-05-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/humanities/" itemprop="url" rel="index">
-                    <span itemprop="name">humanities</span>
-                  </a>
+                  <a href="/categories/humanities/" itemprop="url" rel="index"><span itemprop="name">humanities</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/humanities/languages/" itemprop="url" rel="index">
-                    <span itemprop="name">languages</span>
-                  </a>
+                  <a href="/categories/humanities/languages/" itemprop="url" rel="index"><span itemprop="name">languages</span></a>
                 </span>
             </span>
 
           <br>
             <span class="post-meta-item" title="Symbols count in article">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>1.3k</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>2 mins.</span>
             </span>
 
         </div>
@@ -322,18 +328,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="/2018/06/01/japanese04/">上一篇文章</a>介绍了极性和时轴，这一章主要介绍体的相关语法，体的概念在<a href="/2017/09/16/japanese01/#2-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">第一篇文章</a>里已经介绍过，此处再介绍一遍: 体表示某个动作或变化在<strong>说话人所设的时间轴</strong>上处于开始、持续和完成状态中的某一阶段，是从时间角度上对动作和变化的描写或把握。<strong>需要注意的是在日语中体仅仅反映在动词上</strong></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="/2018/06/01/japanese04/">上一篇文章</a>介绍了极性和时轴，这一章主要介绍体的相关语法，体的概念在<a href="/2017/09/16/japanese01/#2-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">第一篇文章</a>里已经介绍过，此处再介绍一遍: 体表示某个动作或变化在<strong>说话人所设的时间轴</strong>上处于开始、持续和完成状态中的某一阶段，是从时间角度上对动作和变化的描写或把握。<strong>需要注意的是在日语中体仅仅反映在动词上</strong><br>PS: 日语语法在”体”这方面的变化并不是那么明显, 虽然语法概念上可以分很细, 但实际需要进行特殊的变形转换的并不多, 更多的是靠上下文的时间轴来界定”体”的状态.</p>
 <a id="more"></a>
 <h2 id="1-完整体（完成相）"><a href="#1-完整体（完成相）" class="headerlink" title="1. 完整体（完成相）"></a>1. 完整体（完成相）</h2><p>完整体用以整体来描述某个动作或变化，把动词表示的运动从开始到结束的整个过程完整地表达出来，一般不涉及该动作或变化的中间过程。根据涉及的动作是出于“完了”这一界限达成前还是达成后，完整体被分为未成体和完成体两种。</p>
-<h3 id="1-1-未成体"><a href="#1-1-未成体" class="headerlink" title="1.1 未成体"></a>1.1 未成体</h3><p>表示动作即将完成或者将来完成。动词不用做变化。<br>Eg. いま、新聞を読む<br>Eg. 明日、新聞を読む</p>
-<h3 id="1-2-完成体"><a href="#1-2-完成体" class="headerlink" title="1.2 完成体"></a>1.2 完成体</h3><p>表示动作的完成，但是并不是一定过去时，整个行为可能发生在未来或是一个经常性的动作，只要在说话人设定的时间轴上是完成的动作即可。动词的变化规则和过去时相同。<br>Eg. 今朝、新聞を読んだ<br>Eg. 今朝、新聞を読んだ後に散歩に出かける</p>
-<h2 id="2-过程体（継続相）"><a href="#2-过程体（継続相）" class="headerlink" title="2. 过程体（継続相）"></a>2. 过程体（継続相）</h2><p>过程体用以描述动作或变化的各个环节，是把这种运动持续过程中的某一个局部表达出来。</p>
-<h3 id="2-1-备放体（準備相）"><a href="#2-1-备放体（準備相）" class="headerlink" title="2.1 备放体（準備相）"></a>2.1 备放体（準備相）</h3><p>表示该动作是为下一步做准备的。表现形式有: <strong>一型词根+「ておく」</strong>。其中的动词必须是意志动词。<br>Eg. 明日お客さんが来ますから、お菓子をかっておいてください</p>
-<h3 id="2-2-即将体"><a href="#2-2-即将体" class="headerlink" title="2.2 即将体"></a>2.2 即将体</h3><p>表示动作、行为、作用等就要发生。表现形式有: 「ようとしている」「ところだ」「しそうだ」「ばかりになっている」「かかる」「かける」</p>
-<h3 id="2-3-起始体"><a href="#2-3-起始体" class="headerlink" title="2.3 起始体"></a>2.3 起始体</h3><p>表示动作、行为、作用的开始。表现形式多为复合动词，如「始める」「出す」「かける」等，和「てくる」</p>
-<h3 id="2-4-持续体"><a href="#2-4-持续体" class="headerlink" title="2.4 持续体"></a>2.4 持续体</h3><p>表示动作、行为正在进行或者反复进行，要求动词是一种持续性动词。表现形式很多，有: 「ている」「てくる」「ていく」「ているところだ」「つづく」「つづける」「つづある」「一方だ」「ている最中だ」「中」，相当于汉语的“正在…”、“持续…”、“持续…”</p>
-<h3 id="2-5-完结体"><a href="#2-5-完结体" class="headerlink" title="2.5 完结体"></a>2.5 完结体</h3><p>表示动作、行为的完成、结束。表现形式多为复合动词，如「終わる」「あがる」「あげる」「尽くす」「切る」「通す」「ぬく」等，和「てしまう」</p>
-<h3 id="2-6-存续体"><a href="#2-6-存续体" class="headerlink" title="2.6 存续体"></a>2.6 存续体</h3><p>表示动作或作用完成后的状态的存续。表现形式有: 「ている」「てある」「(ら)れている」「たところだ」「たばかりだ」等，相当于汉语的“…了”、“…着”</p>
+<h3 id="1-1-未成体"><a href="#1-1-未成体" class="headerlink" title="1.1 未成体"></a>1.1 未成体</h3><p>表示动作即将完成或者将来完成。动词不用做变化。</p>
+<ul>
+<li>Eg. いま、新聞を読む</li>
+<li>Eg. 明日、新聞を読む<h3 id="1-2-完成体"><a href="#1-2-完成体" class="headerlink" title="1.2 完成体"></a>1.2 完成体</h3>表示动作的完成，但是并不是一定过去时，整个行为可能发生在未来或是一个经常性的动作，只要在说话人设定的时间轴上是完成的动作即可。动词的变化规则和过去时相同。</li>
+<li>Eg. 今朝、新聞を読んだ</li>
+<li>Eg. 今朝、新聞を読んだ後に散歩に出かける</li>
+</ul>
+<h2 id="2-过程体（継続相）"><a href="#2-过程体（継続相）" class="headerlink" title="2. 过程体（継続相）"></a>2. 过程体（継続相）</h2><p>过程体用以描述动作或变化的各个环节，是把这种运动持续过程中的某一个局部表达出来。<br>参考Wasabi网站上的这篇文章, 即一个动作的开始、现在和结束的阶段.</p>
+<h3 id="2-1-备放体（準備相）"><a href="#2-1-备放体（準備相）" class="headerlink" title="2.1 备放体（準備相）"></a>2.1 备放体（準備相）</h3><p>表示该动作是为下一步做准备的。表现形式有: <strong>一型词根+「ておく」</strong>。其中的动词必须是意志动词。</p>
+<ul>
+<li>Eg. 明日お客さんが来ますから、お菓子をかっておいてください<h3 id="2-2-即将体"><a href="#2-2-即将体" class="headerlink" title="2.2 即将体"></a>2.2 即将体</h3>表示动作、行为、作用等就要发生。表现形式有: 「ようとしている」「ところだ」「しそうだ」「ばかりになっている」「かかる」「かける」<h3 id="2-3-起始体"><a href="#2-3-起始体" class="headerlink" title="2.3 起始体"></a>2.3 起始体</h3>表示动作、行为、作用的开始。表现形式多为复合动词，如「始める」「出す」「かける」等，和「てくる」<h3 id="2-4-持续体"><a href="#2-4-持续体" class="headerlink" title="2.4 持续体"></a>2.4 持续体</h3>表示动作、行为正在进行或者反复进行，要求动词是一种持续性动词。表现形式很多，有: 「ている」「てくる」「ていく」「ているところだ」「つづく」「つづける」「つづある」「一方だ」「ている最中だ」「中」，相当于汉语的“正在…”、“持续…”、“持续…”</li>
+<li>Eg. 日本語を勉強している</li>
+<li>Eg. 森さんが一人で歩いている<h3 id="2-5-完结体"><a href="#2-5-完结体" class="headerlink" title="2.5 完结体"></a>2.5 完结体</h3>表示动作、行为的完成、结束。表现形式多为复合动词，如「終わる」「あがる」「あげる」「尽くす」「切る」「通す」「ぬく」等，和「てしまう」<h3 id="2-6-存续体"><a href="#2-6-存续体" class="headerlink" title="2.6 存续体"></a>2.6 存续体</h3>表示动作或作用完成后的状态的存续。表现形式有: 「ている」「てある」「(ら)れている」「たところだ」「たばかりだ」等，相当于汉语的“…了”、“…着”</li>
+</ul>
 <h2 id="3-特殊体"><a href="#3-特殊体" class="headerlink" title="3. 特殊体"></a>3. 特殊体</h2><h3 id="3-1-完成体的进行意义"><a href="#3-1-完成体的进行意义" class="headerlink" title="3.1 完成体的进行意义"></a>3.1 完成体的进行意义</h3><p>有些动词虽然是“完成体”的形态，但并不表示“完成体”的基本意义，而是表达行进过程中的状态。<br>「いく」「くる」以及类似它们的「むかい」「おく」之类的移动动词，以「していく」「している」的形式出现的动词，以及被「どんどん」「ぐんぐん」等行进性的副词修饰限定的变化动词等属于此类。</p>
 <h3 id="3-2-完成体与持续体相同意义的情况"><a href="#3-2-完成体与持续体相同意义的情况" class="headerlink" title="3.2 完成体与持续体相同意义的情况"></a>3.2 完成体与持续体相同意义的情况</h3><p>表状态时“完成体”和“持续体”两者表达同样事物，“体”未实现其分化。主要有以下两类:</p>
 <ul>
@@ -345,13 +356,21 @@
 <li>表说话人的考虑和想法</li>
 <li>表说话人的感觉</li>
 </ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本篇文章主要叙述了体的概念，下一篇将讲解日语中的态。</p>
-<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>撰写本文前主要看了以下书籍和文章: 日语语法专题教程<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="马兰英, 孙海英, 徐莲. 日语语法专题教程[M]. 浙江工商大学出版社, 2016.
+">[1]</span></a></sup>, Japanese Aspect: the Beginning, Middle, &amp; End of Actions, “浅析日语复句中的“时”和“体”, “日语动词的“体”特征分类”, Are Japanese ‘Tenses’ Aspects in Disguise?, 【中级日语】日语的时态和体，ル形、タ形和ている形的区别<br>本篇文章主要叙述了体的概念，下一篇将讲解日语中的态。</p>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><p> Admin, Wasabi. “Japanese Aspect: the Beginning, Middle, &amp; End of Actions.” 20 Aug. 2016, <a href="https://www.wasabi-jpn.com/japanese-grammar/japanese-aspect-the-beginning-middle-end-of-actions/" target="_blank" rel="noopener">https://www.wasabi-jpn.com/japanese-grammar/japanese-aspect-the-beginning-middle-end-of-actions/</a>.<br> 辛宇峰. “浅析日语复句中的“时”和“体”.” 长沙铁道学院学报:社会科学版 4(2014):54-55.<br> 孙敦夫. “日语动词的“体”特征分类” 外语教学 2(2008):39-42.<br> SweeperSweeper 2, et al. “Are Japanese ‘Tenses’ Aspects in Disguise?” Japanese Language Stack Exchange, 29 Jan. 2017, <a href="https://japanese.stackexchange.com/questions/42988/are-japanese-tenses-aspects-in-disguise" target="_blank" rel="noopener">https://japanese.stackexchange.com/questions/42988/are-japanese-tenses-aspects-in-disguise</a>.<br> 日本狸猫田中裕之. “【中级日语】日语的时态和体，ル形、タ形和ている形的区别.” 知乎专栏, 4 June 2019, <a href="https://zhuanlan.zhihu.com/p/67847551" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/67847551</a>.<div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">马兰英, 孙海英, 徐莲. 日语语法专题教程[M]. 浙江工商大学出版社, 2016.<a href="#fnref:1" rev="footnote"> ↩</a></span></div></div></div></p>
+
     </div>
 
     
     
-    
+    <div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -379,7 +398,6 @@
   
   
 
-  </div>
 
 
           </div>
@@ -395,7 +413,7 @@
             </div>
             <div class="tab-pane livere" id="comment-livere">
               
-  <div class="comments" id="comments">
+  <div class="comments">
     <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
   </div>
   
@@ -405,7 +423,7 @@
 
 <script>
   window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
+    let { activeClass } = CONFIG.comments;
     if (CONFIG.comments.storage) {
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
@@ -464,7 +482,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">111</span>
+          <span class="site-state-item-count">112</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -484,23 +502,22 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → /atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
       </span>
       <span class="links-of-author-item">
-        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
       </span>
   </div>
 
 
   <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title">
-      <i class="fa fa-fw fa-link"></i>
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
       Links
     </div>
     <ul class="links-of-blogroll-list">
@@ -527,29 +544,28 @@
       <div class="footer-inner">
         
 
+        
+
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Kino</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
+      <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">300k</span>
+    <span title="Symbols count total">302k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:33</span>
+    <span title="Reading time total">4:35</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
         
@@ -601,14 +617,33 @@
   <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
   <script>
       quicklink({
-        timeout: 1000,
+        timeout : 1000,
         priority: false,
-        ignores: [uri => uri.includes('#'),uri => uri == 'https://blog.xuwei.fun/2018/06/02/japanese05/',]
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2018/06/02/japanese05/',]
       });
   </script>
-
+<div id="needsharebutton-float">
+      <span class="btn">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </span>
+    </div>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "topCenter";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+      flOptions = {};
+        flOptions.iconStyle = "box";
+        flOptions.boxForm = "vertical";
+        flOptions.position = "middleRight";
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      new needShareButton('#needsharebutton-float', flOptions);
+  </script>
 <script>
-NexT.utils.loadComments(() => {
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
   window.livereOptions = {
     refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
   };
@@ -626,17 +661,17 @@ NexT.utils.loadComments(() => {
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
-NexT.utils.loadComments(() => {
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
     var gitalk = new Gitalk({
-      clientID: '58ab17a966414cd66c67',
+      clientID    : '58ab17a966414cd66c67',
       clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
-      repo: 'WoeiSheu.github.io',
-      owner: 'WoeiSheu',
-      admin: ['WoeiSheu'],
-      id: '7a073429d70e9d0b748cb85c4503a146',
+      repo        : 'WoeiSheu.github.io',
+      owner       : 'WoeiSheu',
+      admin       : ['WoeiSheu'],
+      id          : '7a073429d70e9d0b748cb85c4503a146',
         language: '',
-      distractionFreeMode: 'true'
+      distractionFreeMode: true
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);

@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>日语学习九</title>
+    <url>/2020/05/02/japanese10/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>距离上一次写日语学习系列已经快两年了，这两年间日语水平并没有什么长进，甚至还在倒退，但却总有一个心结，想要将这个系列完成。<br>好了，话不多说，其实之前的文章内容已经基本涵盖了日语基础语法的各个方面，而这篇文章打算说说日语中一个句子的改造顺序，也算是对前面内容的一个总结。<br>日语的变形，主要体现在用言(动词/形容词/形容动词)、助动词上，这其中又属动词最为复杂。</p>
+<a id="more"></a>
+<h2 id="1-词语的改造顺序"><a href="#1-词语的改造顺序" class="headerlink" title="1. 词语的改造顺序"></a>1. 词语的改造顺序</h2><p>敬语<br>语气<br>语态<br>体<br>时<br>极性</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本篇文章主要总结了日语中一个句子的改造顺序，下一篇将介绍日语中的一些实用表达。</p>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2>]]></content>
+      <categories>
+        <category>humanities</category>
+        <category>languages</category>
+      </categories>
+      <tags>
+        <tag>japanese</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Metaheuristic algorithm —— Concept</title>
     <url>/2018/11/19/metaheuristicAlgorithm01/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Kino的课题常需要用到元启发式算法，就在此稍稍总结。<br>元启发式(metaheuristic)，很多时候也被称为智能优化(intelligent optimization)、现代启发式(Modern Heuristic)、智能计算(Intelligent Computation)、自然计算(Natural Computation)等，细分到具体算法有<em>遗传算法</em>、<em>粒子群算法</em>、<em>差分进化算法</em>、<em>蚁群算法</em>等。<br><strong>元启发式(metaheuristic)</strong>这个词本身可以拆成两部分来看，<em>元(meta)</em>和<em>启发式(heuristic)</em>，本文主要从这两方面来阐述元启发式的概念，后续文章再介绍各算法的原理、步骤、代码等。</p>
@@ -612,7 +628,7 @@
   <entry>
     <title>日语学习五</title>
     <url>/2018/06/03/japanese06/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上一篇叙述了日语中的体，这篇文章Kino将讲解日语中的态。<br>语态指在动词做述语的句子中，述语动词和主语的关系，即主语所表示的人物、事物是述语动词所表示的动作、作用的执行者还是承受者，是促进动作进行的人还是具备能力进行动作的人。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上一篇叙述了日语中的体，这篇文章Kino将讲解日语中的态。<br>语态指在动词做述语的句子中，述语动词和主语的关系，即主语所表示的人物、事物是述语动词所表示的动作、作用的执行者还是承受者，是促进动作进行的人还是具备能力进行动作的人。<br>通常认为日语有五种语态, 不过这五种本身是建立在无任何变形的基本语态的基础上, 这种基本语态当然也得算作语态的一种, 可以被称为: 能动态/主动态.</p>
 <a id="more"></a>
 <h2 id="1-主动态"><a href="#1-主动态" class="headerlink" title="1. 主动态"></a>1. 主动态</h2><p>从施动者的角度叙述其动作、作用时，使用主动语态。述语动词就是基本形式即可。</p>
 <h2 id="2-被动态"><a href="#2-被动态" class="headerlink" title="2. 被动态"></a>2. 被动态</h2><p>被动态表示主语是动作的承受者。从动作承受者的角度，叙述其受到、遭受的动作、作用时，使用被动语态。<br>被动态由述语动词后续助动词「(ら)れる」构成，不同类型的动词构成方式不同，具体为:</p>
@@ -622,6 +638,11 @@
 <li>する的被动态: せられる，约音形: される</li>
 <li>くる的被动态: こられる</li>
 </ul>
+<p>示例:</p>
+<ul>
+<li>Eg. 学生は先生に褒められた</li>
+<li>Eg. 雨に降られて、風邪を引いた</li>
+</ul>
 <h2 id="3-使役态"><a href="#3-使役态" class="headerlink" title="3. 使役态"></a>3. 使役态</h2><p>当叙述某个人引起了某个事态或强制、支使、允许他人进行了某个动作时，使用使役态。<br>使役态由述语动词后续助动词「(さ)せる」构成，不同类型的动词构成方式也不同，具体为:</p>
 <ul>
 <li>五段动词的未然形+せる</li>
@@ -629,12 +650,21 @@
 <li>する的使役态: せさせる，约音形: させる</li>
 <li>くる的使役态: こさせる</li>
 </ul>
+<p>示例:</p>
+<ul>
+<li>Eg. わたしは娘を自由に遊ばせました</li>
+<li>Eg. 先生は学生に自由に意見を言わせました</li>
+</ul>
 <h2 id="4-被役态"><a href="#4-被役态" class="headerlink" title="4. 被役态"></a>4. 被役态</h2><p>又叫使役被动态。当叙述某个人受到别人的强迫，不得已、被迫做某事时，使用使役被动态。<br>被役态由述语动词后续助动词「(さ)せられる」构成，不同类型的动词构成方式也不同，具体为:</p>
 <ul>
 <li>五段动词的未然形+せられる</li>
 <li>一段动词的未然形+させられる</li>
 <li>する的被役态: させられる</li>
 <li>くる的被役态: こさせられる</li>
+</ul>
+<p>示例:</p>
+<ul>
+<li>Eg. 私は母に宿題をさせられます</li>
 </ul>
 <h2 id="5-可能态"><a href="#5-可能态" class="headerlink" title="5. 可能态"></a>5. 可能态</h2><p>当叙述某人具有某种能力、技能或某事具有发生的条件、可能性时，使用可能态。可能态的构成方式比较多，主要有以下五种。</p>
 <h3 id="5-1-使用可能助动词"><a href="#5-1-使用可能助动词" class="headerlink" title="5.1 使用可能助动词"></a>5.1 使用可能助动词</h3><p>在述语动词后面接续可能助动词「(ら)れる」，不同类型的动词接续方式也不同，具体为:</p>
@@ -653,8 +683,15 @@
 <li>一段动词的未然形+られる</li>
 <li>する的被动态: せられる，约音形: される<h3 id="6-2-使用可能动词"><a href="#6-2-使用可能动词" class="headerlink" title="6.2 使用可能动词"></a>6.2 使用可能动词</h3>「泣ける」「笑える」「思える」等<h3 id="6-3-使用带有可能意义的自动词"><a href="#6-3-使用带有可能意义的自动词" class="headerlink" title="6.3 使用带有可能意义的自动词"></a>6.3 使用带有可能意义的自动词</h3>「見える」「聞こえる」等</li>
 </ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这篇文章主要介绍了日语的语态，下一篇文章将介绍日语的语气。</p>
-<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2>]]></content>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本文的例句选自日语五种语态、わかって使える日本語等文献.<br>这篇文章主要介绍了日语的语态，可以看出这六种语态在语法上并不完全是平行的，如果从平行关系来考虑，Kino认为可以这样划分:</p>
+<ul>
+<li>主动、被动、自发态三种在一个层级</li>
+<li>使役态单独一个层级</li>
+<li>可能态单独一个层级</li>
+</ul>
+<p>只从语法的构成可能性上来说，这三种是可以自由组合的，比如被动使役态、被动可能态、自发使役态、自发可能态，只不过由于日语的语言习惯以及现实世界的因果关系等限制，最终实际能够组合的就是被动使役态.<br>下一篇文章将介绍日语的语气。</p>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><p> yueaegis9. “日语五种语态” 百度文库, 13 Jan 2011, <a href="https://wenku.baidu.com/view/ff190636ee06eff9aef807e5.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/ff190636ee06eff9aef807e5.html</a>.<br> 名古屋YWCA教材作成グループ. わかって使える日本語―中級レベル[M]. スリーエーネットワーク, 2004. </p>
+]]></content>
       <categories>
         <category>humanities</category>
         <category>languages</category>
@@ -666,18 +703,23 @@
   <entry>
     <title>日语学习四</title>
     <url>/2018/06/02/japanese05/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="/2018/06/01/japanese04/">上一篇文章</a>介绍了极性和时轴，这一章主要介绍体的相关语法，体的概念在<a href="/2017/09/16/japanese01/#2-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">第一篇文章</a>里已经介绍过，此处再介绍一遍: 体表示某个动作或变化在<strong>说话人所设的时间轴</strong>上处于开始、持续和完成状态中的某一阶段，是从时间角度上对动作和变化的描写或把握。<strong>需要注意的是在日语中体仅仅反映在动词上</strong></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="/2018/06/01/japanese04/">上一篇文章</a>介绍了极性和时轴，这一章主要介绍体的相关语法，体的概念在<a href="/2017/09/16/japanese01/#2-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">第一篇文章</a>里已经介绍过，此处再介绍一遍: 体表示某个动作或变化在<strong>说话人所设的时间轴</strong>上处于开始、持续和完成状态中的某一阶段，是从时间角度上对动作和变化的描写或把握。<strong>需要注意的是在日语中体仅仅反映在动词上</strong><br>PS: 日语语法在”体”这方面的变化并不是那么明显, 虽然语法概念上可以分很细, 但实际需要进行特殊的变形转换的并不多, 更多的是靠上下文的时间轴来界定”体”的状态.</p>
 <a id="more"></a>
 <h2 id="1-完整体（完成相）"><a href="#1-完整体（完成相）" class="headerlink" title="1. 完整体（完成相）"></a>1. 完整体（完成相）</h2><p>完整体用以整体来描述某个动作或变化，把动词表示的运动从开始到结束的整个过程完整地表达出来，一般不涉及该动作或变化的中间过程。根据涉及的动作是出于“完了”这一界限达成前还是达成后，完整体被分为未成体和完成体两种。</p>
-<h3 id="1-1-未成体"><a href="#1-1-未成体" class="headerlink" title="1.1 未成体"></a>1.1 未成体</h3><p>表示动作即将完成或者将来完成。动词不用做变化。<br>Eg. いま、新聞を読む<br>Eg. 明日、新聞を読む</p>
-<h3 id="1-2-完成体"><a href="#1-2-完成体" class="headerlink" title="1.2 完成体"></a>1.2 完成体</h3><p>表示动作的完成，但是并不是一定过去时，整个行为可能发生在未来或是一个经常性的动作，只要在说话人设定的时间轴上是完成的动作即可。动词的变化规则和过去时相同。<br>Eg. 今朝、新聞を読んだ<br>Eg. 今朝、新聞を読んだ後に散歩に出かける</p>
-<h2 id="2-过程体（継続相）"><a href="#2-过程体（継続相）" class="headerlink" title="2. 过程体（継続相）"></a>2. 过程体（継続相）</h2><p>过程体用以描述动作或变化的各个环节，是把这种运动持续过程中的某一个局部表达出来。</p>
-<h3 id="2-1-备放体（準備相）"><a href="#2-1-备放体（準備相）" class="headerlink" title="2.1 备放体（準備相）"></a>2.1 备放体（準備相）</h3><p>表示该动作是为下一步做准备的。表现形式有: <strong>一型词根+「ておく」</strong>。其中的动词必须是意志动词。<br>Eg. 明日お客さんが来ますから、お菓子をかっておいてください</p>
-<h3 id="2-2-即将体"><a href="#2-2-即将体" class="headerlink" title="2.2 即将体"></a>2.2 即将体</h3><p>表示动作、行为、作用等就要发生。表现形式有: 「ようとしている」「ところだ」「しそうだ」「ばかりになっている」「かかる」「かける」</p>
-<h3 id="2-3-起始体"><a href="#2-3-起始体" class="headerlink" title="2.3 起始体"></a>2.3 起始体</h3><p>表示动作、行为、作用的开始。表现形式多为复合动词，如「始める」「出す」「かける」等，和「てくる」</p>
-<h3 id="2-4-持续体"><a href="#2-4-持续体" class="headerlink" title="2.4 持续体"></a>2.4 持续体</h3><p>表示动作、行为正在进行或者反复进行，要求动词是一种持续性动词。表现形式很多，有: 「ている」「てくる」「ていく」「ているところだ」「つづく」「つづける」「つづある」「一方だ」「ている最中だ」「中」，相当于汉语的“正在…”、“持续…”、“持续…”</p>
-<h3 id="2-5-完结体"><a href="#2-5-完结体" class="headerlink" title="2.5 完结体"></a>2.5 完结体</h3><p>表示动作、行为的完成、结束。表现形式多为复合动词，如「終わる」「あがる」「あげる」「尽くす」「切る」「通す」「ぬく」等，和「てしまう」</p>
-<h3 id="2-6-存续体"><a href="#2-6-存续体" class="headerlink" title="2.6 存续体"></a>2.6 存续体</h3><p>表示动作或作用完成后的状态的存续。表现形式有: 「ている」「てある」「(ら)れている」「たところだ」「たばかりだ」等，相当于汉语的“…了”、“…着”</p>
+<h3 id="1-1-未成体"><a href="#1-1-未成体" class="headerlink" title="1.1 未成体"></a>1.1 未成体</h3><p>表示动作即将完成或者将来完成。动词不用做变化。</p>
+<ul>
+<li>Eg. いま、新聞を読む</li>
+<li>Eg. 明日、新聞を読む<h3 id="1-2-完成体"><a href="#1-2-完成体" class="headerlink" title="1.2 完成体"></a>1.2 完成体</h3>表示动作的完成，但是并不是一定过去时，整个行为可能发生在未来或是一个经常性的动作，只要在说话人设定的时间轴上是完成的动作即可。动词的变化规则和过去时相同。</li>
+<li>Eg. 今朝、新聞を読んだ</li>
+<li>Eg. 今朝、新聞を読んだ後に散歩に出かける</li>
+</ul>
+<h2 id="2-过程体（継続相）"><a href="#2-过程体（継続相）" class="headerlink" title="2. 过程体（継続相）"></a>2. 过程体（継続相）</h2><p>过程体用以描述动作或变化的各个环节，是把这种运动持续过程中的某一个局部表达出来。<br>参考Wasabi网站上的这篇文章, 即一个动作的开始、现在和结束的阶段.</p>
+<h3 id="2-1-备放体（準備相）"><a href="#2-1-备放体（準備相）" class="headerlink" title="2.1 备放体（準備相）"></a>2.1 备放体（準備相）</h3><p>表示该动作是为下一步做准备的。表现形式有: <strong>一型词根+「ておく」</strong>。其中的动词必须是意志动词。</p>
+<ul>
+<li>Eg. 明日お客さんが来ますから、お菓子をかっておいてください<h3 id="2-2-即将体"><a href="#2-2-即将体" class="headerlink" title="2.2 即将体"></a>2.2 即将体</h3>表示动作、行为、作用等就要发生。表现形式有: 「ようとしている」「ところだ」「しそうだ」「ばかりになっている」「かかる」「かける」<h3 id="2-3-起始体"><a href="#2-3-起始体" class="headerlink" title="2.3 起始体"></a>2.3 起始体</h3>表示动作、行为、作用的开始。表现形式多为复合动词，如「始める」「出す」「かける」等，和「てくる」<h3 id="2-4-持续体"><a href="#2-4-持续体" class="headerlink" title="2.4 持续体"></a>2.4 持续体</h3>表示动作、行为正在进行或者反复进行，要求动词是一种持续性动词。表现形式很多，有: 「ている」「てくる」「ていく」「ているところだ」「つづく」「つづける」「つづある」「一方だ」「ている最中だ」「中」，相当于汉语的“正在…”、“持续…”、“持续…”</li>
+<li>Eg. 日本語を勉強している</li>
+<li>Eg. 森さんが一人で歩いている<h3 id="2-5-完结体"><a href="#2-5-完结体" class="headerlink" title="2.5 完结体"></a>2.5 完结体</h3>表示动作、行为的完成、结束。表现形式多为复合动词，如「終わる」「あがる」「あげる」「尽くす」「切る」「通す」「ぬく」等，和「てしまう」<h3 id="2-6-存续体"><a href="#2-6-存续体" class="headerlink" title="2.6 存续体"></a>2.6 存续体</h3>表示动作或作用完成后的状态的存续。表现形式有: 「ている」「てある」「(ら)れている」「たところだ」「たばかりだ」等，相当于汉语的“…了”、“…着”</li>
+</ul>
 <h2 id="3-特殊体"><a href="#3-特殊体" class="headerlink" title="3. 特殊体"></a>3. 特殊体</h2><h3 id="3-1-完成体的进行意义"><a href="#3-1-完成体的进行意义" class="headerlink" title="3.1 完成体的进行意义"></a>3.1 完成体的进行意义</h3><p>有些动词虽然是“完成体”的形态，但并不表示“完成体”的基本意义，而是表达行进过程中的状态。<br>「いく」「くる」以及类似它们的「むかい」「おく」之类的移动动词，以「していく」「している」的形式出现的动词，以及被「どんどん」「ぐんぐん」等行进性的副词修饰限定的变化动词等属于此类。</p>
 <h3 id="3-2-完成体与持续体相同意义的情况"><a href="#3-2-完成体与持续体相同意义的情况" class="headerlink" title="3.2 完成体与持续体相同意义的情况"></a>3.2 完成体与持续体相同意义的情况</h3><p>表状态时“完成体”和“持续体”两者表达同样事物，“体”未实现其分化。主要有以下两类:</p>
 <ul>
@@ -689,8 +731,10 @@
 <li>表说话人的考虑和想法</li>
 <li>表说话人的感觉</li>
 </ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本篇文章主要叙述了体的概念，下一篇将讲解日语中的态。</p>
-<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2>]]></content>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>撰写本文前主要看了以下书籍和文章: 日语语法专题教程<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="马兰英, 孙海英, 徐莲. 日语语法专题教程[M]. 浙江工商大学出版社, 2016.
+">[1]</span></a></sup>, Japanese Aspect: the Beginning, Middle, &amp; End of Actions, “浅析日语复句中的“时”和“体”, “日语动词的“体”特征分类”, Are Japanese ‘Tenses’ Aspects in Disguise?, 【中级日语】日语的时态和体，ル形、タ形和ている形的区别<br>本篇文章主要叙述了体的概念，下一篇将讲解日语中的态。</p>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><p> Admin, Wasabi. “Japanese Aspect: the Beginning, Middle, &amp; End of Actions.” 20 Aug. 2016, <a href="https://www.wasabi-jpn.com/japanese-grammar/japanese-aspect-the-beginning-middle-end-of-actions/" target="_blank" rel="noopener">https://www.wasabi-jpn.com/japanese-grammar/japanese-aspect-the-beginning-middle-end-of-actions/</a>.<br> 辛宇峰. “浅析日语复句中的“时”和“体”.” 长沙铁道学院学报:社会科学版 4(2014):54-55.<br> 孙敦夫. “日语动词的“体”特征分类” 外语教学 2(2008):39-42.<br> SweeperSweeper 2, et al. “Are Japanese ‘Tenses’ Aspects in Disguise?” Japanese Language Stack Exchange, 29 Jan. 2017, <a href="https://japanese.stackexchange.com/questions/42988/are-japanese-tenses-aspects-in-disguise" target="_blank" rel="noopener">https://japanese.stackexchange.com/questions/42988/are-japanese-tenses-aspects-in-disguise</a>.<br> 日本狸猫田中裕之. “【中级日语】日语的时态和体，ル形、タ形和ている形的区别.” 知乎专栏, 4 June 2019, <a href="https://zhuanlan.zhihu.com/p/67847551" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/67847551</a>.<div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">马兰英, 孙海英, 徐莲. 日语语法专题教程[M]. 浙江工商大学出版社, 2016.<a href="#fnref:1" rev="footnote"> ↩</a></span></div></div></div></p>
+]]></content>
       <categories>
         <category>humanities</category>
         <category>languages</category>
@@ -960,7 +1004,7 @@
 </tbody>
 </table>
 <p>可以看出，除却名词和な形容词，其余几类在作为述语和作为修饰语的情况下，规则是完全相同的。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这篇文章主要讲解了日语中的极性和时态，下一篇文章将讲解日语中的动作体貌。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这篇文章主要讲解了日语中的极性和时，下一篇文章将讲解日语中的动作体貌。</p>
 <h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">Wikipedians. “極性 (言語学).” Wikipedia, Wikimedia Foundation, 14 June 2018, <a href="https://ja.wikipedia.org/wiki/極性_(言語学)" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/極性_(言語学)</a>.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. “Affirmation and Negation.” Wikipedia, Wikimedia Foundation, 19 June 2018, <a href="https://en.wikipedia.org/wiki/Affirmation_and_negation" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Affirmation_and_negation</a>.<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">Wikipedians. “Polarity Item.” Wikipedia, Wikimedia Foundation, 19 June 2018, <a href="https://en.wikipedia.org/wiki/Polarity_item" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Polarity_item</a>.<a href="#fnref:3" rev="footnote"> ↩</a></span></div></div></div>]]></content>
       <categories>
         <category>humanities</category>
@@ -3132,7 +3176,7 @@
   <entry>
     <title>日语学习番外篇一</title>
     <url>/2017/09/19/japanese02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在学习<a href="http://res.wokanxing.info/jpgramma/comparison.html" target="_blank" rel="noopener">日语比较</a>相关内容时，看到了“花より団子”这句谚语，直译过来就是“与其花，不如团子”，这种生涩绕口的翻译，却瞬间让Kino想起了一个朋友的签名：“比起花，还是青春”，她曾告诉过Kino这是她在某部韩剧里看到的，但是韩剧名我却已经忘了，也不想再去追问。<br>不过还是无意识地点开了一个又一个搜索结果，漫无目的，不知道自己在想什么，却无意间发现了“花より男子”这部漫画，漫画名应该就是套用的“花より団子”，而这部漫画又先后被日本和韩国改编成电视剧“花样男子”，也许，她所说的“比起花，还是青春”正是来自“花样男子”这部剧吧。<br>这样想着，好像就回忆起来当初被告知的那部剧就是“花样男子”一样，不过这些记忆已经变得不真切了，连Kino自己都不敢相信，没必要记住的事就随风散了也挺好<br>说到随风散去，又想起某个盆友说ta很喜欢”Gone with the wind”、、、（Kino内心戏太足了、、）</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在学习<a href="http://res.wokanxing.info/jpgramma/comparison.html" target="_blank" rel="noopener">日语比较</a>相关内容时，看到了“花より団子”这句谚语，直译过来就是“与其花，不如团子”，这种生涩绕口的翻译，却瞬间让Kino想起了一个朋友的签名：“比起花，还是青春”，她曾告诉过Kino这是她在某部韩剧里看到的，但是韩剧名我却已经忘了，也不想再去追问。<br>不过还是无意识地点开了一个又一个搜索结果，漫无目的，不知道自己在想什么，却无意间发现了“花より男子”这部漫画，漫画名应该就是套用的“花より団子”，而这部漫画又先后被日本和韩国改编成电视剧“花样男子”，也许，她所说的“比起花，还是青春”正是来自“花样男子”这部剧吧。<br>这样想着，好像就回忆起来当初被告知的那部剧就是“花样男子”一样，不过这些记忆已经变得不真切了，连Kino自己都不敢相信，没必要记住的事就随风散了也挺好<br>说到随风散去，又想起某个盆友说过很喜欢”Gone with the wind”、、、（Kino内心戏太足了、、）</p>
 <p>好吧，其实就是因此突然生出一个想法，以此文记录一些日本谚语、作家作品里的名句、喜欢的歌词、动画里的戳中自己的句子，如此种种，并对其语法结构进行分析，也许还会有感而发写些不成熟的想法，也都算作学习的一环吧。</p>
 <a id="more"></a>
 <h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><ol>
@@ -3142,6 +3186,9 @@
 </blockquote>
 </li>
 <li><p>生まれて,すみません</p>
+<blockquote>
+<p>[生まれて]是[生まれる]的过去形式，因为诞生是过去的动作<br>[すみません]很常见，就是”抱歉了”<br>太宰治这句著名的话通常翻译成”生而为人, 我很抱歉”, 直译起来其实就是”出生到这个世界, 抱歉了”</p>
+</blockquote>
 </li>
 </ol>
 ]]></content>
@@ -3156,15 +3203,15 @@
   <entry>
     <title>日语学习一</title>
     <url>/2017/09/16/japanese01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>————<strong>更新于2017.09.16</strong>————<br>种种原因（其实是一时冲动），报了12月份的JLPT N2，明知时间很紧，难以通过，但这正是我需要的吧，有个短期内想要完成的目标，为此花上所有胡思乱想的时间，这样就好了。<br>语法和单词是并行着学的，虽然有标准日本语的书籍，但是没有使用，语法主要是参考<a href="http://res.wokanxing.info/jpgramma/hiragana.html" target="_blank" rel="noopener">日语语法指南</a><sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Tae. “平假名.” 日语语法指南 | Learn Japanese, http://res.wokanxing.info/jpgramma/hiragana.html.
-">[1]</span></a></sup>学习的，单词目前使用的是<a href="https://cichang.hujiang.com/home/" target="_blank" rel="noopener">沪江开心词场</a>。<br>以及自以为学日语过程中还是听日语歌更好，于是将以前收藏的歌汇总做了个<a href="http://www.xiami.com/collect/354265681" target="_blank" rel="noopener">歌单</a>。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>————<strong>更新于2017.09.16</strong>————<br>种种原因（其实是一时冲动），报了12月份的JLPT N2，明知时间很紧，难以通过，但这正是我需要的吧，有个短期内想要完成的目标，为此花上所有胡思乱想的时间，それでいい…<br>语法和单词是并行着学的，虽然有标准日本语的书籍，但是没有使用，语法主要是参考<a href="http://res.wokanxing.info/jpgramma/hiragana.html" target="_blank" rel="noopener">日语语法指南</a><sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Tae. “平假名.” 日语语法指南 | Learn Japanese, http://res.wokanxing.info/jpgramma/hiragana.html.
+">[1]</span></a></sup>学习的，单词目前使用的是<a href="https://cichang.hujiang.com/home/" target="_blank" rel="noopener">沪江开心词场</a>。<br>学日语当然得听日语歌啦，于是将以前收藏的歌汇总做了个<a href="http://www.xiami.com/collect/354265681" target="_blank" rel="noopener">歌单</a>。</p>
 
-    <div id="aplayer-xuvYMbcw" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="354265681" data-server="xiami" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-ZbHXRkRo" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="354265681" data-server="xiami" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 <p>本文主要整理了九月上半月的语法学习知识。</p>
-<p>————<strong>更新于2018.05.20</strong>————<br>对于日语的学习，有了新的思考和认识，就推倒原来的结构重新写了一遍。<br>首先介绍下语言学，语言学是有一个不断发展的过程的，在语言学成为科学之前的那一阶段，语法研究的方法和观念通常被概括为传统语法，而语言学成体系之后形成了各种学派，其对语法的研究方式、分类方式也各有不同，例如有新语法学派、结构主义学派和功能主义学派等。<br>当然语言学也并不只是包括语法内容，如音韵、词法、句法等，当然这根据不同的分类方法有不同的结果，广义的语法也可以把词法、句法包含在内。<br>彻底系统地学习这些内容太过繁杂，Kino也并不是语言理论专业的，故建立的日语学习体系肯定没那么严谨，可能跨越了多个学派的方法，杂糅了多学派间的内容，涉及了不同学派的术语，后续的文章中，因为当时的写作状态、相应信息的查询难易度等影响，不是每一章的内容都考察了其学派出处，若有知情者可以给Kino提出建议，Kino会尽快修改。<br><a id="more"></a></p>
+<p>————<strong>更新于2018.05.20</strong>————<br>对于日语的学习，有了新的思考和认识，就推倒原来的结构重新写了一遍。<br>首先介绍下语言学，语言学是一门一直在不断发展的学科，在现代语言学诞生之前，语法研究的方法和观念通常被概括为传统语法，或者也可以说只有语法学而没有系统的语言学，据Wiki所述，现代的语言学建立于18世纪初期，是随着历史比较语言学的出现的，Kino觉得自此之后，语言学就开始逐渐成为一项成体系、跨学科的科学研究了。<br>现代语言学的发展过程种又先后出现了各种学派，其对语法的研究方式、分类方式也各有不同，例如有新语法学派、结构主义学派、生成与法学派和功能主义学派等。(画外音: 作为一名码农, 应该多少也会听过乔姆斯基的大名, 其提出的转换生成语法开创了生成语法学派, 虽然在语言学界饱受争议, 在程序语言中倒是应用广泛…)<br>当然语言学也并不只是包括语法内容，如音韵、词法、句法等，当然这根据不同的分类方法有不同的结果，广义的语法也可以把词法、句法包含在内。<br>彻底系统地学习这些内容太过繁杂，Kino也并不是语言理论专业的，故建立的日语学习体系肯定没那么严谨，可能跨越了多个学派的方法，杂糅了多学派间的内容，涉及了不同学派的术语，后续的文章中，因为当时的写作状态、相应信息的查询难易度等影响，不是每一章的内容都考察了其学派出处，若有知情者可以给Kino提出建议，Kino会尽快修改。<br><a id="more"></a></p>
 <p>Kino的整个日语学习系统划分如下图所示：<br><img src="/images/japanese01_0.png" alt="japanese_system"></p>
 <h2 id="1-学习工具"><a href="#1-学习工具" class="headerlink" title="1. 学习工具"></a>1. 学习工具</h2><p>本章主要介绍一些日语学习中可能用到的工具。</p>
-<h3 id="1-1-日语单词"><a href="#1-1-日语单词" class="headerlink" title="1.1 日语单词"></a>1.1 日语单词</h3><p>专门学习日语的app大多数都不提供记忆曲线功能，不提供记忆曲线但有自己独特优势的app有<a href="http://www.xuewujing.com/" target="_blank" rel="noopener">最最日语</a>、<a href="https://play.google.com/store/apps/details?id=com.PEP.biaori&amp;hl=en" target="_blank" rel="noopener">标准日本语</a>、<a href="https://play.google.com/store/apps/details?id=com.renzo.japanese" target="_blank" rel="noopener">Japanese</a>、<a href="https://play.google.com/store/apps/details?id=io.github.nekotachi.easynews" target="_blank" rel="noopener">NHK日本語</a>，可以辅助用。<br>提供记忆曲线的日语单词记忆app有<a href="https://soukaapp.com/" target="_blank" rel="noopener">souka</a>、<a href="http://app.mi.com/details?id=com.kakajapan.word" target="_blank" rel="noopener">卡卡日语</a>，但是总觉得设计不太合理，Kino用的不是特别习惯。<br>不专门针对日语学习的记忆卡片类应用<a href="https://apps.ankiweb.net/" target="_blank" rel="noopener">anki</a>，用来自己随手制作卡片很好，但是想拿到直接使用需要找到合适的词库。<br>此外，还可以下载一些日语母语者常用的app玩耍，如新闻类的SmartNews，可以设置只看日语新闻，菜谱类的Delish Kitchen(Google play上不经意间看到的)等。</p>
+<h3 id="1-1-日语单词"><a href="#1-1-日语单词" class="headerlink" title="1.1 日语单词"></a>1.1 日语单词</h3><p>专门学习日语的app大多数都不提供记忆曲线功能，不提供记忆曲线但有自己独特优势的app有<a href="http://www.xuewujing.com/" target="_blank" rel="noopener">最最日语</a>、<a href="https://play.google.com/store/apps/details?id=com.PEP.biaori&amp;hl=en" target="_blank" rel="noopener">标准日本语</a>、<a href="https://play.google.com/store/apps/details?id=io.github.nekotachi.easynews" target="_blank" rel="noopener">NHK日本語</a>，可以辅助用。<br>提供记忆曲线的日语单词记忆app有<a href="https://soukaapp.com/" target="_blank" rel="noopener">souka</a>、<a href="http://app.mi.com/details?id=com.kakajapan.word" target="_blank" rel="noopener">卡卡日语</a>，但是总觉得设计不太合理，Kino用的不是特别习惯。<br>不专门针对日语学习的记忆卡片类应用<a href="https://apps.ankiweb.net/" target="_blank" rel="noopener">anki</a>，用来自己随手制作卡片很好，但是想拿到直接使用需要找到合适的词库。<br>词典类的app有<a href="https://play.google.com/store/apps/details?id=com.renzo.japanese" target="_blank" rel="noopener">Japanese</a>、<a href="https://play.google.com/store/apps/details?id=com.mojitec.mojidict&amp;hl=en" target="_blank" rel="noopener">MOJi辞書</a>、<a href="https://www.eudic.net/v4/en/app/eudic" target="_blank" rel="noopener">欧路词典</a><br>此外，还可以下载一些日语母语者常用的app玩耍，如新闻类的SmartNews，可以设置只看日语新闻，菜谱类的Delish Kitchen(Google play上不经意间看到的)等。<br>————<strong>更新于2020.05.02</strong>————<br>最近发现”最最日语”把”最最剧场”拆分成了一个新的APP, 强烈推荐！最最日语本身完全可以不用, 但是用”最最剧场”练习口语非常棒！</p>
 <h3 id="1-2-语法"><a href="#1-2-语法" class="headerlink" title="1.2 语法"></a>1.2 语法</h3><p>还是有参考之前的<a href="http://res.wokanxing.info/jpgramma/hiragana.html" target="_blank" rel="noopener">日语语法指南</a><sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Tae. “平假名.” 日语语法指南 | Learn Japanese, http://res.wokanxing.info/jpgramma/hiragana.html.
 ">[1]</span></a></sup>，随手查阅和复习还是很实用的，进一步的语法学习参考了维基百科相关内容和参考书<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="马兰英, 孙海英, and 徐莲. 日语语法专题教程. 浙江工商大学出版社, 2016.
 ">[2]</span></a></sup>。</p>
@@ -3187,7 +3234,7 @@
 <h3 id="2-2-相关易混淆概念"><a href="#2-2-相关易混淆概念" class="headerlink" title="2.2 相关易混淆概念"></a>2.2 相关易混淆概念</h3><ul>
 <li>时态: 在英语学习时，国内英语教材一般并不会对这些概念进行介绍和区分，然而英语语法学习过程中又经常提到时态，这里所说的时态其实是时(tense)和体(aspect)的综合，不是单纯的表示时(tense)，也不是时(tense)和态(voice)的综合，但是tense又常被翻译为时态，所以需要在细分这些语法概念时，区分清楚这些概念，否则就容易在学习过程中混淆。</li>
 </ul>
-<h3 id="2-3-Kino的碎碎念"><a href="#2-3-Kino的碎碎念" class="headerlink" title="2.3 Kino的碎碎念"></a>2.3 Kino的碎碎念</h3><p>Kino看过的大多日语语法介绍，总觉得都不够成体系，从词形变化入手，以词形变化驱动语法概念的讲解，有种学习语法就是为了方便记忆词汇变形、常用句型等的错觉，对于Kino来说这种方式容易抓不住重点，不能形成自己的理解，记忆深度也不够。<br>在Kino的理解中，语言最先出现时自然是无所谓语法概念的，在语言的发展进化过程中，渐渐出现了一些规则，提炼出这些规则就形成了语法体系，从这个角度上说，主张学习语言不需要先学习语法的说法也有其道理，语言学到了一定程度自然会对语法有所理解。但是既然语言规则已经被提炼出来，形成了系统化的语法，Kino认为，在一门第二语言的学习过程中，尽早地掌握其语法体系，可以起到事半功倍的效果，也正因如此才有了这一系列的文章。<br>Kino尝试着根据自己已经掌握的内容，和自己当前对日语的理解，构建自己的日语学习系统，对日语学习进行了系统化的划分，当然主要内容还是语法部分，希望实现以语法概念驱动词形变化等细节，使得各种变化规则是自然而然出现的。</p>
+<h3 id="2-3-Kino的碎碎念"><a href="#2-3-Kino的碎碎念" class="headerlink" title="2.3 Kino的碎碎念"></a>2.3 Kino的碎碎念</h3><p>Kino看过的大多日语语法介绍，总觉得都不够成体系，从词形变化入手，以词形变化驱动语法概念的讲解，有种学习语法就是为了方便记忆词汇变形、常用句型等的错觉，对于Kino来说这种方式容易抓不住重点，不能形成自己的理解，记忆深度也不够。<br>在Kino的理解中，语言诞生之初自然是无所谓语法概念的，在语言的发展进化过程中，渐渐出现了一些规则，提炼出这些规则就形成了语法体系，从这个角度上说，主张学习语言不需要先学习语法的说法也有其道理，语言学到了一定程度自然会对语法有所理解。但是既然语言规则已经被提炼出来，形成了系统化的语法，Kino认为，在一门第二语言的学习过程中，尽早地掌握其语法体系，可以起到事半功倍的效果，也正因如此才有了这一系列的文章。<br>Kino尝试着根据自己已经掌握的内容，和自己当前对日语的理解，构建自己的日语学习系统，对日语学习进行了系统化的划分，当然主要内容还是语法部分，希望实现以语法概念驱动词形变化等细节，使得各种变化规则是自然而然出现的。</p>
 <h2 id="3-发音系统"><a href="#3-发音系统" class="headerlink" title="3. 发音系统"></a>3. 发音系统</h2><p>本章介绍了日语的发音系统，Kino根据自己当下的理解，将发音系统主要分为基本音、变化音、词调、语调四部分内容。</p>
 <h3 id="3-1-基本音"><a href="#3-1-基本音" class="headerlink" title="3.1 基本音"></a>3.1 基本音</h3><p>基本音是构成日语发音的最基本单位，分为元音、拨音和辅音，其中辅音可以细分为几类。</p>
 <h4 id="3-1-1-元音"><a href="#3-1-1-元音" class="headerlink" title="3.1.1 元音"></a>3.1.1 元音</h4><p>a、i、u、e、o</p>
@@ -3584,7 +3631,11 @@
 <ul>
 <li>々（同の字点）: 用于代替前面的一个汉字，也是用的最多的。</li>
 <li>ゝ（一の字点）: 用于代替前面的一个假名</li>
-<li>〻（二の字点）: 不是用来重复前一个汉字，而是前一个汉字是训读的情况下用此强调或消歧，用于竖写排版中，写于前一个字的右下方而非正中。如 “屡”作为一个汉字就读作”しばしば”，”屡〻”并不是用来表示”屡屡”，而就是”屡”，只不过多加了一个符号。</li>
+<li>〻（二の字点）: 不是用来重复前一个汉字，而是前一个汉字是训读的情况下用此强调或消歧，用于竖写排版中，写于前一个字的右下方而非正中。其实这到底是什么意思, Kino查阅有限的文献后还是难以理解, 而且现在用到的场合极少, 也可以用々代替, 就放弃研究了, 如有专业人士了解可以评论说明。Wiki上举的例子是<ul>
+<li>各（おのおの）-&gt; 各〻</li>
+<li>屡（しばしば）-&gt; 屡〻</li>
+</ul>
+</li>
 <li>〱（くの字点）: 重复两个字以上的情况，用于竖写排版的情况下，如”見る見る”的重复等</li>
 </ul>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本篇主要对日语语法进行了总结，系统讲解了发音系统和书写系统。<a href="/2017/09/30/japanese03/">下一篇文章</a>里Kino将会介绍词类系统和句法成分的内容。</p>
@@ -7271,8 +7322,8 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
         <category>reading</category>
       </categories>
       <tags>
-        <tag>motto</tag>
         <tag>novel</tag>
+        <tag>motto</tag>
       </tags>
   </entry>
   <entry>
@@ -7290,8 +7341,8 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
         <category>reading</category>
       </categories>
       <tags>
-        <tag>motto</tag>
         <tag>novel</tag>
+        <tag>motto</tag>
         <tag>drama</tag>
       </tags>
   </entry>
@@ -7325,8 +7376,8 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
         <category>reading</category>
       </categories>
       <tags>
-        <tag>motto</tag>
         <tag>novel</tag>
+        <tag>motto</tag>
       </tags>
   </entry>
   <entry>
@@ -7342,8 +7393,8 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
         <category>reading</category>
       </categories>
       <tags>
-        <tag>motto</tag>
         <tag>novel</tag>
+        <tag>motto</tag>
       </tags>
   </entry>
   <entry>
