@@ -21,7 +21,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="1. No such file or directory.&#x2F;pwn1执行后出现错误信息:.&#x2F;pwn1: No such file or directory, 可执行权限Kino已经加上了, 查了查可能是因为库的原因, 直接cat pwn1看到需要&#x2F;lib&#x2F;ld-linux.so, 查了下系统的确没有, 用readelf去查看pwn1的各项信息, 反而没有看到. ld-linux.so这个库是Lin">
@@ -331,7 +331,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-No-such-file-or-directory"><a href="#1-No-such-file-or-directory" class="headerlink" title="1. No such file or directory"></a>1. No such file or directory</h3><p><code>./pwn1</code>执行后出现错误信息:<em>./pwn1: No such file or directory</em>, 可执行权限Kino已经加上了, 查了查可能是因为库的原因, 直接<code>cat pwn1</code>看到需要<code>/lib/ld-linux.so</code>, 查了下系统的确没有, 用<code>readelf</code>去查看pwn1的各项信息, 反而没有看到. <code>ld-linux.so</code>这个库是Linux下进行动态库链接的链接器, 无它其他动态库就都无法成功链接, 详细说明可以戳<a href="http://linux.die.net/man/8/ld-linux" target="_blank" rel="noopener">这里</a><br>查看怎么安装这个库, 32位系统下是<code>libc6</code>, 64位是<code>libc6-i386</code>, 这是因为64位中默认安装了<code>/lib64/ld-linux-x86-64.so.2</code></p>
+        <h3 id="1-No-such-file-or-directory"><a href="#1-No-such-file-or-directory" class="headerlink" title="1. No such file or directory"></a>1. No such file or directory</h3><p><code>./pwn1</code>执行后出现错误信息:<em>./pwn1: No such file or directory</em>, 可执行权限Kino已经加上了, 查了查可能是因为库的原因, 直接<code>cat pwn1</code>看到需要<code>/lib/ld-linux.so</code>, 查了下系统的确没有, 用<code>readelf</code>去查看pwn1的各项信息, 反而没有看到. <code>ld-linux.so</code>这个库是Linux下进行动态库链接的链接器, 无它其他动态库就都无法成功链接, 详细说明可以戳<a href="http://linux.die.net/man/8/ld-linux" target="_blank" rel="noopener">这里</a><br>查看怎么安装这个库, 32位系统下是<code>libc6</code>, 64位是<code>libc6-i386</code>, 这是因为64位中默认安装了<code>/lib64/ld-linux-x86-64.so.2</code></p>
 <h3 id="2-dmesg"><a href="#2-dmesg" class="headerlink" title="2. dmesg"></a>2. dmesg</h3><p>dmesg用来显示内核环缓冲区(kernel-ring buffer)内容, 内核将各种消息存放在这里. 在系统引导时, 内核将与硬件和模块初始化相关的信息填到这个缓冲区中. 内核环缓冲区中的消息对于诊断系统问题非常有用<br><a id="more"></a></p>
 <h3 id="3-ls硬件信息"><a href="#3-ls硬件信息" class="headerlink" title="3. ls硬件信息"></a>3. ls硬件信息</h3><p><code>lsmod</code>  <code>lscpu</code>  <code>lspci</code>  <code>lsusb</code>等</p>
 <h3 id="4-时间"><a href="#4-时间" class="headerlink" title="4. 时间"></a>4. 时间</h3><p><a href="http://raspberrypi.stackexchange.com/questions/36674/raspberry-pi-raspbian-tick-rate-in-hz/proc/timer_list" target="_blank" rel="noopener">参考1</a><br><a href="http://raspberrypi.stackexchange.com/questions/7400/how-does-pi-keep-track-of-time-interval" target="_blank" rel="noopener">参考2</a><br><a href="http://www.360doc.com/content/11/1201/09/1317564_168810003.shtml" target="_blank" rel="noopener">参考3</a><br><a href="http://www.advenage.com/topics/linux-timer-interrupt-frequency.php" target="_blank" rel="noopener">参考4</a><br><a href="http://stackoverflow.com/questions/13600592/how-to-determine-timer-frequency-in-linux" target="_blank" rel="noopener">参考5</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /boot/config-`uname -r` | grep HZ</span><br><span class="line">cat /proc/interrupts | grep timer &amp;&amp; sleep 1 &amp;&amp; cat /proc/interrupts | grep timer</span><br></pre></td></tr></table></figure></p>
@@ -347,6 +347,38 @@
         </span>
       </div>
     </div>
+        <div class="reward-container">
+  <div>Compensated Dating</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Kino
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://blog.xuwei.fun/2016/05/09/linux05/" title="Linux琐记五">https://blog.xuwei.fun/2016/05/09/linux05/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
         
 
   <div class="followme">
@@ -487,7 +519,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-count">113</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -553,22 +585,22 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2012 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Kino</span>
+  <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">306k</span>
+    <span title="Symbols count total">307k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:38</span>
+    <span title="Reading time total">4:39</span>
 </div>
 
         

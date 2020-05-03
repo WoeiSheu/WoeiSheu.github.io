@@ -21,7 +21,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="1. Ubuntu ssh 登录提示信息修改&#x2F;etc&#x2F;issue和&#x2F;etc&#x2F;motd前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者 2. curl post json数据curl -H &quot;Content-Type: application&#x2F;json&quot; -X POST -d &#39;{&quot;id&quot;:&quot;1&amp;q">
@@ -331,7 +331,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-Ubuntu-ssh-登录提示信息"><a href="#1-Ubuntu-ssh-登录提示信息" class="headerlink" title="1. Ubuntu ssh 登录提示信息"></a>1. Ubuntu ssh 登录提示信息</h3><p>修改<code>/etc/issue</code>和<code>/etc/motd</code><br>前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者</p>
+        <h3 id="1-Ubuntu-ssh-登录提示信息"><a href="#1-Ubuntu-ssh-登录提示信息" class="headerlink" title="1. Ubuntu ssh 登录提示信息"></a>1. Ubuntu ssh 登录提示信息</h3><p>修改<code>/etc/issue</code>和<code>/etc/motd</code><br>前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者</p>
 <h3 id="2-curl-post-json数据"><a href="#2-curl-post-json数据" class="headerlink" title="2. curl post json数据"></a>2. curl post json数据</h3><p><code>curl -H &quot;Content-Type: application/json&quot; -X POST -d &#39;{&quot;id&quot;:&quot;1&quot;,&quot;password&quot;:&quot;miao&quot;}&#39; http://api</code><br>在post的data中使用变量:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">currentTime=`date +%s`</span><br><span class="line">curl -i -H <span class="string">"Accept:application/json"</span> -H <span class="string">"Content-Type:application/json"</span> -X POST \</span><br><span class="line">--data <span class="string">'&#123;"time":"'</span><span class="string">"<span class="variable">$currentTime</span>"</span><span class="string">'","message":"hypocrisy"&#125;'</span> <span class="string">"https://yourhost:port/api"</span></span><br></pre></td></tr></table></figure><br>循环post:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">i=10</span><br><span class="line"><span class="keyword">while</span> [ <span class="variable">$i</span> -gt 0 ]</span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">    curl -d <span class="string">'&#123;"data":"message"&#125;'</span> http://host:port/api</span><br><span class="line">    i=$(( <span class="variable">$i</span>-1 ))</span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$i</span></span><br><span class="line">    <span class="comment">#let i=i-1</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure><br><a id="more"></a></p>
 <h3 id="3-Linux权限"><a href="#3-Linux权限" class="headerlink" title="3. Linux权限"></a>3. Linux权限</h3><p>-rwxr-xr-x 中rwx不是最高权限, 还有sudo权限 -rwsr-xr-x, 方法是:<br><code>chmod u+s /usr/bin/someprogram</code></p>
 <h3 id="4-sh和bash差距很大吗"><a href="#4-sh和bash差距很大吗" class="headerlink" title="4. sh和bash差距很大吗"></a>4. sh和bash差距很大吗</h3><p>在crontab中加入<code>* * * * * sh /home/hypocrisy/myshell.sh</code>, 一直无法运行, 执行到<code>i=60</code>显示60 not found, 我也没有加空格, 改为<code>* * * * * bash /home/hypocrisy/myshell.sh</code>, 竟然好了、、默认就是bash为何sh和bash结果还不同?</p>
@@ -350,6 +350,38 @@
         </span>
       </div>
     </div>
+        <div class="reward-container">
+  <div>Compensated Dating</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Kino
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://blog.xuwei.fun/2016/04/10/linux04/" title="Linux琐记四">https://blog.xuwei.fun/2016/04/10/linux04/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
         
 
   <div class="followme">
@@ -490,7 +522,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-count">113</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -556,22 +588,22 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2012 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Kino</span>
+  <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">306k</span>
+    <span title="Symbols count total">307k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:38</span>
+    <span title="Reading time total">4:39</span>
 </div>
 
         

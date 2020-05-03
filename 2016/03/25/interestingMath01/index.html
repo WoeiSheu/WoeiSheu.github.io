@@ -21,7 +21,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="1. 前言读过不少数学趣闻, 未成体系, 记录下来仅供娱乐 2. 秒差距(Parsec,pc)和光年一样, 是一种长度单位, 不过更大, 1pc&#x3D;3.26ly, 天文学这些单位也是奇怪。Wiki">
@@ -333,7 +333,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>读过不少数学趣闻, 未成体系, 记录下来仅供娱乐</p>
+        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>读过不少数学趣闻, 未成体系, 记录下来仅供娱乐</p>
 <h3 id="2-秒差距-Parsec-pc"><a href="#2-秒差距-Parsec-pc" class="headerlink" title="2. 秒差距(Parsec,pc)"></a>2. 秒差距(Parsec,pc)</h3><p>和光年一样, 是一种长度单位, 不过更大, 1pc=3.26ly, 天文学这些单位也是奇怪。<a href="https://en.wikipedia.org/wiki/Parsec" target="_blank" rel="noopener">Wiki</a></p>
 <a id="more"></a>
 <h3 id="3-不老蠕虫爬长绳"><a href="#3-不老蠕虫爬长绳" class="headerlink" title="3. 不老蠕虫爬长绳"></a>3. 不老蠕虫爬长绳</h3><p>假设一条蠕虫，以1cm/s的速度在一根长1m的橡皮绳上从一端爬向另一端。每当蠕虫爬完1cm，橡皮绳就瞬间伸长1m。<br>如果橡皮绳可以无限伸长，蠕虫也“长生不老”，试问：蠕虫能爬到绳子的另一端吗？<br>乍一想，这蠕虫似乎永远也爬不到绳子的另一端，因为橡皮绳增长的速度远大于蠕虫爬行的速度。不过我们还是先别下结论，算算再说。<br>首先，橡皮绳每秒钟伸长1m，这种伸长是均匀的，而绳子伸长时，虫子爬过的那段也随之伸长。这样：<br>第一秒末，绳子长1m，蠕虫爬1cm即绳长的1/100<br>第一秒末，绳子长2m，蠕虫在这一秒又爬1cm即绳长的1/200，当然此时第一秒蠕虫爬的长度也随之变长，而且它所占绳子的比例1/100不变<br>……<br>类似，蠕虫在第n秒爬了绳子长度的1/(100n)<br>于是，前n秒内蠕虫总共爬了绳子长的<br>$$\frac{1}{100}+\frac{1}{200}+\cdots+\frac{1}{100n}=\frac{1}{100}(1+\frac{1}{2}+\cdots+\frac{1}{n})$$<br>显然，如果蠕虫爬的长度\(l_n \geq 1\)，那就说明蠕虫已经爬到了绳子的另一端。由于调和级数是发散的，所以其大于100是有可能的。<br>一位学者经过计算，得到n在\(2^{143}\sim 2^{144}\)秒之间的结果，当然这是个天文数字，但蠕虫是“长生不老”的<br>另一位学者将调和级数变成：<br>$$<br>\begin{equation}<br>\begin{split}<br>1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{2^k} &amp;= (1+\frac{1}{2})+(\frac{1}{3}+\frac{1}{4})+(\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8})+\cdots+(\frac{1}{2^{k-1}+1}+\frac{1}{2^{k-1}+2}+\cdots+\frac{1}{2^k}) \\<br>&amp;&gt; (1+\frac{1}{2}) + (\frac{1}{4}+\frac{1}{4}) + (\frac{1}{8}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}) + \cdots + \left(\frac{1}{2^k}+\frac{1}{2^k}+\cdots+\frac{1}{2^k}\right) \\<br>&amp;= 1+\left(\frac{1}{2}+\frac{1}{2}+\cdots+\frac{1}{2}\right)<br>\end{split}<br>\nonumber<br>\end{equation}<br>$$</p>
@@ -361,6 +361,38 @@
         </span>
       </div>
     </div>
+        <div class="reward-container">
+  <div>Compensated Dating</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Kino
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://blog.xuwei.fun/2016/03/25/interestingMath01/" title="数学趣话一">https://blog.xuwei.fun/2016/03/25/interestingMath01/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
         
 
   <div class="followme">
@@ -501,7 +533,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-count">113</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -567,22 +599,22 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2012 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Kino</span>
+  <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">306k</span>
+    <span title="Symbols count total">307k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:38</span>
+    <span title="Reading time total">4:39</span>
 </div>
 
         

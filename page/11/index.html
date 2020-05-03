@@ -21,7 +21,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Amor Fati">
@@ -256,6 +256,105 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2014/08/27/android01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/site/avatar.png">
+      <meta itemprop="name" content="Kino">
+      <meta itemprop="description" content="Amor Fati">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="霁月荒馆">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/08/27/android01/" class="post-title-link" itemprop="url">Android TabHost的使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2014-08-27 18:29:32" itemprop="dateCreated datePublished" datetime="2014-08-27T18:29:32+08:00">2014-08-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-05-18 22:24:32" itemprop="dateModified" datetime="2019-05-18T22:24:32+08:00">2019-05-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techonology/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>6.5k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>6 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1. 写在前面"></a>1. 写在前面</h2><p>出于对新事物的好奇, 接触了一下Android, 主要是看书(《Anroid应用开发深入学习实录》 关立勋)、Google和看文档。使用的android-sdk的platform最低是android-14, 然后有android-17,android-20以及android-L(电脑配置暂时比较低,没法把每个版本都测试一遍）<br>此时此刻Intellij IDEA社区版还没法渲染出android-20和android-L，所以我基本都是用的android-17<br><em>虽然书的出版日期比较新, 但其中有些内容还是已经过时了</em><br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/08/27/android01/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2014/07/02/c02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -428,7 +527,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>在codewarrior写的程序本来是可以编译的, 但只是调整了一些代码的位置, 将一些变量移到块作用域里, 却发现无法编译了, 以为是编译器配置突然出了问题, 解决了很久问题仍然存在</p>
+          <h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>在codewarrior写的程序本来是可以编译的, 但只是调整了一些代码的位置, 将一些变量移到块作用域里, 却发现无法编译了, 以为是编译器配置突然出了问题, 解决了很久问题仍然存在</p>
 <h3 id="2-解决"><a href="#2-解决" class="headerlink" title="2. 解决"></a>2. 解决</h3><p>最终发现是C语言的问题, C89的标准不允许随便声明变量, 变量声明不能放在任何可执行语句之后, 只允许在函数和块的开始处。<br>这么不合理的规定在C99和C++里自然已经解除了。但是我所使用的codewarrior所用的C Compiler版本还是只支持到C89</p>
 
       
@@ -521,7 +620,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-Preface"><a href="#1-Preface" class="headerlink" title="1. Preface"></a>1. Preface</h3><p>From <em>The Wise King</em> by Kahlil Gibran</p>
+          <h3 id="1-Preface"><a href="#1-Preface" class="headerlink" title="1. Preface"></a>1. Preface</h3><p>From <em>The Wise King</em> by Kahlil Gibran</p>
 <h3 id="2-Content"><a href="#2-Content" class="headerlink" title="2. Content"></a>2. Content</h3><blockquote>
 <p>从前，一位威严而聪明的国王统治着远方的维兰尼城。他的威严使人敬畏，他的智慧令他倍受爱戴。 </p>
 <p>市中心有一口水井，井水清洌透澈，全城居民都从这口水井中汲水饮用，即使国王与大臣也不例外，因为这是城中唯一的一口井。 </p>
@@ -721,7 +820,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="1-Preface"><a href="#1-Preface" class="headerlink" title="1. Preface"></a>1. Preface</h3><p>From <em>Waiting for godot</em> by Samuel Beckett.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Waiting for Godot](https://book.douban.com/subject/1419152/)
+          <h3 id="1-Preface"><a href="#1-Preface" class="headerlink" title="1. Preface"></a>1. Preface</h3><p>From <em>Waiting for godot</em> by Samuel Beckett.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[Waiting for Godot](https://book.douban.com/subject/1419152/)
 ">[1]</span></a></sup></p>
           <!--noindex-->
             <div class="post-button">
@@ -821,7 +920,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="1-Preface"><a href="#1-Preface" class="headerlink" title="1. Preface"></a>1. Preface</h3><p>From <em>The storied life of A.J.Fikry</em> by Gabrielle Zevin. <sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[The Storied Life of A. J. Fikry](https://book.douban.com/subject/25888148/)
+          <h3 id="1-Preface"><a href="#1-Preface" class="headerlink" title="1. Preface"></a>1. Preface</h3><p>From <em>The storied life of A.J.Fikry</em> by Gabrielle Zevin. <sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[The Storied Life of A. J. Fikry](https://book.douban.com/subject/25888148/)
 ">[1]</span></a></sup></p>
           <!--noindex-->
             <div class="post-button">
@@ -921,7 +1020,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-Preface"><a href="#1-Preface" class="headerlink" title="1. Preface"></a>1. Preface</h3><p>From <em>Of Human Bondage(Part)</em> writen by W. Somerset Maugham</p>
+          <h3 id="1-Preface"><a href="#1-Preface" class="headerlink" title="1. Preface"></a>1. Preface</h3><p>From <em>Of Human Bondage(Part)</em> writen by W. Somerset Maugham</p>
 <h3 id="2-Content"><a href="#2-Content" class="headerlink" title="2. Content"></a>2. Content</h3><blockquote>
 <p>It is an illusion that youth is happy, an illusion of those who have lost it; but the young know they are wretched for they are full of the truthless ideal which have been instilled into them, and each time they come in contact with the real, they are bruised and wounded. It looks as if they were victims of a conspiracy; for the books they read, ideal by the necessity of selection, and the conversation of their elders, who look back upon the past through a rosy haze of forgetfulness, prepare them for an unreal life. They must discover for themselves that all they have read and all they have been told are lies, lies, lies; and each discovery is another nail driven into the body on the cross of life.</p>
 </blockquote>
@@ -1016,7 +1115,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>摘自梁漱溟的《朝话:人生的省悟》<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[朝话:人生的省悟](https://book.douban.com/subject/1320925/)
+          <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>摘自梁漱溟的《朝话:人生的省悟》<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[朝话:人生的省悟](https://book.douban.com/subject/1320925/)
 ">[1]</span></a></sup></p>
           <!--noindex-->
             <div class="post-button">
@@ -1139,103 +1238,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2013/01/21/serverConfig/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/site/avatar.png">
-      <meta itemprop="name" content="Kino">
-      <meta itemprop="description" content="Amor Fati">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="霁月荒馆">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2013/01/21/serverConfig/" class="post-title-link" itemprop="url">服务器配置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2013-01-21 17:18:12" itemprop="dateCreated datePublished" datetime="2013-01-21T17:18:12+08:00">2013-01-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>4.4k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>4 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="1-ssh"><a href="#1-ssh" class="headerlink" title="1. ssh"></a>1. ssh</h3><h4 id="1-1-安装open-ssh"><a href="#1-1-安装open-ssh" class="headerlink" title="1.1 安装open ssh"></a>1.1 安装open ssh</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt install openssh-server</span><br><span class="line">/etc/init.d/ssh restart</span><br><span class="line">vim /etc/ssh/sshd_config    <span class="comment"># 根据需要修改</span></span><br></pre></td></tr></table></figure>
-<h4 id="1-2-生成密钥"><a href="#1-2-生成密钥" class="headerlink" title="1.2 生成密钥"></a>1.2 生成密钥</h4><p><code>ssh-keygen</code>生成公钥、私钥, 公钥放在服务器改名为authorizedkeys, 私钥放在客户端</p>
-<h4 id="1-3-修改密钥权限"><a href="#1-3-修改密钥权限" class="headerlink" title="1.3 修改密钥权限"></a>1.3 修改密钥权限</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 700 ~/.ssh</span><br><span class="line">chmod 600 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2013/01/21/serverConfig/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1307,7 +1309,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-count">113</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1373,22 +1375,22 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2012 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Kino</span>
+  <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">306k</span>
+    <span title="Symbols count total">307k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:38</span>
+    <span title="Reading time total">4:39</span>
 </div>
 
         

@@ -21,7 +21,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="1. 音频设备aplay -l会列出所有设备alsamixer灰常实用&#x2F;usr&#x2F;bin&#x2F;lspci | grep -i audio 2. xargs通常使用管道的范例：cat test.txt | grep -E &#39;*test*&#39;但若是前者可以作为后者的参数带入时，可以使用xargs：echo “*test*” | xargs find &#x2F; -name上述若是不加xargs则无法使">
@@ -331,7 +331,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-音频设备"><a href="#1-音频设备" class="headerlink" title="1. 音频设备"></a>1. 音频设备</h3><p>aplay -l会列出所有设备<br>alsamixer灰常实用<br><code>/usr/bin/lspci | grep -i audio</code></p>
+        <h3 id="1-音频设备"><a href="#1-音频设备" class="headerlink" title="1. 音频设备"></a>1. 音频设备</h3><p>aplay -l会列出所有设备<br>alsamixer灰常实用<br><code>/usr/bin/lspci | grep -i audio</code></p>
 <h3 id="2-xargs"><a href="#2-xargs" class="headerlink" title="2. xargs"></a>2. xargs</h3><p>通常使用管道的范例：<code>cat test.txt | grep -E &#39;*test*&#39;</code><br>但若是前者可以作为后者的参数带入时，可以使用xargs：<br><code>echo “*test*” | xargs find / -name</code><br>上述若是不加xargs则无法使用<br>xargs的实际功能是是以行为单位读取输入数据并执行参数变化，于是可以有更强大的用处，例如：<br><code>find / -name &#39;*portaudio*&#39; | xargs ls -l</code><br><a id="more"></a></p>
 <h3 id="3-截图"><a href="#3-截图" class="headerlink" title="3. 截图"></a>3. 截图</h3><p>截图可以将PrntScr辅以Shift和Alt键，得到不同效果</p>
 <h3 id="4-ssh远程下载上传文件"><a href="#4-ssh远程下载上传文件" class="headerlink" title="4. ssh远程下载上传文件"></a>4. ssh远程下载上传文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp [-P port] username@host:/path/to/remote/<span class="built_in">source</span> /path/to/<span class="built_in">local</span>/dest</span><br><span class="line">scp [-P port] /path/to/<span class="built_in">local</span>/<span class="built_in">source</span> username@host:/path/to/remote/dest</span><br></pre></td></tr></table></figure>
@@ -352,6 +352,38 @@
         </span>
       </div>
     </div>
+        <div class="reward-container">
+  <div>Compensated Dating</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Kino
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://blog.xuwei.fun/2015/06/06/linux01/" title="Linux琐记一">https://blog.xuwei.fun/2015/06/06/linux01/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
         
 
   <div class="followme">
@@ -492,7 +524,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-count">113</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -558,22 +590,22 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2012 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Kino</span>
+  <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">306k</span>
+    <span title="Symbols count total">307k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:38</span>
+    <span title="Reading time total">4:39</span>
 </div>
 
         
