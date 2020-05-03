@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
   <meta name="baidu-site-verification" content="hRzEYlh3gL">
 
@@ -18,7 +21,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Amor Fati">
@@ -27,10 +30,9 @@
 <meta property="og:url" content="https://blog.xuwei.fun/page/7/index.html">
 <meta property="og:site_name" content="霁月荒馆">
 <meta property="og:description" content="Amor Fati">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Kino">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="霁月荒馆">
-<meta name="twitter:description" content="Amor Fati">
 
 <link rel="canonical" href="https://blog.xuwei.fun/page/7/">
 
@@ -154,14 +156,14 @@
     <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -869,7 +871,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="各大公司提供的公共DNS"><a href="#各大公司提供的公共DNS" class="headerlink" title="各大公司提供的公共DNS"></a>各大公司提供的公共DNS</h3><h4 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h4><pre><code>8.8.8.8
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="各大公司提供的公共DNS"><a href="#各大公司提供的公共DNS" class="headerlink" title="各大公司提供的公共DNS"></a>各大公司提供的公共DNS</h3><h4 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h4><pre><code>8.8.8.8
 </code></pre><h4 id="Alibaba"><a href="#Alibaba" class="headerlink" title="Alibaba"></a>Alibaba</h4><pre><code>223.5.5.5
 223.6.6.6
 </code></pre><h4 id="Baidu"><a href="#Baidu" class="headerlink" title="Baidu"></a>Baidu</h4><pre><code>180.76.76.76
@@ -967,7 +969,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="Simhash-Minhash"><a href="#Simhash-Minhash" class="headerlink" title="Simhash, Minhash"></a>Simhash, Minhash</h3><p>参考这些文章<br><a href="http://grunt1223.iteye.com/blog/964564" target="_blank" rel="noopener">http://grunt1223.iteye.com/blog/964564</a><br><a href="http://blog.csdn.net/heiyeshuwu/article/details/44117473" target="_blank" rel="noopener">http://blog.csdn.net/heiyeshuwu/article/details/44117473</a></p>
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="Simhash-Minhash"><a href="#Simhash-Minhash" class="headerlink" title="Simhash, Minhash"></a>Simhash, Minhash</h3><p>参考这些文章<br><a href="http://grunt1223.iteye.com/blog/964564" target="_blank" rel="noopener">http://grunt1223.iteye.com/blog/964564</a><br><a href="http://blog.csdn.net/heiyeshuwu/article/details/44117473" target="_blank" rel="noopener">http://blog.csdn.net/heiyeshuwu/article/details/44117473</a></p>
 
       
     </div>
@@ -1143,14 +1145,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>30k</span>
+              <span>31k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>27 mins.</span>
+              <span>28 mins.</span>
             </span>
 
         </div>
@@ -1162,7 +1164,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p><strong>华中科技大学的讲义很不错</strong><br>主要备份了此讲义的内容<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="<http://202.114.32.200:8080/courseware/208310/20831011/>
+          <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p><strong>华中科技大学的讲义很不错</strong><br>主要备份了此讲义的内容<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="<http://202.114.32.200:8080/courseware/208310/20831011/>
 ">[1]</span></a></sup><br>文中用到的一些概念：</p>
 <ul>
 <li>原语：操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。</li>
@@ -1371,13 +1373,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-count">109</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -1440,15 +1442,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">302k</span>
+    <span title="Symbols count total">306k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:35</span>
+    <span title="Reading time total">4:38</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -1467,9 +1467,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -1478,7 +1486,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -1535,7 +1545,7 @@
     };
     (function () {
       var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
       script.defer = true;
       document.head.appendChild(script);
     })();

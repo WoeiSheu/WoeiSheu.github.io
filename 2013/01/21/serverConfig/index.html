@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
   <meta name="baidu-site-verification" content="hRzEYlh3gL">
 
@@ -18,21 +21,22 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1. ssh1.1 安装open ssh123apt install openssh-server/etc/init.d/ssh restartvim /etc/ssh/sshd_config    # 根据需要修改 1.2 生成密钥ssh-keygen生成公钥、私钥, 公钥放在服务器改名为authorizedkeys, 私钥放在客户端 1.3 修改密钥权限12chmod 700 ~/.sshch">
-<meta name="keywords" content="linux,server">
+  <meta name="description" content="1. ssh1.1 安装open ssh123apt install openssh-server&#x2F;etc&#x2F;init.d&#x2F;ssh restartvim &#x2F;etc&#x2F;ssh&#x2F;sshd_config    # 根据需要修改 1.2 生成密钥ssh-keygen生成公钥、私钥, 公钥放在服务器改名为authorizedkeys, 私钥放在客户端 1.3 修改密钥权限12chmod 700 ~&#x2F;.sshch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务器配置">
 <meta property="og:url" content="https://blog.xuwei.fun/2013/01/21/serverConfig/index.html">
 <meta property="og:site_name" content="霁月荒馆">
-<meta property="og:description" content="1. ssh1.1 安装open ssh123apt install openssh-server/etc/init.d/ssh restartvim /etc/ssh/sshd_config    # 根据需要修改 1.2 生成密钥ssh-keygen生成公钥、私钥, 公钥放在服务器改名为authorizedkeys, 私钥放在客户端 1.3 修改密钥权限12chmod 700 ~/.sshch">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-18T14:24:33.265Z">
+<meta property="og:description" content="1. ssh1.1 安装open ssh123apt install openssh-server&#x2F;etc&#x2F;init.d&#x2F;ssh restartvim &#x2F;etc&#x2F;ssh&#x2F;sshd_config    # 根据需要修改 1.2 生成密钥ssh-keygen生成公钥、私钥, 公钥放在服务器改名为authorizedkeys, 私钥放在客户端 1.3 修改密钥权限12chmod 700 ~&#x2F;.sshch">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2013-01-21T09:18:12.000Z">
+<meta property="article:modified_time" content="2019-05-18T14:24:33.265Z">
+<meta property="article:author" content="Kino">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="server">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="服务器配置">
-<meta name="twitter:description" content="1. ssh1.1 安装open ssh123apt install openssh-server/etc/init.d/ssh restartvim /etc/ssh/sshd_config    # 根据需要修改 1.2 生成密钥ssh-keygen生成公钥、私钥, 公钥放在服务器改名为authorizedkeys, 私钥放在客户端 1.3 修改密钥权限12chmod 700 ~/.sshch">
 
 <link rel="canonical" href="https://blog.xuwei.fun/2013/01/21/serverConfig/">
 
@@ -156,14 +160,14 @@
     <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -324,7 +328,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-ssh"><a href="#1-ssh" class="headerlink" title="1. ssh"></a>1. ssh</h3><h4 id="1-1-安装open-ssh"><a href="#1-1-安装open-ssh" class="headerlink" title="1.1 安装open ssh"></a>1.1 安装open ssh</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt install openssh-server</span><br><span class="line">/etc/init.d/ssh restart</span><br><span class="line">vim /etc/ssh/sshd_config    <span class="comment"># 根据需要修改</span></span><br></pre></td></tr></table></figure>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-ssh"><a href="#1-ssh" class="headerlink" title="1. ssh"></a>1. ssh</h3><h4 id="1-1-安装open-ssh"><a href="#1-1-安装open-ssh" class="headerlink" title="1.1 安装open ssh"></a>1.1 安装open ssh</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt install openssh-server</span><br><span class="line">/etc/init.d/ssh restart</span><br><span class="line">vim /etc/ssh/sshd_config    <span class="comment"># 根据需要修改</span></span><br></pre></td></tr></table></figure>
 <h4 id="1-2-生成密钥"><a href="#1-2-生成密钥" class="headerlink" title="1.2 生成密钥"></a>1.2 生成密钥</h4><p><code>ssh-keygen</code>生成公钥、私钥, 公钥放在服务器改名为authorizedkeys, 私钥放在客户端</p>
 <h4 id="1-3-修改密钥权限"><a href="#1-3-修改密钥权限" class="headerlink" title="1.3 修改密钥权限"></a>1.3 修改密钥权限</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 700 ~/.ssh</span><br><span class="line">chmod 600 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -348,11 +352,9 @@
 <h3 id="4-jupyter"><a href="#4-jupyter" class="headerlink" title="4. jupyter"></a>4. jupyter</h3><p><a href="http://jupyter.org/documentation.html" target="_blank" rel="noopener">Official</a></p>
 <h4 id="4-1-Install"><a href="#4-1-Install" class="headerlink" title="4.1 Install"></a>4.1 Install</h4><p><code>pip3 install jupyter</code></p>
 <h4 id="4-2-Change-config"><a href="#4-2-Change-config" class="headerlink" title="4.2 Change config"></a>4.2 Change config</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --generate-config    <span class="comment"># This will generate a file ~/.jupyter/jupyter_notebook_config.py</span></span><br><span class="line">vim ~/.jupyter/jupyter_notebook_config.py</span><br></pre></td></tr></table></figure>
-<p>generate passwd:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ipython</span><br><span class="line"><span class="keyword">from</span> notebook.auth <span class="keyword">import</span> passwd</span><br><span class="line">passwd()</span><br></pre></td></tr></table></figure></p>
-<p>Create dir: <code>mkdir Jupyter</code><br>Change ip, port, password and so on:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.ip = <span class="string">'127.0.0.1'</span></span><br><span class="line">c.NotebookApp.port = <span class="string">'10010'</span></span><br><span class="line">c.NotebookApp.password = <span class="string">'yourpasswd'</span></span><br><span class="line">c.NotebookApp.notebook_dir = <span class="string">'/home/username/Jupyter'</span>   <span class="comment"># If use relative path, just Jupyter</span></span><br></pre></td></tr></table></figure></p>
+<p>generate passwd:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ipython</span><br><span class="line"><span class="keyword">from</span> notebook.auth <span class="keyword">import</span> passwd</span><br><span class="line">passwd()</span><br></pre></td></tr></table></figure><br>Create dir: <code>mkdir Jupyter</code><br>Change ip, port, password and so on:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.ip = <span class="string">'127.0.0.1'</span></span><br><span class="line">c.NotebookApp.port = <span class="string">'10010'</span></span><br><span class="line">c.NotebookApp.password = <span class="string">'yourpasswd'</span></span><br><span class="line">c.NotebookApp.notebook_dir = <span class="string">'/home/username/Jupyter'</span>   <span class="comment"># If use relative path, just Jupyter</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="4-3-Run"><a href="#4-3-Run" class="headerlink" title="4.3 Run"></a>4.3 Run</h4><p><code>jupyter notebook</code></p>
-<h4 id="4-4-Nginx-反向代理"><a href="#4-4-Nginx-反向代理" class="headerlink" title="4.4 Nginx 反向代理"></a>4.4 Nginx 反向代理</h4><p>上述运行之后的jupyter只能在本地浏览器打开, 因为ip配置的是127.0.0.1而不是0.0.0.0, 端口号10010也没有在aws安全组策略中开启<br>有意这样做的原因是想利用Nginx反代指向jupyter, 这样可以使用80端口.<br>其中需要注意的一点是在配置文件里添加:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.allow_origin = <span class="string">'http://yourdomain'</span></span><br><span class="line">c.NotebookApp.allow_remote_access = <span class="literal">True</span></span><br><span class="line">c.NotebookApp.trust_xheaders = <span class="literal">True</span></span><br></pre></td></tr></table></figure></p>
-<p>之后 <code>jupyter notebook &amp;&gt; /dev/null &amp;</code> 后台运行jupyter<br>Nginx反向代理配置可以从Bitbucket仓库获得, 注意代理中添加的 WebSocket support 相关配置</p>
+<h4 id="4-4-Nginx-反向代理"><a href="#4-4-Nginx-反向代理" class="headerlink" title="4.4 Nginx 反向代理"></a>4.4 Nginx 反向代理</h4><p>上述运行之后的jupyter只能在本地浏览器打开, 因为ip配置的是127.0.0.1而不是0.0.0.0, 端口号10010也没有在aws安全组策略中开启<br>有意这样做的原因是想利用Nginx反代指向jupyter, 这样可以使用80端口.<br>其中需要注意的一点是在配置文件里添加:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.allow_origin = <span class="string">'http://yourdomain'</span></span><br><span class="line">c.NotebookApp.allow_remote_access = <span class="literal">True</span></span><br><span class="line">c.NotebookApp.trust_xheaders = <span class="literal">True</span></span><br></pre></td></tr></table></figure><br>之后 <code>jupyter notebook &amp;&gt; /dev/null &amp;</code> 后台运行jupyter<br>Nginx反向代理配置可以从Bitbucket仓库获得, 注意代理中添加的 WebSocket support 相关配置</p>
 <h4 id="4-5-Install-kernels"><a href="#4-5-Install-kernels" class="headerlink" title="4.5 Install kernels"></a>4.5 Install kernels</h4><p>Please Refer to <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" target="_blank" rel="noopener">https://github.com/jupyter/jupyter/wiki/Jupyter-kernels</a><br>for example:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip3 install octave_kernel</span><br><span class="line">python -m octave_kernel.install</span><br></pre></td></tr></table></figure></p>
 <h3 id="5-VPN"><a href="#5-VPN" class="headerlink" title="5. VPN"></a>5. VPN</h3><h4 id="5-1-Install"><a href="#5-1-Install" class="headerlink" title="5.1 Install"></a>5.1 Install</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https://git.io/vpnsetup -O vpnsetup.sh &amp;&amp; sudo \</span><br><span class="line">VPN_IPSEC_PSK=<span class="string">'your_ipsec_pre_shared_key'</span> \</span><br><span class="line">VPN_USER=<span class="string">'your_vpn_username'</span> \</span><br><span class="line">VPN_PASSWORD=<span class="string">'your_vpn_password'</span> sh vpnsetup.sh</span><br></pre></td></tr></table></figure>
 <p>Can also edit pre shared key, username, password in vpnsetup.sh<br>Then edit inbound rule, add 500,4500 port.</p>
@@ -364,8 +366,7 @@
 <h4 id="6-4-Pull-amp-Run"><a href="#6-4-Pull-amp-Run" class="headerlink" title="6.4 Pull &amp; Run"></a>6.4 Pull &amp; Run</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull username/repo</span><br><span class="line">docker run -p 80:80 -p 443:443 -dit username/repo</span><br></pre></td></tr></table></figure>
 <h4 id="6-5-Other-command"><a href="#6-5-Other-command" class="headerlink" title="6.5 Other command"></a>6.5 Other command</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br><span class="line">docker ps -a</span><br><span class="line">docker images -a</span><br><span class="line">docker attach <span class="variable">$ID</span></span><br><span class="line">docker stop <span class="variable">$ID</span></span><br></pre></td></tr></table></figure>
 <h3 id="7-MOTD"><a href="#7-MOTD" class="headerlink" title="7. MOTD"></a>7. MOTD</h3><h4 id="7-1-Install-fortune-and-cowsay"><a href="#7-1-Install-fortune-and-cowsay" class="headerlink" title="7.1 Install fortune and cowsay"></a>7.1 Install fortune and cowsay</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt install fortune</span><br><span class="line">apt install fortunes</span><br><span class="line">apt install cowsay</span><br></pre></td></tr></table></figure>
-<h4 id="7-2-Change-motd"><a href="#7-2-Change-motd" class="headerlink" title="7.2 Change motd"></a>7.2 Change motd</h4><p><code>vim /etc/update-motd.d/999-fortune</code><br>Add:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!bin/sh</span><br><span class="line">/usr/games/fortune | /usr/games/cowsay</span><br></pre></td></tr></table></figure></p>
-<p>Then: <code>chmod 755 /etc/update-motd.d/999-fortune</code><br>To test: <code>run-parts /etc/update-motd.d</code></p>
+<h4 id="7-2-Change-motd"><a href="#7-2-Change-motd" class="headerlink" title="7.2 Change motd"></a>7.2 Change motd</h4><p><code>vim /etc/update-motd.d/999-fortune</code><br>Add:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!bin&#x2F;sh</span><br><span class="line">&#x2F;usr&#x2F;games&#x2F;fortune | &#x2F;usr&#x2F;games&#x2F;cowsay</span><br></pre></td></tr></table></figure><br>Then: <code>chmod 755 /etc/update-motd.d/999-fortune</code><br>To test: <code>run-parts /etc/update-motd.d</code></p>
 <h3 id="8-Shadowsocks"><a href="#8-Shadowsocks" class="headerlink" title="8. Shadowsocks"></a>8. Shadowsocks</h3><h4 id="8-1-Install"><a href="#8-1-Install" class="headerlink" title="8.1 Install"></a>8.1 Install</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install python-pip</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
 <h4 id="8-2-Run"><a href="#8-2-Run" class="headerlink" title="8.2 Run"></a>8.2 Run</h4><p><code>sudo ssserver -c shadowsocks.conf -d start</code></p>
 
@@ -380,6 +381,35 @@
         </span>
       </div>
     </div>
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+            <span class="icon">
+              <i class="weibo"></i>
+            </span>
+
+            <span class="label">Weibo</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+            <span class="icon">
+              <i class="wechat"></i>
+            </span>
+
+            <span class="label">Wechat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -476,7 +506,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ssh"><span class="nav-text">1. ssh</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-安装open-ssh"><span class="nav-text">1.1 安装open ssh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-生成密钥"><span class="nav-text">1.2 生成密钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-修改密钥权限"><span class="nav-text">1.3 修改密钥权限</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-nginx-amp-let’s-encrypt"><span class="nav-text">2. nginx &amp; let’s encrypt</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-Ref"><span class="nav-text">2.1 Ref</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-安装nginx"><span class="nav-text">2.2 安装nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-查看nginx安装的模块"><span class="nav-text">2.3 查看nginx安装的模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-配置-etc-nginx-nginx-conf"><span class="nav-text">2.4 配置/etc/nginx/nginx.conf</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-配置nginx-server"><span class="nav-text">2.5 配置nginx server</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-建立软链接"><span class="nav-text">2.6 建立软链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-7-启动nginx"><span class="nav-text">2.7 启动nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-8-签发证书"><span class="nav-text">2.8 签发证书</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-9-配置证书到站点"><span class="nav-text">2.9 配置证书到站点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-10-自动更新证书"><span class="nav-text">2.10 自动更新证书</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-11-撤销删除证书"><span class="nav-text">2.11 撤销删除证书</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置mail"><span class="nav-text">3. 配置mail</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-设置DNS记录"><span class="nav-text">3.1 设置DNS记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-安装Postfix"><span class="nav-text">3.2 安装Postfix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-查看Postfix配置"><span class="nav-text">3.3 查看Postfix配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-修改AWS-Security-Groups"><span class="nav-text">3.4 修改AWS Security Groups</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-测试"><span class="nav-text">3.5 测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-用Nginx代理邮件"><span class="nav-text">3.6 用Nginx代理邮件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-jupyter"><span class="nav-text">4. jupyter</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-Install"><span class="nav-text">4.1 Install</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-Change-config"><span class="nav-text">4.2 Change config</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-Run"><span class="nav-text">4.3 Run</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-Nginx-反向代理"><span class="nav-text">4.4 Nginx 反向代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-Install-kernels"><span class="nav-text">4.5 Install kernels</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-VPN"><span class="nav-text">5. VPN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-Install"><span class="nav-text">5.1 Install</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-Clients"><span class="nav-text">5.2 Clients</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-Uninstall"><span class="nav-text">5.3 Uninstall</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-配置Docker"><span class="nav-text">6. 配置Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-Docker-Hub"><span class="nav-text">6.1 Docker Hub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-Source-file"><span class="nav-text">6.2 Source file</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-Webhook"><span class="nav-text">6.3 Webhook</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-4-Pull-amp-Run"><span class="nav-text">6.4 Pull &amp; Run</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-5-Other-command"><span class="nav-text">6.5 Other command</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-MOTD"><span class="nav-text">7. MOTD</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-Install-fortune-and-cowsay"><span class="nav-text">7.1 Install fortune and cowsay</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-Change-motd"><span class="nav-text">7.2 Change motd</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-Shadowsocks"><span class="nav-text">8. Shadowsocks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-Install"><span class="nav-text">8.1 Install</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-Run"><span class="nav-text">8.2 Run</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ssh"><span class="nav-text">1. ssh</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-安装open-ssh"><span class="nav-text">1.1 安装open ssh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-生成密钥"><span class="nav-text">1.2 生成密钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-修改密钥权限"><span class="nav-text">1.3 修改密钥权限</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-nginx-amp-let’s-encrypt"><span class="nav-text">2. nginx &amp; let’s encrypt</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-Ref"><span class="nav-text">2.1 Ref</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-安装nginx"><span class="nav-text">2.2 安装nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-查看nginx安装的模块"><span class="nav-text">2.3 查看nginx安装的模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-配置-etc-nginx-nginx-conf"><span class="nav-text">2.4 配置&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-配置nginx-server"><span class="nav-text">2.5 配置nginx server</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-建立软链接"><span class="nav-text">2.6 建立软链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-7-启动nginx"><span class="nav-text">2.7 启动nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-8-签发证书"><span class="nav-text">2.8 签发证书</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-9-配置证书到站点"><span class="nav-text">2.9 配置证书到站点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-10-自动更新证书"><span class="nav-text">2.10 自动更新证书</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-11-撤销删除证书"><span class="nav-text">2.11 撤销删除证书</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置mail"><span class="nav-text">3. 配置mail</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-设置DNS记录"><span class="nav-text">3.1 设置DNS记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-安装Postfix"><span class="nav-text">3.2 安装Postfix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-查看Postfix配置"><span class="nav-text">3.3 查看Postfix配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-修改AWS-Security-Groups"><span class="nav-text">3.4 修改AWS Security Groups</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-测试"><span class="nav-text">3.5 测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-用Nginx代理邮件"><span class="nav-text">3.6 用Nginx代理邮件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-jupyter"><span class="nav-text">4. jupyter</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-Install"><span class="nav-text">4.1 Install</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-Change-config"><span class="nav-text">4.2 Change config</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-Run"><span class="nav-text">4.3 Run</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-Nginx-反向代理"><span class="nav-text">4.4 Nginx 反向代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-Install-kernels"><span class="nav-text">4.5 Install kernels</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-VPN"><span class="nav-text">5. VPN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-Install"><span class="nav-text">5.1 Install</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-Clients"><span class="nav-text">5.2 Clients</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-Uninstall"><span class="nav-text">5.3 Uninstall</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-配置Docker"><span class="nav-text">6. 配置Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-Docker-Hub"><span class="nav-text">6.1 Docker Hub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-Source-file"><span class="nav-text">6.2 Source file</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-Webhook"><span class="nav-text">6.3 Webhook</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-4-Pull-amp-Run"><span class="nav-text">6.4 Pull &amp; Run</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-5-Other-command"><span class="nav-text">6.5 Other command</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-MOTD"><span class="nav-text">7. MOTD</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-Install-fortune-and-cowsay"><span class="nav-text">7.1 Install fortune and cowsay</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-Change-motd"><span class="nav-text">7.2 Change motd</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-Shadowsocks"><span class="nav-text">8. Shadowsocks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-Install"><span class="nav-text">8.1 Install</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-Run"><span class="nav-text">8.2 Run</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -499,13 +529,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-count">109</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -568,15 +598,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">302k</span>
+    <span title="Symbols count total">306k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:35</span>
+    <span title="Reading time total">4:38</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -595,9 +623,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -606,7 +642,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -626,10 +664,12 @@
   
   <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
   <script>
+      window.addEventListener('load', () => {
       quicklink({
         timeout : 1000,
         priority: false,
         ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2013/01/21/serverConfig/',]
+      });
       });
   </script>
 <div id="needsharebutton-float">

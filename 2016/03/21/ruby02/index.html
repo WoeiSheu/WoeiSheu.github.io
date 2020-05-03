@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
   <meta name="baidu-site-verification" content="hRzEYlh3gL">
 
@@ -18,22 +21,23 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="1、单例类单例类这个概念存在于很多编程语言中,包括Java,其基本要求有:  1、单例类只能有一个实例 2、单例类必须自己创建自己的唯一实例 3、单例类必须给所有其他对象提供这一实例  详细的单例模式讲解可以戳这里">
-<meta name="keywords" content="programming language,ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ruby 琐记二">
 <meta property="og:url" content="https://blog.xuwei.fun/2016/03/21/ruby02/index.html">
 <meta property="og:site_name" content="霁月荒馆">
 <meta property="og:description" content="1、单例类单例类这个概念存在于很多编程语言中,包括Java,其基本要求有:  1、单例类只能有一个实例 2、单例类必须自己创建自己的唯一实例 3、单例类必须给所有其他对象提供这一实例  详细的单例模式讲解可以戳这里">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.xuwei.fun/images/ruby02_01.png">
-<meta property="og:updated_time" content="2019-05-18T14:24:33.258Z">
+<meta property="article:published_time" content="2016-03-21T08:50:00.000Z">
+<meta property="article:modified_time" content="2019-05-18T14:24:33.258Z">
+<meta property="article:author" content="Kino">
+<meta property="article:tag" content="programming language">
+<meta property="article:tag" content="ruby">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ruby 琐记二">
-<meta name="twitter:description" content="1、单例类单例类这个概念存在于很多编程语言中,包括Java,其基本要求有:  1、单例类只能有一个实例 2、单例类必须自己创建自己的唯一实例 3、单例类必须给所有其他对象提供这一实例  详细的单例模式讲解可以戳这里">
 <meta name="twitter:image" content="https://blog.xuwei.fun/images/ruby02_01.png">
 
 <link rel="canonical" href="https://blog.xuwei.fun/2016/03/21/ruby02/">
@@ -158,14 +162,14 @@
     <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -326,7 +330,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1、单例类"><a href="#1、单例类" class="headerlink" title="1、单例类"></a>1、单例类</h3><p>单例类这个概念存在于很多编程语言中,包括Java,其基本要求有:</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1、单例类"><a href="#1、单例类" class="headerlink" title="1、单例类"></a>1、单例类</h3><p>单例类这个概念存在于很多编程语言中,包括Java,其基本要求有:</p>
 <ul>
 <li>1、单例类只能有一个实例</li>
 <li>2、单例类必须自己创建自己的唯一实例</li>
@@ -335,8 +339,7 @@
 <p>详细的单例模式讲解可以戳<a href="https://en.wikipedia.org/wiki/Singleton_pattern" target="_blank" rel="noopener">这里</a><br><a id="more"></a><br>在Ruby中创建一个单例类的方法是:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">objA = A.new</span><br><span class="line"><span class="class"><span class="keyword">class</span> &lt;&lt; objA   <span class="comment"># 打开objA的单例类</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">to_s</span></span></span><br><span class="line">    <span class="string">"Object A, Woooo"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
 <p><code>objA.to_s</code>即可调用</p>
 <p>因为Ruby中类本身也是对象,类对象自然也有自己的单例类<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> &lt;&lt; A</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">to_s</span></span></span><br><span class="line">    <span class="string">"Hahahaha"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
-<p><code>A.to_s</code>即可调用,结果显然是”Hahahaha”, 但是如果我们在此基础上接着:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">objA1 = A.new</span><br><span class="line">objA2 = A.new</span><br><span class="line"><span class="class"><span class="keyword">class</span> &lt;&lt; objA2</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">to_s</span></span></span><br><span class="line">    <span class="string">"Miao"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">p objA1.to_s</span><br></pre></td></tr></table></figure></p>
-<p>输出结果则类似: <code>&quot;#&lt;A:0x30a4070&gt;&quot;</code>, 这是由于我们只是在类A的单例类中进行了to_s的重定义,它只对类A自身的对象有效,是类A对象的一个单例类方法。用图来表示上述类和对象实例间的关系为:<br><img src="/images/ruby02_01.png" alt="singleton"></p>
+<p><code>A.to_s</code>即可调用,结果显然是”Hahahaha”, 但是如果我们在此基础上接着:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">objA1 = A.new</span><br><span class="line">objA2 = A.new</span><br><span class="line"><span class="class"><span class="keyword">class</span> &lt;&lt; objA2</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">to_s</span></span></span><br><span class="line">    <span class="string">"Miao"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">p objA1.to_s</span><br></pre></td></tr></table></figure><br>输出结果则类似: <code>&quot;#&lt;A:0x30a4070&gt;&quot;</code>, 这是由于我们只是在类A的单例类中进行了to_s的重定义,它只对类A自身的对象有效,是类A对象的一个单例类方法。用图来表示上述类和对象实例间的关系为:<br><img src="/images/ruby02_01.png" alt="singleton"></p>
 <p>所有指向Class的klass指针都省略了</p>
 <p>由于类或模块的定义中,self总是指向类或模块对象,故也可以采用这种写法:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line">  <span class="class"><span class="keyword">class</span> &lt;&lt; self</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">to_s</span></span></span><br><span class="line">      <span class="string">"Hahahaha"</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="2、实例变量-类变量"><a href="#2、实例变量-类变量" class="headerlink" title="2、实例变量,类变量"></a>2、实例变量,类变量</h3><p>类变量以@@开头,可被定义它的类以及其子类访问,也可被定义它的类和子类的实例访问。即类变量被共享在整个继承链中,在子类改变一个类变量时其父类的类变量值也改变<br>在类对象上定义的变量是实例变量,以@开头,实例变量因为存在于在对象上,所以整个对象的类的继承链都可以使用。父类里定义的实例变量,子类方法可以使用;子类里定义的变量,父类方法也可以使用。<br>类本身也是一种对象,它是Class类的实例,在类上定义的变量,叫类实例变量。类实例变量只能被类方法访问。类实例变量因为存放在类对象上,所以能够被继承链上的类方法访问到。比如子类定义的类实例变量,父类的类方法也能访问</p>
@@ -363,6 +366,35 @@
         </span>
       </div>
     </div>
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+            <span class="icon">
+              <i class="weibo"></i>
+            </span>
+
+            <span class="label">Weibo</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+            <span class="icon">
+              <i class="wechat"></i>
+            </span>
+
+            <span class="label">Wechat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -482,13 +514,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-count">109</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -551,15 +583,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">302k</span>
+    <span title="Symbols count total">306k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:35</span>
+    <span title="Reading time total">4:38</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -578,9 +608,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -589,7 +627,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -609,10 +649,12 @@
   
   <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
   <script>
+      window.addEventListener('load', () => {
       quicklink({
         timeout : 1000,
         priority: false,
         ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2016/03/21/ruby02/',]
+      });
       });
   </script>
 <div id="needsharebutton-float">

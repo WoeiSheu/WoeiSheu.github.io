@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
   <meta name="baidu-site-verification" content="hRzEYlh3gL">
 
@@ -18,21 +21,22 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1. renamerename &amp;#39;s/(0-9).txt/file_$1.txt/&amp;#39; *.txt 2. 查看硬件信息123456lscpulshwhwinfolspcilsusblsblk">
-<meta name="keywords" content="linux,ffmpeg">
+  <meta name="description" content="1. renamerename &#39;s&#x2F;(0-9).txt&#x2F;file_$1.txt&#x2F;&#39; *.txt 2. 查看硬件信息123456lscpulshwhwinfolspcilsusblsblk">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux琐记六">
 <meta property="og:url" content="https://blog.xuwei.fun/2016/06/07/linux06/index.html">
 <meta property="og:site_name" content="霁月荒馆">
-<meta property="og:description" content="1. renamerename &amp;#39;s/(0-9).txt/file_$1.txt/&amp;#39; *.txt 2. 查看硬件信息123456lscpulshwhwinfolspcilsusblsblk">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-18T14:24:33.144Z">
+<meta property="og:description" content="1. renamerename &#39;s&#x2F;(0-9).txt&#x2F;file_$1.txt&#x2F;&#39; *.txt 2. 查看硬件信息123456lscpulshwhwinfolspcilsusblsblk">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2016-06-07T02:45:00.000Z">
+<meta property="article:modified_time" content="2019-05-18T14:24:33.144Z">
+<meta property="article:author" content="Kino">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="ffmpeg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux琐记六">
-<meta name="twitter:description" content="1. renamerename &amp;#39;s/(0-9).txt/file_$1.txt/&amp;#39; *.txt 2. 查看硬件信息123456lscpulshwhwinfolspcilsusblsblk">
 
 <link rel="canonical" href="https://blog.xuwei.fun/2016/06/07/linux06/">
 
@@ -156,14 +160,14 @@
     <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -328,23 +332,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-rename"><a href="#1-rename" class="headerlink" title="1. rename"></a>1. rename</h3><p><code>rename &#39;s/(0-9).txt/file_$1.txt/&#39; *.txt</code></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-rename"><a href="#1-rename" class="headerlink" title="1. rename"></a>1. rename</h3><p><code>rename &#39;s/(0-9).txt/file_$1.txt/&#39; *.txt</code></p>
 <h3 id="2-查看硬件信息"><a href="#2-查看硬件信息" class="headerlink" title="2. 查看硬件信息"></a>2. 查看硬件信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lscpu</span><br><span class="line">lshw</span><br><span class="line">hwinfo</span><br><span class="line">lspci</span><br><span class="line">lsusb</span><br><span class="line">lsblk</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="3-查找文件"><a href="#3-查找文件" class="headerlink" title="3. 查找文件"></a>3. 查找文件</h3><p><code>locate file_path</code></p>
 <h3 id="4-制作iso文件"><a href="#4-制作iso文件" class="headerlink" title="4. 制作iso文件"></a>4. 制作iso文件</h3><p><code>mkisofs -l -J -L -r -o filename.iso path_to_folder</code></p>
 <h3 id="5-查看主机开放端口"><a href="#5-查看主机开放端口" class="headerlink" title="5. 查看主机开放端口"></a>5. 查看主机开放端口</h3><p><code>nmap your-domain-ip</code></p>
 <h3 id="6-ffmpeg-剪切拼接视频"><a href="#6-ffmpeg-剪切拼接视频" class="headerlink" title="6. ffmpeg 剪切拼接视频"></a>6. ffmpeg 剪切拼接视频</h3><ul>
-<li><p>剪切:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -ss START -i input.mp4  -t TIME -acodec copy -vcodec copy output.mp4</span><br></pre></td></tr></table></figure>
-<p>其中 START/TIME 的格式有两种: 以秒为单位计数  80, 时:分:秒  00:01:20</p>
-</li>
-<li><p>拼接:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i <span class="string">"concat:input1.mpg|input2.mpg|input3.mpg"</span> -c copy output.mpg</span><br></pre></td></tr></table></figure>
-<p>也可以将要拼接的视频放在一个文件list.txt里:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file <span class="string">'/path/to/file1'</span></span><br><span class="line">file <span class="string">'/path/to/file2'</span></span><br><span class="line">file <span class="string">'/path/to/file3'</span></span><br></pre></td></tr></table></figure>
-<p>之后<code>ffmpeg -f concat -i list.txt -c copy output.mp4</code></p>
-</li>
+<li>剪切:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -ss START -i input.mp4  -t TIME -acodec copy -vcodec copy output.mp4</span><br></pre></td></tr></table></figure>
+其中 START/TIME 的格式有两种: 以秒为单位计数  80, 时:分:秒  00:01:20</li>
+<li>拼接:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i <span class="string">"concat:input1.mpg|input2.mpg|input3.mpg"</span> -c copy output.mpg</span><br></pre></td></tr></table></figure>
+也可以将要拼接的视频放在一个文件list.txt里:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file <span class="string">'/path/to/file1'</span></span><br><span class="line">file <span class="string">'/path/to/file2'</span></span><br><span class="line">file <span class="string">'/path/to/file3'</span></span><br></pre></td></tr></table></figure>
+之后<code>ffmpeg -f concat -i list.txt -c copy output.mp4</code></li>
 </ul>
 <h3 id="7-Ubuntu-安装特定版本package"><a href="#7-Ubuntu-安装特定版本package" class="headerlink" title="7. Ubuntu 安装特定版本package"></a>7. Ubuntu 安装特定版本package</h3><p>某个包依赖<code>pkg-config</code>，而<code>pkg-config</code>依赖的一个包始终安装不上，因为版本对不上，手动指定版本降级之后可以<br><code>apt install package=version</code></p>
 
@@ -359,6 +358,35 @@
         </span>
       </div>
     </div>
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+            <span class="icon">
+              <i class="weibo"></i>
+            </span>
+
+            <span class="label">Weibo</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+            <span class="icon">
+              <i class="wechat"></i>
+            </span>
+
+            <span class="label">Wechat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -478,13 +506,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-count">109</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -547,15 +575,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">302k</span>
+    <span title="Symbols count total">306k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:35</span>
+    <span title="Reading time total">4:38</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -574,9 +600,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -585,7 +619,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -605,10 +641,12 @@
   
   <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
   <script>
+      window.addEventListener('load', () => {
       quicklink({
         timeout : 1000,
         priority: false,
         ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2016/06/07/linux06/',]
+      });
       });
   </script>
 <div id="needsharebutton-float">

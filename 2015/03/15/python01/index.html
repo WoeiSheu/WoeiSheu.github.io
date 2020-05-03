@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
   <meta name="baidu-site-verification" content="hRzEYlh3gL">
 
@@ -18,21 +21,22 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="1. BOOLPython 中bool类型把数0看作falsebool(0) 2. range最常用的函数range，可传递1、2或3个参数，只有1个则是下边界，两个就是上下边界，三个则加上了步长。">
-<meta name="keywords" content="programming language,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 琐记一">
 <meta property="og:url" content="https://blog.xuwei.fun/2015/03/15/python01/index.html">
 <meta property="og:site_name" content="霁月荒馆">
 <meta property="og:description" content="1. BOOLPython 中bool类型把数0看作falsebool(0) 2. range最常用的函数range，可传递1、2或3个参数，只有1个则是下边界，两个就是上下边界，三个则加上了步长。">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-18T14:24:33.211Z">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2015-03-15T09:30:00.000Z">
+<meta property="article:modified_time" content="2019-05-18T14:24:33.211Z">
+<meta property="article:author" content="Kino">
+<meta property="article:tag" content="programming language">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python 琐记一">
-<meta name="twitter:description" content="1. BOOLPython 中bool类型把数0看作falsebool(0) 2. range最常用的函数range，可传递1、2或3个参数，只有1个则是下边界，两个就是上下边界，三个则加上了步长。">
 
 <link rel="canonical" href="https://blog.xuwei.fun/2015/03/15/python01/">
 
@@ -156,14 +160,14 @@
     <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -328,15 +332,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-BOOL"><a href="#1-BOOL" class="headerlink" title="1. BOOL"></a>1. BOOL</h3><p>Python 中bool类型把数0看作false<br><code>bool(0)</code></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-BOOL"><a href="#1-BOOL" class="headerlink" title="1. BOOL"></a>1. BOOL</h3><p>Python 中bool类型把数0看作false<br><code>bool(0)</code></p>
 <h3 id="2-range"><a href="#2-range" class="headerlink" title="2. range"></a>2. range</h3><p>最常用的函数range，可传递1、2或3个参数，只有1个则是下边界，两个就是上下边界，三个则加上了步长。</p>
 <a id="more"></a>
-<h3 id="3-lambda"><a href="#3-lambda" class="headerlink" title="3. lambda"></a>3. lambda</h3><p>类似于函数式程序语言Lisp，Python提供了lambda<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="keyword">lambda</span> x,y: x+y</span><br><span class="line"><span class="keyword">print</span> f(<span class="number">1</span>,<span class="number">2</span>)</span><br></pre></td></tr></table></figure></p>
-<p>但是lambda功能有限，它只是一个表达式，不是一个语句，lambda会返回一个值，而不需要return，事实上使用了return就会出现语法错误<br>lambda实际上就是def的简化形式，但是它可以在列表等数据容器中出现</p>
+<h3 id="3-lambda"><a href="#3-lambda" class="headerlink" title="3. lambda"></a>3. lambda</h3><p>类似于函数式程序语言Lisp，Python提供了lambda<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="keyword">lambda</span> x,y: x+y</span><br><span class="line"><span class="keyword">print</span> f(<span class="number">1</span>,<span class="number">2</span>)</span><br></pre></td></tr></table></figure><br>但是lambda功能有限，它只是一个表达式，不是一个语句，lambda会返回一个值，而不需要return，事实上使用了return就会出现语法错误<br>lambda实际上就是def的简化形式，但是它可以在列表等数据容器中出现</p>
 <h3 id="4-map"><a href="#4-map" class="headerlink" title="4. map"></a>4. map</h3><p>map函数处理的是函数，它对一个List对象的每一项都调用了一个传递的函数，并返回一个包含所有调用结果的列表<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">l = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inc2times</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x+x;</span><br><span class="line">r = map(inc2times,l)</span><br><span class="line"><span class="keyword">print</span> r</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> map(<span class="keyword">lambda</span> x: x+x, l)</span><br></pre></td></tr></table></figure></p>
 <h3 id="5-函数式编程"><a href="#5-函数式编程" class="headerlink" title="5. 函数式编程"></a>5. 函数式编程</h3><p>python事实上完全支持函数式编程，函数即对象，这与JavaScript一致，函数可以作为对象来传递、调用，被作为列表的元素等</p>
-<h3 id="6-嵌套函数的作用域"><a href="#6-嵌套函数的作用域" class="headerlink" title="6. 嵌套函数的作用域"></a>6. 嵌套函数的作用域</h3><p>嵌套的函数对自己的局部作用域，包含自己模块的全局作用域以及内置的名字作用域有访问权，它对包含自己的函数的作用域无访问权。无论多深的函数嵌套都只能看见三个作用域。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outer</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">(i)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> i</span><br><span class="line">        <span class="keyword">if</span>(i):</span><br><span class="line">            innenr(i<span class="number">-1</span>)</span><br><span class="line">    inner(x)</span><br><span class="line"></span><br><span class="line">outer(<span class="number">3</span>)</span><br></pre></td></tr></table></figure></p>
-<p>上述代码就会语法出错。</p>
+<h3 id="6-嵌套函数的作用域"><a href="#6-嵌套函数的作用域" class="headerlink" title="6. 嵌套函数的作用域"></a>6. 嵌套函数的作用域</h3><p>嵌套的函数对自己的局部作用域，包含自己模块的全局作用域以及内置的名字作用域有访问权，它对包含自己的函数的作用域无访问权。无论多深的函数嵌套都只能看见三个作用域。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outer</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">(i)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> i</span><br><span class="line">        <span class="keyword">if</span>(i):</span><br><span class="line">            innenr(i<span class="number">-1</span>)</span><br><span class="line">    inner(x)</span><br><span class="line"></span><br><span class="line">outer(<span class="number">3</span>)</span><br></pre></td></tr></table></figure><br>上述代码就会语法出错。</p>
 <h3 id="7-name"><a href="#7-name" class="headerlink" title="7. name"></a>7. <strong>name</strong></h3><p>每一个模块都有一个内置属性<strong>name</strong><br>如果文件作为程序运行，在启动时，<strong>name</strong>设置为字符串<strong>main</strong><br>如果文件是被导入的，<strong>name</strong>设置为用户已知的模块名</p>
 <h3 id="8-site-packages和disk-packages的区别"><a href="#8-site-packages和disk-packages的区别" class="headerlink" title="8.site-packages和disk-packages的区别"></a>8.site-packages和disk-packages的区别</h3><blockquote><br>dist-packages is a Debian-specific convention that is also present in its derivatives, like Ubuntu. Modules are installed to dist-packages when they come from the Debian package manager into this location:<br>/usr/lib/python2.7/dist-packages<br>Since easy_install and pip are installed from the package manager, they also use dist-packages, but they put packages here:<br>/usr/local/lib/python2.7/dist-packages<br>From the Debian Python Wiki:<br>dist-packages instead of site-packages. Third party Python software  installed from Debian packages goes into dist-packages, not  site-packages. This is to reduce conflict between the system Python,  and any from-source Python build you might install manually.<br>This means that if you manually install Python from source, it uses the site-packages directory. This allows you to keep the two installations separate, especially since Debian and Ubuntu rely on the system version of Python for many system utilities.<br></blockquote>
 
@@ -354,6 +356,35 @@
         </span>
       </div>
     </div>
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+            <span class="icon">
+              <i class="weibo"></i>
+            </span>
+
+            <span class="label">Weibo</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+            <span class="icon">
+              <i class="wechat"></i>
+            </span>
+
+            <span class="label">Wechat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -473,13 +504,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-count">109</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -542,15 +573,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">302k</span>
+    <span title="Symbols count total">306k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:35</span>
+    <span title="Reading time total">4:38</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -569,9 +598,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -580,7 +617,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -600,10 +639,12 @@
   
   <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
   <script>
+      window.addEventListener('load', () => {
       quicklink({
         timeout : 1000,
         priority: false,
         ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2015/03/15/python01/',]
+      });
       });
   </script>
 <div id="needsharebutton-float">

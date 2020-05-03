@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
   <meta name="baidu-site-verification" content="hRzEYlh3gL">
 
@@ -18,21 +21,21 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="1. who命令who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。 2. w命令执行这项指令可得知目前登入系统的用户有那些人，以及他们正在执行的程序。单独执行linux w命令会显示所有的用户，您也可指定用户名称，仅显示某位用户的相关信息。 3. 查看端口使用情况netstat   -anp   |   grep  portno比如net">
-<meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux琐记三">
 <meta property="og:url" content="https://blog.xuwei.fun/2015/11/01/linux03/index.html">
 <meta property="og:site_name" content="霁月荒馆">
 <meta property="og:description" content="1. who命令who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。 2. w命令执行这项指令可得知目前登入系统的用户有那些人，以及他们正在执行的程序。单独执行linux w命令会显示所有的用户，您也可指定用户名称，仅显示某位用户的相关信息。 3. 查看端口使用情况netstat   -anp   |   grep  portno比如net">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-18T14:24:33.133Z">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2015-11-01T05:05:00.000Z">
+<meta property="article:modified_time" content="2019-05-18T14:24:33.133Z">
+<meta property="article:author" content="Kino">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux琐记三">
-<meta name="twitter:description" content="1. who命令who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。 2. w命令执行这项指令可得知目前登入系统的用户有那些人，以及他们正在执行的程序。单独执行linux w命令会显示所有的用户，您也可指定用户名称，仅显示某位用户的相关信息。 3. 查看端口使用情况netstat   -anp   |   grep  portno比如net">
 
 <link rel="canonical" href="https://blog.xuwei.fun/2015/11/01/linux03/">
 
@@ -156,14 +159,14 @@
     <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -328,11 +331,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-who命令"><a href="#1-who命令" class="headerlink" title="1. who命令"></a>1. who命令</h3><p>who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-who命令"><a href="#1-who命令" class="headerlink" title="1. who命令"></a>1. who命令</h3><p>who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。</p>
 <h3 id="2-w命令"><a href="#2-w命令" class="headerlink" title="2. w命令"></a>2. w命令</h3><p>执行这项指令可得知目前登入系统的用户有那些人，以及他们正在执行的程序。单独执行linux w命令会显示所有的用户，您也可指定用户名称，仅显示某位用户的相关信息。</p>
 <h3 id="3-查看端口使用情况"><a href="#3-查看端口使用情况" class="headerlink" title="3. 查看端口使用情况"></a>3. 查看端口使用情况</h3><p><code>netstat   -anp   |   grep  portno</code><br>比如<code>netstat –apn | grep 8080</code><br><a id="more"></a></p>
-<h3 id="4-cat命令高级用法"><a href="#4-cat命令高级用法" class="headerlink" title="4. cat命令高级用法"></a>4. cat命令高级用法</h3><p>搭配<code>EOF</code>和输入输出流<code>&gt;&gt;</code>及<code>&lt;&lt;</code>使用，例如Haskell的官方安装教程：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat &gt;&gt; ~/.bashrc &lt;&lt;EOF</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"\$HOME/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.10.3/bin:\$PATH"</span></span><br><span class="line">EOF</span><br><span class="line"><span class="built_in">export</span> PATH=~/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:<span class="variable">$PATH</span>=<span class="string">"</span></span><br></pre></td></tr></table></figure></p>
-<p>以上可以实现文件追加功能，在.bashrc文件最后追加两句环境变量。</p>
+<h3 id="4-cat命令高级用法"><a href="#4-cat命令高级用法" class="headerlink" title="4. cat命令高级用法"></a>4. cat命令高级用法</h3><p>搭配<code>EOF</code>和输入输出流<code>&gt;&gt;</code>及<code>&lt;&lt;</code>使用，例如Haskell的官方安装教程：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat &gt;&gt; ~/.bashrc &lt;&lt;EOF</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"\$HOME/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.10.3/bin:\$PATH"</span></span><br><span class="line">EOF</span><br><span class="line"><span class="built_in">export</span> PATH=~/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:<span class="variable">$PATH</span>=<span class="string">"</span></span><br></pre></td></tr></table></figure><br>以上可以实现文件追加功能，在.bashrc文件最后追加两句环境变量。</p>
 <h3 id="5-Linux命令行下引号"><a href="#5-Linux命令行下引号" class="headerlink" title="5. Linux命令行下引号"></a>5. Linux命令行下引号</h3><p><code>echo &quot;$PATH&quot;</code>与<code>echo $PATH</code>的结果相同，输出PATH变量的值，而<code>echo &#39;$PATH&#39;</code>输出的结果就是<code>$PATH</code>这个字符串</p>
 <h3 id="6-修改ssh-端口号"><a href="#6-修改ssh-端口号" class="headerlink" title="6. 修改ssh 端口号"></a>6. 修改ssh 端口号</h3><p><code>vim /etc/ssh/sshd_config</code> 找到port修改即可，当然还是注意尽量不要使用1024以下的端口，即使你是root用户。<br>之后重启：<code>service ssh restart</code></p>
 <h3 id="7-修改用户所属用户组"><a href="#7-修改用户所属用户组" class="headerlink" title="7. 修改用户所属用户组"></a>7. 修改用户所属用户组</h3><p><code>usermod -g newgroup username</code></p>
@@ -383,6 +385,35 @@
         </span>
       </div>
     </div>
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+            <span class="icon">
+              <i class="weibo"></i>
+            </span>
+
+            <span class="label">Weibo</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+            <span class="icon">
+              <i class="wechat"></i>
+            </span>
+
+            <span class="label">Wechat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -501,13 +532,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-count">109</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -570,15 +601,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">302k</span>
+    <span title="Symbols count total">306k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:35</span>
+    <span title="Reading time total">4:38</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -597,9 +626,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -608,7 +645,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -628,10 +667,12 @@
   
   <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
   <script>
+      window.addEventListener('load', () => {
       quicklink({
         timeout : 1000,
         priority: false,
         ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2015/11/01/linux03/',]
+      });
       });
   </script>
 <div id="needsharebutton-float">

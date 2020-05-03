@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
   <meta name="baidu-site-verification" content="hRzEYlh3gL">
 
@@ -18,23 +21,24 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="1. Logistic回归利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类 2. 基于Logistic回归和Sigmoid函数的分类我们想要的函数是能接受所有的输入然后预测出类别。例如,在两个类的情况下,上述函数输出0或1,我们接触过的函数 Heaviside step function(单位阶跃函数)即是。然而此函数在跳跃点上从0瞬间跳跃到1，这">
-<meta name="keywords" content="machine learning,logistic">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习四">
 <meta property="og:url" content="https://blog.xuwei.fun/2015/08/25/machineLearning04/index.html">
 <meta property="og:site_name" content="霁月荒馆">
 <meta property="og:description" content="1. Logistic回归利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类 2. 基于Logistic回归和Sigmoid函数的分类我们想要的函数是能接受所有的输入然后预测出类别。例如,在两个类的情况下,上述函数输出0或1,我们接触过的函数 Heaviside step function(单位阶跃函数)即是。然而此函数在跳跃点上从0瞬间跳跃到1，这">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.xuwei.fun/images/machineLearning04_4.png">
 <meta property="og:image" content="https://blog.xuwei.fun/images/machineLearning04_6.png">
-<meta property="og:updated_time" content="2019-05-18T14:24:33.163Z">
+<meta property="article:published_time" content="2015-08-25T10:00:00.000Z">
+<meta property="article:modified_time" content="2019-05-18T14:24:33.163Z">
+<meta property="article:author" content="Kino">
+<meta property="article:tag" content="machine learning">
+<meta property="article:tag" content="logistic">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习四">
-<meta name="twitter:description" content="1. Logistic回归利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类 2. 基于Logistic回归和Sigmoid函数的分类我们想要的函数是能接受所有的输入然后预测出类别。例如,在两个类的情况下,上述函数输出0或1,我们接触过的函数 Heaviside step function(单位阶跃函数)即是。然而此函数在跳跃点上从0瞬间跳跃到1，这">
 <meta name="twitter:image" content="https://blog.xuwei.fun/images/machineLearning04_4.png">
 
 <link rel="canonical" href="https://blog.xuwei.fun/2015/08/25/machineLearning04/">
@@ -159,14 +163,14 @@
     <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -331,7 +335,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-Logistic回归"><a href="#1-Logistic回归" class="headerlink" title="1. Logistic回归"></a>1. Logistic回归</h3><p>利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-Logistic回归"><a href="#1-Logistic回归" class="headerlink" title="1. Logistic回归"></a>1. Logistic回归</h3><p>利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类</p>
 <h3 id="2-基于Logistic回归和Sigmoid函数的分类"><a href="#2-基于Logistic回归和Sigmoid函数的分类" class="headerlink" title="2. 基于Logistic回归和Sigmoid函数的分类"></a>2. 基于Logistic回归和Sigmoid函数的分类</h3><p>我们想要的函数是能接受所有的输入然后预测出类别。例如,在两个类的情况下,上述函数输出0或1,我们接触过的函数 Heaviside step function(单位阶跃函数)即是。然而此函数在跳跃点上从0瞬间跳跃到1，这个瞬间跳跃过程有时很难处理。Sigmoid函数有类似的性质但是更容易处理，其具体计算公式为：\(\sigma(z)=\frac{1}{1+e^{-z}}\)<br>为了实现Logistic回归分类器，我们可以在每个特征上都乘以一个回归系数，然后把所有的结果值相加，将这个总和代入Sigmoid函数中，进而得到一个范围在0~1之间的数值。任何大于0.5的数据被分入1类，小于0.5即被归为0类。所以，Logistic回归也可以看成是一种概率估计<br>确定了分类器的函数形式后，问题变为求最佳回归系数。<br><a id="more"></a></p>
 <h3 id="3-基于最优化方法的最佳回归系数确定"><a href="#3-基于最优化方法的最佳回归系数确定" class="headerlink" title="3. 基于最优化方法的最佳回归系数确定"></a>3. 基于最优化方法的最佳回归系数确定</h3><p>Sigmoid函数的输入记为z，由下公式得出:<br>\(z=w_0x_0+w_1x_1+\cdots+w_nx_n=w^Tx\)<br>其中向量x是分类器的输入数据，向量w就是我们要找到的最佳参数(系数)，从而使分类器尽可能精确。</p>
 <h4 id="3-1-最优化方法：梯度上升法"><a href="#3-1-最优化方法：梯度上升法" class="headerlink" title="3.1 最优化方法：梯度上升法"></a>3.1 最优化方法：梯度上升法</h4><p>梯度上升法基于的思想是:<br>要找到某函数的最大值最好的方法是沿着该函数的梯度方向做探寻，如果梯度记为\(\nabla\)，则函数\(f(x,y)\)的梯度由下式表示：\(\nabla f(x,y)=\begin{bmatrix}<br>\frac{\partial f(x,y)}{\partial x} \\<br>\frac{\partial f(x,y)}{\partial y}<br>\end{bmatrix}\)<br>其中，函数f(x,y)必须在待计算的点上有定义并可微。具体函数示例图如下:<br><img src="/images/machineLearning04_4.png" alt="fourth"></p>
@@ -341,14 +345,12 @@
 </li>
 </ul>
 <h4 id="3-2-分析数据-画出决策边界"><a href="#3-2-分析数据-画出决策边界" class="headerlink" title="3.2 分析数据: 画出决策边界"></a>3.2 分析数据: 画出决策边界</h4><p>上面已经解出了一组回归系数，它确定了不同类别数据间的分割线，以下函数画出分割线:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plotBestFit</span><span class="params">(wei)</span>:</span></span><br><span class="line">    <span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">    weights = wei.getA()</span><br><span class="line">    dataMat,labelMat=loadDataSet()</span><br><span class="line">    dataArr = array(dataMat)</span><br><span class="line">    n = shape(dataArr)[<span class="number">0</span>] </span><br><span class="line">    xcord1 = []; ycord1 = []</span><br><span class="line">    xcord2 = []; ycord2 = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        <span class="keyword">if</span> int(labelMat[i])== <span class="number">1</span>:</span><br><span class="line">            xcord1.append(dataArr[i,<span class="number">1</span>]); ycord1.append(dataArr[i,<span class="number">2</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            xcord2.append(dataArr[i,<span class="number">1</span>]); ycord2.append(dataArr[i,<span class="number">2</span>])</span><br><span class="line">    fig = plt.figure()</span><br><span class="line">    ax = fig.add_subplot(<span class="number">111</span>)</span><br><span class="line">    ax.scatter(xcord1, ycord1, s=<span class="number">30</span>, c=<span class="string">'red'</span>, marker=<span class="string">'s'</span>)</span><br><span class="line">    ax.scatter(xcord2, ycord2, s=<span class="number">30</span>, c=<span class="string">'green'</span>)</span><br><span class="line">    x = arange(<span class="number">-3.0</span>, <span class="number">3.0</span>, <span class="number">0.1</span>)</span><br><span class="line">    y = (-weights[<span class="number">0</span>]-weights[<span class="number">1</span>]*x)/weights[<span class="number">2</span>]           </span><br><span class="line">    ax.plot(x, y)</span><br><span class="line">    plt.xlabel(<span class="string">'X1'</span>); plt.ylabel(<span class="string">'X2'</span>);</span><br><span class="line">    plt.show()</span><br></pre></td></tr></table></figure></p>
-<h4 id="3-3-训练算法：随机梯度上升"><a href="#3-3-训练算法：随机梯度上升" class="headerlink" title="3.3 训练算法：随机梯度上升"></a>3.3 训练算法：随机梯度上升</h4><p>梯度上升算法在每次更新回归系数时都需要遍历整个数据集，该方法处理100个左右的数据集时尚可，若数据集过大则计算复杂度太高，改进方法之一是一次仅用一个样本点来更新回归系数，该方法称为随机梯度上升算法。由于可以在新样本到来时对分类器进行增量式更新，因而随机梯度上升算法是一个在线学习算法，与”在线学习”相对应，一次处理所有系数称为”批处理”<br>伪代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">每个回归系数初始化为1</span><br><span class="line">对数据集中每个样本：</span><br><span class="line">    计算该样本的梯度</span><br><span class="line">    使用alpha × gradient更新回归系数值</span><br><span class="line">返回回归系数值</span><br></pre></td></tr></table></figure></p>
-<p>实际代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">stocGradAscent0</span><span class="params">(dataMatrix, classLabels)</span>:</span></span><br><span class="line">    m,n = shape(dataMatrix)</span><br><span class="line">    alpha = <span class="number">0.01</span></span><br><span class="line">    weights = ones(n)   </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">        h = sigmoid(sum(dataMatrix[i]*weights))</span><br><span class="line">        error = classLabels[i] - h</span><br><span class="line">        weights = weights + alpha * error * dataMatrix[i]</span><br><span class="line">    <span class="keyword">return</span> weights</span><br></pre></td></tr></table></figure></p>
-<p>运行一次并不能看出最终效果，修改代码使其在数据集上运行200(or other)次。而对于不同的系数，迭代达到稳定的次数不同，有的也许只要50次，而有的则会来回波动，为了避免来回波动，从而收敛到某个值，以及加快收敛速度，代码改进：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">stocGradAscent1</span><span class="params">(dataMatrix, classLabels, numIter=<span class="number">150</span>)</span>:</span></span><br><span class="line">    m,n = shape(dataMatrix)</span><br><span class="line">    weights = ones(n)   </span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(numIter):        dataIndex = range(m)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">            alpha = <span class="number">4</span>/(<span class="number">1.0</span>+j+i)+<span class="number">0.01</span>               </span><br><span class="line">            randIndex = int(random.uniform(<span class="number">0</span>,len(dataIndex)))        </span><br><span class="line">            h = sigmoid(sum(dataMatrix[randIndex]*weights))</span><br><span class="line">            error = classLabels[randIndex] - h</span><br><span class="line">            weights = weights + alpha * error * dataMatrix[randIndex]</span><br><span class="line">            <span class="keyword">del</span>(dataIndex[randIndex])</span><br><span class="line">    <span class="keyword">return</span> weights</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-3-训练算法：随机梯度上升"><a href="#3-3-训练算法：随机梯度上升" class="headerlink" title="3.3 训练算法：随机梯度上升"></a>3.3 训练算法：随机梯度上升</h4><p>梯度上升算法在每次更新回归系数时都需要遍历整个数据集，该方法处理100个左右的数据集时尚可，若数据集过大则计算复杂度太高，改进方法之一是一次仅用一个样本点来更新回归系数，该方法称为随机梯度上升算法。由于可以在新样本到来时对分类器进行增量式更新，因而随机梯度上升算法是一个在线学习算法，与”在线学习”相对应，一次处理所有系数称为”批处理”<br>伪代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">每个回归系数初始化为1</span><br><span class="line">对数据集中每个样本：</span><br><span class="line">    计算该样本的梯度</span><br><span class="line">    使用alpha × gradient更新回归系数值</span><br><span class="line">返回回归系数值</span><br></pre></td></tr></table></figure><br>实际代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">stocGradAscent0</span><span class="params">(dataMatrix, classLabels)</span>:</span></span><br><span class="line">    m,n = shape(dataMatrix)</span><br><span class="line">    alpha = <span class="number">0.01</span></span><br><span class="line">    weights = ones(n)   </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">        h = sigmoid(sum(dataMatrix[i]*weights))</span><br><span class="line">        error = classLabels[i] - h</span><br><span class="line">        weights = weights + alpha * error * dataMatrix[i]</span><br><span class="line">    <span class="keyword">return</span> weights</span><br></pre></td></tr></table></figure><br>运行一次并不能看出最终效果，修改代码使其在数据集上运行200(or other)次。而对于不同的系数，迭代达到稳定的次数不同，有的也许只要50次，而有的则会来回波动，为了避免来回波动，从而收敛到某个值，以及加快收敛速度，代码改进：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">stocGradAscent1</span><span class="params">(dataMatrix, classLabels, numIter=<span class="number">150</span>)</span>:</span></span><br><span class="line">    m,n = shape(dataMatrix)</span><br><span class="line">    weights = ones(n)   </span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(numIter):        dataIndex = range(m)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">            alpha = <span class="number">4</span>/(<span class="number">1.0</span>+j+i)+<span class="number">0.01</span>               </span><br><span class="line">            randIndex = int(random.uniform(<span class="number">0</span>,len(dataIndex)))        </span><br><span class="line">            h = sigmoid(sum(dataMatrix[randIndex]*weights))</span><br><span class="line">            error = classLabels[randIndex] - h</span><br><span class="line">            weights = weights + alpha * error * dataMatrix[randIndex]</span><br><span class="line">            <span class="keyword">del</span>(dataIndex[randIndex])</span><br><span class="line">    <span class="keyword">return</span> weights</span><br></pre></td></tr></table></figure></p>
 <pre><code>- 一方面，alpha在每次迭代时都会调整，这会缓解数据波动或高频波动，另外虽然alpha随着迭代次数不断减小，但不会减为0，这样做是为了保证多次迭代后新数据仍有一定影响。如果要处理的问题是动态变化的，可以适当加大上述常数项，以确保新值获得更大的回归系数。在降低alpha函数中，每次减少1/(j+i)，其中j是迭代次数，i是样本点的下标，这样j&amp;lt;&amp;lt;max(i)时，alpha就不是严格下降的，避免严格下降也常用于模拟退火等优化算法中
 - 另一方面，通过随机选取样本来更新回归系数，这将减少周期性的波动
 - 此外，改进算法增加了一个参数确定迭代次数
 </code></pre><h3 id="4-示例：预测病马的死亡率"><a href="#4-示例：预测病马的死亡率" class="headerlink" title="4. 示例：预测病马的死亡率"></a>4. 示例：预测病马的死亡率</h3><p>数据来源于<a href="http://archive.ics.uci.edu/ml/
-datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a>，数据包含368个样本和28个特征。该数据集部分指标主观难以测量，且数据集中有30%的值是缺失的</p>
+datasets/Horse+Colic">UCI机器学习数据库</a>，数据包含368个样本和28个特征。该数据集部分指标主观难以测量，且数据集中有30%的值是缺失的</p>
 <h4 id="4-1-准备数据"><a href="#4-1-准备数据" class="headerlink" title="4.1 准备数据"></a>4.1 准备数据</h4><p>处理数据中的缺失值, 可选做法有：</p>
 <ul>
 <li>使用可用特征的均值来填补缺失值</li>
@@ -358,8 +360,7 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
 <li>使用另外的机器学习算法预测缺失值</li>
 </ul>
 <p>这里我们将所有的缺失值用0替代，因为其恰好能用于Logistic回归，在回归系数更新公式中:<br><code>weights = weights + alpha * error * dataMatrix[randIndex]</code><br>如果dataMatrix的某特征对应0，则该特征将不做更新。另外由于sigmoid(0)=0.5，它对结果的预测不具有任何倾向性<br>如果在测试数据集中发现一条数据的类别标签已经缺失，最简单的做法是将该数据丢弃</p>
-<h4 id="4-2-测试算法"><a href="#4-2-测试算法" class="headerlink" title="4.2 测试算法"></a>4.2 测试算法</h4><p>用Logistic回归进行分类, Logistic回归分类函数：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">classifyVector</span><span class="params">(inX, weights)</span>:</span></span><br><span class="line">    prob = sigmoid(sum(inX*weights))</span><br><span class="line">    <span class="keyword">if</span> prob &gt; <span class="number">0.5</span>: <span class="keyword">return</span> <span class="number">1.0</span></span><br><span class="line">    <span class="keyword">else</span>: <span class="keyword">return</span> <span class="number">0.0</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">colicTest</span><span class="params">()</span>:</span></span><br><span class="line">    frTrain = open(<span class="string">'horseColicTraining.txt'</span>) </span><br><span class="line">    frTest = open(<span class="string">'horseColicTest.txt'</span>)</span><br><span class="line">    trainingSet = []; trainingLabels = []</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> frTrain.readlines():</span><br><span class="line">        currLine = line.strip().split(<span class="string">'\t'</span>)</span><br><span class="line">        lineArr =[]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">21</span>):</span><br><span class="line">            lineArr.append(float(currLine[i]))</span><br><span class="line">        trainingSet.append(lineArr)</span><br><span class="line">        trainingLabels.append(float(currLine[<span class="number">21</span>]))</span><br><span class="line">    trainWeights = stocGradAscent1(array(trainingSet), trainingLabels, <span class="number">500</span>)</span><br><span class="line">    errorCount = <span class="number">0</span>; numTestVec = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> frTest.readlines():</span><br><span class="line">        numTestVec += <span class="number">1.0</span></span><br><span class="line">        currLine = line.strip().split(<span class="string">'\t'</span>)</span><br><span class="line">        lineArr =[]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">21</span>):</span><br><span class="line">            lineArr.append(float(currLine[i]))</span><br><span class="line">        <span class="keyword">if</span> int(classifyVector(array(lineArr), trainWeights))!= </span><br><span class="line">            int(currLine[<span class="number">21</span>]):</span><br><span class="line">            errorCount += <span class="number">1</span></span><br><span class="line">    errorRate = (float(errorCount)/numTestVec)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"the error rate of this test is: %f"</span> % errorRate</span><br><span class="line">    <span class="keyword">return</span> errorRate</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">multiTest</span><span class="params">()</span>:</span></span><br><span class="line">    numTests = <span class="number">10</span>; errorSum=<span class="number">0.0</span></span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> range(numTests):</span><br><span class="line">        errorSum += colicTest()</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"after %d iterations the average error rate is:</span></span><br><span class="line"><span class="string">        %f"</span> % (numTests, errorSum/float(numTests))</span><br></pre></td></tr></table></figure></p>
-<p>classifyVector()，它以回归系数和特征向量作为输入来计算对应的Sigmoid值<br>colicTest()是用于打开测试集和训练集，并对数据进行格式化处理的函数<br>multiTest()，其功能是调用colicTest()10次并求结果的平均值</p>
+<h4 id="4-2-测试算法"><a href="#4-2-测试算法" class="headerlink" title="4.2 测试算法"></a>4.2 测试算法</h4><p>用Logistic回归进行分类, Logistic回归分类函数：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">classifyVector</span><span class="params">(inX, weights)</span>:</span></span><br><span class="line">    prob = sigmoid(sum(inX*weights))</span><br><span class="line">    <span class="keyword">if</span> prob &gt; <span class="number">0.5</span>: <span class="keyword">return</span> <span class="number">1.0</span></span><br><span class="line">    <span class="keyword">else</span>: <span class="keyword">return</span> <span class="number">0.0</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">colicTest</span><span class="params">()</span>:</span></span><br><span class="line">    frTrain = open(<span class="string">'horseColicTraining.txt'</span>) </span><br><span class="line">    frTest = open(<span class="string">'horseColicTest.txt'</span>)</span><br><span class="line">    trainingSet = []; trainingLabels = []</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> frTrain.readlines():</span><br><span class="line">        currLine = line.strip().split(<span class="string">'\t'</span>)</span><br><span class="line">        lineArr =[]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">21</span>):</span><br><span class="line">            lineArr.append(float(currLine[i]))</span><br><span class="line">        trainingSet.append(lineArr)</span><br><span class="line">        trainingLabels.append(float(currLine[<span class="number">21</span>]))</span><br><span class="line">    trainWeights = stocGradAscent1(array(trainingSet), trainingLabels, <span class="number">500</span>)</span><br><span class="line">    errorCount = <span class="number">0</span>; numTestVec = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> frTest.readlines():</span><br><span class="line">        numTestVec += <span class="number">1.0</span></span><br><span class="line">        currLine = line.strip().split(<span class="string">'\t'</span>)</span><br><span class="line">        lineArr =[]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">21</span>):</span><br><span class="line">            lineArr.append(float(currLine[i]))</span><br><span class="line">        <span class="keyword">if</span> int(classifyVector(array(lineArr), trainWeights))!= </span><br><span class="line">            int(currLine[<span class="number">21</span>]):</span><br><span class="line">            errorCount += <span class="number">1</span></span><br><span class="line">    errorRate = (float(errorCount)/numTestVec)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"the error rate of this test is: %f"</span> % errorRate</span><br><span class="line">    <span class="keyword">return</span> errorRate</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">multiTest</span><span class="params">()</span>:</span></span><br><span class="line">    numTests = <span class="number">10</span>; errorSum=<span class="number">0.0</span></span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> range(numTests):</span><br><span class="line">        errorSum += colicTest()</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"after %d iterations the average error rate is:</span></span><br><span class="line"><span class="string">        %f"</span> % (numTests, errorSum/float(numTests))</span><br></pre></td></tr></table></figure><br>classifyVector()，它以回归系数和特征向量作为输入来计算对应的Sigmoid值<br>colicTest()是用于打开测试集和训练集，并对数据进行格式化处理的函数<br>multiTest()，其功能是调用colicTest()10次并求结果的平均值</p>
 
     </div>
 
@@ -372,6 +373,35 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
         </span>
       </div>
     </div>
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+            <span class="icon">
+              <i class="weibo"></i>
+            </span>
+
+            <span class="label">Weibo</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+            <span class="icon">
+              <i class="wechat"></i>
+            </span>
+
+            <span class="label">Wechat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -491,13 +521,13 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-count">109</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -560,15 +590,13 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">302k</span>
+    <span title="Symbols count total">306k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:35</span>
+    <span title="Reading time total">4:38</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -587,9 +615,17 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -598,7 +634,9 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -655,7 +693,7 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
     };
     (function () {
       var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
       script.defer = true;
       document.head.appendChild(script);
     })();
@@ -671,10 +709,12 @@ datasets/Horse+Colic" target="_blank" rel="noopener">UCI机器学习数据库</a
   
   <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
   <script>
+      window.addEventListener('load', () => {
       quicklink({
         timeout : 1000,
         priority: false,
         ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2015/08/25/machineLearning04/',]
+      });
       });
   </script>
 <div id="needsharebutton-float">

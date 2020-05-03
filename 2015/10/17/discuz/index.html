@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
   <meta name="baidu-site-verification" content="hRzEYlh3gL">
 
@@ -18,21 +21,23 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="1. 前言飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、 2. Apache2.1 缺少msvcr110.dll首先是httpd -k install时直接提示缺少msvcr110.dll, 安装了vcredist_x64.exe还是不行, 想着直接装.net库, 然而并不可以。最后想起来当时下的apache是3">
-<meta name="keywords" content="apache,discuz,filezilla">
 <meta property="og:type" content="article">
 <meta property="og:title" content="折腾车队服务器">
 <meta property="og:url" content="https://blog.xuwei.fun/2015/10/17/discuz/index.html">
 <meta property="og:site_name" content="霁月荒馆">
 <meta property="og:description" content="1. 前言飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、 2. Apache2.1 缺少msvcr110.dll首先是httpd -k install时直接提示缺少msvcr110.dll, 安装了vcredist_x64.exe还是不行, 想着直接装.net库, 然而并不可以。最后想起来当时下的apache是3">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-18T14:24:33.029Z">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2015-10-17T15:00:00.000Z">
+<meta property="article:modified_time" content="2019-05-18T14:24:33.029Z">
+<meta property="article:author" content="Kino">
+<meta property="article:tag" content="apache">
+<meta property="article:tag" content="discuz">
+<meta property="article:tag" content="filezilla">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="折腾车队服务器">
-<meta name="twitter:description" content="1. 前言飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、 2. Apache2.1 缺少msvcr110.dll首先是httpd -k install时直接提示缺少msvcr110.dll, 安装了vcredist_x64.exe还是不行, 想着直接装.net库, 然而并不可以。最后想起来当时下的apache是3">
 
 <link rel="canonical" href="https://blog.xuwei.fun/2015/10/17/discuz/">
 
@@ -156,14 +161,14 @@
     <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -328,22 +333,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、</p>
 <h3 id="2-Apache"><a href="#2-Apache" class="headerlink" title="2. Apache"></a>2. Apache</h3><h4 id="2-1-缺少msvcr110-dll"><a href="#2-1-缺少msvcr110-dll" class="headerlink" title="2.1 缺少msvcr110.dll"></a>2.1 缺少msvcr110.dll</h4><p>首先是<code>httpd -k install</code>时直接提示缺少msvcr110.dll, 安装了<code>vcredist_x64.exe</code>还是不行, 想着直接装.net库, 然而并不可以。最后想起来当时下的apache是32位的, 安装了<code>vcredist_x86.exe</code>之后apache安装成功。<br><a id="more"></a></p>
 <h4 id="2-2-Servername错误"><a href="#2-2-Servername错误" class="headerlink" title="2.2 Servername错误"></a>2.2 Servername错误</h4><p>之后出现了ServerName错误，直接将<code>#ServerName: localhost:80</code>注释去了，改为自己需要的。</p>
 <h3 id="3-Discuz"><a href="#3-Discuz" class="headerlink" title="3. Discuz"></a>3. Discuz</h3><h4 id="3-1-无法连接数据库"><a href="#3-1-无法连接数据库" class="headerlink" title="3.1 无法连接数据库"></a>3.1 无法连接数据库</h4><p>安装discuz时，显示无法连接数据库，不支持<code>mysqli_connect</code>，建议<code>advice_mysqli_connect</code>，但是php的配置文件里绝对是修改过的，搜了搜发现是<code>extension_dir</code>使用相对路径有时会出错，改为绝对路径后成功</p>
 <h4 id="3-2-网站间隔性无法访问"><a href="#3-2-网站间隔性无法访问" class="headerlink" title="3.2 网站间隔性无法访问"></a>3.2 网站间隔性无法访问</h4><p>安装之后即可查看了，但是网站会经常无法访问一段时间，查看日志错误信息为: <strong>AH00341 指定的网络名不再可用</strong>，找到的解决方法有:</p>
 <ol>
-<li><p>在httpd.conf里添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ThreadsPerChild 1000</span><br><span class="line">MaxRequestsPerChild 10000</span><br><span class="line">Win32DisableAcceptEx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在httpd.conf里添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">AcceptFilter http none</span><br><span class="line">AcceptFilter https none</span><br><span class="line">EnableSendfile Off </span><br><span class="line">EnableMMAP off</span><br></pre></td></tr></table></figure>
+<li>在httpd.conf里添加：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ThreadsPerChild 1000</span><br><span class="line">MaxRequestsPerChild 10000</span><br><span class="line">Win32DisableAcceptEx</span><br></pre></td></tr></table></figure></li>
+<li>在httpd.conf里添加：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">AcceptFilter http none</span><br><span class="line">AcceptFilter https none</span><br><span class="line">EnableSendfile Off </span><br><span class="line">EnableMMAP off</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>使用第二种方法解决问题，但是只添加了前两句即可。</p>
-<h4 id="3-3-Child-Starting-64-worker-threads"><a href="#3-3-Child-Starting-64-worker-threads" class="headerlink" title="3.3 Child: Starting 64 worker threads"></a>3.3 Child: Starting 64 worker threads</h4><p>errors.log里还有AH00354: Child: Starting 64 worker threads的提醒，这个应该是和分配给Apache的线程数有关，倒是可以用上述方法解决:<br>在httpd.conf找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mpm_winnt.c&gt;</span><br><span class="line">  ThreadsPerChild 64</span><br><span class="line">  MaxRequestsPerChild 1000</span><br><span class="line">  Win32DisableAcceptEx</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure></p>
-<p>将ThreadsPerChild的数目改大点，当然这和硬件关联很大。</p>
+<h4 id="3-3-Child-Starting-64-worker-threads"><a href="#3-3-Child-Starting-64-worker-threads" class="headerlink" title="3.3 Child: Starting 64 worker threads"></a>3.3 Child: Starting 64 worker threads</h4><p>errors.log里还有AH00354: Child: Starting 64 worker threads的提醒，这个应该是和分配给Apache的线程数有关，倒是可以用上述方法解决:<br>在httpd.conf找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mpm_winnt.c&gt;</span><br><span class="line">  ThreadsPerChild 64</span><br><span class="line">  MaxRequestsPerChild 1000</span><br><span class="line">  Win32DisableAcceptEx</span><br><span class="line">&lt;&#x2F;IfModule&gt;</span><br></pre></td></tr></table></figure><br>将ThreadsPerChild的数目改大点，当然这和硬件关联很大。</p>
 <h4 id="3-4-无法上传附件"><a href="#3-4-无法上传附件" class="headerlink" title="3.4 无法上传附件"></a>3.4 无法上传附件</h4><p>discuz的头像和附件都无法上传，开始以为只是头像无法上传，提示错误是cannot write data/tmp，感觉是权限问题，就把整个目录权限提升了一番，但是还是不行，最后将<code>#upload_tmp_dir =</code>注释去了，加入discuz的<code>ucenter_server/data/tmp</code>目录，解决问题。</p>
 <h3 id="4-Filezilla"><a href="#4-Filezilla" class="headerlink" title="4. Filezilla"></a>4. Filezilla</h3><p>还用filezilla搭了个ftp服务器，配置好后无法通过其他地址访问，查阅资料将filezilla添加到防火墙允许通过</p>
 
@@ -358,6 +359,35 @@
         </span>
       </div>
     </div>
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+            <span class="icon">
+              <i class="weibo"></i>
+            </span>
+
+            <span class="label">Weibo</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+            <span class="icon">
+              <i class="wechat"></i>
+            </span>
+
+            <span class="label">Wechat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -478,13 +508,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-count">109</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -547,15 +577,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">302k</span>
+    <span title="Symbols count total">306k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:35</span>
+    <span title="Reading time total">4:38</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -574,9 +602,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -585,7 +621,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -605,10 +643,12 @@
   
   <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
   <script>
+      window.addEventListener('load', () => {
       quicklink({
         timeout : 1000,
         priority: false,
         ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2015/10/17/discuz/',]
+      });
       });
   </script>
 <div id="needsharebutton-float">

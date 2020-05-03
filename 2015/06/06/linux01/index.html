@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
   <meta name="baidu-site-verification" content="hRzEYlh3gL">
 
@@ -18,21 +21,21 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1. 音频设备aplay -l会列出所有设备alsamixer灰常实用/usr/bin/lspci | grep -i audio 2. xargs通常使用管道的范例：cat test.txt | grep -E &amp;#39;*test*&amp;#39;但若是前者可以作为后者的参数带入时，可以使用xargs：echo “*test*” | xargs find / -name上述若是不加xargs则无法使">
-<meta name="keywords" content="linux">
+  <meta name="description" content="1. 音频设备aplay -l会列出所有设备alsamixer灰常实用&#x2F;usr&#x2F;bin&#x2F;lspci | grep -i audio 2. xargs通常使用管道的范例：cat test.txt | grep -E &#39;*test*&#39;但若是前者可以作为后者的参数带入时，可以使用xargs：echo “*test*” | xargs find &#x2F; -name上述若是不加xargs则无法使">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux琐记一">
 <meta property="og:url" content="https://blog.xuwei.fun/2015/06/06/linux01/index.html">
 <meta property="og:site_name" content="霁月荒馆">
-<meta property="og:description" content="1. 音频设备aplay -l会列出所有设备alsamixer灰常实用/usr/bin/lspci | grep -i audio 2. xargs通常使用管道的范例：cat test.txt | grep -E &amp;#39;*test*&amp;#39;但若是前者可以作为后者的参数带入时，可以使用xargs：echo “*test*” | xargs find / -name上述若是不加xargs则无法使">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-18T14:24:33.129Z">
+<meta property="og:description" content="1. 音频设备aplay -l会列出所有设备alsamixer灰常实用&#x2F;usr&#x2F;bin&#x2F;lspci | grep -i audio 2. xargs通常使用管道的范例：cat test.txt | grep -E &#39;*test*&#39;但若是前者可以作为后者的参数带入时，可以使用xargs：echo “*test*” | xargs find &#x2F; -name上述若是不加xargs则无法使">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2015-06-06T09:30:00.000Z">
+<meta property="article:modified_time" content="2019-05-18T14:24:33.129Z">
+<meta property="article:author" content="Kino">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux琐记一">
-<meta name="twitter:description" content="1. 音频设备aplay -l会列出所有设备alsamixer灰常实用/usr/bin/lspci | grep -i audio 2. xargs通常使用管道的范例：cat test.txt | grep -E &amp;#39;*test*&amp;#39;但若是前者可以作为后者的参数带入时，可以使用xargs：echo “*test*” | xargs find / -name上述若是不加xargs则无法使">
 
 <link rel="canonical" href="https://blog.xuwei.fun/2015/06/06/linux01/">
 
@@ -156,14 +159,14 @@
     <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -328,7 +331,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-音频设备"><a href="#1-音频设备" class="headerlink" title="1. 音频设备"></a>1. 音频设备</h3><p>aplay -l会列出所有设备<br>alsamixer灰常实用<br><code>/usr/bin/lspci | grep -i audio</code></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-音频设备"><a href="#1-音频设备" class="headerlink" title="1. 音频设备"></a>1. 音频设备</h3><p>aplay -l会列出所有设备<br>alsamixer灰常实用<br><code>/usr/bin/lspci | grep -i audio</code></p>
 <h3 id="2-xargs"><a href="#2-xargs" class="headerlink" title="2. xargs"></a>2. xargs</h3><p>通常使用管道的范例：<code>cat test.txt | grep -E &#39;*test*&#39;</code><br>但若是前者可以作为后者的参数带入时，可以使用xargs：<br><code>echo “*test*” | xargs find / -name</code><br>上述若是不加xargs则无法使用<br>xargs的实际功能是是以行为单位读取输入数据并执行参数变化，于是可以有更强大的用处，例如：<br><code>find / -name &#39;*portaudio*&#39; | xargs ls -l</code><br><a id="more"></a></p>
 <h3 id="3-截图"><a href="#3-截图" class="headerlink" title="3. 截图"></a>3. 截图</h3><p>截图可以将PrntScr辅以Shift和Alt键，得到不同效果</p>
 <h3 id="4-ssh远程下载上传文件"><a href="#4-ssh远程下载上传文件" class="headerlink" title="4. ssh远程下载上传文件"></a>4. ssh远程下载上传文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp [-P port] username@host:/path/to/remote/<span class="built_in">source</span> /path/to/<span class="built_in">local</span>/dest</span><br><span class="line">scp [-P port] /path/to/<span class="built_in">local</span>/<span class="built_in">source</span> username@host:/path/to/remote/dest</span><br></pre></td></tr></table></figure>
@@ -349,6 +352,35 @@
         </span>
       </div>
     </div>
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+            <span class="icon">
+              <i class="weibo"></i>
+            </span>
+
+            <span class="label">Weibo</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+            <span class="icon">
+              <i class="wechat"></i>
+            </span>
+
+            <span class="label">Wechat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -467,13 +499,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-count">109</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -536,15 +568,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">302k</span>
+    <span title="Symbols count total">306k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:35</span>
+    <span title="Reading time total">4:38</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -563,9 +593,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -574,7 +612,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -594,10 +634,12 @@
   
   <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
   <script>
+      window.addEventListener('load', () => {
       quicklink({
         timeout : 1000,
         priority: false,
         ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2015/06/06/linux01/',]
+      });
       });
   </script>
 <div id="needsharebutton-float">

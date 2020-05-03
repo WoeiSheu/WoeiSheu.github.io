@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
   <meta name="baidu-site-verification" content="hRzEYlh3gL">
 
@@ -18,21 +21,22 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true,"scrollpercent":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="1. HTTP代理在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了 2. Shadowsocks服务端配置曾在DigitalOcean上自建了一个Shadowsocks服务端，虽然后来被封了，但幸而在电脑上记录下一下重点，Shadowsocks服务端的配置文件为:12345678910111213141">
-<meta name="keywords" content="proxy,shadowsocks">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shadowsocks 高级教程">
 <meta property="og:url" content="https://blog.xuwei.fun/2015/07/19/shadowsocks/index.html">
 <meta property="og:site_name" content="霁月荒馆">
 <meta property="og:description" content="1. HTTP代理在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了 2. Shadowsocks服务端配置曾在DigitalOcean上自建了一个Shadowsocks服务端，虽然后来被封了，但幸而在电脑上记录下一下重点，Shadowsocks服务端的配置文件为:12345678910111213141">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-18T14:24:33.269Z">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2015-07-19T09:30:00.000Z">
+<meta property="article:modified_time" content="2019-05-18T14:24:33.269Z">
+<meta property="article:author" content="Kino">
+<meta property="article:tag" content="proxy">
+<meta property="article:tag" content="shadowsocks">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shadowsocks 高级教程">
-<meta name="twitter:description" content="1. HTTP代理在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了 2. Shadowsocks服务端配置曾在DigitalOcean上自建了一个Shadowsocks服务端，虽然后来被封了，但幸而在电脑上记录下一下重点，Shadowsocks服务端的配置文件为:12345678910111213141">
 
 <link rel="canonical" href="https://blog.xuwei.fun/2015/07/19/shadowsocks/">
 
@@ -156,14 +160,14 @@
     <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -328,11 +332,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-HTTP代理"><a href="#1-HTTP代理" class="headerlink" title="1. HTTP代理"></a>1. HTTP代理</h3><p>在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-HTTP代理"><a href="#1-HTTP代理" class="headerlink" title="1. HTTP代理"></a>1. HTTP代理</h3><p>在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了</p>
 <h3 id="2-Shadowsocks服务端配置"><a href="#2-Shadowsocks服务端配置" class="headerlink" title="2. Shadowsocks服务端配置"></a>2. Shadowsocks服务端配置</h3><p>曾在DigitalOcean上自建了一个Shadowsocks服务端，虽然后来被封了，但幸而在电脑上记录下一下重点，Shadowsocks服务端的配置文件为:<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#ipv4</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>:<span class="string">"0.0.0.0"</span>,</span><br><span class="line">    "server_port":443,      #经尝试，443端口比其他端口要快一点</span><br><span class="line">    "local_port":1080,</span><br><span class="line">    "password":"******",</span><br><span class="line">    "timeout":600,</span><br><span class="line">    "method":"aes-256-cfb"</span><br><span class="line">&#125;</span><br><span class="line">#ipv6</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>:<span class="string">"::"</span>,</span><br><span class="line">    <span class="attr">"server_port"</span>:<span class="number">443</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>:<span class="number">1080</span>,</span><br><span class="line">    <span class="attr">"password"</span>:<span class="string">"******"</span>,</span><br><span class="line">    <span class="attr">"timeout"</span>:<span class="number">600</span>,</span><br><span class="line">    <span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<h3 id="3-Shadowsocks服务端的安装"><a href="#3-Shadowsocks服务端的安装" class="headerlink" title="3. Shadowsocks服务端的安装"></a>3. Shadowsocks服务端的安装</h3><p>源码在<a href="https://github.com/shadowsocks/shadowsocks" target="_blank" rel="noopener">此处</a><br>先安装pip再安装SS：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install python-pip</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure></p>
-<p>如果默认Python版本不对则需要先安装Python，不赘述。</p>
+<h3 id="3-Shadowsocks服务端的安装"><a href="#3-Shadowsocks服务端的安装" class="headerlink" title="3. Shadowsocks服务端的安装"></a>3. Shadowsocks服务端的安装</h3><p>源码在<a href="https://github.com/shadowsocks/shadowsocks" target="_blank" rel="noopener">此处</a><br>先安装pip再安装SS：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install python-pip</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure><br>如果默认Python版本不对则需要先安装Python，不赘述。</p>
 <h3 id="4-Shadowsocks服务端的启动与关闭"><a href="#4-Shadowsocks服务端的启动与关闭" class="headerlink" title="4. Shadowsocks服务端的启动与关闭"></a>4. Shadowsocks服务端的启动与关闭</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssserver -c config -d start</span><br><span class="line">ssserver -c config -d stop</span><br></pre></td></tr></table></figure>
 <p>其中config即前面配好的配置文件</p>
 <h3 id="5-检查日志"><a href="#5-检查日志" class="headerlink" title="5. 检查日志"></a>5. 检查日志</h3><p><code>sudo less /var/log/shadowsocks.log</code></p>
@@ -348,6 +351,35 @@
         </span>
       </div>
     </div>
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+            <span class="icon">
+              <i class="weibo"></i>
+            </span>
+
+            <span class="label">Weibo</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+            <span class="icon">
+              <i class="wechat"></i>
+            </span>
+
+            <span class="label">Wechat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -467,13 +499,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-count">109</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -536,15 +568,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">302k</span>
+    <span title="Symbols count total">306k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:35</span>
+    <span title="Reading time total">4:38</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -563,9 +593,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -574,7 +612,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
@@ -594,10 +634,12 @@
   
   <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
   <script>
+      window.addEventListener('load', () => {
       quicklink({
         timeout : 1000,
         priority: false,
         ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2015/07/19/shadowsocks/',]
+      });
       });
   </script>
 <div id="needsharebutton-float">
