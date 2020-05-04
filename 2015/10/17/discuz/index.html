@@ -333,7 +333,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、</p>
+        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、</p>
 <h3 id="2-Apache"><a href="#2-Apache" class="headerlink" title="2. Apache"></a>2. Apache</h3><h4 id="2-1-缺少msvcr110-dll"><a href="#2-1-缺少msvcr110-dll" class="headerlink" title="2.1 缺少msvcr110.dll"></a>2.1 缺少msvcr110.dll</h4><p>首先是<code>httpd -k install</code>时直接提示缺少msvcr110.dll, 安装了<code>vcredist_x64.exe</code>还是不行, 想着直接装.net库, 然而并不可以。最后想起来当时下的apache是32位的, 安装了<code>vcredist_x86.exe</code>之后apache安装成功。<br><a id="more"></a></p>
 <h4 id="2-2-Servername错误"><a href="#2-2-Servername错误" class="headerlink" title="2.2 Servername错误"></a>2.2 Servername错误</h4><p>之后出现了ServerName错误，直接将<code>#ServerName: localhost:80</code>注释去了，改为自己需要的。</p>
 <h3 id="3-Discuz"><a href="#3-Discuz" class="headerlink" title="3. Discuz"></a>3. Discuz</h3><h4 id="3-1-无法连接数据库"><a href="#3-1-无法连接数据库" class="headerlink" title="3.1 无法连接数据库"></a>3.1 无法连接数据库</h4><p>安装discuz时，显示无法连接数据库，不支持<code>mysqli_connect</code>，建议<code>advice_mysqli_connect</code>，但是php的配置文件里绝对是修改过的，搜了搜发现是<code>extension_dir</code>使用相对路径有时会出错，改为绝对路径后成功</p>

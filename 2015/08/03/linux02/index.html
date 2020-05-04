@@ -331,7 +331,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-dd命令"><a href="#1-dd命令" class="headerlink" title="1. dd命令"></a>1. dd命令</h3><p>win8.1下镜像直接点击setup.exe无效…系统要求都符合，只是我这是双系统且是BIOS引导，也不是UEFI<br>想想要不制作个系统盘，Win32DiskImager制作后还是不行，转到Ubuntu使用<br><code>dd if=en_windows_10_multiple_editions_x64_dvd_6846432.iso of=/dev/sdb bs=2M</code><br>bs=2M情况下最后平均写入速度为7M/s</p>
+        <h3 id="1-dd命令"><a href="#1-dd命令" class="headerlink" title="1. dd命令"></a>1. dd命令</h3><p>win8.1下镜像直接点击setup.exe无效…系统要求都符合，只是我这是双系统且是BIOS引导，也不是UEFI<br>想想要不制作个系统盘，Win32DiskImager制作后还是不行，转到Ubuntu使用<br><code>dd if=en_windows_10_multiple_editions_x64_dvd_6846432.iso of=/dev/sdb bs=2M</code><br>bs=2M情况下最后平均写入速度为7M/s</p>
 <p>虽然最终还是失败了、、、</p>
 <h3 id="2-格式化u盘"><a href="#2-格式化u盘" class="headerlink" title="2. 格式化u盘"></a>2. 格式化u盘</h3><p>U盘写入到一半时被我中止了，结果就是U盘变成了只读状态，挂载后也无法操作…<br>于是<code>mkfs.vfat -I /dev/sdb</code>或者<code>mkfs -t vfat /dev/sdb -I</code><br><a id="more"></a></p>
 <h3 id="3-Shadowsocks"><a href="#3-Shadowsocks" class="headerlink" title="3. Shadowsocks"></a>3. Shadowsocks</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install shadowsocks</span><br><span class="line">sslocal -c conf.json</span><br></pre></td></tr></table></figure>

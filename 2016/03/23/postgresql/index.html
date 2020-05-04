@@ -333,7 +333,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>以前只用过数据库MySQL和Rails自带的sqlite3, 最近打算在一个项目里使用postgreSQL, 简要记录下。</p>
+        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>以前只用过数据库MySQL和Rails自带的sqlite3, 最近打算在一个项目里使用postgreSQL, 简要记录下。</p>
 <h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h3><p>去<a href="http://www.postgresql.org/download/" target="_blank" rel="noopener">官网</a>找对应版本下载, 不喜欢exe文件,感觉不在可控范围内, 于是下载了zip版本</p>
 <p>解压之后, 设置路径:<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">path</span> = <span class="variable">%path%</span>;D:\Programs\pgsql\bin</span><br><span class="line"><span class="built_in">set</span> pghost=localhost</span><br><span class="line"><span class="built_in">set</span> pglib=D:\Programs\pgsql\lib</span><br><span class="line"><span class="built_in">set</span> pgdata=D:\Programs\pgsql\data</span><br></pre></td></tr></table></figure><br><a id="more"></a><br>在解压目录下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir data</span><br><span class="line"><span class="built_in">cd</span> data</span><br><span class="line">initdb .</span><br></pre></td></tr></table></figure></p>
 <p>成功之后console会显示:</p>

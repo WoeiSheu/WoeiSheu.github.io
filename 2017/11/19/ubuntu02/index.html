@@ -332,7 +332,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前写过一篇<a href="/2015/05/26/ubuntu01/">安装Ubuntu 15.04之后</a>. 基本上14.04到17.04应该都可以参照, 在自己电脑上这些版本基本都用过, 没什么大问题.<br>前两天在实验室把Ubuntu更新到了17.10, 可能是太久没用Gnome桌面了, 比想象中的好、那就用下去呗</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前写过一篇<a href="/2015/05/26/ubuntu01/">安装Ubuntu 15.04之后</a>. 基本上14.04到17.04应该都可以参照, 在自己电脑上这些版本基本都用过, 没什么大问题.<br>前两天在实验室把Ubuntu更新到了17.10, 可能是太久没用Gnome桌面了, 比想象中的好、那就用下去呗</p>
 <p>不过也带来了一些问题, 需要一步一步解决</p>
 <a id="more"></a>
 <h3 id="1-Root登录"><a href="#1-Root登录" class="headerlink" title="1. Root登录"></a>1. Root登录</h3><p>预警: 一般还是遵循医嘱, 不要学我这种野路子默认root登录…<br>两个地方, 一是<code>/etc/gdm3/custom.conf</code>处, 在<code>[Security]</code>下添加<code>AllowRoot=true</code>; 二是<code>/etc/pam.d/gdm-password</code>处, 将<code>auth    required    pam_succeed_if.so user != root quiet_success</code>注释</p>

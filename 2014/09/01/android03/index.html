@@ -337,7 +337,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><blockquote>
+        <h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><blockquote>
 <p>ViewPager需要import android.support.v4这个jar包才可以使用<br>ViewPager的效果就是能够轻松实现左右滑动屏幕, 不需要使用GestureDetector。在ViewPager的内部可以嵌入PagerTitleStrip或PagerTabStrip, 可以用来设置显示页面的title内容, 但是不要妄想把它当作Tab来用(虽然我的意图本来就是这样, 但是很悲剧), 因为它不是固定的<br>首先获取ViewPager布局mViewPager, 或者自己用Java实现不用xml, 然后要想实现滑动翻页必须得设置它的Adapter, mViewPager.setAdapter(mAdapter)<br>而mAdapter应该是一个继承FragmentPagerAdapter或者FragmentStatePagerAdapter的类的实例, 它应该实现滑动时所需要展示的页面, 而这些页面可以另外用一个继承Fragment的类实现, 然后将所需要的这些页面加入一个List中<br>需要注意的地方有: 这其中用到的Fragment应使用android.support.v4.app.Fragment而不是android.app.Fragment, FragmentManager也是如此(因为其中用了getSupportFragmentManager方法, 它的返回值是v4包里的FragmentManager)</p>
 </blockquote>
 <p>以上</p>
