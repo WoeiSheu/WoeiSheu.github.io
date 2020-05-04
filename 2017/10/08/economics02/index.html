@@ -331,12 +331,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>接着挖坑吧、、想着哪个假期或者什么时候闲下来再填上，现在连Kino自己都开始怀疑了、<br>上一篇说的是个人理财与投资，主要是大局观的建立和一些大概的原则，具体到交易过程上，需要做的就是技术性的分析与工程上的实现了，其实目前有的投资不过是货币基金和股票配置，也都是买着玩，主要是通过这个过程使自己被动地关注市场的变化，了解一些交易规则，总结一些经验、其实最终目标是想做一个可以稳定盈利的投资工具（目前只考虑股票了）<br><a id="more"></a><br>关于理论方面的内容，主要参阅了”投资心理学”<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[投资心理学（双语版）（原书第5版）-约翰R·诺夫辛格](https://book.douban.com/subject/25788111/)
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>接着挖坑吧、、想着哪个假期或者什么时候闲下来再填上，现在连Kino自己都开始怀疑了、<br>上一篇说的是个人理财与投资，主要是大局观的建立和一些大概的原则，具体到交易过程上，需要做的就是技术性的分析与工程上的实现了，其实目前有的投资不过是货币基金和股票配置，也都是买着玩，主要是通过这个过程使自己被动地关注市场的变化，了解一些交易规则，总结一些经验、其实最终目标是想做一个可以稳定盈利的投资工具（目前只考虑股票了）<br><a id="more"></a><br>关于理论方面的内容，主要参阅了”投资心理学”<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[投资心理学（双语版）（原书第5版）-约翰R·诺夫辛格](https://book.douban.com/subject/25788111/)
 ">[1]</span></a></sup>，这主要是源自Kino个人的偏执，Kino以为股票投资最核心的问题是心理问题，在一些投资人的口中就是所谓的投资情绪分析<br>股票某种意义上就是赌博，然而与赌博的不同的是股票投资中你能得到的数据足够多，而普通意义上的赌博大多是”信息非常不完全信息博弈”（Kino编的词），而股票投资中的对于博弈多方的交易数据大多都是可以查到的，只是专业机构可以通过分析或者内幕消息提前获知某些消息，这就是优势。也有看法是信息是投资中最核心的问题，这么说也没错，但是Kino认为信息也是用来驱动情绪的，影响投资人的心理，以此影响多还是空，小的信息用来影响个人投资者的情绪，大的信息会影响机构投资者的情绪，然而不止是实体行业的信息可以影响情绪，只用资金也可以做到影响情绪，这就反应在主力资金在K线上的拉升与打压，这一点上更接近赌博一点，像是赌博中的诈胡。所以说所谓的大牛市，其实就是所有主力资金的情绪都是积极状态，达到了一致性，个人投资者不用管啦，反正会随大流，而熊市来临也是因为所有投资者的情绪都变为消极了，因为羊毛薅完了啊，才不是什么分析文章里忽悠的国际形势又变差了、国家政策又要变了，如果信息属实那的确是有影响，当然也是影响了情绪，但是很多时候都是假信息，所以说信息也不能全信。</p>
-<p>理论与应用结合方面参阅了”金融投资系统交易原理与应用”<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[金融投资系统交易原理与应用-吴军](https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00ITK6ILS)
+<p>理论与应用结合方面参阅了”金融投资系统交易原理与应用”<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[金融投资系统交易原理与应用-吴军](https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00ITK6ILS)
 ">[2]</span></a></sup>这本书，其实主要还是看原理部分了。因为Kino一直都是靠直觉在写代码啊。</p>
 <h3 id="1-分析流派"><a href="#1-分析流派" class="headerlink" title="1. 分析流派"></a>1. 分析流派</h3><h3 id="2-投资心理"><a href="#2-投资心理" class="headerlink" title="2. 投资心理"></a>2. 投资心理</h3><h3 id="3-工程实现"><a href="#3-工程实现" class="headerlink" title="3. 工程实现"></a>3. 工程实现</h3><p>这方面其实自己一直在维护一个工程，到现在连个可以用的Demo都没有做出来、、、<br>计划是做一个网页应用，前端用的框架是最近流行的Vue、考虑到处理的数据量和库的丰富性，后端肯定用Python啊，在Django和Flask之间纠结了一会还是用了Flask，前者太重Kino觉得没必要，网页应用Kino还是习惯做前后端完全分离的，后端只返回JSON数据就好，以及处理大数据。数据库用的PostgreSQL，大多数数据是从网易财经爬的，国庆期间主要就忙活这个了，初步算了下，只考虑A股的话，历史数据大概也得有5000*3000=1500万条，数据库写的不好、校园网爆炸、电脑间歇性崩溃，导致Kino已经放弃了这个假期把数据爬完的想法，寒假回去用台式机跑数据好了</p>
-<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)"><a href="https://book.douban.com/subject/25788111/" target="_blank" rel="noopener">投资心理学（双语版）（原书第5版）-约翰R·诺夫辛格</a><a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)"><a href="https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00ITK6ILS" target="_blank" rel="noopener">金融投资系统交易原理与应用-吴军</a><a href="#fnref:2" rev="footnote"> ↩</a></span></div></div></div>
+<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://book.douban.com/subject/25788111/" target="_blank" rel="noopener">投资心理学（双语版）（原书第5版）-约翰R·诺夫辛格</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00ITK6ILS" target="_blank" rel="noopener">金融投资系统交易原理与应用-吴军</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
     </div>
 
     
@@ -520,7 +520,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -596,12 +596,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">307k</span>
+    <span title="Symbols count total">311k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:39</span>
+    <span title="Reading time total">4:43</span>
 </div>
 
         
@@ -690,22 +690,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -723,6 +707,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>

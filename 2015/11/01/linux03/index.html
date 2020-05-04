@@ -331,7 +331,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-who命令"><a href="#1-who命令" class="headerlink" title="1. who命令"></a>1. who命令</h3><p>who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-who命令"><a href="#1-who命令" class="headerlink" title="1. who命令"></a>1. who命令</h3><p>who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。</p>
 <h3 id="2-w命令"><a href="#2-w命令" class="headerlink" title="2. w命令"></a>2. w命令</h3><p>执行这项指令可得知目前登入系统的用户有那些人，以及他们正在执行的程序。单独执行linux w命令会显示所有的用户，您也可指定用户名称，仅显示某位用户的相关信息。</p>
 <h3 id="3-查看端口使用情况"><a href="#3-查看端口使用情况" class="headerlink" title="3. 查看端口使用情况"></a>3. 查看端口使用情况</h3><p><code>netstat   -anp   |   grep  portno</code><br>比如<code>netstat –apn | grep 8080</code><br><a id="more"></a></p>
 <h3 id="4-cat命令高级用法"><a href="#4-cat命令高级用法" class="headerlink" title="4. cat命令高级用法"></a>4. cat命令高级用法</h3><p>搭配<code>EOF</code>和输入输出流<code>&gt;&gt;</code>及<code>&lt;&lt;</code>使用，例如Haskell的官方安装教程：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat &gt;&gt; ~/.bashrc &lt;&lt;EOF</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"\$HOME/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.10.3/bin:\$PATH"</span></span><br><span class="line">EOF</span><br><span class="line"><span class="built_in">export</span> PATH=~/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:<span class="variable">$PATH</span>=<span class="string">"</span></span><br></pre></td></tr></table></figure><br>以上可以实现文件追加功能，在.bashrc文件最后追加两句环境变量。</p>
@@ -557,7 +557,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -633,12 +633,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">307k</span>
+    <span title="Symbols count total">311k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:39</span>
+    <span title="Reading time total">4:43</span>
 </div>
 
         
@@ -727,22 +727,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -760,6 +744,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>

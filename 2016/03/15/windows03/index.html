@@ -333,7 +333,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-cmd下设置字符集"><a href="#1-cmd下设置字符集" class="headerlink" title="1. cmd下设置字符集"></a>1. cmd下设置字符集</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chcp</span> <span class="number">437</span>     // <span class="built_in">set</span> english       environment</span><br><span class="line"><span class="built_in">chcp</span> <span class="number">932</span>     // <span class="built_in">set</span> japanese      environment</span><br><span class="line"><span class="built_in">chcp</span> <span class="number">936</span>     // <span class="built_in">set</span> chinese(sim)  environment</span><br><span class="line"><span class="built_in">chcp</span> <span class="number">949</span>     // <span class="built_in">set</span> chinese(tra)  environment</span><br><span class="line"><span class="built_in">chcp</span> <span class="number">950</span>     // <span class="built_in">set</span> korean        environment</span><br><span class="line"><span class="built_in">chcp</span> <span class="number">65001</span>   // <span class="built_in">set</span> utf-<span class="number">8</span>         environment</span><br></pre></td></tr></table></figure>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-cmd下设置字符集"><a href="#1-cmd下设置字符集" class="headerlink" title="1. cmd下设置字符集"></a>1. cmd下设置字符集</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chcp</span> <span class="number">437</span>     // <span class="built_in">set</span> english       environment</span><br><span class="line"><span class="built_in">chcp</span> <span class="number">932</span>     // <span class="built_in">set</span> japanese      environment</span><br><span class="line"><span class="built_in">chcp</span> <span class="number">936</span>     // <span class="built_in">set</span> chinese(sim)  environment</span><br><span class="line"><span class="built_in">chcp</span> <span class="number">949</span>     // <span class="built_in">set</span> chinese(tra)  environment</span><br><span class="line"><span class="built_in">chcp</span> <span class="number">950</span>     // <span class="built_in">set</span> korean        environment</span><br><span class="line"><span class="built_in">chcp</span> <span class="number">65001</span>   // <span class="built_in">set</span> utf-<span class="number">8</span>         environment</span><br></pre></td></tr></table></figure>
 <p>改成437后可以解决一些乱码问题, 奇怪的是明明装的是英文系统竟然默认是936</p>
 
     </div>
@@ -521,7 +521,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -597,12 +597,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">307k</span>
+    <span title="Symbols count total">311k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:39</span>
+    <span title="Reading time total">4:43</span>
 </div>
 
         
@@ -691,22 +691,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -724,6 +708,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>

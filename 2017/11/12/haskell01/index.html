@@ -332,13 +332,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <hr>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>函数式语言Haskell听闻已久, 但是没看过, 最近两周看<em>learn you a haskell for great good!</em><sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[learn you a haskell for great good!](http://learnyouahaskell.com/)
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>函数式语言Haskell听闻已久, 但是没看过, 最近两周看<em>learn you a haskell for great good!</em><sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[learn you a haskell for great good!](http://learnyouahaskell.com/)
 ">[1]</span></a></sup>, 有种相见恨晚的感觉, 现在如果让我一个编程入门者学习的话, 我可能会推荐C++和Haskell吧… Haskell里的思想看完, 再看Python, JS ES2015/16/17引入的一些新特性, 一眼就能理解了.</p>
 <p><em>learn you a haskell for great good!</em>这本书看完一遍, 再重新看一遍目录, 从中找到自己印象不深的章节, 稍作记录于此.</p>
 <a id="more"></a>
 <h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><p>工具个人推荐用Stack, 官方文档查询步骤就好, 值得注意的是由于G*F*W的存在, <code>stack setup</code>时竟然没法下载GHC, 这里推荐:<br>中科大镜像:<br><a href="http://mirrors.ustc.edu.cn/help/hackage.html" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/help/hackage.html</a><br><a href="http://mirrors.ustc.edu.cn/help/stackage.html" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/help/stackage.html</a><br>清华Tuna镜像:<br><a href="https://mirrors.tuna.tsinghua.edu.cn/help/hackage/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/help/hackage/</a><br><a href="https://mirror.tuna.tsinghua.edu.cn/help/stackage/" target="_blank" rel="noopener">https://mirror.tuna.tsinghua.edu.cn/help/stackage/</a></p>
-<h3 id="2-自定义Type和Typeclass"><a href="#2-自定义Type和Typeclass" class="headerlink" title="2. 自定义Type和Typeclass"></a>2. 自定义Type和Typeclass</h3><h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)"><a href="http://learnyouahaskell.com/" target="_blank" rel="noopener">learn you a haskell for great good!</a><a href="#fnref:1" rev="footnote"> ↩</a></span></div></div></div>
+<h3 id="2-自定义Type和Typeclass"><a href="#2-自定义Type和Typeclass" class="headerlink" title="2. 自定义Type和Typeclass"></a>2. 自定义Type和Typeclass</h3><h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://learnyouahaskell.com/" target="_blank" rel="noopener">learn you a haskell for great good!</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
     </div>
 
     
@@ -523,7 +523,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -599,12 +599,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">307k</span>
+    <span title="Symbols count total">311k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:39</span>
+    <span title="Reading time total">4:43</span>
 </div>
 
         
@@ -693,22 +693,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -726,6 +710,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>

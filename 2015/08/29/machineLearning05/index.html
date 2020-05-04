@@ -335,7 +335,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-支持向量机-Support-Vector-Machines"><a href="#1-支持向量机-Support-Vector-Machines" class="headerlink" title="1. 支持向量机(Support Vector Machines)"></a>1. 支持向量机(Support Vector Machines)</h3><p>SVM有很多实现，最流行的一种实现是序列最小优化(Sequential Minimal Optimization)算法<br>可以使用核函数(kernel)的方式将SVM扩展到更多数据集上<br>SVM的优缺点:</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-支持向量机-Support-Vector-Machines"><a href="#1-支持向量机-Support-Vector-Machines" class="headerlink" title="1. 支持向量机(Support Vector Machines)"></a>1. 支持向量机(Support Vector Machines)</h3><p>SVM有很多实现，最流行的一种实现是序列最小优化(Sequential Minimal Optimization)算法<br>可以使用核函数(kernel)的方式将SVM扩展到更多数据集上<br>SVM的优缺点:</p>
 <ul>
 <li>优点：泛化错误率低，计算开销不大，结果易解释</li>
 <li>缺点：对参数调节和核函数的选择敏感，原始分类器不加修改仅适用于处理二类问题</li>
@@ -547,7 +547,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -623,12 +623,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">307k</span>
+    <span title="Symbols count total">311k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:39</span>
+    <span title="Reading time total">4:43</span>
 </div>
 
         
@@ -770,22 +770,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -803,6 +787,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>

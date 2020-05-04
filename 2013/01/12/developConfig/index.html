@@ -332,7 +332,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-Tex"><a href="#1-Tex" class="headerlink" title="1. Tex"></a>1. Tex</h3><h4 id="1-1-Texlive"><a href="#1-1-Texlive" class="headerlink" title="1.1 Texlive"></a>1.1 Texlive</h4><p><a href="https://www.tug.org/texlive/" target="_blank" rel="noopener">https://www.tug.org/texlive/</a></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-Tex"><a href="#1-Tex" class="headerlink" title="1. Tex"></a>1. Tex</h3><h4 id="1-1-Texlive"><a href="#1-1-Texlive" class="headerlink" title="1.1 Texlive"></a>1.1 Texlive</h4><p><a href="https://www.tug.org/texlive/" target="_blank" rel="noopener">https://www.tug.org/texlive/</a></p>
 <h4 id="1-2-CTAN"><a href="#1-2-CTAN" class="headerlink" title="1.2 CTAN"></a>1.2 CTAN</h4><p><a href="https://www.ctan.org" target="_blank" rel="noopener">https://www.ctan.org</a></p>
 <a id="more"></a>
 <h3 id="2-Sublime"><a href="#2-Sublime" class="headerlink" title="2. Sublime"></a>2. Sublime</h3><h4 id="2-1-Install"><a href="#2-1-Install" class="headerlink" title="2.1 Install"></a>2.1 Install</h4><p><a href="https://www.sublimetext.com/3" target="_blank" rel="noopener">https://www.sublimetext.com/3</a><br>Backup: <a href="https://drive.google.com/open?id=0B7ciOrhoI8vkOEZqOXNBWnNrbzg" target="_blank" rel="noopener">https://drive.google.com/open?id=0B7ciOrhoI8vkOEZqOXNBWnNrbzg</a></p>
@@ -532,7 +532,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -608,12 +608,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">307k</span>
+    <span title="Symbols count total">311k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:39</span>
+    <span title="Reading time total">4:43</span>
 </div>
 
         
@@ -702,22 +702,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -735,6 +719,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>

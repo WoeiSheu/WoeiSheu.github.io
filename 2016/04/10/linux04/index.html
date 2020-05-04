@@ -331,7 +331,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-Ubuntu-ssh-登录提示信息"><a href="#1-Ubuntu-ssh-登录提示信息" class="headerlink" title="1. Ubuntu ssh 登录提示信息"></a>1. Ubuntu ssh 登录提示信息</h3><p>修改<code>/etc/issue</code>和<code>/etc/motd</code><br>前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-Ubuntu-ssh-登录提示信息"><a href="#1-Ubuntu-ssh-登录提示信息" class="headerlink" title="1. Ubuntu ssh 登录提示信息"></a>1. Ubuntu ssh 登录提示信息</h3><p>修改<code>/etc/issue</code>和<code>/etc/motd</code><br>前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者</p>
 <h3 id="2-curl-post-json数据"><a href="#2-curl-post-json数据" class="headerlink" title="2. curl post json数据"></a>2. curl post json数据</h3><p><code>curl -H &quot;Content-Type: application/json&quot; -X POST -d &#39;{&quot;id&quot;:&quot;1&quot;,&quot;password&quot;:&quot;miao&quot;}&#39; http://api</code><br>在post的data中使用变量:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">currentTime=`date +%s`</span><br><span class="line">curl -i -H <span class="string">"Accept:application/json"</span> -H <span class="string">"Content-Type:application/json"</span> -X POST \</span><br><span class="line">--data <span class="string">'&#123;"time":"'</span><span class="string">"<span class="variable">$currentTime</span>"</span><span class="string">'","message":"hypocrisy"&#125;'</span> <span class="string">"https://yourhost:port/api"</span></span><br></pre></td></tr></table></figure><br>循环post:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">i=10</span><br><span class="line"><span class="keyword">while</span> [ <span class="variable">$i</span> -gt 0 ]</span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">    curl -d <span class="string">'&#123;"data":"message"&#125;'</span> http://host:port/api</span><br><span class="line">    i=$(( <span class="variable">$i</span>-1 ))</span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$i</span></span><br><span class="line">    <span class="comment">#let i=i-1</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure><br><a id="more"></a></p>
 <h3 id="3-Linux权限"><a href="#3-Linux权限" class="headerlink" title="3. Linux权限"></a>3. Linux权限</h3><p>-rwxr-xr-x 中rwx不是最高权限, 还有sudo权限 -rwsr-xr-x, 方法是:<br><code>chmod u+s /usr/bin/someprogram</code></p>
 <h3 id="4-sh和bash差距很大吗"><a href="#4-sh和bash差距很大吗" class="headerlink" title="4. sh和bash差距很大吗"></a>4. sh和bash差距很大吗</h3><p>在crontab中加入<code>* * * * * sh /home/hypocrisy/myshell.sh</code>, 一直无法运行, 执行到<code>i=60</code>显示60 not found, 我也没有加空格, 改为<code>* * * * * bash /home/hypocrisy/myshell.sh</code>, 竟然好了、、默认就是bash为何sh和bash结果还不同?</p>
@@ -522,7 +522,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -598,12 +598,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">307k</span>
+    <span title="Symbols count total">311k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:39</span>
+    <span title="Reading time total">4:43</span>
 </div>
 
         
@@ -692,22 +692,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -725,6 +709,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>

@@ -332,7 +332,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-Word中字体大小与磅值对应关系"><a href="#1-Word中字体大小与磅值对应关系" class="headerlink" title="1. Word中字体大小与磅值对应关系"></a>1. Word中字体大小与磅值对应关系</h3><p>字号”八号”对应磅值5<br>字号”七号”对应磅值5.5<br>字号”小六”对应磅值6.5<br>字号”六号”对应磅值7.5<br>字号”小五”对应磅值9<br>字号”五号”对应磅值10.5<br>字号”小四”对应磅值12<br>字号”四号”对应磅值14<br>字号”小三”对应磅值15<br>字号”三号”对应磅值16<br>字号”小二”对应磅值18<br>字号”二号”对应磅值22<br>字号”小一”对应磅值24<br>字号”一号”对应磅值26<br>字号”小初”对应磅值36<br>字号”初号”对应磅值42</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-Word中字体大小与磅值对应关系"><a href="#1-Word中字体大小与磅值对应关系" class="headerlink" title="1. Word中字体大小与磅值对应关系"></a>1. Word中字体大小与磅值对应关系</h3><p>字号”八号”对应磅值5<br>字号”七号”对应磅值5.5<br>字号”小六”对应磅值6.5<br>字号”六号”对应磅值7.5<br>字号”小五”对应磅值9<br>字号”五号”对应磅值10.5<br>字号”小四”对应磅值12<br>字号”四号”对应磅值14<br>字号”小三”对应磅值15<br>字号”三号”对应磅值16<br>字号”小二”对应磅值18<br>字号”二号”对应磅值22<br>字号”小一”对应磅值24<br>字号”一号”对应磅值26<br>字号”小初”对应磅值36<br>字号”初号”对应磅值42</p>
 <a id="more"></a>
 <h3 id="2-比较文件命令"><a href="#2-比较文件命令" class="headerlink" title="2. 比较文件命令"></a>2. 比较文件命令</h3><p>本想用windows自带的fc命令,却发现只可以比较两文件无法比较文件夹,于是加上自己用的cmder自带很多linux命令(其实应该是msysgit带的),于是考虑使用diff命令, 用-r选项即可<br><code>diff -r &#39;E:\Amusement\music\&#39; &#39;F:\Recreation\Music\&#39;</code></p>
 <h3 id="3-markdown文件中加入html代码"><a href="#3-markdown文件中加入html代码" class="headerlink" title="3. markdown文件中加入html代码"></a>3. markdown文件中加入html代码</h3><p>例如加上<code>&lt;p align=&quot;center&quot;&gt;Test&lt;/p&gt;</code>，则必须在后面加一空行，否则不会输出理想结果，原因暂时未知。</p>
@@ -524,7 +524,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -600,12 +600,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">307k</span>
+    <span title="Symbols count total">311k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:39</span>
+    <span title="Reading time total">4:43</span>
 </div>
 
         
@@ -694,22 +694,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -727,6 +711,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>

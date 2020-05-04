@@ -333,7 +333,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>Methodology of Mathematics<br>主要记录了《数学方法论稿》<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[数学方法论稿](https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00B7U51XI)
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>Methodology of Mathematics<br>主要记录了《数学方法论稿》<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[数学方法论稿](https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00B7U51XI)
 ">[1]</span></a></sup> 的内容</p>
 <h3 id="2-钱学森对于数学的分类"><a href="#2-钱学森对于数学的分类" class="headerlink" title="2. 钱学森对于数学的分类"></a>2. 钱学森对于数学的分类</h3><p>钱学森在《关于思维科学》中用过一张表进行科学的分类(然而这是Kino在数学方法论稿书中看到的):<br><img src="/images/methodologyOfMath01_1.jpg" alt="01"></p>
 <a id="more"></a>
@@ -354,7 +354,7 @@
 <li>数学证明方法<br>曼宁(Manin): “一个证明只有当它通过’被接纳为证明’这项社会时,它才算被证明”<br>数学证明有助于核实真理, 数学证明最重要的价值是增进理解, 只有弄懂了一个定理的证明, 才能真正该定理的内容</li>
 <li>数学证明方法的一般方法·化归与逻辑</li>
 </ol>
-<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)"><a href="https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00B7U51XI" target="_blank" rel="noopener">数学方法论稿</a><a href="#fnref:1" rev="footnote"> ↩</a></span></div></div></div>
+<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00B7U51XI" target="_blank" rel="noopener">数学方法论稿</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
     </div>
 
     
@@ -538,7 +538,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -614,12 +614,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">307k</span>
+    <span title="Symbols count total">311k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:39</span>
+    <span title="Reading time total">4:43</span>
 </div>
 
         
@@ -708,22 +708,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -741,6 +725,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>

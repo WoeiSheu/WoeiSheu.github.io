@@ -332,7 +332,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>图书馆再读舒婷</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>图书馆再读舒婷</p>
 <h3 id="2-致橡树"><a href="#2-致橡树" class="headerlink" title="2. 致橡树"></a>2. 致橡树</h3><blockquote>
 <p>我如果爱你——<br>绝不像攀援的凌霄花，<br>借你的高枝炫耀自己：<br>我如果爱你——<br>绝不学痴情的鸟儿，<br>为绿荫重复单调的歌曲；<br>也不止像泉源，<br>常年送来清凉的慰籍；<br>也不止像险峰，增加你的高度，衬托你的威仪。<br>甚至日光。<br>甚至春雨。<br>不，这些都还不够！<br>我必须是你近旁的一株木棉，<br>做为树的形象和你站在一起。<br>根，紧握在地下，<br>叶，相触在云里。<br>每一阵风过，<br>我们都互相致意，<br>但没有人<br>听懂我们的言语。<br>你有你的铜枝铁干，<br>像刀，像剑，<br>也像戟，<br>我有我的红硕花朵，<br>像沉重的叹息，<br>又像英勇的火炬，<br>我们分担寒潮、风雷、霹雳；<br>我们共享雾霭、流岚、虹霓，<br>仿佛永远分离，<br>却又终身相依，<br>这才是伟大的爱情，<br>坚贞就在这里：<br>爱——<br>不仅爱你伟岸的身躯，<br>也爱你坚持的位置，足下的土地。</p>
 </blockquote>
@@ -531,7 +531,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -607,12 +607,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">307k</span>
+    <span title="Symbols count total">311k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:39</span>
+    <span title="Reading time total">4:43</span>
 </div>
 
         
@@ -701,22 +701,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -734,6 +718,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>

@@ -334,7 +334,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-修复U盘"><a href="#1-修复U盘" class="headerlink" title="1. 修复U盘"></a>1. 修复U盘</h3><p>以前用U盘制作Linux启动盘时，制作之后windows下都无法读取了，必须格式化，而格式化之后的U盘容量骤减为几M……磁盘管理里查看直接显示为黑色区域，估计是某些分区读不出来，搜了下解决方法：<br>先输入命令diskpart，之后：<br><img src="/images/repairUdisk.png" alt="repairUdisk"></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-修复U盘"><a href="#1-修复U盘" class="headerlink" title="1. 修复U盘"></a>1. 修复U盘</h3><p>以前用U盘制作Linux启动盘时，制作之后windows下都无法读取了，必须格式化，而格式化之后的U盘容量骤减为几M……磁盘管理里查看直接显示为黑色区域，估计是某些分区读不出来，搜了下解决方法：<br>先输入命令diskpart，之后：<br><img src="/images/repairUdisk.png" alt="repairUdisk"></p>
 <p>即<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">diskpart</span><br><span class="line">list disk</span><br><span class="line">select disk <span class="number">2</span></span><br><span class="line">clean</span><br><span class="line">create partition primary</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h3 id="2-U盘制作系统盘"><a href="#2-U盘制作系统盘" class="headerlink" title="2. U盘制作系统盘"></a>2. U盘制作系统盘</h3><p>用u盘制作系统启动盘时，以前常用Win32DiskImager，有一次失败了，用Linux的dd命令也失败了，使用了下面的方法成功：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">diskpart</span><br><span class="line">list disk</span><br><span class="line">select disk #</span><br><span class="line">clean</span><br><span class="line">create partition primary</span><br><span class="line">select partition <span class="number">1</span></span><br><span class="line">active</span><br><span class="line"><span class="built_in">format</span> <span class="built_in">fs</span>=fat32 quick   #这里我经常使用ntfs文件格式，也可以</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure><br>之后将iso镜像解压至u盘即可</p>
@@ -523,7 +523,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -599,12 +599,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">307k</span>
+    <span title="Symbols count total">311k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:39</span>
+    <span title="Reading time total">4:43</span>
 </div>
 
         
@@ -693,22 +693,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -726,6 +710,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>
