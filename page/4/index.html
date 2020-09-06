@@ -256,6 +256,106 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2016/05/09/linux05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/site/avatar.png">
+      <meta itemprop="name" content="Kino">
+      <meta itemprop="description" content="Amor Fati">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="霁月荒馆">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/05/09/linux05/" class="post-title-link" itemprop="url">Linux琐记五</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-05-09 14:06:00" itemprop="dateCreated datePublished" datetime="2016-05-09T14:06:00+08:00">2016-05-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techonology/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>578</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="1-No-such-file-or-directory"><a href="#1-No-such-file-or-directory" class="headerlink" title="1. No such file or directory"></a>1. No such file or directory</h3><p><code>./pwn1</code>执行后出现错误信息:<em>./pwn1: No such file or directory</em>, 可执行权限Kino已经加上了, 查了查可能是因为库的原因, 直接<code>cat pwn1</code>看到需要<code>/lib/ld-linux.so</code>, 查了下系统的确没有, 用<code>readelf</code>去查看pwn1的各项信息, 反而没有看到. <code>ld-linux.so</code>这个库是Linux下进行动态库链接的链接器, 无它其他动态库就都无法成功链接, 详细说明可以戳<a href="http://linux.die.net/man/8/ld-linux" target="_blank" rel="noopener">这里</a><br>查看怎么安装这个库, 32位系统下是<code>libc6</code>, 64位是<code>libc6-i386</code>, 这是因为64位中默认安装了<code>/lib64/ld-linux-x86-64.so.2</code></p>
+<h3 id="2-dmesg"><a href="#2-dmesg" class="headerlink" title="2. dmesg"></a>2. dmesg</h3><p>dmesg用来显示内核环缓冲区(kernel-ring buffer)内容, 内核将各种消息存放在这里. 在系统引导时, 内核将与硬件和模块初始化相关的信息填到这个缓冲区中. 内核环缓冲区中的消息对于诊断系统问题非常有用<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2016/05/09/linux05/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2016/04/16/methodologyOfMath02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1163,112 +1263,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2016/04/01/paperPublishing/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/site/avatar.png">
-      <meta itemprop="name" content="Kino">
-      <meta itemprop="description" content="Amor Fati">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="霁月荒馆">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/04/01/paperPublishing/" class="post-title-link" itemprop="url">如何发表论文</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-04-01 17:26:00" itemprop="dateCreated datePublished" datetime="2016-04-01T17:26:00+08:00">2016-04-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/science/" itemprop="url" rel="index"><span itemprop="name">science</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/science/acadamic/" itemprop="url" rel="index"><span itemprop="name">acadamic</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>799</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>逛学校论坛时看到网友xiaoyaoyou对于如何发SCI的看法, 觉得有参考价值, 就记录下来</p>
-<h3 id="2-内容"><a href="#2-内容" class="headerlink" title="2. 内容"></a>2. 内容</h3><ol>
-<li>多看看，同一领域内别人文章是怎么写的，怎么个思路、新颖在哪里，甚至是格式和每一部分的篇幅</li>
-<li>多思考，平时有些想法就随时记录下来，方便整理</li>
-<li>多尝试，想法多了，就多去试，找一些可行性高又能很方便模拟或者容易用简单方法实验的去试，多试试可能成功，或者有更新的点子出来，即使不成功，也可以在此基础上想改进</li>
-<li>多交流，经常和导师、同学交流，导师经验更丰富些，和其他同学交流也可以给你很多提示，尤其是其他专业的同学，多交流也可以最大限度地避免自己陷入一个坑里</li>
-<li>做实验的时候，有时一个人难以完成，适当请师弟师妹帮忙，请他们帮你一起完成实验，实验也会更顺利；写成论文时记得把他们的名字和所做的工作写上，即使是第三、第四作者，对他们多少也有帮助，他们也会很开心，于己于人都有好处</li>
-<li>实验前尽量想得周全一些，多记录数据和图片
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2016/04/01/paperPublishing/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1340,7 +1334,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-count">115</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1353,7 +1347,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">109</span>
+        <span class="site-state-item-count">112</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -1416,12 +1410,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">311k</span>
+    <span title="Symbols count total">326k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:43</span>
+    <span title="Reading time total">4:57</span>
 </div>
 
         
