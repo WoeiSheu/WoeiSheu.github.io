@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.xuwei.fun/thoughts/index.html</loc>
+    
+    <lastmod>2020-09-07T05:31:27.733Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/2020/09/07/characterset/</loc>
     
     <lastmod>2020-09-07T05:16:31.684Z</lastmod>
@@ -82,13 +89,6 @@
     <loc>https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/</loc>
     
     <lastmod>2019-05-25T08:06:54.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/thoughts/index.html</loc>
-    
-    <lastmod>2019-05-19T10:24:11.904Z</lastmod>
     
   </url>
   
@@ -247,14 +247,14 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2016/01/01/ruby01/</loc>
+    <loc>https://blog.xuwei.fun/2017/11/12/reading11/</loc>
     
     <lastmod>2019-05-18T14:24:33.255Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2017/11/12/reading11/</loc>
+    <loc>https://blog.xuwei.fun/2016/01/01/ruby01/</loc>
     
     <lastmod>2019-05-18T14:24:33.255Z</lastmod>
     

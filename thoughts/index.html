@@ -32,7 +32,7 @@
 <meta property="og:description" content="thoughts">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-05-18T15:17:12.000Z">
-<meta property="article:modified_time" content="2019-05-19T10:24:11.904Z">
+<meta property="article:modified_time" content="2020-09-07T05:31:27.733Z">
 <meta property="article:author" content="Kino">
 <meta name="twitter:card" content="summary">
 
@@ -197,11 +197,6 @@
         <li class="menu-item menu-item-commonweal">
 
     <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
-
-  </li>
-        <li class="menu-item menu-item-foryou">
-
-    <a href="/foryou/" rel="section"><i class="heart fa-fw"></i>foryou</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -544,22 +539,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -577,6 +556,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>
