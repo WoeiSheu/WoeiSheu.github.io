@@ -34,9 +34,9 @@
 <meta property="article:published_time" content="2013-07-16T12:21:00.000Z">
 <meta property="article:modified_time" content="2019-05-18T14:24:33.232Z">
 <meta property="article:author" content="Kino">
+<meta property="article:tag" content="motto">
 <meta property="article:tag" content="novel">
 <meta property="article:tag" content="drama">
-<meta property="article:tag" content="motto">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://blog.xuwei.fun/2013/07/16/reading04/">
@@ -415,9 +415,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/motto/" rel="tag"># motto</a>
               <a href="/tags/novel/" rel="tag"># novel</a>
               <a href="/tags/drama/" rel="tag"># drama</a>
-              <a href="/tags/motto/" rel="tag"># motto</a>
           </div>
 
         
@@ -695,22 +695,6 @@
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
@@ -728,6 +712,22 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 });
 </script>
 <script>
