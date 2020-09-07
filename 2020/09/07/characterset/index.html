@@ -48,9 +48,11 @@
 <meta property="og:image" content="https://blog.xuwei.fun/images/character_set/image_3_12.png">
 <meta property="og:image" content="https://blog.xuwei.fun/images/character_set/image_3_13.png">
 <meta property="og:image" content="https://blog.xuwei.fun/images/character_set/image_3_14.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/character_set/image_3_15.png">
+<meta property="og:image" content="https://blog.xuwei.fun/images/character_set/image_3_16.png">
 <meta property="og:image" content="https://blog.xuwei.fun/images/character_set/image_5_1.png">
 <meta property="article:published_time" content="2020-09-07T14:22:22.000Z">
-<meta property="article:modified_time" content="2020-09-07T02:48:35.001Z">
+<meta property="article:modified_time" content="2020-09-07T05:16:31.684Z">
 <meta property="article:author" content="Kino">
 <meta property="article:tag" content="character set">
 <meta property="article:tag" content="encode">
@@ -305,7 +307,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-07 22:22:22 / Modified: 10:48:35" itemprop="dateCreated datePublished" datetime="2020-09-07T22:22:22+08:00">2020-09-07</time>
+              <time title="Created: 2020-09-07 22:22:22 / Modified: 13:16:31" itemprop="dateCreated datePublished" datetime="2020-09-07T22:22:22+08:00">2020-09-07</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -327,7 +329,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>15k</span>
+              <span>16k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -522,25 +524,47 @@
 <h4 id="3-7-2-Unicode引入的分隔符"><a href="#3-7-2-Unicode引入的分隔符" class="headerlink" title="3.7.2 Unicode引入的分隔符"></a>3.7.2 Unicode引入的分隔符</h4><p>为了简化几种换行字符，Unicode引入了它自己的分隔符来格式化文本：</p>
 <ul>
 <li>U+2028 line separator ，HTML： <code>&amp;#8232;</code>，LSEP</li>
-<li>U+2029 paragraph separator ，HTML： <code>&amp;#8233;</code>，PSEP<br><a name="e1r7p"></a><h4 id="3-7-3-语言标记"><a href="#3-7-3-语言标记" class="headerlink" title="3.7.3 语言标记"></a>3.7.3 语言标记</h4>不予叙述，可参考<sup id="fnref:18"><a href="#fn:18" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “Unicode控制字符.” Wikipedia, Wikimedia Foundation, 28 July 2020, zh.wikipedia.org/wiki/Unicode控制字符.">[18]</span></a></sup>的说明。<br><a name="ZgIfd"></a><h4 id="3-7-4-行间标注"><a href="#3-7-4-行间标注" class="headerlink" title="3.7.4 行间标注"></a>3.7.4 行间标注</h4>3个格式化字符用于支持旁注标记（U+FFF9、U+FFFA、U+FFFB）。<blockquote>
+<li>U+2029 paragraph separator ，HTML： <code>&amp;#8233;</code>，PSEP</li>
+</ul>
+<p><a name="e1r7p"></a></p>
+<h4 id="3-7-3-语言标记"><a href="#3-7-3-语言标记" class="headerlink" title="3.7.3 语言标记"></a>3.7.3 语言标记</h4><p>不予叙述，可参考<sup id="fnref:18"><a href="#fn:18" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “Unicode控制字符.” Wikipedia, Wikimedia Foundation, 28 July 2020, zh.wikipedia.org/wiki/Unicode控制字符.">[18]</span></a></sup>的说明。</p>
+<p><a name="ZgIfd"></a></p>
+<h4 id="3-7-4-行间标注"><a href="#3-7-4-行间标注" class="headerlink" title="3.7.4 行间标注"></a>3.7.4 行间标注</h4><p>3个格式化字符用于支持旁注标记（U+FFF9、U+FFFA、U+FFFB）。</p>
+<blockquote>
 <p>所谓旁注标记（ruby character），又称注音标示、加注音、Ruby字符、ruby或rubi，是一种表意文字的音标印刷方式，广泛地运用于日文及中文。一般这些字是放于表意文字的上方或右边，作为文字的拼音或注解。</p>
 </blockquote>
-</li>
-</ul>
 <p>了解过HTML5的童鞋也许知道HTML5引入了 <code>&lt;ruby&gt;</code> 标签，也是同样的意思，（我之所以知道，是因为我的主页也用了嘛！~不过主页也是模仿前端大神的网页做的啦）</p>
 <p><img src="/images/character_set/image_3_13.png" alt="image_3_13"></p>
 <p align="center">图3.13</p>
 
 <p><a name="NAFNd"></a></p>
 <h4 id="3-7-5-双向文本控制"><a href="#3-7-5-双向文本控制" class="headerlink" title="3.7.5 双向文本控制"></a>3.7.5 双向文本控制</h4><p>英文、中文的印刷作品，基本都是从左向右，自上而下的，但并不是所有语言的印刷品都是如此，比如日语就是自右向左的，中国古代的书籍也是。</p>
-<p>Unicode本身是支持从左到右、从右到左，或者其混合排版，而不需要任何特殊字符。但考虑到为了处理一些特殊情形，Unicode还是定义了12个字符（U+061C、U+200E、U+200F、U+202A、U+202B、U+202C、U+202D、U+202E、U+2066、U+2067、U+2068、U+2069）以帮助控制嵌入式双向文本最大125层深。<br><a name="DgmDn"></a></p>
-<h4 id="3-7-6-异体字选择器"><a href="#3-7-6-异体字选择器" class="headerlink" title="3.7.6 异体字选择器"></a>3.7.6 异体字选择器</h4><p>异体字的具体说明可参考<sup id="fnref:19"><a href="#fn:19" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “異體字選擇器.” Wikipedia, Wikimedia Foundation, 4 Sept. 2020, zh.wikipedia.org/wiki/異體字選擇器.">[19]</span></a></sup>. 简单来说，就是一种语言中，某一个字有两种写法，但是意义完全相同，因此当初编码时，没有将其区分开，但在实际使用中，可能在用于人名等专有名词时，还是需要进行区分的，因此提供了“异体字选择器”这种控制字符。<br><a name="KZhEA"></a></p>
-<h4 id="3-7-8-控制字符的图片"><a href="#3-7-8-控制字符的图片" class="headerlink" title="3.7.8 控制字符的图片"></a>3.7.8 控制字符的图片</h4><p>不予叙述。</p>
+<p>Unicode本身是支持从左到右、从右到左，或者其混合排版，而不需要任何特殊字符。但考虑到为了处理一些特殊情形，Unicode还是定义了12个字符<code>（U+061C、U+200E、U+200F、U+202A、U+202B、U+202C、U+202D、U+202E、U+2066、U+2067、U+2068、U+2069）</code>以帮助控制嵌入式双向文本的顺序，最大可以有125层深。</p>
+<p>这个到底是干嘛用的，主要还是因为世界上有阿拉伯语这种存在。。。<br>比如“阿拉伯字母”这五个字的阿拉伯语写法，就是：</p>
+<blockquote>
+<p>أَبْجَدِيَّة عَرَبِيَّة‎</p>
+</blockquote>
+<p>说实话我不知道屏幕前的你看到的实际上是什么样的字符串… 对照下图看看..</p>
+<p><img src="/images/character_set/image_3_14.png" alt="image_3_14"></p>
+<p align="center">图3.14</p>
+
+<p>而如果我在IDEA的编辑器中，赋值这行字符，就会显示成下图，甚至影响了我的光标显示。。。</p>
+<p><img src="/images/character_set/image_3_15.png" alt="image_3_15"></p>
+<p align="center">图3.15</p>
+
+<p>这其中，虽然那个<code>\u200E</code>的 <code>\</code> 已经位置错误，还是可以看出就是刚刚提到的Unicode定义的12个双向文本控制字符中的一个。实际上它的作用就是控制“从左至右书写标记”，而<code>\u200F</code>是“从右至左书写标记”<br>这就就是阿拉伯语的其中一个特殊之处：<strong>从右向左书写</strong>。(虽然日语、中国古籍，也都是从右向左，但只是排版概念上从右向左，而且还是竖着写的呀)。<br>阿拉伯语的这个特性带来了一个问题，如果在一行阿拉伯文字里，我写了一个英文单词，那该怎么办，nice 岂不是要显示成 ecin，于是就需要对一行文本内的某些文字再单独进行方向控制，那如果单词里再嵌套个阿拉伯字母呢，阿拉伯字母间再嵌套中文…… 如此套娃无穷尽也，因此Unicode规定了最大的嵌套深度是125层。</p>
+<blockquote>
+<p>笔者按: 一个阿拉伯语撑起了字符串处理Bug的半边天…</p>
+</blockquote>
+<p><a name="DgmDn"></a></p>
+<h4 id="3-7-6-异体字选择器"><a href="#3-7-6-异体字选择器" class="headerlink" title="3.7.6 异体字选择器"></a>3.7.6 异体字选择器</h4><p>异体字的具体说明可参考<sup id="fnref:19"><a href="#fn:19" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “異體字選擇器.” Wikipedia, Wikimedia Foundation, 4 Sept. 2020, zh.wikipedia.org/wiki/異體字選擇器.">[19]</span></a></sup>. 简单来说，就是一种语言中，某一个字有两种写法，但是意义完全相同，因此当初编码时，没有将其区分开，但在实际使用中，可能在用于人名等专有名词时，还是需要进行区分的，因此提供了“异体字选择器”这种控制字符。</p>
+<p><a name="KZhEA"></a></p>
+<h4 id="3-7-7-控制字符的图片"><a href="#3-7-7-控制字符的图片" class="headerlink" title="3.7.7 控制字符的图片"></a>3.7.7 控制字符的图片</h4><p>不予叙述。</p>
 <p><a name="0Wvb4"></a></p>
 <h3 id="3-8-组合字符-Combining-Character"><a href="#3-8-组合字符-Combining-Character" class="headerlink" title="3.8 组合字符(Combining Character)"></a>3.8 组合字符(Combining Character)</h3><p><a name="QkZaQ"></a></p>
 <h4 id="3-8-1-变音组合"><a href="#3-8-1-变音组合" class="headerlink" title="3.8.1 变音组合"></a>3.8.1 变音组合</h4><p>上面在说控制字符时，有一类所谓的行间标记提到了“旁注标记”，在汉字上方标注拼音，可以称之为“旁注标记”。那对于某些欧洲语言来说，可以在字母上方加一些变音符号，实质上就表示成了另一个不同的字符，但它又是在原字符基础上变化的，如果每种变化都算作一个新字符，那即使是Unicode，可能也装不下这些排列组合的数量，因此出现了组合字符。如Wiki的图<sup id="fnref:20"><a href="#fn:20" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “組合字符.” Wikipedia, Wikimedia Foundation, 30 May 2019, zh.wikipedia.org/wiki/組合字符. ">[20]</span></a></sup>。</p>
-<p><img src="/images/character_set/image_3_14.png" alt="image_3_14"></p>
-<p align="center">图3.14</p>
+<p><img src="/images/character_set/image_3_16.png" alt="image_3_16"></p>
+<p align="center">图3.16</p>
 
 <p>在统一码中，用于欧洲语言和国际音标的组合用附加符号为〈U+0300–U+036F〉。上图的字符就可以表示成： <code>\u0079\u030C</code> ， <code>\u0079</code> 就是 <code>y</code> ， <code>\u030C</code> 就是变音符号。<br><a name="CpTNZ"></a></p>
 <h4 id="3-8-2-Emoji组合"><a href="#3-8-2-Emoji组合" class="headerlink" title="3.8.2 Emoji组合"></a>3.8.2 Emoji组合</h4><p>不过，Unicode的组合字符，不仅限于变音符号之类，还记得Emoji吗，文章开头提到的Emoji，本来就是个设计简单表达心情的表情符号，但随着使用越来越广泛，刮起了一阵“中立表情(Neutral Emojis)”的风，即有男性表情，那就得有对应的女性，有白种人，那就得有黄种人、黑种人，家庭可以是异性恋，那就得有同性恋，有儿子，也得有女儿。如果每种都是单独的字符表示，那Unicode可能也装不下，因此就用组合方式来表示。</p>
@@ -753,7 +777,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从一个Emoji字符说起"><span class="nav-text">从一个Emoji字符说起</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、前言"><span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Emoji的前世今生"><span class="nav-text">二、Emoji的前世今生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、字符集和字符编码"><span class="nav-text">三、字符集和字符编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-语言学简介"><span class="nav-text">3.1 语言学简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-计算机科学简介"><span class="nav-text">3.2 计算机科学简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-（编码）字符集"><span class="nav-text">3.3 （编码）字符集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-字符编码"><span class="nav-text">3.4 字符编码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-UTF-32"><span class="nav-text">3.4.1 UTF-32</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-UTF-16"><span class="nav-text">3.4.2 UTF-16</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-UTF-8"><span class="nav-text">3.4.3 UTF-8</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-大端小端"><span class="nav-text">3.5 大端小端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-BOM-byte-order-mark"><span class="nav-text">3.6 BOM(byte order mark)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-Unicode控制字符"><span class="nav-text">3.7 Unicode控制字符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-1-ISO-6429控制字符-C0与C1控制字符"><span class="nav-text">3.7.1 ISO 6429控制字符(C0与C1控制字符)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-2-Unicode引入的分隔符"><span class="nav-text">3.7.2 Unicode引入的分隔符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-3-语言标记"><span class="nav-text">3.7.3 语言标记</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-4-行间标注"><span class="nav-text">3.7.4 行间标注</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-5-双向文本控制"><span class="nav-text">3.7.5 双向文本控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-6-异体字选择器"><span class="nav-text">3.7.6 异体字选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-8-控制字符的图片"><span class="nav-text">3.7.8 控制字符的图片</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-组合字符-Combining-Character"><span class="nav-text">3.8 组合字符(Combining Character)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-1-变音组合"><span class="nav-text">3.8.1 变音组合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-2-Emoji组合"><span class="nav-text">3.8.2 Emoji组合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-3-Unicode等价-Unicode-equivalence-及正规化-Normalization"><span class="nav-text">3.8.3 Unicode等价(Unicode equivalence)及正规化(Normalization)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-9-Grapheme"><span class="nav-text">3.9 Grapheme</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、注意事项"><span class="nav-text">四、注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-数据库不支持"><span class="nav-text">4.1 数据库不支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-打印机不支持"><span class="nav-text">4.2 打印机不支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-安全原因"><span class="nav-text">4.3 安全原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、字体与排版"><span class="nav-text">五、字体与排版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnote"><span class="nav-text">Footnote</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从一个Emoji字符说起"><span class="nav-text">从一个Emoji字符说起</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、前言"><span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Emoji的前世今生"><span class="nav-text">二、Emoji的前世今生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、字符集和字符编码"><span class="nav-text">三、字符集和字符编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-语言学简介"><span class="nav-text">3.1 语言学简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-计算机科学简介"><span class="nav-text">3.2 计算机科学简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-（编码）字符集"><span class="nav-text">3.3 （编码）字符集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-字符编码"><span class="nav-text">3.4 字符编码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-UTF-32"><span class="nav-text">3.4.1 UTF-32</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-UTF-16"><span class="nav-text">3.4.2 UTF-16</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-UTF-8"><span class="nav-text">3.4.3 UTF-8</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-大端小端"><span class="nav-text">3.5 大端小端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-BOM-byte-order-mark"><span class="nav-text">3.6 BOM(byte order mark)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-Unicode控制字符"><span class="nav-text">3.7 Unicode控制字符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-1-ISO-6429控制字符-C0与C1控制字符"><span class="nav-text">3.7.1 ISO 6429控制字符(C0与C1控制字符)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-2-Unicode引入的分隔符"><span class="nav-text">3.7.2 Unicode引入的分隔符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-3-语言标记"><span class="nav-text">3.7.3 语言标记</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-4-行间标注"><span class="nav-text">3.7.4 行间标注</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-5-双向文本控制"><span class="nav-text">3.7.5 双向文本控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-6-异体字选择器"><span class="nav-text">3.7.6 异体字选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-7-控制字符的图片"><span class="nav-text">3.7.7 控制字符的图片</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-组合字符-Combining-Character"><span class="nav-text">3.8 组合字符(Combining Character)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-1-变音组合"><span class="nav-text">3.8.1 变音组合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-2-Emoji组合"><span class="nav-text">3.8.2 Emoji组合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-3-Unicode等价-Unicode-equivalence-及正规化-Normalization"><span class="nav-text">3.8.3 Unicode等价(Unicode equivalence)及正规化(Normalization)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-9-Grapheme"><span class="nav-text">3.9 Grapheme</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、注意事项"><span class="nav-text">四、注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-数据库不支持"><span class="nav-text">4.1 数据库不支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-打印机不支持"><span class="nav-text">4.2 打印机不支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-安全原因"><span class="nav-text">4.3 安全原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、字体与排版"><span class="nav-text">五、字体与排版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnote"><span class="nav-text">Footnote</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -845,7 +869,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">326k</span>
+    <span title="Symbols count total">327k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
