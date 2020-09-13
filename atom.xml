@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.xuwei.fun/"/>
-  <updated>2020-09-07T14:22:01.482Z</updated>
+  <updated>2020-09-13T15:54:32.946Z</updated>
   <id>https://blog.xuwei.fun/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读书笔记十二</title>
+    <link href="https://blog.xuwei.fun/2020/09/13/reading12/"/>
+    <id>https://blog.xuwei.fun/2020/09/13/reading12/</id>
+    <published>2020-09-13T15:51:33.000Z</published>
+    <updated>2020-09-13T15:54:32.946Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>转录Kino在微信读书上关于《罪与罚》的笔记.</p><a id="more"></a><h3 id="点评"><a href="#点评" class="headerlink" title="点评"></a>点评</h3><p>看完全书后，过了一遍陀思妥耶夫斯基的生平，发现小说有时还是需要结合作者经历来看。陀神在写“罪与罚”之前，一直患有癫痫-&gt;父亲去世-&gt;当过中尉-&gt;因革命被捕-&gt;被流放到西伯利亚-&gt;服役期间开始笃信宗教-&gt;妻兄逝世-&gt;赌博欠债，而在“罪与罚”中，这一切都呈现了出来，且大多是赋在了主人公拉斯柯尔尼科夫身上。将陀神的经历代入作品后，我甚至会怀疑陀神是否也曾想过自己是更特别的存在，想通过自己的手代替法律执行正义，也会怀疑陀神是否也曾想过自杀。</p><p>既然小说中的原型来源于自己的生活，那么多精彩的心理描写也就不难理解了，我相信小说中的主人公有多挣扎，陀神也就有过同样的挣扎，经历越多的读者也就越能产生共鸣(产生共鸣越多的读者大概越不幸吧)。能将如此多的心理活动生动准确地描写出来，能将读者的注意力迅速抓住，能将种种情节在主线中穿插自如，能将前期的处处伏笔完整收回，虽然陀神以心理描写而闻名，却显然不限于此。</p><p>“罪与罚”中最让我印象深刻的是描写斯维德里盖洛夫寻求自杀的那几节，让我莫名相信自杀者的心里状态就该如此，于反复中坚定，再无被挽救的可能。</p><p>陀神很残忍，“罪与罚”中的底层人大多都被生活蹂躏，没有一丝光明的希望；陀神也心系幻想，拉斯柯尔尼科夫一家获得了一笔意外的财富，拉斯柯尔尼科夫还有个一直愿意帮助他的朋友拉祖米欣，拉斯柯尔尼科夫的心灵最终在服役期间获得了救赎。拉斯柯尔尼科夫虽然经历坎坷，不幸中也还有着诸多幸运。</p><p>可是，书中那些已经死去的小人物呢？他们再也没有未来了。那些住在公寓套间里的底层穷人呢？他们还有希望吗？</p><p>群租在大城市套间中的我们又如何在一片压力中寻求自由与救赎呢？该怎样寻找自己的生存价值呢？不过还好，我们还算幸运，既然还有这一小片幸运的云，就努力生活下去吧，暂且不做无谓的思辩，就如陀神所说: “生活已经代替了思辨，因此思想意识必须完全另起炉灶。”</p><h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><p> <a href="https://book.douban.com/subject/30438790/" target="_blank" rel="noopener">罪与罚</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;转录Kino在微信读书上关于《罪与罚》的笔记.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="life" scheme="https://blog.xuwei.fun/categories/life/"/>
+    
+      <category term="reading" scheme="https://blog.xuwei.fun/categories/life/reading/"/>
+    
+    
+      <category term="陀思妥耶夫斯基" scheme="https://blog.xuwei.fun/tags/%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA/"/>
+    
+      <category term="罪与罚" scheme="https://blog.xuwei.fun/tags/%E7%BD%AA%E4%B8%8E%E7%BD%9A/"/>
+    
+  </entry>
   
   <entry>
     <title>从一个Emoji字符说起</title>
@@ -527,30 +553,6 @@
     
     
       <category term="鲁迅" scheme="https://blog.xuwei.fun/tags/%E9%B2%81%E8%BF%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>金融交易过程</title>
-    <link href="https://blog.xuwei.fun/2017/10/08/economics02/"/>
-    <id>https://blog.xuwei.fun/2017/10/08/economics02/</id>
-    <published>2017-10-08T13:36:45.000Z</published>
-    <updated>2019-05-18T14:24:33.034Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>接着挖坑吧、、想着哪个假期或者什么时候闲下来再填上，现在连Kino自己都开始怀疑了、<br>上一篇说的是个人理财与投资，主要是大局观的建立和一些大概的原则，具体到交易过程上，需要做的就是技术性的分析与工程上的实现了，其实目前有的投资不过是货币基金和股票配置，也都是买着玩，主要是通过这个过程使自己被动地关注市场的变化，了解一些交易规则，总结一些经验、其实最终目标是想做一个可以稳定盈利的投资工具（目前只考虑股票了）<br><a id="more"></a><br>关于理论方面的内容，主要参阅了”投资心理学”<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[投资心理学（双语版）（原书第5版）-约翰R·诺夫辛格](https://book.douban.com/subject/25788111/)">[1]</span></a></sup>，这主要是源自Kino个人的偏执，Kino以为股票投资最核心的问题是心理问题，在一些投资人的口中就是所谓的投资情绪分析<br>股票某种意义上就是赌博，然而与赌博的不同的是股票投资中你能得到的数据足够多，而普通意义上的赌博大多是”信息非常不完全信息博弈”（Kino编的词），而股票投资中的对于博弈多方的交易数据大多都是可以查到的，只是专业机构可以通过分析或者内幕消息提前获知某些消息，这就是优势。也有看法是信息是投资中最核心的问题，这么说也没错，但是Kino认为信息也是用来驱动情绪的，影响投资人的心理，以此影响多还是空，小的信息用来影响个人投资者的情绪，大的信息会影响机构投资者的情绪，然而不止是实体行业的信息可以影响情绪，只用资金也可以做到影响情绪，这就反应在主力资金在K线上的拉升与打压，这一点上更接近赌博一点，像是赌博中的诈胡。所以说所谓的大牛市，其实就是所有主力资金的情绪都是积极状态，达到了一致性，个人投资者不用管啦，反正会随大流，而熊市来临也是因为所有投资者的情绪都变为消极了，因为羊毛薅完了啊，才不是什么分析文章里忽悠的国际形势又变差了、国家政策又要变了，如果信息属实那的确是有影响，当然也是影响了情绪，但是很多时候都是假信息，所以说信息也不能全信。</p><p>理论与应用结合方面参阅了”金融投资系统交易原理与应用”<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[金融投资系统交易原理与应用-吴军](https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00ITK6ILS)">[2]</span></a></sup>这本书，其实主要还是看原理部分了。因为Kino一直都是靠直觉在写代码啊。</p><h3 id="1-分析流派"><a href="#1-分析流派" class="headerlink" title="1. 分析流派"></a>1. 分析流派</h3><h3 id="2-投资心理"><a href="#2-投资心理" class="headerlink" title="2. 投资心理"></a>2. 投资心理</h3><h3 id="3-工程实现"><a href="#3-工程实现" class="headerlink" title="3. 工程实现"></a>3. 工程实现</h3><p>这方面其实自己一直在维护一个工程，到现在连个可以用的Demo都没有做出来、、、<br>计划是做一个网页应用，前端用的框架是最近流行的Vue、考虑到处理的数据量和库的丰富性，后端肯定用Python啊，在Django和Flask之间纠结了一会还是用了Flask，前者太重Kino觉得没必要，网页应用Kino还是习惯做前后端完全分离的，后端只返回JSON数据就好，以及处理大数据。数据库用的PostgreSQL，大多数数据是从网易财经爬的，国庆期间主要就忙活这个了，初步算了下，只考虑A股的话，历史数据大概也得有5000*3000=1500万条，数据库写的不好、校园网爆炸、电脑间歇性崩溃，导致Kino已经放弃了这个假期把数据爬完的想法，寒假回去用台式机跑数据好了</p><h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)"><a href="https://book.douban.com/subject/25788111/" target="_blank" rel="noopener">投资心理学（双语版）（原书第5版）-约翰R·诺夫辛格</a><a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)"><a href="https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00ITK6ILS" target="_blank" rel="noopener">金融投资系统交易原理与应用-吴军</a><a href="#fnref:2" rev="footnote"> ↩</a></span></div></div></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;接着挖坑吧、、想着哪个假期或者什么时候闲下来再填上，现在连Kino自己都开始怀疑了、&lt;br&gt;上一篇说的是个人理财与投资，主要是大局观的建立和一些大概的原则，具体到交易过程上，需要做的就是技术性的分析与工程上的实现了，其实目前有的投资不过是货币基金和股票配置，也都是买着玩，主要是通过这个过程使自己被动地关注市场的变化，了解一些交易规则，总结一些经验、其实最终目标是想做一个可以稳定盈利的投资工具（目前只考虑股票了）&lt;br&gt;
-    
-    </summary>
-    
-      <category term="humanities" scheme="https://blog.xuwei.fun/categories/humanities/"/>
-    
-      <category term="economics" scheme="https://blog.xuwei.fun/categories/humanities/economics/"/>
-    
-    
-      <category term="finance" scheme="https://blog.xuwei.fun/tags/finance/"/>
     
   </entry>
   
