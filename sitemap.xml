@@ -2,6 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.xuwei.fun/2015/11/20/algorithm08/</loc>
+    
+    <lastmod>2020-09-13T15:31:36.091Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/09/02/algorithm05/</loc>
+    
+    <lastmod>2020-09-13T15:31:25.507Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/11/19/algorithm07/</loc>
+    
+    <lastmod>2020-09-13T15:31:22.457Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/11/17/algorithm06/</loc>
+    
+    <lastmod>2020-09-13T15:31:19.913Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/06/15/algorithm03/</loc>
+    
+    <lastmod>2020-09-13T15:30:50.427Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/06/15/algorithm04/</loc>
+    
+    <lastmod>2020-09-13T15:30:47.535Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2013/02/23/algorithm01/</loc>
+    
+    <lastmod>2020-09-13T15:29:56.735Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/06/27/control03/</loc>
+    
+    <lastmod>2020-09-13T15:28:29.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/03/10/control02/</loc>
+    
+    <lastmod>2020-09-13T15:27:59.954Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/10/15/myComputer03/</loc>
+    
+    <lastmod>2020-09-13T15:26:38.692Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2013/01/21/myComputer02/</loc>
+    
+    <lastmod>2020-09-13T15:26:35.926Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2013/01/12/myComputer01/</loc>
+    
+    <lastmod>2020-09-13T15:26:30.577Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/08/26/gameTheory01/</loc>
+    
+    <lastmod>2020-09-13T15:23:45.446Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/09/12/electronicDesign02/</loc>
+    
+    <lastmod>2020-09-13T15:22:12.485Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2014/10/26/electronicDesign01/</loc>
+    
+    <lastmod>2020-09-13T15:22:09.918Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/03/08/control01/</loc>
+    
+    <lastmod>2020-09-13T15:21:23.992Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/05/29/algorithm02/</loc>
+    
+    <lastmod>2020-09-13T15:20:13.638Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2014/10/28/opencv01/</loc>
+    
+    <lastmod>2020-09-13T15:10:28.376Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/2020/09/07/characterset/</loc>
     
     <lastmod>2020-09-07T14:22:01.482Z</lastmod>
@@ -142,13 +268,6 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2015/06/27/windowFunction/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.298Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.xuwei.fun/2016/05/20/web02/</loc>
     
     <lastmod>2019-05-18T14:24:33.297Z</lastmod>
@@ -166,13 +285,6 @@
     <loc>https://blog.xuwei.fun/2016/02/12/watching01/</loc>
     
     <lastmod>2019-05-18T14:24:33.294Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2015/11/17/unionFind/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.291Z</lastmod>
     
   </url>
   
@@ -205,30 +317,9 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2015/06/15/threeCharacters/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.275Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2015/09/02/simhash/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.272Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.xuwei.fun/2015/07/19/shadowsocks/</loc>
     
     <lastmod>2019-05-18T14:24:33.269Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2013/01/21/serverConfig/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.265Z</lastmod>
     
   </url>
   
@@ -450,13 +541,6 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2015/03/10/matrix01/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.170Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.xuwei.fun/2015/08/29/machineLearning05/</loc>
     
     <lastmod>2019-05-18T14:24:33.166Z</lastmod>
@@ -632,58 +716,9 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2013/02/23/hdu1003/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.078Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.xuwei.fun/2017/11/12/haskell01/</loc>
     
     <lastmod>2019-05-18T14:24:33.075Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2015/11/19/graph/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.054Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2015/08/26/gameTheory/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.051Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2015/03/08/functional/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.048Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2014/10/26/functionGenerator/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.045Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2015/09/12/electronicDesign01/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.042Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2015/05/29/eightpuzzle/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.037Z</lastmod>
     
   </url>
   
@@ -709,34 +744,6 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2015/06/15/digitRecognition/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.026Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2013/01/12/developConfig/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.020Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2015/11/20/dancingLinks/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.017Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2015/10/15/dailyConfig/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.014Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.xuwei.fun/2015/10/30/cpp03/</loc>
     
     <lastmod>2019-05-18T14:24:33.011Z</lastmod>
@@ -754,13 +761,6 @@
     <loc>https://blog.xuwei.fun/2015/03/12/cpp01/</loc>
     
     <lastmod>2019-05-18T14:24:33.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2014/10/28/configOpencv/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.002Z</lastmod>
     
   </url>
   
