@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.xuwei.fun/2020/09/07/characterset/</loc>
+    
+    <lastmod>2020-09-20T07:08:22.382Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/2020/09/13/reading12/</loc>
     
-    <lastmod>2020-09-13T16:12:47.115Z</lastmod>
+    <lastmod>2020-09-20T05:22:57.873Z</lastmod>
     
   </url>
   
@@ -131,13 +138,6 @@
     <loc>https://blog.xuwei.fun/2014/10/28/opencv01/</loc>
     
     <lastmod>2020-09-13T15:10:28.376Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2020/09/07/characterset/</loc>
-    
-    <lastmod>2020-09-07T14:22:01.482Z</lastmod>
     
   </url>
   
