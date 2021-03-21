@@ -2,30 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.xuwei.fun/2020/11/22/csFromZeroToOne01/</loc>
+    
+    <lastmod>2021-03-21T07:38:36.113Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/2018/06/02/japanese05/</loc>
     
-    <lastmod>2021-03-07T11:16:06.813Z</lastmod>
+    <lastmod>2021-03-07T12:23:48.438Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.xuwei.fun/2018/06/03/japanese06/</loc>
     
-    <lastmod>2021-03-07T09:46:42.436Z</lastmod>
+    <lastmod>2021-03-07T12:23:41.818Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2020/11/22/csFromZeroToOne01/</loc>
+    <loc>https://blog.xuwei.fun/2018/06/18/japanese07/</loc>
     
-    <lastmod>2021-01-12T08:46:56.865Z</lastmod>
+    <lastmod>2021-03-07T12:23:34.512Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2020/11/22/csFromZeroToOne02/</loc>
+    <loc>https://blog.xuwei.fun/2018/06/18/japanese08/</loc>
     
-    <lastmod>2020-11-22T12:20:07.176Z</lastmod>
+    <lastmod>2021-03-07T12:23:26.447Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2018/06/29/japanese09/</loc>
+    
+    <lastmod>2021-03-07T12:23:17.718Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2020/05/02/japanese10/</loc>
+    
+    <lastmod>2021-03-07T12:23:13.130Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2020/05/03/japanese11/</loc>
+    
+    <lastmod>2021-03-07T12:23:07.897Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2020/05/04/japanese12/</loc>
+    
+    <lastmod>2021-03-07T12:23:01.611Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2018/06/01/japanese04/</loc>
+    
+    <lastmod>2021-03-07T12:22:36.814Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2017/09/30/japanese03/</loc>
+    
+    <lastmod>2021-03-07T12:22:26.827Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2017/09/16/japanese01/</loc>
+    
+    <lastmod>2021-03-07T12:22:12.373Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2021/03/01/csFromZeroToOne02/</loc>
+    
+    <lastmod>2021-03-07T11:58:32.628Z</lastmod>
     
   </url>
   
@@ -180,48 +243,6 @@
     <loc>https://blog.xuwei.fun/2017/09/19/japanese02/</loc>
     
     <lastmod>2020-07-04T07:57:32.123Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2020/05/04/japanese12/</loc>
-    
-    <lastmod>2020-05-04T10:57:11.264Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2020/05/03/japanese11/</loc>
-    
-    <lastmod>2020-05-04T10:07:27.179Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2020/05/02/japanese10/</loc>
-    
-    <lastmod>2020-05-03T11:41:46.517Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2018/06/29/japanese09/</loc>
-    
-    <lastmod>2020-05-03T10:57:47.054Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2018/06/01/japanese04/</loc>
-    
-    <lastmod>2020-05-02T10:18:27.347Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2017/09/16/japanese01/</loc>
-    
-    <lastmod>2020-05-02T08:41:22.331Z</lastmod>
     
   </url>
   
@@ -670,27 +691,6 @@
     <loc>https://blog.xuwei.fun/2015/02/25/javascript01/</loc>
     
     <lastmod>2019-05-18T14:24:33.122Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2018/06/18/japanese08/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.116Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2018/06/18/japanese07/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.113Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2017/09/30/japanese03/</loc>
-    
-    <lastmod>2019-05-18T14:24:33.103Z</lastmod>
     
   </url>
   
