@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
+  <meta name="baidu-site-verification" content="hRzEYlh3gL">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言自2018年开始的非洲猪瘟，直到2020年底终于基本在大陆消失了，而在猪瘟这几年里，猪肉价格水涨船高，一度接近牛肉价格，而2021年开始，猪肉价格又开始一路下跌，猪周期终于还是来了，如何才能规避猪肉价格的风险呢？2021年初大连商品交易所（简称大商所）设立的生猪期货又是什么？这对猪肉价格有影响吗？Kino就从简单介绍2021年刚设立的生猪期货合约开始谈起。首先期货的标准定义是由期货交易所统一制">
+<meta property="og:type" content="article">
+<meta property="og:title" content="衍生品笔记一 —— 概述">
+<meta property="og:url" content="https://blog.xuwei.fun/2021/10/03/derivatives01/index.html">
+<meta property="og:site_name" content="霁月荒馆">
+<meta property="og:description" content="前言自2018年开始的非洲猪瘟，直到2020年底终于基本在大陆消失了，而在猪瘟这几年里，猪肉价格水涨船高，一度接近牛肉价格，而2021年开始，猪肉价格又开始一路下跌，猪周期终于还是来了，如何才能规避猪肉价格的风险呢？2021年初大连商品交易所（简称大商所）设立的生猪期货又是什么？这对猪肉价格有影响吗？Kino就从简单介绍2021年刚设立的生猪期货合约开始谈起。首先期货的标准定义是由期货交易所统一制">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-03T09:53:26.000Z">
+<meta property="article:modified_time" content="2021-10-10T06:22:51.564Z">
+<meta property="article:author" content="Kino">
+<meta property="article:tag" content="finance">
+<meta property="article:tag" content="invest">
+<meta property="article:tag" content="derivatives">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://blog.xuwei.fun/2021/10/03/derivatives01/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style><style>
+#needsharebutton-float {
+  bottom: 88px;
+  cursor: pointer;
+  left: -8px;
+  position: fixed;
+  z-index: 9999;
+}
+#needsharebutton-float .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 4px;
+  padding: 0 10px 0 14px;
+}
+</style>
+  <title>衍生品笔记一 —— 概述 | 霁月荒馆</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-104049598-2');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">霁月荒馆</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-thoughts">
+
+    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
+
+  </li>
+        <li class="menu-item menu-item-excerpt">
+
+    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2021/10/03/derivatives01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/site/avatar.png">
+      <meta itemprop="name" content="Kino">
+      <meta itemprop="description" content="Amor Fati">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="霁月荒馆">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          衍生品笔记一 —— 概述
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-10-03 17:53:26" itemprop="dateCreated datePublished" datetime="2021-10-03T17:53:26+08:00">2021-10-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-10-10 14:22:51" itemprop="dateModified" datetime="2021-10-10T14:22:51+08:00">2021-10-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/finance/" itemprop="url" rel="index"><span itemprop="name">finance</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>2.2k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>2 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自2018年开始的非洲猪瘟，直到2020年底终于基本在大陆消失了，而在猪瘟这几年里，猪肉价格水涨船高，一度接近牛肉价格，而2021年开始，猪肉价格又开始一路下跌，猪周期终于还是来了，如何才能规避猪肉价格的风险呢？2021年初大连商品交易所（简称大商所）设立的生猪期货又是什么？这对猪肉价格有影响吗？Kino就从简单介绍2021年刚设立的生猪期货合约开始谈起。<br>首先期货的标准定义是<strong>由期货交易所统一制定的、规定在将来某一特定的时间和地点交割一定数量和质量标的物的标准化合约。</strong>那么通过大商所的官网，可以查看到<a href="http://www.dce.com.cn/dalianshangpin/sspz/sz/hyygz30/6264142/index.html" target="_blank" rel="noopener">生猪期货合约</a>的具体规则，目前生猪合约月份有1、3、5、7、9、11月份，那以Kino写这篇文章时的2021.10.03为例，此时实际上可以开仓的标的就有生猪期货2111、生猪期货2201、生猪期货2203等，生猪期货的最后交易日为合约月份倒数第4个交易日，也就是说如果现在持有生猪期货2203一手16吨，2022.03.28日是最后交易日，2022.03.28之后还持有该标的，就进入了交割日，需要进行生猪的活体实物交割，简单点来说就是需要去指定的仓库真的领回16吨生猪。<br>那么生猪期货合约对于猪肉养殖公司，例如牧原、温氏等，有什么作用呢？其核心就是风险管理，既然猪肉周期价格变化大，那就可以通过期货合同，提前锁定未来的价格，对冲风险。而下游的猪肉产品制作企业如双汇等，也可以通过期货合约提前锁定价格，如此一来，原本2022.01的猪肉价格对于上下游企业来说，都是不确定的，现在都相对确定了，也就可以据此保证自身产品价格的相对稳定。<br>除却生猪期货，基本国内目前的农产品期货、大宗商品期货等，也都是这样的作用，而期货就是金融衍生品中最常见的一种，So除了期货，还有哪些衍生品呢？衍生品的定义究竟是什么呢？<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="黄小玉,于源,王林, and 崔岱虎. 生猪期货合约及规则设计介绍. 中国期货, 1(2012):20-28.
+">[1]</span></a></sup></p>
+<a id="more"></a>
+<h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h2><h3 id="1-1-衍生品概念"><a href="#1-1-衍生品概念" class="headerlink" title="1.1 衍生品概念"></a>1.1 衍生品概念</h3><p>In finance, a derivative is a contract that derives its value from the performance of an underlying entity.<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “Derivative (Finance).” Wikipedia, Wikimedia Foundation, 17 Sept. 2021, https://en.wikipedia.org/wiki/Derivative_(finance). ">[2]</span></a></sup><br>衍生品，根据其字面含义，就是从一个基础标的 的表现衍生出价值的一个合约/协议。一般有三个要素:</p>
+<ul>
+<li>基础标的</li>
+<li>双方/多方 交易对手</li>
+<li>协议/合约</li>
+</ul>
+<h3 id="1-2-衍生品作用"><a href="#1-2-衍生品作用" class="headerlink" title="1.2 衍生品作用"></a>1.2 衍生品作用</h3><p>衍生品的作用主要有:</p>
+<ul>
+<li>风险管理/对冲(Risk Management/Hedging)</li>
+<li>投机(Speculation)</li>
+<li>套利(Arbitrage)</li>
+</ul>
+<blockquote>
+<p>虽然衍生品早期是为了风险管理，但是任何工具只要有流动性就可以作为投机或套利的工具</p>
+</blockquote>
+<h3 id="1-3-衍生品分类"><a href="#1-3-衍生品分类" class="headerlink" title="1.3 衍生品分类"></a>1.3 衍生品分类</h3><p>四大类:</p>
+<ul>
+<li>Future Contracts(期货合约)</li>
+<li>Forward Agreements(远期协议)</li>
+<li>Swaps Agreements(互换协议)</li>
+<li>Options Contracts(期权合约)</li>
+</ul>
+<blockquote>
+<p>Contracts是标准化的，可在交易所或OTC交易，Agreements多在OTC交易. 目前OTC交易占比远大于场内交易</p>
+</blockquote>
+<p>其他具体衍生品示例:</p>
+<ul>
+<li>Credit derivatives, 比如信用违约互换(credit default swap，CDS)</li>
+<li>Weather derivatives</li>
+<li>Emission (CO2) derivatives</li>
+<li>Economic derivatives</li>
+</ul>
+<p>实际衍生品标的中，占最大市场份额的其实是利率(interest)相关的</p>
+<h3 id="1-4-衍生品市场"><a href="#1-4-衍生品市场" class="headerlink" title="1.4 衍生品市场"></a>1.4 衍生品市场</h3><ul>
+<li>Exchange trades(场内交易): 交易所作为CCP，可以规避对手风险/违约风险</li>
+<li>Over-the-counter(场外交易): 参与者主要是商业银行、投行、基金公司、社保基金、保险公司… 中国内地又以银间交易占比最大</li>
+</ul>
+<p>场外 -&gt; Chicago Board of Trade(CBOT,1840) -&gt; New York Mercantile Exchange(NYMEX, 1882) -&gt; Chicago Mercantile Exchange(CME,1972) -&gt; Chicago Board Options Exchange(CBOE,1973)<br>1972年布雷顿森林体系崩溃后，汇率开始剧烈波动，也因此，期货从早期的农产品等实物商品为标的，开始引入外汇期货(Exchange rate futures)，以外汇等基础金融工具作为标的，当然再往后期货发展越来越繁荣，还引入了股指等虚拟金融工具为标的。</p>
+<blockquote>
+<p>虚拟金融工具的特点之一，就是需要有乘数</p>
+</blockquote>
+<h3 id="1-5-衍生品业务"><a href="#1-5-衍生品业务" class="headerlink" title="1.5 衍生品业务"></a>1.5 衍生品业务</h3><p>现实中，究竟哪些公司会有衍生品业务的需求呢？<br>终端用户有以下业务需求:</p>
+<ul>
+<li>跨国巨头需要控制外汇风险，因此需要外汇衍生品</li>
+<li>交通运输公司受油价影响，因此需要原油衍生品</li>
+<li>购买大额存款、债券的基金等受利率波动影响，因此需要利率衍生品</li>
+<li>个人投资者想要通过衍生品投机</li>
+<li>…</li>
+</ul>
+<p>金融平台自身的业务需求:</p>
+<ul>
+<li>大型商业银行、保险公司等天然需要管理金融工具的风险</li>
+<li>做市商控制存货风险</li>
+</ul>
+<h2 id="2-衍生品的标志性事件"><a href="#2-衍生品的标志性事件" class="headerlink" title="2. 衍生品的标志性事件"></a>2. 衍生品的标志性事件</h2><ul>
+<li>Orange county</li>
+<li>Amaranth</li>
+<li>Nick Leeson</li>
+<li>国储铜事件</li>
+<li>中航油亏损事件</li>
+</ul>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">黄小玉,于源,王林, and 崔岱虎. 生猪期货合约及规则设计介绍. 中国期货, 1(2012):20-28.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. “Derivative (Finance).” Wikipedia, Wikimedia Foundation, 17 Sept. 2021, <a href="https://en.wikipedia.org/wiki/Derivative_(finance)" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Derivative_(finance)</a>.<a href="#fnref:2" rev="footnote"> ↩</a></span></div></div></div>
+    </div>
+
+    
+    
+    <div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+        <div class="reward-container">
+  <div>Compensated Dating</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Kino
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://blog.xuwei.fun/2021/10/03/derivatives01/" title="衍生品笔记一 —— 概述">https://blog.xuwei.fun/2021/10/03/derivatives01/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+            <span class="icon">
+              <i class="weibo"></i>
+            </span>
+
+            <span class="label">Weibo</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+            <span class="icon">
+              <i class="wechat"></i>
+            </span>
+
+            <span class="label">Wechat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/finance/" rel="tag"># finance</a>
+              <a href="/tags/invest/" rel="tag"># invest</a>
+              <a href="/tags/derivatives/" rel="tag"># derivatives</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/03/derivatives02/" rel="prev" title="衍生品笔记二 —— 远期">
+      <i class="fa fa-chevron-left"></i> 衍生品笔记二 —— 远期
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/10/06/derivatives03/" rel="next" title="衍生品笔记三 —— 期货期权">
+      衍生品笔记三 —— 期货期权 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments" id="gitalk-container"></div>
+            </div>
+            <div class="tab-pane livere" id="comment-livere">
+              
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
+  </div>
+  
+            </div>
+        </div>
+      </div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-text">1. 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-衍生品概念"><span class="nav-text">1.1 衍生品概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-衍生品作用"><span class="nav-text">1.2 衍生品作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-衍生品分类"><span class="nav-text">1.3 衍生品分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-衍生品市场"><span class="nav-text">1.4 衍生品市场</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-衍生品业务"><span class="nav-text">1.5 衍生品业务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-衍生品的标志性事件"><span class="nav-text">2. 衍生品的标志性事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnote"><span class="nav-text">Footnote</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2012 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">356k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">5:23</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 1000,
+        priority: false,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2021/10/03/derivatives01/',]
+      });
+      });
+  </script>
+<div id="needsharebutton-float">
+      <span class="btn">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </span>
+    </div>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "topCenter";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+      flOptions = {};
+        flOptions.iconStyle = "box";
+        flOptions.boxForm = "vertical";
+        flOptions.position = "middleRight";
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      new needShareButton('#needsharebutton-float', flOptions);
+  </script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '58ab17a966414cd66c67',
+      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
+      repo        : 'WoeiSheu.github.io',
+      owner       : 'WoeiSheu',
+      admin       : ['WoeiSheu'],
+      id          : '649cb97b687628fdfd47e49c4be70bb3',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+<script>
+  let fnTextPopup = function (arr, options) {
+    if (!arr || !arr.length) {
+      return;
+    }
+    let idx = 0;
+    document.documentElement.addEventListener('click', function (event) {
+      let x = event.pageX, y = event.pageY;
+      let newElem = document.createElement('span');
+      let newText = document.createTextNode(arr[idx]);
+      newElem.appendChild(newText);
+      newElem.className = 'text-popup';
+      this.appendChild(newElem);
+
+      // 删除
+      newElem.addEventListener('animationend', function () {
+          newElem.parentNode.removeChild(newElem);
+      });
+      // 位置
+      newElem.style.left = (x - newElem.clientWidth / 2) + 'px';
+      newElem.style.top = (y - newElem.clientHeight) + 'px';
+
+      // 自增
+      idx = (idx + 1) % arr.length;
+    });    
+  };
+
+  fnTextPopup(['富强', '民主', '文明', '和谐', '自由', '平等', '公正', '法治', '爱国', '敬业', '诚信', '友善']);
+</script>
+</body>
+</html>

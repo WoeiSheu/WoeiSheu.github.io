@@ -8204,4 +8204,331 @@ Not creating home directory</code>/usr/share/tomcat7’.<br>Creating config file
         <tag>operating system</tag>
       </tags>
   </entry>
+  <entry>
+    <title>衍生品笔记一 —— 概述</title>
+    <url>/2021/10/03/derivatives01/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自2018年开始的非洲猪瘟，直到2020年底终于基本在大陆消失了，而在猪瘟这几年里，猪肉价格水涨船高，一度接近牛肉价格，而2021年开始，猪肉价格又开始一路下跌，猪周期终于还是来了，如何才能规避猪肉价格的风险呢？2021年初大连商品交易所（简称大商所）设立的生猪期货又是什么？这对猪肉价格有影响吗？Kino就从简单介绍2021年刚设立的生猪期货合约开始谈起。<br>首先期货的标准定义是<strong>由期货交易所统一制定的、规定在将来某一特定的时间和地点交割一定数量和质量标的物的标准化合约。</strong>那么通过大商所的官网，可以查看到<a href="http://www.dce.com.cn/dalianshangpin/sspz/sz/hyygz30/6264142/index.html" target="_blank" rel="noopener">生猪期货合约</a>的具体规则，目前生猪合约月份有1、3、5、7、9、11月份，那以Kino写这篇文章时的2021.10.03为例，此时实际上可以开仓的标的就有生猪期货2111、生猪期货2201、生猪期货2203等，生猪期货的最后交易日为合约月份倒数第4个交易日，也就是说如果现在持有生猪期货2203一手16吨，2022.03.28日是最后交易日，2022.03.28之后还持有该标的，就进入了交割日，需要进行生猪的活体实物交割，简单点来说就是需要去指定的仓库真的领回16吨生猪。<br>那么生猪期货合约对于猪肉养殖公司，例如牧原、温氏等，有什么作用呢？其核心就是风险管理，既然猪肉周期价格变化大，那就可以通过期货合同，提前锁定未来的价格，对冲风险。而下游的猪肉产品制作企业如双汇等，也可以通过期货合约提前锁定价格，如此一来，原本2022.01的猪肉价格对于上下游企业来说，都是不确定的，现在都相对确定了，也就可以据此保证自身产品价格的相对稳定。<br>除却生猪期货，基本国内目前的农产品期货、大宗商品期货等，也都是这样的作用，而期货就是金融衍生品中最常见的一种，So除了期货，还有哪些衍生品呢？衍生品的定义究竟是什么呢？<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="黄小玉,于源,王林, and 崔岱虎. 生猪期货合约及规则设计介绍. 中国期货, 1(2012):20-28.
+">[1]</span></a></sup></p>
+<a id="more"></a>
+<h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h2><h3 id="1-1-衍生品概念"><a href="#1-1-衍生品概念" class="headerlink" title="1.1 衍生品概念"></a>1.1 衍生品概念</h3><p>In finance, a derivative is a contract that derives its value from the performance of an underlying entity.<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “Derivative (Finance).” Wikipedia, Wikimedia Foundation, 17 Sept. 2021, https://en.wikipedia.org/wiki/Derivative_(finance). ">[2]</span></a></sup><br>衍生品，根据其字面含义，就是从一个基础标的 的表现衍生出价值的一个合约/协议。一般有三个要素:</p>
+<ul>
+<li>基础标的</li>
+<li>双方/多方 交易对手</li>
+<li>协议/合约</li>
+</ul>
+<h3 id="1-2-衍生品作用"><a href="#1-2-衍生品作用" class="headerlink" title="1.2 衍生品作用"></a>1.2 衍生品作用</h3><p>衍生品的作用主要有:</p>
+<ul>
+<li>风险管理/对冲(Risk Management/Hedging)</li>
+<li>投机(Speculation)</li>
+<li>套利(Arbitrage)</li>
+</ul>
+<blockquote>
+<p>虽然衍生品早期是为了风险管理，但是任何工具只要有流动性就可以作为投机或套利的工具</p>
+</blockquote>
+<h3 id="1-3-衍生品分类"><a href="#1-3-衍生品分类" class="headerlink" title="1.3 衍生品分类"></a>1.3 衍生品分类</h3><p>四大类:</p>
+<ul>
+<li>Future Contracts(期货合约)</li>
+<li>Forward Agreements(远期协议)</li>
+<li>Swaps Agreements(互换协议)</li>
+<li>Options Contracts(期权合约)</li>
+</ul>
+<blockquote>
+<p>Contracts是标准化的，可在交易所或OTC交易，Agreements多在OTC交易. 目前OTC交易占比远大于场内交易</p>
+</blockquote>
+<p>其他具体衍生品示例:</p>
+<ul>
+<li>Credit derivatives, 比如信用违约互换(credit default swap，CDS)</li>
+<li>Weather derivatives</li>
+<li>Emission (CO2) derivatives</li>
+<li>Economic derivatives</li>
+</ul>
+<p>实际衍生品标的中，占最大市场份额的其实是利率(interest)相关的</p>
+<h3 id="1-4-衍生品市场"><a href="#1-4-衍生品市场" class="headerlink" title="1.4 衍生品市场"></a>1.4 衍生品市场</h3><ul>
+<li>Exchange trades(场内交易): 交易所作为CCP，可以规避对手风险/违约风险</li>
+<li>Over-the-counter(场外交易): 参与者主要是商业银行、投行、基金公司、社保基金、保险公司… 中国内地又以银间交易占比最大</li>
+</ul>
+<p>场外 -&gt; Chicago Board of Trade(CBOT,1840) -&gt; New York Mercantile Exchange(NYMEX, 1882) -&gt; Chicago Mercantile Exchange(CME,1972) -&gt; Chicago Board Options Exchange(CBOE,1973)<br>1972年布雷顿森林体系崩溃后，汇率开始剧烈波动，也因此，期货从早期的农产品等实物商品为标的，开始引入外汇期货(Exchange rate futures)，以外汇等基础金融工具作为标的，当然再往后期货发展越来越繁荣，还引入了股指等虚拟金融工具为标的。</p>
+<blockquote>
+<p>虚拟金融工具的特点之一，就是需要有乘数</p>
+</blockquote>
+<h3 id="1-5-衍生品业务"><a href="#1-5-衍生品业务" class="headerlink" title="1.5 衍生品业务"></a>1.5 衍生品业务</h3><p>现实中，究竟哪些公司会有衍生品业务的需求呢？<br>终端用户有以下业务需求:</p>
+<ul>
+<li>跨国巨头需要控制外汇风险，因此需要外汇衍生品</li>
+<li>交通运输公司受油价影响，因此需要原油衍生品</li>
+<li>购买大额存款、债券的基金等受利率波动影响，因此需要利率衍生品</li>
+<li>个人投资者想要通过衍生品投机</li>
+<li>…</li>
+</ul>
+<p>金融平台自身的业务需求:</p>
+<ul>
+<li>大型商业银行、保险公司等天然需要管理金融工具的风险</li>
+<li>做市商控制存货风险</li>
+</ul>
+<h2 id="2-衍生品的标志性事件"><a href="#2-衍生品的标志性事件" class="headerlink" title="2. 衍生品的标志性事件"></a>2. 衍生品的标志性事件</h2><ul>
+<li>Orange county</li>
+<li>Amaranth</li>
+<li>Nick Leeson</li>
+<li>国储铜事件</li>
+<li>中航油亏损事件</li>
+</ul>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">黄小玉,于源,王林, and 崔岱虎. 生猪期货合约及规则设计介绍. 中国期货, 1(2012):20-28.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. “Derivative (Finance).” Wikipedia, Wikimedia Foundation, 17 Sept. 2021, <a href="https://en.wikipedia.org/wiki/Derivative_(finance)" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Derivative_(finance)</a>.<a href="#fnref:2" rev="footnote"> ↩</a></span></div></div></div>]]></content>
+      <categories>
+        <category>technology</category>
+        <category>finance</category>
+      </categories>
+      <tags>
+        <tag>finance</tag>
+        <tag>invest</tag>
+        <tag>derivatives</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>衍生品笔记三 —— 期货期权</title>
+    <url>/2021/10/06/derivatives03/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>// TODO</p>
+<a id="more"></a>
+<h2 id="1-期货合约"><a href="#1-期货合约" class="headerlink" title="1. 期货合约"></a>1. 期货合约</h2><p>概念上近似远期协议，约定在未来某一时刻以某一价格交割某一标的资产。<br>区别是期货合约是场内交易的，因此是一个标准化的合约，由交易所做出履约保证</p>
+<p>全球各地可以进行期货交易的交易所:</p>
+<ul>
+<li>Chicago Board of Trade</li>
+<li>Chicago Mercantile Exchange</li>
+<li>LIFFE (London)</li>
+<li>Eurex (Europe)</li>
+<li>BM&amp;F (Sao Paulo, Brazil)</li>
+<li>TIFFE (Tokyo)</li>
+<li>上海期货交易所</li>
+<li>郑州商品交易所</li>
+<li>大连商品交易所</li>
+<li>中国金融期货交易所</li>
+<li>上海国际能源交易中心</li>
+<li>……</li>
+</ul>
+<p>期货合约要素</p>
+<h2 id="2-期权合约"><a href="#2-期权合约" class="headerlink" title="2. 期权合约"></a>2. 期权合约</h2><p>Options 核心是权利，交易的是权利，为了交易权利所付出的金钱称为premium(权利金).<br>期权是非对称交易，期权的买方拥有权利没有义务，期权的卖方有义务无权利.<br>期权的多头是买入权利，空头是卖出权利，但是买入卖出的权利又可分为看涨(call)/看跌(put)两类</p>
+<ul>
+<li>call: 看涨期权(call option)又称认购期权，买进期权，买方期权，买权，延买期权，或“敲进”，是指期权的购买者拥有在期权合约有效期内按执行价格买进一定数量标的物的权利。看涨期权是这样一种合约: 它给合约持有者（即买方）按照约定的价格从对手手中购买特定数量之特定交易标的物的权利。</li>
+<li>put: 看跌期权(put option)又称认沽期权，看跌期权则与看涨期权正好相反，它赋予了持有者在未来以确定的价格，也就是行权价格卖出的权利，所以看跌期权的持有者会希望标的资产价格的下跌幅度越大越好。</li>
+</ul>
+<p>在到期日(Expiration Date)买入/卖出的价格就是 settle price，也就是行权价格/执行价格…<br>而根据权利行权时间的区别，又可分为欧式期权(European Options)和美式期权(American Options)</p>
+<ul>
+<li>欧式期权: 只能在到期日行权</li>
+<li>美式期权: 可以在成交后有效期内任何一天行权</li>
+</ul>
+<p>期权的优势是可以通过对冲平仓免除履约责任.</p>
+<p>期权的价格和标的资产的价格差距是很大的，如图所示:<br><img src="/images/derivatives/derivatives03_01.jpg" alt="ge_options"></p>
+<p>那么期权的价格究竟是怎么算出来的呢? 实际上期权定价的数学模型有:</p>
+<ul>
+<li>Black-Scholes Option Pricing Model</li>
+<li>Black–Scholes–Merton model</li>
+</ul>
+<p>全球各地可以进行期权交易的交易所:</p>
+<ul>
+<li>Chicago Board Options Exchange</li>
+<li>American Stock Exchange</li>
+<li>Philadelphia Stock Exchange</li>
+<li>Pacific Exchange</li>
+<li>LIFFE (London)</li>
+<li>Eurex (Europe)</li>
+<li>……</li>
+</ul>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">Wikipedians. “Futures Contract.” Wikipedia, Wikimedia Foundation, 6 Oct. 2021, <a href="https://en.wikipedia.org/wiki/Futures_contract" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Futures_contract</a>.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">- 合约名称(Contract Name)<br>- 基础资产(Underlying Assets)<br>- 交易单位(Contract Size)<br>- 报价单位(Price Quotation)<br>- 最小变动价位(Minimum Price Fluctuation)<br>- 涨跌停板幅度(Daily Price Limit)<br>- 合约月份(Contract Months)<br>- 交易时间(Trading Hours)<br>- 最后交易日(Last Trading Day)<br>- 交割日期(Delivery Period)<br>- 交割品级(Grade and Quality Specifications)<br>- 交割地点(Delivery Venue)<br>- 交割单位(Delivery Size)<br>- 最低交易保证金(Minimum Trade Margin)<br>- 交割方式(Settlement Method)<br>- 交易代码(Contract Code)<br>- 上市交易场所(Exchange)<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">中国证券监督管理委员会. “期货合约要素.” 中国证券监督管理委员会, 26 Feb. 2020, <a href="http://www.csrc.gov.cn/pub/zjhpublic/zjh/202002/P020200228535813027616.pdf" target="_blank" rel="noopener">http://www.csrc.gov.cn/pub/zjhpublic/zjh/202002/P020200228535813027616.pdf</a>.<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">Wikipedians. “Black–Scholes model” Wikipedia, Wikimedia Foundation, 17 Sep. 2021, <a href="https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model</a>.<a href="#fnref:3" rev="footnote"> ↩</a></span></div><div id="fn:4" style="display:flex"><span style="width:20px">4.</span><span style="width:calc(100% - 20px)">Unknown. “Black-Scholes期权定价模型.” MBA智库百科, 9 Apr. 2008, <a href="https://wiki.mbalib.com/wiki/Black-Scholes期权定价模型" target="_blank" rel="noopener">https://wiki.mbalib.com/wiki/Black-Scholes期权定价模型</a>.<a href="#fnref:4" rev="footnote"> ↩</a></span></div></div></div>]]></content>
+      <categories>
+        <category>technology</category>
+        <category>finance</category>
+      </categories>
+      <tags>
+        <tag>finance</tag>
+        <tag>invest</tag>
+        <tag>derivatives</tag>
+        <tag>futures</tag>
+        <tag>options</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>衍生品笔记二 —— 远期</title>
+    <url>/2021/10/03/derivatives02/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>// TODO</p>
+<a id="more"></a>
+<h2 id="1-远期汇率-外汇远期"><a href="#1-远期汇率-外汇远期" class="headerlink" title="1. 远期汇率(外汇远期)"></a>1. 远期汇率(外汇远期)</h2><p>根据时间不同，同一标的也会有多个远期合约<br>由于外汇交易中，是以货币换货币，所以需要设定一种货币为商品，另一种为计价货币<br>判断多空的标准，也因此需要明确货币</p>
+<ul>
+<li>多头(long position): 买方</li>
+<li>空头(short position): 卖方</li>
+</ul>
+<p>对于非管制货币来说，由于可以自动兑换，通常做直接远期交易(Outright forward)即可满足需求，在约定的时间以约定价格买卖货币。<br>但是对于管制货币，因为无法直接交易，所以有了NDF(Non-deliverable forward)，不交割本金，只交割计价货币的差额</p>
+<blockquote>
+<p>NDF: 首先要明确一点的是，NDF实际上并不做货币兑换，这更类似于一个赌博协议。以CNY/USD为例，假设A预计3个月后会收到一笔 10000 CNY的收入，但是需要换成美金，由于CNY/USD没法自由兑换，因此A和做市商做了一笔NDF交易。由于NDF不交割本金，实际上三个月后10000CNY的收入还是在A的账户里，需要A自行将人民币兑换出境，而A和做市商之间只需要就现货汇率计算出损益，进行最终交割即可。<br>为方便计算，假设CNY/USD 的三个月远期汇率为 10，也就是说A预期是三个月后以汇率10兑换出境，获得1000USD，而实际上三个月后，CNY/USD的现货可能是:</p>
+<ul>
+<li>10。那恰好，A和做市商之间损益为0</li>
+<li>20。那实际上A现在将10000 CNY兑换出境后只能得到500 USD，和预期相比少了500USD，这500USD就由做市商来弥补，因为最终只交割这500USD，不交割本金，所以才是NDF</li>
+<li>5。那实际上A现在将10000 CNY兑换出境后能得到2000 USD，和预期相比多了1000USD，这1000USD就由A来补偿给做市商，因为最终只交割这1000USD，不交割本金，所以才是NDF</li>
+</ul>
+</blockquote>
+<h2 id="2-远期利率-Forward-rate"><a href="#2-远期利率-Forward-rate" class="headerlink" title="2. 远期利率(Forward rate)"></a>2. 远期利率(Forward rate)</h2><p>与远期利率相对应的有如下利率:</p>
+<ul>
+<li>即期利率(Spot rate): 当前时间点上零息债券的到期收益率</li>
+<li>短期利率(Short rate): 既定区间内的收益率</li>
+</ul>
+<p>远期利率则是指隐含在给定的即期利率之中，从未来的某一时点到另一时点的利率。也就是未来的短期利率。<br>1×2远期利率，即表示1个月之后开始的期限1个月的远期利率；2×4远期利率，则表示2个月之后开始的期限为2个月的远期利率。</p>
+<p>contracted rate(合同利率): 远期利率协议签订时合同上所定的利率.<br>reference rate(参考利率): 通常用于确定各种金融合同、贷款、基于账户的产品和金融工具（包括衍生工具和票据）的应付金额及其价值。</p>
+<p>参考利率有</p>
+<blockquote>
+<p>2017年英国金融行为监管局（FCA）宣布，2021年底后将不再强制要求报价行报出LIBOR。这意味着LIBOR将退出市场。</p>
+</blockquote>
+<p>最终损益就是名义本金与合同利率和参考利率的差额的乘积</p>
+<h2 id="3-远期结售汇"><a href="#3-远期结售汇" class="headerlink" title="3. 远期结售汇"></a>3. 远期结售汇</h2><p>对于中国大陆市场来说，由于CNY不能自由兑换，因此人民币有远期结售汇业务，而由于远期结售汇是个人、企业和银行间的交易，非银间交易，因此不被称为外汇远期</p>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">Wikipedians. “Non-Deliverable Forward.” Wikipedia, Wikimedia Foundation, 24 May 2021, <a href="https://en.wikipedia.org/wiki/Non-deliverable_forward" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Non-deliverable_forward</a>.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">- LIBOR(London Interbank Offered Rate)<br>- SHIBOR(Shanghai Interbank Offered Rate)<br>- ……<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. “Forward Rate Agreement.” Wikipedia, Wikimedia Foundation, 1 Oct. 2021, <a href="https://en.wikipedia.org/wiki/Forward_rate_agreement" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Forward_rate_agreement</a>.<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">Wikipedinas. “Reference rate” Wikipedia, Wikimedia Foundation, 1 May. 2018, <a href="https://en.wikipedia.org/wiki/Reference_rate" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Reference_rate</a>.<a href="#fnref:3" rev="footnote"> ↩</a></span></div><div id="fn:4" style="display:flex"><span style="width:20px">4.</span><span style="width:calc(100% - 20px)">Unknown. “Forwards in the Debt Markets.” Ebrary, 1 Oct. 2021, <a href="https://ebrary.net/788/economics/forwards_debt_markets" target="_blank" rel="noopener">https://ebrary.net/788/economics/forwards_debt_markets</a>.<a href="#fnref:4" rev="footnote"> ↩</a></span></div></div></div>]]></content>
+      <categories>
+        <category>technology</category>
+        <category>finance</category>
+      </categories>
+      <tags>
+        <tag>finance</tag>
+        <tag>invest</tag>
+        <tag>derivatives</tag>
+        <tag>forward</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>衍生品笔记四 —— 互换</title>
+    <url>/2021/10/07/derivatives04/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>// TODO</p>
+<a id="more"></a>
+<h2 id="1-互换-Swap"><a href="#1-互换-Swap" class="headerlink" title="1. 互换(Swap)"></a>1. 互换(Swap)</h2><p>互换，通常也被称为掉期交易，在Wikipedia上给出的定义是:<br>A swap, in finance, is an agreement between two counterparties to exchange financial instruments or cashflows or payments for a certain time. The instruments can be almost anything but most swaps involve cash based on a notional principal amount.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “Swap (Finance).” Wikipedia, Wikimedia Foundation, 6 Sept. 2021, https://en.wikipedia.org/wiki/Swap_(finance).
+">[1]</span></a></sup></p>
+<p>简单点来看，互换其实也就是顾名思义: 指交易双方约定在未来某一期限相互交换各自持有的金融工具、现金流、支付款项的协议，通常这些金融工具都是基于名义本金的现金流<br>而根据国际清算银行(BIS)的定义，金融掉期是交易双方在一定期间内，掉期不同标的物之现金流的协议。</p>
+<h2 id="2-利率互换-利率掉期"><a href="#2-利率互换-利率掉期" class="headerlink" title="2. 利率互换/利率掉期"></a>2. 利率互换/利率掉期</h2><p>利率掉期的基本交易型态为固定利率与浮动利率(Fixed-Floating Swap)的掉期，亦称为Plain Vanilla IRS，市场上尚有牵涉不同浮动利率指标间的掉期，如基差掉期(Basis Swap)等，完全视交易双方对利率指标之选择，较常见的浮动利率指标为LIBOR。<br>通常，将支付Fixed rate一方视为Payer，另一方视为Receiver<br>对人民币的浮动利率而言，目前人民币利率互换浮动端利率包括最优贷款利率(LPR)、人民银行定期存贷款利率、Shibor利率(隔夜、3个月品种)、银行间7天回购定盘利率(FR007)四大类。其中LPR就是2020年调整之后的房贷利率</p>
+<blockquote>
+<p>对于资产项和负债项来说，期待的利率趋势其实是不同的<br>利率互换，最终计算的是基于名义本金的利率差额</p>
+</blockquote>
+<h2 id="3-外汇互换"><a href="#3-外汇互换" class="headerlink" title="3. 外汇互换"></a>3. 外汇互换</h2><p>外汇互换（又称外汇掉期）是结合外汇现货及远期交易的一种合约，合约双方约定某一日期按即期汇率交换一定数额的外汇，然后在未来某一日期，按约定的汇率(即远期汇率)以相等金额再交换回来。实际上，合约双方是各自获得交换回来的货币一定时间的使用权。外汇互换的条件，反映了合约双方对所交换的两种货币的汇率走势及各自对利率的看法。外汇互换以远期点数的方式报价，除了可用来锁定在未来某一时点交换货币的汇率外，亦可作为对即期与远期汇率间的异常差距进行套利的手段。</p>
+<blockquote>
+<p>外汇互换，开始和结束的一期需要互换本金，但是除开始之外的其他期，还需要支出和收入利息</p>
+</blockquote>
+<p>一笔外汇互换交易的现金流状况，图中左侧为USD，右侧为GBP:<br><img src="/images/derivatives/derivatives04_01.jpg" alt="cash_flows"></p>
+<p>可以看出，这笔交易相当于借出USD，借入GBP，因此利息收入是USD，利息支出是GBP</p>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">Wikipedians. “Swap (Finance).” Wikipedia, Wikimedia Foundation, 6 Sept. 2021, <a href="https://en.wikipedia.org/wiki/Swap_(finance)" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Swap_(finance)</a>.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. “利率掉期交易.” Wikipedia, Wikimedia Foundation, 20 Sept. 2021, <a href="https://zh.wikipedia.org/wiki/利率掉期交易" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/利率掉期交易</a>.<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">Wikipedians. “Currency Swap.” Wikipedia, Wikimedia Foundation, 4 Aug. 2021, <a href="https://en.wikipedia.org/wiki/Currency_swap" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Currency_swap</a>.<a href="#fnref:3" rev="footnote"> ↩</a></span></div><div id="fn:4" style="display:flex"><span style="width:20px">4.</span><span style="width:calc(100% - 20px)">Unknown. “外汇互换” MBA智库百科, 28 Dec. 2009, <a href="https://wiki.mbalib.com/wiki/外汇互换" target="_blank" rel="noopener">https://wiki.mbalib.com/wiki/外汇互换</a><a href="#fnref:4" rev="footnote"> ↩</a></span></div></div></div>]]></content>
+      <categories>
+        <category>technology</category>
+        <category>finance</category>
+      </categories>
+      <tags>
+        <tag>finance</tag>
+        <tag>invest</tag>
+        <tag>derivatives</tag>
+        <tag>swap</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>衍生品笔记五 —— 期货市场</title>
+    <url>/2021/10/08/derivatives05/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>// TODO</p>
+<a id="more"></a>
+<h2 id="1-期货市场"><a href="#1-期货市场" class="headerlink" title="1. 期货市场"></a>1. 期货市场</h2><p>期货市场有一些基本制度:</p>
+<ul>
+<li>交易所: 规避违约风险(default)</li>
+<li>标准化: 促进流动性(liquidity)</li>
+<li>保证金: 增加杠杆(leverage)</li>
+<li>daily settlement: 每日无负债结算, 也可称为mark to market(逐日盯市). 当保证金不足时，会收到Margin Call(追加保证金通知)，提醒需要追加现金或现金等价物(通常就是国债)</li>
+<li>delivery: 交割制度是期货市场和现货市场的连结，期货在趋于交割日时，价格会收敛到现货价格，否则就会存在套利机会<ul>
+<li>physical delivery: 实物交割。商品期货等</li>
+<li>cash settlement: 现金交割。指数期货等</li>
+<li>有些特殊标的既可以实物交割，也可现金交割，取决于市场。比如国债期货、欧洲美元/离岸美元(Euro dollar)期货等</li>
+</ul>
+</li>
+<li>position limit: 防止操纵市场。头寸限制也取决于交易类型，套期保值头寸限制的数值较大</li>
+<li>large investor report: 大户报告. 认定的大户，进入交割月后需要报告实际资产状况</li>
+<li>风险准备金: 用于违约后的赔偿</li>
+</ul>
+<blockquote>
+<p>交易所中有hedger(套期保值者)、speculator(投机者)，引入投机者是为了提供对手方、提供流动性</p>
+</blockquote>
+<blockquote>
+<p>欧洲美元期货：其标的资产是本金为100万美元，3个月后到期的欧洲美元定期存款。由于最终是现金交割，除去本金，本质上标的资产是利率。<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="CME Group. “Eurodollar Overview.” Futures & Options Trading for Risk Management - CME Group, 8 Oct. 2021, https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.html.
+">[1]</span></a></sup></p>
+</blockquote>
+<h2 id="2-期货合约"><a href="#2-期货合约" class="headerlink" title="2. 期货合约"></a>2. 期货合约</h2><p>合约要素:</p>
+<ul>
+<li>合约名称(Contract Name)</li>
+<li>基础资产(Underlying Assets)</li>
+<li>交易单位(Contract Size)</li>
+<li>报价单位(Price Quotation)</li>
+<li>最小变动价位(Minimum Price Fluctuation)</li>
+<li>涨跌停板幅度(Daily Price Limit)</li>
+<li>合约月份(Contract Months)</li>
+<li>交易时间(Trading Hours)</li>
+<li>最后交易日(Last Trading Day)</li>
+<li>交割日期(Delivery Period)</li>
+<li>交割品级(Grade and Quality Specifications)</li>
+<li>交割地点(Delivery Venue)</li>
+<li>交割单位(Delivery Size)</li>
+<li>最低交易保证金(Minimum Trade Margin)</li>
+<li>交割方式(Settlement Method)</li>
+<li>交易代码(Contract Code)</li>
+<li>上市交易场所(Exchange)</li>
+</ul>
+<h2 id="3-期货术语"><a href="#3-期货术语" class="headerlink" title="3. 期货术语"></a>3. 期货术语</h2><ul>
+<li>contango: 期货溢价，即期货升水、现货贴水. 期货价格近底远高</li>
+<li>backwadation: 现货溢价，即现货升水、期货贴水. 期货价格近高远底</li>
+<li>basis: 基差，即现货-期货的价格，但是期货要取最近月的期货合约</li>
+<li>open interest: 未平仓合约总量</li>
+<li>volume of trading: 交易量</li>
+</ul>
+<blockquote>
+<p>对于非利率期货来说，在供求关系基本平衡的情况下，远月合约由于存货持有成本的存在，所以会比近月合约价格更高.<br><strong>然而利率期货恰好反过来，因为利率期货报价是反向的，也因此使价格反向了</strong></p>
+</blockquote>
+<h2 id="4-期货监管"><a href="#4-期货监管" class="headerlink" title="4. 期货监管"></a>4. 期货监管</h2><p>一委一行两会:</p>
+<ul>
+<li>国务院金融稳定发展委员会</li>
+<li>中国人民银行</li>
+<li>中国银行保险监督管理委员会</li>
+<li>中国证券监督管理委员会</li>
+</ul>
+<p>证监会下有期货监管部，负责监管期货交易所，期货交易所有:</p>
+<ul>
+<li>大连商品交易所</li>
+<li>上海期货交易所</li>
+<li>郑州商品交易所</li>
+<li>中国金融期货交易所(公司制，原始注册资本为5亿元人民币，分别由大连商品交易所、上海期货交易所、上海证券交易所、深圳证券交易所和郑州商品交易所等五家机构各出资1亿元)</li>
+</ul>
+<p>交易所监管其会员，交易所的会员有期货经纪公司 和 自营会员</p>
+<h2 id="5-套期保值"><a href="#5-套期保值" class="headerlink" title="5. 套期保值"></a>5. 套期保值</h2><blockquote>
+<p>套期保值是指把期货市场当作转移价格风险的场所，利用期货合约作为将来在现货市场上买卖商品的临时替代物，对其现在买进准备以后售出商品或对将来需要买进商品的价格进行保险的交易活动。<br>套期保值实际上是现货市场和期货市场的双向下注.<br>对于inventory一方来说，需要规避存货价格下跌的风险，而对于demand一方来说，需要规避存货价格上涨的风险</p>
+<ul>
+<li>Long hedge(多头套期保值): 在期货市场的初始头寸是long，就是long hedge</li>
+<li>Short hedge(空头套期保值): 在期货市场的初始头寸是short，就是short hedge</li>
+</ul>
+</blockquote>
+<h2 id="6-金融期货"><a href="#6-金融期货" class="headerlink" title="6. 金融期货"></a>6. 金融期货</h2><p>外汇期货、利率期货、股指期货(是虚拟金融工具, 天然现金结算)等，外汇期货、股指期货比较简单，下面说的都是利率期货相关内容。</p>
+<ul>
+<li>day count conventions: 国债、企业债、货币市场工具的计息日计算方法都不尽相同，实际交易时需要关注</li>
+<li>discount rate: 折现率</li>
+<li>quoted price: 报价</li>
+<li>cash price: 全价，即包含利息的价格，也是dirty price = quoted price + accrued interest</li>
+<li>clean price: 净价</li>
+</ul>
+<p>对于T-note, T-bond来说，现货和期货市场都采用净价报价方式，<strong>而T-bill比较特殊，现货市场采用折现率报价，期货市场可能是反向，比如Eurodollar，报价方式是100-参考利率如LIBOR，联邦基金的拆借利率也类似</strong></p>
+<blockquote>
+<p>T-bond的交割标的有一篮子债券，根据与标准券(例如每半年付息一次，到期收益率和票面利率都是6%)相比制定转换因子，交割时不同债券做相应的转换</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>记账式附息国债: 没有实物形态的票券，以电脑记账形式记录债权，通过无纸化方式发行和交易</li>
+<li>凭证式储蓄国债: 通过银行系统发行，券面上不印制票面金额，为非标准格式，根据认购者的认购额填写实际的缴款金额，以“储蓄国债（凭证式）收款凭证”记录债权</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Eurodollar Futures的具体合约规则可参考<sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="CME Group. “Eurodollar Futures Contract Specs.” Futures &amp; Options Trading for Risk Management, 10 Oct. 2021, https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.contractSpecs.html.">[7]</span></a></sup></p>
+</blockquote>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">CME Group. “Eurodollar Overview.” Futures &amp; Options Trading for Risk Management - CME Group, 8 Oct. 2021, <a href="https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.html" target="_blank" rel="noopener">https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.html</a>.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. “Hedge (finance)” Wikipedia, Wikimedia Foundation, 6 Sept. 2021, <a href="https://en.wikipedia.org/wiki/Hedge_(finance)" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Hedge_(finance)</a><a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">资本小论 . “深度研究：关于商品价格波动、对商品顶底的解读.” 雪球, 23 Nov. 2020, <a href="https://xueqiu.com/1212782157/163967872" target="_blank" rel="noopener">https://xueqiu.com/1212782157/163967872</a>.<a href="#fnref:3" rev="footnote"> ↩</a></span></div><div id="fn:4" style="display:flex"><span style="width:20px">4.</span><span style="width:calc(100% - 20px)">资本小论 . “Contango结构下商品的套利分析.” 雪球, 1 Dec. 2020, <a href="https://xueqiu.com/1212782157/164656709" target="_blank" rel="noopener">https://xueqiu.com/1212782157/164656709</a>.<a href="#fnref:4" rev="footnote"> ↩</a></span></div><div id="fn:5" style="display:flex"><span style="width:20px">5.</span><span style="width:calc(100% - 20px)">资本小论 . “商品期货在 Back 结构下的套利分析.” Longbridge, 12 Jan. 2021, <a href="https://longbridgeapp.com/en/topics/624239" target="_blank" rel="noopener">https://longbridgeapp.com/en/topics/624239</a>.<a href="#fnref:5" rev="footnote"> ↩</a></span></div><div id="fn:6" style="display:flex"><span style="width:20px">6.</span><span style="width:calc(100% - 20px)">Wikipedians. “Eurodollar” Wikipedia, Wikimedia Foundation, 7 July. 2021, <a href="https://en.wikipedia.org/wiki/Eurodollar" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Eurodollar</a><a href="#fnref:6" rev="footnote"> ↩</a></span></div><div id="fn:7" style="display:flex"><span style="width:20px">7.</span><span style="width:calc(100% - 20px)">CME Group. “Eurodollar Futures Contract Specs.” Futures &amp; Options Trading for Risk Management, 10 Oct. 2021, <a href="https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.contractSpecs.html" target="_blank" rel="noopener">https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.contractSpecs.html</a>.<a href="#fnref:7" rev="footnote"> ↩</a></span></div></div></div>]]></content>
+      <categories>
+        <category>technology</category>
+        <category>finance</category>
+      </categories>
+      <tags>
+        <tag>finance</tag>
+        <tag>invest</tag>
+        <tag>derivatives</tag>
+        <tag>futures</tag>
+      </tags>
+  </entry>
 </search>

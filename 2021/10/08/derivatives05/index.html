@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="2B5sIuc3Rmb51DeqVwFAHtksp_EC3uubjUP1jf9bSRg">
+  <meta name="baidu-site-verification" content="hRzEYlh3gL">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言&#x2F;&#x2F; TODO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="衍生品笔记五 —— 期货市场">
+<meta property="og:url" content="https://blog.xuwei.fun/2021/10/08/derivatives05/index.html">
+<meta property="og:site_name" content="霁月荒馆">
+<meta property="og:description" content="前言&#x2F;&#x2F; TODO">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-08T14:40:14.000Z">
+<meta property="article:modified_time" content="2021-10-10T15:13:52.488Z">
+<meta property="article:author" content="Kino">
+<meta property="article:tag" content="finance">
+<meta property="article:tag" content="invest">
+<meta property="article:tag" content="derivatives">
+<meta property="article:tag" content="futures">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://blog.xuwei.fun/2021/10/08/derivatives05/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style><style>
+#needsharebutton-float {
+  bottom: 88px;
+  cursor: pointer;
+  left: -8px;
+  position: fixed;
+  z-index: 9999;
+}
+#needsharebutton-float .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 4px;
+  padding: 0 10px 0 14px;
+}
+</style>
+  <title>衍生品笔记五 —— 期货市场 | 霁月荒馆</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-104049598-2');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">霁月荒馆</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-thoughts">
+
+    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
+
+  </li>
+        <li class="menu-item menu-item-excerpt">
+
+    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2021/10/08/derivatives05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/site/avatar.png">
+      <meta itemprop="name" content="Kino">
+      <meta itemprop="description" content="Amor Fati">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="霁月荒馆">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          衍生品笔记五 —— 期货市场
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-10-08 22:40:14" itemprop="dateCreated datePublished" datetime="2021-10-08T22:40:14+08:00">2021-10-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-10-10 23:13:52" itemprop="dateModified" datetime="2021-10-10T23:13:52+08:00">2021-10-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/finance/" itemprop="url" rel="index"><span itemprop="name">finance</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>3.1k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>3 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>// TODO</p>
+<a id="more"></a>
+<h2 id="1-期货市场"><a href="#1-期货市场" class="headerlink" title="1. 期货市场"></a>1. 期货市场</h2><p>期货市场有一些基本制度:</p>
+<ul>
+<li>交易所: 规避违约风险(default)</li>
+<li>标准化: 促进流动性(liquidity)</li>
+<li>保证金: 增加杠杆(leverage)</li>
+<li>daily settlement: 每日无负债结算, 也可称为mark to market(逐日盯市). 当保证金不足时，会收到Margin Call(追加保证金通知)，提醒需要追加现金或现金等价物(通常就是国债)</li>
+<li>delivery: 交割制度是期货市场和现货市场的连结，期货在趋于交割日时，价格会收敛到现货价格，否则就会存在套利机会<ul>
+<li>physical delivery: 实物交割。商品期货等</li>
+<li>cash settlement: 现金交割。指数期货等</li>
+<li>有些特殊标的既可以实物交割，也可现金交割，取决于市场。比如国债期货、欧洲美元/离岸美元(Euro dollar)期货等</li>
+</ul>
+</li>
+<li>position limit: 防止操纵市场。头寸限制也取决于交易类型，套期保值头寸限制的数值较大</li>
+<li>large investor report: 大户报告. 认定的大户，进入交割月后需要报告实际资产状况</li>
+<li>风险准备金: 用于违约后的赔偿</li>
+</ul>
+<blockquote>
+<p>交易所中有hedger(套期保值者)、speculator(投机者)，引入投机者是为了提供对手方、提供流动性</p>
+</blockquote>
+<blockquote>
+<p>欧洲美元期货：其标的资产是本金为100万美元，3个月后到期的欧洲美元定期存款。由于最终是现金交割，除去本金，本质上标的资产是利率。<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="CME Group. “Eurodollar Overview.” Futures & Options Trading for Risk Management - CME Group, 8 Oct. 2021, https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.html.
+">[1]</span></a></sup></p>
+</blockquote>
+<h2 id="2-期货合约"><a href="#2-期货合约" class="headerlink" title="2. 期货合约"></a>2. 期货合约</h2><p>合约要素:</p>
+<ul>
+<li>合约名称(Contract Name)</li>
+<li>基础资产(Underlying Assets)</li>
+<li>交易单位(Contract Size)</li>
+<li>报价单位(Price Quotation)</li>
+<li>最小变动价位(Minimum Price Fluctuation)</li>
+<li>涨跌停板幅度(Daily Price Limit)</li>
+<li>合约月份(Contract Months)</li>
+<li>交易时间(Trading Hours)</li>
+<li>最后交易日(Last Trading Day)</li>
+<li>交割日期(Delivery Period)</li>
+<li>交割品级(Grade and Quality Specifications)</li>
+<li>交割地点(Delivery Venue)</li>
+<li>交割单位(Delivery Size)</li>
+<li>最低交易保证金(Minimum Trade Margin)</li>
+<li>交割方式(Settlement Method)</li>
+<li>交易代码(Contract Code)</li>
+<li>上市交易场所(Exchange)</li>
+</ul>
+<h2 id="3-期货术语"><a href="#3-期货术语" class="headerlink" title="3. 期货术语"></a>3. 期货术语</h2><ul>
+<li>contango: 期货溢价，即期货升水、现货贴水. 期货价格近底远高</li>
+<li>backwadation: 现货溢价，即现货升水、期货贴水. 期货价格近高远底</li>
+<li>basis: 基差，即现货-期货的价格，但是期货要取最近月的期货合约</li>
+<li>open interest: 未平仓合约总量</li>
+<li>volume of trading: 交易量</li>
+</ul>
+<blockquote>
+<p>对于非利率期货来说，在供求关系基本平衡的情况下，远月合约由于存货持有成本的存在，所以会比近月合约价格更高.<br><strong>然而利率期货恰好反过来，因为利率期货报价是反向的，也因此使价格反向了</strong></p>
+</blockquote>
+<h2 id="4-期货监管"><a href="#4-期货监管" class="headerlink" title="4. 期货监管"></a>4. 期货监管</h2><p>一委一行两会:</p>
+<ul>
+<li>国务院金融稳定发展委员会</li>
+<li>中国人民银行</li>
+<li>中国银行保险监督管理委员会</li>
+<li>中国证券监督管理委员会</li>
+</ul>
+<p>证监会下有期货监管部，负责监管期货交易所，期货交易所有:</p>
+<ul>
+<li>大连商品交易所</li>
+<li>上海期货交易所</li>
+<li>郑州商品交易所</li>
+<li>中国金融期货交易所(公司制，原始注册资本为5亿元人民币，分别由大连商品交易所、上海期货交易所、上海证券交易所、深圳证券交易所和郑州商品交易所等五家机构各出资1亿元)</li>
+</ul>
+<p>交易所监管其会员，交易所的会员有期货经纪公司 和 自营会员</p>
+<h2 id="5-套期保值"><a href="#5-套期保值" class="headerlink" title="5. 套期保值"></a>5. 套期保值</h2><blockquote>
+<p>套期保值是指把期货市场当作转移价格风险的场所，利用期货合约作为将来在现货市场上买卖商品的临时替代物，对其现在买进准备以后售出商品或对将来需要买进商品的价格进行保险的交易活动。<br>套期保值实际上是现货市场和期货市场的双向下注.<br>对于inventory一方来说，需要规避存货价格下跌的风险，而对于demand一方来说，需要规避存货价格上涨的风险</p>
+<ul>
+<li>Long hedge(多头套期保值): 在期货市场的初始头寸是long，就是long hedge</li>
+<li>Short hedge(空头套期保值): 在期货市场的初始头寸是short，就是short hedge</li>
+</ul>
+</blockquote>
+<h2 id="6-金融期货"><a href="#6-金融期货" class="headerlink" title="6. 金融期货"></a>6. 金融期货</h2><p>外汇期货、利率期货、股指期货(是虚拟金融工具, 天然现金结算)等，外汇期货、股指期货比较简单，下面说的都是利率期货相关内容。</p>
+<ul>
+<li>day count conventions: 国债、企业债、货币市场工具的计息日计算方法都不尽相同，实际交易时需要关注</li>
+<li>discount rate: 折现率</li>
+<li>quoted price: 报价</li>
+<li>cash price: 全价，即包含利息的价格，也是dirty price = quoted price + accrued interest</li>
+<li>clean price: 净价</li>
+</ul>
+<p>对于T-note, T-bond来说，现货和期货市场都采用净价报价方式，<strong>而T-bill比较特殊，现货市场采用折现率报价，期货市场可能是反向，比如Eurodollar，报价方式是100-参考利率如LIBOR，联邦基金的拆借利率也类似</strong></p>
+<blockquote>
+<p>T-bond的交割标的有一篮子债券，根据与标准券(例如每半年付息一次，到期收益率和票面利率都是6%)相比制定转换因子，交割时不同债券做相应的转换</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>记账式附息国债: 没有实物形态的票券，以电脑记账形式记录债权，通过无纸化方式发行和交易</li>
+<li>凭证式储蓄国债: 通过银行系统发行，券面上不印制票面金额，为非标准格式，根据认购者的认购额填写实际的缴款金额，以“储蓄国债（凭证式）收款凭证”记录债权</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Eurodollar Futures的具体合约规则可参考<sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="CME Group. “Eurodollar Futures Contract Specs.” Futures &amp; Options Trading for Risk Management, 10 Oct. 2021, https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.contractSpecs.html.">[7]</span></a></sup></p>
+</blockquote>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">CME Group. “Eurodollar Overview.” Futures &amp; Options Trading for Risk Management - CME Group, 8 Oct. 2021, <a href="https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.html" target="_blank" rel="noopener">https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.html</a>.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. “Hedge (finance)” Wikipedia, Wikimedia Foundation, 6 Sept. 2021, <a href="https://en.wikipedia.org/wiki/Hedge_(finance)" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Hedge_(finance)</a><a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">资本小论 . “深度研究：关于商品价格波动、对商品顶底的解读.” 雪球, 23 Nov. 2020, <a href="https://xueqiu.com/1212782157/163967872" target="_blank" rel="noopener">https://xueqiu.com/1212782157/163967872</a>.<a href="#fnref:3" rev="footnote"> ↩</a></span></div><div id="fn:4" style="display:flex"><span style="width:20px">4.</span><span style="width:calc(100% - 20px)">资本小论 . “Contango结构下商品的套利分析.” 雪球, 1 Dec. 2020, <a href="https://xueqiu.com/1212782157/164656709" target="_blank" rel="noopener">https://xueqiu.com/1212782157/164656709</a>.<a href="#fnref:4" rev="footnote"> ↩</a></span></div><div id="fn:5" style="display:flex"><span style="width:20px">5.</span><span style="width:calc(100% - 20px)">资本小论 . “商品期货在 Back 结构下的套利分析.” Longbridge, 12 Jan. 2021, <a href="https://longbridgeapp.com/en/topics/624239" target="_blank" rel="noopener">https://longbridgeapp.com/en/topics/624239</a>.<a href="#fnref:5" rev="footnote"> ↩</a></span></div><div id="fn:6" style="display:flex"><span style="width:20px">6.</span><span style="width:calc(100% - 20px)">Wikipedians. “Eurodollar” Wikipedia, Wikimedia Foundation, 7 July. 2021, <a href="https://en.wikipedia.org/wiki/Eurodollar" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Eurodollar</a><a href="#fnref:6" rev="footnote"> ↩</a></span></div><div id="fn:7" style="display:flex"><span style="width:20px">7.</span><span style="width:calc(100% - 20px)">CME Group. “Eurodollar Futures Contract Specs.” Futures &amp; Options Trading for Risk Management, 10 Oct. 2021, <a href="https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.contractSpecs.html" target="_blank" rel="noopener">https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.contractSpecs.html</a>.<a href="#fnref:7" rev="footnote"> ↩</a></span></div></div></div>
+    </div>
+
+    
+    
+    <div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+        <div class="reward-container">
+  <div>Compensated Dating</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Kino
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://blog.xuwei.fun/2021/10/08/derivatives05/" title="衍生品笔记五 —— 期货市场">https://blog.xuwei.fun/2021/10/08/derivatives05/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+            <span class="icon">
+              <i class="weibo"></i>
+            </span>
+
+            <span class="label">Weibo</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+            <span class="icon">
+              <i class="wechat"></i>
+            </span>
+
+            <span class="label">Wechat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/finance/" rel="tag"># finance</a>
+              <a href="/tags/invest/" rel="tag"># invest</a>
+              <a href="/tags/derivatives/" rel="tag"># derivatives</a>
+              <a href="/tags/futures/" rel="tag"># futures</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/07/derivatives04/" rel="prev" title="衍生品笔记四 —— 互换">
+      <i class="fa fa-chevron-left"></i> 衍生品笔记四 —— 互换
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-livere">livere</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments" id="gitalk-container"></div>
+            </div>
+            <div class="tab-pane livere" id="comment-livere">
+              
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
+  </div>
+  
+            </div>
+        </div>
+      </div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-期货市场"><span class="nav-text">1. 期货市场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-期货合约"><span class="nav-text">2. 期货合约</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-期货术语"><span class="nav-text">3. 期货术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-期货监管"><span class="nav-text">4. 期货监管</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-套期保值"><span class="nav-text">5. 套期保值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-金融期货"><span class="nav-text">6. 金融期货</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnote"><span class="nav-text">Footnote</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2012 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">356k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">5:23</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 1000,
+        priority: false,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2021/10/08/derivatives05/',]
+      });
+      });
+  </script>
+<div id="needsharebutton-float">
+      <span class="btn">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </span>
+    </div>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "topCenter";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+      flOptions = {};
+        flOptions.iconStyle = "box";
+        flOptions.boxForm = "vertical";
+        flOptions.position = "middleRight";
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      new needShareButton('#needsharebutton-float', flOptions);
+  </script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '58ab17a966414cd66c67',
+      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
+      repo        : 'WoeiSheu.github.io',
+      owner       : 'WoeiSheu',
+      admin       : ['WoeiSheu'],
+      id          : 'a7b7b4855c27c381464ba9f31bde4bae',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+<script>
+  let fnTextPopup = function (arr, options) {
+    if (!arr || !arr.length) {
+      return;
+    }
+    let idx = 0;
+    document.documentElement.addEventListener('click', function (event) {
+      let x = event.pageX, y = event.pageY;
+      let newElem = document.createElement('span');
+      let newText = document.createTextNode(arr[idx]);
+      newElem.appendChild(newText);
+      newElem.className = 'text-popup';
+      this.appendChild(newElem);
+
+      // 删除
+      newElem.addEventListener('animationend', function () {
+          newElem.parentNode.removeChild(newElem);
+      });
+      // 位置
+      newElem.style.left = (x - newElem.clientWidth / 2) + 'px';
+      newElem.style.top = (y - newElem.clientHeight) + 'px';
+
+      // 自增
+      idx = (idx + 1) % arr.length;
+    });    
+  };
+
+  fnTextPopup(['富强', '民主', '文明', '和谐', '自由', '平等', '公正', '法治', '爱国', '敬业', '诚信', '友善']);
+</script>
+</body>
+</html>
