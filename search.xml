@@ -8346,7 +8346,7 @@ Not creating home directory</code>/usr/share/tomcat7’.<br>Creating config file
   </entry>
   <entry>
     <title>衍生品笔记二 —— 远期</title>
-    <url>/2021/10/03/derivatives02/</url>
+    <url>/2021/10/04/derivatives02/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>// TODO</p>
 <a id="more"></a>
 <h2 id="1-远期汇率-外汇远期"><a href="#1-远期汇率-外汇远期" class="headerlink" title="1. 远期汇率(外汇远期)"></a>1. 远期汇率(外汇远期)</h2><p>根据时间不同，同一标的也会有多个远期合约<br>由于外汇交易中，是以货币换货币，所以需要设定一种货币为商品，另一种为计价货币<br>判断多空的标准，也因此需要明确货币</p>

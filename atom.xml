@@ -109,6 +109,36 @@
   </entry>
   
   <entry>
+    <title>衍生品笔记二 —— 远期</title>
+    <link href="https://blog.xuwei.fun/2021/10/04/derivatives02/"/>
+    <id>https://blog.xuwei.fun/2021/10/04/derivatives02/</id>
+    <published>2021-10-04T02:00:00.000Z</published>
+    <updated>2021-10-10T15:30:36.912Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>// TODO</p><a id="more"></a><h2 id="1-远期汇率-外汇远期"><a href="#1-远期汇率-外汇远期" class="headerlink" title="1. 远期汇率(外汇远期)"></a>1. 远期汇率(外汇远期)</h2><p>根据时间不同，同一标的也会有多个远期合约<br>由于外汇交易中，是以货币换货币，所以需要设定一种货币为商品，另一种为计价货币<br>判断多空的标准，也因此需要明确货币</p><ul><li>多头(long position): 买方</li><li>空头(short position): 卖方</li></ul><p>对于非管制货币来说，由于可以自动兑换，通常做直接远期交易(Outright forward)即可满足需求，在约定的时间以约定价格买卖货币。<br>但是对于管制货币，因为无法直接交易，所以有了NDF(Non-deliverable forward)，不交割本金，只交割计价货币的差额</p><blockquote><p>NDF: 首先要明确一点的是，NDF实际上并不做货币兑换，这更类似于一个赌博协议。以CNY/USD为例，假设A预计3个月后会收到一笔 10000 CNY的收入，但是需要换成美金，由于CNY/USD没法自由兑换，因此A和做市商做了一笔NDF交易。由于NDF不交割本金，实际上三个月后10000CNY的收入还是在A的账户里，需要A自行将人民币兑换出境，而A和做市商之间只需要就现货汇率计算出损益，进行最终交割即可。<br>为方便计算，假设CNY/USD 的三个月远期汇率为 10，也就是说A预期是三个月后以汇率10兑换出境，获得1000USD，而实际上三个月后，CNY/USD的现货可能是:</p><ul><li>10。那恰好，A和做市商之间损益为0</li><li>20。那实际上A现在将10000 CNY兑换出境后只能得到500 USD，和预期相比少了500USD，这500USD就由做市商来弥补，因为最终只交割这500USD，不交割本金，所以才是NDF</li><li>5。那实际上A现在将10000 CNY兑换出境后能得到2000 USD，和预期相比多了1000USD，这1000USD就由A来补偿给做市商，因为最终只交割这1000USD，不交割本金，所以才是NDF</li></ul></blockquote><h2 id="2-远期利率-Forward-rate"><a href="#2-远期利率-Forward-rate" class="headerlink" title="2. 远期利率(Forward rate)"></a>2. 远期利率(Forward rate)</h2><p>与远期利率相对应的有如下利率:</p><ul><li>即期利率(Spot rate): 当前时间点上零息债券的到期收益率</li><li>短期利率(Short rate): 既定区间内的收益率</li></ul><p>远期利率则是指隐含在给定的即期利率之中，从未来的某一时点到另一时点的利率。也就是未来的短期利率。<br>1×2远期利率，即表示1个月之后开始的期限1个月的远期利率；2×4远期利率，则表示2个月之后开始的期限为2个月的远期利率。</p><p>contracted rate(合同利率): 远期利率协议签订时合同上所定的利率.<br>reference rate(参考利率): 通常用于确定各种金融合同、贷款、基于账户的产品和金融工具（包括衍生工具和票据）的应付金额及其价值。</p><p>参考利率有</p><blockquote><p>2017年英国金融行为监管局（FCA）宣布，2021年底后将不再强制要求报价行报出LIBOR。这意味着LIBOR将退出市场。</p></blockquote><p>最终损益就是名义本金与合同利率和参考利率的差额的乘积</p><h2 id="3-远期结售汇"><a href="#3-远期结售汇" class="headerlink" title="3. 远期结售汇"></a>3. 远期结售汇</h2><p>对于中国大陆市场来说，由于CNY不能自由兑换，因此人民币有远期结售汇业务，而由于远期结售汇是个人、企业和银行间的交易，非银间交易，因此不被称为外汇远期</p><h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">Wikipedians. “Non-Deliverable Forward.” Wikipedia, Wikimedia Foundation, 24 May 2021, <a href="https://en.wikipedia.org/wiki/Non-deliverable_forward" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Non-deliverable_forward</a>.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">- LIBOR(London Interbank Offered Rate)<br>- SHIBOR(Shanghai Interbank Offered Rate)<br>- ……<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. “Forward Rate Agreement.” Wikipedia, Wikimedia Foundation, 1 Oct. 2021, <a href="https://en.wikipedia.org/wiki/Forward_rate_agreement" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Forward_rate_agreement</a>.<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">Wikipedinas. “Reference rate” Wikipedia, Wikimedia Foundation, 1 May. 2018, <a href="https://en.wikipedia.org/wiki/Reference_rate" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Reference_rate</a>.<a href="#fnref:3" rev="footnote"> ↩</a></span></div><div id="fn:4" style="display:flex"><span style="width:20px">4.</span><span style="width:calc(100% - 20px)">Unknown. “Forwards in the Debt Markets.” Ebrary, 1 Oct. 2021, <a href="https://ebrary.net/788/economics/forwards_debt_markets" target="_blank" rel="noopener">https://ebrary.net/788/economics/forwards_debt_markets</a>.<a href="#fnref:4" rev="footnote"> ↩</a></span></div></div></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;// TODO&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="technology" scheme="https://blog.xuwei.fun/categories/technology/"/>
+    
+      <category term="finance" scheme="https://blog.xuwei.fun/categories/technology/finance/"/>
+    
+    
+      <category term="finance" scheme="https://blog.xuwei.fun/tags/finance/"/>
+    
+      <category term="invest" scheme="https://blog.xuwei.fun/tags/invest/"/>
+    
+      <category term="derivatives" scheme="https://blog.xuwei.fun/tags/derivatives/"/>
+    
+      <category term="forward" scheme="https://blog.xuwei.fun/tags/forward/"/>
+    
+  </entry>
+  
+  <entry>
     <title>衍生品笔记一 —— 概述</title>
     <link href="https://blog.xuwei.fun/2021/10/03/derivatives01/"/>
     <id>https://blog.xuwei.fun/2021/10/03/derivatives01/</id>
@@ -134,36 +164,6 @@
       <category term="invest" scheme="https://blog.xuwei.fun/tags/invest/"/>
     
       <category term="derivatives" scheme="https://blog.xuwei.fun/tags/derivatives/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>衍生品笔记二 —— 远期</title>
-    <link href="https://blog.xuwei.fun/2021/10/03/derivatives02/"/>
-    <id>https://blog.xuwei.fun/2021/10/03/derivatives02/</id>
-    <published>2021-10-03T09:53:26.000Z</published>
-    <updated>2021-10-07T16:26:22.894Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>// TODO</p><a id="more"></a><h2 id="1-远期汇率-外汇远期"><a href="#1-远期汇率-外汇远期" class="headerlink" title="1. 远期汇率(外汇远期)"></a>1. 远期汇率(外汇远期)</h2><p>根据时间不同，同一标的也会有多个远期合约<br>由于外汇交易中，是以货币换货币，所以需要设定一种货币为商品，另一种为计价货币<br>判断多空的标准，也因此需要明确货币</p><ul><li>多头(long position): 买方</li><li>空头(short position): 卖方</li></ul><p>对于非管制货币来说，由于可以自动兑换，通常做直接远期交易(Outright forward)即可满足需求，在约定的时间以约定价格买卖货币。<br>但是对于管制货币，因为无法直接交易，所以有了NDF(Non-deliverable forward)，不交割本金，只交割计价货币的差额</p><blockquote><p>NDF: 首先要明确一点的是，NDF实际上并不做货币兑换，这更类似于一个赌博协议。以CNY/USD为例，假设A预计3个月后会收到一笔 10000 CNY的收入，但是需要换成美金，由于CNY/USD没法自由兑换，因此A和做市商做了一笔NDF交易。由于NDF不交割本金，实际上三个月后10000CNY的收入还是在A的账户里，需要A自行将人民币兑换出境，而A和做市商之间只需要就现货汇率计算出损益，进行最终交割即可。<br>为方便计算，假设CNY/USD 的三个月远期汇率为 10，也就是说A预期是三个月后以汇率10兑换出境，获得1000USD，而实际上三个月后，CNY/USD的现货可能是:</p><ul><li>10。那恰好，A和做市商之间损益为0</li><li>20。那实际上A现在将10000 CNY兑换出境后只能得到500 USD，和预期相比少了500USD，这500USD就由做市商来弥补，因为最终只交割这500USD，不交割本金，所以才是NDF</li><li>5。那实际上A现在将10000 CNY兑换出境后能得到2000 USD，和预期相比多了1000USD，这1000USD就由A来补偿给做市商，因为最终只交割这1000USD，不交割本金，所以才是NDF</li></ul></blockquote><h2 id="2-远期利率-Forward-rate"><a href="#2-远期利率-Forward-rate" class="headerlink" title="2. 远期利率(Forward rate)"></a>2. 远期利率(Forward rate)</h2><p>与远期利率相对应的有如下利率:</p><ul><li>即期利率(Spot rate): 当前时间点上零息债券的到期收益率</li><li>短期利率(Short rate): 既定区间内的收益率</li></ul><p>远期利率则是指隐含在给定的即期利率之中，从未来的某一时点到另一时点的利率。也就是未来的短期利率。<br>1×2远期利率，即表示1个月之后开始的期限1个月的远期利率；2×4远期利率，则表示2个月之后开始的期限为2个月的远期利率。</p><p>contracted rate(合同利率): 远期利率协议签订时合同上所定的利率.<br>reference rate(参考利率): 通常用于确定各种金融合同、贷款、基于账户的产品和金融工具（包括衍生工具和票据）的应付金额及其价值。</p><p>参考利率有</p><blockquote><p>2017年英国金融行为监管局（FCA）宣布，2021年底后将不再强制要求报价行报出LIBOR。这意味着LIBOR将退出市场。</p></blockquote><p>最终损益就是名义本金与合同利率和参考利率的差额的乘积</p><h2 id="3-远期结售汇"><a href="#3-远期结售汇" class="headerlink" title="3. 远期结售汇"></a>3. 远期结售汇</h2><p>对于中国大陆市场来说，由于CNY不能自由兑换，因此人民币有远期结售汇业务，而由于远期结售汇是个人、企业和银行间的交易，非银间交易，因此不被称为外汇远期</p><h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">Wikipedians. “Non-Deliverable Forward.” Wikipedia, Wikimedia Foundation, 24 May 2021, <a href="https://en.wikipedia.org/wiki/Non-deliverable_forward" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Non-deliverable_forward</a>.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">- LIBOR(London Interbank Offered Rate)<br>- SHIBOR(Shanghai Interbank Offered Rate)<br>- ……<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. “Forward Rate Agreement.” Wikipedia, Wikimedia Foundation, 1 Oct. 2021, <a href="https://en.wikipedia.org/wiki/Forward_rate_agreement" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Forward_rate_agreement</a>.<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">Wikipedinas. “Reference rate” Wikipedia, Wikimedia Foundation, 1 May. 2018, <a href="https://en.wikipedia.org/wiki/Reference_rate" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Reference_rate</a>.<a href="#fnref:3" rev="footnote"> ↩</a></span></div><div id="fn:4" style="display:flex"><span style="width:20px">4.</span><span style="width:calc(100% - 20px)">Unknown. “Forwards in the Debt Markets.” Ebrary, 1 Oct. 2021, <a href="https://ebrary.net/788/economics/forwards_debt_markets" target="_blank" rel="noopener">https://ebrary.net/788/economics/forwards_debt_markets</a>.<a href="#fnref:4" rev="footnote"> ↩</a></span></div></div></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;// TODO&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="technology" scheme="https://blog.xuwei.fun/categories/technology/"/>
-    
-      <category term="finance" scheme="https://blog.xuwei.fun/categories/technology/finance/"/>
-    
-    
-      <category term="finance" scheme="https://blog.xuwei.fun/tags/finance/"/>
-    
-      <category term="invest" scheme="https://blog.xuwei.fun/tags/invest/"/>
-    
-      <category term="derivatives" scheme="https://blog.xuwei.fun/tags/derivatives/"/>
-    
-      <category term="forward" scheme="https://blog.xuwei.fun/tags/forward/"/>
     
   </entry>
   
