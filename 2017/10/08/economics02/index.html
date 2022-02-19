@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
@@ -15,14 +17,13 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.xuwei.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
   <meta name="description" content="前言接着挖坑吧、、想着哪个假期或者什么时候闲下来再填上，现在连Kino自己都开始怀疑了、上一篇说的是个人理财与投资，主要是大局观的建立和一些大概的原则，具体到交易过程上，需要做的就是技术性的分析与工程上的实现了，其实目前有的投资不过是货币基金和股票配置，也都是买着玩，主要是通过这个过程使自己被动地关注市场的变化，了解一些交易规则，总结一些经验、其实最终目标是想做一个可以稳定盈利的投资工具（目前只考">
 <meta property="og:type" content="article">
@@ -37,18 +38,23 @@
 <meta property="article:tag" content="finance">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="https://blog.xuwei.fun/2017/10/08/economics02/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.xuwei.fun/2017/10/08/economics02/","path":"2017/10/08/economics02/","title":"金融交易过程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>金融交易过程 | 霁月荒馆</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-104049598-2","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
 #needsharebutton-postbottom {
   cursor: pointer;
@@ -76,68 +82,31 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>金融交易过程 | 霁月荒馆</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-104049598-2');
-      }
-    </script>
-
-
-
-
-
-
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">霁月荒馆</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">霁月荒馆</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
   </div>
@@ -151,54 +120,17 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-thoughts">
-
-    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
-
-  </li>
-        <li class="menu-item menu-item-excerpt">
-
-    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
-
-  </li>
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-thoughts"><a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>Thoughts</a></li>
+        <li class="menu-item menu-item-excerpt"><a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>Excerpt</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -209,23 +141,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -233,28 +164,122 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%86%E6%9E%90%E6%B5%81%E6%B4%BE"><span class="nav-text">1. 分析流派</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8A%95%E8%B5%84%E5%BF%83%E7%90%86"><span class="nav-text">2. 投资心理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%B7%A5%E7%A8%8B%E5%AE%9E%E7%8E%B0"><span class="nav-text">3. 工程实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footnotes"><span class="nav-text">Footnotes</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https:&#x2F;&#x2F;xuwei.fun&#x2F;" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https:&#x2F;&#x2F;blog.xuwei.fun&#x2F;bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
 
-    
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2017/10/08/economics02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -271,51 +296,54 @@
           金融交易过程
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2017-10-08 21:36:45" itemprop="dateCreated datePublished" datetime="2017-10-08T21:36:45+08:00">2017-10-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/humanities/" itemprop="url" rel="index"><span itemprop="name">humanities</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/humanities/economics/" itemprop="url" rel="index"><span itemprop="name">economics</span></a>
-                </span>
-            </span>
+      <time title="Created: 2017-10-08 21:36:45" itemprop="dateCreated datePublished" datetime="2017-10-08T21:36:45+08:00">2017-10-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/humanities/" itemprop="url" rel="index"><span itemprop="name">humanities</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/humanities/economics/" itemprop="url" rel="index"><span itemprop="name">economics</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>1.2k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>1 mins.</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -324,50 +352,51 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>接着挖坑吧、、想着哪个假期或者什么时候闲下来再填上，现在连Kino自己都开始怀疑了、<br>上一篇说的是个人理财与投资，主要是大局观的建立和一些大概的原则，具体到交易过程上，需要做的就是技术性的分析与工程上的实现了，其实目前有的投资不过是货币基金和股票配置，也都是买着玩，主要是通过这个过程使自己被动地关注市场的变化，了解一些交易规则，总结一些经验、其实最终目标是想做一个可以稳定盈利的投资工具（目前只考虑股票了）<br><a id="more"></a><br>关于理论方面的内容，主要参阅了”投资心理学”<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[投资心理学（双语版）（原书第5版）-约翰R·诺夫辛格](https://book.douban.com/subject/25788111/)
-">[1]</span></a></sup>，这主要是源自Kino个人的偏执，Kino以为股票投资最核心的问题是心理问题，在一些投资人的口中就是所谓的投资情绪分析<br>股票某种意义上就是赌博，然而与赌博的不同的是股票投资中你能得到的数据足够多，而普通意义上的赌博大多是”信息非常不完全信息博弈”（Kino编的词），而股票投资中的对于博弈多方的交易数据大多都是可以查到的，只是专业机构可以通过分析或者内幕消息提前获知某些消息，这就是优势。也有看法是信息是投资中最核心的问题，这么说也没错，但是Kino认为信息也是用来驱动情绪的，影响投资人的心理，以此影响多还是空，小的信息用来影响个人投资者的情绪，大的信息会影响机构投资者的情绪，然而不止是实体行业的信息可以影响情绪，只用资金也可以做到影响情绪，这就反应在主力资金在K线上的拉升与打压，这一点上更接近赌博一点，像是赌博中的诈胡。所以说所谓的大牛市，其实就是所有主力资金的情绪都是积极状态，达到了一致性，个人投资者不用管啦，反正会随大流，而熊市来临也是因为所有投资者的情绪都变为消极了，因为羊毛薅完了啊，才不是什么分析文章里忽悠的国际形势又变差了、国家政策又要变了，如果信息属实那的确是有影响，当然也是影响了情绪，但是很多时候都是假信息，所以说信息也不能全信。</p>
-<p>理论与应用结合方面参阅了”金融投资系统交易原理与应用”<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[金融投资系统交易原理与应用-吴军](https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00ITK6ILS)
-">[2]</span></a></sup>这本书，其实主要还是看原理部分了。因为Kino一直都是靠直觉在写代码啊。</p>
-<h3 id="1-分析流派"><a href="#1-分析流派" class="headerlink" title="1. 分析流派"></a>1. 分析流派</h3><h3 id="2-投资心理"><a href="#2-投资心理" class="headerlink" title="2. 投资心理"></a>2. 投资心理</h3><h3 id="3-工程实现"><a href="#3-工程实现" class="headerlink" title="3. 工程实现"></a>3. 工程实现</h3><p>这方面其实自己一直在维护一个工程，到现在连个可以用的Demo都没有做出来、、、<br>计划是做一个网页应用，前端用的框架是最近流行的Vue、考虑到处理的数据量和库的丰富性，后端肯定用Python啊，在Django和Flask之间纠结了一会还是用了Flask，前者太重Kino觉得没必要，网页应用Kino还是习惯做前后端完全分离的，后端只返回JSON数据就好，以及处理大数据。数据库用的PostgreSQL，大多数数据是从网易财经爬的，国庆期间主要就忙活这个了，初步算了下，只考虑A股的话，历史数据大概也得有5000*3000=1500万条，数据库写的不好、校园网爆炸、电脑间歇性崩溃，导致Kino已经放弃了这个假期把数据爬完的想法，寒假回去用台式机跑数据好了</p>
-<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)"><a href="https://book.douban.com/subject/25788111/" target="_blank" rel="noopener">投资心理学（双语版）（原书第5版）-约翰R·诺夫辛格</a><a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)"><a href="https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00ITK6ILS" target="_blank" rel="noopener">金融投资系统交易原理与应用-吴军</a><a href="#fnref:2" rev="footnote"> ↩</a></span></div></div></div>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>接着挖坑吧、、想着哪个假期或者什么时候闲下来再填上，现在连Kino自己都开始怀疑了、<br>上一篇说的是个人理财与投资，主要是大局观的建立和一些大概的原则，具体到交易过程上，需要做的就是技术性的分析与工程上的实现了，其实目前有的投资不过是货币基金和股票配置，也都是买着玩，主要是通过这个过程使自己被动地关注市场的变化，了解一些交易规则，总结一些经验、其实最终目标是想做一个可以稳定盈利的投资工具（目前只考虑股票了）</p>
+<span id="more"></span>
+<p>关于理论方面的内容，主要参阅了”投资心理学”<sup id="fnref:1" class="location-target"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[投资心理学（双语版）（原书第5版）-约翰R·诺夫辛格](https://book.douban.com/subject/25788111/)
+">1</span></a></sup>，这主要是源自Kino个人的偏执，Kino以为股票投资最核心的问题是心理问题，在一些投资人的口中就是所谓的投资情绪分析<br>股票某种意义上就是赌博，然而与赌博的不同的是股票投资中你能得到的数据足够多，而普通意义上的赌博大多是”信息非常不完全信息博弈”（Kino编的词），而股票投资中的对于博弈多方的交易数据大多都是可以查到的，只是专业机构可以通过分析或者内幕消息提前获知某些消息，这就是优势。也有看法是信息是投资中最核心的问题，这么说也没错，但是Kino认为信息也是用来驱动情绪的，影响投资人的心理，以此影响多还是空，小的信息用来影响个人投资者的情绪，大的信息会影响机构投资者的情绪，然而不止是实体行业的信息可以影响情绪，只用资金也可以做到影响情绪，这就反应在主力资金在K线上的拉升与打压，这一点上更接近赌博一点，像是赌博中的诈胡。所以说所谓的大牛市，其实就是所有主力资金的情绪都是积极状态，达到了一致性，个人投资者不用管啦，反正会随大流，而熊市来临也是因为所有投资者的情绪都变为消极了，因为羊毛薅完了啊，才不是什么分析文章里忽悠的国际形势又变差了、国家政策又要变了，如果信息属实那的确是有影响，当然也是影响了情绪，但是很多时候都是假信息，所以说信息也不能全信。</p>
+<p>理论与应用结合方面参阅了”金融投资系统交易原理与应用”<sup id="fnref:2" class="location-target"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[金融投资系统交易原理与应用-吴军](https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00ITK6ILS)
+">2</span></a></sup>这本书，其实主要还是看原理部分了。因为Kino一直都是靠直觉在写代码啊。</p>
+<h3 id="1-分析流派"><a href="#1-分析流派" class="headerlink" title="1. 分析流派"></a>1. 分析流派</h3><h3 id="2-投资心理"><a href="#2-投资心理" class="headerlink" title="2. 投资心理"></a>2. 投资心理</h3><h3 id="3-工程实现"><a href="#3-工程实现" class="headerlink" title="3. 工程实现"></a>3. 工程实现</h3><p>这方面其实自己一直在维护一个工程，到现在连个可以用的Demo都没有做出来、、、<br>计划是做一个网页应用，前端用的框架是最近流行的Vue、考虑到处理的数据量和库的丰富性，后端肯定用Python啊，在Django和Flask之间纠结了一会还是用了Flask，前者太重Kino觉得没必要，网页应用Kino还是习惯做前后端完全分离的，后端只返回JSON数据就好，以及处理大数据。数据库用的PostgreSQL，大多数数据是从网易财经爬的，国庆期间主要就忙活这个了，初步算了下，只考虑A股的话，历史数据大概也得有5000*3000&#x3D;1500万条，数据库写的不好、校园网爆炸、电脑间歇性崩溃，导致Kino已经放弃了这个假期把数据爬完的想法，寒假回去用台式机跑数据好了</p>
+<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://book.douban.com/subject/25788111/">投资心理学（双语版）（原书第5版）-约翰R·诺夫辛格</a><a href="#fnref:1" rev="footnote">↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B00ITK6ILS">金融投资系统交易原理与应用-吴军</a><a href="#fnref:2" rev="footnote">↩</a></span></li></ol></div></div>
     </div>
 
     
     
-    <div class="post-widgets">
+    
+
+    <footer class="post-footer"><div class="post-widgets">
       <div id="needsharebutton-postbottom">
         <span class="btn">
           <i class="fa fa-share-alt" aria-hidden="true"></i>
         </span>
       </div>
     </div>
-        <div class="reward-container">
+          <div class="reward-container">
   <div>Compensated Dating</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+  <button>
     Donate
   </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
+  <div class="post-reward">
+      <div>
         <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
-        <p>Bitcoin</p>
+        <span>Bitcoin</span>
       </div>
 
   </div>
 </div>
 
-        
+          
 
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>Kino
+      <strong>Post author:  </strong>Kino
   </li>
   <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="https://blog.xuwei.fun/2017/10/08/economics02/" title="金融交易过程">https://blog.xuwei.fun/2017/10/08/economics02/</a>
+      <strong>Post link: </strong>
+      <a href="https://blog.xuwei.fun/2017/10/08/economics02/" title="金融交易过程">https://blog.xuwei.fun/2017/10/08/economics02/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -375,66 +404,60 @@
 </ul>
 </div>
 
-        
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <p>Welcome to my other publishing channels</p>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+          <span class="icon">
+            <i class="weibo"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
-            <span class="icon">
-              <i class="weibo"></i>
-            </span>
+          <span class="label">Weibo</span>
+        </a>
+      </div>
 
-            <span class="label">Weibo</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+          <span class="icon">
+            <i class="wechat"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
-            <span class="icon">
-              <i class="wechat"></i>
-            </span>
-
-            <span class="label">Wechat</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">Wechat</span>
+        </a>
+      </div>
   </div>
+</div>
 
-
-      <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/finance/" rel="tag"># finance</a>
           </div>
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2017/10/08/economics01/" rel="prev" title="个人投资与理财">
-      <i class="fa fa-chevron-left"></i> 个人投资与理财
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2017/10/08/reading09/" rel="next" title="读书笔记九">
-      读书笔记九 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2017/10/08/economics01/" rel="prev" title="个人投资与理财">
+                  <i class="fa fa-chevron-left"></i> 个人投资与理财
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/10/08/reading09/" rel="next" title="读书笔记九">
+                  读书笔记九 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
@@ -442,193 +465,58 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
+              <div class="comments gitalk-container"></div>
             </div>
             <div class="tab-pane livere" id="comment-livere">
-              
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
-  </div>
-  
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-分析流派"><span class="nav-text">1. 分析流派</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-投资心理"><span class="nav-text">2. 投资心理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-工程实现"><span class="nav-text">3. 工程实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footnotes"><span class="nav-text">Footnotes</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Kino"
-      src="/images/site/avatar.png">
-  <p class="site-author-name" itemprop="name">Kino</p>
-  <div class="site-description" itemprop="description">Amor Fati</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">123</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">122</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">356k</span>
-    <span class="post-meta-divider">|</span>
+    <span title="Symbols count total">353k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:23</span>
+    <span title="Reading time total">5:21</span>
+  </span>
 </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
+
+  <script src="/js/third-party/pace.js"></script>
 
   
 
@@ -636,35 +524,14 @@
 
 
   
-<script src="/js/local-search.js"></script>
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout : 1000,
-        priority: false,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2017/10/08/economics02/',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":1000,"priority":false,"archives":false,"url":"https://blog.xuwei.fun/2017/10/08/economics02/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -684,42 +551,11 @@
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '58ab17a966414cd66c67',
-      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
-      repo        : 'WoeiSheu.github.io',
-      owner       : 'WoeiSheu',
-      admin       : ['WoeiSheu'],
-      id          : '8aaaed22790b8ae73b83593a80759883',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
-
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"8aaaed22790b8ae73b83593a80759883"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {

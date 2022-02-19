@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
@@ -15,21 +17,20 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-  <meta name="description" content="前言读江辉有《拓扑学》[1]笔记 1. 引言1.1 一笔画问题和哥尼斯堡七桥问题1.2 欧拉(Euler)示性数1.3 图的可平面化处理问题 对于由顶点和线构成的图，如果每个顶点间都有线相连，则这样的图称之为完全图。下图中的K5是完全图，K33不是完全图  所谓图的可平面化问题就是：一个图应当满足什么条件，才可以在平面上不自交的被画出来?这也就是通常说的可嵌入平面的问题。这里说的不自交指的是不同的">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.xuwei.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+  <meta name="description" content="前言读江辉有《拓扑学》1笔记 1. 引言1.1 一笔画问题和哥尼斯堡七桥问题1.2 欧拉(Euler)示性数1.3 图的可平面化处理问题 对于由顶点和线构成的图，如果每个顶点间都有线相连，则这样的图称之为完全图。下图中的K5是完全图，K33不是完全图  所谓图的可平面化问题就是：一个图应当满足什么条件，才可以在平面上不自交的被画出来?这也就是通常说的可嵌入平面的问题。这里说的不自交指的是不同的线不">
 <meta property="og:type" content="article">
 <meta property="og:title" content="拓扑学入门一">
 <meta property="og:url" content="https://blog.xuwei.fun/2015/10/21/topology01/index.html">
 <meta property="og:site_name" content="霁月荒馆">
-<meta property="og:description" content="前言读江辉有《拓扑学》[1]笔记 1. 引言1.1 一笔画问题和哥尼斯堡七桥问题1.2 欧拉(Euler)示性数1.3 图的可平面化处理问题 对于由顶点和线构成的图，如果每个顶点间都有线相连，则这样的图称之为完全图。下图中的K5是完全图，K33不是完全图  所谓图的可平面化问题就是：一个图应当满足什么条件，才可以在平面上不自交的被画出来?这也就是通常说的可嵌入平面的问题。这里说的不自交指的是不同的">
+<meta property="og:description" content="前言读江辉有《拓扑学》1笔记 1. 引言1.1 一笔画问题和哥尼斯堡七桥问题1.2 欧拉(Euler)示性数1.3 图的可平面化处理问题 对于由顶点和线构成的图，如果每个顶点间都有线相连，则这样的图称之为完全图。下图中的K5是完全图，K33不是完全图  所谓图的可平面化问题就是：一个图应当满足什么条件，才可以在平面上不自交的被画出来?这也就是通常说的可嵌入平面的问题。这里说的不自交指的是不同的线不">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.xuwei.fun/images/topology01_1.png">
 <meta property="article:published_time" content="2015-10-21T03:40:00.000Z">
@@ -40,18 +41,23 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blog.xuwei.fun/images/topology01_1.png">
 
+
 <link rel="canonical" href="https://blog.xuwei.fun/2015/10/21/topology01/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.xuwei.fun/2015/10/21/topology01/","path":"2015/10/21/topology01/","title":"拓扑学入门一"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>拓扑学入门一 | 霁月荒馆</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-104049598-2","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
 #needsharebutton-postbottom {
   cursor: pointer;
@@ -79,68 +85,31 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>拓扑学入门一 | 霁月荒馆</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-104049598-2');
-      }
-    </script>
-
-
-
-
-
-
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">霁月荒馆</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">霁月荒馆</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
   </div>
@@ -154,54 +123,17 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-thoughts">
-
-    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
-
-  </li>
-        <li class="menu-item menu-item-excerpt">
-
-    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
-
-  </li>
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-thoughts"><a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>Thoughts</a></li>
+        <li class="menu-item menu-item-excerpt"><a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>Excerpt</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -212,23 +144,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -236,28 +167,122 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%BC%95%E8%A8%80"><span class="nav-text">1. 引言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-%E4%B8%80%E7%AC%94%E7%94%BB%E9%97%AE%E9%A2%98%E5%92%8C%E5%93%A5%E5%B0%BC%E6%96%AF%E5%A0%A1%E4%B8%83%E6%A1%A5%E9%97%AE%E9%A2%98"><span class="nav-text">1.1 一笔画问题和哥尼斯堡七桥问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-%E6%AC%A7%E6%8B%89-Euler-%E7%A4%BA%E6%80%A7%E6%95%B0"><span class="nav-text">1.2 欧拉(Euler)示性数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-%E5%9B%BE%E7%9A%84%E5%8F%AF%E5%B9%B3%E9%9D%A2%E5%8C%96%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98"><span class="nav-text">1.3 图的可平面化处理问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-%E6%89%AD%E7%BB%93%E8%AE%BA-Knot-theory-%E7%A0%94%E7%A9%B6"><span class="nav-text">1.4 扭结论(Knot theory)研究</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-%E5%9B%9B%E8%89%B2%E9%97%AE%E9%A2%98"><span class="nav-text">1.5 四色问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%82%B9%E9%9B%86%E6%8B%93%E6%89%91%E5%AD%A6"><span class="nav-text">2. 点集拓扑学</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="nav-text">2.1 预备知识</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-%E9%9B%86%E5%90%88%E4%BB%A3%E6%95%B0%E4%B8%8E%E5%85%B3%E7%B3%BB"><span class="nav-text">2.1.1 集合代数与关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-%E5%87%BD%E6%95%B0%E4%B8%8E%E7%AD%89%E4%BB%B7%E5%85%B3%E7%B3%BB"><span class="nav-text">2.1.2 函数与等价关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-3-%E5%BA%8F%E5%85%B3%E7%B3%BB%E4%B8%8E%E9%80%89%E6%8B%A9%E5%85%AC%E7%90%86"><span class="nav-text">2.1.3 序关系与选择公理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-4-%E9%9B%86%E5%90%88%E7%9A%84%E5%8F%AF%E6%95%B0%E6%80%A7"><span class="nav-text">2.1.4 集合的可数性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-5-%E5%9F%BA%E6%95%B0%E7%AE%80%E4%BB%8B"><span class="nav-text">2.1.5 基数简介</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">3. 拓扑空间的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">3.1 拓扑空间的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-%E5%BA%A6%E9%87%8F%E6%8B%93%E6%89%91"><span class="nav-text">3.2 度量拓扑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">3.3 拓扑空间的几个基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-%E5%AD%90%E7%A9%BA%E9%97%B4"><span class="nav-text">3.4 子空间</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footnotes"><span class="nav-text">Footnotes</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https:&#x2F;&#x2F;xuwei.fun&#x2F;" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https:&#x2F;&#x2F;blog.xuwei.fun&#x2F;bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
 
-    
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2015/10/21/topology01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -274,51 +299,54 @@
           拓扑学入门一
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2015-10-21 11:40:00" itemprop="dateCreated datePublished" datetime="2015-10-21T11:40:00+08:00">2015-10-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/science/" itemprop="url" rel="index"><span itemprop="name">science</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/science/math/" itemprop="url" rel="index"><span itemprop="name">math</span></a>
-                </span>
-            </span>
+      <time title="Created: 2015-10-21 11:40:00" itemprop="dateCreated datePublished" datetime="2015-10-21T11:40:00+08:00">2015-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/science/" itemprop="url" rel="index"><span itemprop="name">science</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/science/math/" itemprop="url" rel="index"><span itemprop="name">math</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>3.3k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>3 mins.</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>3.4k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>3 mins.</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -327,10 +355,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>读江辉有《拓扑学》<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="[拓扑学](https://book.douban.com/subject/22420911/)
-">[1]</span></a></sup>笔记</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>读江辉有《拓扑学》<sup id="fnref:1" class="location-target"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[拓扑学](https://book.douban.com/subject/22420911/)
+">1</span></a></sup>笔记</p>
 <h3 id="1-引言"><a href="#1-引言" class="headerlink" title="1. 引言"></a>1. 引言</h3><h4 id="1-1-一笔画问题和哥尼斯堡七桥问题"><a href="#1-1-一笔画问题和哥尼斯堡七桥问题" class="headerlink" title="1.1 一笔画问题和哥尼斯堡七桥问题"></a>1.1 一笔画问题和哥尼斯堡七桥问题</h4><h4 id="1-2-欧拉-Euler-示性数"><a href="#1-2-欧拉-Euler-示性数" class="headerlink" title="1.2 欧拉(Euler)示性数"></a>1.2 欧拉(Euler)示性数</h4><h4 id="1-3-图的可平面化处理问题"><a href="#1-3-图的可平面化处理问题" class="headerlink" title="1.3 图的可平面化处理问题"></a>1.3 图的可平面化处理问题</h4><ul>
 <li>对于由顶点和线构成的图，如果每个顶点间都有线相连，则这样的图称之为完全图。下图中的K5是完全图，K33不是完全图<br><img src="/images/topology01_1.png" alt="first"></li>
 </ul>
@@ -342,10 +368,10 @@
 </ul>
 </li>
 </ul>
-<a id="more"></a>
+<span id="more"></span>
 <h4 id="1-4-扭结论-Knot-theory-研究"><a href="#1-4-扭结论-Knot-theory-研究" class="headerlink" title="1.4 扭结论(Knot theory)研究"></a>1.4 扭结论(Knot theory)研究</h4><h4 id="1-5-四色问题"><a href="#1-5-四色问题" class="headerlink" title="1.5 四色问题"></a>1.5 四色问题</h4><h3 id="2-点集拓扑学"><a href="#2-点集拓扑学" class="headerlink" title="2. 点集拓扑学"></a>2. 点集拓扑学</h3><h4 id="2-1-预备知识"><a href="#2-1-预备知识" class="headerlink" title="2.1 预备知识"></a>2.1 预备知识</h4><h5 id="2-1-1-集合代数与关系"><a href="#2-1-1-集合代数与关系" class="headerlink" title="2.1.1 集合代数与关系"></a>2.1.1 集合代数与关系</h5><ul>
 <li>X所有子集构成的集族，称为X的幂集，用2^X表示</li>
-<li>笛卡尔积: \(X\times Y=\{(x,y):x\in X,y\in Y\}\). \(X\times Y\)的任一子集R称为X到Y的一个关系。若\((x,y)\in R\)，则称x与y是R-相关的，也记为xRy。若R是X到Y的一个关系，则其定义集为\(\{x\in X: \exists y\in Y, xRy\}\)(为方便也常记为DR)，也称为定义域。而其值集则定义为\(\{y\in Y: \exists x\in X, xRy\}\)。</li>
+<li>笛卡尔积: \(X\times Y&#x3D;\{(x,y):x\in X,y\in Y\}\). \(X\times Y\)的任一子集R称为X到Y的一个关系。若\((x,y)\in R\)，则称x与y是R-相关的，也记为xRy。若R是X到Y的一个关系，则其定义集为\(\{x\in X: \exists y\in Y, xRy\}\)(为方便也常记为DR)，也称为定义域。而其值集则定义为\(\{y\in Y: \exists x\in X, xRy\}\)。</li>
 </ul>
 <h5 id="2-1-2-函数与等价关系"><a href="#2-1-2-函数与等价关系" class="headerlink" title="2.1.2 函数与等价关系"></a>2.1.2 函数与等价关系</h5><ul>
 <li>包含映射(含入映射)</li>
@@ -354,7 +380,7 @@
 <li>划分</li>
 </ul>
 <h5 id="2-1-3-序关系与选择公理"><a href="#2-1-3-序关系与选择公理" class="headerlink" title="2.1.3 序关系与选择公理"></a>2.1.3 序关系与选择公理</h5><ul>
-<li>设R是X上的一个关系，如果\(xRy\wedge yRx\)，则必有x=y，那么我们称R在X上是反对称的。X上的一个自反、反对称且传递的关系R就称为X上的一个<strong>偏序</strong>。当R是X上的一个偏序时，偶对(X,R)称为一个偏序集。在偏序关系R明确的情况下，有时也简称X为一个偏序集。偏序关系常用≤来表示</li>
+<li>设R是X上的一个关系，如果\(xRy\wedge yRx\)，则必有x&#x3D;y，那么我们称R在X上是反对称的。X上的一个自反、反对称且传递的关系R就称为X上的一个<strong>偏序</strong>。当R是X上的一个偏序时，偶对(X,R)称为一个偏序集。在偏序关系R明确的情况下，有时也简称X为一个偏序集。偏序关系常用≤来表示</li>
 <li>全序(也称线性序)；全序集(或线性序集)，也称为链</li>
 <li>良序；良序集</li>
 <li>闭区间，左闭右开区间，开区间，闭右射线，开右射线，区间，诱导偏序，偏序子集</li>
@@ -362,7 +388,7 @@
 </ul>
 <h5 id="2-1-4-集合的可数性"><a href="#2-1-4-集合的可数性" class="headerlink" title="2.1.4 集合的可数性"></a>2.1.4 集合的可数性</h5><p>如果集合A的元素是只有有限个，就称它是有限集，否则为无限集。如今我们把能与自然数集形成一一对应的集合称为<strong>可数无限集</strong>(也称<strong>可列集</strong>)，而把有限集和可数无限集统称为<strong>可数(countable)集</strong>，也就是说，能够与自然数集的某个子集形成一一对应的集合都称为可数集。不是可数集的集合不可数</p>
 <h5 id="2-1-5-基数简介"><a href="#2-1-5-基数简介" class="headerlink" title="2.1.5 基数简介"></a>2.1.5 基数简介</h5><ul>
-<li>定义：如果在集合A和集合B之间存在一一对应\(f: A\rightarrow B\)，则称集合A和集合B是等势的，记为A~B。如果存在自然数n使得A~{1,2,…,n}，则称集合A是有限的；不是有限的集合就是无限的。如果A~N(正整数集)，则称A是可数无限的(或者可列的)；有限的或可数无限的统称为可数的。</li>
+<li>定义：如果在集合A和集合B之间存在一一对应\(f: A\rightarrow B\)，则称集合A和集合B是等势的，记为A<del>B。如果存在自然数n使得A</del>{1,2,…,n}，则称集合A是有限的；不是有限的集合就是无限的。如果A~N(正整数集)，则称A是可数无限的(或者可列的)；有限的或可数无限的统称为可数的。</li>
 <li>定理：集合间的等势关系是一个等价关系，即对任意集合A,B,C，有：<ul>
 <li>\(A\sim A\)</li>
 <li>\(A\sim B \Rightarrow B\sim A\)</li>
@@ -370,9 +396,9 @@
 </ul>
 </li>
 <li>定义：对于每个集合A，对应一个符号|A|，称为A的基数，它满足以下条件：<ul>
-<li>如果A~B，则|A|=|B|</li>
-<li>\(|\varnothing| = 0\)</li>
-<li>如果有自然数n使得A~{1,2,…,n}，则|A|=n</li>
+<li>如果A~B，则|A|&#x3D;|B|</li>
+<li>\(|\varnothing| &#x3D; 0\)</li>
+<li>如果有自然数n使得A~{1,2,…,n}，则|A|&#x3D;n</li>
 <li>显然基数就是通常个数概念的推广</li>
 <li>……</li>
 </ul>
@@ -390,70 +416,98 @@
 </blockquote>
 <h4 id="3-2-度量拓扑"><a href="#3-2-度量拓扑" class="headerlink" title="3.2 度量拓扑"></a>3.2 度量拓扑</h4><ul>
 <li>非空集合X上的一个度量d是指一个满足如下三条度量公理的映射\(d: X\times X \rightarrow R\)<ul>
-<li>1) 非负性：\(d(x,y)\geq 0,\forall x,y\in X\), 等号当且仅当x=y时成立</li>
-<li>2) 对称性：\(d(x,y)=d(y,x),\forall x,y\in X\)</li>
-<li>3) 三角不等式：\(d(x,z)\leq d(x,y)+d(y,z),\forall x,y\in X\)</li>
+<li><ol>
+<li>非负性：\(d(x,y)\geq 0,\forall x,y\in X\), 等号当且仅当x&#x3D;y时成立</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>对称性：\(d(x,y)&#x3D;d(y,x),\forall x,y\in X\)</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>三角不等式：\(d(x,z)\leq d(x,y)+d(y,z),\forall x,y\in X\)</li>
+</ol>
+</li>
 </ul>
 </li>
 <li>示例：<ul>
-<li>1) 在n维欧式空间\(\mathbb{R}^n\),如下定义的映射\(d:\mathbb{R}^n \times \mathbb{R}^n\),\(d(x,y)=\parallel x-y\parallel =\sqrt{\sum_{i=1}^{n}(x_i-y_i)^2},\forall x=(x_1,x_2,\cdots,x_n),y=(y_1,y_2,\cdots,y_n)\in \mathbb{R}^n\)是一个度量，称为欧式度量</li>
-<li>2) 在\(C[a,b]\)上，对于两个函数\(f,g\in C[a,b]\)，由\(d(f,g)=\int_a^b|f-g|dx\)定义的映射给出了\(C[a,b]\)上的一个变量</li>
-<li>3) 在任意一个非空集X上，\(d(x,y)=\begin{cases} 0,x=y\\1,x\neq y \end{cases}\forall x,y\in X\)定义了一个度量，这个度量通常称为离散度量</li>
-<li>4) 在集合\(H=\left\{x=(x_1,x_2,\cdots,x_n,\cdots)|\sum_{i=1}^{\infty}x_i^2&lt;+\infty,x_i\in \mathbb{R}\right\}\)上，定义\(d(x,y)=\sqrt{\sum_{i=1}^{\infty}(x_i-y_i)^2},\forall x=(x_1,x_2,\cdots),y=(x_1,y_2,\cdots)\in H\)，则d是H上的一个度量</li>
+<li><ol>
+<li>在n维欧式空间\(\mathbb{R}^n\),如下定义的映射\(d:\mathbb{R}^n \times \mathbb{R}^n\),\(d(x,y)&#x3D;\parallel x-y\parallel &#x3D;\sqrt{\sum_{i&#x3D;1}^{n}(x_i-y_i)^2},\forall x&#x3D;(x_1,x_2,\cdots,x_n),y&#x3D;(y_1,y_2,\cdots,y_n)\in \mathbb{R}^n\)是一个度量，称为欧式度量</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>在\(C[a,b]\)上，对于两个函数\(f,g\in C[a,b]\)，由\(d(f,g)&#x3D;\int_a^b|f-g|dx\)定义的映射给出了\(C[a,b]\)上的一个变量</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>在任意一个非空集X上，\(d(x,y)&#x3D;\begin{cases} 0,x&#x3D;y\\1,x\neq y \end{cases}\forall x,y\in X\)定义了一个度量，这个度量通常称为离散度量</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>在集合\(H&#x3D;\left\{x&#x3D;(x_1,x_2,\cdots,x_n,\cdots)|\sum_{i&#x3D;1}^{\infty}x_i^2&lt;+\infty,x_i\in \mathbb{R}\right\}\)上，定义\(d(x,y)&#x3D;\sqrt{\sum_{i&#x3D;1}^{\infty}(x_i-y_i)^2},\forall x&#x3D;(x_1,x_2,\cdots),y&#x3D;(x_1,y_2,\cdots)\in H\)，则d是H上的一个度量</li>
+</ol>
+</li>
 </ul>
 </li>
-<li>度量空间：<br>对于定义了度量\(d:X\times X\rightarrow \mathbb{R}\)的集合X而言，\(\forall x_0\in X,\forall \epsilon &gt;0\)，称\(B(x_0,\epsilon)=\{x\in X|d(x,x_0)&lt;\epsilon\}\)为以\(x_0\)为中心，\(\epsilon\)为半径的球形领域(开球)，再令\(\Im_d=\{U\subset X|U是X中若干个球形领域的并集\}\)，则很容易验证：\(\Im_d\)是X上的一个拓扑，称为由度量d诱导的拓扑（简称度量拓扑）。此时，拓扑空间\((X,\Im_d)\)通常简记为(X,d)，甚至在不引起混乱的情况下直接记为X，称为度量空间</li>
+<li>度量空间：<br>对于定义了度量\(d:X\times X\rightarrow \mathbb{R}\)的集合X而言，\(\forall x_0\in X,\forall \epsilon &gt;0\)，称\(B(x_0,\epsilon)&#x3D;\{x\in X|d(x,x_0)&lt;\epsilon\}\)为以\(x_0\)为中心，\(\epsilon\)为半径的球形领域(开球)，再令\(\Im_d&#x3D;\{U\subset X|U是X中若干个球形领域的并集\}\)，则很容易验证：\(\Im_d\)是X上的一个拓扑，称为由度量d诱导的拓扑（简称度量拓扑）。此时，拓扑空间\((X,\Im_d)\)通常简记为(X,d)，甚至在不引起混乱的情况下直接记为X，称为度量空间</li>
 </ul>
 <h4 id="3-3-拓扑空间的几个基本概念"><a href="#3-3-拓扑空间的几个基本概念" class="headerlink" title="3.3 拓扑空间的几个基本概念"></a>3.3 拓扑空间的几个基本概念</h4><ul>
 <li>闭集：拓扑空间中的一个集合F，如果其补集为开集，则称它为闭集</li>
 <li>在一个拓扑空间中，能表示为可数多个闭集的并集的集合称为\(F_\sigma -\)集</li>
 <li>在一个拓扑空间中，能表示为可数多个闭集的并集的集合称为\(G_\sigma -\)集</li>
 <li>集合X的一个非空子集族\(\Sigma\)称为一个\(\sigma -\)环，是指它满足：<ul>
-<li>1) 对余运算封闭：\(A\in \Sigma\Rightarrow A^C\in \Sigma\)</li>
-<li>2) 对可数交运算封闭：\(A_i\in \Sigma(i\in \mathbb{N})\Rightarrow \bigcap_{i\in \mathbb{N}}A_i\in \Sigma\)</li>
+<li><ol>
+<li>对余运算封闭：\(A\in \Sigma\Rightarrow A^C\in \Sigma\)</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>对可数交运算封闭：\(A_i\in \Sigma(i\in \mathbb{N})\Rightarrow \bigcap_{i\in \mathbb{N}}A_i\in \Sigma\)</li>
+</ol>
+</li>
 </ul>
 </li>
 <li>邻域、内点和内部</li>
 <li>聚点与闭包</li>
 <li>序列的收敛性</li>
 </ul>
-<h4 id="3-4-子空间"><a href="#3-4-子空间" class="headerlink" title="3.4 子空间"></a>3.4 子空间</h4><h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)"><a href="https://book.douban.com/subject/22420911/" target="_blank" rel="noopener">拓扑学</a><a href="#fnref:1" rev="footnote"> ↩</a></span></div></div></div>
+<h4 id="3-4-子空间"><a href="#3-4-子空间" class="headerlink" title="3.4 子空间"></a>3.4 子空间</h4><h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://book.douban.com/subject/22420911/">拓扑学</a><a href="#fnref:1" rev="footnote">↩</a></span></li></ol></div></div>
     </div>
 
     
     
-    <div class="post-widgets">
+    
+
+    <footer class="post-footer"><div class="post-widgets">
       <div id="needsharebutton-postbottom">
         <span class="btn">
           <i class="fa fa-share-alt" aria-hidden="true"></i>
         </span>
       </div>
     </div>
-        <div class="reward-container">
+          <div class="reward-container">
   <div>Compensated Dating</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+  <button>
     Donate
   </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
+  <div class="post-reward">
+      <div>
         <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
-        <p>Bitcoin</p>
+        <span>Bitcoin</span>
       </div>
 
   </div>
 </div>
 
-        
+          
 
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>Kino
+      <strong>Post author:  </strong>Kino
   </li>
   <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="https://blog.xuwei.fun/2015/10/21/topology01/" title="拓扑学入门一">https://blog.xuwei.fun/2015/10/21/topology01/</a>
+      <strong>Post link: </strong>
+      <a href="https://blog.xuwei.fun/2015/10/21/topology01/" title="拓扑学入门一">https://blog.xuwei.fun/2015/10/21/topology01/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -461,37 +515,33 @@
 </ul>
 </div>
 
-        
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <p>Welcome to my other publishing channels</p>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+          <span class="icon">
+            <i class="weibo"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
-            <span class="icon">
-              <i class="weibo"></i>
-            </span>
+          <span class="label">Weibo</span>
+        </a>
+      </div>
 
-            <span class="label">Weibo</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+          <span class="icon">
+            <i class="wechat"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
-            <span class="icon">
-              <i class="wechat"></i>
-            </span>
-
-            <span class="label">Wechat</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">Wechat</span>
+        </a>
+      </div>
   </div>
+</div>
 
-
-      <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/math/" rel="tag"># math</a>
               <a href="/tags/topology/" rel="tag"># topology</a>
@@ -499,29 +549,27 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2015/10/19/bootstrap01/" rel="prev" title="Bootstrap小记一">
-      <i class="fa fa-chevron-left"></i> Bootstrap小记一
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2015/10/22/operatingSystem06/" rel="next" title="操作系统六">
-      操作系统六 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2015/10/19/bootstrap01/" rel="prev" title="Bootstrap小记一">
+                  <i class="fa fa-chevron-left"></i> Bootstrap小记一
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2015/10/22/operatingSystem06/" rel="next" title="操作系统六">
+                  操作系统六 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
@@ -529,193 +577,58 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
+              <div class="comments gitalk-container"></div>
             </div>
             <div class="tab-pane livere" id="comment-livere">
-              
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
-  </div>
-  
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-引言"><span class="nav-text">1. 引言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-一笔画问题和哥尼斯堡七桥问题"><span class="nav-text">1.1 一笔画问题和哥尼斯堡七桥问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-欧拉-Euler-示性数"><span class="nav-text">1.2 欧拉(Euler)示性数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-图的可平面化处理问题"><span class="nav-text">1.3 图的可平面化处理问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-扭结论-Knot-theory-研究"><span class="nav-text">1.4 扭结论(Knot theory)研究</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-四色问题"><span class="nav-text">1.5 四色问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-点集拓扑学"><span class="nav-text">2. 点集拓扑学</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-预备知识"><span class="nav-text">2.1 预备知识</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-集合代数与关系"><span class="nav-text">2.1.1 集合代数与关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-函数与等价关系"><span class="nav-text">2.1.2 函数与等价关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-3-序关系与选择公理"><span class="nav-text">2.1.3 序关系与选择公理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-4-集合的可数性"><span class="nav-text">2.1.4 集合的可数性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-5-基数简介"><span class="nav-text">2.1.5 基数简介</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-拓扑空间的基本概念"><span class="nav-text">3. 拓扑空间的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-拓扑空间的定义"><span class="nav-text">3.1 拓扑空间的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-度量拓扑"><span class="nav-text">3.2 度量拓扑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-拓扑空间的几个基本概念"><span class="nav-text">3.3 拓扑空间的几个基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-子空间"><span class="nav-text">3.4 子空间</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footnotes"><span class="nav-text">Footnotes</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Kino"
-      src="/images/site/avatar.png">
-  <p class="site-author-name" itemprop="name">Kino</p>
-  <div class="site-description" itemprop="description">Amor Fati</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">123</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">122</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">356k</span>
-    <span class="post-meta-divider">|</span>
+    <span title="Symbols count total">353k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:23</span>
+    <span title="Reading time total">5:21</span>
+  </span>
 </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
+
+  <script src="/js/third-party/pace.js"></script>
 
   
 
@@ -723,88 +636,14 @@
 
 
   
-<script src="/js/local-search.js"></script>
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
-
-  
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout : 1000,
-        priority: false,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2015/10/21/topology01/',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":1000,"priority":false,"archives":false,"url":"https://blog.xuwei.fun/2015/10/21/topology01/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -824,42 +663,11 @@
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '58ab17a966414cd66c67',
-      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
-      repo        : 'WoeiSheu.github.io',
-      owner       : 'WoeiSheu',
-      admin       : ['WoeiSheu'],
-      id          : '13a359c527bdc37766d814d8791ca418',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
-
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"13a359c527bdc37766d814d8791ca418"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {

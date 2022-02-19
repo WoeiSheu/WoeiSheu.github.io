@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
@@ -15,14 +17,13 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.xuwei.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
   <meta name="description" content="前言Kino的课题常需要用到元启发式算法，就在此稍稍总结。元启发式(metaheuristic)，很多时候也被称为智能优化(intelligent optimization)、现代启发式(Modern Heuristic)、智能计算(Intelligent Computation)、自然计算(Natural Computation)等，细分到具体算法有遗传算法、粒子群算法、差分进化算法、蚁群算法等">
 <meta property="og:type" content="article">
@@ -38,18 +39,23 @@
 <meta property="article:tag" content="metaheuristic">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/","path":"2018/11/19/metaheuristicAlgorithm01/","title":"Metaheuristic algorithm —— Concept"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Metaheuristic algorithm —— Concept | 霁月荒馆</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-104049598-2","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
 #needsharebutton-postbottom {
   cursor: pointer;
@@ -77,68 +83,31 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>Metaheuristic algorithm —— Concept | 霁月荒馆</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-104049598-2');
-      }
-    </script>
-
-
-
-
-
-
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">霁月荒馆</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">霁月荒馆</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
   </div>
@@ -152,54 +121,17 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-thoughts">
-
-    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
-
-  </li>
-        <li class="menu-item menu-item-excerpt">
-
-    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
-
-  </li>
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-thoughts"><a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>Thoughts</a></li>
+        <li class="menu-item menu-item-excerpt"><a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>Excerpt</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -210,23 +142,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -234,28 +165,122 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Meta"><span class="nav-text">1. Meta</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-Metadata"><span class="nav-text">1.1 Metadata</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-Metaprogramming"><span class="nav-text">1.2 Metaprogramming</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-Off-topic"><span class="nav-text">1.3 Off topic</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Heuristic"><span class="nav-text">2. Heuristic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Metaheuristic"><span class="nav-text">3. Metaheuristic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-text">后记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footnote"><span class="nav-text">Footnote</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https:&#x2F;&#x2F;xuwei.fun&#x2F;" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https:&#x2F;&#x2F;blog.xuwei.fun&#x2F;bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
 
-    
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -272,51 +297,54 @@
           Metaheuristic algorithm —— Concept
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2018-11-19 21:21:09" itemprop="dateCreated datePublished" datetime="2018-11-19T21:21:09+08:00">2018-11-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-05-25 16:06:54" itemprop="dateModified" datetime="2019-05-25T16:06:54+08:00">2019-05-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techonology/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
-                </span>
-            </span>
+      <time title="Created: 2018-11-19 21:21:09" itemprop="dateCreated datePublished" datetime="2018-11-19T21:21:09+08:00">2018-11-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2019-05-25 16:06:54" itemprop="dateModified" datetime="2019-05-25T16:06:54+08:00">2019-05-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/techonology/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>4.9k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>4 mins.</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>4.9k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>4 mins.</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -325,12 +353,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Kino的课题常需要用到元启发式算法，就在此稍稍总结。<br>元启发式(metaheuristic)，很多时候也被称为智能优化(intelligent optimization)、现代启发式(Modern Heuristic)、智能计算(Intelligent Computation)、自然计算(Natural Computation)等，细分到具体算法有<em>遗传算法</em>、<em>粒子群算法</em>、<em>差分进化算法</em>、<em>蚁群算法</em>等。<br><strong>元启发式(metaheuristic)</strong>这个词本身可以拆成两部分来看，<em>元(meta)</em>和<em>启发式(heuristic)</em>，本文主要从这两方面来阐述元启发式的概念，后续文章再介绍各算法的原理、步骤、代码等。</p>
-<a id="more"></a>
-<h3 id="1-Meta"><a href="#1-Meta" class="headerlink" title="1. Meta"></a>1. Meta</h3><p>首先来解释<em>元(meta)</em>，程序员对这个词并不陌生，学习编程语言到某个阶段总会出来一个<em>元编程(metaprogramming)</em>技术，还会经常见到<em>元数据(metadata)</em>等。与顾名思义的一些概念相比，<em>元</em>的概念就有点晦涩了，初次遇见总是一脸诧异，难以理解。<br>感性上来看，<strong>metaXXX</strong>就是相比XXX来说更高级的一种概念/理论，是研究超越XXX的存在，玄之又玄，不能理解不是你的错，就像形而上学(metaphysics)一样难以理解。<br>而不去探讨<strong>meta</strong>哲学性质的意义，只考虑其作为前缀(prefix)的情况，根据<em>meta</em>在Wikipedia的相应词条<a href="https://en.wikipedia.org/wiki/Meta" target="_blank" rel="noopener">Meta</a><sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. (2018, November 12). Meta. Retrieved from https://en.wikipedia.org/wiki/Meta
-">[1]</span></a></sup>，<strong>meta</strong>大多数时候可以理解为<strong>X about X</strong>，大致翻译为<strong>关于X的X</strong>，这里的<strong>关于</strong>在中文语境里通常用<strong>实现、描述、编写</strong>等动词代替。例如<strong>metadata</strong>就是<strong>data about data</strong>，即描述数据的数据，<strong>metaprogramming</strong>就是<strong>programming about programming</strong>，即<strong>编写程序的程序</strong>，诸如此类。如果有需要，这种概念还可以递归，即添加任意多的<strong>meta</strong>前缀，变身成为<strong>metametameta…</strong>。<br>在此基础上再去看<strong>meta</strong>的中文翻译<strong>元</strong>，就会发现这个翻译其实很巧妙。“元”汉语里有 起源/开始(如元旦/元始天尊)、基本/根本(如元素/元气/元件) 的意思，完美地涵盖了meta想要表达的意思。然而<strong>元</strong>这个字很少单用，已经融合在最常见的一些词语中，所以当看到用<strong>元</strong>的前缀生造出的词语时，大多数人还是会难以理解。</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Kino的课题常需要用到元启发式算法，就在此稍稍总结。<br>元启发式(metaheuristic)，很多时候也被称为智能优化(intelligent optimization)、现代启发式(Modern Heuristic)、智能计算(Intelligent Computation)、自然计算(Natural Computation)等，细分到具体算法有<em>遗传算法</em>、<em>粒子群算法</em>、<em>差分进化算法</em>、<em>蚁群算法</em>等。<br>**元启发式(metaheuristic)*<em>这个词本身可以拆成两部分来看，</em>元(meta)<em>和</em>启发式(heuristic)*，本文主要从这两方面来阐述元启发式的概念，后续文章再介绍各算法的原理、步骤、代码等。</p>
+<span id="more"></span>
+<h3 id="1-Meta"><a href="#1-Meta" class="headerlink" title="1. Meta"></a>1. Meta</h3><p>首先来解释<em>元(meta)<em>，程序员对这个词并不陌生，学习编程语言到某个阶段总会出来一个</em>元编程(metaprogramming)<em>技术，还会经常见到</em>元数据(metadata)<em>等。与顾名思义的一些概念相比，</em>元</em>的概念就有点晦涩了，初次遇见总是一脸诧异，难以理解。<br>感性上来看，<strong>metaXXX</strong>就是相比XXX来说更高级的一种概念&#x2F;理论，是研究超越XXX的存在，玄之又玄，不能理解不是你的错，就像形而上学(metaphysics)一样难以理解。<br>而不去探讨<strong>meta</strong>哲学性质的意义，只考虑其作为前缀(prefix)的情况，根据<em>meta</em>在Wikipedia的相应词条<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Meta">Meta</a><sup id="fnref:1" class="location-target"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Wikipedians. (2018, November 12). Meta. Retrieved from https://en.wikipedia.org/wiki/Meta
+">1</span></a></sup>，<strong>meta</strong>大多数时候可以理解为<strong>X about X</strong>，大致翻译为<strong>关于X的X</strong>，这里的<strong>关于</strong>在中文语境里通常用<strong>实现、描述、编写</strong>等动词代替。例如<strong>metadata</strong>就是<strong>data about data</strong>，即描述数据的数据，<strong>metaprogramming</strong>就是<strong>programming about programming</strong>，即<strong>编写程序的程序</strong>，诸如此类。如果有需要，这种概念还可以递归，即添加任意多的<strong>meta</strong>前缀，变身成为<strong>metametameta…<strong>。<br>在此基础上再去看</strong>meta</strong>的中文翻译<strong>元</strong>，就会发现这个翻译其实很巧妙。“元”汉语里有 起源&#x2F;开始(如元旦&#x2F;元始天尊)、基本&#x2F;根本(如元素&#x2F;元气&#x2F;元件) 的意思，完美地涵盖了meta想要表达的意思。然而<strong>元</strong>这个字很少单用，已经融合在最常见的一些词语中，所以当看到用<strong>元</strong>的前缀生造出的词语时，大多数人还是会难以理解。</p>
 <p>这样说完感觉可能还是一片迷茫，就拿上面所说的<em>metadata</em>和<em>metaprogramming</em>作为示例来具体说明。</p>
 <h4 id="1-1-Metadata"><a href="#1-1-Metadata" class="headerlink" title="1.1 Metadata"></a>1.1 Metadata</h4><p>关于Metadata，循序渐进地来举几个栗子。</p>
 <ul>
@@ -342,7 +368,7 @@
 <ul>
 <li>C++：在C++中，可以利用模板实现元编程，在Effective C++中就有关于模板元编程的讨论</li>
 <li>Java：在Java中，最为人熟知的反射，就可以用来实现元编程</li>
-<li>Python：在Python中，如果一个类继承的不是object而是type，那么它就被成为<strong>元类(metaclass)</strong>，可以用元类来验证、注册子类，这也可以称为元编程</li>
+<li>Python：在Python中，如果一个类继承的不是object而是type，那么它就被成为**元类(metaclass)**，可以用元类来验证、注册子类，这也可以称为元编程</li>
 </ul>
 <p>从上面的例子中总结一下，元编程的实现手段各异，但大多是想解决这几个问题：</p>
 <ul>
@@ -353,50 +379,51 @@
 <p>这也提醒了我们，在使用元编程前需要思考这个问题是否必须使用元编程、使用元编程能否简化实现过程，如果可以再尝试使用，否则就需要谨慎对待。<br><strong>元编程更大程度上是一个概念和思想，而不是一个具体方法和手段</strong></p>
 <h4 id="1-3-Off-topic"><a href="#1-3-Off-topic" class="headerlink" title="1.3 Off topic"></a>1.3 Off topic</h4><p>思维一发散，意识就止不住到处游走，虽然离题万里，但且记录在此吧。</p>
 <blockquote>
-<p>突然想到导师最喜欢提的问题：“你这个效能评估的参数选取标准是什么呢？你怎么证明你这个效能评估的结果是可信的呢？毁伤评估的结果是怎么得来的呢？”似也有点元的意味，而且还可以无限递归，最终变成“评估评估…评估的结果”。如果该项工作有客观的评估标准，评估起来就相对简单可信，如果没有客观标准，靠专家标准或者自己选取的参数标准评估，可信性就大打折扣了，这个时候就可以再追问一句：“你怎么评价你选取的参数是可靠的呢？”。<br>今天刚好看到<a href="https://en.wikipedia.org/wiki/2019_redefinition_of_SI_base_units" target="_blank" rel="noopener">新闻</a>，国际单位制的七个基本单位重新进行了定义，都改以宇宙的基本常数为基础定义<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. (2018, November 19). 2019 redefinition of SI base units. Retrieved from https://en.wikipedia.org/wiki/2019_redefinition_of_SI_base_units
-">[2]</span></a></sup>，于是突然想到，所谓度量系统<strong>Metric System</strong>里的单词<strong>metric</strong>，在词源上是不是和<strong>meta</strong>同源的，毕竟metric是用来衡量一切的标准，有种meta的意味在里面，不过事实到底如何，毫无词源学基础的Kino是无法确定了。<br>似乎更能理解那句不是爱因斯坦的名言“越简单越好，但不要过于简单”，过犹不及，繁简之间如何取舍是个永恒的问题，奥卡姆剃刀并不是万能的，更何况繁简也是相互转化的，就像有时想为了简洁不停地添加meta，最终却导致设计模式的臃肿，反而更复杂了。所谓大道至简，是对还是错，还未可知。但是爱因斯坦真的说过这句：“不应否认任何理论的终极目标都是尽可能让不可削减的基本元素变得更加简单且更少，但也不能放弃对任何一个单一经验数据的充分阐释。”这似乎是个比较恰当的说法。</p>
+<p>突然想到导师最喜欢提的问题：“你这个效能评估的参数选取标准是什么呢？你怎么证明你这个效能评估的结果是可信的呢？毁伤评估的结果是怎么得来的呢？”似也有点元的意味，而且还可以无限递归，最终变成“评估评估…评估的结果”。如果该项工作有客观的评估标准，评估起来就相对简单可信，如果没有客观标准，靠专家标准或者自己选取的参数标准评估，可信性就大打折扣了，这个时候就可以再追问一句：“你怎么评价你选取的参数是可靠的呢？”。<br>今天刚好看到<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/2019_redefinition_of_SI_base_units">新闻</a>，国际单位制的七个基本单位重新进行了定义，都改以宇宙的基本常数为基础定义<sup id="fnref:2" class="location-target"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Wikipedians. (2018, November 19). 2019 redefinition of SI base units. Retrieved from https://en.wikipedia.org/wiki/2019_redefinition_of_SI_base_units
+">2</span></a></sup>，于是突然想到，所谓度量系统<strong>Metric System</strong>里的单词<strong>metric</strong>，在词源上是不是和<strong>meta</strong>同源的，毕竟metric是用来衡量一切的标准，有种meta的意味在里面，不过事实到底如何，毫无词源学基础的Kino是无法确定了。<br>似乎更能理解那句不是爱因斯坦的名言“越简单越好，但不要过于简单”，过犹不及，繁简之间如何取舍是个永恒的问题，奥卡姆剃刀并不是万能的，更何况繁简也是相互转化的，就像有时想为了简洁不停地添加meta，最终却导致设计模式的臃肿，反而更复杂了。所谓大道至简，是对还是错，还未可知。但是爱因斯坦真的说过这句：“不应否认任何理论的终极目标都是尽可能让不可削减的基本元素变得更加简单且更少，但也不能放弃对任何一个单一经验数据的充分阐释。”这似乎是个比较恰当的说法。</p>
 </blockquote>
-<h3 id="2-Heuristic"><a href="#2-Heuristic" class="headerlink" title="2. Heuristic"></a>2. Heuristic</h3><p>维基百科也有启发式(Heuristic)的词条<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. (2014, May 25). Heuristic (computer science). Retrieved from https://en.wikipedia.org/wiki/Heuristic_(computer_science)
-">[3]</span></a></sup>，但实际的定义很简单。<br>启发式算法(Heuristic)算法和精确(Exact)算法相对应，它们的求解对象都是运筹优化类问题。区别在于，对于组合优化等非凸优化问题，用精确算法虽可求出其全局最优解，但计算效率低，有时还是NP问题，规模变大则无法在有限时间内求解，而利用启发式算法，可以提高计算效率，但求得的解可能只是较好的次优解，而不能达到全局最优解。<br>针对一个具体的优化问题，提出一个在计算效率和求解质量间取得均衡的具体算法，这个算法就叫做启发式算法。<br>例如需要求解\(y=f(x)\)的最小值，用精确求解可以得到准确值为\(\min{y}=22\)，耗时\(t=10s\)，而使用启发式算法求得的结果是\(\min{y}=22.22\)，但耗时只有\(t=3s\)。<br>对于精确求解法，具体包括穷举法、分支定界法、割平面法、动态规划法等，而对于传统的启发式算法，包括构造型方法、局部搜索算法、松弛方法、解空间缩减法等。</p>
-<h3 id="3-Metaheuristic"><a href="#3-Metaheuristic" class="headerlink" title="3. Metaheuristic"></a>3. Metaheuristic</h3><p>综合以上概念，将meta和heuristic结合得到的所谓元启发(metaheuristic)，理论定义上应该是<strong>heuristic about heuristic</strong>，但是这种<strong>实现启发式的启发式</strong>，还是很难直观理解。<br>先回到刚刚说的启发式算法，严格意义上的启发式，是针对某个特定优化问题的，只要是能够取得较好值的算法都可以叫做启发式算法，而元启发，就是给定一套流程/方法论，对不同的问题，只要按照该流程设计，就能实现一个针对具体问题的启发式算法，因此把这个抽象的流程称之为元启发。换句话说，启发式是面向问题的(Problem Oriented)，而元启发是面向方法的(Method Oriented)。最常见的比如遗传算法，它只给定了一个标准流程：编码-&gt;初始化-&gt;选择-&gt;交叉-&gt;变异-&gt;…，而针对一个具体的优化问题，需要设计特定的编码方式、选择特定的适应度函数…，如此设计完成的具体算法才是启发式算法。<br><strong>但是、然而、不过</strong>，现在的论文中，大多数时候把元启发和启发式也混着用，在整篇文章中，通常只使用元启发式或启发式其中一个词，所以界限并没有那么分明了，元启发经常被称为启发式、启发式也经常被叫做元启发。<br>元启发也有维基百科页面，<a href="https://en.wikipedia.org/wiki/Metaheuristic" target="_blank" rel="noopener">戳这里</a></p>
+<h3 id="2-Heuristic"><a href="#2-Heuristic" class="headerlink" title="2. Heuristic"></a>2. Heuristic</h3><p>维基百科也有启发式(Heuristic)的词条<sup id="fnref:3" class="location-target"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Wikipedians. (2014, May 25). Heuristic (computer science). Retrieved from https://en.wikipedia.org/wiki/Heuristic_(computer_science)
+">3</span></a></sup>，但实际的定义很简单。<br>启发式算法(Heuristic)算法和精确(Exact)算法相对应，它们的求解对象都是运筹优化类问题。区别在于，对于组合优化等非凸优化问题，用精确算法虽可求出其全局最优解，但计算效率低，有时还是NP问题，规模变大则无法在有限时间内求解，而利用启发式算法，可以提高计算效率，但求得的解可能只是较好的次优解，而不能达到全局最优解。<br>针对一个具体的优化问题，提出一个在计算效率和求解质量间取得均衡的具体算法，这个算法就叫做启发式算法。<br>例如需要求解\(y&#x3D;f(x)\)的最小值，用精确求解可以得到准确值为\(\min{y}&#x3D;22\)，耗时\(t&#x3D;10s\)，而使用启发式算法求得的结果是\(\min{y}&#x3D;22.22\)，但耗时只有\(t&#x3D;3s\)。<br>对于精确求解法，具体包括穷举法、分支定界法、割平面法、动态规划法等，而对于传统的启发式算法，包括构造型方法、局部搜索算法、松弛方法、解空间缩减法等。</p>
+<h3 id="3-Metaheuristic"><a href="#3-Metaheuristic" class="headerlink" title="3. Metaheuristic"></a>3. Metaheuristic</h3><p>综合以上概念，将meta和heuristic结合得到的所谓元启发(metaheuristic)，理论定义上应该是<strong>heuristic about heuristic</strong>，但是这种<strong>实现启发式的启发式</strong>，还是很难直观理解。<br>先回到刚刚说的启发式算法，严格意义上的启发式，是针对某个特定优化问题的，只要是能够取得较好值的算法都可以叫做启发式算法，而元启发，就是给定一套流程&#x2F;方法论，对不同的问题，只要按照该流程设计，就能实现一个针对具体问题的启发式算法，因此把这个抽象的流程称之为元启发。换句话说，启发式是面向问题的(Problem Oriented)，而元启发是面向方法的(Method Oriented)。最常见的比如遗传算法，它只给定了一个标准流程：编码-&gt;初始化-&gt;选择-&gt;交叉-&gt;变异-&gt;…，而针对一个具体的优化问题，需要设计特定的编码方式、选择特定的适应度函数…，如此设计完成的具体算法才是启发式算法。<br><strong>但是、然而、不过</strong>，现在的论文中，大多数时候把元启发和启发式也混着用，在整篇文章中，通常只使用元启发式或启发式其中一个词，所以界限并没有那么分明了，元启发经常被称为启发式、启发式也经常被叫做元启发。<br>元启发也有维基百科页面，<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Metaheuristic">戳这里</a></p>
 <h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>传统的任务分配、组合优化类等运筹学问题，大多都可以抽象成非凸优化的模型，也是NP问题，无法用传统方法求解，同时这些问题大多缺少或不能统计历史数据，因此也无法使用有监督机器学习等算法，这种情况下使用智能优化算法就非常合适。<br>针对这些运筹学问题，只要能够利用元启发算法的思想设计出合理的启发式算法，从而解决问题，其实就是一个很好的工作，但是现在的研究导向是发论文至上，研究智能优化算法的实验室也不例外，一切以发论文为导向，设计全新的元启发式算法实在困难，于是现在的论文大多还是Problem Oriented，通过说动听的故事阐述问题意义，再找出和之前的问题区别，比如多了一个小小的约束条件，这时就可以命名这个问题为XXXXX，以此说明自己定义了一个新问题，再抽象出该问题的数学模型(大多数时候只是在目标函数或约束条件上做些许修改，太简单没有做的意义，太复杂元启发也难以求解)，然后根据元启发算法的流程设计出完整的算法(在流程中的任一处加一点修改即可称之为改进)，编程实现算法做比较，得出结论;当然Method Oriented也还是有的，刚刚提到的一些小的改动、针对经典的TSP等做算法改进、超多目标优化问题的求解方法等。<br>总之一切为了论文，至于这些论文里的问题是否真的有意义、方法是否真的有创新，谁在乎呢。</p>
-<h3 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h3><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">Wikipedians. (2018, November 12). Meta. Retrieved from <a href="https://en.wikipedia.org/wiki/Meta" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Meta</a><a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. (2018, November 19). 2019 redefinition of SI base units. Retrieved from <a href="https://en.wikipedia.org/wiki/2019_redefinition_of_SI_base_units" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/2019_redefinition_of_SI_base_units</a><a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">Wikipedians. (2014, May 25). Heuristic (computer science). Retrieved from <a href="https://en.wikipedia.org/wiki/Heuristic_(computer_science)" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Heuristic_(computer_science)</a><a href="#fnref:3" rev="footnote"> ↩</a></span></div><div id="fn:4" style="display:flex"><span style="width:20px">4.</span><span style="width:calc(100% - 20px)">Wikipedians. (2018, November 16). Metaheuristic. Retrieved from <a href="https://en.wikipedia.org/wiki/Metaheuristic" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Metaheuristic</a><a href="#fnref:4" rev="footnote"> ↩</a></span></div></div></div>
+<h3 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. (2018, November 12). Meta. Retrieved from https://en.wikipedia.org/wiki/Meta<a href="#fnref:1" rev="footnote">↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. (2018, November 19). 2019 redefinition of SI base units. Retrieved from https://en.wikipedia.org/wiki/2019_redefinition_of_SI_base_units<a href="#fnref:2" rev="footnote">↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. (2014, May 25). Heuristic (computer science). Retrieved from https://en.wikipedia.org/wiki/Heuristic_(computer_science)<a href="#fnref:3" rev="footnote">↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. (2018, November 16). Metaheuristic. Retrieved from https://en.wikipedia.org/wiki/Metaheuristic<a href="#fnref:4" rev="footnote">↩</a></span></li></ol></div></div>
     </div>
 
     
     
-    <div class="post-widgets">
+    
+
+    <footer class="post-footer"><div class="post-widgets">
       <div id="needsharebutton-postbottom">
         <span class="btn">
           <i class="fa fa-share-alt" aria-hidden="true"></i>
         </span>
       </div>
     </div>
-        <div class="reward-container">
+          <div class="reward-container">
   <div>Compensated Dating</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+  <button>
     Donate
   </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
+  <div class="post-reward">
+      <div>
         <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
-        <p>Bitcoin</p>
+        <span>Bitcoin</span>
       </div>
 
   </div>
 </div>
 
-        
+          
 
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>Kino
+      <strong>Post author:  </strong>Kino
   </li>
   <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/" title="Metaheuristic algorithm —— Concept">https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/</a>
+      <strong>Post link: </strong>
+      <a href="https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/" title="Metaheuristic algorithm —— Concept">https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -404,37 +431,33 @@
 </ul>
 </div>
 
-        
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <p>Welcome to my other publishing channels</p>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+          <span class="icon">
+            <i class="weibo"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
-            <span class="icon">
-              <i class="weibo"></i>
-            </span>
+          <span class="label">Weibo</span>
+        </a>
+      </div>
 
-            <span class="label">Weibo</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+          <span class="icon">
+            <i class="wechat"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
-            <span class="icon">
-              <i class="wechat"></i>
-            </span>
-
-            <span class="label">Wechat</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">Wechat</span>
+        </a>
+      </div>
   </div>
+</div>
 
-
-      <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/algorithm/" rel="tag"># algorithm</a>
               <a href="/tags/metaheuristic/" rel="tag"># metaheuristic</a>
@@ -442,29 +465,27 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2018/10/29/leetcode01/" rel="prev" title="Leetcode Summary 01 — Cycle Detection">
-      <i class="fa fa-chevron-left"></i> Leetcode Summary 01 — Cycle Detection
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/05/02/japanese10/" rel="next" title="日语学习第九讲">
-      日语学习第九讲 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/10/29/leetcode01/" rel="prev" title="Leetcode Summary 01 — Cycle Detection">
+                  <i class="fa fa-chevron-left"></i> Leetcode Summary 01 — Cycle Detection
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/05/02/japanese10/" rel="next" title="日语学习第九讲">
+                  日语学习第九讲 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
@@ -472,193 +493,58 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
+              <div class="comments gitalk-container"></div>
             </div>
             <div class="tab-pane livere" id="comment-livere">
-              
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
-  </div>
-  
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Meta"><span class="nav-text">1. Meta</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-Metadata"><span class="nav-text">1.1 Metadata</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-Metaprogramming"><span class="nav-text">1.2 Metaprogramming</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-Off-topic"><span class="nav-text">1.3 Off topic</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Heuristic"><span class="nav-text">2. Heuristic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Metaheuristic"><span class="nav-text">3. Metaheuristic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记"><span class="nav-text">后记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footnote"><span class="nav-text">Footnote</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Kino"
-      src="/images/site/avatar.png">
-  <p class="site-author-name" itemprop="name">Kino</p>
-  <div class="site-description" itemprop="description">Amor Fati</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">123</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">122</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">356k</span>
-    <span class="post-meta-divider">|</span>
+    <span title="Symbols count total">353k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:23</span>
+    <span title="Reading time total">5:21</span>
+  </span>
 </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
+
+  <script src="/js/third-party/pace.js"></script>
 
   
 
@@ -666,88 +552,14 @@
 
 
   
-<script src="/js/local-search.js"></script>
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
-
-  
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout : 1000,
-        priority: false,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":1000,"priority":false,"archives":false,"url":"https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -767,42 +579,11 @@
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '58ab17a966414cd66c67',
-      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
-      repo        : 'WoeiSheu.github.io',
-      owner       : 'WoeiSheu',
-      admin       : ['WoeiSheu'],
-      id          : '7fadd9ff70f8b350eec477e2e6851895',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
-
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"7fadd9ff70f8b350eec477e2e6851895"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {

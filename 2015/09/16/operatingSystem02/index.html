@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
@@ -15,14 +17,13 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.xuwei.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
   <meta name="description" content="1. 资源管理概述1.1 资源管理的目的和任务 资源的静态分配和动态分配  资源的静态分配 系统对作业一级采用资源静态分配方法。 系统在调度作业时，根据作业所需资源进行分配；并在作业运行完毕时，收回所分配的全部资源。称为资源的静态分配。   资源的动态分配 系统对进程一级采用资源动态分配方法。 系统在进程运行中，根据进程提出的资源需求，进行资源的动态分配和回收。称为资源的动态分配。     资源管">
 <meta property="og:type" content="article">
@@ -49,18 +50,23 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blog.xuwei.fun/images/operatingSystem02_1.png">
 
+
 <link rel="canonical" href="https://blog.xuwei.fun/2015/09/16/operatingSystem02/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.xuwei.fun/2015/09/16/operatingSystem02/","path":"2015/09/16/operatingSystem02/","title":"操作系统二——资源分配与调度"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>操作系统二——资源分配与调度 | 霁月荒馆</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-104049598-2","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
 #needsharebutton-postbottom {
   cursor: pointer;
@@ -88,68 +94,31 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>操作系统二——资源分配与调度 | 霁月荒馆</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-104049598-2');
-      }
-    </script>
-
-
-
-
-
-
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">霁月荒馆</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">霁月荒馆</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
   </div>
@@ -163,54 +132,17 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-thoughts">
-
-    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
-
-  </li>
-        <li class="menu-item menu-item-excerpt">
-
-    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
-
-  </li>
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-thoughts"><a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>Thoughts</a></li>
+        <li class="menu-item menu-item-excerpt"><a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>Excerpt</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -221,23 +153,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -245,28 +176,122 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E6%A6%82%E8%BF%B0"><span class="nav-text">1. 资源管理概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E7%9A%84%E7%9B%AE%E7%9A%84%E5%92%8C%E4%BB%BB%E5%8A%A1"><span class="nav-text">1.1 资源管理的目的和任务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-%E8%B5%84%E6%BA%90%E7%9A%84%E5%88%86%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="nav-text">1.2 资源的分类方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-%E8%99%9A%E6%8B%9F%E8%B5%84%E6%BA%90"><span class="nav-text">1.3 虚拟资源</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E7%9A%84%E6%9C%BA%E5%88%B6%E5%92%8C%E7%AD%96%E7%95%A5"><span class="nav-text">2. 资源管理的机制和策略</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D%E6%9C%BA%E5%88%B6"><span class="nav-text">2.1 资源分配机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5"><span class="nav-text">2.2 资源分配策略</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%AD%BB%E9%94%81"><span class="nav-text">3. 死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-%E6%AD%BB%E9%94%81%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%BE%8B%E5%AD%90"><span class="nav-text">3.1 死锁的定义与例子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-%E4%BA%A7%E7%94%9F%E6%AD%BB%E9%94%81%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%92%8C%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="nav-text">3.2 产生死锁的原因和必要条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-%E6%AD%BB%E9%94%81%E6%A8%A1%E5%9E%8B"><span class="nav-text">3.3 死锁模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81%E7%9A%84%E7%AD%96%E7%95%A5"><span class="nav-text">3.4 解决死锁的策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-%E6%AD%BB%E9%94%81%E7%9A%84%E9%A2%84%E9%98%B2"><span class="nav-text">3.5 死锁的预防</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-%E6%AD%BB%E9%94%81%E7%9A%84%E9%81%BF%E5%85%8D"><span class="nav-text">3.6 死锁的避免</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-%E6%AD%BB%E9%94%81%E7%9A%84%E6%A3%80%E6%B5%8B%E4%B8%8E%E5%BF%BD%E7%95%A5"><span class="nav-text">3.7 死锁的检测与忽略</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https:&#x2F;&#x2F;xuwei.fun&#x2F;" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https:&#x2F;&#x2F;blog.xuwei.fun&#x2F;bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
 
-    
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2015/09/16/operatingSystem02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -283,51 +308,54 @@
           操作系统二——资源分配与调度
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2015-09-16 17:36:00" itemprop="dateCreated datePublished" datetime="2015-09-16T17:36:00+08:00">2015-09-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/science/" itemprop="url" rel="index"><span itemprop="name">science</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/science/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
-                </span>
-            </span>
+      <time title="Created: 2015-09-16 17:36:00" itemprop="dateCreated datePublished" datetime="2015-09-16T17:36:00+08:00">2015-09-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/science/" itemprop="url" rel="index"><span itemprop="name">science</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/science/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>5.6k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>5 mins.</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>5.7k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>5 mins.</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -336,8 +364,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <h3 id="1-资源管理概述"><a href="#1-资源管理概述" class="headerlink" title="1. 资源管理概述"></a>1. 资源管理概述</h3><h4 id="1-1-资源管理的目的和任务"><a href="#1-1-资源管理的目的和任务" class="headerlink" title="1.1 资源管理的目的和任务"></a>1.1 资源管理的目的和任务</h4><ul>
 <li><p>资源的静态分配和动态分配</p>
 <ul>
@@ -365,14 +391,14 @@
 </li>
 </ul>
 </li>
-<li>资源管理的任务<ul>
+<li><p>资源管理的任务</p>
+<ul>
 <li>任务：解决资源分配问题，防止死锁；解决对资源的存取、使用方法问题</li>
 <li>资源管理的功能<ul>
 <li>资源数据结构的描述</li>
 <li>确定资源的分配原则和调度原则</li>
 <li>执行资源分配</li>
-<li>存取控制和安全保护<a id="more"></a>
-</li>
+<li>存取控制和安全保护<span id="more"></span></li>
 </ul>
 </li>
 </ul>
@@ -443,8 +469,8 @@
 <li>每一个新产生的请求，按其优先级的高低插到相应的位置上。而当资源可用时，选取队列中第一个请求，并满足其需要。<br><img src="/images/operatingSystem02_4.png" alt="fourth"></li>
 </ul>
 </li>
-<li>3)针对设备特性的调度<br>对具有高速度、大容量的存储设备(如磁盘)而言，在繁重的输入输出负载下，会有大量的I/O请求在等待。操作系统应该采取有效的调度策略从众多的请求中按最佳的排序原则去选择。确定最佳排序的目标是降低为完成这些I/O请求服务的总时间，从而提高系统效率。<ul>
-<li>移臂调度<br>所谓移臂调度是指在满足某一个磁盘请求时，总是选取与当前移动臂前进方向上最近的那个请求，使移臂距离最短。<br>针对设备特性的调度是I/O调度。I/O调度程序是在磁盘硬件层实施的，磁盘硬件看到的是磁盘面、磁道、块号(对磁盘组为: 柱面号、盘面号、块号)。如下例所示，若磁盘组同时有5个访问请求，它们按请求的先后次序排序，要求访问的盘区位置如<strong>表1</strong>所示：<br>如果当前移动臂处于1号柱面上，若按上述次序访问磁盘，移动臂将从1号柱面移动到6号柱面，再移至48号柱面，然后回到3号柱面。显然这样移臂很不合理。<br>若按<strong>表2</strong>次序访问则可节省移动臂时间(注：当前移动臂方向是由外向里，即柱面号由小到大)</li>
+<li>3)针对设备特性的调度<br>对具有高速度、大容量的存储设备(如磁盘)而言，在繁重的输入输出负载下，会有大量的I&#x2F;O请求在等待。操作系统应该采取有效的调度策略从众多的请求中按最佳的排序原则去选择。确定最佳排序的目标是降低为完成这些I&#x2F;O请求服务的总时间，从而提高系统效率。<ul>
+<li>移臂调度<br>所谓移臂调度是指在满足某一个磁盘请求时，总是选取与当前移动臂前进方向上最近的那个请求，使移臂距离最短。<br>针对设备特性的调度是I&#x2F;O调度。I&#x2F;O调度程序是在磁盘硬件层实施的，磁盘硬件看到的是磁盘面、磁道、块号(对磁盘组为: 柱面号、盘面号、块号)。如下例所示，若磁盘组同时有5个访问请求，它们按请求的先后次序排序，要求访问的盘区位置如<strong>表1</strong>所示：<br>如果当前移动臂处于1号柱面上，若按上述次序访问磁盘，移动臂将从1号柱面移动到6号柱面，再移至48号柱面，然后回到3号柱面。显然这样移臂很不合理。<br>若按<strong>表2</strong>次序访问则可节省移动臂时间(注：当前移动臂方向是由外向里，即柱面号由小到大)</li>
 <li>旋转调度<br>所谓旋转调度是指在满足一个磁盘请求时，总是选取与当前读写头旋转方向上最近的那个请求，使旋转圈数最少。<br>对于上述示例，使用<strong>表3</strong>排序则旋转次数更少：</li>
 </ul>
 </li>
@@ -457,123 +483,117 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center">柱面号</th>
-<th style="text-align:center">盘面号</th>
-<th style="text-align:center">块号</th>
+<th align="center">柱面号</th>
+<th align="center">盘面号</th>
+<th align="center">块号</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">2</td>
+<tbody><tr>
+<td align="center">6</td>
+<td align="center">3</td>
+<td align="center">2</td>
 </tr>
 <tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">9</td>
+<td align="center">6</td>
+<td align="center">5</td>
+<td align="center">9</td>
 </tr>
 <tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">4</td>
+<td align="center">6</td>
+<td align="center">5</td>
+<td align="center">4</td>
 </tr>
 <tr>
-<td style="text-align:center">48</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">16</td>
+<td align="center">48</td>
+<td align="center">8</td>
+<td align="center">16</td>
 </tr>
 <tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">9</td>
-<td style="text-align:center">28</td>
+<td align="center">3</td>
+<td align="center">9</td>
+<td align="center">28</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p align="center">表1</p>
 
 <table>
 <thead>
 <tr>
-<th style="text-align:center">柱面号</th>
-<th style="text-align:center">盘面号</th>
-<th style="text-align:center">块号</th>
+<th align="center">柱面号</th>
+<th align="center">盘面号</th>
+<th align="center">块号</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">9</td>
-<td style="text-align:center">28</td>
+<tbody><tr>
+<td align="center">3</td>
+<td align="center">9</td>
+<td align="center">28</td>
 </tr>
 <tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">2</td>
+<td align="center">6</td>
+<td align="center">3</td>
+<td align="center">2</td>
 </tr>
 <tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">9</td>
+<td align="center">6</td>
+<td align="center">5</td>
+<td align="center">9</td>
 </tr>
 <tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">4</td>
+<td align="center">6</td>
+<td align="center">5</td>
+<td align="center">4</td>
 </tr>
 <tr>
-<td style="text-align:center">48</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">16</td>
+<td align="center">48</td>
+<td align="center">8</td>
+<td align="center">16</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p align="center">表2</p>
 
 <table>
 <thead>
 <tr>
-<th style="text-align:center">柱面号</th>
-<th style="text-align:center">盘面号</th>
-<th style="text-align:center">块号</th>
+<th align="center">柱面号</th>
+<th align="center">盘面号</th>
+<th align="center">块号</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">9</td>
-<td style="text-align:center">28</td>
+<tbody><tr>
+<td align="center">3</td>
+<td align="center">9</td>
+<td align="center">28</td>
 </tr>
 <tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">2</td>
+<td align="center">6</td>
+<td align="center">3</td>
+<td align="center">2</td>
 </tr>
 <tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">4</td>
+<td align="center">6</td>
+<td align="center">5</td>
+<td align="center">4</td>
 </tr>
 <tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">9</td>
+<td align="center">6</td>
+<td align="center">5</td>
+<td align="center">9</td>
 </tr>
 <tr>
-<td style="text-align:center">48</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">16</td>
+<td align="center">48</td>
+<td align="center">8</td>
+<td align="center">16</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p align="center">表3</p>
 
 <h3 id="3-死锁"><a href="#3-死锁" class="headerlink" title="3. 死锁"></a>3. 死锁</h3><h4 id="3-1-死锁的定义与例子"><a href="#3-1-死锁的定义与例子" class="headerlink" title="3.1 死锁的定义与例子"></a>3.1 死锁的定义与例子</h4><p>操作系统的基本特征是并发与共享。系统允许多个进程并发执行，并且共享系统的软、硬件资源。为了最大限度地利用计算机系统的资源，操作系统应用动态分配系统各资源的策略。然而，采用这种策略时，若分配不当，一旦出现对某类资源的申请数目超过了这类资源的入口数目时，就是造成进程相互封锁的危险。事实上，不同进程对资源的申请可能按某种先后次序得到部分满足，这就可能造成其中的两个或几个进程彼此间相互封锁的情况。即每个进程“抓住”一些为其它进程所等待的资源不放，其结果谁也得不到它所申请的全部资源，所有这些进程都无法继续运行。</p>
 <ul>
 <li>例子：<ul>
 <li>OS系统中的死锁例子<br><img src="/images/operatingSystem02_5.png" alt="fifth"></li>
-<li>I/O设备共享时的死锁情况<br><img src="/images/operatingSystem02_6.png" alt="sixth"><br>此图可描述I/O设备共享时的死锁情况。<br>方框代表资源，圆圈表示进程；从资源到进程的箭头(有向边)，表示该资源分配给进程，过程资源分配边；而从进程到资源的箭头表示进程请求边。<br>由图可见，进程P1、P2的资源分配边和资源请求边形成一个环路。</li>
-<li>存储器共享时的死锁情况<br><img src="/images/operatingSystem02_7.png" alt="seventh"><br>我们可以这样说，如系统中由一个包含有m个分配单位的存贮器，它为n个进程所共享，且每个进程都要求I个分配单位，当m&lt;=n(I-1)时，可能发生死锁。<br>上图绘出了一个大大简化了的存贮器共享的情况，其中m=5,n=3,I=3。当P1、P2分别获得2个单元、P3获得1个单元时，内存被分配完毕。此时，系统进入一个不安全状态，因为在它们要求下一个所需要的单元资源时，便发生死锁(此时，它们都指望其它进程释放出内存空间，但谁都也不能再向前推进一步)。</li>
+<li>I&#x2F;O设备共享时的死锁情况<br><img src="/images/operatingSystem02_6.png" alt="sixth"><br>此图可描述I&#x2F;O设备共享时的死锁情况。<br>方框代表资源，圆圈表示进程；从资源到进程的箭头(有向边)，表示该资源分配给进程，过程资源分配边；而从进程到资源的箭头表示进程请求边。<br>由图可见，进程P1、P2的资源分配边和资源请求边形成一个环路。</li>
+<li>存储器共享时的死锁情况<br><img src="/images/operatingSystem02_7.png" alt="seventh"><br>我们可以这样说，如系统中由一个包含有m个分配单位的存贮器，它为n个进程所共享，且每个进程都要求I个分配单位，当m&lt;&#x3D;n(I-1)时，可能发生死锁。<br>上图绘出了一个大大简化了的存贮器共享的情况，其中m&#x3D;5,n&#x3D;3,I&#x3D;3。当P1、P2分别获得2个单元、P3获得1个单元时，内存被分配完毕。此时，系统进入一个不安全状态，因为在它们要求下一个所需要的单元资源时，便发生死锁(此时，它们都指望其它进程释放出内存空间，但谁都也不能再向前推进一步)。</li>
 </ul>
 </li>
 <li>死锁的定义：<ul>
@@ -648,38 +668,39 @@
 
     
     
-    <div class="post-widgets">
+    
+
+    <footer class="post-footer"><div class="post-widgets">
       <div id="needsharebutton-postbottom">
         <span class="btn">
           <i class="fa fa-share-alt" aria-hidden="true"></i>
         </span>
       </div>
     </div>
-        <div class="reward-container">
+          <div class="reward-container">
   <div>Compensated Dating</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+  <button>
     Donate
   </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
+  <div class="post-reward">
+      <div>
         <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
-        <p>Bitcoin</p>
+        <span>Bitcoin</span>
       </div>
 
   </div>
 </div>
 
-        
+          
 
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>Kino
+      <strong>Post author:  </strong>Kino
   </li>
   <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="https://blog.xuwei.fun/2015/09/16/operatingSystem02/" title="操作系统二——资源分配与调度">https://blog.xuwei.fun/2015/09/16/operatingSystem02/</a>
+      <strong>Post link: </strong>
+      <a href="https://blog.xuwei.fun/2015/09/16/operatingSystem02/" title="操作系统二——资源分配与调度">https://blog.xuwei.fun/2015/09/16/operatingSystem02/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -687,66 +708,60 @@
 </ul>
 </div>
 
-        
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <p>Welcome to my other publishing channels</p>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+          <span class="icon">
+            <i class="weibo"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
-            <span class="icon">
-              <i class="weibo"></i>
-            </span>
+          <span class="label">Weibo</span>
+        </a>
+      </div>
 
-            <span class="label">Weibo</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+          <span class="icon">
+            <i class="wechat"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
-            <span class="icon">
-              <i class="wechat"></i>
-            </span>
-
-            <span class="label">Wechat</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">Wechat</span>
+        </a>
+      </div>
   </div>
+</div>
 
-
-      <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/operating-system/" rel="tag"># operating system</a>
           </div>
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2015/09/14/windows02/" rel="prev" title="Windows 琐记二">
-      <i class="fa fa-chevron-left"></i> Windows 琐记二
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2015/09/27/operatingSystem03/" rel="next" title="操作系统三">
-      操作系统三 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2015/09/14/windows02/" rel="prev" title="Windows 琐记二">
+                  <i class="fa fa-chevron-left"></i> Windows 琐记二
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2015/09/27/operatingSystem03/" rel="next" title="操作系统三">
+                  操作系统三 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
@@ -754,193 +769,58 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
+              <div class="comments gitalk-container"></div>
             </div>
             <div class="tab-pane livere" id="comment-livere">
-              
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
-  </div>
-  
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-资源管理概述"><span class="nav-text">1. 资源管理概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-资源管理的目的和任务"><span class="nav-text">1.1 资源管理的目的和任务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-资源的分类方法"><span class="nav-text">1.2 资源的分类方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-虚拟资源"><span class="nav-text">1.3 虚拟资源</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-资源管理的机制和策略"><span class="nav-text">2. 资源管理的机制和策略</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-资源分配机制"><span class="nav-text">2.1 资源分配机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-资源分配策略"><span class="nav-text">2.2 资源分配策略</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-死锁"><span class="nav-text">3. 死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-死锁的定义与例子"><span class="nav-text">3.1 死锁的定义与例子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-产生死锁的原因和必要条件"><span class="nav-text">3.2 产生死锁的原因和必要条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-死锁模型"><span class="nav-text">3.3 死锁模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-解决死锁的策略"><span class="nav-text">3.4 解决死锁的策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-死锁的预防"><span class="nav-text">3.5 死锁的预防</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-死锁的避免"><span class="nav-text">3.6 死锁的避免</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-死锁的检测与忽略"><span class="nav-text">3.7 死锁的检测与忽略</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Kino"
-      src="/images/site/avatar.png">
-  <p class="site-author-name" itemprop="name">Kino</p>
-  <div class="site-description" itemprop="description">Amor Fati</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">123</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">122</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">356k</span>
-    <span class="post-meta-divider">|</span>
+    <span title="Symbols count total">353k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:23</span>
+    <span title="Reading time total">5:21</span>
+  </span>
 </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
+
+  <script src="/js/third-party/pace.js"></script>
 
   
 
@@ -948,35 +828,14 @@
 
 
   
-<script src="/js/local-search.js"></script>
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout : 1000,
-        priority: false,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2015/09/16/operatingSystem02/',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":1000,"priority":false,"archives":false,"url":"https://blog.xuwei.fun/2015/09/16/operatingSystem02/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -996,42 +855,11 @@
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '58ab17a966414cd66c67',
-      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
-      repo        : 'WoeiSheu.github.io',
-      owner       : 'WoeiSheu',
-      admin       : ['WoeiSheu'],
-      id          : 'f771e58ef848fd72fc3fc0be7a04c58f',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
-
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"f771e58ef848fd72fc3fc0be7a04c58f"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {

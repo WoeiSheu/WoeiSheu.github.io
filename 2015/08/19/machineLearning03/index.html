@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
@@ -15,14 +17,13 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.xuwei.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
   <meta name="description" content="1. 朴素贝叶斯朴素贝叶斯的两个假设：  特征之间相互独立，即一个单词出现的可能性与它和其他单词相邻没有关系 每个特征同等重要">
 <meta property="og:type" content="article">
@@ -38,18 +39,23 @@
 <meta property="article:tag" content="bayes decision">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="https://blog.xuwei.fun/2015/08/19/machineLearning03/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.xuwei.fun/2015/08/19/machineLearning03/","path":"2015/08/19/machineLearning03/","title":"机器学习三"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>机器学习三 | 霁月荒馆</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-104049598-2","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
 #needsharebutton-postbottom {
   cursor: pointer;
@@ -77,68 +83,31 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>机器学习三 | 霁月荒馆</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-104049598-2');
-      }
-    </script>
-
-
-
-
-
-
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">霁月荒馆</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">霁月荒馆</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
   </div>
@@ -152,54 +121,17 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-thoughts">
-
-    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
-
-  </li>
-        <li class="menu-item menu-item-excerpt">
-
-    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
-
-  </li>
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-thoughts"><a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>Thoughts</a></li>
+        <li class="menu-item menu-item-excerpt"><a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>Excerpt</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -210,23 +142,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -234,28 +165,122 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF"><span class="nav-text">1. 朴素贝叶斯</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB"><span class="nav-text">2. 文本分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE"><span class="nav-text">2.1 准备数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-%E8%AE%AD%E7%BB%83%E7%AE%97%E6%B3%95"><span class="nav-text">2.2 训练算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-%E6%B5%8B%E8%AF%95%E7%AE%97%E6%B3%95"><span class="nav-text">2.3 测试算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE"><span class="nav-text">2.4 准备数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%BF%87%E6%BB%A4%E5%9E%83%E5%9C%BE%E9%82%AE%E4%BB%B6"><span class="nav-text">3. 过滤垃圾邮件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE"><span class="nav-text">3.1 准备数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-%E6%B5%8B%E8%AF%95%E7%AE%97%E6%B3%95"><span class="nav-text">3.2 测试算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E7%A4%BA%E4%BE%8B"><span class="nav-text">4. 示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-%E6%94%B6%E9%9B%86%E6%95%B0%E6%8D%AE"><span class="nav-text">4.1 收集数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-%E5%88%86%E6%9E%90%E6%95%B0%E6%8D%AE"><span class="nav-text">4.2 分析数据</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https:&#x2F;&#x2F;xuwei.fun&#x2F;" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https:&#x2F;&#x2F;blog.xuwei.fun&#x2F;bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
 
-    
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2015/08/19/machineLearning03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -272,51 +297,54 @@
           机器学习三
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2015-08-19 16:00:00" itemprop="dateCreated datePublished" datetime="2015-08-19T16:00:00+08:00">2015-08-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techonology/ai/" itemprop="url" rel="index"><span itemprop="name">ai</span></a>
-                </span>
-            </span>
+      <time title="Created: 2015-08-19 16:00:00" itemprop="dateCreated datePublished" datetime="2015-08-19T16:00:00+08:00">2015-08-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/techonology/ai/" itemprop="url" rel="index"><span itemprop="name">ai</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>7.7k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>7 mins.</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>7.5k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>7 mins.</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -325,61 +353,247 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <h3 id="1-朴素贝叶斯"><a href="#1-朴素贝叶斯" class="headerlink" title="1. 朴素贝叶斯"></a>1. 朴素贝叶斯</h3><p>朴素贝叶斯的两个假设：</p>
 <ul>
 <li>特征之间相互独立，即一个单词出现的可能性与它和其他单词相邻没有关系</li>
 <li>每个特征同等重要</li>
 </ul>
-<a id="more"></a>
-<h3 id="2-文本分类"><a href="#2-文本分类" class="headerlink" title="2. 文本分类"></a>2. 文本分类</h3><h4 id="2-1-准备数据"><a href="#2-1-准备数据" class="headerlink" title="2.1 准备数据"></a>2.1 准备数据</h4><p>从文本中构建词向量, 将文本看成单词向量或词条向量(也就是说将句子转换为向量)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">loadDataSet</span><span class="params">()</span>:</span></span><br><span class="line">    postingList=[[<span class="string">'my'</span>, <span class="string">'dog'</span>, <span class="string">'has'</span>, <span class="string">'flea'</span>, <span class="string">'problems'</span>, <span class="string">'help'</span>, <span class="string">'please'</span>],</span><br><span class="line">                 [<span class="string">'maybe'</span>, <span class="string">'not'</span>, <span class="string">'take'</span>, <span class="string">'him'</span>, <span class="string">'to'</span>, <span class="string">'dog'</span>, <span class="string">'park'</span>, <span class="string">'stupid'</span>],</span><br><span class="line">                 [<span class="string">'my'</span>, <span class="string">'dalmation'</span>, <span class="string">'is'</span>, <span class="string">'so'</span>, <span class="string">'cute'</span>, <span class="string">'I'</span>, <span class="string">'love'</span>, <span class="string">'him'</span>],</span><br><span class="line">                 [<span class="string">'stop'</span>, <span class="string">'posting'</span>, <span class="string">'stupid'</span>, <span class="string">'worthless'</span>, <span class="string">'garbage'</span>],</span><br><span class="line">                 [<span class="string">'mr'</span>, <span class="string">'licks'</span>, <span class="string">'ate'</span>, <span class="string">'my'</span>, <span class="string">'steak'</span>, <span class="string">'how'</span>, <span class="string">'to'</span>, <span class="string">'stop'</span>, <span class="string">'him'</span>],</span><br><span class="line">                 [<span class="string">'quit'</span>, <span class="string">'buying'</span>, <span class="string">'worthless'</span>, <span class="string">'dog'</span>, <span class="string">'food'</span>, <span class="string">'stupid'</span>]]</span><br><span class="line">    classVec = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>]    <span class="comment">#1 is abusive, 0 not</span></span><br><span class="line">    <span class="keyword">return</span> postingList,classVec</span><br><span class="line">                 </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">createVocabList</span><span class="params">(dataSet)</span>:</span></span><br><span class="line">    vocabSet = set([])  <span class="comment">#create empty set</span></span><br><span class="line">    <span class="keyword">for</span> document <span class="keyword">in</span> dataSet:</span><br><span class="line">        vocabSet = vocabSet | set(document) <span class="comment">#union of the two sets</span></span><br><span class="line">    <span class="keyword">return</span> list(vocabSet)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">setOfWords2Vec</span><span class="params">(vocabList, inputSet)</span>:</span></span><br><span class="line">    returnVec = [<span class="number">0</span>]*len(vocabList)</span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> inputSet:</span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> vocabList:</span><br><span class="line">            returnVec[vocabList.index(word)] = <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>: <span class="keyword">print</span> <span class="string">"the word: %s is not in my Vocabulary!"</span> % word</span><br><span class="line">    <span class="keyword">return</span> returnVec</span><br></pre></td></tr></table></figure><br>loadDataSet()创建了一些实验样本<br>createVocabList()会创建一个包含在所有文档中出现的不重复词的列表<br>获取词汇表后，使用setOfWords2Vec()函数，该函数的输入参数为词汇表及某个文档，输出的是文档向量，向量的每一元素为1或0，分别表示在词汇表中的单词在输入文档中是否出现</p>
-<h4 id="2-2-训练算法"><a href="#2-2-训练算法" class="headerlink" title="2.2 训练算法"></a>2.2 训练算法</h4><p>从词向量计算概率<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">trainNB0</span><span class="params">(trainMatrix,trainCategory)</span>:</span></span><br><span class="line">    numTrainDocs = len(trainMatrix)</span><br><span class="line">    numWords = len(trainMatrix[<span class="number">0</span>])</span><br><span class="line">    pAbusive = sum(trainCategory)/float(numTrainDocs)</span><br><span class="line">    p0Num = ones(numWords); p1Num = ones(numWords)      <span class="comment">#change to ones() </span></span><br><span class="line">    p0Denom = <span class="number">2.0</span>; p1Denom = <span class="number">2.0</span>                        <span class="comment">#change to 2.0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(numTrainDocs):</span><br><span class="line">        <span class="keyword">if</span> trainCategory[i] == <span class="number">1</span>:</span><br><span class="line">            p1Num += trainMatrix[i]</span><br><span class="line">            p1Denom += sum(trainMatrix[i])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            p0Num += trainMatrix[i]</span><br><span class="line">            p0Denom += sum(trainMatrix[i])</span><br><span class="line">    p1Vect = log(p1Num/p1Denom)          <span class="comment">#change to log()</span></span><br><span class="line">    p0Vect = log(p0Num/p0Denom)          <span class="comment">#change to log()</span></span><br><span class="line">    <span class="keyword">return</span> p0Vect,p1Vect,pAbusive</span><br></pre></td></tr></table></figure><br>上述训练算法原本应该为：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p0Num = zeros(numWords); p1Num = zeros(numWords)</span><br><span class="line">p0Denom = <span class="number">0</span>; p1Denom = <span class="number">0</span></span><br><span class="line">......</span><br><span class="line">p1Vect = p1Num/p1Denom</span><br><span class="line">p0Vect = p0Num/p0Denom</span><br></pre></td></tr></table></figure><br>原来初始化为0，使用zeros()，然而若其中一个概率值为0，则最终也为0，故改用ones()，并且同时修改p0(1)Denom为2<br>原来也没有对数，为了防止乘积数字太小下溢出为0，改用对数</p>
-<p>代码函数中的输入参数为文档矩阵trainMatrix，以及由每篇文档类别标签所构成的向量trainCategory。首先计算文档属于侮辱性文档(class=1)的概率，即P(1)，因为这是一个二分类问题较为简单，多于两类的分类问题要对代码稍作修改；之后计算条件概率；最后对每个元素除以该类别中的总词数</p>
-<h4 id="2-3-测试算法"><a href="#2-3-测试算法" class="headerlink" title="2.3 测试算法"></a>2.3 测试算法</h4><p>根据现实情况修改分类器<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">classifyNB</span><span class="params">(vec2Classify, p0Vec, p1Vec, pClass1)</span>:</span></span><br><span class="line">    p1 = sum(vec2Classify * p1Vec) + log(pClass1)    <span class="comment">#element-wise mult</span></span><br><span class="line">    p0 = sum(vec2Classify * p0Vec) + log(<span class="number">1.0</span> - pClass1)</span><br><span class="line">    <span class="keyword">if</span> p1 &gt; p0:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>: </span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">testingNB</span><span class="params">()</span>:</span></span><br><span class="line">    listOPosts,listClasses = loadDataSet()</span><br><span class="line">    myVocabList = createVocabList(listOPosts)</span><br><span class="line">    trainMat=[]</span><br><span class="line">    <span class="keyword">for</span> postinDoc <span class="keyword">in</span> listOPosts:</span><br><span class="line">        trainMat.append(setOfWords2Vec(myVocabList, postinDoc))</span><br><span class="line">    p0V,p1V,pAb = trainNB0(array(trainMat),array(listClasses))</span><br><span class="line">    testEntry = [<span class="string">'love'</span>, <span class="string">'my'</span>, <span class="string">'dalmation'</span>]</span><br><span class="line">    thisDoc = array(setOfWords2Vec(myVocabList, testEntry))</span><br><span class="line">    <span class="keyword">print</span> testEntry,<span class="string">'classified as: '</span>,classifyNB(thisDoc,p0V,p1V,pAb)</span><br><span class="line">    testEntry = [<span class="string">'stupid'</span>, <span class="string">'garbage'</span>]</span><br><span class="line">    thisDoc = array(setOfWords2Vec(myVocabList, testEntry))</span><br><span class="line">    <span class="keyword">print</span> testEntry,<span class="string">'classified as: '</span>,classifyNB(thisDoc,p0V,p1V,pAb)</span><br></pre></td></tr></table></figure><br>使用bayes.testingNB()测试算法。</p>
-<h4 id="2-4-准备数据"><a href="#2-4-准备数据" class="headerlink" title="2.4 准备数据"></a>2.4 准备数据</h4><p>文档词袋模型: 我们将每个词的出现与否作为一个特征，这可以被描述为词集模型(set-of-words model)，如果一个词在文档中出现不止一次，这可能意味着包含该词是否出现在文档中所不能表达的某种信息，这种方法被称为词袋模型(bag-of-words model)。在词袋中，每个单词可出现多次，而词集中每个词只能出现一次，为适应词袋模型，将setOfWords2Vec()函数稍作修改为bagOfWords2VecMN()<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bagOfWords2VecMN</span><span class="params">(vocabList, inputSet)</span>:</span></span><br><span class="line">    returnVec = [<span class="number">0</span>]*len(vocabList)</span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> inputSet:</span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> vocabList:</span><br><span class="line">            returnVec[vocabList.index(word)] += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> returnVec</span><br></pre></td></tr></table></figure></p>
-<h3 id="3-过滤垃圾邮件"><a href="#3-过滤垃圾邮件" class="headerlink" title="3. 过滤垃圾邮件"></a>3. 过滤垃圾邮件</h3><h4 id="3-1-准备数据"><a href="#3-1-准备数据" class="headerlink" title="3.1 准备数据"></a>3.1 准备数据</h4><p>切分文本: 利用正则表达式切分文本<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">emailText = open(<span class="string">'email/ham/6.txt'</span>).read()</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">regExpress = re.compile(<span class="string">'\\w*'</span>)</span><br><span class="line">listOfTokens = regExpress.split(emailText)</span><br><span class="line">[tok.lower() <span class="keyword">for</span> tok <span class="keyword">in</span> listOfTokens <span class="keyword">if</span> len(tok) &gt; <span class="number">0</span>]</span><br></pre></td></tr></table></figure></p>
-<h4 id="3-2-测试算法"><a href="#3-2-测试算法" class="headerlink" title="3.2 测试算法"></a>3.2 测试算法</h4><p>使用朴素贝叶斯进行交叉验证<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">textParse</span><span class="params">(bigString)</span>:</span>    <span class="comment">#input is big string, #output is word list</span></span><br><span class="line">    <span class="keyword">import</span> re</span><br><span class="line">    listOfTokens = re.split(<span class="string">r'\W*'</span>, bigString)</span><br><span class="line">    <span class="keyword">return</span> [tok.lower() <span class="keyword">for</span> tok <span class="keyword">in</span> listOfTokens <span class="keyword">if</span> len(tok) &gt; <span class="number">2</span>] </span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">spamTest</span><span class="params">()</span>:</span></span><br><span class="line">    docList=[]; classList = []; fullText =[]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">26</span>):</span><br><span class="line">        wordList = textParse(open(<span class="string">'email/spam/%d.txt'</span> % i).read())</span><br><span class="line">        docList.append(wordList)</span><br><span class="line">        fullText.extend(wordList)</span><br><span class="line">        classList.append(<span class="number">1</span>)</span><br><span class="line">        wordList = textParse(open(<span class="string">'email/ham/%d.txt'</span> % i).read())</span><br><span class="line">        docList.append(wordList)</span><br><span class="line">        fullText.extend(wordList)</span><br><span class="line">        classList.append(<span class="number">0</span>)</span><br><span class="line">    vocabList = createVocabList(docList)<span class="comment">#create vocabulary</span></span><br><span class="line">    trainingSet = range(<span class="number">50</span>); testSet=[]           <span class="comment">#create test set</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">        randIndex = int(random.uniform(<span class="number">0</span>,len(trainingSet)))</span><br><span class="line">        testSet.append(trainingSet[randIndex])</span><br><span class="line">        <span class="keyword">del</span>(trainingSet[randIndex])  </span><br><span class="line">    trainMat=[]; trainClasses = []</span><br><span class="line">    <span class="keyword">for</span> docIndex <span class="keyword">in</span> trainingSet:<span class="comment">#train the classifier (get probs) trainNB0</span></span><br><span class="line">        trainMat.append(bagOfWords2VecMN(vocabList, docList[docIndex]))</span><br><span class="line">        trainClasses.append(classList[docIndex])</span><br><span class="line">    p0V,p1V,pSpam = trainNB0(array(trainMat),array(trainClasses))</span><br><span class="line">    errorCount = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> docIndex <span class="keyword">in</span> testSet:        <span class="comment">#classify the remaining items</span></span><br><span class="line">        wordVector = bagOfWords2VecMN(vocabList, docList[docIndex])</span><br><span class="line">        <span class="keyword">if</span> classifyNB(array(wordVector),p0V,p1V,pSpam) != classList[docIndex]:</span><br><span class="line">            errorCount += <span class="number">1</span></span><br><span class="line">            <span class="keyword">print</span> <span class="string">"classification error"</span>,docList[docIndex]</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'the error rate is: '</span>,float(errorCount)/len(testSet)</span><br><span class="line">    <span class="comment">#return vocabList,fullText</span></span><br></pre></td></tr></table></figure><br>spamTest()对贝叶斯垃圾邮件分类器进行自动化处理，导入文件夹spam和ham下的文本文件，并将它们解析为词列表，接下来构建一个测试集和训练集，两个集合中的元素是被随机选出的。随机选取数据的一部分为训练集，而剩余部分作为测试集的过程称为<em>留存交叉验证(hold-out cross validation)</em>。重复多次求平均值可以更好的估计错误率</p>
+<span id="more"></span>
+<h3 id="2-文本分类"><a href="#2-文本分类" class="headerlink" title="2. 文本分类"></a>2. 文本分类</h3><h4 id="2-1-准备数据"><a href="#2-1-准备数据" class="headerlink" title="2.1 准备数据"></a>2.1 准备数据</h4><p>从文本中构建词向量, 将文本看成单词向量或词条向量(也就是说将句子转换为向量)</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">loadDataSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    postingList<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'my'</span><span class="token punctuation">,</span> <span class="token string">'dog'</span><span class="token punctuation">,</span> <span class="token string">'has'</span><span class="token punctuation">,</span> <span class="token string">'flea'</span><span class="token punctuation">,</span> <span class="token string">'problems'</span><span class="token punctuation">,</span> <span class="token string">'help'</span><span class="token punctuation">,</span> <span class="token string">'please'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                 <span class="token punctuation">[</span><span class="token string">'maybe'</span><span class="token punctuation">,</span> <span class="token string">'not'</span><span class="token punctuation">,</span> <span class="token string">'take'</span><span class="token punctuation">,</span> <span class="token string">'him'</span><span class="token punctuation">,</span> <span class="token string">'to'</span><span class="token punctuation">,</span> <span class="token string">'dog'</span><span class="token punctuation">,</span> <span class="token string">'park'</span><span class="token punctuation">,</span> <span class="token string">'stupid'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                 <span class="token punctuation">[</span><span class="token string">'my'</span><span class="token punctuation">,</span> <span class="token string">'dalmation'</span><span class="token punctuation">,</span> <span class="token string">'is'</span><span class="token punctuation">,</span> <span class="token string">'so'</span><span class="token punctuation">,</span> <span class="token string">'cute'</span><span class="token punctuation">,</span> <span class="token string">'I'</span><span class="token punctuation">,</span> <span class="token string">'love'</span><span class="token punctuation">,</span> <span class="token string">'him'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                 <span class="token punctuation">[</span><span class="token string">'stop'</span><span class="token punctuation">,</span> <span class="token string">'posting'</span><span class="token punctuation">,</span> <span class="token string">'stupid'</span><span class="token punctuation">,</span> <span class="token string">'worthless'</span><span class="token punctuation">,</span> <span class="token string">'garbage'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                 <span class="token punctuation">[</span><span class="token string">'mr'</span><span class="token punctuation">,</span> <span class="token string">'licks'</span><span class="token punctuation">,</span> <span class="token string">'ate'</span><span class="token punctuation">,</span> <span class="token string">'my'</span><span class="token punctuation">,</span> <span class="token string">'steak'</span><span class="token punctuation">,</span> <span class="token string">'how'</span><span class="token punctuation">,</span> <span class="token string">'to'</span><span class="token punctuation">,</span> <span class="token string">'stop'</span><span class="token punctuation">,</span> <span class="token string">'him'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                 <span class="token punctuation">[</span><span class="token string">'quit'</span><span class="token punctuation">,</span> <span class="token string">'buying'</span><span class="token punctuation">,</span> <span class="token string">'worthless'</span><span class="token punctuation">,</span> <span class="token string">'dog'</span><span class="token punctuation">,</span> <span class="token string">'food'</span><span class="token punctuation">,</span> <span class="token string">'stupid'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+    classVec <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span>    <span class="token comment">#1 is abusive, 0 not</span>
+    <span class="token keyword">return</span> postingList<span class="token punctuation">,</span>classVec
+                 
+<span class="token keyword">def</span> <span class="token function">createVocabList</span><span class="token punctuation">(</span>dataSet<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    vocabSet <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment">#create empty set</span>
+    <span class="token keyword">for</span> document <span class="token keyword">in</span> dataSet<span class="token punctuation">:</span>
+        vocabSet <span class="token operator">=</span> vocabSet <span class="token operator">|</span> <span class="token builtin">set</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span> <span class="token comment">#union of the two sets</span>
+    <span class="token keyword">return</span> <span class="token builtin">list</span><span class="token punctuation">(</span>vocabSet<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">setOfWords2Vec</span><span class="token punctuation">(</span>vocabList<span class="token punctuation">,</span> inputSet<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    returnVec <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token builtin">len</span><span class="token punctuation">(</span>vocabList<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> word <span class="token keyword">in</span> inputSet<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> word <span class="token keyword">in</span> vocabList<span class="token punctuation">:</span>
+            returnVec<span class="token punctuation">[</span>vocabList<span class="token punctuation">.</span>index<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span> <span class="token keyword">print</span> <span class="token string">"the word: %s is not in my Vocabulary!"</span> <span class="token operator">%</span> word
+    <span class="token keyword">return</span> returnVec<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>loadDataSet()创建了一些实验样本<br>createVocabList()会创建一个包含在所有文档中出现的不重复词的列表<br>获取词汇表后，使用setOfWords2Vec()函数，该函数的输入参数为词汇表及某个文档，输出的是文档向量，向量的每一元素为1或0，分别表示在词汇表中的单词在输入文档中是否出现</p>
+<h4 id="2-2-训练算法"><a href="#2-2-训练算法" class="headerlink" title="2.2 训练算法"></a>2.2 训练算法</h4><p>从词向量计算概率</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">trainNB0</span><span class="token punctuation">(</span>trainMatrix<span class="token punctuation">,</span>trainCategory<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    numTrainDocs <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>trainMatrix<span class="token punctuation">)</span>
+    numWords <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>trainMatrix<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    pAbusive <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>trainCategory<span class="token punctuation">)</span><span class="token operator">/</span><span class="token builtin">float</span><span class="token punctuation">(</span>numTrainDocs<span class="token punctuation">)</span>
+    p0Num <span class="token operator">=</span> ones<span class="token punctuation">(</span>numWords<span class="token punctuation">)</span><span class="token punctuation">;</span> p1Num <span class="token operator">=</span> ones<span class="token punctuation">(</span>numWords<span class="token punctuation">)</span>      <span class="token comment">#change to ones() </span>
+    p0Denom <span class="token operator">=</span> <span class="token number">2.0</span><span class="token punctuation">;</span> p1Denom <span class="token operator">=</span> <span class="token number">2.0</span>                        <span class="token comment">#change to 2.0</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>numTrainDocs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> trainCategory<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            p1Num <span class="token operator">+=</span> trainMatrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            p1Denom <span class="token operator">+=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>trainMatrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            p0Num <span class="token operator">+=</span> trainMatrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            p0Denom <span class="token operator">+=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>trainMatrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    p1Vect <span class="token operator">=</span> log<span class="token punctuation">(</span>p1Num<span class="token operator">/</span>p1Denom<span class="token punctuation">)</span>          <span class="token comment">#change to log()</span>
+    p0Vect <span class="token operator">=</span> log<span class="token punctuation">(</span>p0Num<span class="token operator">/</span>p0Denom<span class="token punctuation">)</span>          <span class="token comment">#change to log()</span>
+    <span class="token keyword">return</span> p0Vect<span class="token punctuation">,</span>p1Vect<span class="token punctuation">,</span>pAbusive<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>上述训练算法原本应该为：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">p0Num <span class="token operator">=</span> zeros<span class="token punctuation">(</span>numWords<span class="token punctuation">)</span><span class="token punctuation">;</span> p1Num <span class="token operator">=</span> zeros<span class="token punctuation">(</span>numWords<span class="token punctuation">)</span>
+p0Denom <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> p1Denom <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+p1Vect <span class="token operator">=</span> p1Num<span class="token operator">/</span>p1Denom
+p0Vect <span class="token operator">=</span> p0Num<span class="token operator">/</span>p0Denom<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>原来初始化为0，使用zeros()，然而若其中一个概率值为0，则最终也为0，故改用ones()，并且同时修改p0(1)Denom为2<br>原来也没有对数，为了防止乘积数字太小下溢出为0，改用对数</p>
+<p>代码函数中的输入参数为文档矩阵trainMatrix，以及由每篇文档类别标签所构成的向量trainCategory。首先计算文档属于侮辱性文档(class&#x3D;1)的概率，即P(1)，因为这是一个二分类问题较为简单，多于两类的分类问题要对代码稍作修改；之后计算条件概率；最后对每个元素除以该类别中的总词数</p>
+<h4 id="2-3-测试算法"><a href="#2-3-测试算法" class="headerlink" title="2.3 测试算法"></a>2.3 测试算法</h4><p>根据现实情况修改分类器</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">classifyNB</span><span class="token punctuation">(</span>vec2Classify<span class="token punctuation">,</span> p0Vec<span class="token punctuation">,</span> p1Vec<span class="token punctuation">,</span> pClass1<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    p1 <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>vec2Classify <span class="token operator">*</span> p1Vec<span class="token punctuation">)</span> <span class="token operator">+</span> log<span class="token punctuation">(</span>pClass1<span class="token punctuation">)</span>    <span class="token comment">#element-wise mult</span>
+    p0 <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>vec2Classify <span class="token operator">*</span> p0Vec<span class="token punctuation">)</span> <span class="token operator">+</span> log<span class="token punctuation">(</span><span class="token number">1.0</span> <span class="token operator">-</span> pClass1<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> p1 <span class="token operator">></span> p0<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token number">1</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span> 
+        <span class="token keyword">return</span> <span class="token number">0</span>
+
+<span class="token keyword">def</span> <span class="token function">testingNB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    listOPosts<span class="token punctuation">,</span>listClasses <span class="token operator">=</span> loadDataSet<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    myVocabList <span class="token operator">=</span> createVocabList<span class="token punctuation">(</span>listOPosts<span class="token punctuation">)</span>
+    trainMat<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> postinDoc <span class="token keyword">in</span> listOPosts<span class="token punctuation">:</span>
+        trainMat<span class="token punctuation">.</span>append<span class="token punctuation">(</span>setOfWords2Vec<span class="token punctuation">(</span>myVocabList<span class="token punctuation">,</span> postinDoc<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    p0V<span class="token punctuation">,</span>p1V<span class="token punctuation">,</span>pAb <span class="token operator">=</span> trainNB0<span class="token punctuation">(</span>array<span class="token punctuation">(</span>trainMat<span class="token punctuation">)</span><span class="token punctuation">,</span>array<span class="token punctuation">(</span>listClasses<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    testEntry <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'love'</span><span class="token punctuation">,</span> <span class="token string">'my'</span><span class="token punctuation">,</span> <span class="token string">'dalmation'</span><span class="token punctuation">]</span>
+    thisDoc <span class="token operator">=</span> array<span class="token punctuation">(</span>setOfWords2Vec<span class="token punctuation">(</span>myVocabList<span class="token punctuation">,</span> testEntry<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span> testEntry<span class="token punctuation">,</span><span class="token string">'classified as: '</span><span class="token punctuation">,</span>classifyNB<span class="token punctuation">(</span>thisDoc<span class="token punctuation">,</span>p0V<span class="token punctuation">,</span>p1V<span class="token punctuation">,</span>pAb<span class="token punctuation">)</span>
+    testEntry <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'stupid'</span><span class="token punctuation">,</span> <span class="token string">'garbage'</span><span class="token punctuation">]</span>
+    thisDoc <span class="token operator">=</span> array<span class="token punctuation">(</span>setOfWords2Vec<span class="token punctuation">(</span>myVocabList<span class="token punctuation">,</span> testEntry<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span> testEntry<span class="token punctuation">,</span><span class="token string">'classified as: '</span><span class="token punctuation">,</span>classifyNB<span class="token punctuation">(</span>thisDoc<span class="token punctuation">,</span>p0V<span class="token punctuation">,</span>p1V<span class="token punctuation">,</span>pAb<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>使用bayes.testingNB()测试算法。</p>
+<h4 id="2-4-准备数据"><a href="#2-4-准备数据" class="headerlink" title="2.4 准备数据"></a>2.4 准备数据</h4><p>文档词袋模型: 我们将每个词的出现与否作为一个特征，这可以被描述为词集模型(set-of-words model)，如果一个词在文档中出现不止一次，这可能意味着包含该词是否出现在文档中所不能表达的某种信息，这种方法被称为词袋模型(bag-of-words model)。在词袋中，每个单词可出现多次，而词集中每个词只能出现一次，为适应词袋模型，将setOfWords2Vec()函数稍作修改为bagOfWords2VecMN()</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">bagOfWords2VecMN</span><span class="token punctuation">(</span>vocabList<span class="token punctuation">,</span> inputSet<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    returnVec <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token builtin">len</span><span class="token punctuation">(</span>vocabList<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> word <span class="token keyword">in</span> inputSet<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> word <span class="token keyword">in</span> vocabList<span class="token punctuation">:</span>
+            returnVec<span class="token punctuation">[</span>vocabList<span class="token punctuation">.</span>index<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> returnVec<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h3 id="3-过滤垃圾邮件"><a href="#3-过滤垃圾邮件" class="headerlink" title="3. 过滤垃圾邮件"></a>3. 过滤垃圾邮件</h3><h4 id="3-1-准备数据"><a href="#3-1-准备数据" class="headerlink" title="3.1 准备数据"></a>3.1 准备数据</h4><p>切分文本: 利用正则表达式切分文本</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">emailText <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'email/ham/6.txt'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">import</span> re
+regExpress <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">'\\w*'</span><span class="token punctuation">)</span>
+listOfTokens <span class="token operator">=</span> regExpress<span class="token punctuation">.</span>split<span class="token punctuation">(</span>emailText<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>tok<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> tok <span class="token keyword">in</span> listOfTokens <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>tok<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="3-2-测试算法"><a href="#3-2-测试算法" class="headerlink" title="3.2 测试算法"></a>3.2 测试算法</h4><p>使用朴素贝叶斯进行交叉验证</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">textParse</span><span class="token punctuation">(</span>bigString<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment">#input is big string, #output is word list</span>
+    <span class="token keyword">import</span> re
+    listOfTokens <span class="token operator">=</span> re<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">r'\W*'</span><span class="token punctuation">,</span> bigString<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>tok<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> tok <span class="token keyword">in</span> listOfTokens <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>tok<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">2</span><span class="token punctuation">]</span> 
+    
+<span class="token keyword">def</span> <span class="token function">spamTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    docList<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> classList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> fullText <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">26</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        wordList <span class="token operator">=</span> textParse<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'email/spam/%d.txt'</span> <span class="token operator">%</span> i<span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        docList<span class="token punctuation">.</span>append<span class="token punctuation">(</span>wordList<span class="token punctuation">)</span>
+        fullText<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>wordList<span class="token punctuation">)</span>
+        classList<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        wordList <span class="token operator">=</span> textParse<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'email/ham/%d.txt'</span> <span class="token operator">%</span> i<span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        docList<span class="token punctuation">.</span>append<span class="token punctuation">(</span>wordList<span class="token punctuation">)</span>
+        fullText<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>wordList<span class="token punctuation">)</span>
+        classList<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    vocabList <span class="token operator">=</span> createVocabList<span class="token punctuation">(</span>docList<span class="token punctuation">)</span><span class="token comment">#create vocabulary</span>
+    trainingSet <span class="token operator">=</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span> testSet<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>           <span class="token comment">#create test set</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        randIndex <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>trainingSet<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        testSet<span class="token punctuation">.</span>append<span class="token punctuation">(</span>trainingSet<span class="token punctuation">[</span>randIndex<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">del</span><span class="token punctuation">(</span>trainingSet<span class="token punctuation">[</span>randIndex<span class="token punctuation">]</span><span class="token punctuation">)</span>  
+    trainMat<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> trainClasses <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> docIndex <span class="token keyword">in</span> trainingSet<span class="token punctuation">:</span><span class="token comment">#train the classifier (get probs) trainNB0</span>
+        trainMat<span class="token punctuation">.</span>append<span class="token punctuation">(</span>bagOfWords2VecMN<span class="token punctuation">(</span>vocabList<span class="token punctuation">,</span> docList<span class="token punctuation">[</span>docIndex<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        trainClasses<span class="token punctuation">.</span>append<span class="token punctuation">(</span>classList<span class="token punctuation">[</span>docIndex<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    p0V<span class="token punctuation">,</span>p1V<span class="token punctuation">,</span>pSpam <span class="token operator">=</span> trainNB0<span class="token punctuation">(</span>array<span class="token punctuation">(</span>trainMat<span class="token punctuation">)</span><span class="token punctuation">,</span>array<span class="token punctuation">(</span>trainClasses<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    errorCount <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> docIndex <span class="token keyword">in</span> testSet<span class="token punctuation">:</span>        <span class="token comment">#classify the remaining items</span>
+        wordVector <span class="token operator">=</span> bagOfWords2VecMN<span class="token punctuation">(</span>vocabList<span class="token punctuation">,</span> docList<span class="token punctuation">[</span>docIndex<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> classifyNB<span class="token punctuation">(</span>array<span class="token punctuation">(</span>wordVector<span class="token punctuation">)</span><span class="token punctuation">,</span>p0V<span class="token punctuation">,</span>p1V<span class="token punctuation">,</span>pSpam<span class="token punctuation">)</span> <span class="token operator">!=</span> classList<span class="token punctuation">[</span>docIndex<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            errorCount <span class="token operator">+=</span> <span class="token number">1</span>
+            <span class="token keyword">print</span> <span class="token string">"classification error"</span><span class="token punctuation">,</span>docList<span class="token punctuation">[</span>docIndex<span class="token punctuation">]</span>
+    <span class="token keyword">print</span> <span class="token string">'the error rate is: '</span><span class="token punctuation">,</span><span class="token builtin">float</span><span class="token punctuation">(</span>errorCount<span class="token punctuation">)</span><span class="token operator">/</span><span class="token builtin">len</span><span class="token punctuation">(</span>testSet<span class="token punctuation">)</span>
+    <span class="token comment">#return vocabList,fullText</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>spamTest()对贝叶斯垃圾邮件分类器进行自动化处理，导入文件夹spam和ham下的文本文件，并将它们解析为词列表，接下来构建一个测试集和训练集，两个集合中的元素是被随机选出的。随机选取数据的一部分为训练集，而剩余部分作为测试集的过程称为*留存交叉验证(hold-out cross validation)*。重复多次求平均值可以更好的估计错误率</p>
 <h3 id="4-示例"><a href="#4-示例" class="headerlink" title="4. 示例"></a>4. 示例</h3><p>使用朴素贝叶斯分类器从个人广告中获取区域倾向</p>
-<h4 id="4-1-收集数据"><a href="#4-1-收集数据" class="headerlink" title="4.1 收集数据"></a>4.1 收集数据</h4><p>导入RSS源, 安装feedparser库<code>pip install feedparser</code>, 使用方法如下:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> feedparser</span><br><span class="line">ny = feedparser.parse(<span class="string">'http://newyork.craigslist.org/stp/index.rss'</span>)</span><br><span class="line"><span class="keyword">print</span> ny[<span class="string">'entries'</span>]</span><br></pre></td></tr></table></figure><br>RSS源分类器及高频词去除函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calcMostFreq</span><span class="params">(vocabList,fullText)</span>:</span></span><br><span class="line">    <span class="keyword">import</span> operator</span><br><span class="line">    freqDict = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> token <span class="keyword">in</span> vocabList:</span><br><span class="line">        freqDict[token]=fullText.count(token)</span><br><span class="line">    sortedFreq = sorted(freqDict.iteritems(), key=operator.itemgetter(<span class="number">1</span>), reverse=<span class="literal">True</span>) </span><br><span class="line">    <span class="keyword">return</span> sortedFreq[:<span class="number">30</span>]       </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">localWords</span><span class="params">(feed1,feed0)</span>:</span></span><br><span class="line">    <span class="keyword">import</span> feedparser</span><br><span class="line">    docList=[]; classList = []; fullText =[]</span><br><span class="line">    minLen = min(len(feed1[<span class="string">'entries'</span>]),len(feed0[<span class="string">'entries'</span>]))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(minLen):</span><br><span class="line">        wordList = textParse(feed1[<span class="string">'entries'</span>][i][<span class="string">'summary'</span>])</span><br><span class="line">        docList.append(wordList)</span><br><span class="line">        fullText.extend(wordList)</span><br><span class="line">        classList.append(<span class="number">1</span>) <span class="comment">#NY is class 1</span></span><br><span class="line">        wordList = textParse(feed0[<span class="string">'entries'</span>][i][<span class="string">'summary'</span>])</span><br><span class="line">        docList.append(wordList)</span><br><span class="line">        fullText.extend(wordList)</span><br><span class="line">        classList.append(<span class="number">0</span>)</span><br><span class="line">    vocabList = createVocabList(docList)<span class="comment">#create vocabulary</span></span><br><span class="line">    top30Words = calcMostFreq(vocabList,fullText)   <span class="comment">#remove top 30 words</span></span><br><span class="line">    <span class="keyword">for</span> pairW <span class="keyword">in</span> top30Words:</span><br><span class="line">        <span class="keyword">if</span> pairW[<span class="number">0</span>] <span class="keyword">in</span> vocabList: vocabList.remove(pairW[<span class="number">0</span>])</span><br><span class="line">    trainingSet = range(<span class="number">2</span>*minLen); testSet=[]           <span class="comment">#create test set</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">20</span>):</span><br><span class="line">        randIndex = int(random.uniform(<span class="number">0</span>,len(trainingSet)))</span><br><span class="line">        testSet.append(trainingSet[randIndex])</span><br><span class="line">        <span class="keyword">del</span>(trainingSet[randIndex])  </span><br><span class="line">    trainMat=[]; trainClasses = []</span><br><span class="line">    <span class="keyword">for</span> docIndex <span class="keyword">in</span> trainingSet:<span class="comment">#train the classifier (get probs) trainNB0</span></span><br><span class="line">        trainMat.append(bagOfWords2VecMN(vocabList, docList[docIndex]))</span><br><span class="line">        trainClasses.append(classList[docIndex])</span><br><span class="line">    p0V,p1V,pSpam = trainNB0(array(trainMat),array(trainClasses))</span><br><span class="line">    errorCount = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> docIndex <span class="keyword">in</span> testSet:        <span class="comment">#classify the remaining items</span></span><br><span class="line">        wordVector = bagOfWords2VecMN(vocabList, docList[docIndex])</span><br><span class="line">        <span class="keyword">if</span> classifyNB(array(wordVector),p0V,p1V,pSpam) != classList[docIndex]:</span><br><span class="line">            errorCount += <span class="number">1</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'the error rate is: '</span>,float(errorCount)/len(testSet)</span><br><span class="line">    <span class="keyword">return</span> vocabList,p0V,p1V</span><br></pre></td></tr></table></figure><br>移除高频词是由于词汇表中的一小部分单词却占据了所有文本用词的一大部分，产生这种现象的原因是语言中大部分都是冗余和结构辅助性内容。另一个常用方法是不仅移除高频词，同时从某个预定词表中移除结构上的辅助词，该词表称为停用词表(stop word list)，可以在网上找到(例如 <a href="http://www.ranks.nl/resources/stopwords.html" target="_blank" rel="noopener">http://www.ranks.nl/resources/stopwords.html</a>)<br>通过以下命令测试上述代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ny = feedparser.parse(<span class="string">'http://newyork.craigslist.org/stp/index.rss'</span>)</span><br><span class="line">sf = feedparser.parse(<span class="string">'http://sfbay.craigslist.org/stp/index.rss'</span>)</span><br><span class="line">vocabList, pSF, pNY = bayes.localWords(ny,sf)</span><br><span class="line">vocabList, pSF, pNY = bayes.localWords(ny,sf)</span><br></pre></td></tr></table></figure><br>为了得到错误率的精确估计，应该多次进行上述实验取平均值</p>
-<h4 id="4-2-分析数据"><a href="#4-2-分析数据" class="headerlink" title="4.2 分析数据"></a>4.2 分析数据</h4><p>显示地域相关的用词, 可以先对向量pSF和pNY进行排序, 然后按照顺序将词打印出来。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getTopWords</span><span class="params">(ny,sf)</span>:</span></span><br><span class="line">    <span class="keyword">import</span> operator</span><br><span class="line">    vocabList,p0V,p1V=localWords(ny,sf)</span><br><span class="line">    topNY=[]; topSF=[]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(p0V)):</span><br><span class="line">        <span class="keyword">if</span> p0V[i] &gt; <span class="number">-6.0</span> : topSF.append((vocabList[i],p0V[i]))</span><br><span class="line">        <span class="keyword">if</span> p1V[i] &gt; <span class="number">-6.0</span> : topNY.append((vocabList[i],p1V[i]))</span><br><span class="line">    sortedSF = sorted(topSF, key=<span class="keyword">lambda</span> pair: pair[<span class="number">1</span>], reverse=<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**"</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> sortedSF:</span><br><span class="line">        <span class="keyword">print</span> item[<span class="number">0</span>]</span><br><span class="line">    sortedNY = sorted(topNY, key=<span class="keyword">lambda</span> pair: pair[<span class="number">1</span>], reverse=<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**"</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> sortedNY:</span><br><span class="line">        <span class="keyword">print</span> item[<span class="number">0</span>]</span><br></pre></td></tr></table></figure><br>getTopWords()使用两个RSS源作为输入，然后训练并测试朴素贝叶斯分类器，返回使用的概率值。<br><code>bayes.getTopWords(ny,sf)</code>可查看运行结果</p>
+<h4 id="4-1-收集数据"><a href="#4-1-收集数据" class="headerlink" title="4.1 收集数据"></a>4.1 收集数据</h4><p>导入RSS源, 安装feedparser库<code>pip install feedparser</code>, 使用方法如下:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> feedparser
+ny <span class="token operator">=</span> feedparser<span class="token punctuation">.</span>parse<span class="token punctuation">(</span><span class="token string">'http://newyork.craigslist.org/stp/index.rss'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> ny<span class="token punctuation">[</span><span class="token string">'entries'</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>RSS源分类器及高频词去除函数</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">calcMostFreq</span><span class="token punctuation">(</span>vocabList<span class="token punctuation">,</span>fullText<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> operator
+    freqDict <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">for</span> token <span class="token keyword">in</span> vocabList<span class="token punctuation">:</span>
+        freqDict<span class="token punctuation">[</span>token<span class="token punctuation">]</span><span class="token operator">=</span>fullText<span class="token punctuation">.</span>count<span class="token punctuation">(</span>token<span class="token punctuation">)</span>
+    sortedFreq <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>freqDict<span class="token punctuation">.</span>iteritems<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> key<span class="token operator">=</span>operator<span class="token punctuation">.</span>itemgetter<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span> 
+    <span class="token keyword">return</span> sortedFreq<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">]</span>       
+
+<span class="token keyword">def</span> <span class="token function">localWords</span><span class="token punctuation">(</span>feed1<span class="token punctuation">,</span>feed0<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> feedparser
+    docList<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> classList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> fullText <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+    minLen <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>feed1<span class="token punctuation">[</span><span class="token string">'entries'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>feed0<span class="token punctuation">[</span><span class="token string">'entries'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>minLen<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        wordList <span class="token operator">=</span> textParse<span class="token punctuation">(</span>feed1<span class="token punctuation">[</span><span class="token string">'entries'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'summary'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        docList<span class="token punctuation">.</span>append<span class="token punctuation">(</span>wordList<span class="token punctuation">)</span>
+        fullText<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>wordList<span class="token punctuation">)</span>
+        classList<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">#NY is class 1</span>
+        wordList <span class="token operator">=</span> textParse<span class="token punctuation">(</span>feed0<span class="token punctuation">[</span><span class="token string">'entries'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'summary'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        docList<span class="token punctuation">.</span>append<span class="token punctuation">(</span>wordList<span class="token punctuation">)</span>
+        fullText<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>wordList<span class="token punctuation">)</span>
+        classList<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    vocabList <span class="token operator">=</span> createVocabList<span class="token punctuation">(</span>docList<span class="token punctuation">)</span><span class="token comment">#create vocabulary</span>
+    top30Words <span class="token operator">=</span> calcMostFreq<span class="token punctuation">(</span>vocabList<span class="token punctuation">,</span>fullText<span class="token punctuation">)</span>   <span class="token comment">#remove top 30 words</span>
+    <span class="token keyword">for</span> pairW <span class="token keyword">in</span> top30Words<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> pairW<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">in</span> vocabList<span class="token punctuation">:</span> vocabList<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>pairW<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    trainingSet <span class="token operator">=</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>minLen<span class="token punctuation">)</span><span class="token punctuation">;</span> testSet<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>           <span class="token comment">#create test set</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        randIndex <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>trainingSet<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        testSet<span class="token punctuation">.</span>append<span class="token punctuation">(</span>trainingSet<span class="token punctuation">[</span>randIndex<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">del</span><span class="token punctuation">(</span>trainingSet<span class="token punctuation">[</span>randIndex<span class="token punctuation">]</span><span class="token punctuation">)</span>  
+    trainMat<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> trainClasses <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> docIndex <span class="token keyword">in</span> trainingSet<span class="token punctuation">:</span><span class="token comment">#train the classifier (get probs) trainNB0</span>
+        trainMat<span class="token punctuation">.</span>append<span class="token punctuation">(</span>bagOfWords2VecMN<span class="token punctuation">(</span>vocabList<span class="token punctuation">,</span> docList<span class="token punctuation">[</span>docIndex<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        trainClasses<span class="token punctuation">.</span>append<span class="token punctuation">(</span>classList<span class="token punctuation">[</span>docIndex<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    p0V<span class="token punctuation">,</span>p1V<span class="token punctuation">,</span>pSpam <span class="token operator">=</span> trainNB0<span class="token punctuation">(</span>array<span class="token punctuation">(</span>trainMat<span class="token punctuation">)</span><span class="token punctuation">,</span>array<span class="token punctuation">(</span>trainClasses<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    errorCount <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> docIndex <span class="token keyword">in</span> testSet<span class="token punctuation">:</span>        <span class="token comment">#classify the remaining items</span>
+        wordVector <span class="token operator">=</span> bagOfWords2VecMN<span class="token punctuation">(</span>vocabList<span class="token punctuation">,</span> docList<span class="token punctuation">[</span>docIndex<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> classifyNB<span class="token punctuation">(</span>array<span class="token punctuation">(</span>wordVector<span class="token punctuation">)</span><span class="token punctuation">,</span>p0V<span class="token punctuation">,</span>p1V<span class="token punctuation">,</span>pSpam<span class="token punctuation">)</span> <span class="token operator">!=</span> classList<span class="token punctuation">[</span>docIndex<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            errorCount <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">print</span> <span class="token string">'the error rate is: '</span><span class="token punctuation">,</span><span class="token builtin">float</span><span class="token punctuation">(</span>errorCount<span class="token punctuation">)</span><span class="token operator">/</span><span class="token builtin">len</span><span class="token punctuation">(</span>testSet<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> vocabList<span class="token punctuation">,</span>p0V<span class="token punctuation">,</span>p1V<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>移除高频词是由于词汇表中的一小部分单词却占据了所有文本用词的一大部分，产生这种现象的原因是语言中大部分都是冗余和结构辅助性内容。另一个常用方法是不仅移除高频词，同时从某个预定词表中移除结构上的辅助词，该词表称为停用词表(stop word list)，可以在网上找到(例如 <a target="_blank" rel="noopener" href="http://www.ranks.nl/resources/stopwords.html">http://www.ranks.nl/resources/stopwords.html</a>)<br>通过以下命令测试上述代码：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">ny <span class="token operator">=</span> feedparser<span class="token punctuation">.</span>parse<span class="token punctuation">(</span><span class="token string">'http://newyork.craigslist.org/stp/index.rss'</span><span class="token punctuation">)</span>
+sf <span class="token operator">=</span> feedparser<span class="token punctuation">.</span>parse<span class="token punctuation">(</span><span class="token string">'http://sfbay.craigslist.org/stp/index.rss'</span><span class="token punctuation">)</span>
+vocabList<span class="token punctuation">,</span> pSF<span class="token punctuation">,</span> pNY <span class="token operator">=</span> bayes<span class="token punctuation">.</span>localWords<span class="token punctuation">(</span>ny<span class="token punctuation">,</span>sf<span class="token punctuation">)</span>
+vocabList<span class="token punctuation">,</span> pSF<span class="token punctuation">,</span> pNY <span class="token operator">=</span> bayes<span class="token punctuation">.</span>localWords<span class="token punctuation">(</span>ny<span class="token punctuation">,</span>sf<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>为了得到错误率的精确估计，应该多次进行上述实验取平均值</p>
+<h4 id="4-2-分析数据"><a href="#4-2-分析数据" class="headerlink" title="4.2 分析数据"></a>4.2 分析数据</h4><p>显示地域相关的用词, 可以先对向量pSF和pNY进行排序, 然后按照顺序将词打印出来。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">getTopWords</span><span class="token punctuation">(</span>ny<span class="token punctuation">,</span>sf<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> operator
+    vocabList<span class="token punctuation">,</span>p0V<span class="token punctuation">,</span>p1V<span class="token operator">=</span>localWords<span class="token punctuation">(</span>ny<span class="token punctuation">,</span>sf<span class="token punctuation">)</span>
+    topNY<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> topSF<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>p0V<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> p0V<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token operator">-</span><span class="token number">6.0</span> <span class="token punctuation">:</span> topSF<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>vocabList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>p0V<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> p1V<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token operator">-</span><span class="token number">6.0</span> <span class="token punctuation">:</span> topNY<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>vocabList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>p1V<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    sortedSF <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>topSF<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> pair<span class="token punctuation">:</span> pair<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span> <span class="token string">"SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**"</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> sortedSF<span class="token punctuation">:</span>
+        <span class="token keyword">print</span> item<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    sortedNY <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>topNY<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> pair<span class="token punctuation">:</span> pair<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span> <span class="token string">"NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**"</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> sortedNY<span class="token punctuation">:</span>
+        <span class="token keyword">print</span> item<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>getTopWords()使用两个RSS源作为输入，然后训练并测试朴素贝叶斯分类器，返回使用的概率值。<br><code>bayes.getTopWords(ny,sf)</code>可查看运行结果</p>
 
     </div>
 
     
     
-    <div class="post-widgets">
+    
+
+    <footer class="post-footer"><div class="post-widgets">
       <div id="needsharebutton-postbottom">
         <span class="btn">
           <i class="fa fa-share-alt" aria-hidden="true"></i>
         </span>
       </div>
     </div>
-        <div class="reward-container">
+          <div class="reward-container">
   <div>Compensated Dating</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+  <button>
     Donate
   </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
+  <div class="post-reward">
+      <div>
         <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
-        <p>Bitcoin</p>
+        <span>Bitcoin</span>
       </div>
 
   </div>
 </div>
 
-        
+          
 
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>Kino
+      <strong>Post author:  </strong>Kino
   </li>
   <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="https://blog.xuwei.fun/2015/08/19/machineLearning03/" title="机器学习三">https://blog.xuwei.fun/2015/08/19/machineLearning03/</a>
+      <strong>Post link: </strong>
+      <a href="https://blog.xuwei.fun/2015/08/19/machineLearning03/" title="机器学习三">https://blog.xuwei.fun/2015/08/19/machineLearning03/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -387,37 +601,33 @@
 </ul>
 </div>
 
-        
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <p>Welcome to my other publishing channels</p>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+          <span class="icon">
+            <i class="weibo"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
-            <span class="icon">
-              <i class="weibo"></i>
-            </span>
+          <span class="label">Weibo</span>
+        </a>
+      </div>
 
-            <span class="label">Weibo</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+          <span class="icon">
+            <i class="wechat"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
-            <span class="icon">
-              <i class="wechat"></i>
-            </span>
-
-            <span class="label">Wechat</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">Wechat</span>
+        </a>
+      </div>
   </div>
+</div>
 
-
-      <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
               <a href="/tags/bayes-decision/" rel="tag"># bayes decision</a>
@@ -425,29 +635,27 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2015/08/17/patternRecognition02/" rel="prev" title="模式识别二">
-      <i class="fa fa-chevron-left"></i> 模式识别二
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2015/08/25/machineLearning04/" rel="next" title="机器学习四">
-      机器学习四 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2015/08/17/patternRecognition02/" rel="prev" title="模式识别二">
+                  <i class="fa fa-chevron-left"></i> 模式识别二
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2015/08/25/machineLearning04/" rel="next" title="机器学习四">
+                  机器学习四 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
@@ -455,193 +663,58 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
+              <div class="comments gitalk-container"></div>
             </div>
             <div class="tab-pane livere" id="comment-livere">
-              
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
-  </div>
-  
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-朴素贝叶斯"><span class="nav-text">1. 朴素贝叶斯</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-文本分类"><span class="nav-text">2. 文本分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-准备数据"><span class="nav-text">2.1 准备数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-训练算法"><span class="nav-text">2.2 训练算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-测试算法"><span class="nav-text">2.3 测试算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-准备数据"><span class="nav-text">2.4 准备数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-过滤垃圾邮件"><span class="nav-text">3. 过滤垃圾邮件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-准备数据"><span class="nav-text">3.1 准备数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-测试算法"><span class="nav-text">3.2 测试算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-示例"><span class="nav-text">4. 示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-收集数据"><span class="nav-text">4.1 收集数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-分析数据"><span class="nav-text">4.2 分析数据</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Kino"
-      src="/images/site/avatar.png">
-  <p class="site-author-name" itemprop="name">Kino</p>
-  <div class="site-description" itemprop="description">Amor Fati</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">123</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">122</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">356k</span>
-    <span class="post-meta-divider">|</span>
+    <span title="Symbols count total">353k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:23</span>
+    <span title="Reading time total">5:21</span>
+  </span>
 </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
+
+  <script src="/js/third-party/pace.js"></script>
 
   
 
@@ -649,35 +722,14 @@
 
 
   
-<script src="/js/local-search.js"></script>
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout : 1000,
-        priority: false,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2015/08/19/machineLearning03/',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":1000,"priority":false,"archives":false,"url":"https://blog.xuwei.fun/2015/08/19/machineLearning03/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -697,42 +749,11 @@
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '58ab17a966414cd66c67',
-      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
-      repo        : 'WoeiSheu.github.io',
-      owner       : 'WoeiSheu',
-      admin       : ['WoeiSheu'],
-      id          : 'c6f425935c051b1536e7b9b7c70e9129',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
-
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"c6f425935c051b1536e7b9b7c70e9129"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {

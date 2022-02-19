@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
@@ -15,21 +17,20 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-  <meta name="description" content="1. 服务器-浏览器通信技术服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP&#x2F;IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通信协议,">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.xuwei.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+  <meta name="description" content="1. 服务器-浏览器通信技术服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP&#x2F;IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RESTful推送与异步通信">
 <meta property="og:url" content="https://blog.xuwei.fun/2016/05/20/web02/index.html">
 <meta property="og:site_name" content="霁月荒馆">
-<meta property="og:description" content="1. 服务器-浏览器通信技术服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP&#x2F;IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通信协议,">
+<meta property="og:description" content="1. 服务器-浏览器通信技术服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP&#x2F;IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.xuwei.fun/images/web03_01.png">
 <meta property="og:image" content="https://blog.xuwei.fun/images/web03_02.png">
@@ -43,18 +44,23 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blog.xuwei.fun/images/web03_01.png">
 
+
 <link rel="canonical" href="https://blog.xuwei.fun/2016/05/20/web02/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.xuwei.fun/2016/05/20/web02/","path":"2016/05/20/web02/","title":"RESTful推送与异步通信"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>RESTful推送与异步通信 | 霁月荒馆</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-104049598-2","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
 #needsharebutton-postbottom {
   cursor: pointer;
@@ -82,68 +88,31 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>RESTful推送与异步通信 | 霁月荒馆</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-104049598-2');
-      }
-    </script>
-
-
-
-
-
-
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">霁月荒馆</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">霁月荒馆</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
   </div>
@@ -157,54 +126,17 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-thoughts">
-
-    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
-
-  </li>
-        <li class="menu-item menu-item-excerpt">
-
-    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
-
-  </li>
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-thoughts"><a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>Thoughts</a></li>
+        <li class="menu-item menu-item-excerpt"><a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>Excerpt</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -215,23 +147,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -239,28 +170,122 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%9C%8D%E5%8A%A1%E5%99%A8-%E6%B5%8F%E8%A7%88%E5%99%A8%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF"><span class="nav-text">1. 服务器-浏览器通信技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-Polling-%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BD%AE%E8%AF%A2-%E6%8A%80%E6%9C%AF"><span class="nav-text">1.1 Polling(客户端轮询) 技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-Comet%E6%8A%80%E6%9C%AF"><span class="nav-text">1.2 Comet技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-SSE%E6%8A%80%E6%9C%AF"><span class="nav-text">1.3 SSE技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-WebSocket%E6%8A%80%E6%9C%AF"><span class="nav-text">1.4 WebSocket技术</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-SSE%E9%80%9A%E4%BF%A1%E6%A8%A1%E5%BC%8F"><span class="nav-text">2. SSE通信模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%BC%82%E6%AD%A5%E9%80%9A%E4%BF%A1"><span class="nav-text">3. 异步通信</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-Polling%E5%BC%82%E6%AD%A5%E9%80%9A%E4%BF%A1"><span class="nav-text">3.1 Polling异步通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-Web-Hook%E5%BC%82%E6%AD%A5%E9%80%9A%E4%BF%A1"><span class="nav-text">3.2 Web Hook异步通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-Comet%E5%BC%82%E6%AD%A5%E9%80%9A%E4%BF%A1"><span class="nav-text">3.3 Comet异步通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-HTML5%E5%BC%82%E6%AD%A5%E9%80%9A%E4%BF%A1"><span class="nav-text">3.4 HTML5异步通信</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footnotes"><span class="nav-text">Footnotes</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https:&#x2F;&#x2F;xuwei.fun&#x2F;" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https:&#x2F;&#x2F;blog.xuwei.fun&#x2F;bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
 
-    
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2016/05/20/web02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -277,51 +302,54 @@
           RESTful推送与异步通信
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2016-05-20 16:58:00" itemprop="dateCreated datePublished" datetime="2016-05-20T16:58:00+08:00">2016-05-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techonology/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
-                </span>
-            </span>
+      <time title="Created: 2016-05-20 16:58:00" itemprop="dateCreated datePublished" datetime="2016-05-20T16:58:00+08:00">2016-05-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2019-05-18 22:24:33" itemprop="dateModified" datetime="2019-05-18T22:24:33+08:00">2019-05-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/techonology/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2.1k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>2 mins.</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>2.1k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>2 mins.</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -330,9 +358,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-        <h3 id="1-服务器-浏览器通信技术"><a href="#1-服务器-浏览器通信技术" class="headerlink" title="1. 服务器-浏览器通信技术"></a>1. 服务器-浏览器通信技术</h3><p>服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP/IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通信协议, 每一次请求-响应都是基于一个新建立的HTTP的连接, 这就是使服务器主动通知浏览器成为一个难点. 这是因为在基于请求-响应的模式下, 服务器的角色是主动应答, 无法主动通知浏览器; 另一个原因是每次请求后HTTP连接断开, 服务器无法再获取客户端的地址, 也就无法将通知发送给浏览器端<br><a id="more"></a></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-服务器-浏览器通信技术"><a href="#1-服务器-浏览器通信技术" class="headerlink" title="1. 服务器-浏览器通信技术"></a>1. 服务器-浏览器通信技术</h3><p>服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP&#x2F;IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通信协议, 每一次请求-响应都是基于一个新建立的HTTP的连接, 这就是使服务器主动通知浏览器成为一个难点. 这是因为在基于请求-响应的模式下, 服务器的角色是主动应答, 无法主动通知浏览器; 另一个原因是每次请求后HTTP连接断开, 服务器无法再获取客户端的地址, 也就无法将通知发送给浏览器端</p>
+<span id="more"></span>
 <h4 id="1-1-Polling-客户端轮询-技术"><a href="#1-1-Polling-客户端轮询-技术" class="headerlink" title="1.1 Polling(客户端轮询) 技术"></a>1.1 Polling(客户端轮询) 技术</h4><p>即浏览器周期性地主动访问服务器的特定地址, 以获取服务器端数据状态的变化<br>优点: </p>
 <ul>
 <li>易于实现</li>
@@ -345,7 +372,7 @@
 <p>如图所示, 长轮询通过KeepAlive使HTTP连接得以保持连接. 为何需要保持连接? 因为在请求发出后的一段时间内, 服务器一直没有做出响应, 该连接会因连接超时而断开. Comet利用HTTP1.1的keepAlive的持久性连接技术, 在浏览器发出请求后, 通过keepAlive保存服务器向浏览器做出响应的通信, 如此解决了连接超时断开的问题. 那么连接的关闭只有两种情况, 一种是浏览器主动断开, 一种是服务器端特定数据发生变化， 并将这一信息响应给浏览器, 主动断开连接来完成请求-响应模式的一次请求</p>
 <p>相比Polling, 实现Comet困难许多, 服务器和浏览器都需要第三方库来支持. Atmosphere和CometD库是实现Comet技术的第三方工具包</p>
 <p>优点: 解决了Polling的低效性, 且有很好的低延迟性<br>缺点: 需要额外的技术实现支持, 引入第三方包, 较为复杂</p>
-<h4 id="1-3-SSE技术"><a href="#1-3-SSE技术" class="headerlink" title="1.3 SSE技术"></a>1.3 SSE技术</h4><p>SSE是HTML5技术集的一部分, 定义了服务器推送技术的标准规范<br>SSE规范地址可以<a href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-events" target="_blank" rel="noopener">点此</a>. 其核心是基于EventSource接口的事件监听机制, 包括onopen、onmessage和onerror三个事件监听器. SSE服务器响应数据的媒体类型(Content-Type)是text/event-stream.</p>
+<h4 id="1-3-SSE技术"><a href="#1-3-SSE技术" class="headerlink" title="1.3 SSE技术"></a>1.3 SSE技术</h4><p>SSE是HTML5技术集的一部分, 定义了服务器推送技术的标准规范<br>SSE规范地址可以<a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-events">点此</a>. 其核心是基于EventSource接口的事件监听机制, 包括onopen、onmessage和onerror三个事件监听器. SSE服务器响应数据的媒体类型(Content-Type)是text&#x2F;event-stream.</p>
 <p>优点: 是HTML5标准一部分, 具备编程语言无关性, 且支持跨语言的调用<br>缺点: 和Comet一样, 浏览器无法在同一条连接上做出二次请求或者对服务器的响应做出”响应”</p>
 <h4 id="1-4-WebSocket技术"><a href="#1-4-WebSocket技术" class="headerlink" title="1.4 WebSocket技术"></a>1.4 WebSocket技术</h4><p>WebSocket是HTML5技术集一部分, 提供了一个双向的、在一条TCP信道中的客户端和服务端全双工的通信<br>WebSocket消除了所有与HTTP连接的无状态特性相关的限制</p>
 <p>优点: 是HTML5标准之一, 逐渐流行,功能强大,性能突出,双向、双工通信<br>缺点: 相对于SSE实现较为复杂</p>
@@ -354,43 +381,44 @@
 <h4 id="3-2-Web-Hook异步通信"><a href="#3-2-Web-Hook异步通信" class="headerlink" title="3.2 Web Hook异步通信"></a>3.2 Web Hook异步通信</h4><p>该解决方案是指在客户端发送请求时, 将一个回调地址同时发送给服务器, 服务器接收响应后, 异步处理请求并对此次请求即刻做出响应, 客户端随即处理其他业务并监听回调. 服务器在响应客户端后, 继续以异步的方式处理刚才的请求, 在处理完毕后, 通过回调地址通知客户端处理结果<br>优点是覆盖了Polling方案并且没有Polling方案中无效的轮询负载. 但是, 这种方案无法在浏览器作为客户端的场景中实施, 因为浏览器无法提供一个回调地址给服务器. 因此该方案适用于另外一个服务器作为客户端的场景. 另外, 和后面的解决方案比起来, 该方案还是多出了一次服务器回调客户端的HTTP连接<br><img src="/images/web03_03.png" alt="asyn02"></p>
 <h4 id="3-3-Comet异步通信"><a href="#3-3-Comet异步通信" class="headerlink" title="3.3 Comet异步通信"></a>3.3 Comet异步通信</h4><p>Comet技术在服务器推送业务中的处理流程同样适用于这里的异步通信, 客户端发送请求后可以继续执行后续业务并监听服务器返回的处理结果的通知, 优点是异步通信可以在一次请求-响应的模型中完成<br><img src="/images/web03_04.png" alt="asyn03"></p>
 <h4 id="3-4-HTML5异步通信"><a href="#3-4-HTML5异步通信" class="headerlink" title="3.4 HTML5异步通信"></a>3.4 HTML5异步通信</h4><p>包含SSE和Web Socket, 均有处理异步通信的能力</p>
-<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)"><a href="https://book.douban.com/subject/26022847/" target="_blank" rel="noopener">Mastering Web Application Development with AngularJS</a><a href="#fnref:1" rev="footnote"> ↩</a></span></div></div></div>
+<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://book.douban.com/subject/26022847/">Mastering Web Application Development with AngularJS</a><a href="#fnref:1" rev="footnote">↩</a></span></li></ol></div></div>
     </div>
 
     
     
-    <div class="post-widgets">
+    
+
+    <footer class="post-footer"><div class="post-widgets">
       <div id="needsharebutton-postbottom">
         <span class="btn">
           <i class="fa fa-share-alt" aria-hidden="true"></i>
         </span>
       </div>
     </div>
-        <div class="reward-container">
+          <div class="reward-container">
   <div>Compensated Dating</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+  <button>
     Donate
   </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
+  <div class="post-reward">
+      <div>
         <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
-        <p>Bitcoin</p>
+        <span>Bitcoin</span>
       </div>
 
   </div>
 </div>
 
-        
+          
 
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>Kino
+      <strong>Post author:  </strong>Kino
   </li>
   <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="https://blog.xuwei.fun/2016/05/20/web02/" title="RESTful推送与异步通信">https://blog.xuwei.fun/2016/05/20/web02/</a>
+      <strong>Post link: </strong>
+      <a href="https://blog.xuwei.fun/2016/05/20/web02/" title="RESTful推送与异步通信">https://blog.xuwei.fun/2016/05/20/web02/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -398,37 +426,33 @@
 </ul>
 </div>
 
-        
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <p>Welcome to my other publishing channels</p>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+          <span class="icon">
+            <i class="weibo"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
-            <span class="icon">
-              <i class="weibo"></i>
-            </span>
+          <span class="label">Weibo</span>
+        </a>
+      </div>
 
-            <span class="label">Weibo</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+          <span class="icon">
+            <i class="wechat"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
-            <span class="icon">
-              <i class="wechat"></i>
-            </span>
-
-            <span class="label">Wechat</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">Wechat</span>
+        </a>
+      </div>
   </div>
+</div>
 
-
-      <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/web/" rel="tag"># web</a>
               <a href="/tags/communicate/" rel="tag"># communicate</a>
@@ -436,29 +460,27 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2016/05/09/linux05/" rel="prev" title="Linux琐记五">
-      <i class="fa fa-chevron-left"></i> Linux琐记五
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2016/05/28/hla03/" rel="next" title="HLA 入门三">
-      HLA 入门三 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2016/05/09/linux05/" rel="prev" title="Linux琐记五">
+                  <i class="fa fa-chevron-left"></i> Linux琐记五
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2016/05/28/hla03/" rel="next" title="HLA 入门三">
+                  HLA 入门三 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
@@ -466,193 +488,58 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
+              <div class="comments gitalk-container"></div>
             </div>
             <div class="tab-pane livere" id="comment-livere">
-              
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
-  </div>
-  
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-服务器-浏览器通信技术"><span class="nav-text">1. 服务器-浏览器通信技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-Polling-客户端轮询-技术"><span class="nav-text">1.1 Polling(客户端轮询) 技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-Comet技术"><span class="nav-text">1.2 Comet技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-SSE技术"><span class="nav-text">1.3 SSE技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-WebSocket技术"><span class="nav-text">1.4 WebSocket技术</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-SSE通信模式"><span class="nav-text">2. SSE通信模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-异步通信"><span class="nav-text">3. 异步通信</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-Polling异步通信"><span class="nav-text">3.1 Polling异步通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-Web-Hook异步通信"><span class="nav-text">3.2 Web Hook异步通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-Comet异步通信"><span class="nav-text">3.3 Comet异步通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-HTML5异步通信"><span class="nav-text">3.4 HTML5异步通信</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footnotes"><span class="nav-text">Footnotes</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Kino"
-      src="/images/site/avatar.png">
-  <p class="site-author-name" itemprop="name">Kino</p>
-  <div class="site-description" itemprop="description">Amor Fati</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">123</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">122</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">356k</span>
-    <span class="post-meta-divider">|</span>
+    <span title="Symbols count total">353k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:23</span>
+    <span title="Reading time total">5:21</span>
+  </span>
 </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
+
+  <script src="/js/third-party/pace.js"></script>
 
   
 
@@ -660,35 +547,14 @@
 
 
   
-<script src="/js/local-search.js"></script>
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout : 1000,
-        priority: false,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2016/05/20/web02/',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":1000,"priority":false,"archives":false,"url":"https://blog.xuwei.fun/2016/05/20/web02/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -708,42 +574,11 @@
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '58ab17a966414cd66c67',
-      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
-      repo        : 'WoeiSheu.github.io',
-      owner       : 'WoeiSheu',
-      admin       : ['WoeiSheu'],
-      id          : '769ef2978833d650f049bcb79d4eae68',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
-
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"769ef2978833d650f049bcb79d4eae68"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {

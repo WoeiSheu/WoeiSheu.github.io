@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
@@ -15,21 +17,20 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-  <meta name="description" content="1. 前言智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久~动手写起来还是漏洞百出主要参考了这篇博客的内容英文描述此问题可参见此处">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.xuwei.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+  <meta name="description" content="1. 前言智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久动手写起来还是漏洞百出主要参考了这篇博客的内容英文描述此问题可参见[此处](http:&#x2F;&#x2F;www.aiai.ed.ac.uk&#x2F;gwickler&#x2F;-inf.html)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="九宫格(八数码)问题">
 <meta property="og:url" content="https://blog.xuwei.fun/2015/05/29/algorithm02/index.html">
 <meta property="og:site_name" content="霁月荒馆">
-<meta property="og:description" content="1. 前言智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久~动手写起来还是漏洞百出主要参考了这篇博客的内容英文描述此问题可参见此处">
+<meta property="og:description" content="1. 前言智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久动手写起来还是漏洞百出主要参考了这篇博客的内容英文描述此问题可参见[此处](http:&#x2F;&#x2F;www.aiai.ed.ac.uk&#x2F;gwickler&#x2F;-inf.html)">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2015-05-29T09:55:00.000Z">
 <meta property="article:modified_time" content="2020-09-13T15:20:13.638Z">
@@ -38,18 +39,23 @@
 <meta property="article:tag" content="eightpuzzle">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="https://blog.xuwei.fun/2015/05/29/algorithm02/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.xuwei.fun/2015/05/29/algorithm02/","path":"2015/05/29/algorithm02/","title":"九宫格(八数码)问题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>九宫格(八数码)问题 | 霁月荒馆</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-104049598-2","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
 #needsharebutton-postbottom {
   cursor: pointer;
@@ -77,68 +83,31 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>九宫格(八数码)问题 | 霁月荒馆</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-104049598-2');
-      }
-    </script>
-
-
-
-
-
-
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">霁月荒馆</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">霁月荒馆</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
   </div>
@@ -152,54 +121,17 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-thoughts">
-
-    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
-
-  </li>
-        <li class="menu-item menu-item-excerpt">
-
-    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
-
-  </li>
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-thoughts"><a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>Thoughts</a></li>
+        <li class="menu-item menu-item-excerpt"><a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>Excerpt</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -210,23 +142,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -234,28 +165,122 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%89%8D%E8%A8%80"><span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AE%9E%E7%8E%B0"><span class="nav-text">2. 实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E5%9B%BE%E7%9A%84%E8%8A%82%E7%82%B9%E7%B1%BB"><span class="nav-text">2.1 定义一个图的节点类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-%E8%BE%93%E5%85%A5%E5%8A%9F%E8%83%BD"><span class="nav-text">2.2 输入功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-%E7%8A%B6%E6%80%81%E5%88%A4%E9%87%8D"><span class="nav-text">2.3 状态判重</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-%E5%BB%BA%E7%AB%8B%E5%88%9D%E5%A7%8B%E8%A1%A8%E7%BB%93%E6%9E%84"><span class="nav-text">2.4 建立初始表结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-bfs%E5%B9%BF%E5%BA%A6%E6%90%9C%E7%B4%A2"><span class="nav-text">2.5 bfs广度搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-%E6%89%BE%E5%9B%9E%E5%AE%9E%E9%99%85%E8%B7%AF%E5%BE%84"><span class="nav-text">2.6 找回实际路径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BA%90%E7%A0%81"><span class="nav-text">源码</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https:&#x2F;&#x2F;xuwei.fun&#x2F;" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https:&#x2F;&#x2F;blog.xuwei.fun&#x2F;bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
 
-    
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2015/05/29/algorithm02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -272,51 +297,54 @@
           九宫格(八数码)问题
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2015-05-29 17:55:00" itemprop="dateCreated datePublished" datetime="2015-05-29T17:55:00+08:00">2015-05-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-09-13 23:20:13" itemprop="dateModified" datetime="2020-09-13T23:20:13+08:00">2020-09-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techonology/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
-                </span>
-            </span>
+      <time title="Created: 2015-05-29 17:55:00" itemprop="dateCreated datePublished" datetime="2015-05-29T17:55:00+08:00">2015-05-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2020-09-13 23:20:13" itemprop="dateModified" datetime="2020-09-13T23:20:13+08:00">2020-09-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/techonology/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>4.4k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>4 mins.</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>4.2k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>4 mins.</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -325,55 +353,185 @@
     
     
     <div class="post-body" itemprop="articleBody">
+        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久<del>动手写起来还是漏洞百出<br>主要参考了<a target="_blank" rel="noopener" href="http://blog.csdn.net/acm_cxlove/article/details/7745323">这篇博客</a>的内容<br>英文描述此问题可参见[此处](<a target="_blank" rel="noopener" href="http://www.aiai.ed.ac.uk/">http://www.aiai.ed.ac.uk/</a></del>gwickler&#x2F;-inf.html)</p>
+<span id="more"></span>
+<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2. 实现"></a>2. 实现</h3><h4 id="2-1-定义一个图的节点类"><a href="#2-1-定义一个图的节点类" class="headerlink" title="2.1 定义一个图的节点类"></a>2.1 定义一个图的节点类</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">VertexOfGraph</span> <span class="token punctuation">&#123;</span>       <span class="token comment">//定义图的节点类</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> vertex<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> h<span class="token punctuation">,</span>g<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> x<span class="token punctuation">,</span>y<span class="token punctuation">;</span>
+    string hashValue<span class="token punctuation">;</span>
 
-      
-        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久~动手写起来还是漏洞百出<br>主要参考了<a href="http://blog.csdn.net/acm_cxlove/article/details/7745323" target="_blank" rel="noopener">这篇博客</a>的内容<br>英文描述此问题可参见<a href="http://www.aiai.ed.ac.uk/~gwickler/-inf.html" target="_blank" rel="noopener">此处</a></p>
-<a id="more"></a>
-<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2. 实现"></a>2. 实现</h3><h4 id="2-1-定义一个图的节点类"><a href="#2-1-定义一个图的节点类" class="headerlink" title="2.1 定义一个图的节点类"></a>2.1 定义一个图的节点类</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VertexOfGraph</span> &#123;</span>       <span class="comment">//定义图的节点类</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> vertex[<span class="number">3</span>][<span class="number">3</span>];</span><br><span class="line">    <span class="keyword">int</span> h,g;</span><br><span class="line">    <span class="keyword">int</span> x,y;</span><br><span class="line">    <span class="built_in">string</span> hashValue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    VertexOfGraph() &#123;       <span class="comment">//构造函数将成员变量初始化为0和空</span></span><br><span class="line">        x = <span class="number">0</span>;</span><br><span class="line">        y = <span class="number">0</span>;</span><br><span class="line">        h = <span class="number">0</span>;</span><br><span class="line">        g = <span class="number">0</span>;</span><br><span class="line">        hashValue = <span class="string">""</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">()</span> </span>&#123;        <span class="comment">//判断当前状态是否有效,如果超出边界范围则无效</span></span><br><span class="line">        <span class="keyword">if</span>(x &gt;= <span class="number">0</span> &amp;&amp; x &lt; <span class="number">3</span> &amp;&amp; y &gt;= <span class="number">0</span> &amp;&amp; y &lt; <span class="number">3</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">newStatus</span><span class="params">(<span class="keyword">int</span> oldX, <span class="keyword">int</span> oldY)</span> </span>&#123;    <span class="comment">//将现在存储的空位位置x,y与oldX,oldY对应的位置交换数值,得到新状态</span></span><br><span class="line">        <span class="keyword">int</span> temp = vertex[x][y];</span><br><span class="line">        vertex[x][y] = vertex[oldX][oldY];</span><br><span class="line">        vertex[oldX][oldY] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">VertexOfGraph</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>       <span class="token comment">//构造函数将成员变量初始化为0和空</span>
+        x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        h <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        g <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        hashValue <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">bool</span> <span class="token function">isValid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token comment">//判断当前状态是否有效,如果超出边界范围则无效</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> x <span class="token operator">&lt;</span> <span class="token number">3</span> <span class="token operator">&amp;&amp;</span> y <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> y <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">void</span> <span class="token function">newStatus</span><span class="token punctuation">(</span><span class="token keyword">int</span> oldX<span class="token punctuation">,</span> <span class="token keyword">int</span> oldY<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token comment">//将现在存储的空位位置x,y与oldX,oldY对应的位置交换数值,得到新状态</span>
+        <span class="token keyword">int</span> temp <span class="token operator">=</span> vertex<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        vertex<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> vertex<span class="token punctuation">[</span>oldX<span class="token punctuation">]</span><span class="token punctuation">[</span>oldY<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        vertex<span class="token punctuation">[</span>oldX<span class="token punctuation">]</span><span class="token punctuation">[</span>oldY<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>为了方便将类的成员变量都定义为public类型，省去了set、get方法，类中的h、g并没有用到，初始化都置0了，作为以后扩展用，主要是用于启发式搜索中的估价函数，搜索得到比较常用的启发式搜索方法有A*搜索，目前的算法都没有用到~</p>
-<h4 id="2-2-输入功能"><a href="#2-2-输入功能" class="headerlink" title="2.2 输入功能"></a>2.2 输入功能</h4><p>输入功能必须要有,就控制台输入了, 可以把代码移到C#上，用Winform做一个GUI界面~<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> origin[<span class="number">3</span>][<span class="number">3</span>],target[<span class="number">3</span>][<span class="number">3</span>];</span><br></pre></td></tr></table></figure><br>定义3*3的数组表示九宫格的九个数字, origin分别为初始状态和目标状态, 循环读入即可. 至于为何不使用1*9的一维数组, 照顾要是考虑到后续搜索路径的问题, 3*3的路径比较容易设计, 其中一个数组下标变化1即可, 而对于1*9, 感觉有点复杂(后来发现其实并不是, 将下标分别+-3和+-1就得到了四个路径, 再判断新状态是否有效即可, 好像还比3*3简单点)</p>
-<h4 id="2-3-状态判重"><a href="#2-3-状态判重" class="headerlink" title="2.3 状态判重"></a>2.3 状态判重</h4><p>对于每个状态必须判重，也要判断是否与目标状态相同，如果是将9个元素逐个比较，太耗时，肯定是得用到hash，hash方法<a href="http://www.cnblogs.com/goodness/archive/2010/05/04/1727141.html" target="_blank" rel="noopener">http://www.cnblogs.com/goodness/archive/2010/05/04/1727141.html</a>中的境界二有提到，但是我没看懂~”逆序值”这个词写的不清楚，感觉应该是排列组合中的一个名词，但是搜出来的都不对，于是自己设计个不能称之为hash的hash函数, 因为这个方法的信息量没有压缩, 是可逆的<br>对于每种状态只需要唯一对应一个值即可，于是想着把每种状态的数字串成字符串当作hash值，这肯定不是好方法，至少本来只需要9!=362880个int型元素就能存下所有状态，而现在对于每种状态都是一个9位长的字符串~不过有一个好处就是存储的信息相对而言多了, 对于最后输出所有路径有所帮助。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">getHash</span><span class="params">(<span class="keyword">int</span> v[<span class="number">3</span>][<span class="number">3</span>])</span> </span>&#123;                           <span class="comment">//将状态的数字排序转换为字符串,作为hash值</span></span><br><span class="line">    <span class="built_in">string</span> hashString = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++) &#123;</span><br><span class="line">            <span class="built_in">stringstream</span> sstream;</span><br><span class="line">            <span class="built_in">string</span> str;</span><br><span class="line">            sstream &lt;&lt; v[i][j];                          <span class="comment">//注意sstream输入是&lt;&lt;而不是iostream的&gt;&gt;</span></span><br><span class="line">            sstream &gt;&gt; str;</span><br><span class="line">            hashString += str;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> hashString;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="2-4-建立初始表结构"><a href="#2-4-建立初始表结构" class="headerlink" title="2.4 建立初始表结构"></a>2.4 建立初始表结构</h4><p>根据给定初始状态建立初始的表结构，找到0的位置即为可移动的空格位置并记录，找到得到hash值并记录<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">VertexOfGraph <span class="title">createGraph</span><span class="params">(<span class="keyword">int</span> vertex[<span class="number">3</span>][<span class="number">3</span>])</span> </span>&#123;</span><br><span class="line">    VertexOfGraph returnGraph;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;<span class="number">3</span>; j++) &#123;</span><br><span class="line">            returnGraph.vertex[i][j] = vertex[i][j];</span><br><span class="line">            <span class="keyword">if</span>(vertex[i][j] == <span class="number">0</span>) &#123;</span><br><span class="line">                returnGraph.x = i;</span><br><span class="line">                returnGraph.y = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    returnGraph.hashValue = getHash(vertex);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> returnGraph;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="2-5-bfs广度搜索"><a href="#2-5-bfs广度搜索" class="headerlink" title="2.5 bfs广度搜索"></a>2.5 bfs广度搜索</h4><p>搜索结果返回一个map表，将每一状态转换之后的状态作为key值，原状态作为value，一一对应保存起来，最后通过此表可得到实际路径<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">map&lt;string,string&gt; bfsSearch(VertexOfGraph graph,string targetHash,map&lt;string,bool&gt; visited) &#123;</span><br><span class="line">    <span class="keyword">int</span> direction[<span class="number">4</span>][<span class="number">2</span>] = &#123; &#123;<span class="number">-1</span>,<span class="number">0</span>&#125;, &#123;<span class="number">0</span>,<span class="number">1</span>&#125;, &#123;<span class="number">1</span>,<span class="number">0</span>&#125;, &#123;<span class="number">0</span>,<span class="number">-1</span>&#125; &#125;;</span><br><span class="line">    <span class="built_in">queue</span>&lt;VertexOfGraph&gt; que;</span><br><span class="line">    que.push(graph);</span><br><span class="line">    <span class="built_in">map</span>&lt;<span class="built_in">string</span>,<span class="built_in">string</span>&gt; route;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(!que.empty()) &#123;</span><br><span class="line">        VertexOfGraph movingVertex = que.front();</span><br><span class="line">        <span class="comment">//cout &lt;&lt; movingVertex.hashValue &lt;&lt; endl;       //测试遍历结果</span></span><br><span class="line">        VertexOfGraph savingVertex = movingVertex;</span><br><span class="line">        que.pop();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">            movingVertex = savingVertex;</span><br><span class="line">            movingVertex.x = savingVertex.x + direction[i][<span class="number">0</span>];</span><br><span class="line">            movingVertex.y = savingVertex.y + direction[i][<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span>(!movingVertex.isValid()) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                movingVertex.newStatus(savingVertex.x, savingVertex.y);</span><br><span class="line">                movingVertex.hashValue = getHash(movingVertex.vertex);</span><br><span class="line">                <span class="keyword">if</span>(visited.find(movingVertex.hashValue)==visited.end()) &#123;</span><br><span class="line">                    visited[movingVertex.hashValue] = <span class="literal">true</span>;</span><br><span class="line">                    route[movingVertex.hashValue] = savingVertex.hashValue;</span><br><span class="line"></span><br><span class="line">                    que.push(movingVertex);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(movingVertex.hashValue == targetHash) &#123;</span><br><span class="line">                    <span class="keyword">return</span> route;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> route;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>bfs的想法是，从第一个状态开始遍历可能的所有状态，对于当前状态，找出其可以转换的状态，将他们全部放入队列的尾部，保存route，并判断他们是否是目标状态，若是，返回route退出，否则不停取出队列的头元素，执行相同操作</p>
-<h4 id="2-6-找回实际路径"><a href="#2-6-找回实际路径" class="headerlink" title="2.6 找回实际路径"></a>2.6 找回实际路径</h4><p>从route和目标hash值中找回实际路径，并输出<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">(<span class="built_in">map</span>&lt;<span class="built_in">string</span>,<span class="built_in">string</span>&gt; searchRoute,<span class="built_in">string</span> targetHash)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="built_in">string</span>&gt; shortestRoute;</span><br><span class="line">    shortestRoute.push(targetHash);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">string</span> nextWay = targetHash;</span><br><span class="line">    <span class="keyword">while</span>( searchRoute.find(nextWay) != searchRoute.end() ) &#123;</span><br><span class="line">        nextWay = searchRoute[nextWay];</span><br><span class="line">        shortestRoute.push(nextWay);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">int</span> counts = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>( !shortestRoute.empty() ) &#123;</span><br><span class="line">        <span class="built_in">string</span> displayString = shortestRoute.top();</span><br><span class="line">        shortestRoute.pop();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>( (counts == <span class="number">0</span>) &amp;&amp; (displayString == targetHash) ) &#123;       <span class="comment">//如果堆栈内只有一个字符串元素,且等于targetHash,那么说明遍历了所有的状态也无法达到目标状态</span></span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"Sorry, but you can not reach the target status, and you can try another status instead."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Step "</span> &lt;&lt; counts &lt;&lt; <span class="string">" :"</span>;</span><br><span class="line">        counts++;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">unsigned</span> <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; displayString.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>( i % <span class="number">3</span> == <span class="number">0</span> ) &#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; displayString.substr(i,<span class="number">1</span>) &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>( counts &gt; <span class="number">1</span> ) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Totally, you used "</span> &lt;&lt; counts<span class="number">-1</span> &lt;&lt; <span class="string">" steps to the target status."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>源码可以在<a href="https://github.com/zhen-yu/Miscellaneous/tree/master/SquaredUp/CPP" target="_blank" rel="noopener">这里</a>看到</p>
+<h4 id="2-2-输入功能"><a href="#2-2-输入功能" class="headerlink" title="2.2 输入功能"></a>2.2 输入功能</h4><p>输入功能必须要有,就控制台输入了, 可以把代码移到C#上，用Winform做一个GUI界面~</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> origin<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>target<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>定义3*3的数组表示九宫格的九个数字, origin分别为初始状态和目标状态, 循环读入即可. 至于为何不使用1*9的一维数组, 照顾要是考虑到后续搜索路径的问题, 3*3的路径比较容易设计, 其中一个数组下标变化1即可, 而对于1*9, 感觉有点复杂(后来发现其实并不是, 将下标分别+-3和+-1就得到了四个路径, 再判断新状态是否有效即可, 好像还比3*3简单点)</p>
+<h4 id="2-3-状态判重"><a href="#2-3-状态判重" class="headerlink" title="2.3 状态判重"></a>2.3 状态判重</h4><p>对于每个状态必须判重，也要判断是否与目标状态相同，如果是将9个元素逐个比较，太耗时，肯定是得用到hash，hash方法<a target="_blank" rel="noopener" href="http://www.cnblogs.com/goodness/archive/2010/05/04/1727141.html">http://www.cnblogs.com/goodness/archive/2010/05/04/1727141.html</a>中的境界二有提到，但是我没看懂<del>“逆序值”这个词写的不清楚，感觉应该是排列组合中的一个名词，但是搜出来的都不对，于是自己设计个不能称之为hash的hash函数, 因为这个方法的信息量没有压缩, 是可逆的<br>对于每种状态只需要唯一对应一个值即可，于是想着把每种状态的数字串成字符串当作hash值，这肯定不是好方法，至少本来只需要9!&#x3D;362880个int型元素就能存下所有状态，而现在对于每种状态都是一个9位长的字符串</del>不过有一个好处就是存储的信息相对而言多了, 对于最后输出所有路径有所帮助。</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">string <span class="token function">getHash</span><span class="token punctuation">(</span><span class="token keyword">int</span> v<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>                           <span class="token comment">//将状态的数字排序转换为字符串,作为hash值</span>
+    string hashString <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            stringstream sstream<span class="token punctuation">;</span>
+            string str<span class="token punctuation">;</span>
+            sstream <span class="token operator">&lt;&lt;</span> v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>                          <span class="token comment">//注意sstream输入是&lt;&lt;而不是iostream的>></span>
+            sstream <span class="token operator">>></span> str<span class="token punctuation">;</span>
+            hashString <span class="token operator">+=</span> str<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> hashString<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="2-4-建立初始表结构"><a href="#2-4-建立初始表结构" class="headerlink" title="2.4 建立初始表结构"></a>2.4 建立初始表结构</h4><p>根据给定初始状态建立初始的表结构，找到0的位置即为可移动的空格位置并记录，找到得到hash值并记录</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">VertexOfGraph <span class="token function">createGraph</span><span class="token punctuation">(</span><span class="token keyword">int</span> vertex<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    VertexOfGraph returnGraph<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span><span class="token number">3</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            returnGraph<span class="token punctuation">.</span>vertex<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> vertex<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>vertex<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                returnGraph<span class="token punctuation">.</span>x <span class="token operator">=</span> i<span class="token punctuation">;</span>
+                returnGraph<span class="token punctuation">.</span>y <span class="token operator">=</span> j<span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    returnGraph<span class="token punctuation">.</span>hashValue <span class="token operator">=</span> <span class="token function">getHash</span><span class="token punctuation">(</span>vertex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> returnGraph<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="2-5-bfs广度搜索"><a href="#2-5-bfs广度搜索" class="headerlink" title="2.5 bfs广度搜索"></a>2.5 bfs广度搜索</h4><p>搜索结果返回一个map表，将每一状态转换之后的状态作为key值，原状态作为value，一一对应保存起来，最后通过此表可得到实际路径</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span>string<span class="token operator">></span> <span class="token function">bfsSearch</span><span class="token punctuation">(</span>VertexOfGraph graph<span class="token punctuation">,</span>string targetHash<span class="token punctuation">,</span>map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span><span class="token keyword">bool</span><span class="token operator">></span> visited<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> direction<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token punctuation">&#123;</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">&#125;</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    queue<span class="token operator">&lt;</span>VertexOfGraph<span class="token operator">></span> que<span class="token punctuation">;</span>
+    que<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>graph<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span>string<span class="token operator">></span> route<span class="token punctuation">;</span>
+
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">!</span>que<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        VertexOfGraph movingVertex <span class="token operator">=</span> que<span class="token punctuation">.</span><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//cout &lt;&lt; movingVertex.hashValue &lt;&lt; endl;       //测试遍历结果</span>
+        VertexOfGraph savingVertex <span class="token operator">=</span> movingVertex<span class="token punctuation">;</span>
+        que<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            movingVertex <span class="token operator">=</span> savingVertex<span class="token punctuation">;</span>
+            movingVertex<span class="token punctuation">.</span>x <span class="token operator">=</span> savingVertex<span class="token punctuation">.</span>x <span class="token operator">+</span> direction<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            movingVertex<span class="token punctuation">.</span>y <span class="token operator">=</span> savingVertex<span class="token punctuation">.</span>y <span class="token operator">+</span> direction<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>movingVertex<span class="token punctuation">.</span><span class="token function">isValid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+                movingVertex<span class="token punctuation">.</span><span class="token function">newStatus</span><span class="token punctuation">(</span>savingVertex<span class="token punctuation">.</span>x<span class="token punctuation">,</span> savingVertex<span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                movingVertex<span class="token punctuation">.</span>hashValue <span class="token operator">=</span> <span class="token function">getHash</span><span class="token punctuation">(</span>movingVertex<span class="token punctuation">.</span>vertex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>visited<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>movingVertex<span class="token punctuation">.</span>hashValue<span class="token punctuation">)</span><span class="token operator">==</span>visited<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                    visited<span class="token punctuation">[</span>movingVertex<span class="token punctuation">.</span>hashValue<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                    route<span class="token punctuation">[</span>movingVertex<span class="token punctuation">.</span>hashValue<span class="token punctuation">]</span> <span class="token operator">=</span> savingVertex<span class="token punctuation">.</span>hashValue<span class="token punctuation">;</span>
+
+                    que<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>movingVertex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>movingVertex<span class="token punctuation">.</span>hashValue <span class="token operator">==</span> targetHash<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                    <span class="token keyword">return</span> route<span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> route<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>bfs的想法是，从第一个状态开始遍历可能的所有状态，对于当前状态，找出其可以转换的状态，将他们全部放入队列的尾部，保存route，并判断他们是否是目标状态，若是，返回route退出，否则不停取出队列的头元素，执行相同操作</p>
+<h4 id="2-6-找回实际路径"><a href="#2-6-找回实际路径" class="headerlink" title="2.6 找回实际路径"></a>2.6 找回实际路径</h4><p>从route和目标hash值中找回实际路径，并输出</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">display</span><span class="token punctuation">(</span>map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span>string<span class="token operator">></span> searchRoute<span class="token punctuation">,</span>string targetHash<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    stack<span class="token operator">&lt;</span>string<span class="token operator">></span> shortestRoute<span class="token punctuation">;</span>
+    shortestRoute<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>targetHash<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    string nextWay <span class="token operator">=</span> targetHash<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span> searchRoute<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>nextWay<span class="token punctuation">)</span> <span class="token operator">!=</span> searchRoute<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        nextWay <span class="token operator">=</span> searchRoute<span class="token punctuation">[</span>nextWay<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        shortestRoute<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>nextWay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> counts <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span> <span class="token operator">!</span>shortestRoute<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        string displayString <span class="token operator">=</span> shortestRoute<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        shortestRoute<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>counts <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>displayString <span class="token operator">==</span> targetHash<span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>       <span class="token comment">//如果堆栈内只有一个字符串元素,且等于targetHash,那么说明遍历了所有的状态也无法达到目标状态</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Sorry, but you can not reach the target status, and you can try another status instead."</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Step "</span> <span class="token operator">&lt;&lt;</span> counts <span class="token operator">&lt;&lt;</span> <span class="token string">" :"</span><span class="token punctuation">;</span>
+        counts<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> displayString<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span> i <span class="token operator">%</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            cout <span class="token operator">&lt;&lt;</span> displayString<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token char">' '</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> counts <span class="token operator">></span> <span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Totally, you used "</span> <span class="token operator">&lt;&lt;</span> counts<span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token string">" steps to the target status."</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>源码可以在<a target="_blank" rel="noopener" href="https://github.com/zhen-yu/Miscellaneous/tree/master/SquaredUp/CPP">这里</a>看到</p>
 
     </div>
 
     
     
-    <div class="post-widgets">
+    
+
+    <footer class="post-footer"><div class="post-widgets">
       <div id="needsharebutton-postbottom">
         <span class="btn">
           <i class="fa fa-share-alt" aria-hidden="true"></i>
         </span>
       </div>
     </div>
-        <div class="reward-container">
+          <div class="reward-container">
   <div>Compensated Dating</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+  <button>
     Donate
   </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
+  <div class="post-reward">
+      <div>
         <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
-        <p>Bitcoin</p>
+        <span>Bitcoin</span>
       </div>
 
   </div>
 </div>
 
-        
+          
 
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>Kino
+      <strong>Post author:  </strong>Kino
   </li>
   <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="https://blog.xuwei.fun/2015/05/29/algorithm02/" title="九宫格(八数码)问题">https://blog.xuwei.fun/2015/05/29/algorithm02/</a>
+      <strong>Post link: </strong>
+      <a href="https://blog.xuwei.fun/2015/05/29/algorithm02/" title="九宫格(八数码)问题">https://blog.xuwei.fun/2015/05/29/algorithm02/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -381,37 +539,33 @@
 </ul>
 </div>
 
-        
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <p>Welcome to my other publishing channels</p>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+          <span class="icon">
+            <i class="weibo"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
-            <span class="icon">
-              <i class="weibo"></i>
-            </span>
+          <span class="label">Weibo</span>
+        </a>
+      </div>
 
-            <span class="label">Weibo</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+          <span class="icon">
+            <i class="wechat"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
-            <span class="icon">
-              <i class="wechat"></i>
-            </span>
-
-            <span class="label">Wechat</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">Wechat</span>
+        </a>
+      </div>
   </div>
+</div>
 
-
-      <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/cpp/" rel="tag"># cpp</a>
               <a href="/tags/eightpuzzle/" rel="tag"># eightpuzzle</a>
@@ -419,29 +573,27 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2015/05/26/ubuntu01/" rel="prev" title="安装Ubuntu 15.04之后">
-      <i class="fa fa-chevron-left"></i> 安装Ubuntu 15.04之后
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2015/06/06/linux01/" rel="next" title="Linux琐记一">
-      Linux琐记一 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2015/05/26/ubuntu01/" rel="prev" title="安装Ubuntu 15.04之后">
+                  <i class="fa fa-chevron-left"></i> 安装Ubuntu 15.04之后
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2015/06/06/linux01/" rel="next" title="Linux琐记一">
+                  Linux琐记一 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
@@ -449,193 +601,58 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
+              <div class="comments gitalk-container"></div>
             </div>
             <div class="tab-pane livere" id="comment-livere">
-              
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
-  </div>
-  
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-前言"><span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-实现"><span class="nav-text">2. 实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-定义一个图的节点类"><span class="nav-text">2.1 定义一个图的节点类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-输入功能"><span class="nav-text">2.2 输入功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-状态判重"><span class="nav-text">2.3 状态判重</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-建立初始表结构"><span class="nav-text">2.4 建立初始表结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-bfs广度搜索"><span class="nav-text">2.5 bfs广度搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-找回实际路径"><span class="nav-text">2.6 找回实际路径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码"><span class="nav-text">源码</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Kino"
-      src="/images/site/avatar.png">
-  <p class="site-author-name" itemprop="name">Kino</p>
-  <div class="site-description" itemprop="description">Amor Fati</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">123</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">122</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">356k</span>
-    <span class="post-meta-divider">|</span>
+    <span title="Symbols count total">353k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:23</span>
+    <span title="Reading time total">5:21</span>
+  </span>
 </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
+
+  <script src="/js/third-party/pace.js"></script>
 
   
 
@@ -643,35 +660,14 @@
 
 
   
-<script src="/js/local-search.js"></script>
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout : 1000,
-        priority: false,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2015/05/29/algorithm02/',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":1000,"priority":false,"archives":false,"url":"https://blog.xuwei.fun/2015/05/29/algorithm02/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -691,42 +687,11 @@
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '58ab17a966414cd66c67',
-      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
-      repo        : 'WoeiSheu.github.io',
-      owner       : 'WoeiSheu',
-      admin       : ['WoeiSheu'],
-      id          : '1dcc589339be619d47c84bc1d0965347',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
-
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"1dcc589339be619d47c84bc1d0965347"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {

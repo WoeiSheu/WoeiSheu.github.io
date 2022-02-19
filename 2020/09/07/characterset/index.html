@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
@@ -15,21 +17,20 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-  <meta name="description" content="一、前言在和朋友聊天时，突然无话可说，屏幕前的你该如何是好呢? 很多时候屏幕前的我们，都会想到发个表情，然后彼此心照不宣地沉默。如果你用的是windows 10的新版本，按下 winkey + period （即windows图标和英文句点按钮），就会有如下的弹出框。  图1.1  反复斟酌、几度纠结之后，你选择了这样一个表情：😤。将鼠标停留在这个表情上几秒，可以看到提示文字：“傲慢”。如果你用">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.xuwei.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+  <meta name="description" content="一、前言在和朋友聊天时，突然无话可说，屏幕前的你该如何是好呢? 很多时候屏幕前的我们，都会想到发个表情，然后彼此心照不宣地沉默。如果你用的是windows 10的新版本，按下 winkey + period （即windows图标和英文句点按钮），就会有如下的弹出框。  图1.1  反复斟酌、几度纠结之后，你选择了这样一个表情：😤。将鼠标停留在这个表情上几秒，可以看到提示文字：“傲慢”。如果你用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从一个Emoji字符说起">
 <meta property="og:url" content="https://blog.xuwei.fun/2020/09/07/characterset/index.html">
 <meta property="og:site_name" content="霁月荒馆">
-<meta property="og:description" content="一、前言在和朋友聊天时，突然无话可说，屏幕前的你该如何是好呢? 很多时候屏幕前的我们，都会想到发个表情，然后彼此心照不宣地沉默。如果你用的是windows 10的新版本，按下 winkey + period （即windows图标和英文句点按钮），就会有如下的弹出框。  图1.1  反复斟酌、几度纠结之后，你选择了这样一个表情：😤。将鼠标停留在这个表情上几秒，可以看到提示文字：“傲慢”。如果你用">
+<meta property="og:description" content="一、前言在和朋友聊天时，突然无话可说，屏幕前的你该如何是好呢? 很多时候屏幕前的我们，都会想到发个表情，然后彼此心照不宣地沉默。如果你用的是windows 10的新版本，按下 winkey + period （即windows图标和英文句点按钮），就会有如下的弹出框。  图1.1  反复斟酌、几度纠结之后，你选择了这样一个表情：😤。将鼠标停留在这个表情上几秒，可以看到提示文字：“傲慢”。如果你用">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.xuwei.fun/images/character_set/image_1_1.png">
 <meta property="og:image" content="https://blog.xuwei.fun/images/character_set/image_2_1.jpg">
@@ -62,18 +63,23 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blog.xuwei.fun/images/character_set/image_1_1.png">
 
+
 <link rel="canonical" href="https://blog.xuwei.fun/2020/09/07/characterset/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.xuwei.fun/2020/09/07/characterset/","path":"2020/09/07/characterset/","title":"从一个Emoji字符说起"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>从一个Emoji字符说起 | 霁月荒馆</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-104049598-2","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
 #needsharebutton-postbottom {
   cursor: pointer;
@@ -101,68 +107,31 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>从一个Emoji字符说起 | 霁月荒馆</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-104049598-2');
-      }
-    </script>
-
-
-
-
-
-
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">霁月荒馆</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">霁月荒馆</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
   </div>
@@ -176,54 +145,17 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-thoughts">
-
-    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
-
-  </li>
-        <li class="menu-item menu-item-excerpt">
-
-    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
-
-  </li>
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-thoughts"><a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>Thoughts</a></li>
+        <li class="menu-item menu-item-excerpt"><a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>Excerpt</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -234,23 +166,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -258,28 +189,122 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E8%A8%80"><span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Emoji%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F"><span class="nav-text">二、Emoji的前世今生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AD%97%E7%AC%A6%E9%9B%86%E5%92%8C%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81"><span class="nav-text">三、字符集和字符编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E8%AF%AD%E8%A8%80%E5%AD%A6%E7%AE%80%E4%BB%8B"><span class="nav-text">3.1 语言学简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E7%AE%80%E4%BB%8B"><span class="nav-text">3.2 计算机科学简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%EF%BC%88%E7%BC%96%E7%A0%81%EF%BC%89%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="nav-text">3.3 （编码）字符集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81"><span class="nav-text">3.4 字符编码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-UTF-32"><span class="nav-text">3.4.1 UTF-32</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-UTF-16"><span class="nav-text">3.4.2 UTF-16</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-UTF-8"><span class="nav-text">3.4.3 UTF-8</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E5%A4%A7%E7%AB%AF%E5%B0%8F%E7%AB%AF"><span class="nav-text">3.5 大端小端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-BOM-byte-order-mark"><span class="nav-text">3.6 BOM(byte order mark)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-Unicode%E6%8E%A7%E5%88%B6%E5%AD%97%E7%AC%A6"><span class="nav-text">3.7 Unicode控制字符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-1-ISO-6429%E6%8E%A7%E5%88%B6%E5%AD%97%E7%AC%A6-C0%E4%B8%8EC1%E6%8E%A7%E5%88%B6%E5%AD%97%E7%AC%A6"><span class="nav-text">3.7.1 ISO 6429控制字符(C0与C1控制字符)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-2-Unicode%E5%BC%95%E5%85%A5%E7%9A%84%E5%88%86%E9%9A%94%E7%AC%A6"><span class="nav-text">3.7.2 Unicode引入的分隔符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-3-%E8%AF%AD%E8%A8%80%E6%A0%87%E8%AE%B0"><span class="nav-text">3.7.3 语言标记</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-4-%E8%A1%8C%E9%97%B4%E6%A0%87%E6%B3%A8"><span class="nav-text">3.7.4 行间标注</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-5-%E5%8F%8C%E5%90%91%E6%96%87%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="nav-text">3.7.5 双向文本控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-6-%E5%BC%82%E4%BD%93%E5%AD%97%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">3.7.6 异体字选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-7-%E6%8E%A7%E5%88%B6%E5%AD%97%E7%AC%A6%E7%9A%84%E5%9B%BE%E7%89%87"><span class="nav-text">3.7.7 控制字符的图片</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-%E7%BB%84%E5%90%88%E5%AD%97%E7%AC%A6-Combining-Character"><span class="nav-text">3.8 组合字符(Combining Character)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-1-%E7%BB%84%E5%90%88%E6%A0%87%E8%AE%B0-Combining-Marks"><span class="nav-text">3.8.1 组合标记(Combining Marks)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-2-Grapheme-%E5%92%8C-Grapheme-Cluster"><span class="nav-text">3.8.2 Grapheme 和 Grapheme Cluster</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-3-Unicode%E7%AD%89%E4%BB%B7-Unicode-equivalence-%E5%8F%8A%E6%AD%A3%E8%A7%84%E5%8C%96-Normalization"><span class="nav-text">3.8.3 Unicode等价(Unicode equivalence)及正规化(Normalization)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-9-%E7%89%B9%E6%AE%8A%E7%9A%84%E7%BB%84%E5%90%88%E5%AD%97%E7%AC%A6"><span class="nav-text">3.9 特殊的组合字符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">四、注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8D%E6%94%AF%E6%8C%81"><span class="nav-text">4.1 数据库不支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E6%89%93%E5%8D%B0%E6%9C%BA%E4%B8%8D%E6%94%AF%E6%8C%81"><span class="nav-text">4.2 打印机不支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E5%AE%89%E5%85%A8%E5%8E%9F%E5%9B%A0"><span class="nav-text">4.3 安全原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%AD%97%E4%BD%93%E4%B8%8E%E6%8E%92%E7%89%88"><span class="nav-text">五、字体与排版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81Q-amp-A"><span class="nav-text">六、Q&amp;A</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E2%80%9C%F0%9F%98%A4%E2%80%9D%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84length%E6%98%AF%E5%A4%9A%E5%B0%91"><span class="nav-text">6.1 “😤”在不同的编程语言中的length是多少?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-1-Java%E7%9A%84%E8%A1%A8%E7%8E%B0"><span class="nav-text">6.1.1 Java的表现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-2-Javascript%E7%9A%84%E8%A1%A8%E7%8E%B0"><span class="nav-text">6.1.2 Javascript的表现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-3-Python%E7%9A%84%E8%A1%A8%E7%8E%B0"><span class="nav-text">6.1.3 Python的表现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-4-Go%E7%9A%84%E8%A1%A8%E7%8E%B0"><span class="nav-text">6.1.4 Go的表现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8D%E8%BD%AC%E9%83%BD%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86"><span class="nav-text">6.2 字符串反转都如何处理?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-%E6%80%8E%E4%B9%88%E9%99%A4%E5%8E%BB4%E5%AD%97%E8%8A%82%E7%BC%96%E7%A0%81%E7%9A%84utf-8%E5%AD%97%E7%AC%A6"><span class="nav-text">6.3 怎么除去4字节编码的utf-8字符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnote"><span class="nav-text">Footnote</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https:&#x2F;&#x2F;xuwei.fun&#x2F;" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https:&#x2F;&#x2F;blog.xuwei.fun&#x2F;bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
 
-    
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2020/09/07/characterset/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -296,51 +321,54 @@
           从一个Emoji字符说起
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-09-07 22:22:22" itemprop="dateCreated datePublished" datetime="2020-09-07T22:22:22+08:00">2020-09-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-09-20 15:08:22" itemprop="dateModified" datetime="2020-09-20T15:08:22+08:00">2020-09-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techonology/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
-                </span>
-            </span>
+      <time title="Created: 2020-09-07 22:22:22" itemprop="dateCreated datePublished" datetime="2020-09-07T22:22:22+08:00">2020-09-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2020-09-20 15:08:22" itemprop="dateModified" datetime="2020-09-20T15:08:22+08:00">2020-09-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/techonology/" itemprop="url" rel="index"><span itemprop="name">techonology</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/techonology/cs/" itemprop="url" rel="index"><span itemprop="name">cs</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>26k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>24 mins.</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>26k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>24 mins.</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -349,20 +377,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-        <h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>在和朋友聊天时，突然无话可说，屏幕前的你该如何是好呢? 很多时候屏幕前的我们，都会想到发个表情，然后彼此心照不宣地沉默。如果你用的是windows 10的新版本，按下 <code>winkey + period</code> （即windows图标和英文句点按钮），就会有如下的弹出框。</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>在和朋友聊天时，突然无话可说，屏幕前的你该如何是好呢? 很多时候屏幕前的我们，都会想到发个表情，然后彼此心照不宣地沉默。如果你用的是windows 10的新版本，按下 <code>winkey + period</code> （即windows图标和英文句点按钮），就会有如下的弹出框。</p>
 <p><img src="/images/character_set/image_1_1.png" alt="image_1_1.png"></p>
 <p align="center">图1.1</p>
 
 <p>反复斟酌、几度纠结之后，你选择了这样一个表情：😤。将鼠标停留在这个表情上几秒，可以看到提示文字：“傲慢”。如果你用的是andriod、ios，在输入法中仔细搜寻，一定也可以发现这样一个表情。</p>
-<p>如果哪里都找不到，也没关系，直接将这个表情复制，粘贴到微信聊天框中，回车，成功地将这个表情发了出去。在对方沉默不语的时间里，你点开了微信对话框里的表情，却发现怎么也找不着这个傲慢的表情?！但是这个表情的确正确地显示了呀?这是怎么回事呢?“微信连不存在的表情都支持，太厉害了叭！”也许你会发出这样的感慨。也有可能你会嗤之以鼻：“不过是显示了一张图片而已”。不过，这真的是图片吗? 且听我缓缓道来。<br><a id="more"></a></p>
+<p>如果哪里都找不到，也没关系，直接将这个表情复制，粘贴到微信聊天框中，回车，成功地将这个表情发了出去。在对方沉默不语的时间里，你点开了微信对话框里的表情，却发现怎么也找不着这个傲慢的表情?！但是这个表情的确正确地显示了呀?这是怎么回事呢?“微信连不存在的表情都支持，太厉害了叭！”也许你会发出这样的感慨。也有可能你会嗤之以鼻：“不过是显示了一张图片而已”。不过，这真的是图片吗? 且听我缓缓道来。</p>
+<span id="more"></span>
+
 <p><a name="29Um5"></a></p>
 <h2 id="二、Emoji的前世今生"><a href="#二、Emoji的前世今生" class="headerlink" title="二、Emoji的前世今生"></a>二、Emoji的前世今生</h2><p>上面的表情，其实是个emoji字符。emoji这个词，互联网时代的人当然都不会陌生。但是刚刚的表述，又说它是表情，又说它是字符，似乎将表情和字符混为一谈了，这是怎么回事呢?其实准确来说，emoji应该称为“表情字符”，其本质还是一个字符，只是个用来象征表情的字符罢了。一个emoji字符，和一个字母、一个汉字，没有什么本质的不同，或者想象一下，对于一个不懂汉字的人来说，汉字看起来也许也就像一个个表情呢~ 当然啦，表情也可以用图片表示，至于计算机上区别字符和图片的根本因素是什么，稍后再论，这里先说下emoji出现的历史。</p>
 <p>Emoji用日语表示就是「絵文字」，平假名为「えもじ」，1999年，由株式会社NTT DoCoMo的iMode服务团队开发，在12×12格的方格纸上以简单的图案描绘出人的各种表情及生活事物，再把它们对应成字符数据，NTT公司的这一发明意在提供一种在画面尺寸和通信量受限的情况下，让用户们通过视觉顺利进行交流的方式。</p>
 <p>Emoji诞生之初，就得到了年轻人的追捧，到了2004年左右它已经被全日本所接受。2009年emoji被收录进Unicode编码，成为了世界标准的通用字符，2012年智能手机中加入了对emoji的支持，2014年提出了“世界Emoji日(World Emoji Day)”，2015年《牛津词典》的年度词汇是😂，2016年起，纽约现代美术馆（MoMA）将NTT DoCoMo的iMode中提供的第一版176个emoji纳入永久收藏。如今，emoji已经成为了iOS、Android、Mac OS及Windows中默认支持的表情符号。</p>
 <blockquote>
-<p>关于世界Emoji日，是在每年的7月17日，因为提出了World Emoji Day, 因此各个平台上表示日历的Emoji也都展示的是7月17日，📅<a href="https://emojipedia.org/calendar/" target="_blank" rel="noopener">Calendar Emoji</a>，还有一个专门的World Emoji Day网站：<a href="https://worldemojiday.com/" target="_blank" rel="noopener">点我试试</a></p>
+<p>关于世界Emoji日，是在每年的7月17日，因为提出了World Emoji Day, 因此各个平台上表示日历的Emoji也都展示的是7月17日，📅<a target="_blank" rel="noopener" href="https://emojipedia.org/calendar/">Calendar Emoji</a>，还有一个专门的World Emoji Day网站：<a target="_blank" rel="noopener" href="https://worldemojiday.com/">点我试试</a></p>
 </blockquote>
 <p>iMode的开发负责人是栗田穣崇(Shigetaka Kurita)，也是他设计了最早版本的emoji，引用一句栗田先生后来的回忆分析：</p>
 <blockquote>
@@ -407,7 +435,7 @@
 <h3 id="3-3-（编码）字符集"><a href="#3-3-（编码）字符集" class="headerlink" title="3.3 （编码）字符集"></a>3.3 （编码）字符集</h3><p>在说字符集之前，先厘清几个概念。 而这些概念中，我们经常将编码字符集和字符集混为一谈，倒也不太影响理解，因此这里也就不那么严谨，理解万岁！！</p>
 <blockquote>
 <ul>
-<li>字符集/字符库(Character set/Character repertoire)：被一种或多种语言使用的字符的集合。也就是说，字符集告诉了我们，一门语言中，到底有多少个字符，每个字符是什么。</li>
+<li>字符集&#x2F;字符库(Character set&#x2F;Character repertoire)：被一种或多种语言使用的字符的集合。也就是说，字符集告诉了我们，一门语言中，到底有多少个字符，每个字符是什么。</li>
 <li>编码字符集(Coded character set)：每个字符对应一个独一无二的数字的集合。即将字符集和数字一一对应的集合。</li>
 <li>码点(Code point)：编码字符集中的任一个合法数字，称之为码点。</li>
 <li>编码空间(Code space)：包含所有码点的整数范围。</li>
@@ -417,30 +445,31 @@
 <p>对于计算机的诞生国美国来说，很简单，只需要考虑26个英文字母及其大小写，再加上阿拉伯数字、标点符号和一些特殊的控制字符，字符集的容量只要128够了。因此美帝标准协会制定了一个标准，用来表示英文世界中需要用到的所有字符，这个标准就是ASCII(American Standard Code for Information Interchange)。128个数，用二进制来表示，7位也就够了，一个字节绰绰有余。</p>
 <p><img src="/images/character_set/image_3_2.gif" alt="image_3_2"></p>
 <p align="center">图3.2</p>
-
+    
 <p>但是渐渐地，欧洲国家也开始有了计算机，它们使用更多的字符，因此将一个字节中没有使用的最高位也用上了，制定了一套Extended ASCII Codes.</p>
 <p><img src="/images/character_set/image_3_3.gif" alt="image_3_3"></p>
 <p align="center">图3.3</p>
 
 <p>后来亚洲国家也开始使用计算机，汉字需要制定一套标准字符集，因此中国国家标准总局逐步制定了GB2312、GBK、GB13000、GB18030的标准字符集。日语也需要一套字符集，于是日本政府就逐步制定了JIS X 0201–1976、JIS X 0208–1990、JIS X 0212–1990、JIS X 0213–2000等标准字符集。</p>
 <p>这样一直下去，问题就来了，不同国家之间没有沟通，同样一个数字，用汉语的编码字符集解读是正常的，用日语编码字符集就会出错。为了解决这个问题，各国之间也想约定一个世界统一的文字字符集标准，这就诞生了 Unicode。</p>
-<p>Unicode目前使用了0(0x0000)~1114111(0x10FFFF)的编码范围，也就是说，当前Unicode的编码空间(Code Space)是0~0x10FFFF，之所以说是“当前”，是因为Unicode本身也是在不断发展的，早期Unicode的Code Space只用了0~65535(0xFFFF)的范围，只是随着发展，Unicode标准委员会的人才发现，原来还有各种各样隐藏在世界各处的字符，当然需要加进来！这就导致BMP的范围不够用了，只好扩展Unicode的范围，只是，实际扩展到1114111(0x10FFFF)之后，委员会的人又发现，这么多字符不可能用得完呀！不用又觉得浪费，不如加一些不太正常的语言文字吧，这就包含了文章开头提到的Emoji表情字符。</p>
+<p>Unicode目前使用了0(0x0000)<del>1114111(0x10FFFF)的编码范围，也就是说，当前Unicode的编码空间(Code Space)是0</del>0x10FFFF，之所以说是“当前”，是因为Unicode本身也是在不断发展的，早期Unicode的Code Space只用了0~65535(0xFFFF)的范围，只是随着发展，Unicode标准委员会的人才发现，原来还有各种各样隐藏在世界各处的字符，当然需要加进来！这就导致BMP的范围不够用了，只好扩展Unicode的范围，只是，实际扩展到1114111(0x10FFFF)之后，委员会的人又发现，这么多字符不可能用得完呀！不用又觉得浪费，不如加一些不太正常的语言文字吧，这就包含了文章开头提到的Emoji表情字符。</p>
 <p>Unicode范围如此之大，当然就会想要将它划分成几大块，方便分类，也更容易理解，Unicode标准将这种分片叫做平面(Plane)。最早使用的 0~0xFFFF，就是 基本多语言平面(BMP, Basic Multilingual Plane) 的范围。</p>
 <p><img src="/images/character_set/image_3_4.png" alt="image_3_4"></p>
 <p align="center">图3.4</p>
-
-<p>Unicode总共划分了17个平面，每个平面65536个编码空间，总共正好是 65536*17=1114112=0x10FFFF+1</p>
+    
+<p>Unicode总共划分了17个平面，每个平面65536个编码空间，总共正好是 65536*17&#x3D;1114112&#x3D;0x10FFFF+1</p>
 <p><img src="/images/character_set/image_3_5.png" alt="image_3_5"></p>
 <p align="center">图3.5</p>
 
-<p>所有的Unicode字符都可以在 <a href="https://unicode-table.com/en" target="_blank" rel="noopener">这里</a> 看到。 <strong>值得注意的是，哪怕Unicode的编码空间大到用不完，却也不包含任何商标，比如Windows和Apple的注册商标等</strong>，这也是为何 文章开头只能用 winkey 来指代windows的按钮，却无法找到合适的字符。</p>
+<p>所有的Unicode字符都可以在 <a target="_blank" rel="noopener" href="https://unicode-table.com/en">这里</a> 看到。 <strong>值得注意的是，哪怕Unicode的编码空间大到用不完，却也不包含任何商标，比如Windows和Apple的注册商标等</strong>，这也是为何 文章开头只能用 winkey 来指代windows的按钮，却无法找到合适的字符。</p>
 <h3 id="3-4-字符编码"><a href="#3-4-字符编码" class="headerlink" title="3.4 字符编码"></a>3.4 字符编码</h3><p>Unicode字符集，在概念上只是编码字符集，它本身只指定了每个数字对应哪个字符，但在计算机中，这个数字究竟存储成什么样的二进制，却没有指定一个统一的标准。Unicode字符集的字符编码方式，就是UTF(Unicode Transformation Format)系列。</p>
 <h4 id="3-4-1-UTF-32"><a href="#3-4-1-UTF-32" class="headerlink" title="3.4.1 UTF-32"></a>3.4.1 UTF-32</h4><p>UTF-32就是用32位(也就是4个字节)来存储一个Unicode字符集中的一个字符，UTF-32的值，正好对应Unicode字符集中字符的码点(Code point)值。<br>比如：</p>
 <ul>
-<li>😤的码点值为 <code>128548(0x1F624)</code>，那么对应的UTF-32编码也就是 <code>0x1F624</code>，在计算机中存储的二进制形态就是： <code>00000000 00000001 11110110 00100100</code> </li>
-<li>“梦”的码点值是 <code>0x68A6</code>，用UTF-32存储在计算机中就是： <code>00000000 00000000 01101000 10100110</code> </li>
-<li>“S”的码点是 <code>0x0053</code>，用UTF-32存储就是： <code>00000000 00000000 00000000 01010011</code> </li>
+<li>😤的码点值为 <code>128548(0x1F624)</code>，那么对应的UTF-32编码也就是 <code>0x1F624</code>，在计算机中存储的二进制形态就是： <code>00000000 00000001 11110110 00100100</code> </li>
+<li>“梦”的码点值是 <code>0x68A6</code>，用UTF-32存储在计算机中就是： <code>00000000 00000000 01101000 10100110</code> </li>
+<li>“S”的码点是 <code>0x0053</code>，用UTF-32存储就是： <code>00000000 00000000 00000000 01010011</code></li>
 </ul>
+<p> </p>
 <p><strong>UTF-32编码在实际中是没有被使用的</strong></p>
 <h4 id="3-4-2-UTF-16"><a href="#3-4-2-UTF-16" class="headerlink" title="3.4.2 UTF-16"></a>3.4.2 UTF-16</h4><p>相信你已经发现UTF-32的问题所在了，那就是大多数字符都不需要用到32位，最多也就是24位（3个字节），所有字符都用UTF-32编码太浪费，而且Unicode标准刚制定时，也就只有BMP范围，BMP范围的字符，两个字节就刚好够了，因此有UTF-16的编码格式。在BMP平面上的字符，其UTF-16的编码，和UTF-32一样，也就是字符对应的码点值。</p>
 <p>比如：</p>
@@ -449,12 +478,12 @@
 <li>“S”的码点是 <code>0x0053</code>，用UTF-16存储就是： <code>00000000 01010011</code></li>
 </ul>
 <p>但是这样就出现了一个问题，那些后来追加的字符集，码点值大于 0xFFFF 的，该怎么用 UTF-16 表示呢? 比如😤。而且这种表示方法，还不能影响已有的UTF-16编码的字符数据，这可怎么办?</p>
-<p>没办法，为了照顾很多采用UTF-16的系统、软件，Unicode规定了BMP平面中的 0xD800~0xDFFF 为 <strong>surrogates</strong> 字符，在图3.5中也可以看到，Unicode规定这部分码点值，不能用来表示任何字符。实际上，这部分还可被分为两部分，0xD800~0xDBFF，称为 high surrogates，0xDC00~0xDFFF，称为 low surrogates。</p>
+<p>没办法，为了照顾很多采用UTF-16的系统、软件，Unicode规定了BMP平面中的 0xD800<del>0xDFFF 为 <strong>surrogates</strong> 字符，在图3.5中也可以看到，Unicode规定这部分码点值，不能用来表示任何字符。实际上，这部分还可被分为两部分，0xD800</del>0xDBFF，称为 high surrogates，0xDC00~0xDFFF，称为 low surrogates。</p>
 <p>这样的话，对于一个大于0xFFFF的值，如果想用UTF-16编码，就可以用32位4个字节表示，high surrogate + low surrogate 拼成一个surrogate pair就行，这样在程序读到两个字节时，如果判断它是 surrogate，那么就认为它不是正常字符，需要和另一个surrogate拼接起来才行，组成另一个字符。例如：</p>
 <ul>
 <li>😤的码点值为 <code>0x1F624</code>，那么对应的UTF-16的surrogate pair也就是 <code>0xD83D + 0xDE24</code>，二进制就是： <code>11011000 01011101 11011110 00100100</code></li>
 </ul>
-<p><strong>不难算出，Surrogate pair总共能表示 1024*1024=1048576=0x100000个字符，所以UTF-16总共可以编码0x100000+0xFFFF=0x10FFFF个字符，这也是为什么当前Unicode字符集的上限是这么大的原因，也影响了接下来我们要说的UTF-8的上限范围。</strong></p>
+<p><strong>不难算出，Surrogate pair总共能表示 1024*1024&#x3D;1048576&#x3D;0x100000个字符，所以UTF-16总共可以编码0x100000+0xFFFF&#x3D;0x10FFFF个字符，这也是为什么当前Unicode字符集的上限是这么大的原因，也影响了接下来我们要说的UTF-8的上限范围。</strong></p>
 <h4 id="3-4-3-UTF-8"><a href="#3-4-3-UTF-8" class="headerlink" title="3.4.3 UTF-8"></a>3.4.3 UTF-8</h4><p>更进一步，对于英语国家的人来说，总觉得一个字节八位就足够了呀，用两位也觉得浪费空间，但对于其他国家比如中国来说，一个字节又肯定不够，这便引出了一种变长的编码格式UTF-8。引一张Wiki上的图来说明UTF-8的编码规范。</p>
 <p><img src="/images/character_set/image_3_6.png" alt="image_3_6"></p>
 <p align="center">图3.6</p>
@@ -464,17 +493,18 @@
 <li>“S”的码点是 <code>0x0053</code>，用UTF-8存储就是： <code>01010011</code></li>
 <li>“µ”的码点是 <code>0x00B5</code>, 用UTF-8存储就是： <code>11000010 10110101</code></li>
 <li>“梦”的码点值是 <code>0x68A6</code>，用UTF-8存储就是： <code>11100110 10100010 1010 0110</code></li>
-<li>😤的码点值为 <code>0x1F624</code>，用UTF-8存储就是：<code>11110000 10011111 10011000 10100100</code> </li>
+<li>😤的码点值为 <code>0x1F624</code>，用UTF-8存储就是：<code>11110000 10011111 10011000 10100100</code></li>
 </ul>
-<p>如果我们算一下四字节的UTF-8实际能表示的范围，会发现理论上应该能表示到 <code>0x1FFFFF</code> ，但是实际上却限制了上限为 <code>0x10FFFF</code> ，这就是上节所述的UTF-16的上限，既然编码空间足够大，目前看来总是够用的，那为了兼容UTF-16，就先这样规定吧。（RFC3629的标准如此规定了上限，大概就是这样想的吧）。</p>
-<p>关于UTF-8，还有一些比较有意思的现象，比如在早期Windows中， <strong>当你在 windows 的记事本里新建一个文件，输入”联通”两个字之后，保存，关闭，然后再次打开，你会发现这两个字已经消失了，代之的是几个乱码</strong> ，这是由于GBK编码和UTF-8编码的识别错误导致的，可以动手搜一搜相应字节码分析一下，然后再看<sup id="fnref:17"><a href="#fn:17" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="infocodez. “【转载】随便说说字符集和编码.” 博客园, 27 Sept. 2017, www.cnblogs.com/infocodez/p/7600459.html. 
-">[17]</span></a></sup>这篇文章，验证下自己的分析是否正确。</p>
-<h3 id="3-5-大端小端"><a href="#3-5-大端小端" class="headerlink" title="3.5 大端小端"></a>3.5 大端小端</h3><p>Danny Cohen在论文 <sup id="fnref:13"><a href="#fn:13" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Cohen, Danny. “ON HOLY WARS AND A PLEA FOR PEACE.” IETF, 1 Apr. 1980, www.ietf.org/rfc/ien/ien137.txt. 
-">[13]</span></a></sup> 中提出了大端小端的说法，想要结束字节序(Endianness)的“战争”，自那以后，在程序员眼中，大端小端不再是《格列佛游记》的名词，而是字节序的专属名词了。在介绍UTF-32、UTF-16、UTF-8三种编码方式时，我们都没有考虑大端小端的问题，细心的读者可能已经意识到这个问题了，在此我们再简单介绍下。</p>
+<p> </p>
+<p>如果我们算一下四字节的UTF-8实际能表示的范围，会发现理论上应该能表示到 <code>0x1FFFFF</code> ，但是实际上却限制了上限为 <code>0x10FFFF</code> ，这就是上节所述的UTF-16的上限，既然编码空间足够大，目前看来总是够用的，那为了兼容UTF-16，就先这样规定吧。（RFC3629的标准如此规定了上限，大概就是这样想的吧）。</p>
+<p>关于UTF-8，还有一些比较有意思的现象，比如在早期Windows中， <strong>当你在 windows 的记事本里新建一个文件，输入”联通”两个字之后，保存，关闭，然后再次打开，你会发现这两个字已经消失了，代之的是几个乱码</strong> ，这是由于GBK编码和UTF-8编码的识别错误导致的，可以动手搜一搜相应字节码分析一下，然后再看<sup id="fnref:17" class="location-target"><a href="#fn:17" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="infocodez. “【转载】随便说说字符集和编码.” 博客园, 27 Sept. 2017, www.cnblogs.com/infocodez/p/7600459.html. 
+">17</span></a></sup>这篇文章，验证下自己的分析是否正确。</p>
+<h3 id="3-5-大端小端"><a href="#3-5-大端小端" class="headerlink" title="3.5 大端小端"></a>3.5 大端小端</h3><p>Danny Cohen在论文 <sup id="fnref:13" class="location-target"><a href="#fn:13" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Cohen, Danny. “ON HOLY WARS AND A PLEA FOR PEACE.” IETF, 1 Apr. 1980, www.ietf.org/rfc/ien/ien137.txt. 
+">13</span></a></sup> 中提出了大端小端的说法，想要结束字节序(Endianness)的“战争”，自那以后，在程序员眼中，大端小端不再是《格列佛游记》的名词，而是字节序的专属名词了。在介绍UTF-32、UTF-16、UTF-8三种编码方式时，我们都没有考虑大端小端的问题，细心的读者可能已经意识到这个问题了，在此我们再简单介绍下。</p>
 <blockquote>
 <p>大端(Big Endian): 将一个多位数的高位放在较小的地址处，低位放在较大的地址处<br>小端(Little Endian): 将一个多位数的低位放在较小的地址处，高位放在较大的地址处</p>
 </blockquote>
-<p>直接拿Wiki上的示例说明， <code>0x0A0B0C0D</code> 这个32位的整数，大小端分别如下：</p>
+<p>直接拿Wiki上的示例说明， <code>0x0A0B0C0D</code> 这个32位的整数，大小端分别如下：</p>
 <p><img src="/images/character_set/image_3_7_1.png" alt="image_3_7_1"> <img src="/images/character_set/image_3_7_2.png" alt="image_3_7_2"></p>
 <p align="center">图3.7</p>
 
@@ -482,7 +512,7 @@
 <p><img src="/images/character_set/image_3_8.png" alt="image_3_8"></p>
 <p align="center">图3.8</p>
 
-<p>在UTF-16中编码为： <code>0xD83DDE24</code> ，大端小端分别如图。</p>
+<p>在UTF-16中编码为： <code>0xD83DDE24</code> ，大端小端分别如图。</p>
 <p><img src="/images/character_set/image_3_9.png" alt="image_3_9"></p>
 <p align="center">图3.9</p>
 
@@ -490,34 +520,35 @@
 <ul>
 <li>对于UTF-32，程序需要一次读取4个字节，然后计算这四个字节的实际值，如果字节序不同，会导致结果不同</li>
 <li>对于UTF-16，程序需要一次读取2个字节，然后计算这两个字节的实际值，如果字节序不同，结果也会不同</li>
-<li><strong>但是对于UTF-8来说，程序一次只会读取1个字节，程序需要通过每个字节的字节头去决定是否需要继续读取下一个字节，既然一次只读取一个字节，自然不会受大小端的影响。</strong> </li>
+<li><strong>但是对于UTF-8来说，程序一次只会读取1个字节，程序需要通过每个字节的字节头去决定是否需要继续读取下一个字节，既然一次只读取一个字节，自然不会受大小端的影响。</strong></li>
 </ul>
-<p>😤用UTF-8编码是 <code>0xF09F98A4</code>，那么实际上，计算机永远会先读取 <code>F0</code> ，然后判断还需要读取接下来的三个字节，就依次读取 <code>9F</code> 、<code>98</code> 、 <code>A4</code>，然后将四个字节组合计算得出实际表示的值。计算机总共读取了四次，而不是一次读取了 4个字节。实际在计算机内存中，存储总是如图。</p>
+<p> </p>
+<p>😤用UTF-8编码是 <code>0xF09F98A4</code>，那么实际上，计算机永远会先读取 <code>F0</code> ，然后判断还需要读取接下来的三个字节，就依次读取 <code>9F</code> 、<code>98</code> 、 <code>A4</code>，然后将四个字节组合计算得出实际表示的值。计算机总共读取了四次，而不是一次读取了 4个字节。实际在计算机内存中，存储总是如图。</p>
 <p><img src="/images/character_set/image_3_10.png" alt="image_3_10"></p>
 <p align="center">图3.10</p>
 
-<h3 id="3-6-BOM-byte-order-mark"><a href="#3-6-BOM-byte-order-mark" class="headerlink" title="3.6 BOM(byte order mark)"></a>3.6 BOM(byte order mark)</h3><p>既然字节序对计算机读取字符有很大的影响，那么对于一个文本文件，知道它实际存储的数据是大端还是小端就很重要了。为了实现这个目的，使用BOM来标记一个文本文件的开头，从而区分该文件是大端还是小端存储的。BOM本质上也还是个字符，只不过是个特殊的字符，在UTF-16的文本文件中，BOM就是 <code>0xFEFF</code> ，这时，计算机程序首先读取文本文件的前两个字节，通过判断高低地址的实际值，就可以判断是大端还是小端了。 <strong>0xFEFF这个字符实际上被称为ZERO WIDTH NO-BREAK SPACE字符，之所以用这个字符，是因为根据UTF-8编码标准，UTF-8不可能出现0xFE或者0xFF开头的字符，因此不会和UTF-8产生混淆。</strong> </p>
+<h3 id="3-6-BOM-byte-order-mark"><a href="#3-6-BOM-byte-order-mark" class="headerlink" title="3.6 BOM(byte order mark)"></a>3.6 BOM(byte order mark)</h3><p>既然字节序对计算机读取字符有很大的影响，那么对于一个文本文件，知道它实际存储的数据是大端还是小端就很重要了。为了实现这个目的，使用BOM来标记一个文本文件的开头，从而区分该文件是大端还是小端存储的。BOM本质上也还是个字符，只不过是个特殊的字符，在UTF-16的文本文件中，BOM就是 <code>0xFEFF</code> ，这时，计算机程序首先读取文本文件的前两个字节，通过判断高低地址的实际值，就可以判断是大端还是小端了。 <strong>0xFEFF这个字符实际上被称为ZERO WIDTH NO-BREAK SPACE字符，之所以用这个字符，是因为根据UTF-8编码标准，UTF-8不可能出现0xFE或者0xFF开头的字符，因此不会和UTF-8产生混淆。</strong> </p>
 <p><img src="/images/character_set/image_3_11.png" alt="image_3_11"></p>
 <p align="center">图3.11</p>
-
-<p>对于UTF-32来说，虽然实际上没人用，但是字节序标准还是有的，用 <code>0x0000FEFF</code> 四个字节表示。</p>
-<p>对于UTF-8来说，由于其自身的字节就有字节头标志，也不区分大小端，其实并不需要BOM，但是在早期Windows系统中，默认用记事本编辑时，用UTF-8保存也会默认加个BOM头，具体是 <code>0xEFBBBF</code> 。这时，实际上这个BOM并不是标志字节序的，而是标志编码方式，即该文件是用UTF-8编码的，仅此而已。</p>
+    
+<p>对于UTF-32来说，虽然实际上没人用，但是字节序标准还是有的，用 <code>0x0000FEFF</code> 四个字节表示。</p>
+<p>对于UTF-8来说，由于其自身的字节就有字节头标志，也不区分大小端，其实并不需要BOM，但是在早期Windows系统中，默认用记事本编辑时，用UTF-8保存也会默认加个BOM头，具体是 <code>0xEFBBBF</code> 。这时，实际上这个BOM并不是标志字节序的，而是标志编码方式，即该文件是用UTF-8编码的，仅此而已。</p>
 <p>而这个BOM带来了各种巨坑的问题，不限于：</p>
 <blockquote>
 <ul>
 <li>gcc会报告源码文件开头有无法识别的字符</li>
-<li>Linux的shell脚本无法运行： <code>Shell:  #!/bin/sh: No such file or directory</code> </li>
+<li>Linux的shell脚本无法运行： <code>Shell:  #!/bin/sh: No such file or directory</code> </li>
 <li>早期一些比较坑的教程会教人用记事本学Java，然后用 javac 编译，这时会报“错误：非法字符：blablabla”，但是却不在教程中说明这一点。（之所以记得这件事，是因为直到研究生期间还有人问过这种问题…</li>
 <li>其他一系列知名不知名软件读取配置文件的坑…</li>
 <li>…</li>
 </ul>
 </blockquote>
-<p><strong>但是，竟然还有反向操作的，举一个自己曾经遇到的坑，知名音乐播放软件Foobar 2000，在读取 .cue 文件时，必须是 UTF-8 With BOM，曾经强迫症把所有 .cue 文件改成了 UTF-8 Without BOM，结果Foobar 2000全部无法识别…</strong> </p>
+<p><strong>但是，竟然还有反向操作的，举一个自己曾经遇到的坑，知名音乐播放软件Foobar 2000，在读取 .cue 文件时，必须是 UTF-8 With BOM，曾经强迫症把所有 .cue 文件改成了 UTF-8 Without BOM，结果Foobar 2000全部无法识别…</strong> </p>
 <p>其他还有一些不常见的BOM如下。</p>
 <p><img src="/images/character_set/image_3_12.png" alt="image_3_12"></p>
 <p align="center">图3.12</p>
 
-<h3 id="3-7-Unicode控制字符"><a href="#3-7-Unicode控制字符" class="headerlink" title="3.7 Unicode控制字符"></a>3.7 Unicode控制字符</h3><p>上面说到了UTF-16和UTF-32用 <code>0xFEFF</code> 作为BOM字符，这个字符实际上是不可见的，主要用于标志字节序。在编码字符集中, 这种特殊码位的字符，一般可以叫做“控制字符”(Control character,Non-printable character)，即“用于控制文本解释或者显示，而不可见或不占空间的Unicode字符”。<br>而在Unicode的一般性分类中, 控制字符大多都归属于 Other(C) 这个大类. Other(C)大类下又分:</p>
+<h3 id="3-7-Unicode控制字符"><a href="#3-7-Unicode控制字符" class="headerlink" title="3.7 Unicode控制字符"></a>3.7 Unicode控制字符</h3><p>上面说到了UTF-16和UTF-32用 <code>0xFEFF</code> 作为BOM字符，这个字符实际上是不可见的，主要用于标志字节序。在编码字符集中, 这种特殊码位的字符，一般可以叫做“控制字符”(Control character,Non-printable character)，即“用于控制文本解释或者显示，而不可见或不占空间的Unicode字符”。<br>而在Unicode的一般性分类中, 控制字符大多都归属于 Other(C) 这个大类. Other(C)大类下又分:</p>
 <ul>
 <li>Cc(Other, control), 共有65个, 而且这个数量永远都不会再变</li>
 <li>Cf(Other, format), 共有161个, 这是Unicode 13.0中的数量, 以后可能会再变</li>
@@ -535,13 +566,13 @@
 <li>U+2029 paragraph separator ，HTML： <code>&amp;#8233;</code>，PSEP</li>
 </ul>
 <p><strong>这就是Separator(Z)大类中仅有的两个Format Type的字符了</strong><br><strong>因此, 剩下的所有细分类别, 其实全是Cf类别的字符, 包括了开始所说的<code>0xFEFF</code></strong></p>
-<h4 id="3-7-3-语言标记"><a href="#3-7-3-语言标记" class="headerlink" title="3.7.3 语言标记"></a>3.7.3 语言标记</h4><p>不予叙述，可参考<sup id="fnref:18"><a href="#fn:18" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “Unicode控制字符.” Wikipedia, Wikimedia Foundation, 28 July 2020, zh.wikipedia.org/wiki/Unicode控制字符.
-">[18]</span></a></sup>的说明。</p>
+<h4 id="3-7-3-语言标记"><a href="#3-7-3-语言标记" class="headerlink" title="3.7.3 语言标记"></a>3.7.3 语言标记</h4><p>不予叙述，可参考<sup id="fnref:18" class="location-target"><a href="#fn:18" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Wikipedians. “Unicode控制字符.” Wikipedia, Wikimedia Foundation, 28 July 2020, zh.wikipedia.org/wiki/Unicode控制字符.
+">18</span></a></sup>的说明。</p>
 <h4 id="3-7-4-行间标注"><a href="#3-7-4-行间标注" class="headerlink" title="3.7.4 行间标注"></a>3.7.4 行间标注</h4><p>3个格式化字符用于支持旁注标记（U+FFF9、U+FFFA、U+FFFB）。</p>
 <blockquote>
 <p>所谓旁注标记（ruby character），又称注音标示、加注音、Ruby字符、ruby或rubi，是一种表意文字的音标印刷方式，广泛地运用于日文及中文。一般这些字是放于表意文字的上方或右边，作为文字的拼音或注解。</p>
 </blockquote>
-<p>了解过HTML5的童鞋也许知道HTML5引入了 <code>&lt;ruby&gt;</code> 标签，也是同样的意思，（我之所以知道，是因为我的主页也用了嘛！~不过主页也是模仿前端大神的网页做的啦）</p>
+<p>了解过HTML5的童鞋也许知道HTML5引入了 <code>&lt;ruby&gt;</code> 标签，也是同样的意思，（我之所以知道，是因为我的主页也用了嘛！~不过主页也是模仿前端大神的网页做的啦）</p>
 <p><img src="/images/character_set/image_3_13.png" alt="image_3_13"></p>
 <p align="center">图3.13</p>
 
@@ -563,45 +594,45 @@
 <blockquote>
 <p>笔者按: 一个阿拉伯语撑起了字符串处理Bug的半边天…</p>
 </blockquote>
-<h4 id="3-7-6-异体字选择器"><a href="#3-7-6-异体字选择器" class="headerlink" title="3.7.6 异体字选择器"></a>3.7.6 异体字选择器</h4><p>异体字的具体说明可参考<sup id="fnref:19"><a href="#fn:19" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “異體字選擇器.” Wikipedia, Wikimedia Foundation, 4 Sept. 2020, zh.wikipedia.org/wiki/異體字選擇器.
-">[19]</span></a></sup>. 简单来说，就是一种语言中，某一个字有两种写法，但是意义完全相同，因此当初编码时，没有将其区分开，但在实际使用中，可能在用于人名等专有名词时，还是需要进行区分的，因此提供了“异体字选择器”这种控制字符。</p>
+<h4 id="3-7-6-异体字选择器"><a href="#3-7-6-异体字选择器" class="headerlink" title="3.7.6 异体字选择器"></a>3.7.6 异体字选择器</h4><p>异体字的具体说明可参考<sup id="fnref:19" class="location-target"><a href="#fn:19" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Wikipedians. “異體字選擇器.” Wikipedia, Wikimedia Foundation, 4 Sept. 2020, zh.wikipedia.org/wiki/異體字選擇器.
+">19</span></a></sup>. 简单来说，就是一种语言中，某一个字有两种写法，但是意义完全相同，因此当初编码时，没有将其区分开，但在实际使用中，可能在用于人名等专有名词时，还是需要进行区分的，因此提供了“异体字选择器”这种控制字符。</p>
 <h4 id="3-7-7-控制字符的图片"><a href="#3-7-7-控制字符的图片" class="headerlink" title="3.7.7 控制字符的图片"></a>3.7.7 控制字符的图片</h4><p>不予叙述。</p>
-<h3 id="3-8-组合字符-Combining-Character"><a href="#3-8-组合字符-Combining-Character" class="headerlink" title="3.8 组合字符(Combining Character)"></a>3.8 组合字符(Combining Character)</h3><h4 id="3-8-1-组合标记-Combining-Marks"><a href="#3-8-1-组合标记-Combining-Marks" class="headerlink" title="3.8.1 组合标记(Combining Marks)"></a>3.8.1 组合标记(Combining Marks)</h4><p>上面在说控制字符时，有一类所谓的行间标记提到了“旁注标记”，在汉字上方标注拼音，可以称之为“旁注标记”。那对于某些欧洲语言来说，可以在字母上方加一些变音符号，实质上就表示成了另一个不同的字符，但它又是在原字符基础上变化的，如果每种变化都算作一个新字符，那即使是Unicode，可能也装不下这些排列组合的数量，因此出现了附加组合标记的组合字符。如Wiki的图<sup id="fnref:20"><a href="#fn:20" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “組合字符.” Wikipedia, Wikimedia Foundation, 30 May 2019, zh.wikipedia.org/wiki/組合字符. 
-">[20]</span></a></sup>。</p>
+<h3 id="3-8-组合字符-Combining-Character"><a href="#3-8-组合字符-Combining-Character" class="headerlink" title="3.8 组合字符(Combining Character)"></a>3.8 组合字符(Combining Character)</h3><h4 id="3-8-1-组合标记-Combining-Marks"><a href="#3-8-1-组合标记-Combining-Marks" class="headerlink" title="3.8.1 组合标记(Combining Marks)"></a>3.8.1 组合标记(Combining Marks)</h4><p>上面在说控制字符时，有一类所谓的行间标记提到了“旁注标记”，在汉字上方标注拼音，可以称之为“旁注标记”。那对于某些欧洲语言来说，可以在字母上方加一些变音符号，实质上就表示成了另一个不同的字符，但它又是在原字符基础上变化的，如果每种变化都算作一个新字符，那即使是Unicode，可能也装不下这些排列组合的数量，因此出现了附加组合标记的组合字符。如Wiki的图<sup id="fnref:20" class="location-target"><a href="#fn:20" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Wikipedians. “組合字符.” Wikipedia, Wikimedia Foundation, 30 May 2019, zh.wikipedia.org/wiki/組合字符. 
+">20</span></a></sup>。</p>
 <p><img src="/images/character_set/image_3_16.png" alt="image_3_16"></p>
 <p align="center">图3.16</p>
 
-<p>在统一码中，用于欧洲语言和国际音标的组合用附加符号为〈U+0300–U+036F〉。上图的字符 y̌ 就可以表示成： <code>\u0079\u030C</code> ， <code>\u0079</code> 就是 <code>y</code> ， <code>\u030C</code> 就是变音符号’̌。</p>
+<p>在统一码中，用于欧洲语言和国际音标的组合用附加符号为〈U+0300–U+036F〉。上图的字符 y̌ 就可以表示成： <code>\u0079\u030C</code> ， <code>\u0079</code> 就是 <code>y</code> ， <code>\u030C</code> 就是变音符号’̌。</p>
 <p>说到这里, 不得不提的就是在中二时期网络上流行的越界文字(Zalgo text), 其本质就是对组合字符的叠加, 因为Unicode没有规定组合字符必须是实际存在的字符, 那实际上我们可以叠加变音符号, 从而使得字符越界. 如果我们组合这样一个字符”\u0079\u030C\u030C\u030C\u030C\u030C\u030C\u030C”, 实际就是:</p>
 <blockquote>
 <p>y̌̌̌̌̌̌̌</p>
 </blockquote>
-<h4 id="3-8-2-Grapheme-和-Grapheme-Cluster"><a href="#3-8-2-Grapheme-和-Grapheme-Cluster" class="headerlink" title="3.8.2 Grapheme 和 Grapheme Cluster"></a>3.8.2 Grapheme 和 Grapheme Cluster</h4><p>不过，你以为Unicode的组合字符序列到此就结束了吗? まだまだだね<br>关于组合字符序列, Unicode官网给出了一些FAQ<sup id="fnref:32"><a href="#fn:32" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Unicode Consortium. (2020, September 19). Characters and Combining Marks. Retrieved September 19, 2020, from http://unicode.org/faq/char_combmark.html
-">[32]</span></a></sup>. 在这些Q&amp;A中, 有一个问题:</p>
+<h4 id="3-8-2-Grapheme-和-Grapheme-Cluster"><a href="#3-8-2-Grapheme-和-Grapheme-Cluster" class="headerlink" title="3.8.2 Grapheme 和 Grapheme Cluster"></a>3.8.2 Grapheme 和 Grapheme Cluster</h4><p>不过，你以为Unicode的组合字符序列到此就结束了吗? まだまだだね<br>关于组合字符序列, Unicode官网给出了一些FAQ<sup id="fnref:32" class="location-target"><a href="#fn:32" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Unicode Consortium. (2020, September 19). Characters and Combining Marks. Retrieved September 19, 2020, from http://unicode.org/faq/char_combmark.html
+">32</span></a></sup>. 在这些Q&amp;A中, 有一个问题:</p>
 <blockquote>
 <p>Q: So is a combining character sequence the same as a “character”?</p>
 </blockquote>
 <p>终于, 我们还是逃避不了这个问题, 究竟什么是字符? 组合字符还是传统意义上的”字符”吗? 怎么在概念上区分它们呢? 最终, 我们引入了字素(grapheme), 那个在语言学简介中提了之后, 一直没有出现的名词.</p>
 <p>在程序员的眼中, 一个字符一般指一个Unicode的Code point, 但对于终端用户来说, 将字符等价于字素(grapheme), 是更加直观的, 字素的概念始终是不变的: <strong>a minimally distinctive unit of writing in the context of a particular writing system</strong>. 只不过之前无法具体细分字素的范围, 现在我们终于有工具能够确切描述字素的范围了.<br>在Unicode世界中, 一个字素至少包含一个Code point, 包含组合标记、控制字符等的多个组合字符序列也可作为一个字素. 这样, 至少在Unicode中, 我们将字素的最小范围限定到了一个Code point, 不会有比一个Code point范围更小的字素了!<br>事实上, Unicode引入的字素(grapheme)概念, 也可以称为用户感知字符(user-perceived character), 不仅可以在基础字符上附加组合字符, 用来形成新的字素, 也可以通过控制字符(如方向控制等)来形成新的字素.</p>
 <p>字素的集合, 就可以统一称为 Grapheme Cluster, 或者通俗一点: user-perceived characters</p>
-<p>So… Why? 为什么要划分这么细, 规定这么多细节, 直接认为 y̌ 就是两个字符, 不搞其他一些幺蛾子, 难道不香吗?<br>Unicode在TR29的技术报告里<sup id="fnref:30"><a href="#fn:30" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Davis, Mark, and Christopher Chapman. Unicode Text Segmentation. 19 Feb. 2020, unicode.org/reports/tr29/. 
-">[30]</span></a></sup>，给出了一段话:</p>
+<p>So… Why? 为什么要划分这么细, 规定这么多细节, 直接认为 y̌ 就是两个字符, 不搞其他一些幺蛾子, 难道不香吗?<br>Unicode在TR29的技术报告里<sup id="fnref:30" class="location-target"><a href="#fn:30" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Davis, Mark, and Christopher Chapman. Unicode Text Segmentation. 19 Feb. 2020, unicode.org/reports/tr29/. 
+">30</span></a></sup>，给出了一段话:</p>
 <blockquote>
 <p>Grapheme cluster boundaries are important for collation, regular expressions, UI interactions, segmentation for vertical text, identification of boundaries for first-letter styling, and counting “character” positions within text. Word boundaries, line boundaries, and sentence boundaries should not occur within a grapheme cluster: in other words, a grapheme cluster should be an atomic unit with respect to the process of determining these other boundaries.</p>
 </blockquote>
 <p>我给大家画个重点，就是: <strong>grapheme cluster应该作为一个原子性的整体看待, 至少不能在在一个grapheme cluster中间出现换行符、单词分隔符、连字符等破坏性字符吧，那既然有这些限制，识别grapheme cluster的边界就十分有必要了, 这样才能更好的做字符排序、正则匹配、UI交互等字符串(实际上现在该叫字素串)处理工作</strong></p>
 <blockquote>
-<p><strong>总结一下: 可以认为字素是在Code point/Character之上的一种更高一层的抽象.</strong></p>
+<p><strong>总结一下: 可以认为字素是在Code point&#x2F;Character之上的一种更高一层的抽象.</strong></p>
 </blockquote>
 <p>在tr29中，还提到了三类不同的grapheme clusters: legacy grapheme clusters, extended grapheme clusters, tailored grapheme clusters. 具体的概念我也不翻译了，因为…水平不够. 就截几张图, 大概感受一下.</p>
 <p><img src="/images/character_set/image_3_17.png" alt="image_3_17"></p>
 <p align="center">图3.17</p>
 
 <p>好的，我知道其实你根本不想看，那就略过，我们继续。</p>
-<h4 id="3-8-3-Unicode等价-Unicode-equivalence-及正规化-Normalization"><a href="#3-8-3-Unicode等价-Unicode-equivalence-及正规化-Normalization" class="headerlink" title="3.8.3 Unicode等价(Unicode equivalence)及正规化(Normalization)"></a>3.8.3 Unicode等价(Unicode equivalence)及正规化(Normalization)</h4><p>上面说完了字素, 又引入了另一个问题, 那就是:<br>带变音的拉丁字素等，使用广泛，以及占坑较早，因此，早早地就作为一个个的单独码点在Unicode种有一个码(keng)位了，而后来Unicode又规定了组合字符，这样，同一个字素就有可能有两种编码方式。比如“Å”，既可以是 <code>\u00c5</code> ，也可以是 <code>\u0041\u030A</code> 表示，可以在<a href="https://apps.timwhitlock.info/unicode/inspect" target="_blank" rel="noopener">这个网站</a> 试试。这就引入了另一个话题，Unicode equivalence和Normalization，即判断两个字符/素串相等时，是否需要考虑这种等价情况，如果需要考虑这种意义上的等价，那么就需要对字符/素串先进行正规化(Normalization)，再进行比较。</p>
+<h4 id="3-8-3-Unicode等价-Unicode-equivalence-及正规化-Normalization"><a href="#3-8-3-Unicode等价-Unicode-equivalence-及正规化-Normalization" class="headerlink" title="3.8.3 Unicode等价(Unicode equivalence)及正规化(Normalization)"></a>3.8.3 Unicode等价(Unicode equivalence)及正规化(Normalization)</h4><p>上面说完了字素, 又引入了另一个问题, 那就是:<br>带变音的拉丁字素等，使用广泛，以及占坑较早，因此，早早地就作为一个个的单独码点在Unicode种有一个码(keng)位了，而后来Unicode又规定了组合字符，这样，同一个字素就有可能有两种编码方式。比如“Å”，既可以是 <code>\u00c5</code> ，也可以是 <code>\u0041\u030A</code> 表示，可以在<a target="_blank" rel="noopener" href="https://apps.timwhitlock.info/unicode/inspect">这个网站</a> 试试。这就引入了另一个话题，Unicode equivalence和Normalization，即判断两个字符&#x2F;素串相等时，是否需要考虑这种等价情况，如果需要考虑这种意义上的等价，那么就需要对字符&#x2F;素串先进行正规化(Normalization)，再进行比较。</p>
 <blockquote>
-<p>正规化即将彼此等价的序列转成同一列序, Unicode提供了两种等价概念：标准等价(canonically equivalent)和兼容等价(compatible). 两者的具体概念参考<sup id="fnref:22"><a href="#fn:22" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “Unicode Equivalence.” Wikipedia, Wikimedia Foundation, 7 Aug. 2020, en.wikipedia.org/wiki/Unicode_equivalence. 
-">[22]</span></a></sup>. 标准等价的一个示例就是 Å<code>\u00c5</code>和 Å<code>\u0041\u030A</code>, 兼容等价的一个示例就是 ﬀ<code>\ufb00</code> 和 ff<code>\u0066\u0066</code></p>
+<p>正规化即将彼此等价的序列转成同一列序, Unicode提供了两种等价概念：标准等价(canonically equivalent)和兼容等价(compatible). 两者的具体概念参考<sup id="fnref:22" class="location-target"><a href="#fn:22" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Wikipedians. “Unicode Equivalence.” Wikipedia, Wikimedia Foundation, 7 Aug. 2020, en.wikipedia.org/wiki/Unicode_equivalence. 
+">22</span></a></sup>. 标准等价的一个示例就是 Å<code>\u00c5</code>和 Å<code>\u0041\u030A</code>, 兼容等价的一个示例就是 ﬀ<code>\ufb00</code> 和 ff<code>\u0066\u0066</code></p>
 </blockquote>
 <p>为了进行正规化, 自然会有两种想法:</p>
 <ul>
@@ -612,35 +643,33 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center">正规形式</th>
-<th style="text-align:center">转换算法</th>
+<th align="center">正规形式</th>
+<th align="center">转换算法</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">NFD,Normalization Form Canonical Decomposition</td>
-<td style="text-align:center">以标准等价方式来分解</td>
+<tbody><tr>
+<td align="center">NFD,Normalization Form Canonical Decomposition</td>
+<td align="center">以标准等价方式来分解</td>
 </tr>
 <tr>
-<td style="text-align:center">NFC,Normalization Form Canonical Composition</td>
-<td style="text-align:center">以标准等价方式来分解，然后以标准等价重组之</td>
+<td align="center">NFC,Normalization Form Canonical Composition</td>
+<td align="center">以标准等价方式来分解，然后以标准等价重组之</td>
 </tr>
 <tr>
-<td style="text-align:center">NFKD,Normalization Form Compatibility Decomposition</td>
-<td style="text-align:center">以兼容等价方式来分解</td>
+<td align="center">NFKD,Normalization Form Compatibility Decomposition</td>
+<td align="center">以兼容等价方式来分解</td>
 </tr>
 <tr>
-<td style="text-align:center">NFKC,Normalization Form Compatibility Composition</td>
-<td style="text-align:center">以兼容等价方式来分解，然后以标准等价重组之</td>
+<td align="center">NFKC,Normalization Form Compatibility Composition</td>
+<td align="center">以兼容等价方式来分解，然后以标准等价重组之</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>好了, 等价就说到这. 以及, 后续我们还是使用字符串这个名词, 这一小段使用字素串, 主要是为了加深对字素的印象.</p>
-<h3 id="3-9-特殊的组合字符"><a href="#3-9-特殊的组合字符" class="headerlink" title="3.9 特殊的组合字符"></a>3.9 特殊的组合字符</h3><p>在Unicode的兼容性等价示例中, 以 ﬀ<code>\ufb00</code> 为例进行了说明. 这个字符和 两个f的组合 ff<code>\u0066\u0066</code> 具体是什么关系呢?<br>实际上<code>\ufb00</code>是一个连体字/合体字.</p>
+<h3 id="3-9-特殊的组合字符"><a href="#3-9-特殊的组合字符" class="headerlink" title="3.9 特殊的组合字符"></a>3.9 特殊的组合字符</h3><p>在Unicode的兼容性等价示例中, 以 ﬀ<code>\ufb00</code> 为例进行了说明. 这个字符和 两个f的组合 ff<code>\u0066\u0066</code> 具体是什么关系呢?<br>实际上<code>\ufb00</code>是一个连体字&#x2F;合体字.</p>
 <blockquote>
 <p>在西方字体排印学中将多于一个字母合成一个字形就是连体字, 经过演变、长时间流行后，一些连体字组合就直接变成了一个单个字符, 拥有自己独立的形式了.</p>
 </blockquote>
-<p>说到连字, 其实和排版系统有所牵连, 就不细述概念了, 举个例子.<br>在VS Code中可以在配置中<code>&quot;editor.fontLigatures&quot;: true</code>, 这样设置之后, 如果在VS Code中连着打出&gt;和=, 其实就会显示成≥<br>但这是编辑器自己处理的连字效果, 有没有办法强行使一些本来没有连字效果的字符组合产生连字效果, 或者强行使一些有连字效果的字符组合取消连字效果呢? 答案是肯定的. Unicode的Cf字符中, 有以下两个字符.</p>
+<p>说到连字, 其实和排版系统有所牵连, 就不细述概念了, 举个例子.<br>在VS Code中可以在配置中<code>&quot;editor.fontLigatures&quot;: true</code>, 这样设置之后, 如果在VS Code中连着打出&gt;和&#x3D;, 其实就会显示成≥<br>但这是编辑器自己处理的连字效果, 有没有办法强行使一些本来没有连字效果的字符组合产生连字效果, 或者强行使一些有连字效果的字符组合取消连字效果呢? 答案是肯定的. Unicode的Cf字符中, 有以下两个字符.</p>
 <ul>
 <li>零宽度连字符(zero-width joiner, zwj)U+200D: 用于阿拉伯文等文字中，使不会发生连字的字符间产生连字效果</li>
 <li>零宽度断字符(zero-width non-joiner, zwnj)U+200C: 用于阿拉伯文、德文等文字中，阻止会发生连字的字符间的连字效果</li>
@@ -648,13 +677,13 @@
 <p>zwnj的例子大多都和语言相关, 阿拉伯语、德语一类的, 示例也很复杂.<br>但是zwj就很特殊, 除了阿拉伯语这种特殊语言, 还记得我们文章的开头说了什么吗? 没错, 就是 Emoji!</p>
 <p>zwj对Emoji也有效, 本来Emoji就是个设计简单表达心情的表情符号，但随着使用越来越广泛，刮起了一阵“中立表情(Neutral Emojis)”的风，即有男性表情，那就得有对应的女性，有白种人，那就得有黄种人、黑种人，家庭可以是异性恋，那就得有同性恋，有儿子，也得有女儿。如果每种都是单独的字符表示，那Unicode可能也装不下，而且已有的Emoji也不能复用, 因此就想到了用zwj来组合相关Emoji, 形成新的Emoji。</p>
 <p>最典型的一个例子：👨‍👨‍👦‍👦这个家庭的Emoji，实际上是由四个Emoji组合而成，表示两个爸爸和两个儿子一家： <code>\uD83D\uDC68\u200D\uD83D\DC68\u200D\D83D\DC66\u200D\D83D\uDC66</code></p>
-<p>每个字符间用特殊字符 <code>\u200D</code>(zero width joiner) 连接起来. 总共占用了22个字节，每个表情成分是四个字节，而每个控制字符只占用两个字节。</p>
+<p>每个字符间用特殊字符 <code>\u200D</code>(zero width joiner) 连接起来. 总共占用了22个字节，每个表情成分是四个字节，而每个控制字符只占用两个字节。</p>
 <h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>已经说了这么多，相信诸位也已经知道了emoji究竟是什么，回到文章开头前言处，微信为何能显示😤这个表情，也不言自明了。</p>
 <p>读到这里，你长输一口气：“终于要结束了！”。抱歉，其实还没完。。。</p>
 <p>既然emoji就是一个字符，那么在计算机程序中，对它的操作、存储，也自然是和普通字符没什么差别，本质就是字符的编码问题。那这是不是意味着，在互联网程序中，凡是可以输入字符的地方，其实也就可以输入emoji、乃至所有unicode字符呢? 最差也就是某些古老的客户端没法正确展示嘛！真是如此，还是说服务器端有必要对unicode字符做一些限制呢? 答案是肯定的，在很多情况下，的确要对字符进行限制。这样做的原因有很多，这里列举以下几个原因，进行说明。</p>
 <h3 id="4-1-数据库不支持"><a href="#4-1-数据库不支持" class="headerlink" title="4.1 数据库不支持"></a>4.1 数据库不支持</h3><p>这主要就是MySQL的坑了，MySQL 5.5.3版本之前，设置的所谓utf-8格式，其实只支持三个字节长度的utf-8，不支持四字节长度。之后的版本才支持四字节长度，而为了兼容以前的版本，指定表结构、字段类型为utf-8，其实还是只支持三字节的utf8mb3，只有显示指定utf8mb4，才是支持四字节的utf-8.</p>
-<p>不过这也不能把锅全甩给MySQL，谁让MySQL支持UTF-8太早了呢，根据Wiki<sup id="fnref:25"><a href="#fn:25" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. “UTF-8.” Wikipedia, Wikimedia Foundation, 20 Aug. 2020, zh.wikipedia.org/wiki/UTF-8. 
-">[25]</span></a></sup>所述。</p>
+<p>不过这也不能把锅全甩给MySQL，谁让MySQL支持UTF-8太早了呢，根据Wiki<sup id="fnref:25" class="location-target"><a href="#fn:25" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Wikipedians. “UTF-8.” Wikipedia, Wikimedia Foundation, 20 Aug. 2020, zh.wikipedia.org/wiki/UTF-8. 
+">25</span></a></sup>所述。</p>
 <blockquote>
 <p>这是由于MySQL在4.1版本开始支持UTF-8编码（当时参考UTF-8草案版本为RFC 2279）时，为2003年，并且在同年9月限制了其实现的UTF-8编码的空间占用最多为3字节，而UTF-8正式形成标准化文档（RFC 3629）是其之后。限制UTF-8编码实现的编码空间占用一般被认为是考虑到数据库文件设计的兼容性和读取最优化，但实际上并没有达到目的，而且在UTF-8编码开始出现需要存入非基本多文种平面的Unicode字符（例如emoji字符）时导致无法存入（由于3字节的实现只能存入基本多文种平面内的字符）。直到2010年在5.5版本推出“utf8mb4”来代替、“utf8”重命名为“utf8mb3”并调整“utf8”为“utf8mb3”的别名，并不建议使用旧“utf8”编码，以此修正遗留问题。</p>
 </blockquote>
@@ -662,98 +691,251 @@
 <h3 id="4-3-安全原因"><a href="#4-3-安全原因" class="headerlink" title="4.3 安全原因"></a>4.3 安全原因</h3><p>安全是个不容忽视的原因，大到苹果、腾讯，也多次在unicode字符上翻车。</p>
 <p>列举一下我还记得的一些相关Bug：</p>
 <ul>
-<li><a href="https://yq.aliyun.com/articles/202488" target="_blank" rel="noopener">iOS漏洞：发送短信即可令任意苹果手机重启</a> </li>
-<li><a href="https://zhuanlan.zhihu.com/p/136328290" target="_blank" rel="noopener">iOS 现重大漏洞，神秘字符可让 iPhone 死机！</a></li>
-<li><a href="https://www.zhihu.com/question/43621727/answer/548216936" target="_blank" rel="noopener">微信「你女朋友撤回了一条消息还亲了你一口」是怎么实现的（微信已经修复了这个bug）？</a></li>
-<li><a href="https://www.sohu.com/a/289091005_120085857" target="_blank" rel="noopener">“我给男神发了7条隐藏微信消息，结果他向我表白了！” </a></li>
+<li><a target="_blank" rel="noopener" href="https://yq.aliyun.com/articles/202488">iOS漏洞：发送短信即可令任意苹果手机重启</a> </li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/136328290">iOS 现重大漏洞，神秘字符可让 iPhone 死机！</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/43621727/answer/548216936">微信「你女朋友撤回了一条消息还亲了你一口」是怎么实现的（微信已经修复了这个bug）？</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.sohu.com/a/289091005_120085857">“我给男神发了7条隐藏微信消息，结果他向我表白了！” </a></li>
 </ul>
-<p>后面两个微信的bug其实都和我们之前提到的Unicode的“双向控制字符”有关，而又因为方向控制通常用在阿拉伯语中，因此这些漏洞的利用都利用了阿拉伯字符.<br>苹果的漏洞都没有披露具体细节，原因也只能靠网友自己去猜，蛤乎上偶尔能搜到。这里给出几个链接，感兴趣可以看看. <a href="https://www.zhihu.com/question/21568134?rf=21568497" target="_blank" rel="noopener">点我</a> ，<a href="https://www.zhihu.com/question/390280089" target="_blank" rel="noopener">还有我</a>，<a href="https://www.guokr.com/question/496989/" target="_blank" rel="noopener">还有我</a> </p>
+<p>后面两个微信的bug其实都和我们之前提到的Unicode的“双向控制字符”有关，而又因为方向控制通常用在阿拉伯语中，因此这些漏洞的利用都利用了阿拉伯字符.<br>苹果的漏洞都没有披露具体细节，原因也只能靠网友自己去猜，蛤乎上偶尔能搜到。这里给出几个链接，感兴趣可以看看. <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21568134?rf=21568497">点我</a> ，<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/390280089">还有我</a>，<a target="_blank" rel="noopener" href="https://www.guokr.com/question/496989/">还有我</a> </p>
 <h2 id="五、字体与排版"><a href="#五、字体与排版" class="headerlink" title="五、字体与排版"></a>五、字体与排版</h2><p>回到文章开头的另一个问题，“😤这个表情真的是图片吗?”，也许你会回答，当然不是啦，现在知道了，它就是个字符，和汉字一样。一个整数就可以表示了，而图片需要用专门的图片格式，BMP、GIF或者JPG等。那么你有没有想过，你是怎么看到这个表情的呢? 不是图形眼睛怎么能看到呢?</p>
 <p>这就要扯到字体上去了，这块不是本文重点，但还是在最后顺带一提。</p>
-<p>虽然字符本质上几个字节就编码完成了，可以看作和整数一一对应，但是想要将这个字符渲染出来，就是另一套体系，图形学的体系。换字体强迫症者，也许在网上寻找过各种各样的字体进行尝试，下载一个 <code>.ttf</code> 文件，然后双击安装，就拥有了一种新字体。</p>
+<p>虽然字符本质上几个字节就编码完成了，可以看作和整数一一对应，但是想要将这个字符渲染出来，就是另一套体系，图形学的体系。换字体强迫症者，也许在网上寻找过各种各样的字体进行尝试，下载一个 <code>.ttf</code> 文件，然后双击安装，就拥有了一种新字体。</p>
 <p>将一个二进制代表的字符转化为人眼可见的图形，大概的流程就是这样的。</p>
 <p><img src="/images/character_set/image_5_1.png" alt="image_5_1.png"></p>
 <p align="center">图5.1</p>
 
 <p>不过这块了解不多，也没有查阅太多资料，可能不太准确. 如有错误恳请指出。</p>
-<p>参考<sup id="fnref:33"><a href="#fn:33" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Hosken, M., &amp; Gaultney, V. (2003, September 5). Guidelines for Writing System Support: Technical Details: Smart Rendering: Part 1. Retrieved September 20, 2020, from https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi
-">[33]</span></a></sup>, 可以给出稍微细节点的渲染流程, 如图5.2所示.</p>
+<p>参考<sup id="fnref:33" class="location-target"><a href="#fn:33" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Hosken, M., &amp; Gaultney, V. (2003, September 5). Guidelines for Writing System Support: Technical Details: Smart Rendering: Part 1. Retrieved September 20, 2020, from https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi
+">33</span></a></sup>, 可以给出稍微细节点的渲染流程, 如图5.2所示.</p>
 <p><img src="/images/character_set/image_5_2.png" alt="image_5_2.png"></p>
 <p align="center">图5.2</p>
 
-<p>还有一点就是： <strong>现有的TTF和OTF格式，单个字体文件都只能支持65535个字符，因此想要用一个字体文件涵盖所有的Unicode字符是不可能的</strong> </p>
-<p>在计算机的文字处理领域，除了底层的编码、字体，还要考虑对字符如何进行排版，而这又是另一个复杂而又宏大的话题了<sup id="fnref:33"><a href="#fn:33" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Hosken, M., &amp; Gaultney, V. (2003, September 5). Guidelines for Writing System Support: Technical Details: Smart Rendering: Part 1. Retrieved September 20, 2020, from https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi
-">[33]</span></a></sup>。就此打住，有机会再研究~</p>
+<p>还有一点就是： <strong>现有的TTF和OTF格式，单个字体文件都只能支持65535个字符，因此想要用一个字体文件涵盖所有的Unicode字符是不可能的</strong> </p>
+<p>在计算机的文字处理领域，除了底层的编码、字体，还要考虑对字符如何进行排版，而这又是另一个复杂而又宏大的话题了<sup id="fnref:33" class="location-target"><a href="#fn:33" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Hosken, M., &amp; Gaultney, V. (2003, September 5). Guidelines for Writing System Support: Technical Details: Smart Rendering: Part 1. Retrieved September 20, 2020, from https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi
+">33</span></a></sup>。就此打住，有机会再研究~</p>
 <h2 id="六、Q-amp-A"><a href="#六、Q-amp-A" class="headerlink" title="六、Q&amp;A"></a>六、Q&amp;A</h2><p>好了，说了这么多理论，问几个问题，看你是否都能答对。<br>以下涉及编程语言的部分, Java 版本为 Java 11, Python 版本为 Python 3.8.2, Go 版本为 Go 1.13.8<br>主要还是以Java为主</p>
 <h3 id="6-1-“😤”在不同的编程语言中的length是多少"><a href="#6-1-“😤”在不同的编程语言中的length是多少" class="headerlink" title="6.1 “😤”在不同的编程语言中的length是多少?"></a>6.1 “😤”在不同的编程语言中的length是多少?</h3><p>通常, 编程语言中 字符串的 length 表示了该字符串的字符数量.<br>从理论上来说, 长度应该为1, 否则会很麻烦.<br>就像早期MySQL中认为汉字是2个字符长度, 英文字母是1个字符长度, 那么编程时, 就需要程序员自己计算实际使用的长度, 防止超出varchar(n)的长度范围. 因为不方便, 而且也不符合字符的实际定义, 后续MySQL就改了.<br>但是各个编程语言又是怎么处理的呢? 是否所有语言所谓的字符就是真正的字符呢?</p>
-<h4 id="6-1-1-Java的表现"><a href="#6-1-1-Java的表现" class="headerlink" title="6.1.1 Java的表现"></a>6.1.1 Java的表现</h4><p>先来看Java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"😤"</span>;</span><br><span class="line">System.out.println(s);</span><br><span class="line">System.out.println(s.length());</span><br><span class="line">System.out.println(s.toCharArray().length);</span><br><span class="line">System.out.println(s.getBytes(StandardCharsets.UTF_8).length);</span><br><span class="line">System.out.println(s.codePointAt(<span class="number">0</span>));</span><br><span class="line">System.out.println(s.codePointAt(<span class="number">1</span>));</span><br><span class="line"></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">128548</span></span><br><span class="line"><span class="number">56868</span></span><br></pre></td></tr></table></figure></p>
-<p>实际上, Java认为字符串的长度是2.<br>Java 8之前, Java中的String, 内部存储结构就是char数组, 每个char都是一个UTF-16字符, 所以String的长度就是UTF-16字符的数量.<br>在Java 9之后, 虽然Java的String内部存储改用了 byte 数组, 但实际目的只是为了减少字符串占用的存储空间, 并不是彻底地改变了Java String中char的定义. 通过String的<a href="https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/lang/String.java" target="_blank" rel="noopener">源码</a> 可以看到当前String中核心的几个属性是:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">byte</span>[] value;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">byte</span> coder;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> hash;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> COMPACT_STRINGS;</span><br></pre></td></tr></table></figure><br>如果COMPACT_STRINGS是false, 那么本质上和JDK 8没有区别, 每个char都是一个UTF-16, 占两个字节.<br>默认COMPACT_STRINGS是true, 此时, String的存储有两种可能的形式, 通过coder区分, coder为0时表示LATIN1, 为1时表示UTF16. LATIN1实际上就是ISO-8859-1字符集, 即如果一个String的只包含了ISO-8859-1字符集的字符, 那么coder=0, 一个字符用一个byte存储即可, 而出现该字符集之外的字符, coder=1, 一个字符用两个byte存储, 即UTF-16的编码方式. 查看String中的<code>coder()</code>和<code>isLatin1()</code>方法, 也可看出是COMPACT_STRINGS和coder共同决定了字符串的编码方式.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">byte</span> <span class="title">coder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> COMPACT_STRINGS ? coder : UTF16;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isLatin1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> COMPACT_STRINGS &amp;&amp; coder == LATIN1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>如果想修改COMPACT_STRINGS的值, 可以指定JVM参数<code>-XX:-CompactStrings</code></p>
-<p>总结一下其实就是, Java中, 如果字符串是<code>isLatin1</code>的, 那么字符串长度就是字节数, 否则, 就是字节数/2, 至于这两个字节是否真的能表示一个字符, Java表示无所谓.<br>所以这个复杂的组合字符 👨‍👨‍👦‍👦 在Java中的length实际上就是11</p>
+<h4 id="6-1-1-Java的表现"><a href="#6-1-1-Java的表现" class="headerlink" title="6.1.1 Java的表现"></a>6.1.1 Java的表现</h4><p>先来看Java</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> s <span class="token operator">=</span> <span class="token string">"😤"</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token class-name">StandardCharsets</span><span class="token punctuation">.</span>UTF_8<span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">codePointAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">codePointAt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token number">2</span>
+<span class="token number">2</span>
+<span class="token number">4</span>
+<span class="token number">128548</span>
+<span class="token number">56868</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>实际上, Java认为字符串的长度是2.<br>Java 8之前, Java中的String, 内部存储结构就是char数组, 每个char都是一个UTF-16字符, 所以String的长度就是UTF-16字符的数量.<br>在Java 9之后, 虽然Java的String内部存储改用了 byte 数组, 但实际目的只是为了减少字符串占用的存储空间, 并不是彻底地改变了Java String中char的定义. 通过String的<a target="_blank" rel="noopener" href="https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/lang/String.java">源码</a> 可以看到当前String中核心的几个属性是:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> value<span class="token punctuation">;</span>
+<span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">byte</span> coder<span class="token punctuation">;</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> hash<span class="token punctuation">;</span>
+<span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> COMPACT_STRINGS<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果COMPACT_STRINGS是false, 那么本质上和JDK 8没有区别, 每个char都是一个UTF-16, 占两个字节.<br>默认COMPACT_STRINGS是true, 此时, String的存储有两种可能的形式, 通过coder区分, coder为0时表示LATIN1, 为1时表示UTF16. LATIN1实际上就是ISO-8859-1字符集, 即如果一个String的只包含了ISO-8859-1字符集的字符, 那么coder&#x3D;0, 一个字符用一个byte存储即可, 而出现该字符集之外的字符, coder&#x3D;1, 一个字符用两个byte存储, 即UTF-16的编码方式. 查看String中的<code>coder()</code>和<code>isLatin1()</code>方法, 也可看出是COMPACT_STRINGS和coder共同决定了字符串的编码方式.</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">byte</span> <span class="token function">coder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> COMPACT_STRINGS <span class="token operator">?</span> coder <span class="token operator">:</span> UTF16<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">private</span> <span class="token keyword">boolean</span> <span class="token function">isLatin1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> COMPACT_STRINGS <span class="token operator">&amp;&amp;</span> coder <span class="token operator">==</span> LATIN1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果想修改COMPACT_STRINGS的值, 可以指定JVM参数<code>-XX:-CompactStrings</code></p>
+<p>总结一下其实就是, Java中, 如果字符串是<code>isLatin1</code>的, 那么字符串长度就是字节数, 否则, 就是字节数&#x2F;2, 至于这两个字节是否真的能表示一个字符, Java表示无所谓.<br>所以这个复杂的组合字符 👨‍👨‍👦‍👦 在Java中的length实际上就是11</p>
 <p>可以说, 由于历史原因, Java原生的String在计算长度时, 并不是很好, 甚至可以说有点坑.</p>
-<h4 id="6-1-2-Javascript的表现"><a href="#6-1-2-Javascript的表现" class="headerlink" title="6.1.2 Javascript的表现"></a>6.1.2 Javascript的表现</h4><p>再看下Javascript<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="string">"😤"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(s.length);</span><br><span class="line"><span class="built_in">console</span>.log(s.codePointAt(<span class="number">0</span>));</span><br><span class="line"><span class="built_in">console</span>.log(s.codePointAt(<span class="number">1</span>));</span><br><span class="line"></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">128548</span></span><br><span class="line"><span class="number">56868</span></span><br></pre></td></tr></table></figure><br>毕竟前面带了Java, 难怪表现基本一致…</p>
-<h4 id="6-1-3-Python的表现"><a href="#6-1-3-Python的表现" class="headerlink" title="6.1.3 Python的表现"></a>6.1.3 Python的表现</h4><p>那Python 3上表现又是如何呢?<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"😤"</span></span><br><span class="line">print(len(s))</span><br><span class="line">print(ord(s[<span class="number">0</span>]))</span><br><span class="line"><span class="comment"># print(ord(s[1]))   # 会抛异常</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">128548</span></span><br></pre></td></tr></table></figure><br>终于有一个表现符合我们预期的编程语言了, 可喜可贺.<br>如果考虑组合字符呢?<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">combiningCharacter = <span class="string">"\u0079\u030C"</span></span><br><span class="line">print(len(combiningCharacter))</span><br><span class="line">combiningCharacters = <span class="string">"👨‍👨‍👦‍👦"</span></span><br><span class="line">print(len(combiningCharacters))</span><br><span class="line"></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">7</span></span><br></pre></td></tr></table></figure><br>所以组合字符, 无论是附加组合标记的, 还是用零宽连字符连接的, 还是被认为是单个字符组成的, 统计的长度也是单个字符的数量, 即Code Point的数量</p>
-<h4 id="6-1-4-Go的表现"><a href="#6-1-4-Go的表现" class="headerlink" title="6.1.4 Go的表现"></a>6.1.4 Go的表现</h4><p>最近风头正盛的Go语言呢?<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">s := <span class="string">"😤"</span></span><br><span class="line">fmt.Println(<span class="built_in">len</span>(s))</span><br><span class="line">fmt.Println(s[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span>(s); i++ &#123;</span><br><span class="line">  fmt.Printf(<span class="string">"%x "</span>, s[i])</span><br><span class="line">&#125;</span><br><span class="line">fmt.Println()</span><br><span class="line">fmt.Printf(<span class="string">"%+q\n"</span>, s)</span><br><span class="line"></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">240</span></span><br><span class="line">f0 <span class="number">9</span>f <span class="number">98</span> a4</span><br><span class="line"><span class="string">"\U0001f624"</span></span><br></pre></td></tr></table></figure><br>不科学呀, 怎么和其他语言都不一样呢?<br>直接看Go语言的一篇官方博客<sup id="fnref:31"><a href="#fn:31" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Pike, R. (2013, October 23). Strings, bytes, runes and characters in Go. Retrieved September 19, 2020, from https://blog.golang.org/strings
-">[31]</span></a></sup>, <a href="https://blog.golang.org/strings" target="_blank" rel="noopener">Strings, bytes, runes and characters in Go</a><br>这篇博客阐述了Go中关于String的几个关键点.</p>
+<h4 id="6-1-2-Javascript的表现"><a href="#6-1-2-Javascript的表现" class="headerlink" title="6.1.2 Javascript的表现"></a>6.1.2 Javascript的表现</h4><p>再看下Javascript</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> s <span class="token operator">=</span> <span class="token string">"😤"</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">codePointAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">codePointAt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token number">2</span>
+<span class="token number">128548</span>
+<span class="token number">56868</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>毕竟前面带了Java, 难怪表现基本一致…</p>
+<h4 id="6-1-3-Python的表现"><a href="#6-1-3-Python的表现" class="headerlink" title="6.1.3 Python的表现"></a>6.1.3 Python的表现</h4><p>那Python 3上表现又是如何呢?</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">s <span class="token operator">=</span> <span class="token string">"😤"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">ord</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># print(ord(s[1]))   # 会抛异常</span>
+
+<span class="token number">1</span>
+<span class="token number">128548</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>终于有一个表现符合我们预期的编程语言了, 可喜可贺.<br>如果考虑组合字符呢?</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">combiningCharacter <span class="token operator">=</span> <span class="token string">"\u0079\u030C"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>combiningCharacter<span class="token punctuation">)</span><span class="token punctuation">)</span>
+combiningCharacters <span class="token operator">=</span> <span class="token string">"👨‍👨‍👦‍👦"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>combiningCharacters<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token number">2</span>
+<span class="token number">7</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>所以组合字符, 无论是附加组合标记的, 还是用零宽连字符连接的, 还是被认为是单个字符组成的, 统计的长度也是单个字符的数量, 即Code Point的数量</p>
+<h4 id="6-1-4-Go的表现"><a href="#6-1-4-Go的表现" class="headerlink" title="6.1.4 Go的表现"></a>6.1.4 Go的表现</h4><p>最近风头正盛的Go语言呢?</p>
+<pre class="line-numbers language-go" data-language="go"><code class="language-go">s <span class="token operator">:=</span> <span class="token string">"😤"</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">&#123;</span>
+  fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%x "</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%+q\n"</span><span class="token punctuation">,</span> s<span class="token punctuation">)</span>
+
+<span class="token number">4</span>
+<span class="token number">240</span>
+f0 9f <span class="token number">98</span> a4
+<span class="token string">"\U0001f624"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>不科学呀, 怎么和其他语言都不一样呢?<br>直接看Go语言的一篇官方博客<sup id="fnref:31" class="location-target"><a href="#fn:31" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Pike, R. (2013, October 23). Strings, bytes, runes and characters in Go. Retrieved September 19, 2020, from https://blog.golang.org/strings
+">31</span></a></sup>, <a target="_blank" rel="noopener" href="https://blog.golang.org/strings">Strings, bytes, runes and characters in Go</a><br>这篇博客阐述了Go中关于String的几个关键点.</p>
 <ul>
 <li>Go中字符串实际上就等价于一个字节流, 访问一个字符串的index位置, 得到的其实就是对应位置的字节.</li>
 <li>Go只存储字节流, 每个字节的值, 可以随便指定, 因此理论上字节流的编码方式可以是任何编码方式. 但是特殊的是字面量(也就是直接在源码中写出来的), 字面量的值转为什么样的字节流, 实际上在书写源码的那一刻就决定了, 源码文件本身是什么编码格式的, 就对应哪种编码的字节流, 由于Go源码只允许UTF-8格式, 实际上Go的字面量对应的字节流就是UTF-8字节流.</li>
-<li>Go没有使用字符/character的概念, 而是使用了rune</li>
+<li>Go没有使用字符&#x2F;character的概念, 而是使用了rune</li>
 </ul>
-<p>博客中也解释了这么设计的原因, 因为 字符(character) 这个概念很难定义, 考虑到组合字符等, 在 计算/Computing 中字符的概念很容易引起歧义(也的确如此, 包括这篇文章写的也没那么严谨), 因此Go中没有使用字符这个概念, 取而代之的是rune, 一个rune实际上就等价于一个Unicode中的Code Point, 同时rune实际上就是int32的别名, 这也不难理解, 用整数表示Code Point正好.<br>至于如何迭代string中的rune, Go 提供了 <code>for range</code>语法, 博客示例:<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> nihongo = <span class="string">"日本語"</span></span><br><span class="line"><span class="keyword">for</span> index, runeValue := <span class="keyword">range</span> nihongo &#123;</span><br><span class="line">  fmt.Printf(<span class="string">"%#U starts at byte position %d\n"</span>, runeValue, index)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">U+<span class="number">65E5</span> <span class="string">'日'</span> starts at <span class="keyword">byte</span> position <span class="number">0</span></span><br><span class="line">U+<span class="number">672</span>C <span class="string">'本'</span> starts at <span class="keyword">byte</span> position <span class="number">3</span></span><br><span class="line">U+<span class="number">8</span>A9E <span class="string">'語'</span> starts at <span class="keyword">byte</span> position <span class="number">6</span></span><br></pre></td></tr></table></figure></p>
-<p>如果我们用<code>for range</code>来迭代组合字符呢?<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> combiningCharacter = <span class="string">"\u0079\u030C"</span></span><br><span class="line"><span class="keyword">for</span> index, runeValue := <span class="keyword">range</span> combiningCharacter &#123;</span><br><span class="line">  fmt.Printf(<span class="string">"%#U starts at byte position %d\n"</span>, runeValue, index)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> combiningCharacters = <span class="string">"😤👨‍👨‍👦‍👦"</span></span><br><span class="line"><span class="keyword">for</span> index, runeValue := <span class="keyword">range</span> combiningCharacters &#123;</span><br><span class="line">  fmt.Printf(<span class="string">"%#U starts at byte position %d\n"</span>, runeValue, index)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">U+<span class="number">0079</span> <span class="string">'y'</span> starts at <span class="keyword">byte</span> position <span class="number">0</span></span><br><span class="line">U+<span class="number">030</span>C <span class="string">'̌'</span> starts at <span class="keyword">byte</span> position <span class="number">1</span></span><br><span class="line"></span><br><span class="line">U+<span class="number">1</span>F624 <span class="string">'😤'</span> starts at <span class="keyword">byte</span> position <span class="number">0</span></span><br><span class="line">U+<span class="number">1</span>F468 <span class="string">'👨'</span> starts at <span class="keyword">byte</span> position <span class="number">4</span></span><br><span class="line">U+<span class="number">200</span>D starts at <span class="keyword">byte</span> position <span class="number">8</span></span><br><span class="line">U+<span class="number">1</span>F468 <span class="string">'👨'</span> starts at <span class="keyword">byte</span> position <span class="number">11</span></span><br><span class="line">U+<span class="number">200</span>D starts at <span class="keyword">byte</span> position <span class="number">15</span></span><br><span class="line">U+<span class="number">1</span>F466 <span class="string">'👦'</span> starts at <span class="keyword">byte</span> position <span class="number">18</span></span><br><span class="line">U+<span class="number">200</span>D starts at <span class="keyword">byte</span> position <span class="number">22</span></span><br><span class="line">U+<span class="number">1</span>F466 <span class="string">'👦'</span> starts at <span class="keyword">byte</span> position <span class="number">25</span></span><br></pre></td></tr></table></figure><br>这是和Python一样的结果.</p>
-<p>现在还剩下一个问题, 如果我不仅仅想在<code>for range</code>中访问rune, 有什么办法直接根据索引访问吗?<br>Go给出的答案是: 语言核心部分不包含该功能, 但是可以使用库. 最常用的就是<code>unicode/utf8</code>了<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i, w := <span class="number">0</span>, <span class="number">0</span>; i &lt; <span class="built_in">len</span>(nihongo); i += w &#123;</span><br><span class="line">  runeValue, width := utf8.DecodeRuneInString(nihongo[i:])</span><br><span class="line">  fmt.Printf(<span class="string">"%#U starts at byte position %d\n"</span>, runeValue, i)</span><br><span class="line">  w = width</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>博客中也解释了这么设计的原因, 因为 字符(character) 这个概念很难定义, 考虑到组合字符等, 在 计算&#x2F;Computing 中字符的概念很容易引起歧义(也的确如此, 包括这篇文章写的也没那么严谨), 因此Go中没有使用字符这个概念, 取而代之的是rune, 一个rune实际上就等价于一个Unicode中的Code Point, 同时rune实际上就是int32的别名, 这也不难理解, 用整数表示Code Point正好.<br>至于如何迭代string中的rune, Go 提供了 <code>for range</code>语法, 博客示例:</p>
+<pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">const</span> nihongo <span class="token operator">=</span> <span class="token string">"日本語"</span>
+<span class="token keyword">for</span> index<span class="token punctuation">,</span> runeValue <span class="token operator">:=</span> <span class="token keyword">range</span> nihongo <span class="token punctuation">&#123;</span>
+  fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%#U starts at byte position %d\n"</span><span class="token punctuation">,</span> runeValue<span class="token punctuation">,</span> index<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+U<span class="token operator">+</span><span class="token number">65E5</span> <span class="token char">'日'</span> starts at <span class="token builtin">byte</span> position <span class="token number">0</span>
+U<span class="token operator">+</span>672C <span class="token char">'本'</span> starts at <span class="token builtin">byte</span> position <span class="token number">3</span>
+U<span class="token operator">+</span>8A9E <span class="token char">'語'</span> starts at <span class="token builtin">byte</span> position <span class="token number">6</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果我们用<code>for range</code>来迭代组合字符呢?</p>
+<pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">const</span> combiningCharacter <span class="token operator">=</span> <span class="token string">"\u0079\u030C"</span>
+<span class="token keyword">for</span> index<span class="token punctuation">,</span> runeValue <span class="token operator">:=</span> <span class="token keyword">range</span> combiningCharacter <span class="token punctuation">&#123;</span>
+  fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%#U starts at byte position %d\n"</span><span class="token punctuation">,</span> runeValue<span class="token punctuation">,</span> index<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">const</span> combiningCharacters <span class="token operator">=</span> <span class="token string">"😤👨‍👨‍👦‍👦"</span>
+<span class="token keyword">for</span> index<span class="token punctuation">,</span> runeValue <span class="token operator">:=</span> <span class="token keyword">range</span> combiningCharacters <span class="token punctuation">&#123;</span>
+  fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%#U starts at byte position %d\n"</span><span class="token punctuation">,</span> runeValue<span class="token punctuation">,</span> index<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+U<span class="token operator">+</span><span class="token number">0079</span> <span class="token char">'y'</span> starts at <span class="token builtin">byte</span> position <span class="token number">0</span>
+U<span class="token operator">+</span>030C <span class="token char">'̌'</span> starts at <span class="token builtin">byte</span> position <span class="token number">1</span>
+
+U<span class="token operator">+</span>1F624 <span class="token char">'😤'</span> starts at <span class="token builtin">byte</span> position <span class="token number">0</span>
+U<span class="token operator">+</span>1F468 <span class="token char">'👨'</span> starts at <span class="token builtin">byte</span> position <span class="token number">4</span>
+U<span class="token operator">+</span>200D starts at <span class="token builtin">byte</span> position <span class="token number">8</span>
+U<span class="token operator">+</span>1F468 <span class="token char">'👨'</span> starts at <span class="token builtin">byte</span> position <span class="token number">11</span>
+U<span class="token operator">+</span>200D starts at <span class="token builtin">byte</span> position <span class="token number">15</span>
+U<span class="token operator">+</span>1F466 <span class="token char">'👦'</span> starts at <span class="token builtin">byte</span> position <span class="token number">18</span>
+U<span class="token operator">+</span>200D starts at <span class="token builtin">byte</span> position <span class="token number">22</span>
+U<span class="token operator">+</span>1F466 <span class="token char">'👦'</span> starts at <span class="token builtin">byte</span> position <span class="token number">25</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这是和Python一样的结果.</p>
+<p>现在还剩下一个问题, 如果我不仅仅想在<code>for range</code>中访问rune, 有什么办法直接根据索引访问吗?<br>Go给出的答案是: 语言核心部分不包含该功能, 但是可以使用库. 最常用的就是<code>unicode/utf8</code>了</p>
+<pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">for</span> i<span class="token punctuation">,</span> w <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>nihongo<span class="token punctuation">)</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> w <span class="token punctuation">&#123;</span>
+  runeValue<span class="token punctuation">,</span> width <span class="token operator">:=</span> utf8<span class="token punctuation">.</span><span class="token function">DecodeRuneInString</span><span class="token punctuation">(</span>nihongo<span class="token punctuation">[</span>i<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%#U starts at byte position %d\n"</span><span class="token punctuation">,</span> runeValue<span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+  w <span class="token operator">=</span> width
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <blockquote>
-<p>实际上, 在Unicode的FAQ中<sup id="fnref:32"><a href="#fn:32" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Unicode Consortium. (2020, September 19). Characters and Combining Marks. Retrieved September 19, 2020, from http://unicode.org/faq/char_combmark.html
-">[32]</span></a></sup>, 也提到了如何统计string中的字符数量, <a href="http://unicode.org/faq/char_combmark.html#7" target="_blank" rel="noopener">点我看看</a>, 其中将统计方法归纳总结成了四类: bytes,Code units,Code points,Grapheme clusters</p>
+<p>实际上, 在Unicode的FAQ中<sup id="fnref:32" class="location-target"><a href="#fn:32" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Unicode Consortium. (2020, September 19). Characters and Combining Marks. Retrieved September 19, 2020, from http://unicode.org/faq/char_combmark.html
+">32</span></a></sup>, 也提到了如何统计string中的字符数量, <a target="_blank" rel="noopener" href="http://unicode.org/faq/char_combmark.html#7">点我看看</a>, 其中将统计方法归纳总结成了四类: bytes,Code units,Code points,Grapheme clusters</p>
 </blockquote>
-<h3 id="6-2-字符串反转都如何处理"><a href="#6-2-字符串反转都如何处理" class="headerlink" title="6.2 字符串反转都如何处理?"></a>6.2 字符串反转都如何处理?</h3><p>如果只是对bytes反转, 是很简单的, 但很多情况下对终端用户来说, 反转之后的字符串还想能够正常显示的, 因此对于复杂文字来说, 需要以字素为单位切分, 而不仅仅是字符/Code point</p>
+<h3 id="6-2-字符串反转都如何处理"><a href="#6-2-字符串反转都如何处理" class="headerlink" title="6.2 字符串反转都如何处理?"></a>6.2 字符串反转都如何处理?</h3><p>如果只是对bytes反转, 是很简单的, 但很多情况下对终端用户来说, 反转之后的字符串还想能够正常显示的, 因此对于复杂文字来说, 需要以字素为单位切分, 而不仅仅是字符&#x2F;Code point</p>
 <p>按照上一个问题的分析, 可以知道Java一般都是按照Code point切分字符的, 但由于用了UTF-16的编码方式, 超过两字节的Code point就会被统计成两个字符, 那么在反转字符串时, 会如何呢?</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"😤Ly̌L\uD83D\uDC68\u200D\uD83D\uDC68\u200D\uD83D\uDC66\u200D\uD83D\uDC66Ry̌R😤"</span>;</span><br><span class="line">System.out.println(s);</span><br><span class="line">String reverseStr = <span class="keyword">new</span> StringBuffer(s).reverse().toString();</span><br><span class="line">System.out.println(reverseStr);</span><br><span class="line"></span><br><span class="line">😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤</span><br><span class="line">😤ŘyR👦‍👦‍👨‍👨ĽyL😤</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> s <span class="token operator">=</span> <span class="token string">"😤Ly̌L\uD83D\uDC68\u200D\uD83D\uDC68\u200D\uD83D\uDC66\u200D\uD83D\uDC66Ry̌R😤"</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> reverseStr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuffer</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>reverseStr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+😤<span class="token class-name">Ly</span>̌<span class="token class-name">L</span>👨‍👨‍👦‍👦<span class="token class-name">Ry</span>̌<span class="token class-name">R</span>😤
+😤<span class="token class-name">R</span>̌yR👦‍👦‍👨‍👨<span class="token class-name">L</span>̌yL😤<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Emoji还是正常的, 会按照Code point切分, 查看源码可以很清晰的看到对Surrogate做了特殊处理. 但是对组合字符就无能为力了</p>
-<p>Python 3应该是一样的表现.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤"</span></span><br><span class="line">print(s)</span><br><span class="line">print(s[::<span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line">😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤</span><br><span class="line">😤ŘyR👦‍👦‍👨‍👨ĽyL😤</span><br></pre></td></tr></table></figure></p>
-<p>Javascript原生split再反转, 理论上应该是不行的, 测试了一下也的确不行, 使用Array.from可以解决把一个Emoji的Code point当作两个的问题, 但是对组合字符还是无效的.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤"</span></span><br><span class="line"><span class="built_in">console</span>.log(s)</span><br><span class="line"><span class="built_in">console</span>.log(s.split(<span class="string">""</span>).reverse().join(<span class="string">""</span>))</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.from(s).reverse().join(<span class="string">""</span>))</span><br><span class="line"></span><br><span class="line">😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤</span><br><span class="line">��ŘyR��‍��‍��‍��ĽyL��</span><br><span class="line">😤ŘyR👦‍👦‍👨‍👨ĽyL😤</span><br></pre></td></tr></table></figure></p>
-<p>Go还是和之前说的一样, string本质上就是字节流, 所以需要封装对字节的处理, 一个示例.<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> s = <span class="string">"😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤"</span></span><br><span class="line">fmt.Println(s)</span><br><span class="line">fmt.Println(Reverse(s))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Reverse</span><span class="params">(s <span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">  size := <span class="built_in">len</span>(s)</span><br><span class="line">  buf := <span class="built_in">make</span>([]<span class="keyword">byte</span>, size)</span><br><span class="line">  <span class="keyword">for</span> start := <span class="number">0</span>; start &lt; size; &#123;</span><br><span class="line">    r, n := utf8.DecodeRuneInString(s[start:])</span><br><span class="line">    start += n</span><br><span class="line">    utf8.EncodeRune(buf[size-start:], r)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">string</span>(buf)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤</span><br><span class="line">😤ŘyR👦‍👦‍👨‍👨ĽyL😤</span><br></pre></td></tr></table></figure></p>
+<p>Python 3应该是一样的表现.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">s <span class="token operator">=</span> <span class="token string">"😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤
+😤ŘyR👦‍👦‍👨‍👨ĽyL😤<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Javascript原生split再反转, 理论上应该是不行的, 测试了一下也的确不行, 使用Array.from可以解决把一个Emoji的Code point当作两个的问题, 但是对组合字符还是无效的.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">s <span class="token operator">=</span> <span class="token string">"😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤"</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+😤Ly̌<span class="token constant">L</span>👨‍👨‍👦‍👦Ry̌<span class="token constant">R</span>😤
+��<span class="token constant">R</span>̌yR��‍��‍��‍��<span class="token constant">L</span>̌yL��
+😤<span class="token constant">R</span>̌yR👦‍👦‍👨‍👨<span class="token constant">L</span>̌yL😤<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Go还是和之前说的一样, string本质上就是字节流, 所以需要封装对字节的处理, 一个示例.</p>
+<pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">const</span> s <span class="token operator">=</span> <span class="token string">"😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤"</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">Reverse</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">Reverse</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">&#123;</span>
+  size <span class="token operator">:=</span> <span class="token function">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+  buf <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">,</span> size<span class="token punctuation">)</span>
+  <span class="token keyword">for</span> start <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> start <span class="token operator">&lt;</span> size<span class="token punctuation">;</span> <span class="token punctuation">&#123;</span>
+    r<span class="token punctuation">,</span> n <span class="token operator">:=</span> utf8<span class="token punctuation">.</span><span class="token function">DecodeRuneInString</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>start<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    start <span class="token operator">+=</span> n
+    utf8<span class="token punctuation">.</span><span class="token function">EncodeRune</span><span class="token punctuation">(</span>buf<span class="token punctuation">[</span>size<span class="token operator">-</span>start<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> <span class="token function">string</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+😤Ly̌L👨‍👨‍👦‍👦Ry̌R😤
+😤ŘyR👦‍👦‍👨‍👨ĽyL😤<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>其实, 这个问题, 本质上还是在界定字节、Code point、字素的概念, 反转函数究竟是按照byte、Code point还是字素去处理字符串, 可以看到, 语言核心类库一般只支持到按照Code point去切分, 想要处理组合字符等特殊的字素, 需要付出更多的努力</strong></p>
 <h3 id="6-3-怎么除去4字节编码的utf-8字符"><a href="#6-3-怎么除去4字节编码的utf-8字符" class="headerlink" title="6.3 怎么除去4字节编码的utf-8字符"></a>6.3 怎么除去4字节编码的utf-8字符</h3><p>由于历史因素, 无法修改MySQL的编码, 这时可能就需要在落库时过滤一遍字符串, 将4字节的utf-8字符去除.<br>对于严格按照Code point切分的语言, 比如python和go, 通过每个字符、rune的长度, 很容易就能判定.</p>
 <p>对于Java这种UTF-16存储的, 我们可以利用一个很简单却很容易被忽略的事实: <strong>UTF-8编码的3字节的字符范围, 就是BMP的范围</strong>, 也就是说, 基本UTF-16范围的字符, 用UTF-8都不超过3字节, 所以只要判断一个字符是否是Surrogate, 移除所有Surrogate, 其实就可以保证不会超过UTF-8的3字节范围.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">removeSurrogate</span><span class="params">(String originStr)</span> </span>&#123;</span><br><span class="line">  StringBuilder returnStr = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">char</span> ch : originStr.toCharArray()) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!Character.isSurrogate(ch)) &#123;</span><br><span class="line">      returnStr.append(ch);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> returnStr.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">Kawasaki, Tamaki. <em>Emoji（表情符号）是如何诞生并在全世界普及的？</em>. 12 Aug. 2018, <a href="http://www.gov-online.go.jp/eng/publicity/book/hlj/html/201808/201808_12_ch.html" target="_blank" rel="noopener">www.gov-online.go.jp/eng/publicity/book/hlj/html/201808/201808_12_ch.html</a>.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. “World Emoji Day.” <em>Wikipedia</em>, Wikimedia Foundation, 10 Aug. 2020, en.wikipedia.org/wiki/World_Emoji_Day.<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">池昌海 . “语言学概论.” 浙江大学-远程教育学院, 16 Dec. 2010, 218.108.57.198/yyxgl1/.<a href="#fnref:3" rev="footnote"> ↩</a></span></div><div id="fn:4" style="display:flex"><span style="width:20px">4.</span><span style="width:calc(100% - 20px)">李玲璞. &quot;汉字学元点理论及相关问题——兼谈汉字认知的若干误区.&quot; 中国文字研究 (2004).<a href="#fnref:4" rev="footnote"> ↩</a></span></div><div id="fn:5" style="display:flex"><span style="width:20px">5.</span><span style="width:calc(100% - 20px)">Wikipedians. “Character Encoding.” Wikipedia, Wikimedia Foundation, 25 Aug. 2020, en.wikipedia.org/wiki/Character_encoding.<a href="#fnref:5" rev="footnote"> ↩</a></span></div><div id="fn:6" style="display:flex"><span style="width:20px">6.</span><span style="width:calc(100% - 20px)">Tero, Paul. “Unicode, UTF8 &amp; Character Sets: The Ultimate Guide.” Smashing Magazine, 6 June 2012, <a href="http://www.smashingmagazine.com/2012/06/all-about-unicode-utf8-character-sets/" target="_blank" rel="noopener">www.smashingmagazine.com/2012/06/all-about-unicode-utf8-character-sets/</a>.<a href="#fnref:6" rev="footnote"> ↩</a></span></div><div id="fn:7" style="display:flex"><span style="width:20px">7.</span><span style="width:calc(100% - 20px)">Wikipedians. “Plane (Unicode).” <em>Wikipedia</em>, Wikimedia Foundation, 28 Aug. 2020, en.wikipedia.org/wiki/Plane_(Unicode).<a href="#fnref:7" rev="footnote"> ↩</a></span></div><div id="fn:8" style="display:flex"><span style="width:20px">8.</span><span style="width:calc(100% - 20px)">Unkown. “Unicode Character Table.” ✔️ ❤️ ★ Unicode Character Table, 6 Sept. 2020, unicode-table.com/en/.<a href="#fnref:8" rev="footnote"> ↩</a></span></div><div id="fn:9" style="display:flex"><span style="width:20px">9.</span><span style="width:calc(100% - 20px)">timwhitlock. “Unicode Character Inspector.” <em>apps.timwhitlock.info</em>, 6 Sept. 2020, apps.timwhitlock.info/unicode/inspect.<a href="#fnref:9" rev="footnote"> ↩</a></span></div><div id="fn:10" style="display:flex"><span style="width:20px">10.</span><span style="width:calc(100% - 20px)">纤夫张 . “其实你并不懂 Unicode.” 知乎专栏, 31 Dec. 2018, zhuanlan.zhihu.com/p/53714077.<a href="#fnref:10" rev="footnote"> ↩</a></span></div><div id="fn:11" style="display:flex"><span style="width:20px">11.</span><span style="width:calc(100% - 20px)">Wikipedians. “UTF-8.” Wikipedia, Wikimedia Foundation, 5 Sept. 2020, en.wikipedia.org/wiki/UTF-8.<a href="#fnref:11" rev="footnote"> ↩</a></span></div><div id="fn:12" style="display:flex"><span style="width:20px">12.</span><span style="width:calc(100% - 20px)">F. Yergeau. “UTF-8, a Transformation Format of ISO 10646.” IETF Tools, 1 Nov. 2003, tools.ietf.org/html/rfc3629.<a href="#fnref:12" rev="footnote"> ↩</a></span></div><div id="fn:13" style="display:flex"><span style="width:20px">13.</span><span style="width:calc(100% - 20px)">Cohen, Danny. “ON HOLY WARS AND A PLEA FOR PEACE.” IETF, 1 Apr. 1980, <a href="http://www.ietf.org/rfc/ien/ien137.txt" target="_blank" rel="noopener">www.ietf.org/rfc/ien/ien137.txt</a>.<a href="#fnref:13" rev="footnote"> ↩</a></span></div><div id="fn:14" style="display:flex"><span style="width:20px">14.</span><span style="width:calc(100% - 20px)">Wikipedians. “字节序.” Wikipedia, Wikimedia Foundation, 18 Aug. 2020, zh.wikipedia.org/wiki/字节序.<a href="#fnref:14" rev="footnote"> ↩</a></span></div><div id="fn:15" style="display:flex"><span style="width:20px">15.</span><span style="width:calc(100% - 20px)">Unicode. “Glossary of Unicode Terms.” Glossary, 21 May 2020, unicode.org/glossary/.<a href="#fnref:15" rev="footnote"> ↩</a></span></div><div id="fn:16" style="display:flex"><span style="width:20px">16.</span><span style="width:calc(100% - 20px)">Wikipedians. “位元組順序記號.” Wikipedia, Wikimedia Foundation, 30 June 2020, zh.wikipedia.org/wiki/位元組順序記號.<a href="#fnref:16" rev="footnote"> ↩</a></span></div><div id="fn:17" style="display:flex"><span style="width:20px">17.</span><span style="width:calc(100% - 20px)">infocodez. “【转载】随便说说字符集和编码.” 博客园, 27 Sept. 2017, <a href="http://www.cnblogs.com/infocodez/p/7600459.html" target="_blank" rel="noopener">www.cnblogs.com/infocodez/p/7600459.html</a>.<a href="#fnref:17" rev="footnote"> ↩</a></span></div><div id="fn:18" style="display:flex"><span style="width:20px">18.</span><span style="width:calc(100% - 20px)">Wikipedians. “Unicode控制字符.” Wikipedia, Wikimedia Foundation, 28 July 2020, zh.wikipedia.org/wiki/Unicode控制字符.<a href="#fnref:18" rev="footnote"> ↩</a></span></div><div id="fn:19" style="display:flex"><span style="width:20px">19.</span><span style="width:calc(100% - 20px)">Wikipedians. “異體字選擇器.” Wikipedia, Wikimedia Foundation, 4 Sept. 2020, zh.wikipedia.org/wiki/異體字選擇器.<a href="#fnref:19" rev="footnote"> ↩</a></span></div><div id="fn:20" style="display:flex"><span style="width:20px">20.</span><span style="width:calc(100% - 20px)">Wikipedians. “組合字符.” Wikipedia, Wikimedia Foundation, 30 May 2019, zh.wikipedia.org/wiki/組合字符.<a href="#fnref:20" rev="footnote"> ↩</a></span></div><div id="fn:21" style="display:flex"><span style="width:20px">21.</span><span style="width:calc(100% - 20px)">Zachary. “Emoji与Unicode.” Emoji与Unicode · Zablog, 18 Sept. 2017, zablog.me/2017/09/18/emoji/.<a href="#fnref:21" rev="footnote"> ↩</a></span></div><div id="fn:22" style="display:flex"><span style="width:20px">22.</span><span style="width:calc(100% - 20px)">Wikipedians. “Unicode Equivalence.” Wikipedia, Wikimedia Foundation, 7 Aug. 2020, en.wikipedia.org/wiki/Unicode_equivalence.<a href="#fnref:22" rev="footnote"> ↩</a></span></div><div id="fn:23" style="display:flex"><span style="width:20px">23.</span><span style="width:calc(100% - 20px)">deerchao. “基本修养：字符集与编码.” 超越代码, 12 Sept. 2019, deerchao.cn/blog/posts/unicode.html.<a href="#fnref:23" rev="footnote"> ↩</a></span></div><div id="fn:24" style="display:flex"><span style="width:20px">24.</span><span style="width:calc(100% - 20px)">vstinner. “Programming with Unicode.” 4. Unicode - Programming with Unicode, 23 June 2017, unicodebook.readthedocs.io/unicode.html.<a href="#fnref:24" rev="footnote"> ↩</a></span></div><div id="fn:25" style="display:flex"><span style="width:20px">25.</span><span style="width:calc(100% - 20px)">Wikipedians. “UTF-8.” Wikipedia, Wikimedia Foundation, 20 Aug. 2020, zh.wikipedia.org/wiki/UTF-8.<a href="#fnref:25" rev="footnote"> ↩</a></span></div><div id="fn:26" style="display:flex"><span style="width:20px">26.</span><span style="width:calc(100% - 20px)">Cenalulu(卢钧轶) . “十分钟搞清字符集和字符编码.” Cenalulu’s Tech Blog, 25 Jan. 2015, cenalulu.github.io/linux/character-encoding/.<a href="#fnref:26" rev="footnote"> ↩</a></span></div><div id="fn:27" style="display:flex"><span style="width:20px">27.</span><span style="width:calc(100% - 20px)">Wikipedians. “Unicode Font.” Wikipedia, Wikimedia Foundation, 13 July 2020, en.wikipedia.org/wiki/Unicode_font.<a href="#fnref:27" rev="footnote"> ↩</a></span></div><div id="fn:28" style="display:flex"><span style="width:20px">28.</span><span style="width:calc(100% - 20px)">DrStrangeLove. “How Are Character Encodings Related to Fonts?” Super User, 15 Nov. 2011, superuser.com/questions/357530/how-are-character-encodings-related-to-fonts.<a href="#fnref:28" rev="footnote"> ↩</a></span></div><div id="fn:29" style="display:flex"><span style="width:20px">29.</span><span style="width:calc(100% - 20px)">Belleve. “字符编码与字体的关系是什么？.” 知乎, 27 Apr. 2015, <a href="http://www.zhihu.com/question/29924586" target="_blank" rel="noopener">www.zhihu.com/question/29924586</a>.<a href="#fnref:29" rev="footnote"> ↩</a></span></div><div id="fn:30" style="display:flex"><span style="width:20px">30.</span><span style="width:calc(100% - 20px)">Davis, Mark, and Christopher Chapman. Unicode Text Segmentation. 19 Feb. 2020, unicode.org/reports/tr29/.<a href="#fnref:30" rev="footnote"> ↩</a></span></div><div id="fn:31" style="display:flex"><span style="width:20px">31.</span><span style="width:calc(100% - 20px)">Pike, R. (2013, October 23). Strings, bytes, runes and characters in Go. Retrieved September 19, 2020, from <a href="https://blog.golang.org/strings" target="_blank" rel="noopener">https://blog.golang.org/strings</a><a href="#fnref:31" rev="footnote"> ↩</a></span></div><div id="fn:32" style="display:flex"><span style="width:20px">32.</span><span style="width:calc(100% - 20px)">Unicode Consortium. (2020, September 19). Characters and Combining Marks. Retrieved September 19, 2020, from <a href="http://unicode.org/faq/char_combmark.html" target="_blank" rel="noopener">http://unicode.org/faq/char_combmark.html</a><a href="#fnref:32" rev="footnote"> ↩</a></span></div><div id="fn:33" style="display:flex"><span style="width:20px">33.</span><span style="width:calc(100% - 20px)">Hosken, M., &amp; Gaultney, V. (2003, September 5). Guidelines for Writing System Support: Technical Details: Smart Rendering: Part 1. Retrieved September 20, 2020, from <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi" target="_blank" rel="noopener">https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi</a><a href="#fnref:33" rev="footnote"> ↩</a></span></div><div id="fn:34" style="display:flex"><span style="width:20px">34.</span><span style="width:calc(100% - 20px)">Unicode Consortium. (2002, October 28). A General Method for Rendering Combining Marks. Retrieved September 20, 2020, from <a href="http://www.unicode.org/notes/tn2/" target="_blank" rel="noopener">http://www.unicode.org/notes/tn2/</a><a href="#fnref:34" rev="footnote"> ↩</a></span></div></div></div>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">String</span> <span class="token function">removeSurrogate</span><span class="token punctuation">(</span><span class="token class-name">String</span> originStr<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token class-name">StringBuilder</span> returnStr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> ch <span class="token operator">:</span> originStr<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">Character</span><span class="token punctuation">.</span><span class="token function">isSurrogate</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      returnStr<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> returnStr<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Kawasaki, Tamaki. <em>Emoji（表情符号）是如何诞生并在全世界普及的？</em>. 12 Aug. 2018, www.gov-online.go.jp/eng/publicity/book/hlj/html/201808/201808_12_ch.html.<a href="#fnref:1" rev="footnote">↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “World Emoji Day.” <em>Wikipedia</em>, Wikimedia Foundation, 10 Aug. 2020, en.wikipedia.org/wiki/World_Emoji_Day.<a href="#fnref:2" rev="footnote">↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">池昌海 . “语言学概论.” 浙江大学-远程教育学院, 16 Dec. 2010, 218.108.57.198/yyxgl1/.<a href="#fnref:3" rev="footnote">↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">李玲璞. &quot;汉字学元点理论及相关问题——兼谈汉字认知的若干误区.&quot; 中国文字研究 (2004).<a href="#fnref:4" rev="footnote">↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “Character Encoding.” Wikipedia, Wikimedia Foundation, 25 Aug. 2020, en.wikipedia.org/wiki/Character_encoding.<a href="#fnref:5" rev="footnote">↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Tero, Paul. “Unicode, UTF8 &amp; Character Sets: The Ultimate Guide.” Smashing Magazine, 6 June 2012, www.smashingmagazine.com/2012/06/all-about-unicode-utf8-character-sets/.<a href="#fnref:6" rev="footnote">↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “Plane (Unicode).” <em>Wikipedia</em>, Wikimedia Foundation, 28 Aug. 2020, en.wikipedia.org/wiki/Plane_(Unicode).<a href="#fnref:7" rev="footnote">↩</a></span></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Unkown. “Unicode Character Table.” ✔️ ❤️ ★ Unicode Character Table, 6 Sept. 2020, unicode-table.com/en/.<a href="#fnref:8" rev="footnote">↩</a></span></li><li id="fn:9"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">9.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">timwhitlock. “Unicode Character Inspector.” <em>apps.timwhitlock.info</em>, 6 Sept. 2020, apps.timwhitlock.info/unicode/inspect.<a href="#fnref:9" rev="footnote">↩</a></span></li><li id="fn:10"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">10.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">纤夫张 . “其实你并不懂 Unicode.” 知乎专栏, 31 Dec. 2018, zhuanlan.zhihu.com/p/53714077.<a href="#fnref:10" rev="footnote">↩</a></span></li><li id="fn:11"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">11.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “UTF-8.” Wikipedia, Wikimedia Foundation, 5 Sept. 2020, en.wikipedia.org/wiki/UTF-8.<a href="#fnref:11" rev="footnote">↩</a></span></li><li id="fn:12"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">12.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">F. Yergeau. “UTF-8, a Transformation Format of ISO 10646.” IETF Tools, 1 Nov. 2003, tools.ietf.org/html/rfc3629.<a href="#fnref:12" rev="footnote">↩</a></span></li><li id="fn:13"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">13.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Cohen, Danny. “ON HOLY WARS AND A PLEA FOR PEACE.” IETF, 1 Apr. 1980, www.ietf.org/rfc/ien/ien137.txt.<a href="#fnref:13" rev="footnote">↩</a></span></li><li id="fn:14"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">14.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “字节序.” Wikipedia, Wikimedia Foundation, 18 Aug. 2020, zh.wikipedia.org/wiki/字节序.<a href="#fnref:14" rev="footnote">↩</a></span></li><li id="fn:15"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">15.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Unicode. “Glossary of Unicode Terms.” Glossary, 21 May 2020, unicode.org/glossary/.<a href="#fnref:15" rev="footnote">↩</a></span></li><li id="fn:16"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">16.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “位元組順序記號.” Wikipedia, Wikimedia Foundation, 30 June 2020, zh.wikipedia.org/wiki/位元組順序記號.<a href="#fnref:16" rev="footnote">↩</a></span></li><li id="fn:17"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">17.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">infocodez. “【转载】随便说说字符集和编码.” 博客园, 27 Sept. 2017, www.cnblogs.com/infocodez/p/7600459.html.<a href="#fnref:17" rev="footnote">↩</a></span></li><li id="fn:18"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">18.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “Unicode控制字符.” Wikipedia, Wikimedia Foundation, 28 July 2020, zh.wikipedia.org/wiki/Unicode控制字符.<a href="#fnref:18" rev="footnote">↩</a></span></li><li id="fn:19"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">19.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “異體字選擇器.” Wikipedia, Wikimedia Foundation, 4 Sept. 2020, zh.wikipedia.org/wiki/異體字選擇器.<a href="#fnref:19" rev="footnote">↩</a></span></li><li id="fn:20"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">20.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “組合字符.” Wikipedia, Wikimedia Foundation, 30 May 2019, zh.wikipedia.org/wiki/組合字符.<a href="#fnref:20" rev="footnote">↩</a></span></li><li id="fn:21"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">21.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Zachary. “Emoji与Unicode.” Emoji与Unicode · Zablog, 18 Sept. 2017, zablog.me/2017/09/18/emoji/.<a href="#fnref:21" rev="footnote">↩</a></span></li><li id="fn:22"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">22.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “Unicode Equivalence.” Wikipedia, Wikimedia Foundation, 7 Aug. 2020, en.wikipedia.org/wiki/Unicode_equivalence.<a href="#fnref:22" rev="footnote">↩</a></span></li><li id="fn:23"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">23.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">deerchao. “基本修养：字符集与编码.” 超越代码, 12 Sept. 2019, deerchao.cn/blog/posts/unicode.html.<a href="#fnref:23" rev="footnote">↩</a></span></li><li id="fn:24"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">24.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">vstinner. “Programming with Unicode.” 4. Unicode - Programming with Unicode, 23 June 2017, unicodebook.readthedocs.io/unicode.html.<a href="#fnref:24" rev="footnote">↩</a></span></li><li id="fn:25"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">25.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “UTF-8.” Wikipedia, Wikimedia Foundation, 20 Aug. 2020, zh.wikipedia.org/wiki/UTF-8.<a href="#fnref:25" rev="footnote">↩</a></span></li><li id="fn:26"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">26.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Cenalulu(卢钧轶) . “十分钟搞清字符集和字符编码.” Cenalulu's Tech Blog, 25 Jan. 2015, cenalulu.github.io/linux/character-encoding/.<a href="#fnref:26" rev="footnote">↩</a></span></li><li id="fn:27"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">27.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. “Unicode Font.” Wikipedia, Wikimedia Foundation, 13 July 2020, en.wikipedia.org/wiki/Unicode_font.<a href="#fnref:27" rev="footnote">↩</a></span></li><li id="fn:28"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">28.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">DrStrangeLove. “How Are Character Encodings Related to Fonts?” Super User, 15 Nov. 2011, superuser.com/questions/357530/how-are-character-encodings-related-to-fonts.<a href="#fnref:28" rev="footnote">↩</a></span></li><li id="fn:29"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">29.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Belleve. “字符编码与字体的关系是什么？.” 知乎, 27 Apr. 2015, www.zhihu.com/question/29924586.<a href="#fnref:29" rev="footnote">↩</a></span></li><li id="fn:30"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">30.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Davis, Mark, and Christopher Chapman. Unicode Text Segmentation. 19 Feb. 2020, unicode.org/reports/tr29/.<a href="#fnref:30" rev="footnote">↩</a></span></li><li id="fn:31"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">31.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Pike, R. (2013, October 23). Strings, bytes, runes and characters in Go. Retrieved September 19, 2020, from https://blog.golang.org/strings<a href="#fnref:31" rev="footnote">↩</a></span></li><li id="fn:32"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">32.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Unicode Consortium. (2020, September 19). Characters and Combining Marks. Retrieved September 19, 2020, from http://unicode.org/faq/char_combmark.html<a href="#fnref:32" rev="footnote">↩</a></span></li><li id="fn:33"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">33.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Hosken, M., &amp; Gaultney, V. (2003, September 5). Guidelines for Writing System Support: Technical Details: Smart Rendering: Part 1. Retrieved September 20, 2020, from https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi<a href="#fnref:33" rev="footnote">↩</a></span></li><li id="fn:34"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">34.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Unicode Consortium. (2002, October 28). A General Method for Rendering Combining Marks. Retrieved September 20, 2020, from http://www.unicode.org/notes/tn2/<a href="#fnref:34" rev="footnote">↩</a></span></li></ol></div></div>
     </div>
 
     
     
-    <div class="post-widgets">
+    
+
+    <footer class="post-footer"><div class="post-widgets">
       <div id="needsharebutton-postbottom">
         <span class="btn">
           <i class="fa fa-share-alt" aria-hidden="true"></i>
         </span>
       </div>
     </div>
-        <div class="reward-container">
+          <div class="reward-container">
   <div>Compensated Dating</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+  <button>
     Donate
   </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
+  <div class="post-reward">
+      <div>
         <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
-        <p>Bitcoin</p>
+        <span>Bitcoin</span>
       </div>
 
   </div>
 </div>
 
-        
+          
 
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>Kino
+      <strong>Post author:  </strong>Kino
   </li>
   <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="https://blog.xuwei.fun/2020/09/07/characterset/" title="从一个Emoji字符说起">https://blog.xuwei.fun/2020/09/07/characterset/</a>
+      <strong>Post link: </strong>
+      <a href="https://blog.xuwei.fun/2020/09/07/characterset/" title="从一个Emoji字符说起">https://blog.xuwei.fun/2020/09/07/characterset/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -761,37 +943,33 @@
 </ul>
 </div>
 
-        
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <p>Welcome to my other publishing channels</p>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+          <span class="icon">
+            <i class="weibo"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
-            <span class="icon">
-              <i class="weibo"></i>
-            </span>
+          <span class="label">Weibo</span>
+        </a>
+      </div>
 
-            <span class="label">Weibo</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+          <span class="icon">
+            <i class="wechat"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
-            <span class="icon">
-              <i class="wechat"></i>
-            </span>
-
-            <span class="label">Wechat</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">Wechat</span>
+        </a>
+      </div>
   </div>
+</div>
 
-
-      <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/character-set/" rel="tag"># character set</a>
               <a href="/tags/encode/" rel="tag"># encode</a>
@@ -800,29 +978,27 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/05/04/japanese12/" rel="prev" title="日语学习第十一讲">
-      <i class="fa fa-chevron-left"></i> 日语学习第十一讲
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/09/13/reading12/" rel="next" title="读书笔记十二">
-      读书笔记十二 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/05/04/japanese12/" rel="prev" title="日语学习第十一讲">
+                  <i class="fa fa-chevron-left"></i> 日语学习第十一讲
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/09/13/reading12/" rel="next" title="读书笔记十二">
+                  读书笔记十二 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
@@ -830,193 +1006,58 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
+              <div class="comments gitalk-container"></div>
             </div>
             <div class="tab-pane livere" id="comment-livere">
-              
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
-  </div>
-  
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、前言"><span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Emoji的前世今生"><span class="nav-text">二、Emoji的前世今生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、字符集和字符编码"><span class="nav-text">三、字符集和字符编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-语言学简介"><span class="nav-text">3.1 语言学简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-计算机科学简介"><span class="nav-text">3.2 计算机科学简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-（编码）字符集"><span class="nav-text">3.3 （编码）字符集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-字符编码"><span class="nav-text">3.4 字符编码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-UTF-32"><span class="nav-text">3.4.1 UTF-32</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-UTF-16"><span class="nav-text">3.4.2 UTF-16</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-UTF-8"><span class="nav-text">3.4.3 UTF-8</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-大端小端"><span class="nav-text">3.5 大端小端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-BOM-byte-order-mark"><span class="nav-text">3.6 BOM(byte order mark)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-Unicode控制字符"><span class="nav-text">3.7 Unicode控制字符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-1-ISO-6429控制字符-C0与C1控制字符"><span class="nav-text">3.7.1 ISO 6429控制字符(C0与C1控制字符)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-2-Unicode引入的分隔符"><span class="nav-text">3.7.2 Unicode引入的分隔符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-3-语言标记"><span class="nav-text">3.7.3 语言标记</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-4-行间标注"><span class="nav-text">3.7.4 行间标注</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-5-双向文本控制"><span class="nav-text">3.7.5 双向文本控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-6-异体字选择器"><span class="nav-text">3.7.6 异体字选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-7-控制字符的图片"><span class="nav-text">3.7.7 控制字符的图片</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-组合字符-Combining-Character"><span class="nav-text">3.8 组合字符(Combining Character)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-1-组合标记-Combining-Marks"><span class="nav-text">3.8.1 组合标记(Combining Marks)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-2-Grapheme-和-Grapheme-Cluster"><span class="nav-text">3.8.2 Grapheme 和 Grapheme Cluster</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-3-Unicode等价-Unicode-equivalence-及正规化-Normalization"><span class="nav-text">3.8.3 Unicode等价(Unicode equivalence)及正规化(Normalization)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-9-特殊的组合字符"><span class="nav-text">3.9 特殊的组合字符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、注意事项"><span class="nav-text">四、注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-数据库不支持"><span class="nav-text">4.1 数据库不支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-打印机不支持"><span class="nav-text">4.2 打印机不支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-安全原因"><span class="nav-text">4.3 安全原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、字体与排版"><span class="nav-text">五、字体与排版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、Q-amp-A"><span class="nav-text">六、Q&amp;A</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-“😤”在不同的编程语言中的length是多少"><span class="nav-text">6.1 “😤”在不同的编程语言中的length是多少?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-1-Java的表现"><span class="nav-text">6.1.1 Java的表现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-2-Javascript的表现"><span class="nav-text">6.1.2 Javascript的表现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-3-Python的表现"><span class="nav-text">6.1.3 Python的表现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-4-Go的表现"><span class="nav-text">6.1.4 Go的表现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-字符串反转都如何处理"><span class="nav-text">6.2 字符串反转都如何处理?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-怎么除去4字节编码的utf-8字符"><span class="nav-text">6.3 怎么除去4字节编码的utf-8字符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnote"><span class="nav-text">Footnote</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Kino"
-      src="/images/site/avatar.png">
-  <p class="site-author-name" itemprop="name">Kino</p>
-  <div class="site-description" itemprop="description">Amor Fati</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">123</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">122</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">356k</span>
-    <span class="post-meta-divider">|</span>
+    <span title="Symbols count total">353k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:23</span>
+    <span title="Reading time total">5:21</span>
+  </span>
 </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
+
+  <script src="/js/third-party/pace.js"></script>
 
   
 
@@ -1024,35 +1065,14 @@
 
 
   
-<script src="/js/local-search.js"></script>
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout : 1000,
-        priority: false,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2020/09/07/characterset/',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":1000,"priority":false,"archives":false,"url":"https://blog.xuwei.fun/2020/09/07/characterset/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -1072,42 +1092,11 @@
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '58ab17a966414cd66c67',
-      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
-      repo        : 'WoeiSheu.github.io',
-      owner       : 'WoeiSheu',
-      admin       : ['WoeiSheu'],
-      id          : 'dd89225a8e04a43431e4d717c015e372',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
-
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"dd89225a8e04a43431e4d717c015e372"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {

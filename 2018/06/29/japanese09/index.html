@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
@@ -15,21 +17,20 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-  <meta name="description" content="前言上一篇介绍了敬语系统，这一章主要介绍日语中的复合句。日语中复句的相关概念在维基百科上有複文[1]和節[2]等。区别简单句和复合句的主要标志是看它主谓关系的次数，主谓关系在语法上仅成立一次的句子叫做单句。反之，句中有两层或两层以上主谓关系的就可成为复合句。简单句与复合句的区别决不是以句子长短、单词多少而定。常常是句子很长的是简单句；句子很短，但具有两层以上主谓关系的都是复合句。">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.xuwei.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+  <meta name="description" content="前言上一篇介绍了敬语系统，这一章主要介绍日语中的复合句。日语中复句的相关概念在维基百科上有複文1和節2等。区别简单句和复合句的主要标志是看它主谓关系的次数，主谓关系在语法上仅成立一次的句子叫做单句。反之，句中有两层或两层以上主谓关系的就可成为复合句。简单句与复合句的区别决不是以句子长短、单词多少而定。常常是句子很长的是简单句；句子很短，但具有两层以上主谓关系的都是复合句。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日语学习第八讲">
 <meta property="og:url" content="https://blog.xuwei.fun/2018/06/29/japanese09/index.html">
 <meta property="og:site_name" content="霁月荒馆">
-<meta property="og:description" content="前言上一篇介绍了敬语系统，这一章主要介绍日语中的复合句。日语中复句的相关概念在维基百科上有複文[1]和節[2]等。区别简单句和复合句的主要标志是看它主谓关系的次数，主谓关系在语法上仅成立一次的句子叫做单句。反之，句中有两层或两层以上主谓关系的就可成为复合句。简单句与复合句的区别决不是以句子长短、单词多少而定。常常是句子很长的是简单句；句子很短，但具有两层以上主谓关系的都是复合句。">
+<meta property="og:description" content="前言上一篇介绍了敬语系统，这一章主要介绍日语中的复合句。日语中复句的相关概念在维基百科上有複文1和節2等。区别简单句和复合句的主要标志是看它主谓关系的次数，主谓关系在语法上仅成立一次的句子叫做单句。反之，句中有两层或两层以上主谓关系的就可成为复合句。简单句与复合句的区别决不是以句子长短、单词多少而定。常常是句子很长的是简单句；句子很短，但具有两层以上主谓关系的都是复合句。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-06-29T13:45:02.000Z">
 <meta property="article:modified_time" content="2021-03-07T12:23:17.718Z">
@@ -37,18 +38,23 @@
 <meta property="article:tag" content="japanese">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="https://blog.xuwei.fun/2018/06/29/japanese09/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.xuwei.fun/2018/06/29/japanese09/","path":"2018/06/29/japanese09/","title":"日语学习第八讲"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>日语学习第八讲 | 霁月荒馆</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-104049598-2","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
 #needsharebutton-postbottom {
   cursor: pointer;
@@ -76,68 +82,31 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>日语学习第八讲 | 霁月荒馆</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-104049598-2');
-      }
-    </script>
-
-
-
-
-
-
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">霁月荒馆</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">霁月荒馆</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
   </div>
@@ -151,54 +120,17 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-thoughts">
-
-    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
-
-  </li>
-        <li class="menu-item menu-item-excerpt">
-
-    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
-
-  </li>
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-thoughts"><a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>Thoughts</a></li>
+        <li class="menu-item menu-item-excerpt"><a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>Excerpt</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -209,23 +141,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -233,28 +164,122 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%86%E7%B1%BB%E5%92%8C%E7%BB%93%E6%9E%84"><span class="nav-text">1. 分类和结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%8C%85%E5%AD%95%E5%8F%A5"><span class="nav-text">1.1 包孕句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-%E4%B8%BB%E8%AF%AD%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.1.1 主语从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2-%E8%B0%93%E8%AF%AD%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.1.2 谓语从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-3-%E5%AE%BE%E8%AF%AD%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.1.3 宾语从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-4-%E7%8A%B6%E8%AF%AD%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.1.4 状语从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-5-%E5%AE%9A%E8%AF%AD%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.1.5 定语从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-6-%E8%A1%A5%E8%AF%AD%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.1.6 补语从句</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E4%B8%BB%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.2 主从句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-%E7%8A%B6%E6%80%81%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.2.1 状态从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-%E8%AE%A9%E6%AD%A5%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.2.2 让步从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-%E6%9D%A1%E4%BB%B6%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.2.3 条件从句</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-3-1-%E3%80%8C%E3%81%A8%E3%80%8D"><span class="nav-text">1.2.3.1 「と」</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-3-2%E3%80%8C%E3%81%AA%E3%82%89-%E3%81%B0-%E3%80%8D"><span class="nav-text">1.2.3.2「なら(ば)」</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-3-3%E3%80%8C%E3%81%B0%E3%80%8D"><span class="nav-text">1.2.3.3「ば」</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-3-4-%E3%80%8C%E3%81%9F%E3%82%89-%E3%81%B0-%E3%80%8D%E5%AE%8C%E6%88%90%E6%97%B6%E6%9D%A1%E4%BB%B6%E8%AF%AD"><span class="nav-text">1.2.3.4 「たら(ば)」完成时条件语</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-3-5-%E3%80%8C%E3%82%82%E3%81%97%E3%80%8D"><span class="nav-text">1.2.3.5 「もし」</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-4-%E5%8E%9F%E5%9B%A0%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.2.4 原因从句</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-1-%E3%81%8B%E3%82%89"><span class="nav-text">1.2.4.1 から</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-2-%E3%81%AE%E3%81%A7"><span class="nav-text">1.2.4.2 ので</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-3-%E3%81%9F%E3%82%81"><span class="nav-text">1.2.4.3 ため</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-4-%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6"><span class="nav-text">1.2.4.4 によって</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-5-%E3%81%8A%E3%81%8B%E3%81%92%E3%81%A7"><span class="nav-text">1.2.4.5 おかげで</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-6-%E3%81%9B%E3%81%84%E3%81%A7"><span class="nav-text">1.2.4.6 せいで</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-5-%E7%BB%93%E6%9E%9C%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.2.5 结果从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-6-%E7%9B%AE%E7%9A%84%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.2.6 目的从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-6-%E6%96%B9%E5%BC%8F%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.2.6 方式从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-7-%E6%97%B6%E9%97%B4%E4%BB%8E%E5%8F%A5"><span class="nav-text">1.2.7 时间从句</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E5%B9%B6%E5%88%97%E5%8F%A5"><span class="nav-text">1.3 并列句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-%E5%B0%8F%E7%BB%93"><span class="nav-text">1.4 小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%A4%8D%E5%8F%A5%E4%B8%AD%E7%9A%84%E6%97%B6%E4%BD%93"><span class="nav-text">2. 复句中的时体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnote"><span class="nav-text">Footnote</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kino"
+      src="/images/site/avatar.png">
+  <p class="site-author-name" itemprop="name">Kino</p>
+  <div class="site-description" itemprop="description">Amor Fati</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/WoeiSheu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xuwei.fun/" title="https:&#x2F;&#x2F;xuwei.fun&#x2F;" rel="noopener" target="_blank">Homepage</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.xuwei.fun/bookmarks" title="https:&#x2F;&#x2F;blog.xuwei.fun&#x2F;bookmarks">Bookmarks</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
 
-    
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.xuwei.fun/2018/06/29/japanese09/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -271,51 +296,54 @@
           日语学习第八讲
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2018-06-29 21:45:02" itemprop="dateCreated datePublished" datetime="2018-06-29T21:45:02+08:00">2018-06-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-07 20:23:17" itemprop="dateModified" datetime="2021-03-07T20:23:17+08:00">2021-03-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/humanities/" itemprop="url" rel="index"><span itemprop="name">humanities</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/humanities/languages/" itemprop="url" rel="index"><span itemprop="name">languages</span></a>
-                </span>
-            </span>
+      <time title="Created: 2018-06-29 21:45:02" itemprop="dateCreated datePublished" datetime="2018-06-29T21:45:02+08:00">2018-06-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-03-07 20:23:17" itemprop="dateModified" datetime="2021-03-07T20:23:17+08:00">2021-03-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/humanities/" itemprop="url" rel="index"><span itemprop="name">humanities</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/humanities/languages/" itemprop="url" rel="index"><span itemprop="name">languages</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>6.3k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>6 mins.</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>6.4k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>6 mins.</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -324,16 +352,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上一篇介绍了敬语系统，这一章主要介绍日语中的复合句。日语中复句的相关概念在维基百科上有複文<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. 複文. Wikipedia, Wikimedia Foundation, 16 Apr. 2018, ja.wikipedia.org/wiki/複文.
-">[1]</span></a></sup>和節<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="Wikipedians. 節 (文法). Wikipedia, Wikimedia Foundation, 18 Apr. 2018, ja.wikipedia.org/wiki/節_(文法).
-">[2]</span></a></sup>等。<br>区别简单句和复合句的主要标志是看它主谓关系的次数，主谓关系在语法上仅成立一次的句子叫做单句。反之，句中有两层或两层以上主谓关系的就可成为复合句。简单句与复合句的区别决不是以句子长短、单词多少而定。常常是句子很长的是简单句；句子很短，但具有两层以上主谓关系的都是复合句。</p>
-<a id="more"></a>
-<h2 id="1-分类和结构"><a href="#1-分类和结构" class="headerlink" title="1. 分类和结构"></a>1. 分类和结构</h2><p>根据日语复句<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="henry19931224. 日语复句. 百度文库, 16 Nov. 2011, wenku.baidu.com/view/bfe202d0b14e852458fb5731.html.
-">[3]</span></a></sup>、试论日语的复合句<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="谢秀忱. 试论日语的复合句. 现代外语 3(1982):33-38.
-">[4]</span></a></sup>和试论日语复句中从属句节的多层立体结构<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="吴春竹. 试论日语复句中从属句节的多层立体结构. 外语学刊 6(2008):49-52.
-">[5]</span></a></sup>等文献，可以对日语的分类和结构做出相应总结。<br>日语中存在着大量的复合句，其联系手段都是不相同的。根据联系手段的不同，大致可把日语复合句分为三大类。</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上一篇介绍了敬语系统，这一章主要介绍日语中的复合句。日语中复句的相关概念在维基百科上有複文<sup id="fnref:1" class="location-target"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Wikipedians. 複文. Wikipedia, Wikimedia Foundation, 16 Apr. 2018, ja.wikipedia.org/wiki/複文.
+">1</span></a></sup>和節<sup id="fnref:2" class="location-target"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Wikipedians. 節 (文法). Wikipedia, Wikimedia Foundation, 18 Apr. 2018, ja.wikipedia.org/wiki/節_(文法).
+">2</span></a></sup>等。<br>区别简单句和复合句的主要标志是看它主谓关系的次数，主谓关系在语法上仅成立一次的句子叫做单句。反之，句中有两层或两层以上主谓关系的就可成为复合句。简单句与复合句的区别决不是以句子长短、单词多少而定。常常是句子很长的是简单句；句子很短，但具有两层以上主谓关系的都是复合句。</p>
+<span id="more"></span>
+<h2 id="1-分类和结构"><a href="#1-分类和结构" class="headerlink" title="1. 分类和结构"></a>1. 分类和结构</h2><p>根据日语复句<sup id="fnref:3" class="location-target"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="henry19931224. 日语复句. 百度文库, 16 Nov. 2011, wenku.baidu.com/view/bfe202d0b14e852458fb5731.html.
+">3</span></a></sup>、试论日语的复合句<sup id="fnref:4" class="location-target"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="谢秀忱. 试论日语的复合句. 现代外语 3(1982):33-38.
+">4</span></a></sup>和试论日语复句中从属句节的多层立体结构<sup id="fnref:5" class="location-target"><a href="#fn:5" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="吴春竹. 试论日语复句中从属句节的多层立体结构. 外语学刊 6(2008):49-52.
+">5</span></a></sup>等文献，可以对日语的分类和结构做出相应总结。<br>日语中存在着大量的复合句，其联系手段都是不相同的。根据联系手段的不同，大致可把日语复合句分为三大类。</p>
 <h3 id="1-1-包孕句"><a href="#1-1-包孕句" class="headerlink" title="1.1 包孕句"></a>1.1 包孕句</h3><p>句子中的主谓宾补定状的某一个成份或者某几个成份是用主谓结构形成的，这样的句子叫包孕句。每一个顶替句子成份的主谓结构，称为从句，所以有“主语从句”“谓语从句”“宾语从句”“定语从句”“补语从句”等。其中“主语从句”“宾语从句”“补语从句”等常是主谓结构＋形式体言の构成。<br>形式体言“こと”“もの”“の”虽然本身没有固定的词意，但可充当句中各种成份，可把它们分别放在主语、宾语、补语等位置上，用来充当句中相应的各种不同的成分，不过必须在形式体言前面有其说明内容的句子或词组，相当于汉语的包孕句的结构。下面是不同的从句类型及相关示例，{}为各种从句内容。</p>
 <h4 id="1-1-1-主语从句"><a href="#1-1-1-主语从句" class="headerlink" title="1.1.1 主语从句"></a>1.1.1 主语从句</h4><p>{魚が泳いでいるのが}見えます。<br>{向こうから来るのが}李さんです。<br>{この問題をどうやって解「と」くか}、分かりますか。<br>{私が買いたいのは}これです。</p>
 <h4 id="1-1-2-谓语从句"><a href="#1-1-2-谓语从句" class="headerlink" title="1.1.2 谓语从句"></a>1.1.2 谓语从句</h4><p>即在句子中做述語成分<br>わが国は{土地が広いです}。<br>山田さんは{中国語が上手です}。<br>私は{息子「むすこ」が二人います}。</p>
@@ -344,7 +370,7 @@
 <h3 id="1-2-主从句"><a href="#1-2-主从句" class="headerlink" title="1.2 主从句"></a>1.2 主从句</h3><p>在这类复合句中，分句与分句之间的关系不是平等并列的，而是有主有从的。一般从句在前，独立于主句之外，主句在后，形成两层或两层以上的主谓关系，以各种接续助词、助动词、形式体言或用言的各种活用形、惯用形等作为联系手段，把前后两个不同的分句连结起来。根据不同意义的连接手段，可把主从句分为原因、结果、条件等从句。<br>主句和从句可以各有自己的主语，也可以通用一个主语；不同的主语时一般情况下，从句主语用が，主句主语用は（有违反此规则的时候）；通用主语的情况下，主语用は，其位置在句子的最前面。另外，接续助词与从句连接时，不同的接续助词有不同的活用形要求，请注意。</p>
 <h4 id="1-2-1-状态从句"><a href="#1-2-1-状态从句" class="headerlink" title="1.2.1 状态从句"></a>1.2.1 状态从句</h4><p>表示同时发生的状态，“一边…一边…”<br>私は{テレビを見ながら}食事をする。<br>政府「せいふ」は{都市の発展を促進「そくしん」しつつ}、環境「かんきょう」も改善「かいぜん」していく。</p>
 <h4 id="1-2-2-让步从句"><a href="#1-2-2-让步从句" class="headerlink" title="1.2.2 让步从句"></a>1.2.2 让步从句</h4><p>表示“虽然、即使、要是…就好了”等<br>{雨が降っているが}、訓練は中止しない。<br>{雨が降っても}、訓練は中止しない。<br>{君がもう少し早く来たらよかったのに}、バスはもう出てしまった。<br>{自分がいくらできるとも}、油断は大敵「たいてき」だ。<br>彼は{知っているくせに}、知らない振りをしている。</p>
-<h4 id="1-2-3-条件从句"><a href="#1-2-3-条件从句" class="headerlink" title="1.2.3 条件从句"></a>1.2.3 条件从句</h4><p>日语中存在着一些用各种活用形加上不同的助词、助动词连接起来的条件从句。这种句子的意义，相当于汉语的“只要/一旦/如果/假如…就…”。 归纳起来有四种表现方法。</p>
+<h4 id="1-2-3-条件从句"><a href="#1-2-3-条件从句" class="headerlink" title="1.2.3 条件从句"></a>1.2.3 条件从句</h4><p>日语中存在着一些用各种活用形加上不同的助词、助动词连接起来的条件从句。这种句子的意义，相当于汉语的“只要&#x2F;一旦&#x2F;如果&#x2F;假如…就…”。 归纳起来有四种表现方法。</p>
 <h5 id="1-2-3-1-「と」"><a href="#1-2-3-1-「と」" class="headerlink" title="1.2.3.1 「と」"></a>1.2.3.1 「と」</h5><p>主要表示客观上的事实，客观性较强，表示两种动作相继发生。<br>使用条件语「と」的规则:</p>
 <ul>
 <li>把「と」加到条件后面，再跟上满足了条件会发生的结果: [ 条件 ] + と + [ 结果 ]</li>
@@ -367,7 +393,7 @@
 </ul>
 <h5 id="1-2-3-3「ば」"><a href="#1-2-3-3「ば」" class="headerlink" title="1.2.3.3「ば」"></a>1.2.3.3「ば」</h5><p>这种条件语是通用的，它不预设条件，也没有蕴含的意思。<br>「ば」条件语的活用规则如下，注意名词和な形容词的活用规则其实是在活用「である」里面的动词「ある」<br>「ば」的活用规则:</p>
 <ul>
-<li>对动词: [ 一类え形活用词根 ] + 「ば」，即把动词最后假名从 /u/ 段改为同行 /e/ 段，再加上「ば」</li>
+<li>对动词: [ 一类え形活用词根 ] + 「ば」，即把动词最后假名从 &#x2F;u&#x2F; 段改为同行 &#x2F;e&#x2F; 段，再加上「ば」</li>
 <li>对い形容词以及「ない」结尾的未然形: 把最后的「い」换成「ければ」</li>
 <li>对名词和な形容词: 加「であれば」</li>
 </ul>
@@ -394,14 +420,14 @@
 <li>もし時間がないなら、明日でもいいよ。</li>
 </ul>
 <h4 id="1-2-4-原因从句"><a href="#1-2-4-原因从句" class="headerlink" title="1.2.4 原因从句"></a>1.2.4 原因从句</h4><p>表示“因为、由于”等原因，一般有以下联系手段。</p>
-<h5 id="1-2-4-1-から"><a href="#1-2-4-1-から" class="headerlink" title="1.2.4.1 から"></a>1.2.4.1 から</h5><p>[ 原因 ] + から + [ 结果 ]<br>如果原因是字典形名词或な形容词，后面必须加「だ」来显式的表示它是原因，即「( 名词 / な形容词 ) だから」。如果忘了在「から」前面加表陈述的「だ」的话，听起来「から」就是「从…」的意思了。<br>如果是在用丁宁语的话，应该把「から」当成普通名词，在后面加「です」。<br>有上下文的时候，原因和结果都可以省略掉。省略原因的时候，必须加上表陈述的「だ」或「です」，所以经常会听到「だから」<br>例句:</p>
+<h5 id="1-2-4-1-から"><a href="#1-2-4-1-から" class="headerlink" title="1.2.4.1 から"></a>1.2.4.1 から</h5><p>[ 原因 ] + から + [ 结果 ]<br>如果原因是字典形名词或な形容词，后面必须加「だ」来显式的表示它是原因，即「( 名词 &#x2F; な形容词 ) だから」。如果忘了在「から」前面加表陈述的「だ」的话，听起来「から」就是「从…」的意思了。<br>如果是在用丁宁语的话，应该把「から」当成普通名词，在后面加「です」。<br>有上下文的时候，原因和结果都可以省略掉。省略原因的时候，必须加上表陈述的「だ」或「です」，所以经常会听到「だから」<br>例句:</p>
 <ul>
 <li>時間がなかったからです</li>
 <li>うん、時間がなかったから</li>
 <li>だからパーティーに行かなかったの？</li>
 <li>天気が悪いから、山へ行くのは止めましょう。</li>
 </ul>
-<h5 id="1-2-4-2-ので"><a href="#1-2-4-2-ので" class="headerlink" title="1.2.4.2 ので"></a>1.2.4.2 ので</h5><p>「ので」基本上跟「から」可以互换使用，除了一些微妙的区别。「から」显式的表明了前面的句子是原因，而「ので」这仅仅是把两个句子连了起来，然后把前一个句子变味了解释的口吻。<br>「ので」听起来口气更柔和，也更礼貌，所以在解释做了失礼之事的原因的时候，人们更倾向于用它而非「から」。<br>总体上来看，在说话者的意志和能动性更强时，使用「から」；如果需要较恭敬的表达，或者是表达判断的理由时，用「ので」较多。<br><strong>「の」前面如果是字典形名词或者な形容词的话，一定要加「な」</strong><br>解释口气的「の」可以简写成「ん」，说话的时候「ので」也可以改成「んで」，因为这样可以省略音节 / o / 的发音，形成连读。<br>例句:</p>
+<h5 id="1-2-4-2-ので"><a href="#1-2-4-2-ので" class="headerlink" title="1.2.4.2 ので"></a>1.2.4.2 ので</h5><p>「ので」基本上跟「から」可以互换使用，除了一些微妙的区别。「から」显式的表明了前面的句子是原因，而「ので」这仅仅是把两个句子连了起来，然后把前一个句子变味了解释的口吻。<br>「ので」听起来口气更柔和，也更礼貌，所以在解释做了失礼之事的原因的时候，人们更倾向于用它而非「から」。<br>总体上来看，在说话者的意志和能动性更强时，使用「から」；如果需要较恭敬的表达，或者是表达判断的理由时，用「ので」较多。<br><strong>「の」前面如果是字典形名词或者な形容词的话，一定要加「な」</strong><br>解释口气的「の」可以简写成「ん」，说话的时候「ので」也可以改成「んで」，因为这样可以省略音节 &#x2F; o &#x2F; 的发音，形成连读。<br>例句:</p>
 <ul>
 <li>時間がなかったのでパーティーに行かなかった</li>
 <li>ちょっと忙しいので、そろそろ失礼します</li>
@@ -416,10 +442,10 @@
 </ul>
 <h5 id="1-2-4-4-によって"><a href="#1-2-4-4-によって" class="headerlink" title="1.2.4.4 によって"></a>1.2.4.4 によって</h5><p>「に」在表示对象、方向时通常接的是名词，但在表示目的、目标时既可接名词也可接动词简体。<br>「よって」原形为「よる」，可写做「寄る」、「拠る」、「因る」等，「～によって」這個句型在日文中是常见的，用法很多，主要有以下几种:</p>
 <ul>
-<li>名词 + によって(により/によりまして/による) + 名词。依据前者的条件及选项取舍的不同，結果、情況、作法也会随之改变的句型表现。「AによってB」A只能置入名詞，作为条件依据，而随着A不同B也會改变，中文意思为「依A的不同而B」。</li>
-<li>名词 + によって(により/による) + 名词。表示事物、情況成立或发生的理由以及原因之句型表现。「AによってB」A只能置入名词，表理由、原因，因为A而造成B的场面</li>
-<li>名词 + によって(により/による) + 名词。表示方法、手段之句型表现。「AによってB」A只能置入名词，表方法、手段，意即透过或运用A作为手段而来做B，有些人会将它与「～によると」的传闻来源表现搞混，需要注意。</li>
-<li>名词 + によって(により/による) + 名词。表示消息、传闻的来源或出处的句型表现。「Aによると～」A只能置入名词，表示消息、传闻的来源，「によると」的結尾常与「～そうだ」、「～ということだ」一起使用。</li>
+<li>名词 + によって(により&#x2F;によりまして&#x2F;による) + 名词。依据前者的条件及选项取舍的不同，結果、情況、作法也会随之改变的句型表现。「AによってB」A只能置入名詞，作为条件依据，而随着A不同B也會改变，中文意思为「依A的不同而B」。</li>
+<li>名词 + によって(により&#x2F;による) + 名词。表示事物、情況成立或发生的理由以及原因之句型表现。「AによってB」A只能置入名词，表理由、原因，因为A而造成B的场面</li>
+<li>名词 + によって(により&#x2F;による) + 名词。表示方法、手段之句型表现。「AによってB」A只能置入名词，表方法、手段，意即透过或运用A作为手段而来做B，有些人会将它与「～によると」的传闻来源表现搞混，需要注意。</li>
+<li>名词 + によって(により&#x2F;による) + 名词。表示消息、传闻的来源或出处的句型表现。「Aによると～」A只能置入名词，表示消息、传闻的来源，「によると」的結尾常与「～そうだ」、「～ということだ」一起使用。</li>
 </ul>
 <p>例句:</p>
 <ul>
@@ -450,7 +476,7 @@
 <h4 id="1-2-5-结果从句"><a href="#1-2-5-结果从句" class="headerlink" title="1.2.5 结果从句"></a>1.2.5 结果从句</h4><p>日语中存在着这样一种句子结构: “…は…が…からです(だ、である)”。相当于汉语的“事情之所以这样，是由于…的缘故”。表示一种因果关系。<br>结果从句的“から”是作为副助词和“だ、です、である”结合起来，接在动词的连体形后面做谓语，先强调其结果，后叙述原因。<br>也可以用另一种惯用型“…のは…が…ためです”来表示</p>
 <p>例句:</p>
 <ul>
-<li>任务を完成するてとができなかったのは计画が十分ではなかったからだ </li>
+<li>任务を完成するてとができなかったのは计画が十分ではなかったからだ</li>
 </ul>
 <h4 id="1-2-6-目的从句"><a href="#1-2-6-目的从句" class="headerlink" title="1.2.6 目的从句"></a>1.2.6 目的从句</h4><p>表示行为的目的。<br>一般常用惯用形”…ために”、”…には”，是表示达到某种目的的句子。但这种类型的句子，一般做目的状语较多，因为前后两个事项都属于一个主体——主语，如有两层主谓关系者，可看作目的从句。</p>
 <p>例句:</p>
@@ -478,52 +504,53 @@
 </ul>
 <h3 id="1-3-并列句"><a href="#1-3-并列句" class="headerlink" title="1.3 并列句"></a>1.3 并列句</h3><p>句中有2层以上的主谓结构，虽然这些主谓结构有某种语法形式上的联系，但是在意义上是并列的，互不依赖的。并列句中的各自的句子称作分句，前面的分句是以中顿形式，或者用接续助词て、し、が等，以及某些惯用形与后面的分句连接。<br>例句：<br>①“河水很清澈，河底看得很清楚。”<br>川の水が綺麗で、川の底「そこ」がよく見えます。（用形容动词的中顿）<br>②“客人来了，就在那里喝茶；孩子回来了，那个房间就变成了学习室。”<br>人が来ればそこでお茶を飲んで、子供が学校から帰ってくると、その部屋は勉強部屋になる。（用接续助词て）<br>③“有的人显得高兴，有的人显得伤心。”<br>嬉しそうな顔をする人もいるし、悲「かな」しそうな顔をする人もいます。（用接续助词し）<br>④ “即有山，又有海。”<br>山もあれば、海もある。（用惯用形……も……ば、……も）<br>⑤“冬天过去，春天来了”<br>冬が過ぎ、春が来た</p>
 <h3 id="1-4-小结"><a href="#1-4-小结" class="headerlink" title="1.4 小结"></a>1.4 小结</h3><p>日语的复合句按照基本结构可以分为三大类，包孕句、主从句和并列句，这三者的从属度是逐渐递减的。在实际中，还可以将三者混合起来，构成更为复杂的句式结构。</p>
-<h2 id="2-复句中的时体"><a href="#2-复句中的时体" class="headerlink" title="2. 复句中的时体"></a>2. 复句中的时体</h2><p>日语复句中的时体和英语不同，没有十分标准的研究，相应文章也较少，论日语从句的时态变化<sup id="fnref:6"><a href="#fn:6" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="林泽清, and 耿铁珍. 论日语从句的时态变化. 日语学习与研究 2(2000):16-21.
-">[6]</span></a></sup>和浅析日语复句中的“时”和“体”<sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top-left hint--info hint--autowidth hint--bounce" aria-label="辛宇峰. 浅析日语复句中的“时”和“体”. 外语与翻译 4(2014):54-55.
-">[7]</span></a></sup>有一些介绍。<br>一般来说，日语复句的时体的基本原则是，主句的时体，以说话者的视角为基准，从句的时体以主句的时间为基准，但也会考虑到说话者的视角。<br>一般来说:</p>
+<h2 id="2-复句中的时体"><a href="#2-复句中的时体" class="headerlink" title="2. 复句中的时体"></a>2. 复句中的时体</h2><p>日语复句中的时体和英语不同，没有十分标准的研究，相应文章也较少，论日语从句的时态变化<sup id="fnref:6" class="location-target"><a href="#fn:6" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="林泽清, and 耿铁珍. 论日语从句的时态变化. 日语学习与研究 2(2000):16-21.
+">6</span></a></sup>和浅析日语复句中的“时”和“体”<sup id="fnref:7" class="location-target"><a href="#fn:7" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="辛宇峰. 浅析日语复句中的“时”和“体”. 外语与翻译 4(2014):54-55.
+">7</span></a></sup>有一些介绍。<br>一般来说，日语复句的时体的基本原则是，主句的时体，以说话者的视角为基准，从句的时体以主句的时间为基准，但也会考虑到说话者的视角。<br>一般来说:</p>
 <ul>
 <li>如果从句的动作、状态发生在主句之前，那么通常从句都是过去时，有时也反映在体上例如完成体等</li>
 <li>如果从句的动作、状态和主句同时发生，那么通常从句的时和主句相同</li>
 <li>如果从句的动作、状态发生在主句之后，此时考虑主句的时间和整个句子在说话者中的视角，若主句是现在时，那从句也就用现在时即可，若主句是过去时，需要考虑从句的动作、状态在说话者视角中是否仍处于过去时，是则也用过去时，否则现在时。</li>
 </ul>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本篇文章主要介绍了日语复合句的内容，下一篇将尝试综合考虑已有内容归纳日语句子的改造顺序。</p>
-<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><div id="fn:1" style="display:flex"><span style="width:20px">1.</span><span style="width:calc(100% - 20px)">Wikipedians. 複文. Wikipedia, Wikimedia Foundation, 16 Apr. 2018, ja.wikipedia.org/wiki/複文.<a href="#fnref:1" rev="footnote"> ↩</a></span></div><div id="fn:2" style="display:flex"><span style="width:20px">2.</span><span style="width:calc(100% - 20px)">Wikipedians. 節 (文法). Wikipedia, Wikimedia Foundation, 18 Apr. 2018, ja.wikipedia.org/wiki/節_(文法).<a href="#fnref:2" rev="footnote"> ↩</a></span></div><div id="fn:3" style="display:flex"><span style="width:20px">3.</span><span style="width:calc(100% - 20px)">henry19931224. 日语复句. 百度文库, 16 Nov. 2011, wenku.baidu.com/view/bfe202d0b14e852458fb5731.html.<a href="#fnref:3" rev="footnote"> ↩</a></span></div><div id="fn:4" style="display:flex"><span style="width:20px">4.</span><span style="width:calc(100% - 20px)">谢秀忱. 试论日语的复合句. 现代外语 3(1982):33-38.<a href="#fnref:4" rev="footnote"> ↩</a></span></div><div id="fn:5" style="display:flex"><span style="width:20px">5.</span><span style="width:calc(100% - 20px)">吴春竹. 试论日语复句中从属句节的多层立体结构. 外语学刊 6(2008):49-52.<a href="#fnref:5" rev="footnote"> ↩</a></span></div><div id="fn:6" style="display:flex"><span style="width:20px">6.</span><span style="width:calc(100% - 20px)">林泽清, and 耿铁珍. 论日语从句的时态变化. 日语学习与研究 2(2000):16-21.<a href="#fnref:6" rev="footnote"> ↩</a></span></div><div id="fn:7" style="display:flex"><span style="width:20px">7.</span><span style="width:calc(100% - 20px)">辛宇峰. 浅析日语复句中的“时”和“体”. 外语与翻译 4(2014):54-55.<a href="#fnref:7" rev="footnote"> ↩</a></span></div></div></div>
+<h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. 複文. Wikipedia, Wikimedia Foundation, 16 Apr. 2018, ja.wikipedia.org/wiki/複文.<a href="#fnref:1" rev="footnote">↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Wikipedians. 節 (文法). Wikipedia, Wikimedia Foundation, 18 Apr. 2018, ja.wikipedia.org/wiki/節_(文法).<a href="#fnref:2" rev="footnote">↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">henry19931224. 日语复句. 百度文库, 16 Nov. 2011, wenku.baidu.com/view/bfe202d0b14e852458fb5731.html.<a href="#fnref:3" rev="footnote">↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">谢秀忱. 试论日语的复合句. 现代外语 3(1982):33-38.<a href="#fnref:4" rev="footnote">↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">吴春竹. 试论日语复句中从属句节的多层立体结构. 外语学刊 6(2008):49-52.<a href="#fnref:5" rev="footnote">↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">林泽清, and 耿铁珍. 论日语从句的时态变化. 日语学习与研究 2(2000):16-21.<a href="#fnref:6" rev="footnote">↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">辛宇峰. 浅析日语复句中的“时”和“体”. 外语与翻译 4(2014):54-55.<a href="#fnref:7" rev="footnote">↩</a></span></li></ol></div></div>
     </div>
 
     
     
-    <div class="post-widgets">
+    
+
+    <footer class="post-footer"><div class="post-widgets">
       <div id="needsharebutton-postbottom">
         <span class="btn">
           <i class="fa fa-share-alt" aria-hidden="true"></i>
         </span>
       </div>
     </div>
-        <div class="reward-container">
+          <div class="reward-container">
   <div>Compensated Dating</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+  <button>
     Donate
   </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
+  <div class="post-reward">
+      <div>
         <img src="/images/site/qrcode_for_bitcoin.png" alt="Kino Bitcoin">
-        <p>Bitcoin</p>
+        <span>Bitcoin</span>
       </div>
 
   </div>
 </div>
 
-        
+          
 
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>Kino
+      <strong>Post author:  </strong>Kino
   </li>
   <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="https://blog.xuwei.fun/2018/06/29/japanese09/" title="日语学习第八讲">https://blog.xuwei.fun/2018/06/29/japanese09/</a>
+      <strong>Post link: </strong>
+      <a href="https://blog.xuwei.fun/2018/06/29/japanese09/" title="日语学习第八讲">https://blog.xuwei.fun/2018/06/29/japanese09/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -531,66 +558,60 @@
 </ul>
 </div>
 
-        
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <p>Welcome to my other publishing channels</p>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
+          <span class="icon">
+            <i class="weibo"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="http://weibo.com/u/2613432527">
-            <span class="icon">
-              <i class="weibo"></i>
-            </span>
+          <span class="label">Weibo</span>
+        </a>
+      </div>
 
-            <span class="label">Weibo</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
+          <span class="icon">
+            <i class="wechat"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/images/site/qrcode_for_wechat.jpg">
-            <span class="icon">
-              <i class="wechat"></i>
-            </span>
-
-            <span class="label">Wechat</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">Wechat</span>
+        </a>
+      </div>
   </div>
+</div>
 
-
-      <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/japanese/" rel="tag"># japanese</a>
           </div>
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2018/06/18/japanese08/" rel="prev" title="日语学习第七讲">
-      <i class="fa fa-chevron-left"></i> 日语学习第七讲
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2018/10/29/leetcode01/" rel="next" title="Leetcode Summary 01 — Cycle Detection">
-      Leetcode Summary 01 — Cycle Detection <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/06/18/japanese08/" rel="prev" title="日语学习第七讲">
+                  <i class="fa fa-chevron-left"></i> 日语学习第七讲
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/10/29/leetcode01/" rel="next" title="Leetcode Summary 01 — Cycle Detection">
+                  Leetcode Summary 01 — Cycle Detection <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
@@ -598,193 +619,58 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
+              <div class="comments gitalk-container"></div>
             </div>
             <div class="tab-pane livere" id="comment-livere">
-              
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
-  </div>
-  
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTkyNy82NDky"></div>
             </div>
         </div>
       </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-分类和结构"><span class="nav-text">1. 分类和结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-包孕句"><span class="nav-text">1.1 包孕句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-主语从句"><span class="nav-text">1.1.1 主语从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2-谓语从句"><span class="nav-text">1.1.2 谓语从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-3-宾语从句"><span class="nav-text">1.1.3 宾语从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-4-状语从句"><span class="nav-text">1.1.4 状语从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-5-定语从句"><span class="nav-text">1.1.5 定语从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-6-补语从句"><span class="nav-text">1.1.6 补语从句</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-主从句"><span class="nav-text">1.2 主从句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-状态从句"><span class="nav-text">1.2.1 状态从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-让步从句"><span class="nav-text">1.2.2 让步从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-条件从句"><span class="nav-text">1.2.3 条件从句</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-3-1-「と」"><span class="nav-text">1.2.3.1 「と」</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-3-2「なら-ば-」"><span class="nav-text">1.2.3.2「なら(ば)」</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-3-3「ば」"><span class="nav-text">1.2.3.3「ば」</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-3-4-「たら-ば-」完成时条件语"><span class="nav-text">1.2.3.4 「たら(ば)」完成时条件语</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-3-5-「もし」"><span class="nav-text">1.2.3.5 「もし」</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-4-原因从句"><span class="nav-text">1.2.4 原因从句</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-1-から"><span class="nav-text">1.2.4.1 から</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-2-ので"><span class="nav-text">1.2.4.2 ので</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-3-ため"><span class="nav-text">1.2.4.3 ため</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-4-によって"><span class="nav-text">1.2.4.4 によって</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-5-おかげで"><span class="nav-text">1.2.4.5 おかげで</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-4-6-せいで"><span class="nav-text">1.2.4.6 せいで</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-5-结果从句"><span class="nav-text">1.2.5 结果从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-6-目的从句"><span class="nav-text">1.2.6 目的从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-6-方式从句"><span class="nav-text">1.2.6 方式从句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-7-时间从句"><span class="nav-text">1.2.7 时间从句</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-并列句"><span class="nav-text">1.3 并列句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-小结"><span class="nav-text">1.4 小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-复句中的时体"><span class="nav-text">2. 复句中的时体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Footnote"><span class="nav-text">Footnote</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Kino"
-      src="/images/site/avatar.png">
-  <p class="site-author-name" itemprop="name">Kino</p>
-  <div class="site-description" itemprop="description">Amor Fati</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">123</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">122</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">356k</span>
-    <span class="post-meta-divider">|</span>
+    <span title="Symbols count total">353k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:23</span>
+    <span title="Reading time total">5:21</span>
+  </span>
 </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
+
+  <script src="/js/third-party/pace.js"></script>
 
   
 
@@ -792,35 +678,14 @@
 
 
   
-<script src="/js/local-search.js"></script>
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout : 1000,
-        priority: false,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/2018/06/29/japanese09/',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":1000,"priority":false,"archives":false,"url":"https://blog.xuwei.fun/2018/06/29/japanese09/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -840,42 +705,11 @@
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '58ab17a966414cd66c67',
-      clientSecret: '921b8d2afbcd56ea7f04bb0596fdb4d0306698c0',
-      repo        : 'WoeiSheu.github.io',
-      owner       : 'WoeiSheu',
-      admin       : ['WoeiSheu'],
-      id          : '4a0b7e12db1fbabc14a7ec03d4b64a10',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
-
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"4a0b7e12db1fbabc14a7ec03d4b64a10"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {

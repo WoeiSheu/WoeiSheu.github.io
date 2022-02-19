@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-medium.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-small.ico">
@@ -15,14 +17,13 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.xuwei.fun","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.xuwei.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="tags">
@@ -34,18 +35,24 @@
 <meta property="article:author" content="Kino">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="https://blog.xuwei.fun/tags/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":"","permalink":"https://blog.xuwei.fun/tags/index.html","path":"tags/index.html","title":"tags"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>tags | 霁月荒馆
+</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-104049598-2","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
 #needsharebutton-postbottom {
   cursor: pointer;
@@ -73,69 +80,31 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>tags | 霁月荒馆
-</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104049598-2"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-104049598-2');
-      }
-    </script>
-
-
-
-
-
-
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">霁月荒馆</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">霁月荒馆</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">以今日之我与昨日之我战</p>
   </div>
@@ -149,54 +118,17 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-thoughts">
-
-    <a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>thoughts</a>
-
-  </li>
-        <li class="menu-item menu-item-excerpt">
-
-    <a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>excerpt</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a>
-
-  </li>
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-thoughts"><a href="/thoughts/" rel="section"><i class="pencil fa-fw"></i>Thoughts</a></li>
+        <li class="menu-item menu-item-excerpt"><a href="/excerpt/" rel="section"><i class="paperclip fa-fw"></i>Excerpt</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404.html/" rel="section"><i class="child fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -207,23 +139,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -231,105 +162,18 @@
   </div>
 
 </div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-  
-  
-
-          <div class="content page posts-expand">
-            
-
-    
-    
-    
-    <div class="post-block" lang="en">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">tags
-</h1>
-
-<div class="post-meta">
-  
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              122 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Cycle-Detection/" style="font-size: 12px; color: #ccc">Cycle Detection</a> <a href="/tags/EDA/" style="font-size: 12px; color: #ccc">EDA</a> <a href="/tags/Floyd-Cycle-Algorithm/" style="font-size: 12px; color: #ccc">Floyd Cycle Algorithm</a> <a href="/tags/HDU/" style="font-size: 12px; color: #ccc">HDU</a> <a href="/tags/ID3/" style="font-size: 12px; color: #ccc">ID3</a> <a href="/tags/SVM/" style="font-size: 12px; color: #ccc">SVM</a> <a href="/tags/algorithm/" style="font-size: 22.8px; color: #5c5c5c">algorithm</a> <a href="/tags/android/" style="font-size: 19.2px; color: #818181">android</a> <a href="/tags/android-studio/" style="font-size: 12px; color: #ccc">android studio</a> <a href="/tags/apache/" style="font-size: 12px; color: #ccc">apache</a> <a href="/tags/bayes-decision/" style="font-size: 13.8px; color: #b9b9b9">bayes decision</a> <a href="/tags/blockchain/" style="font-size: 12px; color: #ccc">blockchain</a> <a href="/tags/books/" style="font-size: 12px; color: #ccc">books</a> <a href="/tags/bootstrap/" style="font-size: 12px; color: #ccc">bootstrap</a> <a href="/tags/breakup/" style="font-size: 12px; color: #ccc">breakup</a> <a href="/tags/c/" style="font-size: 13.8px; color: #b9b9b9">c</a> <a href="/tags/character-set/" style="font-size: 12px; color: #ccc">character set</a> <a href="/tags/charset/" style="font-size: 12px; color: #ccc">charset</a> <a href="/tags/cmd/" style="font-size: 12px; color: #ccc">cmd</a> <a href="/tags/codewarrior/" style="font-size: 12px; color: #ccc">codewarrior</a> <a href="/tags/communicate/" style="font-size: 12px; color: #ccc">communicate</a> <a href="/tags/computer-science/" style="font-size: 13.8px; color: #b9b9b9">computer science</a> <a href="/tags/cpp/" style="font-size: 17.4px; color: #949494">cpp</a> <a href="/tags/cryptocurrency/" style="font-size: 12px; color: #ccc">cryptocurrency</a> <a href="/tags/cs/" style="font-size: 13.8px; color: #b9b9b9">cs</a> <a href="/tags/csrf-token/" style="font-size: 12px; color: #ccc">csrf-token</a> <a href="/tags/dancing-links/" style="font-size: 12px; color: #ccc">dancing links</a> <a href="/tags/database/" style="font-size: 12px; color: #ccc">database</a> <a href="/tags/decision-tree/" style="font-size: 12px; color: #ccc">decision tree</a> <a href="/tags/derivatives/" style="font-size: 19.2px; color: #818181">derivatives</a> <a href="/tags/development/" style="font-size: 12px; color: #ccc">development</a> <a href="/tags/digital-currency/" style="font-size: 12px; color: #ccc">digital currency</a> <a href="/tags/discuz/" style="font-size: 12px; color: #ccc">discuz</a> <a href="/tags/distributed-simulation/" style="font-size: 15.6px; color: #a7a7a7">distributed simulation</a> <a href="/tags/dns/" style="font-size: 12px; color: #ccc">dns</a> <a href="/tags/documentary/" style="font-size: 12px; color: #ccc">documentary</a> <a href="/tags/drama/" style="font-size: 12px; color: #ccc">drama</a> <a href="/tags/eightpuzzle/" style="font-size: 12px; color: #ccc">eightpuzzle</a> <a href="/tags/electronic/" style="font-size: 13.8px; color: #b9b9b9">electronic</a> <a href="/tags/emoji/" style="font-size: 12px; color: #ccc">emoji</a> <a href="/tags/encode/" style="font-size: 12px; color: #ccc">encode</a> <a href="/tags/favorite/" style="font-size: 12px; color: #ccc">favorite</a> <a href="/tags/ffmpeg/" style="font-size: 12px; color: #ccc">ffmpeg</a> <a href="/tags/filezilla/" style="font-size: 12px; color: #ccc">filezilla</a> <a href="/tags/finance/" style="font-size: 22.8px; color: #5c5c5c">finance</a> <a href="/tags/foobar2000/" style="font-size: 12px; color: #ccc">foobar2000</a> <a href="/tags/forward/" style="font-size: 12px; color: #ccc">forward</a> <a href="/tags/fourier/" style="font-size: 12px; color: #ccc">fourier</a> <a href="/tags/functional/" style="font-size: 12px; color: #ccc">functional</a> <a href="/tags/futures/" style="font-size: 13.8px; color: #b9b9b9">futures</a> <a href="/tags/game-theory/" style="font-size: 12px; color: #ccc">game theory</a> <a href="/tags/gradle/" style="font-size: 12px; color: #ccc">gradle</a> <a href="/tags/graph/" style="font-size: 12px; color: #ccc">graph</a> <a href="/tags/haskell/" style="font-size: 12px; color: #ccc">haskell</a> <a href="/tags/hla/" style="font-size: 15.6px; color: #a7a7a7">hla</a> <a href="/tags/html-encoding/" style="font-size: 12px; color: #ccc">html encoding</a> <a href="/tags/icon/" style="font-size: 12px; color: #ccc">icon</a> <a href="/tags/intelligent-control/" style="font-size: 12px; color: #ccc">intelligent control</a> <a href="/tags/interview/" style="font-size: 12px; color: #ccc">interview</a> <a href="/tags/invest/" style="font-size: 19.2px; color: #818181">invest</a> <a href="/tags/japanese/" style="font-size: 30px; color: #111">japanese</a> <a href="/tags/javaScript/" style="font-size: 12px; color: #ccc">javaScript</a> <a href="/tags/jordan/" style="font-size: 12px; color: #ccc">jordan</a> <a href="/tags/journal/" style="font-size: 12px; color: #ccc">journal</a> <a href="/tags/k-Nearest-Neighbour/" style="font-size: 12px; color: #ccc">k-Nearest Neighbour</a> <a href="/tags/kNN/" style="font-size: 12px; color: #ccc">kNN</a> <a href="/tags/kahlil-gibran/" style="font-size: 13.8px; color: #b9b9b9">kahlil gibran</a> <a href="/tags/linux/" style="font-size: 28.2px; color: #242424">linux</a> <a href="/tags/logistic/" style="font-size: 12px; color: #ccc">logistic</a> <a href="/tags/machine-learning/" style="font-size: 19.2px; color: #818181">machine learning</a> <a href="/tags/math/" style="font-size: 24.6px; color: #494949">math</a> <a href="/tags/matlab/" style="font-size: 12px; color: #ccc">matlab</a> <a href="/tags/matrix/" style="font-size: 12px; color: #ccc">matrix</a> <a href="/tags/metaheuristic/" style="font-size: 12px; color: #ccc">metaheuristic</a> <a href="/tags/minhash/" style="font-size: 12px; color: #ccc">minhash</a> <a href="/tags/motto/" style="font-size: 19.2px; color: #818181">motto</a> <a href="/tags/multisim/" style="font-size: 13.8px; color: #b9b9b9">multisim</a> <a href="/tags/music/" style="font-size: 13.8px; color: #b9b9b9">music</a> <a href="/tags/neural-control/" style="font-size: 12px; color: #ccc">neural control</a> <a href="/tags/novel/" style="font-size: 17.4px; color: #949494">novel</a> <a href="/tags/opencv/" style="font-size: 12px; color: #ccc">opencv</a> <a href="/tags/operating-system/" style="font-size: 21px; color: #6f6f6f">operating system</a> <a href="/tags/optimal-control/" style="font-size: 12px; color: #ccc">optimal control</a> <a href="/tags/options/" style="font-size: 12px; color: #ccc">options</a> <a href="/tags/paper/" style="font-size: 12px; color: #ccc">paper</a> <a href="/tags/pattern-recognition/" style="font-size: 13.8px; color: #b9b9b9">pattern recognition</a> <a href="/tags/pitch-rti/" style="font-size: 15.6px; color: #a7a7a7">pitch rti</a> <a href="/tags/poetry/" style="font-size: 17.4px; color: #949494">poetry</a> <a href="/tags/postgresql/" style="font-size: 12px; color: #ccc">postgresql</a> <a href="/tags/programming-language/" style="font-size: 26.4px; color: #363636">programming language</a> <a href="/tags/proxy/" style="font-size: 12px; color: #ccc">proxy</a> <a href="/tags/python/" style="font-size: 13.8px; color: #b9b9b9">python</a> <a href="/tags/rails/" style="font-size: 12px; color: #ccc">rails</a> <a href="/tags/raspberrypi/" style="font-size: 13.8px; color: #b9b9b9">raspberrypi</a> <a href="/tags/ruby/" style="font-size: 15.6px; color: #a7a7a7">ruby</a> <a href="/tags/server/" style="font-size: 12px; color: #ccc">server</a> <a href="/tags/session/" style="font-size: 12px; color: #ccc">session</a> <a href="/tags/shadowsocks/" style="font-size: 12px; color: #ccc">shadowsocks</a> <a href="/tags/simhash/" style="font-size: 12px; color: #ccc">simhash</a> <a href="/tags/skills/" style="font-size: 12px; color: #ccc">skills</a> <a href="/tags/sql/" style="font-size: 12px; color: #ccc">sql</a> <a href="/tags/struggle/" style="font-size: 12px; color: #ccc">struggle</a> <a href="/tags/swap/" style="font-size: 12px; color: #ccc">swap</a> <a href="/tags/tabhost/" style="font-size: 12px; color: #ccc">tabhost</a> <a href="/tags/time-management/" style="font-size: 12px; color: #ccc">time management</a> <a href="/tags/tools/" style="font-size: 12px; color: #ccc">tools</a> <a href="/tags/topology/" style="font-size: 13.8px; color: #b9b9b9">topology</a> <a href="/tags/ubuntu/" style="font-size: 13.8px; color: #b9b9b9">ubuntu</a> <a href="/tags/udisk/" style="font-size: 12px; color: #ccc">udisk</a> <a href="/tags/union-find/" style="font-size: 12px; color: #ccc">union find</a> <a href="/tags/viewpager/" style="font-size: 12px; color: #ccc">viewpager</a> <a href="/tags/web/" style="font-size: 13.8px; color: #b9b9b9">web</a> <a href="/tags/window-function/" style="font-size: 12px; color: #ccc">window function</a> <a href="/tags/windows/" style="font-size: 15.6px; color: #a7a7a7">windows</a> <a href="/tags/%E5%BE%90%E5%BF%97%E6%91%A9/" style="font-size: 12px; color: #ccc">徐志摩</a> <a href="/tags/%E6%A2%81%E5%90%AF%E8%B6%85/" style="font-size: 12px; color: #ccc">梁启超</a> <a href="/tags/%E6%A2%81%E6%BC%B1%E6%BA%9F/" style="font-size: 12px; color: #ccc">梁漱溟</a> <a href="/tags/%E6%AF%9B%E6%B3%BD%E4%B8%9C/" style="font-size: 12px; color: #ccc">毛泽东</a> <a href="/tags/%E7%BD%AA%E4%B8%8E%E7%BD%9A/" style="font-size: 12px; color: #ccc">罪与罚</a> <a href="/tags/%E8%88%92%E5%A9%B7/" style="font-size: 12px; color: #ccc">舒婷</a> <a href="/tags/%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA/" style="font-size: 12px; color: #ccc">陀思妥耶夫斯基</a> <a href="/tags/%E9%B2%81%E8%BF%85/" style="font-size: 12px; color: #ccc">鲁迅</a>
-            </div>
-          </div>
         
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
   </div>
 
   <aside class="sidebar">
-    <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
         </li>
@@ -338,137 +182,174 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Kino"
       src="/images/site/avatar.png">
   <p class="site-author-name" itemprop="name">Kino</p>
   <div class="site-description" itemprop="description">Amor Fati</div>
 </div>
-<div class="site-state-wrap motion-element">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+        <a href="/archives/">
           <span class="site-state-item-count">123</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
+          <a href="/categories/">
         <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">122</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
-  <div class="links-of-author motion-element">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → /atom.xml"><i class="rss fa-fw"></i>RSS</a>
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://github.com/WoeiSheu" title="GitHub → https://github.com/WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/WoeiSheu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WoeiSheu" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://twitter.com/KafuuKino" title="Twitter → https://twitter.com/KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+        <a href="https://twitter.com/KafuuKino" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;KafuuKino" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
       </span>
       <span class="links-of-author-item">
-        <a href="http://weibo.com/u/2613432527" title="Weibo → http://weibo.com/u/2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+        <a href="http://weibo.com/u/2613432527" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2613432527" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
       </span>
   </div>
 
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
       Links
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="https://xuwei.fun/" title="https://xuwei.fun/" rel="noopener" target="_blank">Homepage</a>
+          <a href="https://xuwei.fun/" title="https:&#x2F;&#x2F;xuwei.fun&#x2F;" rel="noopener" target="_blank">Homepage</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="https://blog.xuwei.fun/bookmarks" title="https://blog.xuwei.fun/bookmarks">Bookmarks</a>
+          <a href="https://blog.xuwei.fun/bookmarks" title="https:&#x2F;&#x2F;blog.xuwei.fun&#x2F;bookmarks">Bookmarks</a>
         </li>
     </ul>
   </div>
 
+        </div>
       </div>
-
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
+  <div class="sidebar-dimmer"></div>
 
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner page posts-expand">
+  
+  
+
+
+    
+    
+    
+    <div class="post-block" lang="en"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">tags
+</h1>
+
+<div class="post-meta-container">
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body"><div class="tag-cloud">
+  <div class="tag-cloud-title">
+    122 tags in total
+  </div>
+  <div class="tag-cloud-tags">
+    <a href="/tags/Cycle-Detection/" style="font-size: 12px;" class="tag-cloud-0">Cycle Detection</a> <a href="/tags/EDA/" style="font-size: 12px;" class="tag-cloud-0">EDA</a> <a href="/tags/Floyd-Cycle-Algorithm/" style="font-size: 12px;" class="tag-cloud-0">Floyd Cycle Algorithm</a> <a href="/tags/HDU/" style="font-size: 12px;" class="tag-cloud-0">HDU</a> <a href="/tags/ID3/" style="font-size: 12px;" class="tag-cloud-0">ID3</a> <a href="/tags/SVM/" style="font-size: 12px;" class="tag-cloud-0">SVM</a> <a href="/tags/algorithm/" style="font-size: 22.8px;" class="tag-cloud-6">algorithm</a> <a href="/tags/android/" style="font-size: 19.2px;" class="tag-cloud-4">android</a> <a href="/tags/android-studio/" style="font-size: 12px;" class="tag-cloud-0">android studio</a> <a href="/tags/apache/" style="font-size: 12px;" class="tag-cloud-0">apache</a> <a href="/tags/bayes-decision/" style="font-size: 13.8px;" class="tag-cloud-1">bayes decision</a> <a href="/tags/blockchain/" style="font-size: 12px;" class="tag-cloud-0">blockchain</a> <a href="/tags/books/" style="font-size: 12px;" class="tag-cloud-0">books</a> <a href="/tags/bootstrap/" style="font-size: 12px;" class="tag-cloud-0">bootstrap</a> <a href="/tags/breakup/" style="font-size: 12px;" class="tag-cloud-0">breakup</a> <a href="/tags/c/" style="font-size: 13.8px;" class="tag-cloud-1">c</a> <a href="/tags/character-set/" style="font-size: 12px;" class="tag-cloud-0">character set</a> <a href="/tags/charset/" style="font-size: 12px;" class="tag-cloud-0">charset</a> <a href="/tags/cmd/" style="font-size: 12px;" class="tag-cloud-0">cmd</a> <a href="/tags/codewarrior/" style="font-size: 12px;" class="tag-cloud-0">codewarrior</a> <a href="/tags/communicate/" style="font-size: 12px;" class="tag-cloud-0">communicate</a> <a href="/tags/computer-science/" style="font-size: 13.8px;" class="tag-cloud-1">computer science</a> <a href="/tags/cpp/" style="font-size: 17.4px;" class="tag-cloud-3">cpp</a> <a href="/tags/cryptocurrency/" style="font-size: 12px;" class="tag-cloud-0">cryptocurrency</a> <a href="/tags/cs/" style="font-size: 13.8px;" class="tag-cloud-1">cs</a> <a href="/tags/csrf-token/" style="font-size: 12px;" class="tag-cloud-0">csrf-token</a> <a href="/tags/dancing-links/" style="font-size: 12px;" class="tag-cloud-0">dancing links</a> <a href="/tags/database/" style="font-size: 12px;" class="tag-cloud-0">database</a> <a href="/tags/decision-tree/" style="font-size: 12px;" class="tag-cloud-0">decision tree</a> <a href="/tags/derivatives/" style="font-size: 19.2px;" class="tag-cloud-4">derivatives</a> <a href="/tags/development/" style="font-size: 12px;" class="tag-cloud-0">development</a> <a href="/tags/digital-currency/" style="font-size: 12px;" class="tag-cloud-0">digital currency</a> <a href="/tags/discuz/" style="font-size: 12px;" class="tag-cloud-0">discuz</a> <a href="/tags/distributed-simulation/" style="font-size: 15.6px;" class="tag-cloud-2">distributed simulation</a> <a href="/tags/dns/" style="font-size: 12px;" class="tag-cloud-0">dns</a> <a href="/tags/documentary/" style="font-size: 12px;" class="tag-cloud-0">documentary</a> <a href="/tags/drama/" style="font-size: 12px;" class="tag-cloud-0">drama</a> <a href="/tags/eightpuzzle/" style="font-size: 12px;" class="tag-cloud-0">eightpuzzle</a> <a href="/tags/electronic/" style="font-size: 13.8px;" class="tag-cloud-1">electronic</a> <a href="/tags/emoji/" style="font-size: 12px;" class="tag-cloud-0">emoji</a> <a href="/tags/encode/" style="font-size: 12px;" class="tag-cloud-0">encode</a> <a href="/tags/favorite/" style="font-size: 12px;" class="tag-cloud-0">favorite</a> <a href="/tags/ffmpeg/" style="font-size: 12px;" class="tag-cloud-0">ffmpeg</a> <a href="/tags/filezilla/" style="font-size: 12px;" class="tag-cloud-0">filezilla</a> <a href="/tags/finance/" style="font-size: 22.8px;" class="tag-cloud-6">finance</a> <a href="/tags/foobar2000/" style="font-size: 12px;" class="tag-cloud-0">foobar2000</a> <a href="/tags/forward/" style="font-size: 12px;" class="tag-cloud-0">forward</a> <a href="/tags/fourier/" style="font-size: 12px;" class="tag-cloud-0">fourier</a> <a href="/tags/functional/" style="font-size: 12px;" class="tag-cloud-0">functional</a> <a href="/tags/futures/" style="font-size: 13.8px;" class="tag-cloud-1">futures</a> <a href="/tags/game-theory/" style="font-size: 12px;" class="tag-cloud-0">game theory</a> <a href="/tags/gradle/" style="font-size: 12px;" class="tag-cloud-0">gradle</a> <a href="/tags/graph/" style="font-size: 12px;" class="tag-cloud-0">graph</a> <a href="/tags/haskell/" style="font-size: 12px;" class="tag-cloud-0">haskell</a> <a href="/tags/hla/" style="font-size: 15.6px;" class="tag-cloud-2">hla</a> <a href="/tags/html-encoding/" style="font-size: 12px;" class="tag-cloud-0">html encoding</a> <a href="/tags/icon/" style="font-size: 12px;" class="tag-cloud-0">icon</a> <a href="/tags/intelligent-control/" style="font-size: 12px;" class="tag-cloud-0">intelligent control</a> <a href="/tags/interview/" style="font-size: 12px;" class="tag-cloud-0">interview</a> <a href="/tags/invest/" style="font-size: 19.2px;" class="tag-cloud-4">invest</a> <a href="/tags/japanese/" style="font-size: 30px;" class="tag-cloud-10">japanese</a> <a href="/tags/javaScript/" style="font-size: 12px;" class="tag-cloud-0">javaScript</a> <a href="/tags/jordan/" style="font-size: 12px;" class="tag-cloud-0">jordan</a> <a href="/tags/journal/" style="font-size: 12px;" class="tag-cloud-0">journal</a> <a href="/tags/k-Nearest-Neighbour/" style="font-size: 12px;" class="tag-cloud-0">k-Nearest Neighbour</a> <a href="/tags/kNN/" style="font-size: 12px;" class="tag-cloud-0">kNN</a> <a href="/tags/kahlil-gibran/" style="font-size: 13.8px;" class="tag-cloud-1">kahlil gibran</a> <a href="/tags/linux/" style="font-size: 28.2px;" class="tag-cloud-9">linux</a> <a href="/tags/logistic/" style="font-size: 12px;" class="tag-cloud-0">logistic</a> <a href="/tags/machine-learning/" style="font-size: 19.2px;" class="tag-cloud-4">machine learning</a> <a href="/tags/math/" style="font-size: 24.6px;" class="tag-cloud-7">math</a> <a href="/tags/matlab/" style="font-size: 12px;" class="tag-cloud-0">matlab</a> <a href="/tags/matrix/" style="font-size: 12px;" class="tag-cloud-0">matrix</a> <a href="/tags/metaheuristic/" style="font-size: 12px;" class="tag-cloud-0">metaheuristic</a> <a href="/tags/minhash/" style="font-size: 12px;" class="tag-cloud-0">minhash</a> <a href="/tags/motto/" style="font-size: 19.2px;" class="tag-cloud-4">motto</a> <a href="/tags/multisim/" style="font-size: 13.8px;" class="tag-cloud-1">multisim</a> <a href="/tags/music/" style="font-size: 13.8px;" class="tag-cloud-1">music</a> <a href="/tags/neural-control/" style="font-size: 12px;" class="tag-cloud-0">neural control</a> <a href="/tags/novel/" style="font-size: 17.4px;" class="tag-cloud-3">novel</a> <a href="/tags/opencv/" style="font-size: 12px;" class="tag-cloud-0">opencv</a> <a href="/tags/operating-system/" style="font-size: 21px;" class="tag-cloud-5">operating system</a> <a href="/tags/optimal-control/" style="font-size: 12px;" class="tag-cloud-0">optimal control</a> <a href="/tags/options/" style="font-size: 12px;" class="tag-cloud-0">options</a> <a href="/tags/paper/" style="font-size: 12px;" class="tag-cloud-0">paper</a> <a href="/tags/pattern-recognition/" style="font-size: 13.8px;" class="tag-cloud-1">pattern recognition</a> <a href="/tags/pitch-rti/" style="font-size: 15.6px;" class="tag-cloud-2">pitch rti</a> <a href="/tags/poetry/" style="font-size: 17.4px;" class="tag-cloud-3">poetry</a> <a href="/tags/postgresql/" style="font-size: 12px;" class="tag-cloud-0">postgresql</a> <a href="/tags/programming-language/" style="font-size: 26.4px;" class="tag-cloud-8">programming language</a> <a href="/tags/proxy/" style="font-size: 12px;" class="tag-cloud-0">proxy</a> <a href="/tags/python/" style="font-size: 13.8px;" class="tag-cloud-1">python</a> <a href="/tags/rails/" style="font-size: 12px;" class="tag-cloud-0">rails</a> <a href="/tags/raspberrypi/" style="font-size: 13.8px;" class="tag-cloud-1">raspberrypi</a> <a href="/tags/ruby/" style="font-size: 15.6px;" class="tag-cloud-2">ruby</a> <a href="/tags/server/" style="font-size: 12px;" class="tag-cloud-0">server</a> <a href="/tags/session/" style="font-size: 12px;" class="tag-cloud-0">session</a> <a href="/tags/shadowsocks/" style="font-size: 12px;" class="tag-cloud-0">shadowsocks</a> <a href="/tags/simhash/" style="font-size: 12px;" class="tag-cloud-0">simhash</a> <a href="/tags/skills/" style="font-size: 12px;" class="tag-cloud-0">skills</a> <a href="/tags/sql/" style="font-size: 12px;" class="tag-cloud-0">sql</a> <a href="/tags/struggle/" style="font-size: 12px;" class="tag-cloud-0">struggle</a> <a href="/tags/swap/" style="font-size: 12px;" class="tag-cloud-0">swap</a> <a href="/tags/tabhost/" style="font-size: 12px;" class="tag-cloud-0">tabhost</a> <a href="/tags/time-management/" style="font-size: 12px;" class="tag-cloud-0">time management</a> <a href="/tags/tools/" style="font-size: 12px;" class="tag-cloud-0">tools</a> <a href="/tags/topology/" style="font-size: 13.8px;" class="tag-cloud-1">topology</a> <a href="/tags/ubuntu/" style="font-size: 13.8px;" class="tag-cloud-1">ubuntu</a> <a href="/tags/udisk/" style="font-size: 12px;" class="tag-cloud-0">udisk</a> <a href="/tags/union-find/" style="font-size: 12px;" class="tag-cloud-0">union find</a> <a href="/tags/viewpager/" style="font-size: 12px;" class="tag-cloud-0">viewpager</a> <a href="/tags/web/" style="font-size: 13.8px;" class="tag-cloud-1">web</a> <a href="/tags/window-function/" style="font-size: 12px;" class="tag-cloud-0">window function</a> <a href="/tags/windows/" style="font-size: 15.6px;" class="tag-cloud-2">windows</a> <a href="/tags/%E5%BE%90%E5%BF%97%E6%91%A9/" style="font-size: 12px;" class="tag-cloud-0">徐志摩</a> <a href="/tags/%E6%A2%81%E5%90%AF%E8%B6%85/" style="font-size: 12px;" class="tag-cloud-0">梁启超</a> <a href="/tags/%E6%A2%81%E6%BC%B1%E6%BA%9F/" style="font-size: 12px;" class="tag-cloud-0">梁漱溟</a> <a href="/tags/%E6%AF%9B%E6%B3%BD%E4%B8%9C/" style="font-size: 12px;" class="tag-cloud-0">毛泽东</a> <a href="/tags/%E7%BD%AA%E4%B8%8E%E7%BD%9A/" style="font-size: 12px;" class="tag-cloud-0">罪与罚</a> <a href="/tags/%E8%88%92%E5%A9%B7/" style="font-size: 12px;" class="tag-cloud-0">舒婷</a> <a href="/tags/%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA/" style="font-size: 12px;" class="tag-cloud-0">陀思妥耶夫斯基</a> <a href="/tags/%E9%B2%81%E8%BF%85/" style="font-size: 12px;" class="tag-cloud-0">鲁迅</a>
+  </div>
+</div>
 
       </div>
-    </main>
+      
+      
+      
+    </div>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+    
+    
 
-        
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
 
 <div class="copyright">
-  
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sheu Woei</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">356k</span>
-    <span class="post-meta-divider">|</span>
+    <span title="Symbols count total">353k</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:23</span>
+    <span title="Reading time total">5:21</span>
+  </span>
 </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
+
+  <script src="/js/third-party/pace.js"></script>
 
   
 
@@ -476,35 +357,14 @@
 
 
   
-<script src="/js/local-search.js"></script>
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout : 1000,
-        priority: false,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://blog.xuwei.fun/tags/',]
-      });
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":1000,"priority":false,"archives":false,"url":"https://blog.xuwei.fun/tags/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -524,8 +384,11 @@
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script>
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"f47af1d1eda4d807b02bba32be15120b"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {
