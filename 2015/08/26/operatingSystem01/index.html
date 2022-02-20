@@ -25,12 +25,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.xuwei.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"onmobile":false},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"livere":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content="1. 前言华中科技大学的讲义很不错主要备份了此讲义的内容1文中用到的一些概念：  原语：操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。">
+  <meta name="description" content="1. 前言华中科技大学的讲义很不错主要备份了此讲义的内容[1]文中用到的一些概念：  原语：操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="操作系统一">
 <meta property="og:url" content="https://blog.xuwei.fun/2015/08/26/operatingSystem01/index.html">
 <meta property="og:site_name" content="霁月荒馆">
-<meta property="og:description" content="1. 前言华中科技大学的讲义很不错主要备份了此讲义的内容1文中用到的一些概念：  原语：操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。">
+<meta property="og:description" content="1. 前言华中科技大学的讲义很不错主要备份了此讲义的内容[1]文中用到的一些概念：  原语：操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_1.jpg">
 <meta property="og:image" content="https://blog.xuwei.fun/images/operatingSystem01_2.jpg">
@@ -108,6 +108,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+<link rel="alternate" href="/atom.xml" title="霁月荒馆" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -375,8 +376,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p><strong>华中科技大学的讲义很不错</strong><br>主要备份了此讲义的内容<sup id="fnref:1" class="location-target"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="<http://202.114.32.200:8080/courseware/208310/20831011/>
-">1</span></a></sup><br>文中用到的一些概念：</p>
+        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p><strong>华中科技大学的讲义很不错</strong><br>主要备份了此讲义的内容<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="<http://202.114.32.200:8080/courseware/208310/20831011/>
+">[1]</span></a></sup><br>文中用到的一些概念：</p>
 <ul>
 <li>原语：操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。</li>
 </ul>
@@ -1169,7 +1170,7 @@ int main() &#123;
 <p>多级反馈队列的优势有：<br>    - 终端型作业用户：短作业优先。<br>    - 短批处理作业用户：周转时间较短。<br>    - 长批处理作业用户：经过前面几个队列得到部分执行，不会长期得不到处理。</p>
 <h5 id="3-9-8-线程调度"><a href="#3-9-8-线程调度" class="headerlink" title="3.9.8 线程调度"></a>3.9.8 线程调度</h5><p>为了提高并行处理能力，现代操作系统多采用多线程技术，一般对线程调度采用优先调度算法。<br>线程就绪队列按优先级的高低排序。对于优先级相同的进程，则遵从队列”先进先出”的原则，当一个在就绪队列中排列的线程分配到了处理机进入运行状态之后，这个线程称为是被调度的。<br>WIndows中线程总共分为32个优先级，具体看下图：<br><img src="/images/operatingSystem01_22.jpg" alt="twenty second"><br>每个线程都会被赋予一个从0到31的优先级号码。当系统要分配线程时间片的时候，它首先是找到所有线程中优先级别最高的一个线程进行运行，在运行期间，如果出现一个可被调度的更高优先级的线程，则会中断当前的运行，而执行更高优先级的线程，否则，一直执行到时间片用完，这时，系统会查看所有的可调度线程。<br>    + 如果这些线程的优先级都比当前的线程优先级低，那么系统将继续执行当前的线程，其他的线程将不会得到CPU，如果经过3~5秒一直处于这样的状态，那么系统会动态的提升某些渴求调度线程的优先级，让他们占用CPU一定时间，然后再降回原来的优先级。<br>    + 如果存在相同优先级的线程，则系统会将CPU分配给那个线程。</p>
 <p>总的来说，优先级高的线程基本上会一直占有CPU，而不给低优先级线程以机会。同时不管当前线程的时间片是否用完，如果出现可调度的更高优先级的线程，那么就会打断当前的线程，去执行高优先级的线程。因此，高优先级的线程不应该一直占有CPU，应该注意时常将其挂起。</p>
-<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="http://202.114.32.200:8080/courseware/208310/20831011/">http://202.114.32.200:8080/courseware/208310/20831011/</a><a href="#fnref:1" rev="footnote">↩</a></span></li></ol></div></div>
+<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="http://202.114.32.200:8080/courseware/208310/20831011/">http://202.114.32.200:8080/courseware/208310/20831011/</a><a href="#fnref:1" rev="footnote">↩</a></span></li></ol></div></div>
     </div>
 
     
@@ -1361,11 +1362,11 @@ int main() &#123;
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+  </script><script src="/js/third-party/comments/livere.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"d1a5f0e22262cdb0157c87256f9b8042"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
-<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {
@@ -1395,5 +1396,5 @@ int main() &#123;
 
   fnTextPopup(['富强', '民主', '文明', '和谐', '自由', '平等', '公正', '法治', '爱国', '敬业', '诚信', '友善']);
 </script>
-</body>
+<!-- hint.css --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2.7.0/hint.min.css"></body>
 </html>

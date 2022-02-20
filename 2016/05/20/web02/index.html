@@ -91,6 +91,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+<link rel="alternate" href="/atom.xml" title="霁月荒馆" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -358,7 +359,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-服务器-浏览器通信技术"><a href="#1-服务器-浏览器通信技术" class="headerlink" title="1. 服务器-浏览器通信技术"></a>1. 服务器-浏览器通信技术</h3><p>服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP&#x2F;IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通信协议, 每一次请求-响应都是基于一个新建立的HTTP的连接, 这就是使服务器主动通知浏览器成为一个难点. 这是因为在基于请求-响应的模式下, 服务器的角色是主动应答, 无法主动通知浏览器; 另一个原因是每次请求后HTTP连接断开, 服务器无法再获取客户端的地址, 也就无法将通知发送给浏览器端</p>
+        <h3 id="1-服务器-浏览器通信技术"><a href="#1-服务器-浏览器通信技术" class="headerlink" title="1. 服务器-浏览器通信技术"></a>1. 服务器-浏览器通信技术</h3><p>服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP&#x2F;IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通信协议, 每一次请求-响应都是基于一个新建立的HTTP的连接, 这就是使服务器主动通知浏览器成为一个难点. 这是因为在基于请求-响应的模式下, 服务器的角色是主动应答, 无法主动通知浏览器; 另一个原因是每次请求后HTTP连接断开, 服务器无法再获取客户端的地址, 也就无法将通知发送给浏览器端</p>
 <span id="more"></span>
 <h4 id="1-1-Polling-客户端轮询-技术"><a href="#1-1-Polling-客户端轮询-技术" class="headerlink" title="1.1 Polling(客户端轮询) 技术"></a>1.1 Polling(客户端轮询) 技术</h4><p>即浏览器周期性地主动访问服务器的特定地址, 以获取服务器端数据状态的变化<br>优点: </p>
 <ul>
@@ -381,7 +382,7 @@
 <h4 id="3-2-Web-Hook异步通信"><a href="#3-2-Web-Hook异步通信" class="headerlink" title="3.2 Web Hook异步通信"></a>3.2 Web Hook异步通信</h4><p>该解决方案是指在客户端发送请求时, 将一个回调地址同时发送给服务器, 服务器接收响应后, 异步处理请求并对此次请求即刻做出响应, 客户端随即处理其他业务并监听回调. 服务器在响应客户端后, 继续以异步的方式处理刚才的请求, 在处理完毕后, 通过回调地址通知客户端处理结果<br>优点是覆盖了Polling方案并且没有Polling方案中无效的轮询负载. 但是, 这种方案无法在浏览器作为客户端的场景中实施, 因为浏览器无法提供一个回调地址给服务器. 因此该方案适用于另外一个服务器作为客户端的场景. 另外, 和后面的解决方案比起来, 该方案还是多出了一次服务器回调客户端的HTTP连接<br><img src="/images/web03_03.png" alt="asyn02"></p>
 <h4 id="3-3-Comet异步通信"><a href="#3-3-Comet异步通信" class="headerlink" title="3.3 Comet异步通信"></a>3.3 Comet异步通信</h4><p>Comet技术在服务器推送业务中的处理流程同样适用于这里的异步通信, 客户端发送请求后可以继续执行后续业务并监听服务器返回的处理结果的通知, 优点是异步通信可以在一次请求-响应的模型中完成<br><img src="/images/web03_04.png" alt="asyn03"></p>
 <h4 id="3-4-HTML5异步通信"><a href="#3-4-HTML5异步通信" class="headerlink" title="3.4 HTML5异步通信"></a>3.4 HTML5异步通信</h4><p>包含SSE和Web Socket, 均有处理异步通信的能力</p>
-<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://book.douban.com/subject/26022847/">Mastering Web Application Development with AngularJS</a><a href="#fnref:1" rev="footnote">↩</a></span></li></ol></div></div>
+<h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://book.douban.com/subject/26022847/">Mastering Web Application Development with AngularJS</a><a href="#fnref:1" rev="footnote">↩</a></span></li></ol></div></div>
     </div>
 
     
@@ -574,11 +575,11 @@
         flOptions.position = "middleRight";
         flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       new needShareButton('#needsharebutton-float', flOptions);
-  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+  </script><script src="/js/third-party/comments/livere.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"WoeiSheu","repo":"WoeiSheu.github.io","client_id":"58ab17a966414cd66c67","client_secret":"921b8d2afbcd56ea7f04bb0596fdb4d0306698c0","admin_user":"WoeiSheu","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"769ef2978833d650f049bcb79d4eae68"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
-<script src="/js/third-party/comments/livere.js"></script>
 <script>
   let fnTextPopup = function (arr, options) {
     if (!arr || !arr.length) {
@@ -608,5 +609,5 @@
 
   fnTextPopup(['富强', '民主', '文明', '和谐', '自由', '平等', '公正', '法治', '爱国', '敬业', '诚信', '友善']);
 </script>
-</body>
+<!-- hint.css --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2.7.0/hint.min.css"></body>
 </html>
