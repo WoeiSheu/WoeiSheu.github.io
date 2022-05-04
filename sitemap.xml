@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.xuwei.fun/404.html</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/2020/09/07/characterset/</loc>
     
     <lastmod>2022-05-04</lastmod>
@@ -1173,15 +1182,6 @@
   
   <url>
     <loc>https://blog.xuwei.fun/2014/08/27/android01/</loc>
-    
-    <lastmod>2019-05-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/404.html</loc>
     
     <lastmod>2019-05-18</lastmod>
     
