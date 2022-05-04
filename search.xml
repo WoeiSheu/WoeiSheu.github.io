@@ -8435,10 +8435,10 @@ exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
   <entry>
     <title>日语学习第一讲</title>
     <url>/2017/09/16/japanese01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>————<strong>更新于2017.09.16</strong>————<br>种种原因（其实是一时冲动），报了12月份的JLPT N2，明知时间很紧，难以通过，但这正是我需要的吧，有个短期内想要完成的目标，为此花上所有胡思乱想的时间，それでいい…<br>语法和单词是并行着学的，虽然有标准日本语的书籍，但是没有使用，语法主要是参考<a href="http://res.wokanxing.info/jpgramma/hiragana.html">日语语法指南</a><sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Tae. “平假名.” 日语语法指南 | Learn Japanese, http://res.wokanxing.info/jpgramma/hiragana.html.
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>————<strong>更新于2017.09.16</strong>————<br>种种原因（其实是一时冲动），报了12月份的JLPT N2，明知时间很紧，难以通过，但这正是我需要的吧，有个短期内想要完成的目标，为此花上所有胡思乱想的时间，それでいい…<br>语法和单词是并行着学的，虽然有标准日本语的书籍，但是没有使用，语法主要是参考<a href="http://res.wokanxing.info/jpgramma/hiragana.html">日语语法指南</a><sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Tae. “平假名.” 日语语法指南 | Learn Japanese, http://res.wokanxing.info/jpgramma/hiragana.html.
 ">[1]</span></a></sup>学习的，单词目前使用的是<a href="https://cichang.hujiang.com/home/">沪江开心词场</a>。<br>学日语当然得听日语歌啦，于是将以前收藏的歌汇总做了个<a href="https://music.163.com/#/playlist?id=5449294434">歌单</a>。</p>
 
-    <div id="aplayer-GaMXgrAW" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-PovBZjdv" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="5449294434" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 
@@ -11148,7 +11148,7 @@ Forever.
   <entry>
     <title>从一个Emoji字符说起</title>
     <url>/2020/09/07/characterset/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>在和朋友聊天时，突然无话可说，屏幕前的你该如何是好呢? 很多时候屏幕前的我们，都会想到发个表情，然后彼此心照不宣地沉默。如果你用的是windows 10的新版本，按下 <code>winkey + period</code> （即windows图标和英文句点按钮），就会有如下的弹出框。</p>
+    <content><![CDATA[<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>在和朋友聊天时，突然无话可说，屏幕前的你该如何是好呢? 很多时候屏幕前的我们，都会想到发个表情，然后彼此心照不宣地沉默。如果你用的是windows 10的新版本，按下 <code>winkey + period</code> （即windows图标和英文句点按钮），就会有如下的弹出框。</p>
 <p><img src="/images/character_set/image_1_1.png" alt="image_1_1.png"></p>
 <p align="center">图1.1</p>
 
@@ -11249,7 +11249,7 @@ Forever.
 <li>“S”的码点是 <code>0x0053</code>，用UTF-16存储就是： <code>00000000 01010011</code></li>
 </ul>
 <p>但是这样就出现了一个问题，那些后来追加的字符集，码点值大于 0xFFFF 的，该怎么用 UTF-16 表示呢? 比如😤。而且这种表示方法，还不能影响已有的UTF-16编码的字符数据，这可怎么办?</p>
-<p>没办法，为了照顾很多采用UTF-16的系统、软件，Unicode规定了BMP平面中的 0xD800<del>0xDFFF 为 <strong>surrogates</strong> 字符，在图3.5中也可以看到，Unicode规定这部分码点值，不能用来表示任何字符。实际上，这部分还可被分为两部分，0xD800</del>0xDBFF，称为 high surrogates，0xDC00~0xDFFF，称为 low surrogates。</p>
+<p>没办法，为了照顾很多采用UTF-16的系统、软件，Unicode规定了BMP平面中的 0xD800~0xDFFF 为 <strong>surrogates</strong> 字符，在图3.5中也可以看到，Unicode规定这部分码点值，不能用来表示任何字符。实际上，这部分还可被分为两部分，0xD800~0xDBFF，称为 high surrogates，0xDC00~0xDFFF，称为 low surrogates。</p>
 <p>这样的话，对于一个大于0xFFFF的值，如果想用UTF-16编码，就可以用32位4个字节表示，high surrogate + low surrogate 拼成一个surrogate pair就行，这样在程序读到两个字节时，如果判断它是 surrogate，那么就认为它不是正常字符，需要和另一个surrogate拼接起来才行，组成另一个字符。例如：</p>
 <ul>
 <li>😤的码点值为 <code>0x1F624</code>，那么对应的UTF-16的surrogate pair也就是 <code>0xD83D + 0xDE24</code>，二进制就是： <code>11011000 01011101 11011110 00100100</code></li>
@@ -12485,5 +12485,390 @@ int main() &#123;
       <tags>
         <tag>operating system</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/404.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!--
+<h1 class="post-title">404</h1>
+-->
+<div id="search_children" style="margin-top:60px">
+</div>
+
+
+<script src="https://qzone.qq.com/gy/404/data.js" charset="utf-8"></script>
+<script>
+  let set_title = function() {
+    document.getElementsByClassName('post-title')[0].textContent = '404';
+  }
+  let show_children = function() {
+    let first_3_children = jsondata.data.slice(0,6);      // 显示前6个失踪孩子
+    first_3_children.map(function(data) {
+      let pic_url = data.child_pic;
+      if(pic_url.slice(0,5) === 'http:') {
+        pic_url = "https:" + pic_url.slice(5);
+      }
+      let elem_str = '<div style="width:32%;margin-right:2%;float:left">';
+      elem_str += '<img class="child_pic" src="' + pic_url + '" /></div>';
+      elem_str += '<div style="width:64%;float:right">';
+      elem_str += '<h3 class="name-sex" style="margin-top:0;padding-top:0">' + data.name + '(' + data.sex + ')' + '</h3>';
+      elem_str += '<li class="birth_time">出生日期：' + data.birth_time + '</li>';
+      elem_str += '<li class="lost_time">失踪时间：' + data.lost_time + '</li>';
+      elem_str += '<li class="lost_place">失踪地点' + data.lost_place + '</li>';
+      elem_str += '<li class="child_feature">特征描述：' + data.child_feature + '</li>';
+      elem_str += '<li class="url"><a href="' + data.url + '">详情点击' + '</a></li>';
+
+      let elem = document.createElement("div");
+      elem.innerHTML = elem_str;
+      document.getElementById('search_children').appendChild(elem);
+
+      elem = document.createElement("div");
+      elem.setAttribute('style','clear:both;margin-bottom:12px');
+      document.getElementById('search_children').appendChild(elem);
+    });
+  }
+  let timing = function() {
+    setTimeout(function() {
+      if(jsondata) {
+        set_title();
+        show_children();
+      } else {
+        timing();
+      }
+    }, 1000);
+  }
+  timing();
+</script>
+]]></content>
+  </entry>
+  <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>]]></content>
+  </entry>
+  <entry>
+    <title>About</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>笔者自称为Kino，借<em><strong>キノの旅 -the Beautiful World</strong></em>主角之名~<br>朋友亦称二分、阿浮、居士，其中由来不再具述。</p>
+<p>目前研究生在读，希望能够顺利毕业咩~</p>
+<h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><p>如需联系，可发邮件，或查看博客侧边栏的社交账号。<br>Mail to: <a href="mailto:&#120;&#117;&#119;&#x65;&#105;&#x69;&#x61;&#109;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#120;&#117;&#119;&#x65;&#105;&#x69;&#x61;&#109;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<h3 id="Motto"><a href="#Motto" class="headerlink" title="Motto"></a>Motto</h3><p>世界は美しくなんかない、そして それ故に美しい</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>For You</title>
+    <url>/foryou/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3>2019-05-20T00:56:00, 和糕糕表白啦~</h3>
+
+<ol>
+<li><p>如果见字真如见人，那我对你该是一见钟情。</p>
+</li>
+<li><p>爱情是一场大病，我已经病入膏肓。</p>
+</li>
+<li><p>我的人生被分为了两截，遇见你之前和遇见你之后。<br>非要说原因的话，该是和你的感情太过强烈，冲淡了平凡的过去。</p>
+</li>
+<li><p>他人即地狱，可你是天堂。</p>
+</li>
+<li><p>我喜欢你是热闹的，我喜欢你是寂静的，我喜欢你。</p>
+</li>
+<li><p>曾经我不知爱情为何物，直到小鹿乱撞那一刻。其实，曾经我连小鹿乱撞也不甚明了。</p>
+</li>
+<li><p>一切形式主义的行为，面向你时，都变为了喷薄而出的真心。</p>
+</li>
+<li><p>想要放肆地诉说我的情感，可是脑袋早已被冲昏了。</p>
+</li>
+<li><p>爱情是主人，我们都是她的奴隶。想说：“爱情啊，我自愿成为你的奴隶。”</p>
+</li>
+<li><p>因为想你，每一秒我的思维都会掉帧一次。</p>
+</li>
+<li><p>意识到自己在对着屏幕傻笑的时候，也是我明白自己无药可救的时候。</p>
+</li>
+<li><p>遇见你，才明白自己喜欢什么样的人儿，遇见你，耗尽我所有的运气，以后只能靠实力了。</p>
+</li>
+<li><p>有一种蠢蠢欲动的味道，让我把你心中的圣火燃烧。</p>
+</li>
+<li><p>我不再有纷繁的欲望了，我的欲望只剩下你。</p>
+</li>
+<li><p>梦里是你，醒来是你，半梦半醒之间，也是你。</p>
+</li>
+<li><p>——“你是我的小麻烦”<br>——“失望了。我还以为是大麻烦呢”</p>
+</li>
+<li><p>心里有火，却是身体在燃烧。</p>
+</li>
+<li><p>语言的神明将我禁锢，只有与你聊天时才将我释放。</p>
+</li>
+<li><p>语言是我的钥匙，在你之前却遇不到一扇门。</p>
+</li>
+<li><p>——“想你一下”<br>——“想你两下”<br>——“爱你”<br>——“加倍爱你”<br>——“我真的是世界上最幸福的人”<br>——“不，我才是”<br>——“我醒来的第一件事就是想你”<br>——“我就不一样了，是因为想你才醒来”<br>——“一有间隙就忍不住想你”<br>——“我对你的想念如流水般连续，没有间隙”<br>——“你为什么总要赢我，哼”<br>——“那算你赢啦”</p>
+</li>
+<li><p>现在，我读得懂热恋的文字，听得懂欢乐的歌曲，看得懂甜蜜的电影了。</p>
+</li>
+<li><p>你是滤镜，透过你，世界也变得可爱。</p>
+</li>
+<li><p>想将对你的这份激情转化为绵长的依赖。</p>
+</li>
+<li><p>我所有的恐惧都消失殆尽，只是诞生了一个新的恐惧，那就是失去你的恐惧。</p>
+</li>
+<li><p>拥有你的快乐与失去你的恐惧，在我的脑中打斗，一看见你，恐惧小人就输了。</p>
+</li>
+<li><p>——“我怕你活在幻想你”<br>——“你就是我幻想的样子”</p>
+</li>
+<li><p>那些对你表达的情感，就如雨水，只是云朵身体里装不下而溢出的一粟而已。</p>
+</li>
+<li><p>印花税，难道是印在身体上像花一般的唇印吗？那请你成为我的酷吏吧。</p>
+</li>
+<li><p>幸运的人一生都在被童年治愈，不幸的人一生都在治愈童年，我想和你把一辈子都变成童年。</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>Thoughts</title>
+    <url>/thoughts/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>2017.01.11</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>]]></content>
+  </entry>
+  <entry>
+    <title>摘录</title>
+    <url>/excerpt/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>书籍、音乐、影视作品里摘录的一些句子，曾分散于微博、贴吧各处，现全部备份于此。</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><blockquote>
+<p>旅客在每一个生人门口敲叩，<br>才能敲到自己的家门；<br>人要在外面到处漂流，<br>最后才能走到最深的内殿。<br>—— 泰戈尔《旅行》</p>
+</blockquote>
+<blockquote>
+<p>如果遇到特别的事情，拥有自我的人可以冷静地接受，但是如果太普通，就会被这股浪潮吞没、冲走，这种失控是最危险的。<br>——《不吉波普不笑》</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>“我觉得爱就是两个不知如何独处的人一起分享的逃避。很好笑，人们总会说爱是一种完全无私、付出的东西，但仔细想想，没有比爱更自私的东西。”</li>
+<li>你知道别人和你分手为什么会那么糟吗？因为你会想起之前你所抛弃的那些人，他们在你心中是多么的不重要，而今天却换成别人这样来看待你，你想他跟你是一样的痛苦，但其实他心想：“太好了，终于摆脱了！”</li>
+<li>“我有成为坚强又独立女性的使命感，不让我的生活以男人为重心，纵然如此，爱一个人和被爱对我来说非常重要…不过我们在生活中所做的一切不就是为了能被多爱一点吗”</li>
+<li>“有时候我会梦想，要成为一个好父亲、好丈夫，有些时候我会觉得我真的能做到，但有些时候，却觉得自己很傻，觉得那会毁了我的一生，其实也不是对承诺的恐惧，或是无能去照顾、去爱别人，因为我都能做到，只是凭着良心讲，我想我宁愿在临终前，知道自己其实有长处，知道我也曾经成功过，而不是只有一段美好、温馨的感情值得我去回顾”<br>——《爱在黎明破晓前》</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>我因为爱你，所以常常想跟你道歉。我的爱沉重，污浊，里面带有许多令人不快的东西，比如悲伤，忧愁，想念，自卑，绝望，我的心又这样脆弱不堪。自己总被这些负面情绪打败，好像在一个沼泽里越挣扎越下沉。而我爱你，就是想把你也拖进来，却希望你救我。而你爱我，才是把我从沼泽救出来的力量。<br>—— 村上春树《挪威的森林》</p>
+</blockquote>
+<blockquote>
+<p>我的整个生命，只是一场为了提升社会地位的低俗斗争。<br>——《我的天才女友》</p>
+</blockquote>
+<blockquote>
+<p>“别为活下去找借口，决定你的生活方式的就是你自己吧”<br>——《混沌武士》</p>
+</blockquote>
+<blockquote>
+<p>在年老的人看来，青春美妙，我们可以做许多白日梦，可以失败，可以哭泣，光芒万丈。但是，年轻如我们却不知其中的美好，总是在无病强说愁，或者颓废消极地殒磨青春……只有待到青春不再，方知其中的可贵。<br>—— 萨特</p>
+</blockquote>
+<blockquote>
+<p>青春是从神明那里借来的宝贵时间，快乐也好，严肃也好，恐怖也好，总有一天都要归还。一把年纪还紧抓着青春的尾巴，可是会付很贵的拖欠款哦。<br>——《对不起青春》</p>
+</blockquote>
+<blockquote>
+<p>“因为没有痛苦也不会有真正的快乐，我只有跟你在一起的时候，才真正快乐”<br>——《流星蝴蝶剑》</p>
+</blockquote>
+<blockquote>
+<p>“理智使人产生虚荣，而加强虚荣的是思考。”<br>—— 卢梭</p>
+</blockquote>
+<blockquote>
+<p>一个人自以为刻骨铭心的回忆，别人可能早已忘记。<br>—— 张小娴</p>
+</blockquote>
+<blockquote>
+<p>我只担心一件事，我怕我配不上自己所受的苦难。<br>—— 陀思妥耶夫斯基</p>
+</blockquote>
+<blockquote>
+<p>人类的悲欢并不相通，我只觉得他们吵闹。<br>—— 鲁迅</p>
+</blockquote>
+<blockquote>
+<p>有样东西他喜欢，但他不说，等到别人放到面前，才说好。</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>从小我就懂得保护自己，我知道要想不被人拒绝，最好的办法就是先拒绝别人。</li>
+<li>多年之后，我有个绰号叫西毒，任何人都可以变得狠毒，只要你尝试过什么叫做嫉妒。</li>
+<li>每个人都会经过这个阶段，见到一座山，就想知道山后面是什么。我很想告诉他，可能翻过山后面，你会发现没什么特别。回望之下，可能会觉得这一边更好。</li>
+<li>其实“醉生梦死”只不过是她跟我开的一个玩笑，你越想知道自己是不是忘记的时候，你反而记得更清楚。我曾经听人说过，当你不能够再拥有，你唯一可以做的，就是令自己不要忘记。</li>
+<li>不久前，我遇上一个人，送给我一坛酒，她说那叫“醉生梦死”，喝了之后，可以叫你忘掉以前做过的任何事。我很奇怪，为什么会有这样的酒。她说人最大的烦恼，就是记性太好，如果什么都可以忘掉，以后的每一天将会是一个新的开始，那你说这有多开心。</li>
+<li>每个人都会坚持自己的信念，在别人来看是浪费时间，她却觉得很重要。</li>
+<li>以前也这么想，但是看着他一天天长大，我知道他早晚会离开我。现在我觉得什么都无所谓啦。以前我认为那句话很重要，因为我觉得有些话说出来就是一生一世，现在想一想，说不说也没有什么分别，有些事会变的。我一直以为是我自己赢了，直到有一天看着镜子，才知道自己输了，在我最美好的时候，我最喜欢的人都不在我身边。如果能重新开始那该多好啊！</li>
+<li>有些人是离开之后，才会发现离开了的人才是自己的最爱。</li>
+<li>我曾经问过自己，你最喜欢的女人是不是我，现在我已经不想再知道啦。如果有一天我忍不住问起，你一定要骗我，就算你心里有多么不愿意，也不要告诉我你最喜欢的人不是我。</li>
+<li>知不知道饮酒和饮水有什么区别？酒越饮越暖，水越喝越寒。</li>
+<li>很多年之后，我有个绰号叫做“西毒”。其实任何人都可以变得狠毒，只要你尝试过甚么叫“忌妒”。我不会介意他人怎样看我，我只不过不想别人比我更开心。</li>
+<li>虽然我很喜欢她，但是我不想让她知道，因为我明白得不到的东西永远是最好的。每次她凝望着那小孩子，我知道她心里其实在想另一个人。我很妒忌欧阳峰，我很想知道被人喜欢的感觉是怎样的，结果我伤害了很多人。<br>——《东邪西毒》</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol>
+<li>“Rehashing old arguments and defending myself against something she said about me.”</li>
+<li>“The past is just a story we tell ourselves.”</li>
+<li>“I think anybody who falls in love is a freak. It’s a crazy thing to do. It’s kind of like a form of socially acceptable insanity.”</li>
+<li>“The heart’s not like a box that gets filled up; it expands in size the more you love.”</li>
+<li>“You know what, I can over-think everything and find a million ways to doubt myself.”</li>
+<li>“It’s like I’m reading a book, and it’s a book I deeply love. But I’m reading it slowly now. So the words are really far apart and the spaces between the words are almost infinite. I can still feel you, and the words of our story. But it’s in the endless space between the words that I’m finding myself now. It’s a space that’s not of the physical world. It’s where everything else is that I didn’t even know existed. I love you so much. But this is where I am now. And this is who I am now. And I need you to let me go. As much as I want to, I can’t live in your book anymore.”</li>
+<li>Will you always come home to me and tell me about your day?<br>Tell me about the guy at work who talked too much.<br>The stain you got on your shirt at lunch.<br>Tell me about a funny thought you had when you were waking up but had forgotten about.<br>Tell me how crazy everyone is, and we can laugh about it.<br>Even if you get home late and I’m already asleep…<br>Just whisper in my ear one little thought you had today.<br>Because I love the way you look at the world.<br>I’m so happy I get to be next to you and look at the world through your eyes.”</li>
+<li>Dear Catherine<br>I’ve been sitting here thinking about all the things I wanted to apologize to you for.<br>All the pain we caused each other, everything I put on you - everything I needed you to be or needed you to say. I’m sorry for that. I will always love you because we grew up together. And you helped make me who I am. I just wanted you to know there will be a piece of you in me always, and I’m grateful for that. Whatever someone you become, and wherever you are in the world, I’m sending you love. You’re my friend till the end.<br>——《Her》</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol>
+<li>不相信世界就是这样，在明知道有的时候必须低头，有的人必将失去，有的东西命中注定不能长久的时候，依然要说，在第一千个选择之外，还有第一千零一个可能，有一扇窗等着我打开，然后有光透进来。</li>
+<li>如果我会发光，就不必害怕黑暗。如果我自己是那么美好，那么一切恐惧就可以烟消云散。于是我开始存下了一点希望——如果我能做到，那么我就战胜了寂寞的命运。<br>——王小波《黑铁时代》</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>欲洁何曾洁？云空未必空。可怜金玉质，终陷淖泥中。—— 妙玉判词</p>
+</blockquote>
+<blockquote>
+<p>一霎时把七情俱已昧尽<br>渗透了酸辛处泪湿衣襟<br>我只道铁富贵一生铸定<br>又谁知人生数顷刻分明<br>想当年我也曾撒娇使性<br>到今朝那怕我不信前尘<br>这也是老天爷一番教训<br>他教我收余恨、免娇嗔、<br>且自新、改性情、休恋逝水、苦海回身、早悟兰因<br>——《锁麟囊》</p>
+</blockquote>
+<blockquote>
+<p>“要死的话就是现在了，我喜欢现在喜欢到这种地步”<br>——《四重奏》</p>
+</blockquote>
+<blockquote>
+<p>“我这个人虐点特别奇怪，不怕死不怕残不怕分手，但我怕看见诚实的人被迫说谎，正直的人被迫弯腰，直言者被迫噤声，理想主义者亲眼见到理想破碎。<br>还有，谎话连篇者最后的一句真话，奴颜婢膝者最后挺直了腰杆，缄口自保者突然仗义执言，曾遭理想背叛的人最后选择为理想而死。”<br>—— 虾米尹吾“你笑着流出了泪”网友评论</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>“归根结底一切人际交往的纽带，不管是婚姻还是友谊，都是交谈，而交谈必须有个共同的基础。如果双方的文化教养迥异，那唯一可能的共同基础只能建立在最低的层面上。思想和行为上的琐屑讨人喜欢。”</li>
+<li>“但是我同你相遇,要么太迟要么太早了,我也说不清楚。”<br>——《自深深处》</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol>
+<li>“并不合理的推断会被下意识地误解为“事实”，一旦“事实”崩塌，心理上就无法承受。”</li>
+<li>“不变的自我往往是美好的虚构。”</li>
+<li>“很多人做出一个本能的决定，会找出一些大道理来解释自己的决定，并将结果称为常识。”</li>
+<li>“时间先安顿我们，继而又迷惑我们。我们以为自己是在慢慢成熟，而其实我们只是安然无恙而已。我们以为自己很有担当，其实我们十分懦弱。我们所谓的务实，充其量不过是逃避现实，绝非直面以对。”</li>
+<li>“历史就是胜利者的谎言。…它也是失败者的自欺欺人。”</li>
+<li>“不可靠的记忆与不充分的材料相遇所产生的确定性就是历史。”</li>
+<li>“我现在明白了。历史其实是那些幸存者的记忆，他们既称不上胜者，也算不得败寇。”</li>
+<li>“生命是一份礼物，却非我辈索取而得；但凡有思想之人都有一份达观的责任去审视生命的本质以及随生命附赠的条件；倘若这人决定放弃这份无人索求的礼物，那么，依据这一决定的后果行事，是合乎道德与人性职责的。”<br>——巴恩斯《终结的感觉》</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>“要完全与另一个人发生关联，人必须先跟自己发生关联。如果我们不能拥抱我们自身的孤独，我们只是利用他人作为对抗孤独的一面挡箭牌而已。”<br>－欧文亚隆</p>
+</blockquote>
+<blockquote>
+<p>“每件促使我们注意到他人的事，都能使我们更好的认识自己。”<br>—— 卡尔·荣格</p>
+</blockquote>
+<blockquote>
+<p>“认识一个人的唯一方式是不抱希望地去爱那个人。”<br>“深知一个人的，唯有不抱希望地爱着他的那一个 么？ ”<br>—— 本雅明</p>
+</blockquote>
+<blockquote>
+<p>那是一种难堪的相对<br>她一直羞低着头<br>给他一个接近的机会<br>他没有勇气接近<br>她调转身，走了<br>——《花样年华》</p>
+</blockquote>
+<blockquote>
+<p>“回忆模糊不清，就给自我欺骗提供了机会。<br>—— 石黑一雄「远山淡影」</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>“搞精神工作的人常会进入一个误区，他们总想穿过具体的生活而直达理论，把手握理论当成获取生命真谛，其实，正是在日复一日的枯燥劳作，匍地细节甚至日常器皿中（也就是理论人想要越过的东西）里，生命才慢慢长出了它的形状。”</li>
+<li>“任何一件事，他们都想快点总结出一个道理，然后就觉得获取了意义感，而其实他们错过了真正的重要部分：去经历，去感受，去痛，去哭，去笑，去犯傻，去清醒……他们对生活的分析比生活的本体多，对爱的表达也比爱多，生活的实体部分都被语言和理论给架空和偷换了，他们说的越多，我越有虚浮感。”<br>——黎戈</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>“我要怎样才能死呢？”<br>“很简单！活下去就好了，只要活着，总有一天会死的”<br>“是吗，我得一直活下去吗？直到我明白的那天”<br>“没错，只要活下去，人生总有一天会结束，结束了，人就死了。”<br>“这样啊，那，我只能这样了吗？那就这样吧”<br>“那可不是”<br>——《奇诺之旅（2017）》</p>
+</blockquote>
+<blockquote>
+<p>别来春半，触目柔肠断。砌下落梅如雪乱，拂了一身还满。<br>雁来音信无凭，路遥归梦难成。离恨恰如春草，更行更远还生。<br>—— 李煜《清平乐》</p>
+</blockquote>
+<blockquote>
+<p>“每个人都想谈一场不徒劳的恋爱，可是每一个人都要经历许多场徒劳。”<br>—— 微博用户 田小花原</p>
+</blockquote>
+<blockquote>
+<p>“Some people, they don’t put things behind so easily.”<br>——《Blue Jasmine》</p>
+</blockquote>
+<blockquote>
+<p>“命运的红线，一旦断了，就再也无法连上了”——《犬夜叉》<br>经 <a href="https://tieba.baidu.com/p/2689707858">https://tieba.baidu.com/p/2689707858</a> 考证，原句是“一度络んでしまった运命の糸はもう直せはしない”，更应翻译为“命运的红线，一旦交缠过。就再也无法分开（回到当初）了”<br>原帖评论有“就像被染上颜色的纸，就算粉身碎骨，也无法再褪去颜色了”</p>
+</blockquote>
+<blockquote>
+<p>“伤害，被伤害。明明是想和某个人牢牢地连结在一起。明明是想和某个人结下深深的羁绊。”<br>——《迟开的向日葵》</p>
+</blockquote>
+<blockquote>
+<p>以前东西坏了都想着修，现在东西坏了都想着换。<br>—— 佚名网友</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>——I gotta tell you right now, you should give up on looking for “enough”, because it will never be enough.<br>——I know, it’s so stupid.</li>
+<li>——They say it’s okay to cry, and that I shouldn’t feel bad about feeling bad.</li>
+<li>This last year I spent some time away, and it made me realize how special the people in my life are. And you might be the most special of them all.</li>
+<li>——I keep thinking about all the things I never said, because I was so sure there’d be other days to say them.<br>——Why don’t you tell her now?<br>——It’s not the same. I should have done it back when she knew who I was, back when it would mean something. But now, she’s gonna die, and she’s never gonna know just how much I hate her.</li>
+<li>——Well, all weddings are lies, right? Sort of. You’re making this big declaration about how you’re gonna stay with this person forever, but you don’t actually know that. You’re just saying it. The whole thing is a farce.<br>——Yeah, that’s true.<br>——But it’s a lie based on truth. Like, at the center of the farce, there’s this nugget of something real and pure. And that strange beautiful something is why you put up with everything else, right?<br>——I guess so.<br>——And sometimes it’s hard to remember that pure, shining thing because it’s been painted over with so many arguments and compromises and disappointments. But you have to believe it’s still down there somewhere even if you can’t see it. And maybe even the belief in it is more important than the thing itself, but only as long as you still believe it. Does that make sense?<br>——Yeah. Thanks, Diane.</li>
+<li>——No, obviously I meant screw everything up until she hates me. I don’t think I can take that.<br>——Maybe this time, don’t do the thing that makes her hate you.<br>——I don’t want to, but every time she looks at me with those big innocent eyes, all I can think about is every shitty thing I’ve ever done, and I think, “I don’t deserve that kind of love.”<br>——Look, BoJack, I don’t know a lot about balancing a state budget or how a bill becomes a law. I don’t know a lot of things.But I do know this: everybody deserves to be loved.</li>
+<li>——Why can’t I be happy? Am I busted? I am, I’m a pit. I’m a pit that good things fall into!<br>——I can’t believe I’m crying. This is so dumb.</li>
+<li>I wanted to be better when you saw me again. And I thought I could be, somehow. But I’m not. And even if I did get better, the best I could ever be is still just some other version of me.</li>
+<li>——I can’t go back to my old life sober. It’s so empty.<br>——Okay, okay. Here’s the secret to being happy.<br>——Oh, I can’t wait to hear this.<br>——Just pretend you are happy, and eventually you’ll forget you’re pretending.<br>——Maybe you’re right. I just need to stop complaining and work harder. Everyone else is doing it. Why am I so special?</li>
+<li>Do you ever get that feeling that like, to know you more is to love you less?</li>
+<li>——You know, sometimes I feel like our marriage is like a magic eye poster. And it’s messy. And at first glance, it doesn’t seem to make any sense. And it’s hard to figure out. But sometimes, if you squint at it just right, everything lines up, and it’s the most perfect… beautiful, amazing thing.<br>——Yeah, I know what you mean.<br>——But… I’m so tired of squinting.<br>——《Bojack Horseman Season 4》</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>“又下起雨了，每当下雨的时候，我就得找避雨的地方，因为我从来不带伞，也许那是因为我已经习惯了独立生活，没有人会关心或者担心我，会不会被雨淋是，所以我无所谓带不带伞，爷爷总是说，惠瑛，别担心，雨总会停的，阳光会更加灿烂，有一天，你会找到属于你的人。”<br>——《雏菊》</p>
+</blockquote>
+<blockquote>
+<p>“那时我并没有学会遗憾，这是大人才有的感情，我只是愤怒，怒火中烧。”<br>——陈丹燕《鱼与自行车》</p>
+</blockquote>
+<blockquote>
+<p>有所思，乃在大海南。<br>何用问遗君，双珠瑇瑁簪，<br>用玉绍缭之。<br>闻君有他心，拉杂摧烧之。<br>摧烧之，当风扬其灰。<br>从今以往，勿复相思，相思与君绝！<br>鸡鸣狗呔，兄嫂当知之。<br>妃呼豨！<br>秋风肃肃晨风飔<br>东方须臾高知之。<br>——《汉铙歌十八曲》之一</p>
+</blockquote>
+<blockquote>
+<p>凡为夫妇之因，前世三生结缘，始配今生之夫妇。若结缘不合，比是怨家，故来相对，既以二心不同，难归一意，快会及诸亲，各还本道。愿妻娘子相离之后，重梳婵鬓，美扫蛾眉，巧逞窈窕之姿，选聘高官之主。解怨释结，更莫相憎。一别两宽，各生欢喜。<br>—— 唐《放妻书》</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>“就这样，给我们启示的人正是那些盲人。就这样，那个能够不知不觉地为你正确无误地指明道路的人，他自己却走不了那条道路”</li>
+<li>“从实质上讲，玛伽是个有着自己的个人生活的，尽管我用了很长时间才发觉了这一点。相反，我却感到空虚，我只拥有做梦和游荡的充分自由，所有的玩具都破碎了，再也不会出问题了”</li>
+<li>“有哪一种生活不是一场悲剧呢？”</li>
+<li>“你不是孤身一人，奥拉西奥，你的孤独纯粹是由于你的虚荣心在作怪”<br>——《跳房子》Julio Cortázar</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>“内疚是小资的陈词滥调，艺术家能创造出自己的伦理观”<br>——《子弹横飞百老汇》</p>
+</blockquote>
+<blockquote>
+<p>“每个人都很孤独，在人的一生中，遇到爱，遇到性，都不稀罕，稀罕的是遇到了理解”<br>—— 廖一梅《柔软》</p>
+</blockquote>
+<blockquote>
+<p>“这是一个去魅的年代，上帝死了，所以各路大神都宣称自己的手中有解药，于是人们开始相信人手中有解药”<br>—— 马克思韦伯</p>
+</blockquote>
+<blockquote>
+<p>“如果阁下长时间盯着深远，那么，深渊也会同样回望着阁下。”<br>—— 尼采</p>
+</blockquote>
+<blockquote>
+<p>“把狂欢和爱情放在文字里是明智的，因为它们，别无居处”<br>—— 福克纳</p>
+</blockquote>
+<blockquote>
+<p>金缕曲词二首<br>寄吴汉槎宁古塔，以词代书，丙辰冬寓京师千佛寺，冰雪中作<br>其一<br>季子平安否？便归来，平生万事，那堪回首！行路悠悠谁慰藉，母老家贫子幼。记不起，从前杯酒。魑魅搏人应见惯，总输他，覆雨翻云手，冰与雪，周旋久。<br>泪痕莫滴牛衣透，数天涯，依然骨肉，几家能够？比似红颜多命薄，更不如今还有。只绝塞，苦寒难受。廿载包胥承一诺，盼乌头马角终相救。置此札，君怀袖。<br>其二<br>我亦飘零久！十年来，深恩负尽，死生师友。宿昔齐名非忝窃，只看杜陵消瘦，曾不减，夜郎僝僽，薄命长辞知己别，问人生到此凄凉否？千万恨，为君剖。<br>兄生辛未吾丁丑，共此时，冰霜摧折，早衰蒲柳。诗赋从今须少作，留取心魄相守。但愿得，河清人寿！归日急翻行戍稿，把空名料理传身后。言不尽，观顿首。</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>gallery</title>
+    <url>/gallery/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><div class="gallery-group-main">
+
+  <figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src='https://images.unsplash.com/photo-1650747825907-ff251da2d2a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">Wallpaper</div>
+  <p>Favorite wallpaper</p>
+  <a href='/gallery/wallpaper'></a>
+  </figcaption>
+  </figure>
+  
+</div>]]></content>
+  </entry>
+  <entry>
+    <title>Wallpaper</title>
+    <url>/gallery/wallpaper/index.html</url>
+    <content><![CDATA[<div class="note blue icon modern"><i class="note-icon fas fa-bullhorn"></i><p>一些壁纸</p>
+</div>
+
+<div class="fj-gallery"><p><img src="https://images.unsplash.com/photo-1650747825907-ff251da2d2a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="01"></p>
+          </div>
+]]></content>
   </entry>
 </search>
