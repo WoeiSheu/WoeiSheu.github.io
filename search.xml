@@ -3,7 +3,7 @@
   <entry>
     <title>HDU 1003</title>
     <url>/2013/02/23/algorithm01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>Given a sequence a[1],a[2],a[3]……a[n], your job is to calculate the max sum of a sub-sequence. For example, given (6,-1,5,4,-7), the max sum in this sequence is 6 + (-1) + 5 + 4 &#x3D; 14.</p>
+    <content><![CDATA[<h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>Given a sequence a[1],a[2],a[3]……a[n], your job is to calculate the max sum of a sub-sequence. For example, given (6,-1,5,4,-7), the max sum in this sequence is 6 + (-1) + 5 + 4 &#x3D; 14.</p>
 <span id="more"></span>
 <h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>The first line of the input contains an integer T(1&lt;&#x3D;T&lt;&#x3D;20) which means the number of test cases. Then T lines follow, each line starts with a number N(1&lt;&#x3D;N&lt;&#x3D;100000), then N integers followed(all the integers are between -1000 and 1000).</p>
 <h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>For each test case, you should output two lines. The first line is “Case #:”, # means the number of the test case. The second line contains three integers, the Max Sum in the sequence, the start position of the sub-sequence, the end position of the sub-sequence. If there are more than one result, output the first one. Output a blank line between two cases.</p>
@@ -60,7 +60,7 @@
 */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -71,7 +71,7 @@
   <entry>
     <title>三字符构成字符串</title>
     <url>/2015/06/15/algorithm03/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-描述"><a href="#1-描述" class="headerlink" title="1. 描述"></a>1. 描述</h3><p>仅由三个字符A、B、C构成字符串，且字符串任意相邻三个元素不能完全相同。如“ACCCAB”不合法，“ABBCBCA”合法。求满足条件的长度为n的字符串个数。假定不考虑整数溢出，要求时间和空间复杂度不高于O(N)。</p>
+    <content><![CDATA[<h3 id="1-描述"><a href="#1-描述" class="headerlink" title="1. 描述"></a>1. 描述</h3><p>仅由三个字符A、B、C构成字符串，且字符串任意相邻三个元素不能完全相同。如“ACCCAB”不合法，“ABBCBCA”合法。求满足条件的长度为n的字符串个数。假定不考虑整数溢出，要求时间和空间复杂度不高于O(N)。</p>
 <h3 id="2-Hints"><a href="#2-Hints" class="headerlink" title="2. Hints"></a>2. Hints</h3><ul>
 <li>1、考虑使用动态规划，将长度为N的字符串个数表示成长度为N-1的字符串个数的递归关系；</li>
 <li>2、使用滚动数组降低空间复杂度；</li>
@@ -186,7 +186,7 @@
 <p>代码可在<a href="https://github.com/zhen-yu/Miscellaneous/tree/master/ThreeCharacters">此处</a>下载</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -196,7 +196,7 @@
   <entry>
     <title>九宫格(八数码)问题</title>
     <url>/2015/05/29/algorithm02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久<del>动手写起来还是漏洞百出<br>主要参考了<a href="http://blog.csdn.net/acm_cxlove/article/details/7745323">这篇博客</a>的内容<br>英文描述此问题可参见[此处](<a href="http://www.aiai.ed.ac.uk/">http://www.aiai.ed.ac.uk/</a></del>gwickler&#x2F;-inf.html)</p>
+    <content><![CDATA[<h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久<del>动手写起来还是漏洞百出<br>主要参考了<a href="http://blog.csdn.net/acm_cxlove/article/details/7745323">这篇博客</a>的内容<br>英文描述此问题可参见[此处](<a href="http://www.aiai.ed.ac.uk/">http://www.aiai.ed.ac.uk/</a></del>gwickler&#x2F;-inf.html)</p>
 <span id="more"></span>
 <h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2. 实现"></a>2. 实现</h3><h4 id="2-1-定义一个图的节点类"><a href="#2-1-定义一个图的节点类" class="headerlink" title="2.1 定义一个图的节点类"></a>2.1 定义一个图的节点类</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">VertexOfGraph</span> <span class="token punctuation">&#123;</span>       <span class="token comment">//定义图的节点类</span>
 <span class="token keyword">public</span><span class="token operator">:</span>
@@ -339,7 +339,7 @@
 <h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>源码可以在<a href="https://github.com/zhen-yu/Miscellaneous/tree/master/SquaredUp/CPP">这里</a>看到</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -350,10 +350,10 @@
   <entry>
     <title>simhash与重复信息识别</title>
     <url>/2015/09/02/algorithm05/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="Simhash-Minhash"><a href="#Simhash-Minhash" class="headerlink" title="Simhash, Minhash"></a>Simhash, Minhash</h3><p>参考这些文章<br><a href="http://grunt1223.iteye.com/blog/964564">http://grunt1223.iteye.com/blog/964564</a><br><a href="http://blog.csdn.net/heiyeshuwu/article/details/44117473">http://blog.csdn.net/heiyeshuwu/article/details/44117473</a></p>
+    <content><![CDATA[<h3 id="Simhash-Minhash"><a href="#Simhash-Minhash" class="headerlink" title="Simhash, Minhash"></a>Simhash, Minhash</h3><p>参考这些文章<br><a href="http://grunt1223.iteye.com/blog/964564">http://grunt1223.iteye.com/blog/964564</a><br><a href="http://blog.csdn.net/heiyeshuwu/article/details/44117473">http://blog.csdn.net/heiyeshuwu/article/details/44117473</a></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -364,7 +364,7 @@
   <entry>
     <title>Graph DFS</title>
     <url>/2015/11/19/algorithm07/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="dfs添加顶点到集合"><a href="#dfs添加顶点到集合" class="headerlink" title="dfs添加顶点到集合"></a>dfs添加顶点到集合</h3><p>在调用dfs的过程中，有四种添加顶点到集合的顺序：</p>
+    <content><![CDATA[<h3 id="dfs添加顶点到集合"><a href="#dfs添加顶点到集合" class="headerlink" title="dfs添加顶点到集合"></a>dfs添加顶点到集合</h3><p>在调用dfs的过程中，有四种添加顶点到集合的顺序：</p>
 <ul>
 <li>Pre-Order，在递归调用dfs之前将当前顶点添加到queue中</li>
 <li>Reverse Pre-Order，在递归调用dfs之前将当前顶点添加到stack中</li>
@@ -373,7 +373,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -384,10 +384,10 @@
   <entry>
     <title>Union-Find Structure</title>
     <url>/2015/11/17/algorithm06/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h3><p><a href="http://blog.csdn.net/dellaserss/article/details/7724401">这篇文章</a>写的很好懂</p>
+    <content><![CDATA[<h3 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h3><p><a href="http://blog.csdn.net/dellaserss/article/details/7724401">这篇文章</a>写的很好懂</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -398,13 +398,13 @@
   <entry>
     <title>神经网络识别手写体数字</title>
     <url>/2015/06/15/algorithm04/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>智能控制课程的作业之一就是利用神经网络识别手写体数字, 花了两天时间用Matlab实现了</p>
+    <content><![CDATA[<h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>智能控制课程的作业之一就是利用神经网络识别手写体数字, 花了两天时间用Matlab实现了</p>
 <h3 id="2-BP算法"><a href="#2-BP算法" class="headerlink" title="2. BP算法"></a>2. BP算法</h3><p>神经网络是智能控制领域很重要的一部分，BP网络算法则是神经网络控制中最重要的算法之一。<br><a href="http://blog.csdn.net/gongxq0124/article/details/7681000">http://blog.csdn.net/gongxq0124/article/details/7681000</a></p>
 <span id="more"></span>
 <h3 id="3-源代码"><a href="#3-源代码" class="headerlink" title="3. 源代码"></a>3. 源代码</h3><p>The source code of this project is <a href="https://github.com/zhen-yu/Miscellaneous/tree/master/RecognizeNumber">here</a>.</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>ai</category>
       </categories>
       <tags>
@@ -416,7 +416,7 @@
   <entry>
     <title>Android ViewPager的使用</title>
     <url>/2014/09/01/android03/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><blockquote>
+    <content><![CDATA[<h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><blockquote>
 <p>ViewPager需要import android.support.v4这个jar包才可以使用<br>ViewPager的效果就是能够轻松实现左右滑动屏幕, 不需要使用GestureDetector。在ViewPager的内部可以嵌入PagerTitleStrip或PagerTabStrip, 可以用来设置显示页面的title内容, 但是不要妄想把它当作Tab来用(虽然我的意图本来就是这样, 但是很悲剧), 因为它不是固定的<br>首先获取ViewPager布局mViewPager, 或者自己用Java实现不用xml, 然后要想实现滑动翻页必须得设置它的Adapter, mViewPager.setAdapter(mAdapter)<br>而mAdapter应该是一个继承FragmentPagerAdapter或者FragmentStatePagerAdapter的类的实例, 它应该实现滑动时所需要展示的页面, 而这些页面可以另外用一个继承Fragment的类实现, 然后将所需要的这些页面加入一个List中<br>需要注意的地方有: 这其中用到的Fragment应使用android.support.v4.app.Fragment而不是android.app.Fragment, FragmentManager也是如此(因为其中用了getSupportFragmentManager方法, 它的返回值是v4包里的FragmentManager)</p>
 </blockquote>
 <p>以上</p>
@@ -641,7 +641,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>LinearLayout</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -652,7 +652,7 @@
   <entry>
     <title>Android Layout布局</title>
     <url>/2014/08/31/android02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="1-用Java而非XML布局"><a href="#1-用Java而非XML布局" class="headerlink" title="1. 用Java而非XML布局"></a>1. 用Java而非XML布局</h2><h3 id="1-1-问题"><a href="#1-1-问题" class="headerlink" title="1.1 问题"></a>1.1 问题</h3><blockquote>
+    <content><![CDATA[<h2 id="1-用Java而非XML布局"><a href="#1-用Java而非XML布局" class="headerlink" title="1. 用Java而非XML布局"></a>1. 用Java而非XML布局</h2><h3 id="1-1-问题"><a href="#1-1-问题" class="headerlink" title="1.1 问题"></a>1.1 问题</h3><blockquote>
 <p>在大部分应用程序中，我们都使用XML来实现页面布局，但实际上也可以不使用XML而使用Java来布局<br>使用XML布局可以提高开发效率，用Java代码实现布局代码的安全性和执行效率更高<br>Java处理效率比XML快，所以用Java代码实现布局比XML要优秀，但是对于一个复杂界面来说，用Java会很麻烦。所以并不建议全部用Java来布局<br>但有些时候，我们的界面不是完全静态的，如果一个View中出现了大量的变化，那原来的XML就成了鸡肋。而且一旦想要将写好的一个Activity封装成JAR包，这时多余的XML就成了累赘</p>
 </blockquote>
 <span id="more"></span>
@@ -719,7 +719,7 @@
 <p>运行后效果图:<br><img src="/images/android_layout_2.png" alt="java_layout"></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -729,11 +729,12 @@
   <entry>
     <title>Dancing Links</title>
     <url>/2015/11/20/algorithm08/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><p>参考<a href="https://zh.wikipedia.org/wiki/%E8%88%9E%E8%B9%88%E9%93%BE">维基百科</a></p>
+    <content><![CDATA[<h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><p>参考<a href="https://zh.wikipedia.org/wiki/%E8%88%9E%E8%B9%88%E9%93%BE">维基百科</a></p>
 <h3 id="2-分析实现"><a href="#2-分析实现" class="headerlink" title="2. 分析实现"></a>2. 分析实现</h3><p>参考<a href="http://www.cnblogs.com/grenet/p/3145800.html"><strong>这里</strong></a>, 写的很详细</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
+        <category>cs</category>
       </categories>
       <tags>
         <tag>algorithm</tag>
@@ -743,7 +744,7 @@
   <entry>
     <title>安卓概述</title>
     <url>/2014/11/02/android04/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
 <p>整理Github时, 找到了这篇以前不知是看哪本书时做的笔记。</p>
 </blockquote>
 <h3 id="1-简析Android安装文件"><a href="#1-简析Android安装文件" class="headerlink" title="1. 简析Android安装文件"></a>1. 简析Android安装文件</h3><h4 id="1-1-Android-SDK目录结构"><a href="#1-1-Android-SDK目录结构" class="headerlink" title="1.1 Android SDK目录结构"></a>1.1 Android SDK目录结构</h4><ul>
@@ -851,7 +852,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -861,7 +862,7 @@
   <entry>
     <title>区块链学习一</title>
     <url>/2018/03/24/blockchain01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在协助一个团队做一个和区块链相关的项目，虽然比较边缘性，和区块链联系没那么紧密，但区块链本身还是需要了解一下的。</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在协助一个团队做一个和区块链相关的项目，虽然比较边缘性，和区块链联系没那么紧密，但区块链本身还是需要了解一下的。</p>
 <p>花了一天阅读了一下区块链技术指南<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[区块链技术指南](https://github.com/yeasy/blockchain_guide)
 ">[1]</span></a></sup></p>
 <span id="more"></span>
@@ -1039,7 +1040,7 @@
 <h2 id="10-一些想法"><a href="#10-一些想法" class="headerlink" title="10. 一些想法"></a>10. 一些想法</h2><p>区块链实际需要解决的还是去中心化(多中心化)场景下的信任问题，而涉及到现实世界中时，事情总不是那么容易解决的。一方面现实世界中永远是少部分人掌握大多数资源(生产资料)，无论是号称哪种体制，进行何种革命，到头来不过是一个轮回，而区块链目前看来也不可能是革命的手段，毕竟现在控制人类社会运转的资源并不会因为区块链而进行转移和改变，所以区块链若要大规模应用，如何避免其变成实际上的中心化是个很重要的问题，而这个问题很有可能无解，需要找到一种大多数人都有且数量级相当的资源来作为惩罚或奖励，Kino能想到的是生命值，不过这是不可能的。另一方面就是现在都是靠博弈来保证利益的最大化，保证实际结果的可信，而这些独立于数字世界之外的问题会对现实生活产生的影响有多少，也没有充分论证，博弈某种程度上也许就是把人类的恶拿了出来，而整个世界的社会实验，把整个社会的恶都反映了出来，会有什么情况，也是未知的。所以对于区块链技术将会革命整个现有生产关系的说法，Kino觉得不可能，或者保守点，近几十年年不可能。区块链当前最可能的应用大概还是资源相当的企业间的相关应用，其涉及的相关方需要数量偏少且资源没有数量级上的差别，比如汽车行业供应链上的资金流转。</p>
 <h2 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h2><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline; vertical-align: top; margin-left: 10px;"><a href="https://github.com/yeasy/blockchain_guide">区块链技术指南</a><a href="#fnref:1" rev="footnote">↩</a></span></li><li id="fn:2"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline; vertical-align: top; margin-left: 10px;"><a href="https://bitcoin.org/">比特币官网</a><a href="#fnref:2" rev="footnote">↩</a></span></li><li id="fn:3"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline; vertical-align: top; margin-left: 10px;"><a href="https://www.ethereum.org/">以太坊官网</a><a href="#fnref:3" rev="footnote">↩</a></span></li></ol></div></div>]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>blockchain</category>
       </categories>
       <tags>
@@ -1051,7 +1052,7 @@
   <entry>
     <title>Android TabHost的使用</title>
     <url>/2014/08/27/android01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1. 写在前面"></a>1. 写在前面</h2><p>出于对新事物的好奇, 接触了一下Android, 主要是看书(《Anroid应用开发深入学习实录》 关立勋)、Google和看文档。使用的android-sdk的platform最低是android-14, 然后有android-17,android-20以及android-L(电脑配置暂时比较低,没法把每个版本都测试一遍）<br>此时此刻Intellij IDEA社区版还没法渲染出android-20和android-L，所以我基本都是用的android-17<br><em>虽然书的出版日期比较新, 但其中有些内容还是已经过时了</em></p>
+    <content><![CDATA[<h2 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1. 写在前面"></a>1. 写在前面</h2><p>出于对新事物的好奇, 接触了一下Android, 主要是看书(《Anroid应用开发深入学习实录》 关立勋)、Google和看文档。使用的android-sdk的platform最低是android-14, 然后有android-17,android-20以及android-L(电脑配置暂时比较低,没法把每个版本都测试一遍）<br>此时此刻Intellij IDEA社区版还没法渲染出android-20和android-L，所以我基本都是用的android-17<br><em>虽然书的出版日期比较新, 但其中有些内容还是已经过时了</em></p>
 <span id="more"></span>
 
 <h2 id="2-TabHost的使用详解"><a href="#2-TabHost的使用详解" class="headerlink" title="2. TabHost的使用详解"></a>2. TabHost的使用详解</h2><h3 id="2-1-项目结构"><a href="#2-1-项目结构" class="headerlink" title="2.1 项目结构"></a>2.1 项目结构</h3><p>先新建一个项目，使用以前构建项目的方法(虽然现在有了Gradle, 但是对于初学者来说学习成本稍高, 暂时搁置):<br>MySetting.java在这里没用，忽略它……</p>
@@ -1222,7 +1223,7 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -1233,7 +1234,7 @@
   <entry>
     <title>Bootstrap小记一</title>
     <url>/2015/10/19/bootstrap01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>把车队主页给换了, 其实就是直接把discuz下的index.php给删了换成自己的, 然而自以为做的差不多了, 没想到好多以前的设计都错了, 其中就有一些关于bootstrap的使用上的错误</p>
+    <content><![CDATA[<h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>把车队主页给换了, 其实就是直接把discuz下的index.php给删了换成自己的, 然而自以为做的差不多了, 没想到好多以前的设计都错了, 其中就有一些关于bootstrap的使用上的错误</p>
 <h3 id="2-Collapse-功能"><a href="#2-Collapse-功能" class="headerlink" title="2. Collapse 功能"></a>2. Collapse 功能</h3><p>导航栏的collapse, 以前测试用的网站写的简陋, 没注意导航栏的手机端兼容, 实际上导航栏的使用如下:</p>
 <span id="more"></span>
 <pre class="line-numbers language-none"><code class="language-none">&lt;div class&#x3D;&quot;container&quot;&gt;
@@ -1265,7 +1266,7 @@
 <p>而我的jQuery引用必然是在Bootstrap之前的, Chrome和Edge上都可以理想的呈现, 只能是IE11的问题了。Google了一些方法尝试了下, 都不是很满意, 直到看到下面这句<code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot; &gt;</code>, 也很有趣, 既然Edge兼容的话，那就将页面设置为Edge兼容模式就好了。当然这也有可能有其他问题, 比如非Win10的系统, 因为Win10以前的系统并没有自带Edge, 手边暂时也没有其他电脑测试, 所以也不明白是否支持这个兼容模式。</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -1275,7 +1276,7 @@
   <entry>
     <title>Android Studio 与 Gradle</title>
     <url>/2015/10/23/android05/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-描述"><a href="#1-描述" class="headerlink" title="1. 描述"></a>1. 描述</h3><blockquote>
+    <content><![CDATA[<h3 id="1-描述"><a href="#1-描述" class="headerlink" title="1. 描述"></a>1. 描述</h3><blockquote>
 <p>以前是用IntelliJ IDEA直接玩安卓程序的, 但是自从Google根据IDEA开发了新的ide后, 很多开发者都转向Android Studio了, 网络上的有些源代码无法直接在IDEA上编译, 于是下了个Android Studio折腾, 用过IntelliJ IDEA后安装、配置环境都很简单, 不太相同的地方是Google采用Gradle作为Android app开发的包管理器之后, 其自家推出的Android Studio自然得默认下载它, 于是在新建工程的最后一步, 提醒你可能需要配置一下代理才能使用成功的下载安装Gradle, 使用SS代理, 成功下载安装</p>
 </blockquote>
 <span id="more"></span>
@@ -1357,7 +1358,7 @@ dependencies &#123;
 <h3 id="6-其他建议"><a href="#6-其他建议" class="headerlink" title="6. 其他建议"></a>6. 其他建议</h3><p>除了以上命令行的做法, 还可以在将工程导入Android Studio后, 查看每个Module下的 build.gradle 下的buildToolsVersion, 然后通过 SDK Manager 查看本地你安装的 SDK Build-tools, 如果相应版本没有安装先下载安装; 之后, 更新build.gradle和gralde-wrapper.properties相应的部分, 然后使用Android Studio的Make build或Run app即可<br>也可以不使用Android Studio调用安卓模拟器, 手动打开Android Emulator, 之后将app-debug.apk拷到android-sdk\platform-tools目录下, cmd下cd到该目录执行<code>adb install app-debug.apk</code>即可将打包后的apk安装到正在运行的Emulator上了。顺便说下创建新的模拟器时勾选Use Host GPU效果应该会好点。</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -1369,7 +1370,7 @@ dependencies &#123;
   <entry>
     <title>C语言琐记二</title>
     <url>/2014/07/02/c02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="一、枚举enum的使用"><a href="#一、枚举enum的使用" class="headerlink" title="一、枚举enum的使用"></a>一、枚举enum的使用</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+    <content><![CDATA[<h3 id="一、枚举enum的使用"><a href="#一、枚举enum的使用" class="headerlink" title="一、枚举enum的使用"></a>一、枚举enum的使用</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
 <span class="token keyword">typedef</span> <span class="token keyword">enum</span> <span class="token class-name">_ErrorCode</span> <span class="token punctuation">&#123;</span>
     SystemError <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span>
@@ -1393,7 +1394,7 @@ dependencies &#123;
 <p>这里表示, 如果constant为真(非0, 随便什么数字, 只要不是0), 就编译程序段1, 否则编译程序段2。如果有#if需要顶格写。</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -1440,83 +1441,6 @@ dependencies &#123;
       </tags>
   </entry>
   <entry>
-    <title>Schedule</title>
-    <url>/2017/08/29/breakup/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><table>
-<thead>
-<tr>
-<th align="center">Time</th>
-<th align="center">Weekdays</th>
-<th align="center">Weekend</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">06:00~06:50</td>
-<td align="center">Get up</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">06:50~07:30</td>
-<td align="center">Run &amp; breakfast</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">07:30~08:00</td>
-<td align="center">Make coffee</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">08:00~08:30</td>
-<td align="center">JLPT</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">08:30~11:30</td>
-<td align="center">Read paper &amp; other things</td>
-<td align="center">For fun</td>
-</tr>
-<tr>
-<td align="center">11:30~13:50</td>
-<td align="center">Lunch &amp; nap</td>
-<td align="center">For fun</td>
-</tr>
-<tr>
-<td align="center">13:00~17:15</td>
-<td align="center">Read paper &amp; other things</td>
-<td align="center">For fun</td>
-</tr>
-<tr>
-<td align="center">17:15~18:00</td>
-<td align="center">Run &amp; dinner</td>
-<td align="center">For fun</td>
-</tr>
-<tr>
-<td align="center">18:00~19:00</td>
-<td align="center">Shower &amp; rest</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">19:00~22:00</td>
-<td align="center">Coding(PLUTUS, Leetcode)</td>
-<td align="center">Chat with sb.</td>
-</tr>
-<tr>
-<td align="center">22:00~23:40</td>
-<td align="center">JLPT &amp; patent agent</td>
-<td align="center">Movie &amp; animation</td>
-</tr>
-</tbody></table>
-<p>JLPT N2: 12&#x2F;03&#x2F;2017<br>Patent agent: 03&#x2F;01&#x2F;2018 ~ 11&#x2F;04&#x2F;2018<br>JLPT N1: 12&#x2F;03&#x2F;2018</p>
-]]></content>
-      <categories>
-        <category>life</category>
-        <category>love</category>
-      </categories>
-      <tags>
-        <tag>breakup</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>浅谈泛函、极值及最优化控制问题</title>
     <url>/2015/03/08/control01/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>花了几个小时复习自控，其中最后看的内容是关于泛函的，做个笔记，谈谈自己对它的理解。</p>
@@ -1539,7 +1463,7 @@ dependencies &#123;
   <entry>
     <title>C++琐记一</title>
     <url>/2015/03/12/cpp01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>没有系统地学过C++, 偶尔会把C++当作高级的C语言用下, 用下它的STL库, 有些很基础的东西都不知道。某课程的作业要求只能用C&#x2F;C++写, 一动手发现全是错误, 故在此记录。</p>
+    <content><![CDATA[<h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>没有系统地学过C++, 偶尔会把C++当作高级的C语言用下, 用下它的STL库, 有些很基础的东西都不知道。某课程的作业要求只能用C&#x2F;C++写, 一动手发现全是错误, 故在此记录。</p>
 <h3 id="2-string类"><a href="#2-string类" class="headerlink" title="2. string类"></a>2. string类</h3><p>string类经常使用, 平时还是用来连接下字符串比较多, 还有一些其他常用的方法：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">substr</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span>
 str<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span>length<span class="token punctuation">)</span> <span class="token comment">//返回str字符串start位置开始的长度为length的字符串，需要依次输出字符串中的字符时，可以变为str.substr(i,1)，而不用str.at(i)，因为str.at(i)返回值类型为char *</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -1590,7 +1514,7 @@ myMap<span class="token punctuation">[</span><span class="token string">"test"</
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -1601,11 +1525,11 @@ myMap<span class="token punctuation">[</span><span class="token string">"test"</
   <entry>
     <title>C语言琐记一</title>
     <url>/2014/06/04/c01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>在codewarrior写的程序本来是可以编译的, 但只是调整了一些代码的位置, 将一些变量移到块作用域里, 却发现无法编译了, 以为是编译器配置突然出了问题, 解决了很久问题仍然存在</p>
+    <content><![CDATA[<h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>在codewarrior写的程序本来是可以编译的, 但只是调整了一些代码的位置, 将一些变量移到块作用域里, 却发现无法编译了, 以为是编译器配置突然出了问题, 解决了很久问题仍然存在</p>
 <h3 id="2-解决"><a href="#2-解决" class="headerlink" title="2. 解决"></a>2. 解决</h3><p>最终发现是C语言的问题, C89的标准不允许随便声明变量, 变量声明不能放在任何可执行语句之后, 只允许在函数和块的开始处。<br>这么不合理的规定在C99和C++里自然已经解除了。但是我所使用的codewarrior所用的C Compiler版本还是只支持到C89</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -1839,14 +1763,14 @@ myMap<span class="token punctuation">[</span><span class="token string">"test"</
   <entry>
     <title>C++琐记三</title>
     <url>/2015/10/30/cpp03/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-C-堆与栈的区别"><a href="#1-C-堆与栈的区别" class="headerlink" title="1. C++堆与栈的区别"></a>1. C++堆与栈的区别</h3><p>和大神一起从良乡回来, 地铁上突然想起了这个问题就问了下, 大神解释之后茅塞顿开、、、回来又查了查网上的东西, 再看发现理解起来轻松了许多</p>
+    <content><![CDATA[<h3 id="1-C-堆与栈的区别"><a href="#1-C-堆与栈的区别" class="headerlink" title="1. C++堆与栈的区别"></a>1. C++堆与栈的区别</h3><p>和大神一起从良乡回来, 地铁上突然想起了这个问题就问了下, 大神解释之后茅塞顿开、、、回来又查了查网上的东西, 再看发现理解起来轻松了许多</p>
 <p>具体可以参考<a href="http://blog.csdn.net/nieyibin/article/details/7468323">这篇文章</a>, 还有<a href="https://stackoverflow.com/questions/408670/stack-static-and-heap-in-c">这个问题</a></p>
 <span id="more"></span>
 
 <h3 id="2-NULL"><a href="#2-NULL" class="headerlink" title="2. NULL"></a>2. NULL</h3><p>在C++中0是NULL</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -1903,7 +1827,7 @@ myMap<span class="token punctuation">[</span><span class="token string">"test"</
   <entry>
     <title>C++琐记二</title>
     <url>/2015/10/27/cpp02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-vector"><a href="#1-vector" class="headerlink" title="1. vector"></a>1. vector</h3><h4 id="1-1-erase"><a href="#1-1-erase" class="headerlink" title="1.1 erase"></a>1.1 erase</h4><p>以前用vector时只是使用<code>push_back()</code>,<code>pop_back()</code>,<code>begin()</code>,<code>end()</code>,<code>front()</code>,<code>back()</code>等，没用过<code>erase()</code>, 今天搭配iterator用了一下, 才发现很神奇。比如删除一个vector上指定值为val的元素:</p>
+    <content><![CDATA[<h3 id="1-vector"><a href="#1-vector" class="headerlink" title="1. vector"></a>1. vector</h3><h4 id="1-1-erase"><a href="#1-1-erase" class="headerlink" title="1.1 erase"></a>1.1 erase</h4><p>以前用vector时只是使用<code>push_back()</code>,<code>pop_back()</code>,<code>begin()</code>,<code>end()</code>,<code>front()</code>,<code>back()</code>等，没用过<code>erase()</code>, 今天搭配iterator用了一下, 才发现很神奇。比如删除一个vector上指定值为val的元素:</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token double-colon punctuation">::</span>iterator it <span class="token operator">=</span> nums<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> it <span class="token operator">!=</span> nums<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> val <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         nums<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>it<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1950,7 +1874,7 @@ myMap<span class="token punctuation">[</span><span class="token string">"test"</
 </ul>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -2092,7 +2016,7 @@ myMap<span class="token punctuation">[</span><span class="token string">"test"</
   <entry>
     <title>折腾车队服务器</title>
     <url>/2015/10/17/discuz/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、</p>
+    <content><![CDATA[<h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、</p>
 <h3 id="2-Apache"><a href="#2-Apache" class="headerlink" title="2. Apache"></a>2. Apache</h3><h4 id="2-1-缺少msvcr110-dll"><a href="#2-1-缺少msvcr110-dll" class="headerlink" title="2.1 缺少msvcr110.dll"></a>2.1 缺少msvcr110.dll</h4><p>首先是<code>httpd -k install</code>时直接提示缺少msvcr110.dll, 安装了<code>vcredist_x64.exe</code>还是不行, 想着直接装.net库, 然而并不可以。最后想起来当时下的apache是32位的, 安装了<code>vcredist_x86.exe</code>之后apache安装成功。</p>
 <span id="more"></span>
 <h4 id="2-2-Servername错误"><a href="#2-2-Servername错误" class="headerlink" title="2.2 Servername错误"></a>2.2 Servername错误</h4><p>之后出现了ServerName错误，直接将<code>#ServerName: localhost:80</code>注释去了，改为自己需要的。</p>
@@ -2119,7 +2043,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 <h3 id="4-Filezilla"><a href="#4-Filezilla" class="headerlink" title="4. Filezilla"></a>4. Filezilla</h3><p>还用filezilla搭了个ftp服务器，配置好后无法通过其他地址访问，查阅资料将filezilla添加到防火墙允许通过</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -2261,7 +2185,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
   <entry>
     <title>音乐信号灯电子电路设计</title>
     <url>/2015/09/12/electronicDesign02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h3><ul>
+    <content><![CDATA[<h3 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h3><ul>
 <li>想使multisim的四路示波器波形相对静止下查看，如果是正弦波可以在示波器上选中波形类型为正弦波，否则可以直接点击暂停仿真使停止</li>
 <li>仿真过程极慢，现实1s在multisim中竟然走了3、4s，改multisim步长有时可以解决问题，但若是仿真电路本身的确复杂，则只能靠等待了，毕竟仿真是需要计算时间的</li>
 <li>Mesurement Probe的确好用，但是有时运行一段时间后，会导致Transient time point calculation did not converge这个错误，出现这个问题的另一个原因可能是示波器未接地。</li>
@@ -2345,7 +2269,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 <p align="center">图8-2</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>ee</category>
       </categories>
       <tags>
@@ -2357,7 +2281,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
   <entry>
     <title>Usage of function generator in multisim</title>
     <url>/2014/10/26/electronicDesign01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>进行多级放大电路和负反馈放大电路的模拟仿真时，用到了multisim里的function generator(函数发生器)，对其中的参数amplitude产生了困惑，这个amplitude(振幅)指的是峰值还是峰峰值。</p>
+    <content><![CDATA[<h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>进行多级放大电路和负反馈放大电路的模拟仿真时，用到了multisim里的function generator(函数发生器)，对其中的参数amplitude产生了困惑，这个amplitude(振幅)指的是峰值还是峰峰值。</p>
 <span id="more"></span>
 
 <h3 id="2-验证"><a href="#2-验证" class="headerlink" title="2. 验证"></a>2. 验证</h3><p>于是设计了一个及其简单的电路进行仿真:<br><img src="/images/analogelec_functionGenerator_1.png" alt="simple circuit 1"></p>
@@ -2366,7 +2290,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 <h3 id="3-电路图"><a href="#3-电路图" class="headerlink" title="3. 电路图"></a>3. 电路图</h3><p>附上多级放大电路及负反馈电路的电路图：<br><img src="/images/analogelec_functionGenerator_3.png" alt="Simple circuit 3"></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>ee</category>
       </categories>
       <tags>
@@ -2377,7 +2301,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
   <entry>
     <title>一起来学Haskell啦</title>
     <url>/2017/11/12/haskell01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><hr>
+    <content><![CDATA[<hr>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>函数式语言Haskell听闻已久, 但是没看过, 最近两周看<em>learn you a haskell for great good!</em><sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[learn you a haskell for great good!](http://learnyouahaskell.com/)
 ">[1]</span></a></sup>, 有种相见恨晚的感觉, 现在如果让我一个编程入门者学习的话, 我可能会推荐C++和Haskell吧… Haskell里的思想看完, 再看Python, JS ES2015&#x2F;16&#x2F;17引入的一些新特性, 一眼就能理解了.</p>
 <p>*learn you a haskell for great good!*这本书看完一遍, 再重新看一遍目录, 从中找到自己印象不深的章节, 稍作记录于此.</p>
@@ -2385,7 +2309,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 <h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><p>工具个人推荐用Stack, 官方文档查询步骤就好, 值得注意的是由于G*F*W的存在, <code>stack setup</code>时竟然没法下载GHC, 这里推荐:<br>中科大镜像:<br><a href="http://mirrors.ustc.edu.cn/help/hackage.html">http://mirrors.ustc.edu.cn/help/hackage.html</a><br><a href="http://mirrors.ustc.edu.cn/help/stackage.html">http://mirrors.ustc.edu.cn/help/stackage.html</a><br>清华Tuna镜像:<br><a href="https://mirrors.tuna.tsinghua.edu.cn/help/hackage/">https://mirrors.tuna.tsinghua.edu.cn/help/hackage/</a><br><a href="https://mirror.tuna.tsinghua.edu.cn/help/stackage/">https://mirror.tuna.tsinghua.edu.cn/help/stackage/</a></p>
 <h3 id="2-自定义Type和Typeclass"><a href="#2-自定义Type和Typeclass" class="headerlink" title="2. 自定义Type和Typeclass"></a>2. 自定义Type和Typeclass</h3><h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline; vertical-align: top; margin-left: 10px;"><a href="http://learnyouahaskell.com/">learn you a haskell for great good!</a><a href="#fnref:1" rev="footnote">↩</a></span></li></ol></div></div>]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -2396,7 +2320,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
   <entry>
     <title>HLA 入门二</title>
     <url>/2016/04/11/hla02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-RTI中time-management相关问题"><a href="#1-RTI中time-management相关问题" class="headerlink" title="1. RTI中time management相关问题"></a>1. RTI中time management相关问题</h3><h4 id="1-1-在创建Federate之后如何修改其时间控制策略"><a href="#1-1-在创建Federate之后如何修改其时间控制策略" class="headerlink" title="1.1 在创建Federate之后如何修改其时间控制策略"></a>1.1 在创建Federate之后如何修改其时间控制策略</h4><p>想要在创建Federate后改变其时间控制策略, 且同时修改其前瞻量, 这时会出现相关问题, 当然, 我们先假设三个Federate, A、B、C初始都是Regulating状态, 且A前瞻量2, 步长2, 当前时间为20, B前瞻量4, 步长4, 当前时间60, C前瞻量5, 步长5, 当前时间100<span id="more"></span></p>
+    <content><![CDATA[<h3 id="1-RTI中time-management相关问题"><a href="#1-RTI中time-management相关问题" class="headerlink" title="1. RTI中time management相关问题"></a>1. RTI中time management相关问题</h3><h4 id="1-1-在创建Federate之后如何修改其时间控制策略"><a href="#1-1-在创建Federate之后如何修改其时间控制策略" class="headerlink" title="1.1 在创建Federate之后如何修改其时间控制策略"></a>1.1 在创建Federate之后如何修改其时间控制策略</h4><p>想要在创建Federate后改变其时间控制策略, 且同时修改其前瞻量, 这时会出现相关问题, 当然, 我们先假设三个Federate, A、B、C初始都是Regulating状态, 且A前瞻量2, 步长2, 当前时间为20, B前瞻量4, 步长4, 当前时间60, C前瞻量5, 步长5, 当前时间100<span id="more"></span></p>
 <ul>
 <li>先修改C为 Regulating and Constrained, 这时若先<code>rtiAmbassador.enableTimeRegulation(lookahead);</code>会<code>throw</code>一个<code>TimeRegulationAlreadyEnabled</code>的异常, 若我们捕获它并在<code>catch</code>中<code>rtiAmbassador.disableTimeRegulation(); rtiAmbassador.enableTimeRegulation(lookahead);</code>, 看似并没有什么问题。于是接下来执行<code>rtiAmbassador.enableTimeConstrained();</code>, 此时查看Pitch pRti的界面发现A的Constrained也没有启用, 看上去不知解决, 其实这时Constrained处于pending状态, 没有什么影响, 后续再说</li>
 <li>再修改B为 Regulating and Constrained, 同上操作, 执行到<code>rtiAmbassador.disableTimeRegulation();</code>这句时, 观察Pitch pRti的时间管理界面发现其GALT增大为B的当前时间加其前瞻量, 即100+5, 之后抛出的异常也都相同, 不赘述</li>
@@ -2406,7 +2330,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 </ul>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -2517,11 +2441,11 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
   <entry>
     <title>HLA 入门一</title>
     <url>/2016/04/09/hla01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-What-is-hla"><a href="#1-What-is-hla" class="headerlink" title="1. What is hla?"></a>1. What is hla?</h3><p>HLA 即 High Level A rchitecture</p>
+    <content><![CDATA[<h3 id="1-What-is-hla"><a href="#1-What-is-hla" class="headerlink" title="1. What is hla?"></a>1. What is hla?</h3><p>HLA 即 High Level A rchitecture</p>
 <span id="more"></span>
 <h3 id="2-Why-do-we-use-it"><a href="#2-Why-do-we-use-it" class="headerlink" title="2. Why do we use it?"></a>2. Why do we use it?</h3><h3 id="3-About-pitch"><a href="#3-About-pitch" class="headerlink" title="3. About pitch"></a>3. About pitch</h3>]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -2564,12 +2488,12 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
   <entry>
     <title>HLA 入门三</title>
     <url>/2016/05/28/hla03/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>在创建新的联邦时, 将Thesis.xml换成了Test.xml去create, 但CRC端实际显示的还是Thesis.xml, 以为是前端问题或是后端创建时传参问题, 检查没有发现错误</p>
+    <content><![CDATA[<h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1. 问题"></a>1. 问题</h3><p>在创建新的联邦时, 将Thesis.xml换成了Test.xml去create, 但CRC端实际显示的还是Thesis.xml, 以为是前端问题或是后端创建时传参问题, 检查没有发现错误</p>
 <span id="more"></span>
 <h3 id="2-解决"><a href="#2-解决" class="headerlink" title="2. 解决"></a>2. 解决</h3><p>在CRC服务器上关闭了Pitch RTI, 重新打开, 新创建的联邦显示的FOM就是Test.xml了。。。</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -3551,7 +3475,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
   <entry>
     <title>Leetcode Summary 01 — Cycle Detection</title>
     <url>/2018/10/29/leetcode01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>前段时间忙于找工作，因而有正大光明的托词和导师说，11月之后再去做课题相关的事情，也就有了一段较为自由的时间。<br>其中诸多准备，免不了在Leetcode上刷题，虽然对于最终的结果来说没有帮助，但刷题过程中遇到了一些解决思路相似的问题，就依次将这些共性问题阐述一遍罢了。<br>本系列的第一篇介绍的是环检测问题，对应的维基百科页面有<a href="https://en.wikipedia.org/wiki/Cycle_detection">Cycle detection</a>。这类问题最常见的求解算法是Floyd Cycle Algorithm&#x2F;Floyd’s Tortoise and Hare，中文名通常为Floyd判圈算法&#x2F;龟兔赛跑算法。</p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>前段时间忙于找工作，因而有正大光明的托词和导师说，11月之后再去做课题相关的事情，也就有了一段较为自由的时间。<br>其中诸多准备，免不了在Leetcode上刷题，虽然对于最终的结果来说没有帮助，但刷题过程中遇到了一些解决思路相似的问题，就依次将这些共性问题阐述一遍罢了。<br>本系列的第一篇介绍的是环检测问题，对应的维基百科页面有<a href="https://en.wikipedia.org/wiki/Cycle_detection">Cycle detection</a>。这类问题最常见的求解算法是Floyd Cycle Algorithm&#x2F;Floyd’s Tortoise and Hare，中文名通常为Floyd判圈算法&#x2F;龟兔赛跑算法。</p>
 <span id="more"></span>
 <h3 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h3><p>在计算机科学中，有一类问题称之为<strong>环检测问题</strong>，即对于一个由迭代函数(iterated function)值组成的序列，判断该序列是否有环及环出现的位置。<br>关于什么是迭代函数(iterated function)，严格定义可以查看<a href="https://en.wikipedia.org/wiki/Iterated_function">这里</a>，简单来说就是一个函数\(f\)，其定义域和值域都是集合\(X\)，那么对于某个自变量&#x2F;输入\(a\)，其因变量&#x2F;输出\(b\)也可以作为函数\(f\)的自变量&#x2F;输入，如此给定一个初始值\(x\)，将\(f\)的每一次输出作为下一次的输入，如此重复\(n\)次，就称作函数\(f\)的第\(n\)次迭代。</p>
 <p>对于上述函数\(f\)，如果其集合\(X\)是有限的，那么对于序列:<br>$$<br>S &#x3D; \{x_0, x_1 &#x3D; f(x_0), x_2 &#x3D; f(x_1), \cdots, x_i &#x3D; f(x_{i-1}), \cdots\}<br>$$<br>那么必然会有两个位置\(i\)和\(j\)，且\(i &lt; j\)，其\(x_i &#x3D; x_j\)，一旦出现这种状况，显然在\(j\)位置之后，会重复从\(x_i\)到\(x_{j-1}\)的序列。所谓环检测问题，就是给定\(f\)和\(x_0\)，要求找到\(i\)和\(j\)。<br>当然对于无限集合\(X\)，是有可能不存在环的，这取决于\(f\)和\(x_0\)的共同作用。例如\(f&#x3D;x^2\)，如果\(X\)的范围是复数域，那么\(x_0&#x3D;0,1,-1,e^{\frac{2\pi{}mi}{n}}\)，则有环，否则没有。这里\(m\)的取值范围是整数，\(n\)的取值范围是\({1,2,3,4,6,7,8,12,14,15,16,24,28,30,31,32,\cdots}\)，就不仔细推导了，有兴趣的可以自行推导。</p>
@@ -3831,7 +3755,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 <h3 id="4-实际应用"><a href="#4-实际应用" class="headerlink" title="4. 实际应用"></a>4. 实际应用</h3><p>环检测(cycle detection)问题的实际应用有 <em>伪随机数生成器(pseudorandom number generators)强度的度量</em>，比如 <em>线性同余生成器(linear congruential generator)<em>，</em>加密哈希函数的冲突检测</em>，<em>细胞自动机(cellular automaton)的振荡周期配置</em>等</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -3843,7 +3767,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
   <entry>
     <title>Linux琐记一</title>
     <url>/2015/06/06/linux01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-音频设备"><a href="#1-音频设备" class="headerlink" title="1. 音频设备"></a>1. 音频设备</h3><p>aplay -l会列出所有设备<br>alsamixer灰常实用<br><code>/usr/bin/lspci | grep -i audio</code></p>
+    <content><![CDATA[<h3 id="1-音频设备"><a href="#1-音频设备" class="headerlink" title="1. 音频设备"></a>1. 音频设备</h3><p>aplay -l会列出所有设备<br>alsamixer灰常实用<br><code>/usr/bin/lspci | grep -i audio</code></p>
 <h3 id="2-xargs"><a href="#2-xargs" class="headerlink" title="2. xargs"></a>2. xargs</h3><p>通常使用管道的范例：<code>cat test.txt | grep -E &#39;*test*&#39;</code><br>但若是前者可以作为后者的参数带入时，可以使用xargs：<br><code>echo “*test*” | xargs find / -name</code><br>上述若是不加xargs则无法使用<br>xargs的实际功能是是以行为单位读取输入数据并执行参数变化，于是可以有更强大的用处，例如：<br><code>find / -name &#39;*portaudio*&#39; | xargs ls -l</code></p>
 <span id="more"></span>
 
@@ -3864,7 +3788,7 @@ EnableMMAP off<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 steghide extract -sf 被加密的文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -3874,7 +3798,7 @@ steghide extract -sf 被加密的文件<span aria-hidden="true" class="line-numb
   <entry>
     <title>JavaScript笔谈一</title>
     <url>/2015/02/25/javascript01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-childNodes和children属性"><a href="#1-childNodes和children属性" class="headerlink" title="1. childNodes和children属性"></a>1. childNodes和children属性</h3><p>使用firstChild没有得到想要的结果, 用Chrome去调试发现firstChild竟然是文本元素, 然后又发现DOM节点有两属性childNodes和children, 于是学习记录下.</p>
+    <content><![CDATA[<h3 id="1-childNodes和children属性"><a href="#1-childNodes和children属性" class="headerlink" title="1. childNodes和children属性"></a>1. childNodes和children属性</h3><p>使用firstChild没有得到想要的结果, 用Chrome去调试发现firstChild竟然是文本元素, 然后又发现DOM节点有两属性childNodes和children, 于是学习记录下.</p>
 <h4 id="1-1-childNodes-属性"><a href="#1-1-childNodes-属性" class="headerlink" title="1.1. childNodes 属性"></a>1.1. childNodes 属性</h4><p>标准的，它返回指定元素的子元素集合，包括HTML节点，所有属性，文本。可以通过nodeType来判断是哪种类型的节点，只有当nodeType&#x3D;&#x3D;1时才是元素节点，2是属性节点，3是文本节点。有时候需要获取指定元素的第一个HTML子节点（非属性&#x2F;文本节点），最容易想到的就是firstChild 属性。代码中第一个HTML节点前如果有换行，空格，那么firstChild返回的就不是你想要的了。<br>看到这我就明白为什么我的firstChild不对了，因为我在html节点前加了好几个<code>&amp;nbsp</code>;</p>
 <span id="more"></span>
 <h4 id="1-2-children-属性"><a href="#1-2-children-属性" class="headerlink" title="1.2 children 属性"></a>1.2 children 属性</h4><p>非标准的，它返回指定元素的子元素集合。经测试，它只返回HTML节点，甚至不返回文本节点。且在所有浏览器下表现惊人的一致。和childNodes 一样，在Firefox下不支持()取集合元素。需注意children在IE中包含注释节点。<br>于是用children[0]代替firstChild，得到想要的结果、</p>
@@ -3884,7 +3808,7 @@ steghide extract -sf 被加密的文件<span aria-hidden="true" class="line-numb
 <h3 id="5-font-size"><a href="#5-font-size" class="headerlink" title="5. font-size"></a>5. font-size</h3><p>一直以为font-size的30px表示显示的每个文字都是30px的宽和高, 最近发现font-size只决定高度, 宽度由字符集自己按照比例决定. 如果需要修改可以使用css的<code>transform:scale(2.0,1.0)</code>属性</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -3894,7 +3818,7 @@ steghide extract -sf 被加密的文件<span aria-hidden="true" class="line-numb
   <entry>
     <title>Linux琐记三</title>
     <url>/2015/11/01/linux03/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-who命令"><a href="#1-who命令" class="headerlink" title="1. who命令"></a>1. who命令</h3><p>who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。</p>
+    <content><![CDATA[<h3 id="1-who命令"><a href="#1-who命令" class="headerlink" title="1. who命令"></a>1. who命令</h3><p>who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。</p>
 <h3 id="2-w命令"><a href="#2-w命令" class="headerlink" title="2. w命令"></a>2. w命令</h3><p>执行这项指令可得知目前登入系统的用户有那些人，以及他们正在执行的程序。单独执行linux w命令会显示所有的用户，您也可指定用户名称，仅显示某位用户的相关信息。</p>
 <h3 id="3-查看端口使用情况"><a href="#3-查看端口使用情况" class="headerlink" title="3. 查看端口使用情况"></a>3. 查看端口使用情况</h3><p><code>netstat   -anp   |   grep  portno</code><br>比如<code>netstat –apn | grep 8080</code></p>
 <span id="more"></span>
@@ -3943,7 +3867,7 @@ EOF</span>
 <h3 id="10-将某用户加入sudo权限中"><a href="#10-将某用户加入sudo权限中" class="headerlink" title="10. 将某用户加入sudo权限中"></a>10. 将某用户加入sudo权限中</h3><p><code>visudo</code>命令<br>直接加入<code>username ALL=(ALL) ALL</code></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -3953,7 +3877,7 @@ EOF</span>
   <entry>
     <title>Linux琐记二</title>
     <url>/2015/08/03/linux02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-dd命令"><a href="#1-dd命令" class="headerlink" title="1. dd命令"></a>1. dd命令</h3><p>win8.1下镜像直接点击setup.exe无效…系统要求都符合，只是我这是双系统且是BIOS引导，也不是UEFI<br>想想要不制作个系统盘，Win32DiskImager制作后还是不行，转到Ubuntu使用<br><code>dd if=en_windows_10_multiple_editions_x64_dvd_6846432.iso of=/dev/sdb bs=2M</code><br>bs&#x3D;2M情况下最后平均写入速度为7M&#x2F;s</p>
+    <content><![CDATA[<h3 id="1-dd命令"><a href="#1-dd命令" class="headerlink" title="1. dd命令"></a>1. dd命令</h3><p>win8.1下镜像直接点击setup.exe无效…系统要求都符合，只是我这是双系统且是BIOS引导，也不是UEFI<br>想想要不制作个系统盘，Win32DiskImager制作后还是不行，转到Ubuntu使用<br><code>dd if=en_windows_10_multiple_editions_x64_dvd_6846432.iso of=/dev/sdb bs=2M</code><br>bs&#x3D;2M情况下最后平均写入速度为7M&#x2F;s</p>
 <p>虽然最终还是失败了、、、</p>
 <h3 id="2-格式化u盘"><a href="#2-格式化u盘" class="headerlink" title="2. 格式化u盘"></a>2. 格式化u盘</h3><p>U盘写入到一半时被我中止了，结果就是U盘变成了只读状态，挂载后也无法操作…<br>于是<code>mkfs.vfat -I /dev/sdb</code>或者<code>mkfs -t vfat /dev/sdb -I</code></p>
 <span id="more"></span>
@@ -3982,7 +3906,7 @@ sslocal -c conf.json<span aria-hidden="true" class="line-numbers-rows"><span></s
 <h3 id="5-外网出口ip"><a href="#5-外网出口ip" class="headerlink" title="5. 外网出口ip"></a>5. 外网出口ip</h3><p>在终端下输入 <code>curl ip.gs</code> 即可获取当前自己的外网出口IPv4地址</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -3992,7 +3916,7 @@ sslocal -c conf.json<span aria-hidden="true" class="line-numbers-rows"><span></s
   <entry>
     <title>Linux琐记四</title>
     <url>/2016/04/10/linux04/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-Ubuntu-ssh-登录提示信息"><a href="#1-Ubuntu-ssh-登录提示信息" class="headerlink" title="1. Ubuntu ssh 登录提示信息"></a>1. Ubuntu ssh 登录提示信息</h3><p>修改<code>/etc/issue</code>和<code>/etc/motd</code><br>前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者</p>
+    <content><![CDATA[<h3 id="1-Ubuntu-ssh-登录提示信息"><a href="#1-Ubuntu-ssh-登录提示信息" class="headerlink" title="1. Ubuntu ssh 登录提示信息"></a>1. Ubuntu ssh 登录提示信息</h3><p>修改<code>/etc/issue</code>和<code>/etc/motd</code><br>前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者</p>
 <h3 id="2-curl-post-json数据"><a href="#2-curl-post-json数据" class="headerlink" title="2. curl post json数据"></a>2. curl post json数据</h3><p><code>curl -H &quot;Content-Type: application/json&quot; -X POST -d &#39;&#123;&quot;id&quot;:&quot;1&quot;,&quot;password&quot;:&quot;miao&quot;&#125;&#39; http://api</code><br>在post的data中使用变量:</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">currentTime</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">date</span> +%s<span class="token variable">`</span></span>
 <span class="token function">curl</span> -i -H <span class="token string">"Accept:application/json"</span> -H <span class="token string">"Content-Type:application/json"</span> -X POST <span class="token punctuation">\</span>
@@ -4031,7 +3955,7 @@ response <span class="token operator">=</span> urllib2.urlopen<span class="token
 <h3 id="7-shell获取本机ip地址并保存在变量中"><a href="#7-shell获取本机ip地址并保存在变量中" class="headerlink" title="7. shell获取本机ip地址并保存在变量中"></a>7. shell获取本机ip地址并保存在变量中</h3><p><code>ip -o -4 addr list eth0 | awk &#39;&#123;print $4&#125;&#39; | cut -d/ -f1</code><br><code>ifconfig eth0 | grep -E &quot;inet\b&quot; | awk &#39;&#123;print $2&#125;&#39; | cut -d: -f2</code></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -4041,7 +3965,7 @@ response <span class="token operator">=</span> urllib2.urlopen<span class="token
   <entry>
     <title>Linux琐记六</title>
     <url>/2016/06/07/linux06/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-rename"><a href="#1-rename" class="headerlink" title="1. rename"></a>1. rename</h3><p><code>rename &#39;s/(0-9).txt/file_$1.txt/&#39; *.txt</code></p>
+    <content><![CDATA[<h3 id="1-rename"><a href="#1-rename" class="headerlink" title="1. rename"></a>1. rename</h3><p><code>rename &#39;s/(0-9).txt/file_$1.txt/&#39; *.txt</code></p>
 <h3 id="2-查看硬件信息"><a href="#2-查看硬件信息" class="headerlink" title="2. 查看硬件信息"></a>2. 查看硬件信息</h3><pre class="line-numbers language-none"><code class="language-none">lscpu
 lshw
 hwinfo
@@ -4065,7 +3989,7 @@ lsblk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
 <h3 id="7-Ubuntu-安装特定版本package"><a href="#7-Ubuntu-安装特定版本package" class="headerlink" title="7. Ubuntu 安装特定版本package"></a>7. Ubuntu 安装特定版本package</h3><p>某个包依赖<code>pkg-config</code>，而<code>pkg-config</code>依赖的一个包始终安装不上，因为版本对不上，手动指定版本降级之后可以<br><code>apt install package=version</code></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -4120,7 +4044,7 @@ lsblk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
   <entry>
     <title>Linux琐记五</title>
     <url>/2016/05/09/linux05/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-No-such-file-or-directory"><a href="#1-No-such-file-or-directory" class="headerlink" title="1. No such file or directory"></a>1. No such file or directory</h3><p><code>./pwn1</code>执行后出现错误信息:<em>.&#x2F;pwn1: No such file or directory</em>, 可执行权限Kino已经加上了, 查了查可能是因为库的原因, 直接<code>cat pwn1</code>看到需要<code>/lib/ld-linux.so</code>, 查了下系统的确没有, 用<code>readelf</code>去查看pwn1的各项信息, 反而没有看到. <code>ld-linux.so</code>这个库是Linux下进行动态库链接的链接器, 无它其他动态库就都无法成功链接, 详细说明可以戳<a href="http://linux.die.net/man/8/ld-linux">这里</a><br>查看怎么安装这个库, 32位系统下是<code>libc6</code>, 64位是<code>libc6-i386</code>, 这是因为64位中默认安装了<code>/lib64/ld-linux-x86-64.so.2</code></p>
+    <content><![CDATA[<h3 id="1-No-such-file-or-directory"><a href="#1-No-such-file-or-directory" class="headerlink" title="1. No such file or directory"></a>1. No such file or directory</h3><p><code>./pwn1</code>执行后出现错误信息:<em>.&#x2F;pwn1: No such file or directory</em>, 可执行权限Kino已经加上了, 查了查可能是因为库的原因, 直接<code>cat pwn1</code>看到需要<code>/lib/ld-linux.so</code>, 查了下系统的确没有, 用<code>readelf</code>去查看pwn1的各项信息, 反而没有看到. <code>ld-linux.so</code>这个库是Linux下进行动态库链接的链接器, 无它其他动态库就都无法成功链接, 详细说明可以戳<a href="http://linux.die.net/man/8/ld-linux">这里</a><br>查看怎么安装这个库, 32位系统下是<code>libc6</code>, 64位是<code>libc6-i386</code>, 这是因为64位中默认安装了<code>/lib64/ld-linux-x86-64.so.2</code></p>
 <h3 id="2-dmesg"><a href="#2-dmesg" class="headerlink" title="2. dmesg"></a>2. dmesg</h3><p>dmesg用来显示内核环缓冲区(kernel-ring buffer)内容, 内核将各种消息存放在这里. 在系统引导时, 内核将与硬件和模块初始化相关的信息填到这个缓冲区中. 内核环缓冲区中的消息对于诊断系统问题非常有用</p>
 <span id="more"></span>
 
@@ -4130,7 +4054,7 @@ lsblk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
 <span class="token function">cat</span> /proc/interrupts <span class="token operator">|</span> <span class="token function">grep</span> timer <span class="token operator">&amp;&amp;</span> <span class="token function">sleep</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> /proc/interrupts <span class="token operator">|</span> <span class="token function">grep</span> timer<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -4140,7 +4064,7 @@ lsblk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
   <entry>
     <title>机器学习二</title>
     <url>/2015/08/16/machineLearning02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-决策树定义"><a href="#1-决策树定义" class="headerlink" title="1. 决策树定义"></a>1. 决策树定义</h3><p>决策树是一个预测模型；他代表的是对象属性与对象值之间的一种映射关系。树中每个节点表示某个对象，而每个分叉路径则代表的某个可能的属性值，而每个叶结点则对应从根节点到该叶节点所经历的路径所表示的对象的值。决策树仅有单一输出，若欲有复数输出，可以建立独立的决策树以处理不同输出。从数据产生决策树的机器学习技术叫做决策树学习, 通俗说就是决策树。</p>
+    <content><![CDATA[<h3 id="1-决策树定义"><a href="#1-决策树定义" class="headerlink" title="1. 决策树定义"></a>1. 决策树定义</h3><p>决策树是一个预测模型；他代表的是对象属性与对象值之间的一种映射关系。树中每个节点表示某个对象，而每个分叉路径则代表的某个可能的属性值，而每个叶结点则对应从根节点到该叶节点所经历的路径所表示的对象的值。决策树仅有单一输出，若欲有复数输出，可以建立独立的决策树以处理不同输出。从数据产生决策树的机器学习技术叫做决策树学习, 通俗说就是决策树。</p>
 <span id="more"></span>
 <h3 id="2-决策树优缺点"><a href="#2-决策树优缺点" class="headerlink" title="2. 决策树优缺点"></a>2. 决策树优缺点</h3><p>决策树是一种简单但是广泛使用的分类器。通过训练数据构建决策树，可以高效的对未知的数据进行分类。</p>
 <ul>
@@ -4168,7 +4092,7 @@ lsblk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
 <h3 id="8-应用示例"><a href="#8-应用示例" class="headerlink" title="8. 应用示例"></a>8. 应用示例</h3><p>Machine Learning in Action 书中使用了隐形眼镜示例，数据来源为UCI数据库，并进行了相应的改造<br>代码可见<a href="https://github.com/zhen-yu/machineLearning/tree/master/decisionTree">此处</a></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>ai</category>
       </categories>
       <tags>
@@ -4852,7 +4776,7 @@ lsblk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
   <entry>
     <title>机器学习一</title>
     <url>/2015/08/11/machineLearning01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><p>学习此书<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Machine Learning in Action](http://www2.ift.ulaval.ca/~chaib/IFT-4102-7025/public_html/Fichiers/Machine_Learning_in_Action.pdf)
+    <content><![CDATA[<h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><p>学习此书<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Machine Learning in Action](http://www2.ift.ulaval.ca/~chaib/IFT-4102-7025/public_html/Fichiers/Machine_Learning_in_Action.pdf)
 ">[1]</span></a></sup>时的一些记录</p>
 <h3 id="2-如何选择合适的算法"><a href="#2-如何选择合适的算法" class="headerlink" title="2. 如何选择合适的算法"></a>2. 如何选择合适的算法</h3><p>考虑使用机器学习算法的目的, 如果想要预测目标变量的值，则可以选择监督学习算法，否则可以选择无监督学习算法。确定选择监督学习算法后，进一步确定目标变量类型，如果目标变量是离散型，如是&#x2F;否、1&#x2F;2&#x2F;3、A&#x2F;B&#x2F;C等，则可以选择分类算法；如果目标变量是连续型的数值，如0.0<del>100.00、-999</del>999或者+∞~-∞等，则需要选择回归算法, 如果不想预测目标变量的值，则可以选择无监督算法，进一步分析是否需要将数据划分为离散的组。如果这是唯一的要求，则使用聚类算法，如果还需要估计数据与每个分组的相似程度，则需要使用密度估计算法。</p>
 <span id="more"></span>
@@ -4869,7 +4793,7 @@ lsblk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
 ">[1]</span></a></sup>中提供了一个识别数字的实例，对其稍作修改，最终代码<a href="https://github.com/zhen-yu/machineLearning/tree/master/kNN">在此</a></p>
 <h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline; vertical-align: top; margin-left: 10px;"><a href="http://www2.ift.ulaval.ca/~chaib/IFT-4102-7025/public_html/Fichiers/Machine_Learning_in_Action.pdf">Machine Learning in Action</a><a href="#fnref:1" rev="footnote">↩</a></span></li><li id="fn:2"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline; vertical-align: top; margin-left: 10px;"><a href="http://research.microsoft.com/en-us/um/people/cmbishop/prml/">PRML</a><a href="#fnref:2" rev="footnote">↩</a></span></li></ol></div></div>]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>ai</category>
       </categories>
       <tags>
@@ -4906,7 +4830,7 @@ lsblk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
   <entry>
     <title>Metaheuristic algorithm —— Concept</title>
     <url>/2018/11/19/metaheuristicAlgorithm01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Kino的课题常需要用到元启发式算法，就在此稍稍总结。<br>元启发式(metaheuristic)，很多时候也被称为智能优化(intelligent optimization)、现代启发式(Modern Heuristic)、智能计算(Intelligent Computation)、自然计算(Natural Computation)等，细分到具体算法有<em>遗传算法</em>、<em>粒子群算法</em>、<em>差分进化算法</em>、<em>蚁群算法</em>等。<br>**元启发式(metaheuristic)*<em>这个词本身可以拆成两部分来看，</em>元(meta)<em>和</em>启发式(heuristic)*，本文主要从这两方面来阐述元启发式的概念，后续文章再介绍各算法的原理、步骤、代码等。</p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Kino的课题常需要用到元启发式算法，就在此稍稍总结。<br>元启发式(metaheuristic)，很多时候也被称为智能优化(intelligent optimization)、现代启发式(Modern Heuristic)、智能计算(Intelligent Computation)、自然计算(Natural Computation)等，细分到具体算法有<em>遗传算法</em>、<em>粒子群算法</em>、<em>差分进化算法</em>、<em>蚁群算法</em>等。<br>**元启发式(metaheuristic)*<em>这个词本身可以拆成两部分来看，</em>元(meta)<em>和</em>启发式(heuristic)*，本文主要从这两方面来阐述元启发式的概念，后续文章再介绍各算法的原理、步骤、代码等。</p>
 <span id="more"></span>
 <h3 id="1-Meta"><a href="#1-Meta" class="headerlink" title="1. Meta"></a>1. Meta</h3><p>首先来解释<em>元(meta)<em>，程序员对这个词并不陌生，学习编程语言到某个阶段总会出来一个</em>元编程(metaprogramming)<em>技术，还会经常见到</em>元数据(metadata)<em>等。与顾名思义的一些概念相比，</em>元</em>的概念就有点晦涩了，初次遇见总是一脸诧异，难以理解。<br>感性上来看，<strong>metaXXX</strong>就是相比XXX来说更高级的一种概念&#x2F;理论，是研究超越XXX的存在，玄之又玄，不能理解不是你的错，就像形而上学(metaphysics)一样难以理解。<br>而不去探讨<strong>meta</strong>哲学性质的意义，只考虑其作为前缀(prefix)的情况，根据<em>meta</em>在Wikipedia的相应词条<a href="https://en.wikipedia.org/wiki/Meta">Meta</a><sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Wikipedians. (2018, November 12). Meta. Retrieved from https://en.wikipedia.org/wiki/Meta
 ">[1]</span></a></sup>，<strong>meta</strong>大多数时候可以理解为<strong>X about X</strong>，大致翻译为<strong>关于X的X</strong>，这里的<strong>关于</strong>在中文语境里通常用<strong>实现、描述、编写</strong>等动词代替。例如<strong>metadata</strong>就是<strong>data about data</strong>，即描述数据的数据，<strong>metaprogramming</strong>就是<strong>programming about programming</strong>，即<strong>编写程序的程序</strong>，诸如此类。如果有需要，这种概念还可以递归，即添加任意多的<strong>meta</strong>前缀，变身成为<strong>metametameta…<strong>。<br>在此基础上再去看</strong>meta</strong>的中文翻译<strong>元</strong>，就会发现这个翻译其实很巧妙。“元”汉语里有 起源&#x2F;开始(如元旦&#x2F;元始天尊)、基本&#x2F;根本(如元素&#x2F;元气&#x2F;元件) 的意思，完美地涵盖了meta想要表达的意思。然而<strong>元</strong>这个字很少单用，已经融合在最常见的一些词语中，所以当看到用<strong>元</strong>的前缀生造出的词语时，大多数人还是会难以理解。</p>
@@ -4941,7 +4865,7 @@ lsblk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
 <h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>传统的任务分配、组合优化类等运筹学问题，大多都可以抽象成非凸优化的模型，也是NP问题，无法用传统方法求解，同时这些问题大多缺少或不能统计历史数据，因此也无法使用有监督机器学习等算法，这种情况下使用智能优化算法就非常合适。<br>针对这些运筹学问题，只要能够利用元启发算法的思想设计出合理的启发式算法，从而解决问题，其实就是一个很好的工作，但是现在的研究导向是发论文至上，研究智能优化算法的实验室也不例外，一切以发论文为导向，设计全新的元启发式算法实在困难，于是现在的论文大多还是Problem Oriented，通过说动听的故事阐述问题意义，再找出和之前的问题区别，比如多了一个小小的约束条件，这时就可以命名这个问题为XXXXX，以此说明自己定义了一个新问题，再抽象出该问题的数学模型(大多数时候只是在目标函数或约束条件上做些许修改，太简单没有做的意义，太复杂元启发也难以求解)，然后根据元启发算法的流程设计出完整的算法(在流程中的任一处加一点修改即可称之为改进)，编程实现算法做比较，得出结论;当然Method Oriented也还是有的，刚刚提到的一些小的改动、针对经典的TSP等做算法改进、超多目标优化问题的求解方法等。<br>总之一切为了论文，至于这些论文里的问题是否真的有意义、方法是否真的有创新，谁在乎呢。</p>
 <h3 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. (2018, November 12). Meta. Retrieved from https://en.wikipedia.org/wiki/Meta<a href="#fnref:1" rev="footnote">↩</a></span></li><li id="fn:2"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. (2018, November 19). 2019 redefinition of SI base units. Retrieved from https://en.wikipedia.org/wiki/2019_redefinition_of_SI_base_units<a href="#fnref:2" rev="footnote">↩</a></span></li><li id="fn:3"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. (2014, May 25). Heuristic (computer science). Retrieved from https://en.wikipedia.org/wiki/Heuristic_(computer_science)<a href="#fnref:3" rev="footnote">↩</a></span></li><li id="fn:4"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. (2018, November 16). Metaheuristic. Retrieved from https://en.wikipedia.org/wiki/Metaheuristic<a href="#fnref:4" rev="footnote">↩</a></span></li></ol></div></div>]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -4952,7 +4876,7 @@ lsblk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
   <entry>
     <title>机器学习三</title>
     <url>/2015/08/19/machineLearning03/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-朴素贝叶斯"><a href="#1-朴素贝叶斯" class="headerlink" title="1. 朴素贝叶斯"></a>1. 朴素贝叶斯</h3><p>朴素贝叶斯的两个假设：</p>
+    <content><![CDATA[<h3 id="1-朴素贝叶斯"><a href="#1-朴素贝叶斯" class="headerlink" title="1. 朴素贝叶斯"></a>1. 朴素贝叶斯</h3><p>朴素贝叶斯的两个假设：</p>
 <ul>
 <li>特征之间相互独立，即一个单词出现的可能性与它和其他单词相邻没有关系</li>
 <li>每个特征同等重要</li>
@@ -5157,7 +5081,7 @@ vocabList<span class="token punctuation">,</span> pSF<span class="token punctuat
 <p>getTopWords()使用两个RSS源作为输入，然后训练并测试朴素贝叶斯分类器，返回使用的概率值。<br><code>bayes.getTopWords(ny,sf)</code>可查看运行结果</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>ai</category>
       </categories>
       <tags>
@@ -5168,7 +5092,7 @@ vocabList<span class="token punctuation">,</span> pSF<span class="token punctuat
   <entry>
     <title>机器学习四</title>
     <url>/2015/08/25/machineLearning04/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-Logistic回归"><a href="#1-Logistic回归" class="headerlink" title="1. Logistic回归"></a>1. Logistic回归</h3><p>利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类</p>
+    <content><![CDATA[<h3 id="1-Logistic回归"><a href="#1-Logistic回归" class="headerlink" title="1. Logistic回归"></a>1. Logistic回归</h3><p>利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类</p>
 <h3 id="2-基于Logistic回归和Sigmoid函数的分类"><a href="#2-基于Logistic回归和Sigmoid函数的分类" class="headerlink" title="2. 基于Logistic回归和Sigmoid函数的分类"></a>2. 基于Logistic回归和Sigmoid函数的分类</h3><p>我们想要的函数是能接受所有的输入然后预测出类别。例如,在两个类的情况下,上述函数输出0或1,我们接触过的函数 Heaviside step function(单位阶跃函数)即是。然而此函数在跳跃点上从0瞬间跳跃到1，这个瞬间跳跃过程有时很难处理。Sigmoid函数有类似的性质但是更容易处理，其具体计算公式为：\(\sigma(z)&#x3D;\frac{1}{1+e^{-z}}\)<br>为了实现Logistic回归分类器，我们可以在每个特征上都乘以一个回归系数，然后把所有的结果值相加，将这个总和代入Sigmoid函数中，进而得到一个范围在0~1之间的数值。任何大于0.5的数据被分入1类，小于0.5即被归为0类。所以，Logistic回归也可以看成是一种概率估计<br>确定了分类器的函数形式后，问题变为求最佳回归系数。</p>
 <span id="more"></span>
 
@@ -5288,7 +5212,7 @@ vocabList<span class="token punctuation">,</span> pSF<span class="token punctuat
 <p>classifyVector()，它以回归系数和特征向量作为输入来计算对应的Sigmoid值<br>colicTest()是用于打开测试集和训练集，并对数据进行格式化处理的函数<br>multiTest()，其功能是调用colicTest()10次并求结果的平均值</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>ai</category>
       </categories>
       <tags>
@@ -5299,7 +5223,7 @@ vocabList<span class="token punctuation">,</span> pSF<span class="token punctuat
   <entry>
     <title>服务器配置</title>
     <url>/2013/01/21/myComputer02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-ssh"><a href="#1-ssh" class="headerlink" title="1. ssh"></a>1. ssh</h3><h4 id="1-1-安装open-ssh"><a href="#1-1-安装open-ssh" class="headerlink" title="1.1 安装open ssh"></a>1.1 安装open ssh</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt</span> <span class="token function">install</span> openssh-server
+    <content><![CDATA[<h3 id="1-ssh"><a href="#1-ssh" class="headerlink" title="1. ssh"></a>1. ssh</h3><h4 id="1-1-安装open-ssh"><a href="#1-1-安装open-ssh" class="headerlink" title="1.1 安装open ssh"></a>1.1 安装open ssh</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt</span> <span class="token function">install</span> openssh-server
 /etc/init.d/ssh restart
 <span class="token function">vim</span> /etc/ssh/sshd_config    <span class="token comment"># 根据需要修改</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
@@ -5417,7 +5341,7 @@ pip install shadowsocks<span aria-hidden="true" class="line-numbers-rows"><span>
 <h4 id="8-2-Run"><a href="#8-2-Run" class="headerlink" title="8.2 Run"></a>8.2 Run</h4><p><code>sudo ssserver -c shadowsocks.conf -d start</code></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
       </categories>
       <tags>
         <tag>linux</tag>
@@ -5427,7 +5351,7 @@ pip install shadowsocks<span aria-hidden="true" class="line-numbers-rows"><span>
   <entry>
     <title>我的电脑——开发工具配置</title>
     <url>/2013/01/12/myComputer01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-Tex"><a href="#1-Tex" class="headerlink" title="1. Tex"></a>1. Tex</h3><h4 id="1-1-Texlive"><a href="#1-1-Texlive" class="headerlink" title="1.1 Texlive"></a>1.1 Texlive</h4><p><a href="https://www.tug.org/texlive/">https://www.tug.org/texlive/</a></p>
+    <content><![CDATA[<h3 id="1-Tex"><a href="#1-Tex" class="headerlink" title="1. Tex"></a>1. Tex</h3><h4 id="1-1-Texlive"><a href="#1-1-Texlive" class="headerlink" title="1.1 Texlive"></a>1.1 Texlive</h4><p><a href="https://www.tug.org/texlive/">https://www.tug.org/texlive/</a></p>
 <h4 id="1-2-CTAN"><a href="#1-2-CTAN" class="headerlink" title="1.2 CTAN"></a>1.2 CTAN</h4><p><a href="https://www.ctan.org/">https://www.ctan.org</a></p>
 <span id="more"></span>
 <h3 id="2-Sublime"><a href="#2-Sublime" class="headerlink" title="2. Sublime"></a>2. Sublime</h3><h4 id="2-1-Install"><a href="#2-1-Install" class="headerlink" title="2.1 Install"></a>2.1 Install</h4><p><a href="https://www.sublimetext.com/3">https://www.sublimetext.com/3</a><br>Backup: <a href="https://drive.google.com/open?id=0B7ciOrhoI8vkOEZqOXNBWnNrbzg">https://drive.google.com/open?id=0B7ciOrhoI8vkOEZqOXNBWnNrbzg</a></p>
@@ -5876,7 +5800,7 @@ export MYVIMRC&#x3D;&#39;&#x2F;etc&#x2F;vim&#x2F;vimrc&#39;<span aria-hidden="tr
 <h3 id="4-Git"><a href="#4-Git" class="headerlink" title="4. Git"></a>4. Git</h3><p><code>git config --global core.editor &quot;vim&quot;</code></p>
 <h3 id="5-Valgrind"><a href="#5-Valgrind" class="headerlink" title="5. Valgrind"></a>5. Valgrind</h3>]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>misc</category>
       </categories>
       <tags>
@@ -5941,7 +5865,7 @@ export MYVIMRC&#x3D;&#39;&#x2F;etc&#x2F;vim&#x2F;vimrc&#39;<span aria-hidden="tr
   <entry>
     <title>Configure OpenCV with VS2013</title>
     <url>/2014/10/28/opencv01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-Install"><a href="#1-Install" class="headerlink" title="1. Install"></a>1. Install</h3><p>Download OpenCV from:<br><a href="http://sourceforge.net/projects/opencvlibrary/files">Lastest</a><br><a href="http://opencv.org/">Homepage</a></p>
+    <content><![CDATA[<h3 id="1-Install"><a href="#1-Install" class="headerlink" title="1. Install"></a>1. Install</h3><p>Download OpenCV from:<br><a href="http://sourceforge.net/projects/opencvlibrary/files">Lastest</a><br><a href="http://opencv.org/">Homepage</a></p>
 <p>Click the file you downloaded, choose a location to extract it.</p>
 <span id="more"></span>
 
@@ -5977,7 +5901,7 @@ opencv_videostab249d.lib<span aria-hidden="true" class="line-numbers-rows"><span
 <h3 id="3-Comment"><a href="#3-Comment" class="headerlink" title="3. Comment"></a>3. Comment</h3><p>If we use opencv-2.4.10, just change 249 to 2410, opencv-2.4.8 to 248. And there are equivalent <em>.lib</em> file without ‘d’, e.g.: <em>opencv_videostab249.lib</em>, it is used when we need to realease a project but not debug.<br>And it is much easier in opencv-3.0, only a <em>opencv_ts300d.lib</em> or a <em>opencv_ts300.lib</em> will work.</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -6650,7 +6574,7 @@ opencv_videostab249d.lib<span aria-hidden="true" class="line-numbers-rows"><span
   <entry>
     <title>postgreSQL</title>
     <url>/2016/03/23/postgresql/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>以前只用过数据库MySQL和Rails自带的sqlite3, 最近打算在一个项目里使用postgreSQL, 简要记录下。</p>
+    <content><![CDATA[<h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>以前只用过数据库MySQL和Rails自带的sqlite3, 最近打算在一个项目里使用postgreSQL, 简要记录下。</p>
 <h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h3><p>去<a href="http://www.postgresql.org/download/">官网</a>找对应版本下载, 不喜欢exe文件,感觉不在可控范围内, 于是下载了zip版本</p>
 <p>解压之后, 设置路径:</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">path &#x3D; %path%;D:\Programs\pgsql\bin
@@ -6706,7 +6630,7 @@ runas &#x2F;user:postgres cmd.exe    # 我用的是cmder.exe<span aria-hidden="t
 ALTER <span class="token environment constant">USER</span> <span class="token string">"user_name"</span> WITH PASSWORD <span class="token string">'new_password'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -6809,7 +6733,7 @@ ALTER <span class="token environment constant">USER</span> <span class="token st
   <entry>
     <title>Python 琐记二</title>
     <url>/2015/07/16/python02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-zip函数"><a href="#1-zip函数" class="headerlink" title="1. zip函数"></a>1. zip函数</h3><p>zip函数接受任意多个（包括0个和1个）序列作为参数，返回一个tuple列表</p>
+    <content><![CDATA[<h3 id="1-zip函数"><a href="#1-zip函数" class="headerlink" title="1. zip函数"></a>1. zip函数</h3><p>zip函数接受任意多个（包括0个和1个）序列作为参数，返回一个tuple列表</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span>
 z <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
@@ -6852,7 +6776,7 @@ plus5<span class="token punctuation">(</span><span class="token number">10</span
 <span class="token number">15</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -6863,7 +6787,7 @@ plus5<span class="token punctuation">(</span><span class="token number">10</span
   <entry>
     <title>Raspberry PI 3 折腾小记一</title>
     <url>/2016/04/09/raspberry01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><p>下载官方&#x2F;第三方镜像压缩包, 解压, SD卡插入手机或其他读卡器, dd命令或者Win32DiskImager写入镜像, Over<br>之后将SD卡插入树莓派, 供电</p>
+    <content><![CDATA[<h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><p>下载官方&#x2F;第三方镜像压缩包, 解压, SD卡插入手机或其他读卡器, dd命令或者Win32DiskImager写入镜像, Over<br>之后将SD卡插入树莓派, 供电</p>
 <h3 id="2-ssh连接"><a href="#2-ssh连接" class="headerlink" title="2. ssh连接"></a>2. ssh连接</h3><p>树莓派插上网线, 会自动联网分配一个ip, 可以通过路由器管理界面查看ip地址(如果网线接在路由器上)<br>之后<code>ssh pi@192.168.0.104</code> password:<code>raspberry</code>, 即可连接成功, 默认用户名密码参考<a href="https://github.com/raspberrypi/documentation/blob/master/remote-access/ssh/unix.md">官方文档</a></p>
 <p>官方文档还提到了很多其他远程连接方式, <a href="https://github.com/raspberrypi/documentation/tree/master/remote-access">自行参考</a></p>
 <span id="more"></span>
@@ -6953,7 +6877,7 @@ gateway <span class="token number">192.168</span>.1.1   <span class="token comme
 network <span class="token number">192.168</span>.1.1   <span class="token comment"># 网络地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -7029,7 +6953,7 @@ network <span class="token number">192.168</span>.1.1   <span class="token comme
   <entry>
     <title>Python 琐记一</title>
     <url>/2015/03/15/python01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-BOOL"><a href="#1-BOOL" class="headerlink" title="1. BOOL"></a>1. BOOL</h3><p>Python 中bool类型把数0看作false<br><code>bool(0)</code></p>
+    <content><![CDATA[<h3 id="1-BOOL"><a href="#1-BOOL" class="headerlink" title="1. BOOL"></a>1. BOOL</h3><p>Python 中bool类型把数0看作false<br><code>bool(0)</code></p>
 <h3 id="2-range"><a href="#2-range" class="headerlink" title="2. range"></a>2. range</h3><p>最常用的函数range，可传递1、2或3个参数，只有1个则是下边界，两个就是上下边界，三个则加上了步长。</p>
 <span id="more"></span>
 <h3 id="3-lambda"><a href="#3-lambda" class="headerlink" title="3. lambda"></a>3. lambda</h3><p>类似于函数式程序语言Lisp，Python提供了lambda</p>
@@ -7072,7 +6996,7 @@ This means that if you manually install Python from source, it uses the site-pac
 <h3 id="9-中文注释"><a href="#9-中文注释" class="headerlink" title="9. 中文注释"></a>9. 中文注释</h3><p>在Linux中Python代码中加入中文注释提示编码错误，解决方案：<br>文件头加入<code># coding:utf-8</code></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -7083,7 +7007,7 @@ This means that if you manually install Python from source, it uses the site-pac
   <entry>
     <title>Raspberry PI 3 折腾小记二</title>
     <url>/2016/04/09/raspberry02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-安装Java"><a href="#1-安装Java" class="headerlink" title="1. 安装Java"></a>1. 安装Java</h3><p>安装的raspbian-jessie-lite系统没有自带Java<br><code>apt-get install oracle-java7-jdk</code></p>
+    <content><![CDATA[<h3 id="1-安装Java"><a href="#1-安装Java" class="headerlink" title="1. 安装Java"></a>1. 安装Java</h3><p>安装的raspbian-jessie-lite系统没有自带Java<br><code>apt-get install oracle-java7-jdk</code></p>
 <h3 id="2-安装tomcat7"><a href="#2-安装tomcat7" class="headerlink" title="2. 安装tomcat7"></a>2. 安装tomcat7</h3><p>出现Size mismatch<br><code>wget http://mirrors.ustc.edu.cn/raspbian/raspbian/pool/main/j/java-common/java-common_0.52_all.deb</code><br><code>dpkg -i java-common_0.52_all.deb</code><br>再次<code>apt-get install tomcat7</code></p>
 <span id="more"></span>
 <p>安装成功提示:</p>
@@ -7094,7 +7018,7 @@ This means that if you manually install Python from source, it uses the site-pac
 <p>解压war包<code>jar xvf some.war</code>, 将解压出的内容<code>mv * ROOT</code>, 即可根目录访问</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -7163,7 +7087,7 @@ This means that if you manually install Python from source, it uses the site-pac
   <entry>
     <title>公共DNS</title>
     <url>/2015/09/08/publicDNS/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="各大公司提供的公共DNS"><a href="#各大公司提供的公共DNS" class="headerlink" title="各大公司提供的公共DNS"></a>各大公司提供的公共DNS</h3><h4 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h4><pre><code>8.8.8.8
+    <content><![CDATA[<h3 id="各大公司提供的公共DNS"><a href="#各大公司提供的公共DNS" class="headerlink" title="各大公司提供的公共DNS"></a>各大公司提供的公共DNS</h3><h4 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h4><pre><code>8.8.8.8
 </code></pre>
 <h4 id="Alibaba"><a href="#Alibaba" class="headerlink" title="Alibaba"></a>Alibaba</h4><pre><code>223.5.5.5
 223.6.6.6
@@ -7177,7 +7101,7 @@ This means that if you manually install Python from source, it uses the site-pac
 </code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>misc</category>
       </categories>
       <tags>
@@ -7336,7 +7260,7 @@ This means that if you manually install Python from source, it uses the site-pac
   <entry>
     <title>Ruby 琐记一</title>
     <url>/2016/01/01/ruby01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1、嵌入字符串"><a href="#1、嵌入字符串" class="headerlink" title="1、嵌入字符串"></a>1、嵌入字符串</h3><p>在字符串中使用#{…}这样的写法, 可以把通过计算得到的值嵌入到字符串中, 输出结果除了可以嵌入变量名也可以嵌入公式</p>
+    <content><![CDATA[<h3 id="1、嵌入字符串"><a href="#1、嵌入字符串" class="headerlink" title="1、嵌入字符串"></a>1、嵌入字符串</h3><p>在字符串中使用#{…}这样的写法, 可以把通过计算得到的值嵌入到字符串中, 输出结果除了可以嵌入变量名也可以嵌入公式</p>
 <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">puts <span class="token string-literal"><span class="token string">"Area = </span><span class="token interpolation"><span class="token delimiter punctuation">#&#123;</span><span class="token content">area</span><span class="token delimiter punctuation">&#125;</span></span><span class="token string">"</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
@@ -7373,7 +7297,7 @@ arr1<span class="token punctuation">.</span>zip<span class="token punctuation">(
 p result<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -7400,7 +7324,7 @@ p result<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
   <entry>
     <title>Shadowsocks 高级教程</title>
     <url>/2015/07/19/shadowsocks/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-HTTP代理"><a href="#1-HTTP代理" class="headerlink" title="1. HTTP代理"></a>1. HTTP代理</h3><p>在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了</p>
+    <content><![CDATA[<h3 id="1-HTTP代理"><a href="#1-HTTP代理" class="headerlink" title="1. HTTP代理"></a>1. HTTP代理</h3><p>在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了</p>
 <h3 id="2-Shadowsocks服务端配置"><a href="#2-Shadowsocks服务端配置" class="headerlink" title="2. Shadowsocks服务端配置"></a>2. Shadowsocks服务端配置</h3><p>曾在DigitalOcean上自建了一个Shadowsocks服务端，虽然后来被封了，但幸而在电脑上记录下一下重点，Shadowsocks服务端的配置文件为:</p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json">#ipv4
 <span class="token punctuation">&#123;</span>
@@ -7432,7 +7356,7 @@ ssserver -c config -d stop<span aria-hidden="true" class="line-numbers-rows"><sp
 <h3 id="5-检查日志"><a href="#5-检查日志" class="headerlink" title="5. 检查日志"></a>5. 检查日志</h3><p><code>sudo less /var/log/shadowsocks.log</code></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>misc</category>
       </categories>
       <tags>
@@ -7443,7 +7367,7 @@ ssserver -c config -d stop<span aria-hidden="true" class="line-numbers-rows"><sp
   <entry>
     <title>Rails Session</title>
     <url>/2016/03/07/rubyOnRails01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-相关概念"><a href="#1-相关概念" class="headerlink" title="1. 相关概念"></a>1. 相关概念</h3><h4 id="1-1-session"><a href="#1-1-session" class="headerlink" title="1.1 session"></a>1.1 session</h4><p>多数Web框架都有某种形式的Session管理: 为特定于某个客户端浏览会话的数据提供一个持久化的服务器端存储机制<br>Rails session存储方法提供了如下特性:</p>
+    <content><![CDATA[<h3 id="1-相关概念"><a href="#1-相关概念" class="headerlink" title="1. 相关概念"></a>1. 相关概念</h3><h4 id="1-1-session"><a href="#1-1-session" class="headerlink" title="1.1 session"></a>1.1 session</h4><p>多数Web框架都有某种形式的Session管理: 为特定于某个客户端浏览会话的数据提供一个持久化的服务器端存储机制<br>Rails session存储方法提供了如下特性:</p>
 <ul>
 <li>机密性(Confidentiality): 除了服务器无人能读取在session中的数据</li>
 <li>完整性(Integrity): 服务器端之外无人能修改存储在session中的数据,除非抛弃旧的session再获取一个新的</li>
@@ -7473,7 +7397,7 @@ layout <span class="token boolean">false</span>
 <p>问题得以解决。其实原因就是由于ApplicationController中会默认启用protect_from_forgery, 由于csrf的机制, A站点无法处理B站点Post过来的数据, 所以只要针对性的开放某api即可</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -7486,7 +7410,7 @@ layout <span class="token boolean">false</span>
   <entry>
     <title>升级Ubuntu 17.10之后</title>
     <url>/2017/11/19/ubuntu02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前写过一篇<a href="/2015/05/26/ubuntu01/">安装Ubuntu 15.04之后</a>. 基本上14.04到17.04应该都可以参照, 在自己电脑上这些版本基本都用过, 没什么大问题.<br>前两天在实验室把Ubuntu更新到了17.10, 可能是太久没用Gnome桌面了, 比想象中的好、那就用下去呗</p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前写过一篇<a href="/2015/05/26/ubuntu01/">安装Ubuntu 15.04之后</a>. 基本上14.04到17.04应该都可以参照, 在自己电脑上这些版本基本都用过, 没什么大问题.<br>前两天在实验室把Ubuntu更新到了17.10, 可能是太久没用Gnome桌面了, 比想象中的好、那就用下去呗</p>
 <p>不过也带来了一些问题, 需要一步一步解决</p>
 <span id="more"></span>
 <h3 id="1-Root登录"><a href="#1-Root登录" class="headerlink" title="1. Root登录"></a>1. Root登录</h3><p>预警: 一般还是遵循医嘱, 不要学我这种野路子默认root登录…<br>两个地方, 一是<code>/etc/gdm3/custom.conf</code>处, 在<code>[Security]</code>下添加<code>AllowRoot=true</code>; 二是<code>/etc/pam.d/gdm-password</code>处, 将<code>auth    required    pam_succeed_if.so user != root quiet_success</code>注释</p>
@@ -7504,7 +7428,7 @@ layout <span class="token boolean">false</span>
 <h3 id="5-卸载Unity"><a href="#5-卸载Unity" class="headerlink" title="5. 卸载Unity"></a>5. 卸载Unity</h3><p><code>apt remove unity</code></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>misc</category>
       </categories>
       <tags>
@@ -7515,7 +7439,7 @@ layout <span class="token boolean">false</span>
   <entry>
     <title>Ruby 琐记二</title>
     <url>/2016/03/21/ruby02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1、单例类"><a href="#1、单例类" class="headerlink" title="1、单例类"></a>1、单例类</h3><p>单例类这个概念存在于很多编程语言中,包括Java,其基本要求有:</p>
+    <content><![CDATA[<h3 id="1、单例类"><a href="#1、单例类" class="headerlink" title="1、单例类"></a>1、单例类</h3><p>单例类这个概念存在于很多编程语言中,包括Java,其基本要求有:</p>
 <ul>
 <li>1、单例类只能有一个实例</li>
 <li>2、单例类必须自己创建自己的唯一实例</li>
@@ -7633,7 +7557,8 @@ nil
 <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">5</span>           <span class="token operator">=></span>   <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
+        <category>cs</category>
       </categories>
       <tags>
         <tag>programming language</tag>
@@ -7828,7 +7753,7 @@ nil
   <entry>
     <title>Windows 琐记一</title>
     <url>/2015/08/03/windows01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-Word中字体大小与磅值对应关系"><a href="#1-Word中字体大小与磅值对应关系" class="headerlink" title="1. Word中字体大小与磅值对应关系"></a>1. Word中字体大小与磅值对应关系</h3><p>字号”八号”对应磅值5<br>字号”七号”对应磅值5.5<br>字号”小六”对应磅值6.5<br>字号”六号”对应磅值7.5<br>字号”小五”对应磅值9<br>字号”五号”对应磅值10.5<br>字号”小四”对应磅值12<br>字号”四号”对应磅值14<br>字号”小三”对应磅值15<br>字号”三号”对应磅值16<br>字号”小二”对应磅值18<br>字号”二号”对应磅值22<br>字号”小一”对应磅值24<br>字号”一号”对应磅值26<br>字号”小初”对应磅值36<br>字号”初号”对应磅值42</p>
+    <content><![CDATA[<h3 id="1-Word中字体大小与磅值对应关系"><a href="#1-Word中字体大小与磅值对应关系" class="headerlink" title="1. Word中字体大小与磅值对应关系"></a>1. Word中字体大小与磅值对应关系</h3><p>字号”八号”对应磅值5<br>字号”七号”对应磅值5.5<br>字号”小六”对应磅值6.5<br>字号”六号”对应磅值7.5<br>字号”小五”对应磅值9<br>字号”五号”对应磅值10.5<br>字号”小四”对应磅值12<br>字号”四号”对应磅值14<br>字号”小三”对应磅值15<br>字号”三号”对应磅值16<br>字号”小二”对应磅值18<br>字号”二号”对应磅值22<br>字号”小一”对应磅值24<br>字号”一号”对应磅值26<br>字号”小初”对应磅值36<br>字号”初号”对应磅值42</p>
 <span id="more"></span>
 <h3 id="2-比较文件命令"><a href="#2-比较文件命令" class="headerlink" title="2. 比较文件命令"></a>2. 比较文件命令</h3><p>本想用windows自带的fc命令,却发现只可以比较两文件无法比较文件夹,于是加上自己用的cmder自带很多linux命令(其实应该是msysgit带的),于是考虑使用diff命令, 用-r选项即可<br><code>diff -r &#39;E:\Amusement\music\&#39; &#39;F:\Recreation\Music\&#39;</code></p>
 <h3 id="3-markdown文件中加入html代码"><a href="#3-markdown文件中加入html代码" class="headerlink" title="3. markdown文件中加入html代码"></a>3. markdown文件中加入html代码</h3><p>例如加上<code>&lt;p align=&quot;center&quot;&gt;Test&lt;/p&gt;</code>，则必须在后面加一空行，否则不会输出理想结果，原因暂时未知。</p>
@@ -7837,7 +7762,7 @@ nil
 <h3 id="6-Windows-录音"><a href="#6-Windows-录音" class="headerlink" title="6. Windows 录音"></a>6. Windows 录音</h3><p>命令行输入<code>soundrecorder /file outputfile.wav</code></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>misc</category>
       </categories>
       <tags>
@@ -7848,7 +7773,7 @@ nil
   <entry>
     <title>安装Ubuntu 15.04之后</title>
     <url>/2015/05/26/ubuntu01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>重装了系统, 不小心点错了键盘, 用户名设置错了, 再折腾一下其他东西又是一晚上, 幸亏以前用过Ubuntu, 还有点印象，重装前Kali也算是和Ubuntu同源的，都来自Debian，所以没有走太多弯路。</p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>重装了系统, 不小心点错了键盘, 用户名设置错了, 再折腾一下其他东西又是一晚上, 幸亏以前用过Ubuntu, 还有点印象，重装前Kali也算是和Ubuntu同源的，都来自Debian，所以没有走太多弯路。</p>
 <span id="more"></span>
 <h3 id="1-SourceList"><a href="#1-SourceList" class="headerlink" title="1. SourceList"></a>1. SourceList</h3><pre class="line-numbers language-none"><code class="language-none">### Aliyun
 # deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; vivid main restricted universe multiverse
@@ -7958,7 +7883,7 @@ tty -s && mesg n
 <h3 id="14-Codeblocks"><a href="#14-Codeblocks" class="headerlink" title="14. Codeblocks"></a>14. Codeblocks</h3><h3 id="15-irc-命令行工具"><a href="#15-irc-命令行工具" class="headerlink" title="15. irc 命令行工具"></a>15. irc 命令行工具</h3><p>irssi<br>weechat</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>misc</category>
       </categories>
       <tags>
@@ -7969,7 +7894,7 @@ tty -s && mesg n
   <entry>
     <title>RESTful推送与异步通信</title>
     <url>/2016/05/20/web02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-服务器-浏览器通信技术"><a href="#1-服务器-浏览器通信技术" class="headerlink" title="1. 服务器-浏览器通信技术"></a>1. 服务器-浏览器通信技术</h3><p>服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP&#x2F;IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通信协议, 每一次请求-响应都是基于一个新建立的HTTP的连接, 这就是使服务器主动通知浏览器成为一个难点. 这是因为在基于请求-响应的模式下, 服务器的角色是主动应答, 无法主动通知浏览器; 另一个原因是每次请求后HTTP连接断开, 服务器无法再获取客户端的地址, 也就无法将通知发送给浏览器端</p>
+    <content><![CDATA[<h3 id="1-服务器-浏览器通信技术"><a href="#1-服务器-浏览器通信技术" class="headerlink" title="1. 服务器-浏览器通信技术"></a>1. 服务器-浏览器通信技术</h3><p>服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP&#x2F;IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通信协议, 每一次请求-响应都是基于一个新建立的HTTP的连接, 这就是使服务器主动通知浏览器成为一个难点. 这是因为在基于请求-响应的模式下, 服务器的角色是主动应答, 无法主动通知浏览器; 另一个原因是每次请求后HTTP连接断开, 服务器无法再获取客户端的地址, 也就无法将通知发送给浏览器端</p>
 <span id="more"></span>
 <h4 id="1-1-Polling-客户端轮询-技术"><a href="#1-1-Polling-客户端轮询-技术" class="headerlink" title="1.1 Polling(客户端轮询) 技术"></a>1.1 Polling(客户端轮询) 技术</h4><p>即浏览器周期性地主动访问服务器的特定地址, 以获取服务器端数据状态的变化<br>优点: </p>
 <ul>
@@ -7994,7 +7919,7 @@ tty -s && mesg n
 <h4 id="3-4-HTML5异步通信"><a href="#3-4-HTML5异步通信" class="headerlink" title="3.4 HTML5异步通信"></a>3.4 HTML5异步通信</h4><p>包含SSE和Web Socket, 均有处理异步通信的能力</p>
 <h3 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h3><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline; vertical-align: top; margin-left: 10px;"><a href="https://book.douban.com/subject/26022847/">Mastering Web Application Development with AngularJS</a><a href="#fnref:1" rev="footnote">↩</a></span></li></ol></div></div>]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -8158,11 +8083,11 @@ tty -s && mesg n
   <entry>
     <title>前端相关</title>
     <url>/2015/07/25/web01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-响应式网页图标"><a href="#1-响应式网页图标" class="headerlink" title="1. 响应式网页图标"></a>1. 响应式网页图标</h3><p><a href="http://www.gbtags.com/gb/share/2774.htm">http://www.gbtags.com/gb/share/2774.htm</a><br><a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a></p>
+    <content><![CDATA[<h3 id="1-响应式网页图标"><a href="#1-响应式网页图标" class="headerlink" title="1. 响应式网页图标"></a>1. 响应式网页图标</h3><p><a href="http://www.gbtags.com/gb/share/2774.htm">http://www.gbtags.com/gb/share/2774.htm</a><br><a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a></p>
 <h3 id="2-html编码"><a href="#2-html编码" class="headerlink" title="2. html编码"></a>2. html编码</h3><p>Ascii编码见<a href="http://www.w3chtml.com/html/ref/ascii.html">这里</a><br>Unicode编码太多, 可网上找工具转换<br>例如”你好”可以Unicode编码为<code>\u4f60\u597d</code></p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -8174,7 +8099,7 @@ tty -s && mesg n
   <entry>
     <title>Windows 琐记三</title>
     <url>/2016/03/15/windows03/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-cmd下设置字符集"><a href="#1-cmd下设置字符集" class="headerlink" title="1. cmd下设置字符集"></a>1. cmd下设置字符集</h3><pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">chcp 437     &#x2F;&#x2F; set english       environment
+    <content><![CDATA[<h3 id="1-cmd下设置字符集"><a href="#1-cmd下设置字符集" class="headerlink" title="1. cmd下设置字符集"></a>1. cmd下设置字符集</h3><pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">chcp 437     &#x2F;&#x2F; set english       environment
 chcp 932     &#x2F;&#x2F; set japanese      environment
 chcp 936     &#x2F;&#x2F; set chinese(sim)  environment
 chcp 949     &#x2F;&#x2F; set chinese(tra)  environment
@@ -8183,7 +8108,7 @@ chcp 65001   &#x2F;&#x2F; set utf-8         environment<span aria-hidden="true" 
 <p>改成437后可以解决一些乱码问题, 奇怪的是明明装的是英文系统竟然默认是936</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>misc</category>
       </categories>
       <tags>
@@ -8195,7 +8120,7 @@ chcp 65001   &#x2F;&#x2F; set utf-8         environment<span aria-hidden="true" 
   <entry>
     <title>Windows 琐记二</title>
     <url>/2015/09/14/windows02/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-修复U盘"><a href="#1-修复U盘" class="headerlink" title="1. 修复U盘"></a>1. 修复U盘</h3><p>以前用U盘制作Linux启动盘时，制作之后windows下都无法读取了，必须格式化，而格式化之后的U盘容量骤减为几M……磁盘管理里查看直接显示为黑色区域，估计是某些分区读不出来，搜了下解决方法：<br>先输入命令diskpart，之后：<br><img src="/images/repairUdisk.png" alt="repairUdisk"></p>
+    <content><![CDATA[<h3 id="1-修复U盘"><a href="#1-修复U盘" class="headerlink" title="1. 修复U盘"></a>1. 修复U盘</h3><p>以前用U盘制作Linux启动盘时，制作之后windows下都无法读取了，必须格式化，而格式化之后的U盘容量骤减为几M……磁盘管理里查看直接显示为黑色区域，估计是某些分区读不出来，搜了下解决方法：<br>先输入命令diskpart，之后：<br><img src="/images/repairUdisk.png" alt="repairUdisk"></p>
 <p>即</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">diskpart
 list disk
@@ -8218,7 +8143,7 @@ exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <p>之后将iso镜像解压至u盘即可</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>misc</category>
       </categories>
       <tags>
@@ -9053,7 +8978,7 @@ exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
   <entry>
     <title>机器学习五</title>
     <url>/2015/08/29/machineLearning05/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="1-支持向量机-Support-Vector-Machines"><a href="#1-支持向量机-Support-Vector-Machines" class="headerlink" title="1. 支持向量机(Support Vector Machines)"></a>1. 支持向量机(Support Vector Machines)</h3><p>SVM有很多实现，最流行的一种实现是序列最小优化(Sequential Minimal Optimization)算法<br>可以使用核函数(kernel)的方式将SVM扩展到更多数据集上<br>SVM的优缺点:</p>
+    <content><![CDATA[<h3 id="1-支持向量机-Support-Vector-Machines"><a href="#1-支持向量机-Support-Vector-Machines" class="headerlink" title="1. 支持向量机(Support Vector Machines)"></a>1. 支持向量机(Support Vector Machines)</h3><p>SVM有很多实现，最流行的一种实现是序列最小优化(Sequential Minimal Optimization)算法<br>可以使用核函数(kernel)的方式将SVM扩展到更多数据集上<br>SVM的优缺点:</p>
 <ul>
 <li>优点：泛化错误率低，计算开销不大，结果易解释</li>
 <li>缺点：对参数调节和核函数的选择敏感，原始分类器不加修改仅适用于处理二类问题</li>
@@ -9384,7 +9309,7 @@ exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <p>《机器学习实战》一书中，作者使用不同的σ值，并尝试了线性核函数，得到的结果是：<br><img src="/images/machineLearning05_9.png" alt="nineth"><br>表中结果表明，径向基函数中的参数\(\sigma&#x3D;10\)左右时，可以得到最小测试错误率，该参数值比前面例子中的取值1.3大得多，这些差距是由于数据不同造成的，手写识别的数据中有1024个特征，而这些特征的值可能高达1.0，而前面的例子中只有2个特征。如何取值呢?多次尝试可以得到比较好的结果，C的设置也会影响到分类的结果。<br>当然存在另外的SVM形式，把C同时考虑进了优化过程中，例如v-SVM，这里可以参考Sergios Theodoridis和Konstantinos Koutroumbas撰写的Pattern Recognition。<br>我们还会发现，最小的训练错误率并不对应于最小的支持向量数目，另一个值得注意的点是：线性核函数的效果并不是特别差，可以牺牲线性核函数的错误率来提高分类速度，</p>
 ]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>ai</category>
       </categories>
       <tags>
@@ -11671,7 +11596,7 @@ fmt<span class="token punctuation">.</span><span class="token function">Println<
 
 <h2 id="Footnote"><a href="#Footnote" class="headerlink" title="Footnote"></a>Footnote</h2><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Kawasaki, Tamaki. <em>Emoji（表情符号）是如何诞生并在全世界普及的？</em>. 12 Aug. 2018, www.gov-online.go.jp/eng/publicity/book/hlj/html/201808/201808_12_ch.html.<a href="#fnref:1" rev="footnote">↩</a></span></li><li id="fn:2"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “World Emoji Day.” <em>Wikipedia</em>, Wikimedia Foundation, 10 Aug. 2020, en.wikipedia.org/wiki/World_Emoji_Day.<a href="#fnref:2" rev="footnote">↩</a></span></li><li id="fn:3"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">池昌海 . “语言学概论.” 浙江大学-远程教育学院, 16 Dec. 2010, 218.108.57.198/yyxgl1/.<a href="#fnref:3" rev="footnote">↩</a></span></li><li id="fn:4"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">李玲璞. &quot;汉字学元点理论及相关问题——兼谈汉字认知的若干误区.&quot; 中国文字研究 (2004).<a href="#fnref:4" rev="footnote">↩</a></span></li><li id="fn:5"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “Character Encoding.” Wikipedia, Wikimedia Foundation, 25 Aug. 2020, en.wikipedia.org/wiki/Character_encoding.<a href="#fnref:5" rev="footnote">↩</a></span></li><li id="fn:6"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Tero, Paul. “Unicode, UTF8 &amp; Character Sets: The Ultimate Guide.” Smashing Magazine, 6 June 2012, www.smashingmagazine.com/2012/06/all-about-unicode-utf8-character-sets/.<a href="#fnref:6" rev="footnote">↩</a></span></li><li id="fn:7"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “Plane (Unicode).” <em>Wikipedia</em>, Wikimedia Foundation, 28 Aug. 2020, en.wikipedia.org/wiki/Plane_(Unicode).<a href="#fnref:7" rev="footnote">↩</a></span></li><li id="fn:8"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Unkown. “Unicode Character Table.” ✔️ ❤️ ★ Unicode Character Table, 6 Sept. 2020, unicode-table.com/en/.<a href="#fnref:8" rev="footnote">↩</a></span></li><li id="fn:9"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">9.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">timwhitlock. “Unicode Character Inspector.” <em>apps.timwhitlock.info</em>, 6 Sept. 2020, apps.timwhitlock.info/unicode/inspect.<a href="#fnref:9" rev="footnote">↩</a></span></li><li id="fn:10"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">10.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">纤夫张 . “其实你并不懂 Unicode.” 知乎专栏, 31 Dec. 2018, zhuanlan.zhihu.com/p/53714077.<a href="#fnref:10" rev="footnote">↩</a></span></li><li id="fn:11"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">11.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “UTF-8.” Wikipedia, Wikimedia Foundation, 5 Sept. 2020, en.wikipedia.org/wiki/UTF-8.<a href="#fnref:11" rev="footnote">↩</a></span></li><li id="fn:12"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">12.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">F. Yergeau. “UTF-8, a Transformation Format of ISO 10646.” IETF Tools, 1 Nov. 2003, tools.ietf.org/html/rfc3629.<a href="#fnref:12" rev="footnote">↩</a></span></li><li id="fn:13"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">13.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Cohen, Danny. “ON HOLY WARS AND A PLEA FOR PEACE.” IETF, 1 Apr. 1980, www.ietf.org/rfc/ien/ien137.txt.<a href="#fnref:13" rev="footnote">↩</a></span></li><li id="fn:14"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">14.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “字节序.” Wikipedia, Wikimedia Foundation, 18 Aug. 2020, zh.wikipedia.org/wiki/字节序.<a href="#fnref:14" rev="footnote">↩</a></span></li><li id="fn:15"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">15.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Unicode. “Glossary of Unicode Terms.” Glossary, 21 May 2020, unicode.org/glossary/.<a href="#fnref:15" rev="footnote">↩</a></span></li><li id="fn:16"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">16.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “位元組順序記號.” Wikipedia, Wikimedia Foundation, 30 June 2020, zh.wikipedia.org/wiki/位元組順序記號.<a href="#fnref:16" rev="footnote">↩</a></span></li><li id="fn:17"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">17.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">infocodez. “【转载】随便说说字符集和编码.” 博客园, 27 Sept. 2017, www.cnblogs.com/infocodez/p/7600459.html.<a href="#fnref:17" rev="footnote">↩</a></span></li><li id="fn:18"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">18.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “Unicode控制字符.” Wikipedia, Wikimedia Foundation, 28 July 2020, zh.wikipedia.org/wiki/Unicode控制字符.<a href="#fnref:18" rev="footnote">↩</a></span></li><li id="fn:19"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">19.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “異體字選擇器.” Wikipedia, Wikimedia Foundation, 4 Sept. 2020, zh.wikipedia.org/wiki/異體字選擇器.<a href="#fnref:19" rev="footnote">↩</a></span></li><li id="fn:20"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">20.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “組合字符.” Wikipedia, Wikimedia Foundation, 30 May 2019, zh.wikipedia.org/wiki/組合字符.<a href="#fnref:20" rev="footnote">↩</a></span></li><li id="fn:21"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">21.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Zachary. “Emoji与Unicode.” Emoji与Unicode · Zablog, 18 Sept. 2017, zablog.me/2017/09/18/emoji/.<a href="#fnref:21" rev="footnote">↩</a></span></li><li id="fn:22"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">22.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “Unicode Equivalence.” Wikipedia, Wikimedia Foundation, 7 Aug. 2020, en.wikipedia.org/wiki/Unicode_equivalence.<a href="#fnref:22" rev="footnote">↩</a></span></li><li id="fn:23"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">23.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">deerchao. “基本修养：字符集与编码.” 超越代码, 12 Sept. 2019, deerchao.cn/blog/posts/unicode.html.<a href="#fnref:23" rev="footnote">↩</a></span></li><li id="fn:24"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">24.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">vstinner. “Programming with Unicode.” 4. Unicode - Programming with Unicode, 23 June 2017, unicodebook.readthedocs.io/unicode.html.<a href="#fnref:24" rev="footnote">↩</a></span></li><li id="fn:25"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">25.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “UTF-8.” Wikipedia, Wikimedia Foundation, 20 Aug. 2020, zh.wikipedia.org/wiki/UTF-8.<a href="#fnref:25" rev="footnote">↩</a></span></li><li id="fn:26"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">26.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Cenalulu(卢钧轶) . “十分钟搞清字符集和字符编码.” Cenalulu's Tech Blog, 25 Jan. 2015, cenalulu.github.io/linux/character-encoding/.<a href="#fnref:26" rev="footnote">↩</a></span></li><li id="fn:27"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">27.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Wikipedians. “Unicode Font.” Wikipedia, Wikimedia Foundation, 13 July 2020, en.wikipedia.org/wiki/Unicode_font.<a href="#fnref:27" rev="footnote">↩</a></span></li><li id="fn:28"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">28.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">DrStrangeLove. “How Are Character Encodings Related to Fonts?” Super User, 15 Nov. 2011, superuser.com/questions/357530/how-are-character-encodings-related-to-fonts.<a href="#fnref:28" rev="footnote">↩</a></span></li><li id="fn:29"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">29.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Belleve. “字符编码与字体的关系是什么？.” 知乎, 27 Apr. 2015, www.zhihu.com/question/29924586.<a href="#fnref:29" rev="footnote">↩</a></span></li><li id="fn:30"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">30.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Davis, Mark, and Christopher Chapman. Unicode Text Segmentation. 19 Feb. 2020, unicode.org/reports/tr29/.<a href="#fnref:30" rev="footnote">↩</a></span></li><li id="fn:31"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">31.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Pike, R. (2013, October 23). Strings, bytes, runes and characters in Go. Retrieved September 19, 2020, from https://blog.golang.org/strings<a href="#fnref:31" rev="footnote">↩</a></span></li><li id="fn:32"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">32.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Unicode Consortium. (2020, September 19). Characters and Combining Marks. Retrieved September 19, 2020, from http://unicode.org/faq/char_combmark.html<a href="#fnref:32" rev="footnote">↩</a></span></li><li id="fn:33"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">33.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Hosken, M., &amp; Gaultney, V. (2003, September 5). Guidelines for Writing System Support: Technical Details: Smart Rendering: Part 1. Retrieved September 20, 2020, from https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi<a href="#fnref:33" rev="footnote">↩</a></span></li><li id="fn:34"><span style="display: inline; vertical-align: top; padding-right: 10px; margin-left: -40px">34.</span><span style="display: inline; vertical-align: top; margin-left: 10px;">Unicode Consortium. (2002, October 28). A General Method for Rendering Combining Marks. Retrieved September 20, 2020, from http://www.unicode.org/notes/tn2/<a href="#fnref:34" rev="footnote">↩</a></span></li></ol></div></div>]]></content>
       <categories>
-        <category>techonology</category>
+        <category>technology</category>
         <category>cs</category>
       </categories>
       <tags>
@@ -12484,6 +12409,51 @@ int main() &#123;
       </categories>
       <tags>
         <tag>operating system</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>以禅之名(In the Name of Zen)其一 —— 序言篇</title>
+    <url>/2022/05/04/inTheNameOfZen01/</url>
+    <content><![CDATA[<div class="note green icon modern"><i class="note-icon fas fa-cube"></i><p>The unexamined life is not worth living. —— Socrates</p>
+</div>
+
+<h2 id="一、楔子"><a href="#一、楔子" class="headerlink" title="一、楔子"></a>一、楔子</h2><p>苏格拉底曾说：“未经审视的人生是不值得过的”。Kino倒不完全赞同，如果一个人能够不需要审视自己的人生、不需要思考人生是否值得，就顺利地度过了一生，哲学家眼中仅此而已的活着，其实已经是超越大多数人的幸运了。如果一个社会，大多数人都可以如此度过一生，那必然是盛世才有的光景。可惜的是，这样的幸运在历史长河中，又能有多久呢？我甚至怀疑，千万年的历史长河中，真的有一人曾如此幸运过吗？总是有一些突如其来的事件，闯入你的生活，逼迫你去思考：“我是谁？我从哪里来？要到哪里去？”只是大多数情况，我们求而不得，便在事件淡去之后，又重投红尘，罢了罢了，何须思考，还是随着社会的大浪潮，读书、工作、恋爱、结婚、生子、死亡。随波逐流总是轻松的，思考才是最深刻的痛苦，“人生如果不想随波逐流，就等于是场豪赌，失败的人不胜枚举，成功的人寥寥无几”。大多数人总是会有一瞬的审视人生，但如果在此基础上加一个修饰语“持续”，情愿去持续审视自我人生的，究竟是哲学家还是疯子呢？</p>
+<p>并不意外，Kino也曾间歇性地思考“人生的意义”究竟是什么，但也总是浅尝辄止，直到多年前经历过一些事之后，在反反复复地内心冲突之后，最终选择了反思，如顿悟一般，持续地开始思考“人生的意义”，阅读了一堆社科书籍之后，问了自己十万个为什么之后，终于给了自己一个回答，而这份回答，虽不敢说是标准答案，却依然想要输出呈现，若各位看客读过之后，能从中有所收获，自是最好不过，若只是浪费了时间，还请多多体谅。</p>
+<p>不过输出的冲动，转化为实际的行动，又是另一回事了，知难行易才是现实。冲动是一直存在的，可相关的话题如此宏大，随便写上几千字倒不是问题，但完美主义者又总是幻想系统化的输出，如何构建这个系统，每个部分的内容、目录，甚至是整个系列的标题，这些都怎么去定，想不明白的话，是无法下笔的。但是有些事，总是要先开始做，才能被迫前进，不能等到被困乞力马扎罗濒死之时，才开始如此追忆：<mark class="hl-label blue">那些积攒下来的，想留到更有把握时再写的东西，现在再也无法写下来了。也不用忍受写作的挫败了。也许你根本就不会把它们写出来，这就是为什么你要把它们扔在一边，迟迟不肯动笔。但现在，他永远都不会知道答案了。</mark> </p>
+<p>既然已经决定了去做，按照一个程序猿的思维，首先最重要的就是命名了。So，为何选在了“以禅之名”作为系列文章的标题？何又为“禅”？“禅”虽源自禅宗，但在此并不包含禅宗的任何文化、思想、修行等，Kino只是借用“禅”来指代一切真理，在《道德经》中是老子追求的“道”，在《禅与摩托车维修艺术》中，是波西格(Pirsig)追求的“良质(Quality)”，在《悉达多》中，是悉达多追寻一生的“阿特曼(Atman)”。因此，“以禅之名”系列，不过是一根会思考的芦苇，借用了“禅”的名义，来探讨自我追寻之路中的些许所思所想，仅此而已。</p>
+<h2 id="二、概述"><a href="#二、概述" class="headerlink" title="二、概述"></a>二、概述</h2><p>这里Kino想先简单介绍下“以禅之名”会涉及的基本内容，这些内容间的内在逻辑又是什么？</p>
+<p>首先，要强调的一点是，虽然“以禅之名”听起来似乎是哲学乃至玄学，但不同于常见的哲学思辨、宗教信仰作品，Kino想做的是依靠逻辑思辨、理性推导，从底层开始逐步构建出上层结构，再基于构建的体系，讨论对一些具体的哲学概念、社会结构的看法。</p>
+<p>那么，从底层开始构建，这个底层元素究竟是什么呢？这里选取的是“基因”，基于自我复制的能力和系统的涌现(Emergence)，演化出来了更高层的生命，再经过自然选择，逐步演化，最终出现了一种独特的生命存在，那就是人类。人类虽然超越了其他生命的存在，可以思考人生，可以反思自我，但同时人类仍然不过是一种生命形式，在统计学意义上人类的部分本性永不改变。人类的诸多个体，在这种人性的指引下，又基于生存的需要，最终以血缘关系、社会契约等为纽带，开始构建早期的社会群体，而正如历史告诉我们的，随着时间的流逝，社会形态也在逐步演化，从氏族到国家，国家也在不断地进化，甚至于共产主义开始讨论的是阶级消灭，则国家不存在。除却国家的组织形式之外，现代社会充满了各种组织形式，同时又因为互联网的发展，网络上又涌现出了很多信息时代才有的新现象，这些背后的本质还是人性和系统的涌现。而当个体置身于这种大时代之中时，如何在社会机器和自我追求中平衡，如何妥善地处理人生意义感的缺失，这些都会在系列文章中，穿插涉及。</p>
+<p>总结一下，就是“始于自私的基因，显为人性的弱点，终成社会性动物”。以此作为分析的基本框架，在此框架基础上，再额外拓展去考虑基因以下的更底层的元素，去见识一下宇宙的广袤。同时，再尝试用“基因-&gt;个体-&gt;群体”的基础框架去推演当今个体与社会的部分现象。希望所有人都能够视野彻底放开，不再局限于自身的爱与恨，不再沉溺于痛苦与烦恼，有“一切有为法，如梦幻泡影”的豁达，能够享受人生、感受快乐。</p>
+<h2 id="三、目录"><a href="#三、目录" class="headerlink" title="三、目录"></a>三、目录</h2><p><img src="/images/in_the_name_of_zen/itnoz01_01.png" alt="content"></p>
+<h2 id="四、推荐"><a href="#四、推荐" class="headerlink" title="四、推荐"></a>四、推荐</h2><p>阅读不是为了逃避，而是为了找到自我。So，如果你也在寻找自我、寻找意义，但又不想看阅读太多的话，Kino觉得可以先读以下几本书尝试一下：</p>
+<ul>
+<li>自私的基因</li>
+<li>社会性动物</li>
+<li>社会契约论</li>
+</ul>
+]]></content>
+      <categories>
+        <category>philosophy</category>
+        <category>zen</category>
+      </categories>
+      <tags>
+        <tag>philosophy</tag>
+        <tag>zen</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Plan &amp; Schedule</title>
+    <url>/2017/08/29/planAndSchedule/</url>
+    <content><![CDATA[<p><img src="/images/planAndSchedule.svg" alt="plan&amp;schedule"></p>
+]]></content>
+      <categories>
+        <category>life</category>
+        <category>love</category>
+      </categories>
+      <tags>
+        <tag>breakup</tag>
+        <tag>schedule</tag>
       </tags>
   </entry>
 </search>
