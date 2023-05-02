@@ -20,6 +20,15 @@
   </url>
   
   <url>
+    <loc>https://blog.xuwei.fun/2020/11/22/csFromZeroToOne01/</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/about/index.html</loc>
     
     <lastmod>2022-05-04</lastmod>
@@ -110,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2015/11/19/algorithm07/</loc>
+    <loc>https://blog.xuwei.fun/2015/11/17/algorithm06/</loc>
     
     <lastmod>2022-05-04</lastmod>
     
@@ -119,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2015/11/17/algorithm06/</loc>
+    <loc>https://blog.xuwei.fun/2015/11/19/algorithm07/</loc>
     
     <lastmod>2022-05-04</lastmod>
     
@@ -272,15 +281,6 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2015/09/12/electronicDesign02/</loc>
-    
-    <lastmod>2022-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.xuwei.fun/2017/11/12/haskell01/</loc>
     
     <lastmod>2022-05-04</lastmod>
@@ -299,7 +299,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2015/06/06/linux01/</loc>
+    <loc>https://blog.xuwei.fun/2015/09/12/electronicDesign02/</loc>
     
     <lastmod>2022-05-04</lastmod>
     
@@ -309,6 +309,15 @@
   
   <url>
     <loc>https://blog.xuwei.fun/2015/02/25/javascript01/</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/06/06/linux01/</loc>
     
     <lastmod>2022-05-04</lastmod>
     
@@ -416,7 +425,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/</loc>
+    <loc>https://blog.xuwei.fun/2015/08/19/machineLearning03/</loc>
     
     <lastmod>2022-05-04</lastmod>
     
@@ -425,7 +434,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2015/08/19/machineLearning03/</loc>
+    <loc>https://blog.xuwei.fun/2018/11/19/metaheuristicAlgorithm01/</loc>
     
     <lastmod>2022-05-04</lastmod>
     
@@ -515,6 +524,15 @@
   </url>
   
   <url>
+    <loc>https://blog.xuwei.fun/2016/03/07/rubyOnRails01/</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/2016/01/01/ruby01/</loc>
     
     <lastmod>2022-05-04</lastmod>
@@ -533,15 +551,6 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2016/03/07/rubyOnRails01/</loc>
-    
-    <lastmod>2022-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.xuwei.fun/2015/07/25/web01/</loc>
     
     <lastmod>2022-05-04</lastmod>
@@ -551,25 +560,16 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/2017/11/19/ubuntu02/</loc>
-    
-    <lastmod>2022-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2015/08/03/windows01/</loc>
-    
-    <lastmod>2022-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.xuwei.fun/2015/05/26/ubuntu01/</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2017/11/19/ubuntu02/</loc>
     
     <lastmod>2022-05-04</lastmod>
     
@@ -588,6 +588,15 @@
   
   <url>
     <loc>https://blog.xuwei.fun/2016/03/15/windows03/</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/2015/08/03/windows01/</loc>
     
     <lastmod>2022-05-04</lastmod>
     
@@ -680,15 +689,6 @@
     <loc>https://blog.xuwei.fun/2021/10/08/derivatives05/</loc>
     
     <lastmod>2022-02-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/2020/11/22/csFromZeroToOne01/</loc>
-    
-    <lastmod>2021-03-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1233,6 +1233,20 @@
   </url>
   
   <url>
+    <loc>https://blog.xuwei.fun/tags/simhash/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/minhash/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/tags/HDU/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1248,34 +1262,6 @@
   
   <url>
     <loc>https://blog.xuwei.fun/tags/eightpuzzle/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/simhash/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/minhash/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/graph/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/union-find/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1303,7 +1289,49 @@
   </url>
   
   <url>
+    <loc>https://blog.xuwei.fun/tags/union-find/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/graph/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/finance/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/payment/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/money/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/tags/android/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/tabhost/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1345,7 +1373,14 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/tabhost/</loc>
+    <loc>https://blog.xuwei.fun/tags/favorite/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/books/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1373,6 +1408,13 @@
   </url>
   
   <url>
+    <loc>https://blog.xuwei.fun/tags/codewarrior/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/tags/c/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1394,7 +1436,21 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/breakup/</loc>
+    <loc>https://blog.xuwei.fun/tags/character-set/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/encode/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/emoji/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1415,14 +1471,21 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/codewarrior/</loc>
+    <loc>https://blog.xuwei.fun/tags/math/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/math/</loc>
+    <loc>https://blog.xuwei.fun/tags/fourier/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/window-function/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1457,27 +1520,6 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/fourier/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/window-function/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/finance/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.xuwei.fun/tags/invest/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1493,13 +1535,6 @@
   
   <url>
     <loc>https://blog.xuwei.fun/tags/forward/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/swap/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1541,6 +1576,13 @@
   </url>
   
   <url>
+    <loc>https://blog.xuwei.fun/tags/swap/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/tags/electronic/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1555,14 +1597,14 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/EDA/</loc>
+    <loc>https://blog.xuwei.fun/tags/haskell/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/haskell/</loc>
+    <loc>https://blog.xuwei.fun/tags/game-theory/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1597,7 +1639,21 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/game-theory/</loc>
+    <loc>https://blog.xuwei.fun/tags/EDA/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/philosophy/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/zen/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1632,14 +1688,14 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/linux/</loc>
+    <loc>https://blog.xuwei.fun/tags/javaScript/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/javaScript/</loc>
+    <loc>https://blog.xuwei.fun/tags/linux/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1702,13 +1758,6 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/metaheuristic/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.xuwei.fun/tags/bayes-decision/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1723,7 +1772,14 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/server/</loc>
+    <loc>https://blog.xuwei.fun/tags/SVM/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/metaheuristic/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1745,6 +1801,13 @@
   
   <url>
     <loc>https://blog.xuwei.fun/tags/foobar2000/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/server/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1786,6 +1849,13 @@
   </url>
   
   <url>
+    <loc>https://blog.xuwei.fun/tags/python/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/tags/sql/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1807,7 +1877,14 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/python/</loc>
+    <loc>https://blog.xuwei.fun/tags/breakup/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/schedule/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1815,6 +1892,13 @@
   
   <url>
     <loc>https://blog.xuwei.fun/tags/raspberrypi/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/dns/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1835,21 +1919,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/%E6%A2%81%E6%BC%B1%E6%BA%9F/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/%E8%88%92%E5%A9%B7/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/dns/</loc>
+    <loc>https://blog.xuwei.fun/tags/drama/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1863,21 +1933,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/drama/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/%E7%BD%AA%E4%B8%8E%E7%BD%9A/</loc>
+    <loc>https://blog.xuwei.fun/tags/%E6%A2%81%E6%BC%B1%E6%BA%9F/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1898,7 +1954,21 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/%E9%B2%81%E8%BF%85/</loc>
+    <loc>https://blog.xuwei.fun/tags/%E8%88%92%E5%A9%B7/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/%E7%BD%AA%E4%B8%8E%E7%BD%9A/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1912,21 +1982,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/%E6%AF%9B%E6%B3%BD%E4%B8%9C/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/proxy/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/shadowsocks/</loc>
+    <loc>https://blog.xuwei.fun/tags/%E9%B2%81%E8%BF%85/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1954,7 +2010,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/ubuntu/</loc>
+    <loc>https://blog.xuwei.fun/tags/%E6%AF%9B%E6%B3%BD%E4%B8%9C/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1968,14 +2024,21 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/windows/</loc>
+    <loc>https://blog.xuwei.fun/tags/ubuntu/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/tags/skills/</loc>
+    <loc>https://blog.xuwei.fun/tags/proxy/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/shadowsocks/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1983,20 +2046,6 @@
   
   <url>
     <loc>https://blog.xuwei.fun/tags/web/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/communicate/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/documentary/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2017,6 +2066,27 @@
   </url>
   
   <url>
+    <loc>https://blog.xuwei.fun/tags/documentary/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/communicate/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/tags/windows/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/tags/cmd/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -2031,125 +2101,20 @@
   </url>
   
   <url>
+    <loc>https://blog.xuwei.fun/tags/skills/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/tags/udisk/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://blog.xuwei.fun/tags/favorite/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/books/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/SVM/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/character-set/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/encode/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/emoji/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/philosophy/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/zen/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/schedule/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/payment/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/tags/money/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/life/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/life/love/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/science/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/science/cs/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/science/math/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
   <url>
     <loc>https://blog.xuwei.fun/categories/technology/</loc>
@@ -2159,7 +2124,21 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/categories/humanities/</loc>
+    <loc>https://blog.xuwei.fun/categories/technology/cs/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/categories/life/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/categories/technology/ai/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2173,14 +2152,49 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/categories/life/work/</loc>
+    <loc>https://blog.xuwei.fun/categories/technology/blockchain/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/categories/humanities/languages/</loc>
+    <loc>https://blog.xuwei.fun/categories/life/reading/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/categories/science/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/categories/science/math/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/categories/science/cs/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/categories/humanities/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/categories/technology/ee/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2194,7 +2208,42 @@
   </url>
   
   <url>
+    <loc>https://blog.xuwei.fun/categories/philosophy/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/categories/life/work/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/categories/philosophy/zen/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/categories/humanities/languages/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuwei.fun/categories/life/listening/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuwei.fun/categories/technology/misc/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2222,7 +2271,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuwei.fun/categories/life/reading/</loc>
+    <loc>https://blog.xuwei.fun/categories/life/love/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2230,55 +2279,6 @@
   
   <url>
     <loc>https://blog.xuwei.fun/categories/life/watching/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/technology/cs/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/technology/ai/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/technology/blockchain/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/technology/ee/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/philosophy/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/philosophy/zen/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuwei.fun/categories/technology/misc/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
