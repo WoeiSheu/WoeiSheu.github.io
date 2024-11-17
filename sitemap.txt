@@ -1,3 +1,4 @@
+https://blog.xuwei.fun/2024/11/17/health01/
 https://blog.xuwei.fun/2024/02/25/invest01/
 https://blog.xuwei.fun/gallery/free/index.html
 https://blog.xuwei.fun/gallery/index.html
@@ -262,6 +263,9 @@ https://blog.xuwei.fun/tags/html-encoding/
 https://blog.xuwei.fun/tags/udisk/
 https://blog.xuwei.fun/tags/cmd/
 https://blog.xuwei.fun/tags/charset/
+https://blog.xuwei.fun/tags/health/
+https://blog.xuwei.fun/tags/hpv/
+https://blog.xuwei.fun/tags/cervical-cancer/
 https://blog.xuwei.fun/categories/technology/
 https://blog.xuwei.fun/categories/technology/cs/
 https://blog.xuwei.fun/categories/life/
@@ -286,3 +290,4 @@ https://blog.xuwei.fun/categories/science/ai/
 https://blog.xuwei.fun/categories/science/acadamic/
 https://blog.xuwei.fun/categories/life/love/
 https://blog.xuwei.fun/categories/life/watching/
+https://blog.xuwei.fun/categories/life/health/
