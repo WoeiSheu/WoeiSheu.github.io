@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. zip函数
+zip函数接受任意多个（包括0个和1个）序列作为参数，返回一个tuple列表
+```python
+x = [1, 2, 3]
+y = [4, 5, 6]
+z = [7, 8, 9]
+xyz = zip(x, y, z)
+print xyz
+[(1, 4, 7), (2, "><title>Python 琐记二 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-python02/"><meta property="og:title" content="Python 琐记二"><meta property="og:description" content="
+### 1. zip函数
+zip函数接受任意多个（包括0个和1个）序列作为参数，返回一个tuple列表
+```python
+x = [1, 2, 3]
+y = [4, 5, 6]
+z = [7, 8, 9]
+xyz = zip(x, y, z)
+print xyz
+[(1, 4, 7), (2, "><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-python02/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Python 琐记二"><meta name="twitter:description" content="
+### 1. zip函数
+zip函数接受任意多个（包括0个和1个）序列作为参数，返回一个tuple列表
+```python
+x = [1, 2, 3]
+y = [4, 5, 6]
+z = [7, 8, 9]
+xyz = zip(x, y, z)
+print xyz
+[(1, 4, 7), (2, "><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年7月16日</time></div><h1>Python 琐记二</h1><div class="archive-tags"><span>python</span><span>programming language</span></div></header><div class="prose"><h3>1. zip函数</h3>
+<p>zip函数接受任意多个（包括0个和1个）序列作为参数，返回一个tuple列表</p>
+<pre tabindex="0" aria-label="代码块"><code>x = [1, 2, 3]
+y = [4, 5, 6]
+z = [7, 8, 9]
+xyz = zip(x, y, z)
+print xyz
+[(1, 4, 7), (2, 5, 8), (3, 6, 9)]
+</code></pre>
+<p>&lt;!--more--&gt;</p>
+<h3>2. 写入wav files</h3>
+<p><a href="http://stackoverflow.com/questions/3637350/how-to-write-stereo-wav-files-in-python">http://stackoverflow.com/questions/3637350/how-to-write-stereo-wav-files-in-python</a></p>
+<h3>3. 矩阵转置</h3>
+<p>可以用1中的zip函数 zip(*x)
+一维数组的转置还可以</p>
+<pre tabindex="0" aria-label="代码块"><code>M=10
+k = np.array(range(M))
+k = np.matrix(k).T
+</code></pre>
+<h3>4. 复数表示</h3>
+<blockquote>
+<p>虚数i用j表示，且虚数系数是1时要在j前加上1，如 1+1j
+math.exp(1+2j)会报错，can't convert complex to float
+应使用cmath.exp(1+2j) 或者 (math.e) ** (1+2j)</p>
+</blockquote>
+<h3>5. 复数取模</h3>
+<p>自以为是math.abs 或者 cmath.abs结果发现就是abs</p>
+<h3>6. 读取二维数组的第几列</h3>
+<pre tabindex="0" aria-label="代码块"><code>s = [[1,2,3,4,5,6],[2,3,4,5,6,7],[3,4,5,6,7,8],[4,5,6,7,8,9]]
+[t[0] for t in s]  #这是第1列
+[t[1] for t in s]  #这是第2列
+
+list(zip(*s)[0])  #这是第1列
+list(zip(*s)[1])  #这是第2列
+</code></pre>
+<p>以上两种方法均可以</p>
+<h3>7. functools.partial</h3>
+<p>在map、reduce、filter里如果想传递多个参数给函数，可以查阅functools.partial的用法
+简单来说就是能使函数用更少的参数进行调用，示例如下:</p>
+<pre tabindex="0" aria-label="代码块"><code>import functools
+def add(a, b):
+    return a + b
+add(4, 2)
+6
+plus3 = functools.partial(add, 3)
+plus5 = functools.partial(add, 5)
+plus3(4)
+7
+plus3(7)
+10
+plus5(10)
+15
+</code></pre>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

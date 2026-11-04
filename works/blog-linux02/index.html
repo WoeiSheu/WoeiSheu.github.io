@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+
+### 1. dd命令
+win8.1下镜像直接点击setup.exe无效...系统要求都符合，只是我这是双系统且是BIOS引导，也不是UEFI
+想想要不制作个系统盘，Win32DiskImager制作后还是不行，转到Ubuntu使用
+`dd if=en_windows_10_multiple_e"><title>Linux琐记二 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-linux02/"><meta property="og:title" content="Linux琐记二"><meta property="og:description" content="
+
+### 1. dd命令
+win8.1下镜像直接点击setup.exe无效...系统要求都符合，只是我这是双系统且是BIOS引导，也不是UEFI
+想想要不制作个系统盘，Win32DiskImager制作后还是不行，转到Ubuntu使用
+`dd if=en_windows_10_multiple_e"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-linux02/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Linux琐记二"><meta name="twitter:description" content="
+
+### 1. dd命令
+win8.1下镜像直接点击setup.exe无效...系统要求都符合，只是我这是双系统且是BIOS引导，也不是UEFI
+想想要不制作个系统盘，Win32DiskImager制作后还是不行，转到Ubuntu使用
+`dd if=en_windows_10_multiple_e"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年8月3日</time></div><h1>Linux琐记二</h1><div class="archive-tags"><span>linux</span></div></header><div class="prose"><h3>1. dd命令</h3>
+<p>win8.1下镜像直接点击setup.exe无效...系统要求都符合，只是我这是双系统且是BIOS引导，也不是UEFI
+想想要不制作个系统盘，Win32DiskImager制作后还是不行，转到Ubuntu使用
+<code>dd if=en_windows_10_multiple_editions_x64_dvd_6846432.iso of=/dev/sdb bs=2M</code>
+bs=2M情况下最后平均写入速度为7M/s</p>
+<p>虽然最终还是失败了、、、</p>
+<h3>2. 格式化u盘</h3>
+<p>U盘写入到一半时被我中止了，结果就是U盘变成了只读状态，挂载后也无法操作...
+于是<code>mkfs.vfat -I /dev/sdb</code>或者<code>mkfs -t vfat /dev/sdb -I</code>
+&lt;!--more--&gt;</p>
+<h3>3. Shadowsocks</h3>
+<pre tabindex="0" aria-label="代码块"><code>pip install shadowsocks
+sslocal -c conf.json
+</code></pre>
+<p>conf.json自己编写，格式如下：</p>
+<pre tabindex="0" aria-label="代码块"><code>{
+    "server":"my_server_ip",
+    "server_port":*****,
+    "local_port":1080,
+    "password":"*****",
+    "timeout":600,
+    "method":"*****"
+}
+</code></pre>
+<h3>4. 关闭防火墙</h3>
+<p>ipv4</p>
+<pre tabindex="0" aria-label="代码块"><code>chkconfig iptables off
+service iptables stop
+</code></pre>
+<p>ipv6</p>
+<pre tabindex="0" aria-label="代码块"><code>chkconfig ip6tables off
+service ip6tables stop
+</code></pre>
+<h3>5. 外网出口ip</h3>
+<p>在终端下输入 <code>curl ip.gs</code> 即可获取当前自己的外网出口IPv4地址</p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

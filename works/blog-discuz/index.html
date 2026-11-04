@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 前言
+飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、
+
+
+### 2. Apache
+#### 2.1 缺少msvcr110.dll
+首先是`httpd -k install`时直接提示缺少msvc"><title>折腾车队服务器 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-discuz/"><meta property="og:title" content="折腾车队服务器"><meta property="og:description" content="
+### 1. 前言
+飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、
+
+
+### 2. Apache
+#### 2.1 缺少msvcr110.dll
+首先是`httpd -k install`时直接提示缺少msvc"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-discuz/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="折腾车队服务器"><meta name="twitter:description" content="
+### 1. 前言
+飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、
+
+
+### 2. Apache
+#### 2.1 缺少msvcr110.dll
+首先是`httpd -k install`时直接提示缺少msvc"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年10月17日</time></div><h1>折腾车队服务器</h1><div class="archive-tags"><span>apache</span><span>discuz</span><span>filezilla</span></div></header><div class="prose"><h3>1. 前言</h3>
+<p>飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、</p>
+<h3>2. Apache</h3>
+<h4>2.1 缺少msvcr110.dll</h4>
+<p>首先是<code>httpd -k install</code>时直接提示缺少msvcr110.dll, 安装了<code>vcredist_x64.exe</code>还是不行, 想着直接装.net库, 然而并不可以。最后想起来当时下的apache是32位的, 安装了<code>vcredist_x86.exe</code>之后apache安装成功。
+&lt;!--more--&gt;</p>
+<h4>2.2 Servername错误</h4>
+<p>之后出现了ServerName错误，直接将<code>#ServerName: localhost:80</code>注释去了，改为自己需要的。</p>
+<h3>3. Discuz</h3>
+<h4>3.1 无法连接数据库</h4>
+<p>安装discuz时，显示无法连接数据库，不支持<code>mysqli_connect</code>，建议<code>advice_mysqli_connect</code>，但是php的配置文件里绝对是修改过的，搜了搜发现是<code>extension_dir</code>使用相对路径有时会出错，改为绝对路径后成功</p>
+<h4>3.2 网站间隔性无法访问</h4>
+<p>安装之后即可查看了，但是网站会经常无法访问一段时间，查看日志错误信息为: <strong>AH00341 指定的网络名不再可用</strong>，找到的解决方法有:</p>
+<ol>
+<li>在httpd.conf里添加：</li>
+</ol>
+<pre tabindex="0" aria-label="代码块"><code>ThreadsPerChild 1000
+MaxRequestsPerChild 10000
+Win32DisableAcceptEx
+</code></pre>
+<ol>
+<li>在httpd.conf里添加：</li>
+</ol>
+<pre tabindex="0" aria-label="代码块"><code>AcceptFilter http none
+AcceptFilter https none
+EnableSendfile Off 
+EnableMMAP off
+</code></pre>
+<p>使用第二种方法解决问题，但是只添加了前两句即可。</p>
+<h4>3.3 Child: Starting 64 worker threads</h4>
+<p>errors.log里还有AH00354: Child: Starting 64 worker threads的提醒，这个应该是和分配给Apache的线程数有关，倒是可以用上述方法解决:
+在httpd.conf找到：</p>
+<pre tabindex="0" aria-label="代码块"><code>&lt;IfModule mpm_winnt.c&gt;
+  ThreadsPerChild 64
+  MaxRequestsPerChild 1000
+  Win32DisableAcceptEx
+&lt;/IfModule&gt;
+</code></pre>
+<p>将ThreadsPerChild的数目改大点，当然这和硬件关联很大。</p>
+<h4>3.4 无法上传附件</h4>
+<p>discuz的头像和附件都无法上传，开始以为只是头像无法上传，提示错误是cannot write data/tmp，感觉是权限问题，就把整个目录权限提升了一番，但是还是不行，最后将<code>#upload_tmp_dir =</code>注释去了，加入discuz的<code>ucenter_server/data/tmp</code>目录，解决问题。</p>
+<h3>4. Filezilla</h3>
+<p>还用filezilla搭了个ftp服务器，配置好后无法通过其他地址访问，查阅资料将filezilla添加到防火墙允许通过</p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

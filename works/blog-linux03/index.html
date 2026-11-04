@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. who命令
+who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。
+
+
+### 2. w命令
+执行这项指令可得知目前登入系统的用户有那些人，以及他们正在执行的程序。单独执行linux w命令会显示所有的用户，您也可指定用户名称，"><title>Linux琐记三 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-linux03/"><meta property="og:title" content="Linux琐记三"><meta property="og:description" content="
+### 1. who命令
+who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。
+
+
+### 2. w命令
+执行这项指令可得知目前登入系统的用户有那些人，以及他们正在执行的程序。单独执行linux w命令会显示所有的用户，您也可指定用户名称，"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-linux03/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Linux琐记三"><meta name="twitter:description" content="
+### 1. who命令
+who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。
+
+
+### 2. w命令
+执行这项指令可得知目前登入系统的用户有那些人，以及他们正在执行的程序。单独执行linux w命令会显示所有的用户，您也可指定用户名称，"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年11月1日</time></div><h1>Linux琐记三</h1><div class="archive-tags"><span>linux</span></div></header><div class="prose"><h3>1. who命令</h3>
+<p>who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。</p>
+<h3>2. w命令</h3>
+<p>执行这项指令可得知目前登入系统的用户有那些人，以及他们正在执行的程序。单独执行linux w命令会显示所有的用户，您也可指定用户名称，仅显示某位用户的相关信息。</p>
+<h3>3. 查看端口使用情况</h3>
+<p><code>netstat   -anp   |   grep  portno</code>
+比如<code>netstat –apn | grep 8080</code>
+&lt;!--more--&gt;</p>
+<h3>4. cat命令高级用法</h3>
+<p>搭配<code>EOF</code>和输入输出流<code>&gt;&gt;</code>及<code>&lt;&lt;</code>使用，例如Haskell的官方安装教程：</p>
+<pre tabindex="0" aria-label="代码块"><code>cat &gt;&gt; ~/.bashrc &lt;&lt;EOF
+export PATH="\$HOME/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.10.3/bin:\$PATH"
+EOF
+export PATH=~/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:$PATH="
+</code></pre>
+<p>以上可以实现文件追加功能，在.bashrc文件最后追加两句环境变量。</p>
+<h3>5. Linux命令行下引号</h3>
+<p><code>echo "$PATH"</code>与<code>echo $PATH</code>的结果相同，输出PATH变量的值，而<code>echo '$PATH'</code>输出的结果就是<code>$PATH</code>这个字符串</p>
+<h3>6. 修改ssh 端口号</h3>
+<p><code>vim /etc/ssh/sshd_config</code> 找到port修改即可，当然还是注意尽量不要使用1024以下的端口，即使你是root用户。
+之后重启：<code>service ssh restart</code></p>
+<h3>7. 修改用户所属用户组</h3>
+<p><code>usermod -g newgroup username</code></p>
+<h3>8. 禁止用户登录</h3>
+<p>主要使用<code>nologin</code>，用户不可以ssh登录但可以使用ftp等登录</p>
+<ul>
+<li>Method 1:
+<code>usermod -s /usr/sbin/nologin username</code> and <code>echo "/usr/sbin/nologin" &gt;&gt; /etc/shells</code></li>
+<li>Method 2:
+lock the user: <code>passwd -l username</code>
+if we want to unlock: <code>passwd -u username</code></li>
+<li>Method 3:
+<code>vim /etc/passwd</code>
+then change <code>test:x:1001:1000:,,,:/home/test:/bin/bash</code> to <code>test:x:1001:1000:,,,:/home/test:/usr/sbin/nologin</code></li>
+<li>Method 4:
+<code>touch /etc/nologin</code>, this will deny all users except root to login.</li>
+<li>Method 5:
+We can deny the way to login with username and passwd, just edit <code>/etc/ssh/sshd_config</code>, find <code>PasswordAuthentication yes</code>, change it to <code>PasswordAuthentication no</code>, then <code>service sshd restart</code></li>
+</ul>
+<h3>9. 文件夹权限与文件权限的区别</h3>
+<table>
+<thead>
+<tr>
+<th>权限</th>
+<th>对文件的作用</th>
+<th>对文件夹的作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>查看文件内容</td>
+<td>列出文件夹中的文件(ls)</td>
+</tr>
+<tr>
+<td>w</td>
+<td>修改文件内容</td>
+<td>在文件夹中删除、添加或重命名文件(夹)</td>
+</tr>
+<tr>
+<td>x</td>
+<td>文件可以作为程序执行</td>
+<td>cd 到文件夹</td>
+</tr>
+</tbody>
+</table>
+<h3>10. 将某用户加入sudo权限中</h3>
+<p><code>visudo</code>命令
+直接加入<code>username ALL=(ALL) ALL</code></p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

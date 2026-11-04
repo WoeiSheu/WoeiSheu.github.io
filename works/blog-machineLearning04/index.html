@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. Logistic回归
+利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类
+
+
+### 2. 基于Logistic回归和Sigmoid函数的分类
+我们想要的函数是能接受所有的输入然后预测出类别。例如,在两个类的情况下,上述函数输出0或1,"><title>机器学习四 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-machineLearning04/"><meta property="og:title" content="机器学习四"><meta property="og:description" content="
+### 1. Logistic回归
+利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类
+
+
+### 2. 基于Logistic回归和Sigmoid函数的分类
+我们想要的函数是能接受所有的输入然后预测出类别。例如,在两个类的情况下,上述函数输出0或1,"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-machineLearning04/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="机器学习四"><meta name="twitter:description" content="
+### 1. Logistic回归
+利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类
+
+
+### 2. 基于Logistic回归和Sigmoid函数的分类
+我们想要的函数是能接受所有的输入然后预测出类别。例如,在两个类的情况下,上述函数输出0或1,"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年8月25日</time></div><h1>机器学习四</h1><div class="archive-tags"><span>machine learning</span><span>logistic</span></div></header><div class="prose"><h3>1. Logistic回归</h3>
+<p>利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类</p>
+<h3>2. 基于Logistic回归和Sigmoid函数的分类</h3>
+<p>我们想要的函数是能接受所有的输入然后预测出类别。例如,在两个类的情况下,上述函数输出0或1,我们接触过的函数 Heaviside step function(单位阶跃函数)即是。然而此函数在跳跃点上从0瞬间跳跃到1，这个瞬间跳跃过程有时很难处理。Sigmoid函数有类似的性质但是更容易处理，其具体计算公式为：<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>z</mi></mrow></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sigma(z)=\frac{1}{1+e^{-z}}</annotation></semantics></math></span>
+为了实现Logistic回归分类器，我们可以在每个特征上都乘以一个回归系数，然后把所有的结果值相加，将这个总和代入Sigmoid函数中，进而得到一个范围在0~1之间的数值。任何大于0.5的数据被分入1类，小于0.5即被归为0类。所以，Logistic回归也可以看成是一种概率估计
+确定了分类器的函数形式后，问题变为求最佳回归系数。
+&lt;!--more--&gt;</p>
+<h3>3. 基于最优化方法的最佳回归系数确定</h3>
+<p>Sigmoid函数的输入记为z，由下公式得出:
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><msub><mi>w</mi><mn>0</mn></msub><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><msub><mi>w</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mo>⋯</mo><mo>+</mo><msub><mi>w</mi><mi>n</mi></msub><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><msup><mi>w</mi><mi>T</mi></msup><mi>x</mi></mrow><annotation encoding="application/x-tex">z=w_0x_0+w_1x_1+\cdots+w_nx_n=w^Tx</annotation></semantics></math></span>
+其中向量x是分类器的输入数据，向量w就是我们要找到的最佳参数(系数)，从而使分类器尽可能精确。</p>
+<h4>3.1 最优化方法：梯度上升法</h4>
+<p>梯度上升法基于的思想是:
+要找到某函数的最大值最好的方法是沿着该函数的梯度方向做探寻，如果梯度记为<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∇</mi></mrow><annotation encoding="application/x-tex">\nabla</annotation></semantics></math></span>，则函数<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x,y)</annotation></semantics></math></span>的梯度由下式表示：<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∇</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">[</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mrow><mi mathvariant="normal">∂</mi><mi>x</mi></mrow></mfrac></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mrow><mi mathvariant="normal">∂</mi><mi>y</mi></mrow></mfrac></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\nabla f(x,y)=\begin{bmatrix}
+\frac{\partial f(x,y)}{\partial x} \\
+\frac{\partial f(x,y)}{\partial y}
+\end{bmatrix}</annotation></semantics></math></span>
+其中，函数f(x,y)必须在待计算的点上有定义并可微。具体函数示例图如下:
+<span class="missing-media">[原文图片缺失：fourth]</span></p>
+<p>梯度上升算法到达每个点后都会重新估计移动的方向。从P0开始，计算完该点的梯度，函数就根据梯度移动到下一点P1，在P1点梯度再次被重新计算，并沿新的梯度方向移动到P2，如此循环迭代直到满足停止条件。迭代过程中，梯度算子总是保证我们能选取到最佳的移动方向。
+可以看到，梯度算子总是指向函数值增长最快的方向，这里所说的是移动方向，而未提到移动量的大小，该变量称为步长，记作<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span>，用向量表示的话，梯度上升算法的迭代公式如下：<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>:</mo><mo>=</mo><mi>w</mi><mo>+</mo><mi>α</mi><msub><mi mathvariant="normal">∇</mi><mi>w</mi></msub><mi>f</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">w:=w+\alpha \nabla_wf(w)</annotation></semantics></math></span>
+该公式将一直被迭代执行，直到达到某个停止条件为止
+Addition: 梯度下降算法只需要将上式的+改为－。梯度上升算法用来求函数的最大值，梯度下降算法用来求函数的最小值</p>
+<ul>
+<li>训练算法
+下图中有100个样本点，每个点包含两个数值型特征：X1和X2。在此数据集上，通过梯度上升算法找到最佳回归系数，也就是拟合出Logistic回归模型的最佳参数
+<span class="missing-media">[原文图片缺失：sixth]</span>
+梯度上升伪代码：</li>
+</ul>
+<pre tabindex="0" aria-label="代码块"><code>每个回归系数初始化为1
+重复R次：
+    计算整个数据集的梯度
+    使用alpha × gradient更新回归系数的向量
+    返回回归系数
+</code></pre>
+<h4>3.2 分析数据: 画出决策边界</h4>
+<p>上面已经解出了一组回归系数，它确定了不同类别数据间的分割线，以下函数画出分割线:</p>
+<pre tabindex="0" aria-label="代码块"><code>def plotBestFit(wei):
+    import matplotlib.pyplot as plt
+    weights = wei.getA()
+    dataMat,labelMat=loadDataSet()
+    dataArr = array(dataMat)
+    n = shape(dataArr)[0] 
+    xcord1 = []; ycord1 = []
+    xcord2 = []; ycord2 = []
+    for i in range(n):
+        if int(labelMat[i])== 1:
+            xcord1.append(dataArr[i,1]); ycord1.append(dataArr[i,2])
+        else:
+            xcord2.append(dataArr[i,1]); ycord2.append(dataArr[i,2])
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    ax.scatter(xcord1, ycord1, s=30, c='red', marker='s')
+    ax.scatter(xcord2, ycord2, s=30, c='green')
+    x = arange(-3.0, 3.0, 0.1)
+    y = (-weights[0]-weights[1]*x)/weights[2]           
+    ax.plot(x, y)
+    plt.xlabel('X1'); plt.ylabel('X2');
+    plt.show()
+</code></pre>
+<h4>3.3 训练算法：随机梯度上升</h4>
+<p>梯度上升算法在每次更新回归系数时都需要遍历整个数据集，该方法处理100个左右的数据集时尚可，若数据集过大则计算复杂度太高，改进方法之一是一次仅用一个样本点来更新回归系数，该方法称为随机梯度上升算法。由于可以在新样本到来时对分类器进行增量式更新，因而随机梯度上升算法是一个在线学习算法，与"在线学习"相对应，一次处理所有系数称为"批处理"
+伪代码：</p>
+<pre tabindex="0" aria-label="代码块"><code>每个回归系数初始化为1
+对数据集中每个样本：
+    计算该样本的梯度
+    使用alpha × gradient更新回归系数值
+返回回归系数值
+</code></pre>
+<p>实际代码：</p>
+<pre tabindex="0" aria-label="代码块"><code>def stocGradAscent0(dataMatrix, classLabels):
+    m,n = shape(dataMatrix)
+    alpha = 0.01
+    weights = ones(n)   
+    for i in range(m):
+        h = sigmoid(sum(dataMatrix[i]*weights))
+        error = classLabels[i] - h
+        weights = weights + alpha * error * dataMatrix[i]
+    return weights
+</code></pre>
+<p>运行一次并不能看出最终效果，修改代码使其在数据集上运行200(or other)次。而对于不同的系数，迭代达到稳定的次数不同，有的也许只要50次，而有的则会来回波动，为了避免来回波动，从而收敛到某个值，以及加快收敛速度，代码改进：</p>
+<pre tabindex="0" aria-label="代码块"><code>def stocGradAscent1(dataMatrix, classLabels, numIter=150):
+    m,n = shape(dataMatrix)
+    weights = ones(n)   
+    for j in range(numIter):        dataIndex = range(m)
+        for i in range(m):
+            alpha = 4/(1.0+j+i)+0.01               
+            randIndex = int(random.uniform(0,len(dataIndex)))        
+            h = sigmoid(sum(dataMatrix[randIndex]*weights))
+            error = classLabels[randIndex] - h
+            weights = weights + alpha * error * dataMatrix[randIndex]
+            del(dataIndex[randIndex])
+    return weights
+</code></pre>
+<pre tabindex="0" aria-label="代码块"><code>- 一方面，alpha在每次迭代时都会调整，这会缓解数据波动或高频波动，另外虽然alpha随着迭代次数不断减小，但不会减为0，这样做是为了保证多次迭代后新数据仍有一定影响。如果要处理的问题是动态变化的，可以适当加大上述常数项，以确保新值获得更大的回归系数。在降低alpha函数中，每次减少1/(j+i)，其中j是迭代次数，i是样本点的下标，这样j&amp;lt;&amp;lt;max(i)时，alpha就不是严格下降的，避免严格下降也常用于模拟退火等优化算法中
+- 另一方面，通过随机选取样本来更新回归系数，这将减少周期性的波动
+- 此外，改进算法增加了一个参数确定迭代次数
+</code></pre>
+<h3>4. 示例：预测病马的死亡率</h3>
+<p>数据来源于[UCI机器学习数据库](http://archive.ics.uci.edu/ml/
+datasets/Horse+Colic)，数据包含368个样本和28个特征。该数据集部分指标主观难以测量，且数据集中有30%的值是缺失的</p>
+<h4>4.1 准备数据</h4>
+<p>处理数据中的缺失值, 可选做法有：</p>
+<ul>
+<li>使用可用特征的均值来填补缺失值</li>
+<li>使用特殊值来填补缺失值，如-1</li>
+<li>忽略有缺失的样本</li>
+<li>使用相似样本的均值填补缺失值</li>
+<li>使用另外的机器学习算法预测缺失值</li>
+</ul>
+<p>这里我们将所有的缺失值用0替代，因为其恰好能用于Logistic回归，在回归系数更新公式中:
+<code>weights = weights + alpha * error * dataMatrix[randIndex]</code>
+如果dataMatrix的某特征对应0，则该特征将不做更新。另外由于sigmoid(0)=0.5，它对结果的预测不具有任何倾向性
+如果在测试数据集中发现一条数据的类别标签已经缺失，最简单的做法是将该数据丢弃</p>
+<h4>4.2 测试算法</h4>
+<p>用Logistic回归进行分类, Logistic回归分类函数：</p>
+<pre tabindex="0" aria-label="代码块"><code>def classifyVector(inX, weights):
+    prob = sigmoid(sum(inX*weights))
+    if prob &gt; 0.5: return 1.0
+    else: return 0.0
+def colicTest():
+    frTrain = open('horseColicTraining.txt') 
+    frTest = open('horseColicTest.txt')
+    trainingSet = []; trainingLabels = []
+    for line in frTrain.readlines():
+        currLine = line.strip().split('\t')
+        lineArr =[]
+        for i in range(21):
+            lineArr.append(float(currLine[i]))
+        trainingSet.append(lineArr)
+        trainingLabels.append(float(currLine[21]))
+    trainWeights = stocGradAscent1(array(trainingSet), trainingLabels, 500)
+    errorCount = 0; numTestVec = 0.0
+    for line in frTest.readlines():
+        numTestVec += 1.0
+        currLine = line.strip().split('\t')
+        lineArr =[]
+        for i in range(21):
+            lineArr.append(float(currLine[i]))
+        if int(classifyVector(array(lineArr), trainWeights))!= 
+            int(currLine[21]):
+            errorCount += 1
+    errorRate = (float(errorCount)/numTestVec)
+    print "the error rate of this test is: %f" % errorRate
+    return errorRate
+def multiTest():
+    numTests = 10; errorSum=0.0
+    for k in range(numTests):
+        errorSum += colicTest()
+    print "after %d iterations the average error rate is:
+        %f" % (numTests, errorSum/float(numTests))
+</code></pre>
+<p>classifyVector()，它以回归系数和特征向量作为输入来计算对应的Sigmoid值
+colicTest()是用于打开测试集和训练集，并对数据进行格式化处理的函数
+multiTest()，其功能是调用colicTest()10次并求结果的平均值</p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

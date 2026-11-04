@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 前言
+以前只用过数据库MySQL和Rails自带的sqlite3, 最近打算在一个项目里使用postgreSQL, 简要记录下。
+
+
+### 2. 安装
+去[官网](http://www.postgresql.org/download/)找对应版本下载, 不喜欢exe文件,感觉不在可"><title>postgreSQL · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-postgresql/"><meta property="og:title" content="postgreSQL"><meta property="og:description" content="
+### 1. 前言
+以前只用过数据库MySQL和Rails自带的sqlite3, 最近打算在一个项目里使用postgreSQL, 简要记录下。
+
+
+### 2. 安装
+去[官网](http://www.postgresql.org/download/)找对应版本下载, 不喜欢exe文件,感觉不在可"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-postgresql/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="postgreSQL"><meta name="twitter:description" content="
+### 1. 前言
+以前只用过数据库MySQL和Rails自带的sqlite3, 最近打算在一个项目里使用postgreSQL, 简要记录下。
+
+
+### 2. 安装
+去[官网](http://www.postgresql.org/download/)找对应版本下载, 不喜欢exe文件,感觉不在可"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2016年3月23日</time></div><h1>postgreSQL</h1><div class="archive-tags"><span>sql</span><span>postgresql</span><span>database</span></div></header><div class="prose"><h3>1. 前言</h3>
+<p>以前只用过数据库MySQL和Rails自带的sqlite3, 最近打算在一个项目里使用postgreSQL, 简要记录下。</p>
+<h3>2. 安装</h3>
+<p>去<a href="http://www.postgresql.org/download/">官网</a>找对应版本下载, 不喜欢exe文件,感觉不在可控范围内, 于是下载了zip版本</p>
+<p>解压之后, 设置路径:</p>
+<pre tabindex="0" aria-label="代码块"><code>path = %path%;D:\Programs\pgsql\bin
+set pghost=localhost
+set pglib=D:\Programs\pgsql\lib
+set pgdata=D:\Programs\pgsql\data
+</code></pre>
+<p>&lt;!--more--&gt;
+在解压目录下</p>
+<pre tabindex="0" aria-label="代码块"><code>mkdir data
+cd data
+initdb .
+</code></pre>
+<p>成功之后console会显示:</p>
+<blockquote>
+<p>WARNING: enabling "trust" authentication for local connections. You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.</p>
+<p>Success.</p>
+<p>You can now start the database server using: "pg_ctl" -D "." -l logfile start</p>
+</blockquote>
+<p>按照提示,<code>pg_ctl.exe -D . -l logfile start</code>, 显示 "server starting", 若要停止, <code>pg_ctl.exe -D . stop</code>
+注意若不在安装目录下, 则将上述 . 改为data的绝对/相对路径</p>
+<h3>3. 注册为Windows服务</h3>
+<p><code>pg_ctl.exe register -N postgreSQL -D .</code>
+注册成为服务后, <code>net start postgreSQL</code>即可</p>
+<h3>4. 用户权限</h3>
+<p>之后运行postgres.exe会告诉你不能使用管理员权限登录, 故:</p>
+<pre tabindex="0" aria-label="代码块"><code>net user postgres your_password /add
+runas /user:postgres cmd.exe    # 我用的是cmder.exe
+</code></pre>
+<p>之后可以通过<code>whoami</code>查询运行该程序的当前用户</p>
+<h3>5. 目录设置</h3>
+<p>再次运行 postgres.exe, 发现提示<strong>You must specify the --config-file or -D invocation option or set the PGDATA environment variable.</strong>
+再次<code>set pgdata=D:\Programs\pgsql\data</code></p>
+<h3>6. 用户不存在</h3>
+<p>提示此错误, <code>role "postgres" does not exist</code>, 因为我们最开始initdb是在默认账户下,应当runas postgres之后再initdb</p>
+<h3>7. 运行</h3>
+<p>重启一下服务, 运行psql.exe即可
+或者不启动服务,直接postgres.exe, 再另开一个窗口执行psql.exe, 执行?可以得到帮助</p>
+<h3>8. 操作</h3>
+<p>注意windows下大多数操作关键字前面都有""
+之后查看文档, 运行一些操作, 如:</p>
+<pre tabindex="0" aria-label="代码块"><code>CREATE database hlademo;  # 创建数据库, 或使用createdb命令
+\l                        # 列出所有数据库
+\c hlademo;               # 连接到数据库
+DROP DATABASE [ IF EXISTS ] hlademo;  # 删除数据库,也可以使用dropdb
+ 
+create table tank(
+  ID INT PRIMARY KEY NOT NULL,
+  NAME TEXT NOT NULL,
+  time TEXT
+);                        # 创建表
+DROP TABLE tank;          # 删除表
+INSERT INTO tank(ID,name,time) VALUES(1, 'apollo', '20160323'); # 插入, 注意用单引号
+select * from tank;       # 查询表
+</code></pre>
+<h3>9. 其他命令</h3>
+<p>模式(schema)实际上一个命名表的集合。也可以包含一个schema视图、索引、序列、数据类型、运算符和函数。Schema是满足类似于在操作系统级别的目录,但该模式不能嵌套。CREATE SCHEMA PostgreSQL语句创建一个模式(schema)</p>
+<pre tabindex="0" aria-label="代码块"><code>create schema enemy;
+create table enemy.missile (
+  ID INT PRIMARY KEY NOT NULL,
+  NAME TEXT NOT NULL,
+  time TEXT
+);
+select * from enemy.missile;
+</code></pre>
+<h3>10. 修改密码</h3>
+<pre tabindex="0" aria-label="代码块"><code>su - postgres -c psql
+ALTER USER "user_name" WITH PASSWORD 'new_password'
+</code></pre>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+设备管理
+===
+
+### 设备管理概述
+1. 设备管理的功能
+    + 状态跟踪
+    + 设备分配
+    + 设备控制
+2. 设备独立性
+    + 设备独立性概念
+    + 设备独立性的实现
+        - 软通道实现设备独立性
+        - 通过指派命令实现设备独立性
+ "><title>操作系统四 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-operatingSystem04/"><meta property="og:title" content="操作系统四"><meta property="og:description" content="
+设备管理
+===
+
+### 设备管理概述
+1. 设备管理的功能
+    + 状态跟踪
+    + 设备分配
+    + 设备控制
+2. 设备独立性
+    + 设备独立性概念
+    + 设备独立性的实现
+        - 软通道实现设备独立性
+        - 通过指派命令实现设备独立性
+ "><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-operatingSystem04/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="操作系统四"><meta name="twitter:description" content="
+设备管理
+===
+
+### 设备管理概述
+1. 设备管理的功能
+    + 状态跟踪
+    + 设备分配
+    + 设备控制
+2. 设备独立性
+    + 设备独立性概念
+    + 设备独立性的实现
+        - 软通道实现设备独立性
+        - 通过指派命令实现设备独立性
+ "><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年10月2日</time></div><h1>操作系统四</h1><div class="archive-tags"><span>operating system</span></div></header><div class="prose"><h1>设备管理</h1>
+<h3>设备管理概述</h3>
+<ol>
+<li>设备管理的功能
+<ul>
+<li>状态跟踪</li>
+<li>设备分配</li>
+<li>设备控制</li>
+</ul>
+</li>
+<li>设备独立性
+<ul>
+<li>设备独立性概念</li>
+<li>设备独立性的实现
+<ul>
+<li>软通道实现设备独立性</li>
+<li>通过指派命令实现设备独立性</li>
+<li>逻辑设备描述器</li>
+</ul>
+</li>
+<li>设备独立性的优点
+<ul>
+<li>方便用户</li>
+<li>提高设备的利用率</li>
+<li>提高系统的可适应性和可扩展性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设备控制块
+<ul>
+<li>设备控制块结构</li>
+<li>命令转换表</li>
+</ul>
+</li>
+</ol>
+<p>&lt;!--more--&gt;</p>
+<h3>缓冲技术</h3>
+<ol>
+<li>缓冲概述
+<ul>
+<li>什么是缓冲</li>
+<li>利用缓冲技术进行I/O操作</li>
+<li>缓冲技术解决的问题</li>
+</ul>
+</li>
+<li>常用的缓冲技术
+<ul>
+<li>双缓冲
+<ul>
+<li>双缓冲用于数据输入</li>
+<li>双缓冲用于数据输出</li>
+</ul>
+</li>
+<li>缓冲池</li>
+</ul>
+</li>
+<li>UNIX系统的缓冲区管理
+<ul>
+<li>缓冲首部</li>
+<li>队列结构
+<ul>
+<li>空闲缓冲区队列</li>
+<li>设备缓冲区队列</li>
+</ul>
+</li>
+<li>缓冲管理算法
+缓冲区管理总的思路分析如下：
+<ul>
+<li>一个缓冲区被分配用于读/写某设备上的字符块时</li>
+<li>当需要一个缓冲区时</li>
+<li>当一个标有延迟写的缓冲区时移到空闲队列头时</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缓冲区的检索
+<ul>
+<li>分配一个缓冲区</li>
+<li>释放一个缓冲区</li>
+</ul>
+</li>
+<li>读磁盘块和写磁盘块
+<ul>
+<li>读磁盘块</li>
+<li>写磁盘块</li>
+</ul>
+</li>
+<li>高度缓存的优点和缺点
+<ul>
+<li>优点
+<ul>
+<li>提供了统一的磁盘存取方法</li>
+<li>减少访盘次数</li>
+<li>确保文件系统的完整性</li>
+<li>简化用户程序</li>
+</ul>
+</li>
+<li>缺点</li>
+</ul>
+</li>
+</ol>
+<h3>设备分配</h3>
+<ol>
+<li>设备分配概述
+<ul>
+<li>静态分配和动态分配</li>
+<li>I/O设备分配算法
+<ul>
+<li>先请求先服务</li>
+<li>优先级最高者优先</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>独享分配</li>
+<li>共享分配</li>
+<li>虚拟分配
+<ul>
+<li>虚拟设备和虚拟分配</li>
+<li>Spool(假脱机系统)</li>
+<li>虚拟打印功能</li>
+</ul>
+</li>
+</ol>
+<h3>输入/输出控制</h3>
+<ol>
+<li>输入/输出硬件
+<ul>
+<li>端口(port)</li>
+<li>总线(bus)</li>
+<li>控制器(cobtroller)</li>
+</ul>
+</li>
+<li>输入/输出控制方式
+<ul>
+<li>循环测试I/O方式</li>
+<li>I/O中断方式</li>
+<li>通道方式</li>
+<li>DMA方式</li>
+</ul>
+</li>
+<li>输入/输出子系统
+<ul>
+<li>输入/输出控制子系统概述</li>
+<li>各类设备的接口
+<ul>
+<li>块设备接口</li>
+<li>主存映射接口</li>
+<li>字符流设备接口</li>
+<li>网络套接字接口</li>
+</ul>
+</li>
+<li>输入/输出子系统功能
+<ul>
+<li>解释用户的I/O系统调用</li>
+<li>设备驱动</li>
+<li>中断处理</li>
+</ul>
+</li>
+<li>调用I/O核心模块的方式
+<ul>
+<li>设备处理进程方式</li>
+<li>文件操作方式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>输入/输出控制的例子
+<ul>
+<li>通用形式的系统调用
+<ul>
+<li>1)实现使用设备的转换</li>
+<li>2)合法性检查</li>
+<li>3)形成I/O请求块，发消息给相应的设备处理进程</li>
+</ul>
+</li>
+<li>设备处理进程</li>
+</ul>
+</li>
+</ol>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

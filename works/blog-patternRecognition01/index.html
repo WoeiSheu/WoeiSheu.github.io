@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 模式识别系统的构成
+![first](/images/patternRecognition01_1.png)
+其中：
++ 分类器设计，为了把待识别模式分配到各自的模式类中去，必须设计出一套分类判别规则。基本做法是：用一定数量的样本（称为训练样本集）确定出一套分类判别规则，使得按照这套"><title>模式识别一 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-patternRecognition01/"><meta property="og:title" content="模式识别一"><meta property="og:description" content="
+### 1. 模式识别系统的构成
+![first](/images/patternRecognition01_1.png)
+其中：
++ 分类器设计，为了把待识别模式分配到各自的模式类中去，必须设计出一套分类判别规则。基本做法是：用一定数量的样本（称为训练样本集）确定出一套分类判别规则，使得按照这套"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-patternRecognition01/"><meta property="og:image" content="https://xuwei.fun/media/blog-patternRecognition01/bfd6be8630890a02.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="模式识别一"><meta name="twitter:description" content="
+### 1. 模式识别系统的构成
+![first](/images/patternRecognition01_1.png)
+其中：
++ 分类器设计，为了把待识别模式分配到各自的模式类中去，必须设计出一套分类判别规则。基本做法是：用一定数量的样本（称为训练样本集）确定出一套分类判别规则，使得按照这套"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年8月16日</time></div><h1>模式识别一</h1><div class="archive-tags"><span>pattern recognition</span></div></header><figure class="work-cover"><img src="/media/blog-patternRecognition01/bfd6be8630890a02.webp" srcset="/media/blog-patternRecognition01/bfd6be8630890a02.webp 639w" sizes="(max-width: 650px) 100vw, 1200px" alt="模式识别一" width="639" height="160"></figure><div class="prose"><h3>1. 模式识别系统的构成</h3>
+<p><img src="/media/blog-patternRecognition01/bfd6be8630890a02.webp" alt="first" />
+其中：</p>
+<ul>
+<li>分类器设计，为了把待识别模式分配到各自的模式类中去，必须设计出一套分类判别规则。基本做法是：用一定数量的样本（称为训练样本集）确定出一套分类判别规则，使得按照这套分类判别规则对待模式识别进行分类所造成的错误识别率最小或引起的损失最小。这就是分类器设计的过程。</li>
+<li>分类决策，分类器按照已确定的分类判别规则对待识别模式进行分类判别，输出分类结果，这就是分类器的使用过程，也称为分类决策。</li>
+</ul>
+<p>&lt;!--more--&gt;</p>
+<h3>2. 识别方法</h3>
+<p>一般来说，描述模式有两种方法：定量描述和结构性描述，定量描述就是用一组数据来描述模式，结构性描述就是用一组基元来描述模式。对应于两种描述方法有两种基本的模式识别方法：</p>
+<ul>
+<li>统计模式识别：在统计模式识别中，被研究的模式用特征向量来描述，特征向量中的每一个元素代表模式中的一个特征或属性，特征向量构成的空间叫特征空间。如果我们用某种方法来分割特征空间，使得同一类模式大体上都在特征空间的同一区域，那么对于待分类的模式，就可以根据它的特征向量在特征空间中哪一个区域来判定它属于哪一类模式。研究统计模式识别方法的任务就是用不同的方法划分特征空间，从而达到识别的目的。</li>
+<li>结构模式识别：此方法主要立足于分析模式的结构信息，由于模式是一些模式基元按一定的结构规则组合而成的，因此结构分析的内容就是分析模式如何由基元构成的规则。目前比较成功的是句法结构模式识别方法，它通过检查代表这个模式的句子是否符合事先给定的某一类文法规则，如果符合，那么这个模式就属于这个文法所代表的那个模式类。</li>
+</ul>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

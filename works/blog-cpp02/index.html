@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. vector
+#### 1.1 erase
+以前用vector时只是使用`push_back()`,`pop_back()`,`begin()`,`end()`,`front()`,`back()`等，没用过`erase()`, 今天搭配iterator用了一下, 才发现很神奇。比如"><title>C++琐记二 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-cpp02/"><meta property="og:title" content="C++琐记二"><meta property="og:description" content="
+### 1. vector
+#### 1.1 erase
+以前用vector时只是使用`push_back()`,`pop_back()`,`begin()`,`end()`,`front()`,`back()`等，没用过`erase()`, 今天搭配iterator用了一下, 才发现很神奇。比如"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-cpp02/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="C++琐记二"><meta name="twitter:description" content="
+### 1. vector
+#### 1.1 erase
+以前用vector时只是使用`push_back()`,`pop_back()`,`begin()`,`end()`,`front()`,`back()`等，没用过`erase()`, 今天搭配iterator用了一下, 才发现很神奇。比如"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年10月27日</time></div><h1>C++琐记二</h1><div class="archive-tags"><span>cpp</span><span>programming language</span></div></header><div class="prose"><h3>1. vector</h3>
+<h4>1.1 erase</h4>
+<p>以前用vector时只是使用<code>push_back()</code>,<code>pop_back()</code>,<code>begin()</code>,<code>end()</code>,<code>front()</code>,<code>back()</code>等，没用过<code>erase()</code>, 今天搭配iterator用了一下, 才发现很神奇。比如删除一个vector上指定值为val的元素:</p>
+<pre tabindex="0" aria-label="代码块"><code>for(vector&lt;int&gt;::iterator it = nums.begin(); it != nums.end(); ) {
+    if( nums[i] == val ) {
+        nums.erase(it++);
+    } else {
+        it++;
+    }
+}
+</code></pre>
+<p>上面这段代码是错误的，而且只要改一处就可以正确。修改后为:
+&lt;!--more--&gt;</p>
+<pre tabindex="0" aria-label="代码块"><code>for(vector&lt;int&gt;::iterator it = nums.begin(); it != nums.end(); ) {
+    if( nums[i] == val ) {
+        nums.erase(it);
+    } else {
+        it++;
+    }
+}
+</code></pre>
+<p>区别就是erase之后it没有自增，也就是将nums某个元素erase之后，并不需要将iterator自增，nums会自动调整整个结构，将后一个元素放到当前指针指的位置。</p>
+<h4>1.2 iterator</h4>
+<p>iterator某种程度上可以当作指针来使用，上述程序还可以这样:</p>
+<pre tabindex="0" aria-label="代码块"><code>while( it != nums.end() ) {
+    if( *it == val ) {
+        nums.erase(it);
+    } else {
+        it++;
+    }
+}
+</code></pre>
+<h4>1.3 初始化</h4>
+<p>我通常不初始化vector, 但如果需要初始化分配一定空间, 可以使用<code>vector&lt;int&gt; num(100); vector&lt;int&gt; num(100,0)</code>，前者是包含100个值默认初始化值的元素，后者是包含100个0。
+此外，C++11新增了一个array类，是固定长度的数组，使用起来可能更方便和安全，有兴趣可以再仔细看下。</p>
+<h3>2. GCC编译器的问题</h3>
+<p>在CodeBlocks里输入<code>vector&lt;vector&lt;int&gt;&gt; s</code>竟然会编译出错，<strong>'&gt;&gt;' should be '&gt; &gt;' within a nested template argument list</strong>，改成 <code>vector&lt; vector&lt;int&gt; &gt; s</code>才好, 而在VS里并没有问题, CodeBlocks自带的MinGW中的GCC编译器在某些方面还是比不上VS的编译器的</p>
+<h3>3. Console输入</h3>
+<p>C++中输入字符串我一般常用<code>string str; cin &gt;&gt; str;</code>，然而今天要输入一个字符串，中间带有空格，发现上述写法不对，会自动滤除所有空格，搜了下，使用<code>getline(cin,str);</code>即可。</p>
+<h3>4. Struct与Class</h3>
+<p>struct与class在C++者两者基本相同, 区别仅在以下几点:</p>
+<ul>
+<li>struct的成员默认权限是public，而class的成员默认权限是private</li>
+<li>struct的默认继承方式为public，而class的默认继承为private</li>
+<li>只有class可用模板template定义参数，而struct不可以</li>
+</ul>
+<h3>5. 关于sizeof</h3>
+<p>首先声明: <strong>sizeof不是函数,是操作符</strong></p>
+<ul>
+<li>sizeof是C/C++中的一个操作符(operator)，其作用就是返回一个对象或者类型所占的内存字节数</li>
+<li>sizeof的计算发生在编译时刻，所以它可以被当作常量表达式使用</li>
+<li>指针记录了另一个对象的地址，既然是来存放地址的，那么必然等于计算机内部地址总线的宽度，所以在32位计算机中，一个指针变量的返回值是4字节，在64位系统中指针变量的sizeof结果为8，当然与编译器的版本有关，如果在64位系统上运行32位编译器自然还是4。注意<code>sizeof(NULL) = 4</code></li>
+<li>数组的sizeof值等于数组所占用的内存字节数</li>
+<li>每个类的实例，在内存中都有一个独一无二的地址，为了达到这个目的，编译器往往会给一个空类隐含的加一个字节，这样空类在实例化后在内存得到了独一无二的地址，因此空类默认会占用1个字节。如：</li>
+</ul>
+<pre tabindex="0" aria-label="代码块"><code>class a {};
+sizeof(a);      //为1
+</code></pre>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

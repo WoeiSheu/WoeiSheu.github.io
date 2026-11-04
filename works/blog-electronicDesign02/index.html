@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 注意事项：
++ 想使multisim的四路示波器波形相对静止下查看，如果是正弦波可以在示波器上选中波形类型为正弦波，否则可以直接点击暂停仿真使停止
++ 仿真过程极慢，现实1s在multisim中竟然走了3、4s，改multisim步长有时可以解决问题，但若是仿真电路本身的确复杂，则只能靠等"><title>音乐信号灯电子电路设计 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-electronicDesign02/"><meta property="og:title" content="音乐信号灯电子电路设计"><meta property="og:description" content="
+### 注意事项：
++ 想使multisim的四路示波器波形相对静止下查看，如果是正弦波可以在示波器上选中波形类型为正弦波，否则可以直接点击暂停仿真使停止
++ 仿真过程极慢，现实1s在multisim中竟然走了3、4s，改multisim步长有时可以解决问题，但若是仿真电路本身的确复杂，则只能靠等"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-electronicDesign02/"><meta property="og:image" content="https://xuwei.fun/media/blog-electronicDesign02/55a79915c2b56202.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="音乐信号灯电子电路设计"><meta name="twitter:description" content="
+### 注意事项：
++ 想使multisim的四路示波器波形相对静止下查看，如果是正弦波可以在示波器上选中波形类型为正弦波，否则可以直接点击暂停仿真使停止
++ 仿真过程极慢，现实1s在multisim中竟然走了3、4s，改multisim步长有时可以解决问题，但若是仿真电路本身的确复杂，则只能靠等"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年9月12日</time></div><h1>音乐信号灯电子电路设计</h1><div class="archive-tags"><span>electronic</span><span>multisim</span><span>EDA</span></div></header><figure class="work-cover"><img src="/media/blog-electronicDesign02/55a79915c2b56202.webp" srcset="/media/blog-electronicDesign02/55a79915c2b56202.webp 419w" sizes="(max-width: 650px) 100vw, 1200px" alt="音乐信号灯电子电路设计" width="419" height="469"></figure><div class="prose"><h3>注意事项：</h3>
+<ul>
+<li>想使multisim的四路示波器波形相对静止下查看，如果是正弦波可以在示波器上选中波形类型为正弦波，否则可以直接点击暂停仿真使停止</li>
+<li>仿真过程极慢，现实1s在multisim中竟然走了3、4s，改multisim步长有时可以解决问题，但若是仿真电路本身的确复杂，则只能靠等待了，毕竟仿真是需要计算时间的</li>
+<li>Mesurement Probe的确好用，但是有时运行一段时间后，会导致Transient time point calculation did not converge这个错误，出现这个问题的另一个原因可能是示波器未接地。</li>
+</ul>
+<p>&lt;!--more--&gt;</p>
+<h3>一、设计目的</h3>
+<p>针对电子线路课程要求，对学生进行实用型电子线路设计、安装、调试等各环节综合性训练，培养学生运用课程中所学的理论与实践紧密结合，独立的解决实际问题的能力。电路设计工具MULTISIM的学习与应用，应用计算机的能力，用简洁的文字,清晰的图表来表达自己设计思想的能力。</p>
+<h3>二、设计内容和要求</h3>
+<ul>
+<li>1、音乐信号分为三个频段，分别控制红、绿、蓝三种颜色的彩灯；三段信号的频率为：
+<ul>
+<li>低频段：25Hz—200Hz</li>
+<li>中频段：500Hz ---1200Hz</li>
+<li>高频段：2000Hz---3000Hz</li>
+</ul>
+</li>
+<li>2、当输入信号大于10mV时，彩灯的亮度分为6个等级；当输入信号小于10mV时彩灯全亮。</li>
+</ul>
+<h3>三、设计任务分析</h3>
+<p>灯泡亮度通过双向可控硅电路控制，图3-1为控制波形图。如果输入交流220V正弦波电压过零点时在双向可控硅的控制极和阴极之间连续加入幅度大于3V，宽度大于1ms的同步触发脉冲，可控硅就可连续导通，忽略可控硅导通压降，正弦波电压将全部加到灯泡上，灯泡最亮。如果触发脉冲消失，可控硅就会在输入正弦波电压下一个过零点时自然截止，灯泡熄灭。可以设想，把同步触发脉冲每六个分为一组，利用音乐信号的大小控制每组脉冲出现的个数，就可以控制加在灯泡正弦波半波的个数，从而也就控制了灯泡的亮度。
+<img src="/media/blog-electronicDesign02/55a79915c2b56202.webp" alt="3-1" />
+&lt;p align="center"&gt;图3-1&lt;/p&gt;</p>
+<p>把音乐信号分成三个频率段可用带通滤波器去实现。组成带通滤波器电路的形式很多，其中最简单的并且上、下限截止频率分别可调的是由低、高通滤波电路串联而成的带通滤波器。这种电路的缺点是所用元件较多，优点是调整方便，很容易实现指标要求。
+通过带通滤波器选出所需要的频率段的音乐信号，经过精密整流器变为直流，其直流电平随音乐信号大小而上下浮动。此电平作为参考电压加在电压比较器的一个输入端，由同步触发脉冲作为计数信号的数模转换器，输出阶梯波作为比较电压加在电压比较器的另一个输入端，使电压比较器的输出电压高电平的时间与参考电压成正比，并控制与门打开时间，以决定放过同步脉冲的个数去触发可控硅，从而控制灯泡的亮度。</p>
+<h3>四、系统设计方案</h3>
+<p><img src="/media/blog-electronicDesign02/47308822146196f6.webp" alt="4-1" />
+&lt;p align="center"&gt;图4-1&lt;/p&gt;</p>
+<h3>五、单元电路分析与设计</h3>
+<h4>1、整流电路</h4>
+<p>通过变压器得到的±10V交流电压经过整流应该得到±12V的电压，再通过W7805稳压电路得到5V的电压，通过整流电路的输出电压给整个电路中用到的芯片供电。电路原理图如图5-1所示：
+<img src="/media/blog-electronicDesign02/27b07ec58b634a90.webp" alt="5-1" />
+&lt;p align="center"&gt;图5-1&lt;/p&gt;</p>
+<h4>2、同步脉冲发生器</h4>
+<p><img src="/media/blog-electronicDesign02/a037cb42cf14ee6e.webp" alt="5-2" />
+&lt;p align="center"&gt;图5-2&lt;/p&gt;</p>
+<p>开始利用555定时器设计了一个多谐振荡器的电路如图5-2，生成300Hz的方波作为同步脉冲的发生器，实际搭建电路时，老师指导我们555作为数字电子器件精度达不到要求，要求用模拟电路搭成同步脉冲发生器，于是重新构建电路如图5-3所示：
+<img src="/media/blog-electronicDesign02/b123da7ff4488028.webp" alt="5-3" />
+&lt;p align="center"&gt;图5-3&lt;/p&gt;</p>
+<h4>3、阶梯波产生电路</h4>
+<p><img src="/media/blog-electronicDesign02/3c960a1085c634ca.webp" alt="equation" />
+<img src="/media/blog-electronicDesign02/0183471531c00719.webp" alt="5-4" />
+&lt;p align="center"&gt;图5-4&lt;/p&gt;</p>
+<p><img src="/media/blog-electronicDesign02/476dbaacb7865337.webp" alt="5-5" />
+&lt;p align="center"&gt;图5-5&lt;/p&gt;</p>
+<p>其中由于是清零时方式设置的计时循环，所以在输出位置加C_16这个电容，以除去产生的尖峰。</p>
+<h4>4、低通和带通滤波器</h4>
+<p>由于最低频段的要求为25Hz至200Hz，为了方便，直接用低通电路设计，其他两路用带通电路。并且输入电压值较小，滤波后电压值也小，于是后面都需要加一个放大电路，通过滤波电路和放大电路最终将原始电压都放大了100倍。滤波和放大电路的设计图见图5-6。
+<img src="/media/blog-electronicDesign02/6238a9f56d9dd196.webp" alt="5-6" />
+&lt;p align="center"&gt;图5-6&lt;/p&gt;</p>
+<p>电路中电阻电容的参数计算的公式结合电路图讲解：</p>
+<ul>
+<li>
+<ol>
+<li>低通电路参数计算
+<img src="/media/blog-electronicDesign02/20e778a71a422f49.webp" alt="5-7" />
+&lt;p align="center"&gt;图5-7&lt;/p&gt;</li>
+</ol>
+</li>
+</ul>
+<p><img src="/media/blog-electronicDesign02/892dcb5e672a2c0d.webp" alt="equation" /></p>
+<ul>
+<li>
+<ol>
+<li>带通电路参数计算
+<img src="/media/blog-electronicDesign02/b49844a2fb4e240c.webp" alt="5-8" />
+&lt;p align="center"&gt;图5-8&lt;/p&gt;</li>
+</ol>
+</li>
+</ul>
+<p><img src="/media/blog-electronicDesign02/c2be7590293b04e0.webp" alt="equation" />
+中频段中心频率为850Hz，频宽BW=700Hz，取适当增益(这里我们取2)，可计算得到适当参数，高频段中心频率2500Hz，频宽BW=1000Hz，取适当增益(这里我们取2)，可计算得到适当参数。</p>
+<h4>5、精密整流器和电压比较器</h4>
+<p>滤波放大之后的电压还是交流电，为了和之后的阶梯波相比较，必须先整流成直流电压，然后再和阶梯波比较生成PWM波，设计电路如下：
+<img src="/media/blog-electronicDesign02/7a4c6b1ca9b4b0b5.webp" alt="5-9" />
+&lt;p align="center"&gt;图5-9&lt;/p&gt;</p>
+<p>其中运放的反向端即是阶梯波的输出，整流后的电压通过与其比较生成PWM波，整流后的电压若在0-1V之间，则占空比为1/6，在1V-2V间，占空比为2/6，在2V-3V间，占空比为3/6，在3V-4V间，占空比为4/6，在4V-5V间，占空比为5/6，大于5V时，占空比为6/6，以上说明均以高电平所占周期比例作为占空比。</p>
+<h4>6、10mV音乐信号鉴别器</h4>
+<p>电路如图5-10示：
+<img src="/media/blog-electronicDesign02/3b49221bf976d5ed.webp" alt="5-10" />
+&lt;p align="center"&gt;图5-10&lt;/p&gt;</p>
+<p>通过放大电路放大输入的电压值，再通过半波整流电路得到直流电压，此直流电压和输入交流电压的幅值成正比，将其作为比较器的反相输入，比较器的正相输入为二极管D16的压降值。通过仔细调节R32/R31的比值，可以达到当输入电压幅值小于10mV时U16输出高电平，大于10mV时输出低电平的效果。最后将三路电压比较器的输出分别与此输出相或，得到输出的结果即是我们想要的结果，低于10mV时全是高电平，即占空比100%，否则为其他5种不同的状态。由于要控制彩灯，而彩灯是要通过晶闸管触发的，通过触发脉冲数不同，可以得到不同亮度。</p>
+<h3>六、系统仿真电路</h3>
+<p>系统整体仿真电路图6-1，其中为了方便脉冲触发就用以前的555作为脉冲的产生电路：
+<img src="/media/blog-electronicDesign02/a74e59d73c65cb45.webp" alt="6-1" />
+&lt;p align="center"&gt;图6-1&lt;/p&gt;</p>
+<h3>七、仿真结果显示</h3>
+<p>输出电压参数为150Hz、20mV仿真，输出的PWM波和最终的脉冲触发电路分别如图7-1和图7-2所示：
+<img src="/media/blog-electronicDesign02/43ad1fc4b2afd1fc.webp" alt="7-1" />
+&lt;p align="center"&gt;图7-1&lt;/p&gt;</p>
+<p><img src="/media/blog-electronicDesign02/7ce2ef26de804e5a.webp" alt="7-2" />
+&lt;p align="center"&gt;图7-2&lt;/p&gt;</p>
+<h3>八、实际电路结果</h3>
+<p>实际搭建的硬件电路，最终示波器测量阶梯波、同步脉冲波以及最终的触发波如下图所示：
+<img src="/media/blog-electronicDesign02/bdc9b1187ac9ac71.webp" alt="8-1" />
+&lt;p align="center"&gt;图8-1&lt;/p&gt;</p>
+<p><img src="/media/blog-electronicDesign02/a954cb972c785a12.webp" alt="8-2" />
+&lt;p align="center"&gt;图8-2&lt;/p&gt;</p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

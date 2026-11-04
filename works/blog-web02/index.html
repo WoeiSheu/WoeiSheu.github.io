@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 服务器-浏览器通信技术
+服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP/IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这"><title>RESTful推送与异步通信 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-web02/"><meta property="og:title" content="RESTful推送与异步通信"><meta property="og:description" content="
+### 1. 服务器-浏览器通信技术
+服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP/IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-web02/"><meta property="og:image" content="https://xuwei.fun/media/blog-web02/36efb62ba25f82ae.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="RESTful推送与异步通信"><meta name="twitter:description" content="
+### 1. 服务器-浏览器通信技术
+服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP/IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2016年5月20日</time></div><h1>RESTful推送与异步通信</h1><div class="archive-tags"><span>web</span><span>communicate</span></div></header><figure class="work-cover"><img src="/media/blog-web02/36efb62ba25f82ae.webp" srcset="/media/blog-web02/36efb62ba25f82ae.webp 445w" sizes="(max-width: 650px) 100vw, 1200px" alt="RESTful推送与异步通信" width="445" height="312"></figure><div class="prose"><h3>1. 服务器-浏览器通信技术</h3>
+<p>服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP/IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通信协议, 每一次请求-响应都是基于一个新建立的HTTP的连接, 这就是使服务器主动通知浏览器成为一个难点. 这是因为在基于请求-响应的模式下, 服务器的角色是主动应答, 无法主动通知浏览器; 另一个原因是每次请求后HTTP连接断开, 服务器无法再获取客户端的地址, 也就无法将通知发送给浏览器端
+&lt;!--more--&gt;</p>
+<h4>1.1 Polling(客户端轮询) 技术</h4>
+<p>即浏览器周期性地主动访问服务器的特定地址, 以获取服务器端数据状态的变化
+优点:</p>
+<ul>
+<li>易于实现</li>
+<li>对设计没有注入性污染
+缺点:</li>
+<li>如果服务器的业务数据在两次定时任务发起的请求过程中没有变化, 后一次请求的做功实际为负数——浪费了服务器的带宽, 而且没有获得有效负载</li>
+<li>浏览器端的定时器间隔时间参数的设置比较尴尬, 过短频发第一个问题, 过长无法及时获取服务器端数据, 且该值往往难以抽象出来, 不同业务的定时间隔都是一个独立的经验值</li>
+</ul>
+<h4>1.2 Comet技术</h4>
+<p>Comet是反向AJAX技术集, 包括长轮训(Long Polling)和流(Streaming)两种技术.
+反向AJAX(Reverse AJAX)技术从请求方向上看并没有反向, 该"反向"是从结果上看的, 即从服务器端(通过保持连接的HTTP通道)向客户端发送数据, 以实现低延迟地通知客户端的技术, 其底层实现依赖于HTTP连接不能断开这一前提条件. 长轮询和流技术是反向AJAX的两种技术手段.</p>
+<p><img src="/media/blog-web02/36efb62ba25f82ae.webp" alt="long polling" /></p>
+<p>如图所示, 长轮询通过KeepAlive使HTTP连接得以保持连接. 为何需要保持连接? 因为在请求发出后的一段时间内, 服务器一直没有做出响应, 该连接会因连接超时而断开. Comet利用HTTP1.1的keepAlive的持久性连接技术, 在浏览器发出请求后, 通过keepAlive保存服务器向浏览器做出响应的通信, 如此解决了连接超时断开的问题. 那么连接的关闭只有两种情况, 一种是浏览器主动断开, 一种是服务器端特定数据发生变化， 并将这一信息响应给浏览器, 主动断开连接来完成请求-响应模式的一次请求</p>
+<p>相比Polling, 实现Comet困难许多, 服务器和浏览器都需要第三方库来支持. Atmosphere和CometD库是实现Comet技术的第三方工具包</p>
+<p>优点: 解决了Polling的低效性, 且有很好的低延迟性
+缺点: 需要额外的技术实现支持, 引入第三方包, 较为复杂</p>
+<h4>1.3 SSE技术</h4>
+<p>SSE是HTML5技术集的一部分, 定义了服务器推送技术的标准规范
+SSE规范地址可以<a href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-events">点此</a>. 其核心是基于EventSource接口的事件监听机制, 包括onopen、onmessage和onerror三个事件监听器. SSE服务器响应数据的媒体类型(Content-Type)是text/event-stream.</p>
+<p>优点: 是HTML5标准一部分, 具备编程语言无关性, 且支持跨语言的调用
+缺点: 和Comet一样, 浏览器无法在同一条连接上做出二次请求或者对服务器的响应做出"响应"</p>
+<h4>1.4 WebSocket技术</h4>
+<p>WebSocket是HTML5技术集一部分, 提供了一个双向的、在一条TCP信道中的客户端和服务端全双工的通信
+WebSocket消除了所有与HTTP连接的无状态特性相关的限制</p>
+<p>优点: 是HTML5标准之一, 逐渐流行,功能强大,性能突出,双向、双工通信
+缺点: 相对于SSE实现较为复杂</p>
+<h3>2. SSE通信模式</h3>
+<p>Java的Jersey框架的SSE支持包提供两种通信模式, 发布-订阅模式和广播模式. 前者是一种端到端的通信, 后者是多播通信</p>
+<h3>3. 异步通信</h3>
+<h4>3.1 Polling异步通信</h4>
+<p>该技术结合了HATEOAS和Web Link, 以及Polling技术
+<img src="/media/blog-web02/88a7779122deb473.webp" alt="asyn01" /></p>
+<h4>3.2 Web Hook异步通信</h4>
+<p>该解决方案是指在客户端发送请求时, 将一个回调地址同时发送给服务器, 服务器接收响应后, 异步处理请求并对此次请求即刻做出响应, 客户端随即处理其他业务并监听回调. 服务器在响应客户端后, 继续以异步的方式处理刚才的请求, 在处理完毕后, 通过回调地址通知客户端处理结果
+优点是覆盖了Polling方案并且没有Polling方案中无效的轮询负载. 但是, 这种方案无法在浏览器作为客户端的场景中实施, 因为浏览器无法提供一个回调地址给服务器. 因此该方案适用于另外一个服务器作为客户端的场景. 另外, 和后面的解决方案比起来, 该方案还是多出了一次服务器回调客户端的HTTP连接
+<img src="/media/blog-web02/53a6d8d9fde1fa2d.webp" alt="asyn02" /></p>
+<h4>3.3 Comet异步通信</h4>
+<p>Comet技术在服务器推送业务中的处理流程同样适用于这里的异步通信, 客户端发送请求后可以继续执行后续业务并监听服务器返回的处理结果的通知, 优点是异步通信可以在一次请求-响应的模型中完成
+<img src="/media/blog-web02/91567f9a3678d9f2.webp" alt="asyn03" /></p>
+<h4>3.4 HTML5异步通信</h4>
+<p>包含SSE和Web Socket, 均有处理异步通信的能力</p>
+<h3>Footnotes</h3>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

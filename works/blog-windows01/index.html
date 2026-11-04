@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. Word中字体大小与磅值对应关系
+字号&quot;八号&quot;对应磅值5
+字号&quot;七号&quot;对应磅值5.5
+字号&quot;小六&quot;对应磅值6.5
+字号&quot;六号&quot;对应磅值7.5
+字号&quot;小五&quot;对应磅值9
+字号&quot;五号&quot;对应磅值10.5
+字号&quot;小四&quot;对应磅值12
+字号&quot;四号&quot;对应磅值14
+字号&quot;小三&quot;对应磅值15
+字号&quot;三号"><title>Windows 琐记一 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-windows01/"><meta property="og:title" content="Windows 琐记一"><meta property="og:description" content="
+### 1. Word中字体大小与磅值对应关系
+字号&quot;八号&quot;对应磅值5
+字号&quot;七号&quot;对应磅值5.5
+字号&quot;小六&quot;对应磅值6.5
+字号&quot;六号&quot;对应磅值7.5
+字号&quot;小五&quot;对应磅值9
+字号&quot;五号&quot;对应磅值10.5
+字号&quot;小四&quot;对应磅值12
+字号&quot;四号&quot;对应磅值14
+字号&quot;小三&quot;对应磅值15
+字号&quot;三号"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-windows01/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Windows 琐记一"><meta name="twitter:description" content="
+### 1. Word中字体大小与磅值对应关系
+字号&quot;八号&quot;对应磅值5
+字号&quot;七号&quot;对应磅值5.5
+字号&quot;小六&quot;对应磅值6.5
+字号&quot;六号&quot;对应磅值7.5
+字号&quot;小五&quot;对应磅值9
+字号&quot;五号&quot;对应磅值10.5
+字号&quot;小四&quot;对应磅值12
+字号&quot;四号&quot;对应磅值14
+字号&quot;小三&quot;对应磅值15
+字号&quot;三号"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年8月3日</time></div><h1>Windows 琐记一</h1><div class="archive-tags"><span>windows</span><span>skills</span></div></header><div class="prose"><h3>1. Word中字体大小与磅值对应关系</h3>
+<p>字号"八号"对应磅值5
+字号"七号"对应磅值5.5
+字号"小六"对应磅值6.5
+字号"六号"对应磅值7.5
+字号"小五"对应磅值9
+字号"五号"对应磅值10.5
+字号"小四"对应磅值12
+字号"四号"对应磅值14
+字号"小三"对应磅值15
+字号"三号"对应磅值16
+字号"小二"对应磅值18
+字号"二号"对应磅值22
+字号"小一"对应磅值24
+字号"一号"对应磅值26
+字号"小初"对应磅值36
+字号"初号"对应磅值42</p>
+<p>&lt;!--more--&gt;</p>
+<h3>2. 比较文件命令</h3>
+<p>本想用windows自带的fc命令,却发现只可以比较两文件无法比较文件夹,于是加上自己用的cmder自带很多linux命令(其实应该是msysgit带的),于是考虑使用diff命令, 用-r选项即可
+<code>diff -r 'E:\Amusement\music\' 'F:\Recreation\Music\'</code></p>
+<h3>3. markdown文件中加入html代码</h3>
+<p>例如加上<code>&lt;p align="center"&gt;Test&lt;/p&gt;</code>，则必须在后面加一空行，否则不会输出理想结果，原因暂时未知。</p>
+<h3>4. cmd设置为utf-8编码</h3>
+<p><code>CHCP 65001</code>
+切换回GBK可用<code>chcp 936</code></p>
+<h3>5. cmder切为PowerShell模式下无法使用git等</h3>
+<p>将git的bin目录加入系统path下，加入用户组的path貌似不可以，至少我的电脑上是这样
+若还不行可以尝试<code>Set-ExecutionPolicy RemoteSigned</code></p>
+<h3>6. Windows 录音</h3>
+<p>命令行输入<code>soundrecorder /file outputfile.wav</code></p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+## 前言
+正如在[衍生品笔记一](/2021/10/03/derivatives01/)提到的开篇提到的猪肉期货，上下游企业都可以通过期货交易来套期保值，远期的出现也是相同的目的，远期和期货本质的区别，其实只是场内还是场外的区别。期货是场内交易，合约标准化，信用风险也由交易所承担了，而远期是场外"><title>衍生品笔记二 —— 远期 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-derivatives02/"><meta property="og:title" content="衍生品笔记二 —— 远期"><meta property="og:description" content="
+## 前言
+正如在[衍生品笔记一](/2021/10/03/derivatives01/)提到的开篇提到的猪肉期货，上下游企业都可以通过期货交易来套期保值，远期的出现也是相同的目的，远期和期货本质的区别，其实只是场内还是场外的区别。期货是场内交易，合约标准化，信用风险也由交易所承担了，而远期是场外"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-derivatives02/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="衍生品笔记二 —— 远期"><meta name="twitter:description" content="
+## 前言
+正如在[衍生品笔记一](/2021/10/03/derivatives01/)提到的开篇提到的猪肉期货，上下游企业都可以通过期货交易来套期保值，远期的出现也是相同的目的，远期和期货本质的区别，其实只是场内还是场外的区别。期货是场内交易，合约标准化，信用风险也由交易所承担了，而远期是场外"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2021年10月4日</time></div><h1>衍生品笔记二 —— 远期</h1><div class="archive-tags"><span>finance</span><span>invest</span><span>derivatives</span><span>forward</span></div></header><div class="prose"><h2>前言</h2>
+<p>正如在<a href="/2021/10/03/derivatives01/">衍生品笔记一</a>提到的开篇提到的猪肉期货，上下游企业都可以通过期货交易来套期保值，远期的出现也是相同的目的，远期和期货本质的区别，其实只是场内还是场外的区别。期货是场内交易，合约标准化，信用风险也由交易所承担了，而远期是场外交易，协议怎么定可以一事一议，只要交易双方都认可就行。
+从另一方面来说，也就是远期定义的要素更少，那就从远期先看起。
+世界范围来看，远期交易中比例最大的标的是汇率、利率。</p>
+<p>&lt;!--more--&gt;</p>
+<h2>1. 远期汇率(外汇远期)</h2>
+<p>根据时间不同，同一标的也会有多个远期合约
+由于外汇交易中，是以货币换货币，所以需要设定一种货币为商品，另一种为计价货币
+明确了商品方、计价方，才能够判断多空双方</p>
+<ul>
+<li>多头(long position): 买方</li>
+<li>空头(short position): 卖方</li>
+</ul>
+<p>对于非管制货币来说，由于可以自动兑换，通常做直接远期交易(Outright forward)即可满足需求，在约定的时间以约定价格买卖货币。
+但是对于管制货币，因为无法直接交易，所以有了NDF(Non-deliverable forward)，不交割本金，只交割计价货币的差额</p>
+<blockquote>
+<p>NDF: 首先要明确一点的是，NDF实际上并不做货币兑换，这更类似于一个赌博协议。以CNY/USD为例，假设A预计3个月后会收到一笔 10000 CNY的收入，但是需要换成美金，由于CNY/USD没法自由兑换，因此A和做市商做了一笔NDF交易。由于NDF不交割本金，实际上三个月后10000CNY的收入还是在A的账户里，需要A自行将人民币兑换出境，而A和做市商之间只需要就现货汇率计算出损益，进行最终交割即可。
+为方便计算，假设CNY/USD 的三个月远期汇率为 10，也就是说A预期是三个月后以汇率10兑换出境，获得1000USD，而实际上三个月后，CNY/USD的现货可能是:</p>
+<ul>
+<li>10。那恰好，A和做市商之间损益为0</li>
+<li>20。那实际上A现在将10000 CNY兑换出境后只能得到500 USD，和预期相比少了500USD，这500USD就由做市商来弥补，因为最终只交割这500USD，不交割本金，所以才是NDF</li>
+<li>5。那实际上A现在将10000 CNY兑换出境后能得到2000 USD，和预期相比多了1000USD，这1000USD就由A来补偿给做市商，因为最终只交割这1000USD，不交割本金，所以才是NDF</li>
+</ul>
+</blockquote>
+<h2>2. 远期利率(Forward rate)</h2>
+<p>与远期利率相对应的有如下利率:</p>
+<ul>
+<li>即期利率(Spot rate): 当前时间点上零息债券的到期收益率</li>
+<li>短期利率(Short rate): 既定区间内的收益率</li>
+</ul>
+<p>远期利率则是指隐含在给定的即期利率之中，从未来的某一时点到另一时点的利率。也就是未来的短期利率。
+1×2远期利率，即表示1个月之后开始的期限1个月的远期利率；2×4远期利率，则表示2个月之后开始的期限为2个月的远期利率。</p>
+<p>contracted rate(合同利率): 远期利率协议签订时合同上所定的利率.
+reference rate(参考利率): 通常用于确定各种金融合同、贷款、基于账户的产品和金融工具（包括衍生工具和票据）的应付金额及其价值。</p>
+<p>参考利率有<sup class="footnote-ref"><a href="#blog-derivatives02-fn1" id="blog-derivatives02-fnref1">[1]</a></sup>:</p>
+<ul>
+<li>LIBOR(London Interbank Offered Rate)</li>
+<li>SHIBOR(Shanghai Interbank Offered Rate)</li>
+<li>......</li>
+</ul>
+<blockquote>
+<p>2017年英国金融行为监管局（FCA）宣布，2021年底后将不再强制要求报价行报出LIBOR。这意味着LIBOR将退出市场。</p>
+</blockquote>
+<p>最终损益就是名义本金与合同利率和参考利率的差额的乘积</p>
+<h2>3. 远期结售汇</h2>
+<p>对于中国大陆市场来说，由于CNY不能自由兑换，因此人民币有远期结售汇业务，而由于远期结售汇是个人、企业和银行间的交易，非银间交易，因此不被称为外汇远期</p>
+<h2>Footnote</h2>
+<hr />
+<section class="footnotes">
+<ol>
+<li id="blog-derivatives02-fn1"><p>Wikipedians. “Forward Rate Agreement.” Wikipedia, Wikimedia Foundation, 1 Oct. 2021, https://en.wikipedia.org/wiki/Forward_rate_agreement. <a href="#blog-derivatives02-fnref1">↩︎</a></p>
+</li>
+</ol>
+</section>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

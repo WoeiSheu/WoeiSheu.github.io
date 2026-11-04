@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+## 前言
+由于远期交易、互换交易，基本都是场外交易，通常都是专业的外汇交易员才会接触这些，对于个人投资/投机者来说，接触的可能性较小。因此还是先从期货、期权学起，再到远期、互换比较合理。
+
+<!--more-->
+## 1. 期货市场
+期货市场有一些基本制度:
+- 交易所: 规避违约风险(def"><title>衍生品笔记五 —— 期货市场 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-derivatives05/"><meta property="og:title" content="衍生品笔记五 —— 期货市场"><meta property="og:description" content="
+## 前言
+由于远期交易、互换交易，基本都是场外交易，通常都是专业的外汇交易员才会接触这些，对于个人投资/投机者来说，接触的可能性较小。因此还是先从期货、期权学起，再到远期、互换比较合理。
+
+<!--more-->
+## 1. 期货市场
+期货市场有一些基本制度:
+- 交易所: 规避违约风险(def"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-derivatives05/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="衍生品笔记五 —— 期货市场"><meta name="twitter:description" content="
+## 前言
+由于远期交易、互换交易，基本都是场外交易，通常都是专业的外汇交易员才会接触这些，对于个人投资/投机者来说，接触的可能性较小。因此还是先从期货、期权学起，再到远期、互换比较合理。
+
+<!--more-->
+## 1. 期货市场
+期货市场有一些基本制度:
+- 交易所: 规避违约风险(def"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2021年10月8日</time></div><h1>衍生品笔记五 —— 期货市场</h1><div class="archive-tags"><span>finance</span><span>invest</span><span>derivatives</span><span>futures</span></div></header><div class="prose"><h2>前言</h2>
+<p>由于远期交易、互换交易，基本都是场外交易，通常都是专业的外汇交易员才会接触这些，对于个人投资/投机者来说，接触的可能性较小。因此还是先从期货、期权学起，再到远期、互换比较合理。</p>
+<p>&lt;!--more--&gt;</p>
+<h2>1. 期货市场</h2>
+<p>期货市场有一些基本制度:</p>
+<ul>
+<li>交易所: 规避违约风险(default)</li>
+<li>标准化: 促进流动性(liquidity)</li>
+<li>保证金: 增加杠杆(leverage)</li>
+<li>daily settlement: 每日无负债结算, 也可称为mark to market(逐日盯市). 当保证金不足时，会收到Margin Call(追加保证金通知)，提醒需要追加现金或现金等价物(通常就是国债)</li>
+<li>delivery: 交割制度是期货市场和现货市场的连结，期货在趋于交割日时，价格会收敛到现货价格，否则就会存在套利机会
+<ul>
+<li>physical delivery: 实物交割。商品期货等</li>
+<li>cash settlement: 现金交割。指数期货等</li>
+<li>有些特殊标的既可以实物交割，也可现金交割，取决于市场。比如国债期货、欧洲美元/离岸美元(Euro dollar)期货等</li>
+</ul>
+</li>
+<li>position limit: 防止操纵市场。头寸限制也取决于交易类型，套期保值头寸限制的数值较大</li>
+<li>large investor report: 大户报告. 认定的大户，进入交割月后需要报告实际资产状况</li>
+<li>风险准备金: 用于违约后的赔偿</li>
+</ul>
+<blockquote>
+<p>交易所中有hedger(套期保值者)、speculator(投机者)，引入投机者是为了提供对手方、提供流动性</p>
+</blockquote>
+<blockquote>
+<p>欧洲美元期货：其标的资产是本金为100万美元，3个月后到期的欧洲美元定期存款。由于最终是现金交割，除去本金，本质上标的资产是利率。<sup class="footnote-ref"><a href="#blog-derivatives05-fn1" id="blog-derivatives05-fnref1">[1]</a></sup></p>
+</blockquote>
+<h2>2. 期货合约</h2>
+<p>合约要素(参考国内市场):</p>
+<ul>
+<li>合约名称(Contract Name)</li>
+<li>基础资产(Underlying Assets)</li>
+<li>交易单位(Contract Size)</li>
+<li>报价单位(Price Quotation)</li>
+<li>最小变动价位(Minimum Price Fluctuation)</li>
+<li>涨跌停板幅度(Daily Price Limit)</li>
+<li>合约月份(Contract Months)</li>
+<li>交易时间(Trading Hours)</li>
+<li>最后交易日(Last Trading Day)</li>
+<li>交割日期(Delivery Period)</li>
+<li>交割品级(Grade and Quality Specifications)</li>
+<li>交割地点(Delivery Venue)</li>
+<li>交割单位(Delivery Size)</li>
+<li>最低交易保证金(Minimum Trade Margin)</li>
+<li>交割方式(Settlement Method)</li>
+<li>交易代码(Contract Code)</li>
+<li>上市交易场所(Exchange)</li>
+</ul>
+<h2>3. 期货术语</h2>
+<ul>
+<li>contango: 期货溢价，即期货升水、现货贴水. 期货价格近底远高</li>
+<li>backwadation: 现货溢价，即现货升水、期货贴水. 期货价格近高远底</li>
+<li>basis: 基差，即现货-期货的价格，但是期货要取最近月的期货合约</li>
+<li>open interest: 未平仓合约总量</li>
+<li>volume of trading: 交易量</li>
+</ul>
+<blockquote>
+<p>对于非利率期货来说，在供求关系基本平衡的情况下，远月合约由于存货持有成本的存在，所以会比近月合约价格更高.
+<strong>然而利率期货恰好反过来，因为利率期货报价是反向的，也因此使价格反向了</strong></p>
+</blockquote>
+<h2>4. 期货监管</h2>
+<p>一委一行两会:</p>
+<ul>
+<li>国务院金融稳定发展委员会</li>
+<li>中国人民银行</li>
+<li>中国银行保险监督管理委员会</li>
+<li>中国证券监督管理委员会</li>
+</ul>
+<p>证监会下有期货监管部，负责监管期货交易所，期货交易所有:</p>
+<ul>
+<li>大连商品交易所</li>
+<li>上海期货交易所</li>
+<li>郑州商品交易所</li>
+<li>中国金融期货交易所(公司制，原始注册资本为5亿元人民币，分别由大连商品交易所、上海期货交易所、上海证券交易所、深圳证券交易所和郑州商品交易所等五家机构各出资1亿元)</li>
+</ul>
+<p>交易所监管其会员，交易所的会员有期货经纪公司 和 自营会员</p>
+<h2>5. 套期保值</h2>
+<blockquote>
+<p>套期保值是指把期货市场当作转移价格风险的场所，利用期货合约作为将来在现货市场上买卖商品的临时替代物，对其现在买进准备以后售出商品或对将来需要买进商品的价格进行保险的交易活动。
+套期保值实际上是现货市场和期货市场的双向下注.
+对于inventory一方来说，需要规避存货价格下跌的风险，而对于demand一方来说，需要规避存货价格上涨的风险</p>
+</blockquote>
+<ul>
+<li>Long hedge(多头套期保值): 在期货市场的初始头寸是long，就是long hedge</li>
+<li>Short hedge(空头套期保值): 在期货市场的初始头寸是short，就是short hedge</li>
+</ul>
+<h2>6. 金融期货</h2>
+<p>外汇期货、利率期货、股指期货(是虚拟金融工具, 天然现金结算)等，外汇期货、股指期货比较简单，下面说的都是利率期货相关内容。</p>
+<ul>
+<li>day count conventions: 国债、企业债、货币市场工具的计息日计算方法都不尽相同，实际交易时需要关注</li>
+<li>discount rate: 折现率</li>
+<li>quoted price: 报价</li>
+<li>cash price: 全价，即包含利息的价格，也是dirty price = quoted price + accrued interest</li>
+<li>clean price: 净价</li>
+</ul>
+<p>对于T-note, T-bond来说，现货和期货市场都采用净价报价方式，<strong>而T-bill比较特殊，现货市场采用折现率报价，期货市场可能是反向，比如Eurodollar，报价方式是100-参考利率如LIBOR，联邦基金的拆借利率也类似</strong></p>
+<blockquote>
+<p>T-bond的交割标的有一篮子债券，根据与标准券(例如每半年付息一次，到期收益率和票面利率都是6%)相比制定转换因子，交割时不同债券做相应的转换</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>记账式附息国债: 没有实物形态的票券，以电脑记账形式记录债权，通过无纸化方式发行和交易</li>
+<li>凭证式储蓄国债: 通过银行系统发行，券面上不印制票面金额，为非标准格式，根据认购者的认购额填写实际的缴款金额，以“储蓄国债（凭证式）收款凭证”记录债权</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Eurodollar Futures的具体合约规则可参考<sup class="footnote-ref"><a href="#blog-derivatives05-fn2" id="blog-derivatives05-fnref2">[2]</a></sup></p>
+</blockquote>
+<h2>Footnote</h2>
+<hr />
+<section class="footnotes">
+<ol>
+<li id="blog-derivatives05-fn1"><p>CME Group. “Eurodollar Overview.” Futures &amp; Options Trading for Risk Management - CME Group, 8 Oct. 2021, https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.html. <a href="#blog-derivatives05-fnref1">↩︎</a></p>
+</li>
+<li id="blog-derivatives05-fn2"><p>CME Group. “Eurodollar Futures Contract Specs.” Futures &amp; Options Trading for Risk Management, 10 Oct. 2021, https://www.cmegroup.com/markets/interest-rates/stirs/eurodollar.contractSpecs.html. <a href="#blog-derivatives05-fnref2">↩︎</a></p>
+</li>
+</ol>
+</section>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

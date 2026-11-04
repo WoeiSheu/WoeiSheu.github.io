@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 前言
+没有系统地学过C++, 偶尔会把C++当作高级的C语言用下, 用下它的STL库, 有些很基础的东西都不知道。某课程的作业要求只能用C/C++写, 一动手发现全是错误, 故在此记录。
+
+
+### 2. string类
+string类经常使用, 平时还是用来连接下字符串比较多, 还"><title>C++琐记一 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-cpp01/"><meta property="og:title" content="C++琐记一"><meta property="og:description" content="
+### 1. 前言
+没有系统地学过C++, 偶尔会把C++当作高级的C语言用下, 用下它的STL库, 有些很基础的东西都不知道。某课程的作业要求只能用C/C++写, 一动手发现全是错误, 故在此记录。
+
+
+### 2. string类
+string类经常使用, 平时还是用来连接下字符串比较多, 还"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-cpp01/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="C++琐记一"><meta name="twitter:description" content="
+### 1. 前言
+没有系统地学过C++, 偶尔会把C++当作高级的C语言用下, 用下它的STL库, 有些很基础的东西都不知道。某课程的作业要求只能用C/C++写, 一动手发现全是错误, 故在此记录。
+
+
+### 2. string类
+string类经常使用, 平时还是用来连接下字符串比较多, 还"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年3月12日</time></div><h1>C++琐记一</h1><div class="archive-tags"><span>cpp</span><span>programming language</span></div></header><div class="prose"><h3>1. 前言</h3>
+<p>没有系统地学过C++, 偶尔会把C++当作高级的C语言用下, 用下它的STL库, 有些很基础的东西都不知道。某课程的作业要求只能用C/C++写, 一动手发现全是错误, 故在此记录。</p>
+<h3>2. string类</h3>
+<p>string类经常使用, 平时还是用来连接下字符串比较多, 还有一些其他常用的方法：</p>
+<pre tabindex="0" aria-label="代码块"><code>substr(int, int)
+str.substr(start,length) //返回str字符串start位置开始的长度为length的字符串，需要依次输出字符串中的字符时，可以变为str.substr(i,1)，而不用str.at(i)，因为str.at(i)返回值类型为char *
+</code></pre>
+<p>&lt;!--more--&gt;</p>
+<h3>3. int转为string</h3>
+<p>直接用了toString(), 编译报错才想起来是C++不是Java啊......搜了下又不太想用itoa和sprintf, 就用了stringstream类</p>
+<pre tabindex="0" aria-label="代码块"><code>#include &lt;sstream&gt;
+stringstream stream;
+string str;
+stream &lt;&lt; v[i][j];                          //注意sstream输入是&lt;&lt;而不是iostream的&gt;&gt;
+stream &gt;&gt; str;
+</code></pre>
+<h3>4. queue模板类</h3>
+<p>顾名思义, queue就是队列, 这个类实现了队列的操作, 但是其pop()方法竟然不返回值, 只是删除队首元素, 要获取队首元素, 需要使用front()方法:</p>
+<pre tabindex="0" aria-label="代码块"><code>queue&lt;string&gt; que;
+string head = que.front();
+que.pop();
+</code></pre>
+<h3>5. map类</h3>
+<p>提供了一一对应的关系, 实例化一个map类后, 添加了新元素, 想要查找其中的key, 利用了其find()方法:</p>
+<pre tabindex="0" aria-label="代码块"><code>map&lt;string,int&gt; myMap;
+myMap["test"] = 1;
+if( myMap.find("test") == myMap.end() ) {
+    
+}
+</code></pre>
+<p>更加常用的方法是count.</p>
+<h3>6. this的使用</h3>
+<p>还是受Java影响, 如下:</p>
+<pre tabindex="0" aria-label="代码块"><code>class A {
+public:
+    A(int a);
+private:
+    int a;
+};
+A::A(int a) {
+    this.a = a;     //错误
+    cout &lt;&lt; this.a &lt;&lt; endl;
+}
+</code></pre>
+<p>区别在于C++中的this是指针, 而Java没有指针概念, 都是引用对象, 所以在C++中其实应该如此:</p>
+<pre tabindex="0" aria-label="代码块"><code>class A {
+public:
+    A(int a);
+private:
+    int a;
+};
+A::A(int a) {
+    (*this).a = a;      //or this-&gt;a = a;
+    cout &lt;&lt; (*this).a &lt;&lt; endl;
+}
+</code></pre>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

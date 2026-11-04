@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### Problem Description
+Given a sequence a[1],a[2],a[3]......a[n], your job is to calculate the max sum of a sub-sequence. For example, given (6,-1,5"><title>HDU 1003 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-algorithm01/"><meta property="og:title" content="HDU 1003"><meta property="og:description" content="
+### Problem Description
+Given a sequence a[1],a[2],a[3]......a[n], your job is to calculate the max sum of a sub-sequence. For example, given (6,-1,5"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-algorithm01/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="HDU 1003"><meta name="twitter:description" content="
+### Problem Description
+Given a sequence a[1],a[2],a[3]......a[n], your job is to calculate the max sum of a sub-sequence. For example, given (6,-1,5"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2013年2月23日</time></div><h1>HDU 1003</h1><div class="archive-tags"><span>HDU</span><span>algorithm</span></div></header><div class="prose"><h3>Problem Description</h3>
+<p>Given a sequence a[1],a[2],a[3]......a[n], your job is to calculate the max sum of a sub-sequence. For example, given (6,-1,5,4,-7), the max sum in this sequence is 6 + (-1) + 5 + 4 = 14.</p>
+<p>&lt;!--more--&gt;</p>
+<h3>Input</h3>
+<p>The first line of the input contains an integer T(1&lt;=T&lt;=20) which means the number of test cases. Then T lines follow, each line starts with a number N(1&lt;=N&lt;=100000), then N integers followed(all the integers are between -1000 and 1000).</p>
+<h3>Output</h3>
+<p>For each test case, you should output two lines. The first line is "Case #:", # means the number of the test case. The second line contains three integers, the Max Sum in the sequence, the start position of the sub-sequence, the end position of the sub-sequence. If there are more than one result, output the first one. Output a blank line between two cases.</p>
+<h3>Sample Input</h3>
+<p>2
+5 6 -1 5 4 -7
+7 0 6 -1 1 -6 7 -5</p>
+<h3>Sample Output</h3>
+<p>Case 1:
+14 1 4</p>
+<p>Case 2:
+7 1 6</p>
+<h3>Solution</h3>
+<p>最初看到这题时的想法就是做循环,心里很明白这样做会超时,但还是去试了下,果然超时了,之后就暂时放下了这个问题。后来在《编程珠玑》里看到了对这个问题的详细讲解,豁然开朗,于是又重新做了一遍,感觉顺手多了。</p>
+<p>《编程珠玑》看里给出了几种算法的比较,第一种自然是最简单的时间复杂度为O(n^3)的算法,然后可以改进为O(n^2)的算法,之后作者提到可以用分治法的思想,通过递归解决,时间复杂度为O(n*logn),而且这种方法在很长一段时间里被认为是最优的,直到某天遇到了一数学大神,据说该大神几分钟就想出了一个时间复杂度为O(n)的算法、、、</p>
+<p>杭电的这题更复杂一点的地方在于它还要求出最大子序列的开始和结束位置,结束位置很简单,直接是Max的最后一个数,第一个当初想是从最后一个数向前做加法,直到和为Max,但是这样还要在判断这之前的数是否为0,很复杂,后来发现讨论区里有代码,研究了下,很巧妙,下面程序附的测试用例也是讨论区看到的、、、</p>
+<h3>Code</h3>
+<pre tabindex="0" aria-label="代码块"><code>#include &lt;stdio.h&gt;
+#define MAX_LEN 100000
+
+int main( int argc, char *argv[] ) {
+    int T,count = 0;
+    scanf("%d",&amp;T);
+
+    while(T--) {
+        ++count;
+        int i,length;
+        int a[MAX_LEN+1];
+        scanf("%d",&amp;length);
+
+        for( i=0; i &lt; length; i++ ) {
+            scanf("%d",&amp;a[i]);
+        }
+
+        int left = 0,right = 0,tmpLeft = 0;
+        int max = a[0],maxWithLastNumber = 0;   //需要注意数列全为负,故不能将max初始化为0
+        for( i = 0; i &lt; length; i++ ) {
+            maxWithLastNumber += a[i];          //数列全为负且第一个可能不是最大的负数,所以不能先比较maxWithLastNumber
+            if( max &lt; maxWithLastNumber ) {
+                max = maxWithLastNumber;
+                left = tmpLeft;
+                right = i;
+            }
+            if( maxWithLastNumber &lt; 0 ) {
+                maxWithLastNumber = 0;
+                tmpLeft = i+1;
+            }
+        }
+        printf("Case %d:\n%d %d %d\n",count,max,left+1,right+1);
+        if( T ) {  printf("\n");  }
+    }
+    return 0;
+}
+//附测试数据
+/*
+    4 0 0 2 0 -&gt; 2 1 3
+    6 2 7 -9 5 4 3 -&gt; 12 1 6
+    4 0 0 -1 0 -&gt; 0 1 1
+    7 -1 -2 -3 -2 -5 -1 -2 -&gt; -1 1 1
+    6 -1 -2 -3 1 2 3 -&gt; 6 4 6
+    5 -3 -2 -1 -2 -3 -&gt; -1 3 3
+*/
+</code></pre>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

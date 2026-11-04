@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 前言
+花了几个小时复习自控，其中最后看的内容是关于泛函的，做个笔记，谈谈自己对它的理解。
+
+
+### 2. 瞎想
+看到泛函的定义之后，我的第一反应是 这不就是将二维空间的函数上升了一个维度么。说起来，数学和物理领域很多概念都是在原有基础上进行维度的扩展得到的，不过进一步思考，泛函还可"><title>浅谈泛函、极值及最优化控制问题 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-control01/"><meta property="og:title" content="浅谈泛函、极值及最优化控制问题"><meta property="og:description" content="
+### 1. 前言
+花了几个小时复习自控，其中最后看的内容是关于泛函的，做个笔记，谈谈自己对它的理解。
+
+
+### 2. 瞎想
+看到泛函的定义之后，我的第一反应是 这不就是将二维空间的函数上升了一个维度么。说起来，数学和物理领域很多概念都是在原有基础上进行维度的扩展得到的，不过进一步思考，泛函还可"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-control01/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="浅谈泛函、极值及最优化控制问题"><meta name="twitter:description" content="
+### 1. 前言
+花了几个小时复习自控，其中最后看的内容是关于泛函的，做个笔记，谈谈自己对它的理解。
+
+
+### 2. 瞎想
+看到泛函的定义之后，我的第一反应是 这不就是将二维空间的函数上升了一个维度么。说起来，数学和物理领域很多概念都是在原有基础上进行维度的扩展得到的，不过进一步思考，泛函还可"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年3月8日</time></div><h1>浅谈泛函、极值及最优化控制问题</h1><div class="archive-tags"><span>functional</span><span>optimal control</span></div></header><div class="prose"><h3>1. 前言</h3>
+<p>花了几个小时复习自控，其中最后看的内容是关于泛函的，做个笔记，谈谈自己对它的理解。</p>
+<h3>2. 瞎想</h3>
+<p>看到泛函的定义之后，我的第一反应是 这不就是将二维空间的函数上升了一个维度么。说起来，数学和物理领域很多概念都是在原有基础上进行维度的扩展得到的，不过进一步思考，泛函还可以上升到更高维度，简单的是二维空间内的函数对应一个具体数值，即上升到了三维空间，而如果是三维空间内的函数作为自变量(也就是宗量)，那么泛函就应该上升到四维空间了，如此推论，泛函其实可以定义在无限维空间。</p>
+<p>从普通函数的维度扩展上来理解，泛函的很多性质，可以尝试着从原来我们所理解的函数基础上去学习，这样能够简化不少。
+&lt;!--more--&gt;</p>
+<h3>3. 定义</h3>
+<p>维基百科上对泛函的说明: 传统上，泛函（functional）通常是指一种定义域为函数，而值域为实数的"函数"。换句话说，就是从函数组成的一个向量空间到实数的一个映射。也就是说它的输入为函数，而输出为实数。泛函的应用可以追溯到变分法，那里通常需要寻找一个函数用来最小化某个特定泛函。在物理学上，寻找某个能量泛函的最小系统状态是泛函的一个重要应用。在泛函分析中，泛函也用来指一个从任意向量空间到标量域的映射。泛函中的一类特例线性泛函引发了对对偶空间的研究。</p>
+<h3>4. 应用</h3>
+<p>上述说到的寻找求取最小系统状态，便是我要学习泛函的原因之一，在控制系统中，给定状态和性能指标，要求计算出最小系统状态、最优控制或极小值等很常见。利用泛函这种工具，辅以欧拉方程、边界条件、横截条件可以比较方便地求出极值轨线，而对于有约束调节的状态，只是构造欧拉函数不同而已。而对于不受控的控制输入，求取最优控制时可以构造Hamilton函数，利用正则方程、边界条件和横截条件以及极值条件可以求解。最后，对于受控的控制输入，或者其控制变量不可微，那么久需要利用极小值原理，进行求解。</p>
+<h3>5. 无初始状态和末状态的极值轨线的求取</h3>
+<h3>6. 最优控制求取</h3>
+<h4>6.1 控制函数不受约束情况下</h4>
+<h4>6.2 控制函数受约束情况下</h4>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 安装
+下载官方/第三方镜像压缩包, 解压, SD卡插入手机或其他读卡器, dd命令或者Win32DiskImager写入镜像, Over
+之后将SD卡插入树莓派, 供电
+
+
+### 2. ssh连接
+树莓派插上网线, 会自动联网分配一个ip, 可以通过路由器管理界面查看ip地址(如果"><title>Raspberry PI 3 折腾小记一 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-raspberry01/"><meta property="og:title" content="Raspberry PI 3 折腾小记一"><meta property="og:description" content="
+### 1. 安装
+下载官方/第三方镜像压缩包, 解压, SD卡插入手机或其他读卡器, dd命令或者Win32DiskImager写入镜像, Over
+之后将SD卡插入树莓派, 供电
+
+
+### 2. ssh连接
+树莓派插上网线, 会自动联网分配一个ip, 可以通过路由器管理界面查看ip地址(如果"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-raspberry01/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Raspberry PI 3 折腾小记一"><meta name="twitter:description" content="
+### 1. 安装
+下载官方/第三方镜像压缩包, 解压, SD卡插入手机或其他读卡器, dd命令或者Win32DiskImager写入镜像, Over
+之后将SD卡插入树莓派, 供电
+
+
+### 2. ssh连接
+树莓派插上网线, 会自动联网分配一个ip, 可以通过路由器管理界面查看ip地址(如果"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2016年4月9日</time></div><h1>Raspberry PI 3 折腾小记一</h1><div class="archive-tags"><span>raspberrypi</span><span>linux</span></div></header><div class="prose"><h3>1. 安装</h3>
+<p>下载官方/第三方镜像压缩包, 解压, SD卡插入手机或其他读卡器, dd命令或者Win32DiskImager写入镜像, Over
+之后将SD卡插入树莓派, 供电</p>
+<h3>2. ssh连接</h3>
+<p>树莓派插上网线, 会自动联网分配一个ip, 可以通过路由器管理界面查看ip地址(如果网线接在路由器上)
+之后<code>ssh pi@192.168.0.104</code> password:<code>raspberry</code>, 即可连接成功, 默认用户名密码参考<a href="https://github.com/raspberrypi/documentation/blob/master/remote-access/ssh/unix.md">官方文档</a></p>
+<p>官方文档还提到了很多其他远程连接方式, <a href="https://github.com/raspberrypi/documentation/tree/master/remote-access">自行参考</a>
+&lt;!--more--&gt;</p>
+<h3>3. SD卡扩容</h3>
+<p>Kino安装的是raspbian-jessie-lite系统, 占有空间更小一点, 但是、、、
+进入系统后<code>df -h</code>和<code>fdisk -l</code>, 发现16G的SD卡只显示了1.2G, 查找解决方案, 如下:</p>
+<pre tabindex="0" aria-label="代码块"><code>cat /sys/block/mmcblk0/mmcblk0p2/start  # 查看第二分区的起始地址
+sudo fdisk /dev/mmcblk0                 # 用fdisk对磁盘进行操作
+# 以下步骤在fdisk的交互下操作
+d          # 删除分区
+2          # 选择删除第二分区
+n          # 创建一个新分区
+p          # 创建主分区
+2          # 分区2
+131072     # 第一个sector的地址, 填入刚刚得到的第二分区的起始地址
+31116287   # 最后一个sector的地址, 使用默认值即可
+w          # 将操作写入分区表
+sudo init 6             # 重启系统
+df -h                   # 查看发现存储大小没有变化
+fdisk -l                # 可以显示14.8G空间了
+sudo resize2fs /dev/mmcblk0p2     # 操作完成
+df -h                             # 此时可以显示SD卡所有空间
+</code></pre>
+<h3>4. root 权限</h3>
+<p><code>sudo passwd root</code> 设置新密码即可
+顺便允许root用户ssh登录</p>
+<pre tabindex="0" aria-label="代码块"><code>vi /etc/ssh/sshd_config
+找到 PermitRootLogin without-password 并注释
+添加
+PermitRootLogin yes
+service ssh restart   # 重启ssh
+</code></pre>
+<h3>5. 连接Wifi</h3>
+<p>不使用显示器, 想要连接到Wifi</p>
+<pre tabindex="0" aria-label="代码块"><code>iwconfig               # 查看无线接口名, 通常为wlan0
+ip link set wlan0 up   # 启动此接口服务
+iw dev wlan0 scan      # 扫描无线网络
+# iwlist wlan0 scan    # 该命令也可扫描
+iw dev wlan0 scan | grep -n 'ssid' # 用你想要得到的ssid代替, 找到在多少行
+iw dev wlan0 scan | head -113 | tail -58  # 截取一段显示
+</code></pre>
+<p>找到或确认了自己的SSID之后, <code>wpa_passphrase your_ssid your_password</code>, 会生成</p>
+<pre tabindex="0" aria-label="代码块"><code>network={
+  ssid="your_ssid"
+  #psk="your_password"
+  psk=d262144b57c9bce488ca56cdc02344eefe62cb7705f9cea45747a55d022da722
+}
+</code></pre>
+<p><code>vi /etc/wpa_supplicant/wpa_supplicant.conf</code>
+在末尾添加刚刚生成的内容
+之后执行</p>
+<pre tabindex="0" aria-label="代码块"><code>wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf &amp; # 若失败根据提示执行 rm /var/run/wpa_supplicant/wlan0
+dhcpcd wlan0
+iwconfig      # 确认连接成功
+</code></pre>
+<p>或者每次都手动连接, 该方法未经测试</p>
+<pre tabindex="0" aria-label="代码块"><code>ifconfig wlan0 up
+iwconfig wlan0 essid your_ssid key s:your_key   # 不加s: 使用加密后的hex值
+dhclient wlan0
+ifconfig wlan0 down   # 关闭Wifi
+</code></pre>
+<h3>6. 更改软件源</h3>
+<pre tabindex="0" aria-label="代码块"><code># deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi
+# Uncomment line below then 'apt-get update' to enable 'apt-get source'
+# deb-src http://archive.raspbian.org/raspbian/ jessie main contrib non-free rpi
+
+deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ jessie main contrib non-free rpi
+# Uncomment line below then 'apt-get update' to enable 'apt-get source'
+# deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ jessie main contrib non-free rpi
+</code></pre>
+<p>查看中科大树莓派镜像说明, <a href="https://lug.ustc.edu.cn/wiki/mirrors/help/raspbian">Here</a></p>
+<h3>7. 设置静态IP地址</h3>
+<p>为了防止每次重启会获得不同的IP地址
+<code>vim /etc/dhcpcd.conf</code>, 对于有线网卡, 在末尾添加:</p>
+<pre tabindex="0" aria-label="代码块"><code>interface eth0
+static ip_address=192.168.1.200/24      #用CIDR的格式配置地址
+static routers-192.168.1.1              #配置网关
+static domain_name_servers=192.168.1.1  #这里配置域名服务器地址  
+</code></pre>
+<p>对于无线网卡, 在末尾添加:</p>
+<pre tabindex="0" aria-label="代码块"><code>interface wlan0
+static ip_address=192.168.1.20/24
+static routers=192.168.1.1
+static domain_name_servers=119.29.29.29 8.8.8.8 8.8.4.4
+</code></pre>
+<p>以下是较老版本系统或者未使用dhcpcd软件系统的配置:
+<code>vim /etc/network/interfaces</code>
+如果设置有线网卡地址:</p>
+<pre tabindex="0" aria-label="代码块"><code>iface eth0 inet static
+address 192.168.1.200   # 设定的静态IP地址
+netmask 255.255.255.0   # 网络掩码
+gateway 192.168.1.1     # 网关
+</code></pre>
+<p>若是无线网卡:</p>
+<pre tabindex="0" aria-label="代码块"><code>iface wlan0 inet static
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+address 192.168.1.200 # 设定的静态IP地址
+netmask 255.255.255.0 # 网络掩码
+gateway 192.168.1.1   # 网关
+network 192.168.1.1   # 网络地址
+</code></pre>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

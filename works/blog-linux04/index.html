@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. Ubuntu ssh 登录提示信息
+修改`/etc/issue`和`/etc/motd`
+前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者
+
+
+### 2. curl post json数据
+`curl -H &quot;Content-Type: "><title>Linux琐记四 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-linux04/"><meta property="og:title" content="Linux琐记四"><meta property="og:description" content="
+### 1. Ubuntu ssh 登录提示信息
+修改`/etc/issue`和`/etc/motd`
+前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者
+
+
+### 2. curl post json数据
+`curl -H &quot;Content-Type: "><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-linux04/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Linux琐记四"><meta name="twitter:description" content="
+### 1. Ubuntu ssh 登录提示信息
+修改`/etc/issue`和`/etc/motd`
+前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者
+
+
+### 2. curl post json数据
+`curl -H &quot;Content-Type: "><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2016年4月10日</time></div><h1>Linux琐记四</h1><div class="archive-tags"><span>linux</span></div></header><div class="prose"><h3>1. Ubuntu ssh 登录提示信息</h3>
+<p>修改<code>/etc/issue</code>和<code>/etc/motd</code>
+前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者</p>
+<h3>2. curl post json数据</h3>
+<p><code>curl -H "Content-Type: application/json" -X POST -d '{"id":"1","password":"miao"}' http://api</code>
+在post的data中使用变量:</p>
+<pre tabindex="0" aria-label="代码块"><code>currentTime=`date +%s`
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" -X POST \
+--data '{"time":"'"$currentTime"'","message":"hypocrisy"}' "https://yourhost:port/api"
+</code></pre>
+<p>循环post:</p>
+<pre tabindex="0" aria-label="代码块"><code>#!/bin/bash
+
+i=10
+while [ $i -gt 0 ]
+do 
+    curl -d '{"data":"message"}' http://host:port/api
+    i=$(( $i-1 ))
+    echo $i
+    #let i=i-1
+done
+</code></pre>
+<p>&lt;!--more--&gt;</p>
+<h3>3. Linux权限</h3>
+<p>-rwxr-xr-x 中rwx不是最高权限, 还有sudo权限 -rwsr-xr-x, 方法是:
+<code>chmod u+s /usr/bin/someprogram</code></p>
+<h3>4. sh和bash差距很大吗</h3>
+<p>在crontab中加入<code>* * * * * sh /home/hypocrisy/myshell.sh</code>, 一直无法运行, 执行到<code>i=60</code>显示60 not found, 我也没有加空格, 改为<code>* * * * * bash /home/hypocrisy/myshell.sh</code>, 竟然好了、、默认就是bash为何sh和bash结果还不同?</p>
+<h3>5. 设置系统时间</h3>
+<p>树莓派没有硬件时钟, 局域网环境无法联网导致Linux系统时间也不对</p>
+<pre tabindex="0" aria-label="代码块"><code>date -s 04/10/16`
+date -s 10:10:10
+date -s 0410161010.10  # MMDDhhmmYYYY.ss
+</code></pre>
+<p>更改时区:
+<code>tzselect</code>得到命令, 将其添加到.profile或.bashrc中</p>
+<h3>6. Python post data</h3>
+<pre tabindex="0" aria-label="代码块"><code>import json
+import urllib2
+
+data = {'id': 1, 'message': 'hypocrisy'}
+
+req = urllib2.Request('http://example.com/api/posts/create')
+req.add_header('Content-Type', 'application/json')
+
+response = urllib2.urlopen(req, json.dumps(data))
+</code></pre>
+<h3>7. shell获取本机ip地址并保存在变量中</h3>
+<p><code>ip -o -4 addr list eth0 | awk '{print $4}' | cut -d/ -f1</code>
+<code>ifconfig eth0 | grep -E "inet\b" | awk '{print $2}' | cut -d: -f2</code></p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

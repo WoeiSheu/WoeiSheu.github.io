@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. HTTP代理
+在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了
+
+
+### 2. Shadowsocks服务端配置
+曾在DigitalOcean上自建了一个Shadowsocks服务端，虽"><title>Shadowsocks 高级教程 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-shadowsocks/"><meta property="og:title" content="Shadowsocks 高级教程"><meta property="og:description" content="
+### 1. HTTP代理
+在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了
+
+
+### 2. Shadowsocks服务端配置
+曾在DigitalOcean上自建了一个Shadowsocks服务端，虽"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-shadowsocks/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Shadowsocks 高级教程"><meta name="twitter:description" content="
+### 1. HTTP代理
+在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了
+
+
+### 2. Shadowsocks服务端配置
+曾在DigitalOcean上自建了一个Shadowsocks服务端，虽"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年7月19日</time></div><h1>Shadowsocks 高级教程</h1><div class="archive-tags"><span>proxy</span><span>shadowsocks</span></div></header><div class="prose"><h3>1. HTTP代理</h3>
+<p>在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了</p>
+<h3>2. Shadowsocks服务端配置</h3>
+<p>曾在DigitalOcean上自建了一个Shadowsocks服务端，虽然后来被封了，但幸而在电脑上记录下一下重点，Shadowsocks服务端的配置文件为:</p>
+<pre tabindex="0" aria-label="代码块"><code>#ipv4
+{
+    "server":"0.0.0.0",
+    "server_port":443,      #经尝试，443端口比其他端口要快一点
+    "local_port":1080,
+    "password":"******",
+    "timeout":600,
+    "method":"aes-256-cfb"
+}
+#ipv6
+{
+    "server":"::",
+    "server_port":443,
+    "local_port":1080,
+    "password":"******",
+    "timeout":600,
+    "method":"aes-256-cfb"
+}
+</code></pre>
+<p>&lt;!--more--&gt;</p>
+<h3>3. Shadowsocks服务端的安装</h3>
+<p>源码在<a href="https://github.com/shadowsocks/shadowsocks">此处</a>
+先安装pip再安装SS：</p>
+<pre tabindex="0" aria-label="代码块"><code>apt-get install python-pip
+pip install shadowsocks
+</code></pre>
+<p>如果默认Python版本不对则需要先安装Python，不赘述。</p>
+<h3>4. Shadowsocks服务端的启动与关闭</h3>
+<pre tabindex="0" aria-label="代码块"><code>ssserver -c config -d start
+ssserver -c config -d stop
+</code></pre>
+<p>其中config即前面配好的配置文件</p>
+<h3>5. 检查日志</h3>
+<p><code>sudo less /var/log/shadowsocks.log</code></p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

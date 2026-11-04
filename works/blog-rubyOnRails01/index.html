@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 相关概念
+#### 1.1 session
+多数Web框架都有某种形式的Session管理: 为特定于某个客户端浏览会话的数据提供一个持久化的服务器端存储机制
+Rails session存储方法提供了如下特性:
++ 机密性(Confidentiality): 除了服务器无人能读取在s"><title>Rails Session · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-rubyOnRails01/"><meta property="og:title" content="Rails Session"><meta property="og:description" content="
+### 1. 相关概念
+#### 1.1 session
+多数Web框架都有某种形式的Session管理: 为特定于某个客户端浏览会话的数据提供一个持久化的服务器端存储机制
+Rails session存储方法提供了如下特性:
++ 机密性(Confidentiality): 除了服务器无人能读取在s"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-rubyOnRails01/"><meta property="og:image" content="https://xuwei.fun/media/blog-rubyOnRails01/8cdcc804fe31d2ed.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Rails Session"><meta name="twitter:description" content="
+### 1. 相关概念
+#### 1.1 session
+多数Web框架都有某种形式的Session管理: 为特定于某个客户端浏览会话的数据提供一个持久化的服务器端存储机制
+Rails session存储方法提供了如下特性:
++ 机密性(Confidentiality): 除了服务器无人能读取在s"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2016年3月7日</time></div><h1>Rails Session</h1><div class="archive-tags"><span>ruby</span><span>rails</span><span>session</span><span>csrf-token</span></div></header><figure class="work-cover"><img src="/media/blog-rubyOnRails01/8cdcc804fe31d2ed.webp" srcset="/media/blog-rubyOnRails01/8cdcc804fe31d2ed.webp 583w" sizes="(max-width: 650px) 100vw, 1200px" alt="Rails Session" width="583" height="239"></figure><div class="prose"><h3>1. 相关概念</h3>
+<h4>1.1 session</h4>
+<p>多数Web框架都有某种形式的Session管理: 为特定于某个客户端浏览会话的数据提供一个持久化的服务器端存储机制
+Rails session存储方法提供了如下特性:</p>
+<ul>
+<li>机密性(Confidentiality): 除了服务器无人能读取在session中的数据</li>
+<li>完整性(Integrity): 服务器端之外无人能修改存储在session中的数据,除非抛弃旧的session再获取一个新的</li>
+</ul>
+<p>Rails可以将所有session数据存储在服务器端,或者是基于cookies的session存储方案</p>
+<h4>2.2 csrf</h4>
+<p>跨站请求伪造(Cross-Sire Reuqest Forgery)攻击的步骤如下:</p>
+<ul>
+<li>通过被攻破的服务器或者攻击者在第三方Web站点上的script/img标签(很可能是通过XSS放置的),客户端可以从攻击者处接收代码。代码引用了目标应用程序上执行某个action的URI</li>
+<li>客户端请求来自目标应用程序的URI,发送认证cookies(因为客户端已经通过了目标站点的认证)。目标站点会执行客户端要的action,即使最终用户没有授权该action</li>
+</ul>
+<p>用图表示:
+<img src="/media/blog-rubyOnRails01/8cdcc804fe31d2ed.webp" alt="csrf" /></p>
+<p>&lt;!--more--&gt;</p>
+<h3>2. 问题</h3>
+<p>redirect_to 到 某页面认证,之后post数据回来, session为null. 具体过程是用户访问A站点, A站点会验证用户的session, 若空session, 则跳转到B站点登录, 在B站点登录成功后, B站点后端会post登录用户的信息到A站点的一个api, 同时B站点再跳转回A, A站点通过B Post过来的数据进行用户验证, 保存Session, 于是用户愉快地登录了。然而我的问题是 B站点跳转回A的时候发现Session仍然是null, 于是陷入了无限跳转过程中。</p>
+<h3>3. 解决</h3>
+<p>假设B Post数据到A 的api是 http://hostofa:port/user, 而A在UserController的create方法中处理该事件, 则</p>
+<pre tabindex="0" aria-label="代码块"><code>class SafeController &lt; ApplicationController
+layout false
+def create
+// code to dispose data from B, then save session
+end
+</code></pre>
+<p>以上为原代码, 无法生成session, 调试发现根本无法进入cretae方法
+修改后的代码为:</p>
+<pre tabindex="0" aria-label="代码块"><code>class SafeController &lt; ApplicationController
+protect_from_forgery :except =&gt; :create
+layout false
+def create
+// code to dispose data from B, then save session
+end
+</code></pre>
+<p>问题得以解决。其实原因就是由于ApplicationController中会默认启用protect_from_forgery, 由于csrf的机制, A站点无法处理B站点Post过来的数据, 所以只要针对性的开放某api即可</p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

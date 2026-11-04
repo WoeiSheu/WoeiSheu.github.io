@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 前言
+智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久~动手写起来还是漏洞百出
+主要参考了[这篇博客](http://blog.csdn.net/acm_cxlove/article/details/7745323)的内容
+英文描述此问题可参见[此处](http://ww"><title>九宫格(八数码)问题 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-algorithm02/"><meta property="og:title" content="九宫格(八数码)问题"><meta property="og:description" content="
+### 1. 前言
+智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久~动手写起来还是漏洞百出
+主要参考了[这篇博客](http://blog.csdn.net/acm_cxlove/article/details/7745323)的内容
+英文描述此问题可参见[此处](http://ww"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-algorithm02/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="九宫格(八数码)问题"><meta name="twitter:description" content="
+### 1. 前言
+智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久~动手写起来还是漏洞百出
+主要参考了[这篇博客](http://blog.csdn.net/acm_cxlove/article/details/7745323)的内容
+英文描述此问题可参见[此处](http://ww"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年5月29日</time></div><h1>九宫格(八数码)问题</h1><div class="archive-tags"><span>cpp</span><span>eightpuzzle</span></div></header><div class="prose"><h3>1. 前言</h3>
+<p>智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久~动手写起来还是漏洞百出
+主要参考了<a href="http://blog.csdn.net/acm_cxlove/article/details/7745323">这篇博客</a>的内容
+英文描述此问题可参见<a href="http://www.aiai.ed.ac.uk/~gwickler/-inf.html">此处</a></p>
+<p>&lt;!--more--&gt;</p>
+<h3>2. 实现</h3>
+<h4>2.1 定义一个图的节点类</h4>
+<pre tabindex="0" aria-label="代码块"><code>class VertexOfGraph {       //定义图的节点类
+public:
+    int vertex[3][3];
+    int h,g;
+    int x,y;
+    string hashValue;
+
+public:
+    VertexOfGraph() {       //构造函数将成员变量初始化为0和空
+        x = 0;
+        y = 0;
+        h = 0;
+        g = 0;
+        hashValue = "";
+    };
+    bool isValid() {        //判断当前状态是否有效,如果超出边界范围则无效
+        if(x &gt;= 0 &amp;&amp; x &lt; 3 &amp;&amp; y &gt;= 0 &amp;&amp; y &lt; 3) {
+            return true;
+        }
+        return false;
+    }
+    void newStatus(int oldX, int oldY) {    //将现在存储的空位位置x,y与oldX,oldY对应的位置交换数值,得到新状态
+        int temp = vertex[x][y];
+        vertex[x][y] = vertex[oldX][oldY];
+        vertex[oldX][oldY] = temp;
+    }
+};
+</code></pre>
+<p>为了方便将类的成员变量都定义为public类型，省去了set、get方法，类中的h、g并没有用到，初始化都置0了，作为以后扩展用，主要是用于启发式搜索中的估价函数，搜索得到比较常用的启发式搜索方法有A*搜索，目前的算法都没有用到~</p>
+<h4>2.2 输入功能</h4>
+<p>输入功能必须要有,就控制台输入了, 可以把代码移到C#上，用Winform做一个GUI界面~</p>
+<pre tabindex="0" aria-label="代码块"><code>int origin[3][3],target[3][3];
+</code></pre>
+<p>定义3*3的数组表示九宫格的九个数字, origin分别为初始状态和目标状态, 循环读入即可. 至于为何不使用1*9的一维数组, 照顾要是考虑到后续搜索路径的问题, 3*3的路径比较容易设计, 其中一个数组下标变化1即可, 而对于1*9, 感觉有点复杂(后来发现其实并不是, 将下标分别+-3和+-1就得到了四个路径, 再判断新状态是否有效即可, 好像还比3*3简单点)</p>
+<h4>2.3 状态判重</h4>
+<p>对于每个状态必须判重，也要判断是否与目标状态相同，如果是将9个元素逐个比较，太耗时，肯定是得用到hash，hash方法<a href="http://www.cnblogs.com/goodness/archive/2010/05/04/1727141.html">http://www.cnblogs.com/goodness/archive/2010/05/04/1727141.html</a>中的境界二有提到，但是我没看懂~"逆序值"这个词写的不清楚，感觉应该是排列组合中的一个名词，但是搜出来的都不对，于是自己设计个不能称之为hash的hash函数, 因为这个方法的信息量没有压缩, 是可逆的
+对于每种状态只需要唯一对应一个值即可，于是想着把每种状态的数字串成字符串当作hash值，这肯定不是好方法，至少本来只需要9!=362880个int型元素就能存下所有状态，而现在对于每种状态都是一个9位长的字符串~不过有一个好处就是存储的信息相对而言多了, 对于最后输出所有路径有所帮助。</p>
+<pre tabindex="0" aria-label="代码块"><code>string getHash(int v[3][3]) {                           //将状态的数字排序转换为字符串,作为hash值
+    string hashString = "";
+    for(int i = 0; i &lt; 3; i++) {
+        for(int j = 0; j &lt; 3; j++) {
+            stringstream sstream;
+            string str;
+            sstream &lt;&lt; v[i][j];                          //注意sstream输入是&lt;&lt;而不是iostream的&gt;&gt;
+            sstream &gt;&gt; str;
+            hashString += str;
+        }
+    }
+    return hashString;
+}
+</code></pre>
+<h4>2.4 建立初始表结构</h4>
+<p>根据给定初始状态建立初始的表结构，找到0的位置即为可移动的空格位置并记录，找到得到hash值并记录</p>
+<pre tabindex="0" aria-label="代码块"><code>VertexOfGraph createGraph(int vertex[3][3]) {
+    VertexOfGraph returnGraph;
+    for(int i=0; i &lt; 3; i++) {
+        for(int j = 0; j &lt;3; j++) {
+            returnGraph.vertex[i][j] = vertex[i][j];
+            if(vertex[i][j] == 0) {
+                returnGraph.x = i;
+                returnGraph.y = j;
+            }
+        }
+    }
+    returnGraph.hashValue = getHash(vertex);
+
+    return returnGraph;
+}
+</code></pre>
+<h4>2.5 bfs广度搜索</h4>
+<p>搜索结果返回一个map表，将每一状态转换之后的状态作为key值，原状态作为value，一一对应保存起来，最后通过此表可得到实际路径</p>
+<pre tabindex="0" aria-label="代码块"><code>map&lt;string,string&gt; bfsSearch(VertexOfGraph graph,string targetHash,map&lt;string,bool&gt; visited) {
+    int direction[4][2] = { {-1,0}, {0,1}, {1,0}, {0,-1} };
+    queue&lt;VertexOfGraph&gt; que;
+    que.push(graph);
+    map&lt;string,string&gt; route;
+
+    while(!que.empty()) {
+        VertexOfGraph movingVertex = que.front();
+        //cout &lt;&lt; movingVertex.hashValue &lt;&lt; endl;       //测试遍历结果
+        VertexOfGraph savingVertex = movingVertex;
+        que.pop();
+
+        for(int i = 0; i &lt; 4; i++) {
+            movingVertex = savingVertex;
+            movingVertex.x = savingVertex.x + direction[i][0];
+            movingVertex.y = savingVertex.y + direction[i][1];
+            if(!movingVertex.isValid()) {
+                continue;
+            } else {
+                movingVertex.newStatus(savingVertex.x, savingVertex.y);
+                movingVertex.hashValue = getHash(movingVertex.vertex);
+                if(visited.find(movingVertex.hashValue)==visited.end()) {
+                    visited[movingVertex.hashValue] = true;
+                    route[movingVertex.hashValue] = savingVertex.hashValue;
+
+                    que.push(movingVertex);
+                }
+                if(movingVertex.hashValue == targetHash) {
+                    return route;
+                }
+            }
+        }
+    }
+    return route;
+}
+</code></pre>
+<p>bfs的想法是，从第一个状态开始遍历可能的所有状态，对于当前状态，找出其可以转换的状态，将他们全部放入队列的尾部，保存route，并判断他们是否是目标状态，若是，返回route退出，否则不停取出队列的头元素，执行相同操作</p>
+<h4>2.6 找回实际路径</h4>
+<p>从route和目标hash值中找回实际路径，并输出</p>
+<pre tabindex="0" aria-label="代码块"><code>void display(map&lt;string,string&gt; searchRoute,string targetHash) {
+    stack&lt;string&gt; shortestRoute;
+    shortestRoute.push(targetHash);
+
+    string nextWay = targetHash;
+    while( searchRoute.find(nextWay) != searchRoute.end() ) {
+        nextWay = searchRoute[nextWay];
+        shortestRoute.push(nextWay);
+    }
+
+    cout &lt;&lt; endl;
+    int counts = 0;
+    while( !shortestRoute.empty() ) {
+        string displayString = shortestRoute.top();
+        shortestRoute.pop();
+
+        if( (counts == 0) &amp;&amp; (displayString == targetHash) ) {       //如果堆栈内只有一个字符串元素,且等于targetHash,那么说明遍历了所有的状态也无法达到目标状态
+            cout &lt;&lt; "Sorry, but you can not reach the target status, and you can try another status instead." &lt;&lt; endl;
+            break;
+        }
+
+        cout &lt;&lt; "Step " &lt;&lt; counts &lt;&lt; " :";
+        counts++;
+        for(unsigned int i = 0; i &lt; displayString.length(); i++) {
+            if( i % 3 == 0 ) {
+                cout &lt;&lt; endl;
+            }
+            cout &lt;&lt; displayString.substr(i,1) &lt;&lt; ' ';
+        }
+        cout &lt;&lt; endl;
+    }
+    if( counts &gt; 1 ) {
+        cout &lt;&lt; "Totally, you used " &lt;&lt; counts-1 &lt;&lt; " steps to the target status." &lt;&lt; endl;
+    }
+}
+</code></pre>
+<h3>源码</h3>
+<p>源码可以在<a href="https://github.com/zhen-yu/Miscellaneous/tree/master/SquaredUp/CPP">这里</a>看到</p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 进程同步和P、V操作
+若有三个并发进程互斥，如果利用信号灯方式控制其同步关系，那么三个进程的同步过程如下图：
+![first](/images/operatingSystem06_1.png)
+
+### 2. Linux系统功能调用的实现机制
+
+#### 2.1 Linux系统调用的"><title>操作系统六 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-operatingSystem06/"><meta property="og:title" content="操作系统六"><meta property="og:description" content="
+### 1. 进程同步和P、V操作
+若有三个并发进程互斥，如果利用信号灯方式控制其同步关系，那么三个进程的同步过程如下图：
+![first](/images/operatingSystem06_1.png)
+
+### 2. Linux系统功能调用的实现机制
+
+#### 2.1 Linux系统调用的"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-operatingSystem06/"><meta property="og:image" content="https://xuwei.fun/media/blog-operatingSystem06/90abe4a0a99c8293.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="操作系统六"><meta name="twitter:description" content="
+### 1. 进程同步和P、V操作
+若有三个并发进程互斥，如果利用信号灯方式控制其同步关系，那么三个进程的同步过程如下图：
+![first](/images/operatingSystem06_1.png)
+
+### 2. Linux系统功能调用的实现机制
+
+#### 2.1 Linux系统调用的"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年10月22日</time></div><h1>操作系统六</h1><div class="archive-tags"><span>operating system</span></div></header><figure class="work-cover"><img src="/media/blog-operatingSystem06/90abe4a0a99c8293.webp" srcset="/media/blog-operatingSystem06/90abe4a0a99c8293.webp 612w" sizes="(max-width: 650px) 100vw, 1200px" alt="操作系统六" width="612" height="792"></figure><div class="prose"><h3>1. 进程同步和P、V操作</h3>
+<p>若有三个并发进程互斥，如果利用信号灯方式控制其同步关系，那么三个进程的同步过程如下图：
+<img src="/media/blog-operatingSystem06/90abe4a0a99c8293.webp" alt="first" /></p>
+<h3>2. Linux系统功能调用的实现机制</h3>
+<h4>2.1 Linux系统调用的进入</h4>
+<p>Linux系统的软中断指令是汇编语言指令int 0x80，执行该指令会发生中断，处理机的状态由用户态自陷到内核态(在更新的芯片中添加了sysenter汇编语言指令等)。int 0x80指令使用的异常向量号是128(即16进制的80)，该异常向量包含了内核系统调用程序的入口地址。在内核初始化时，已将系统调用处理程序的入口地址送入向量128的中断描述符表表项中，设置段地址为内核开始的地方，段内偏移则指向系统调用处理程序system_call()。当应用程序请求操作系统服务，发出int 0x80指令时，就会从用户态自陷到内核态，并从system_call()开始执行系统调用处理程序。当系统调用处理完毕后，通过iret汇编语言指令返回到用户态。
+&lt;!--more--&gt;</p>
+<h4>2.2 系统调用号和系统调用表</h4>
+<h5>2.2.1 系统调用号</h5>
+<p>在Linux中，每个系统调用被赋予一个唯一的系统调用号。用户空间的进程通过系统调用号指明要执行的具体系统调用
+系统调用号定义在include/asm-i386/unistd.h头文件中，这个头文件定义了该系统所有的系统调用号。格式如下：</p>
+<pre tabindex="0" aria-label="代码块"><code>#define _NR_restart_syscall   0
+#define _NR_exit              1
+#define _NR_fork              2
+#define _NR_read              3
+#define _NR_write             4
+#define _NR_open              5
+......
+......
+#define _NR_mq_getsetattr     282
+</code></pre>
+<p>该文件中的每一行表示为#define_NR_name NNN，其中，"<em>NR</em>"是一种约定，name为系统调用的名称，而NNN则是该系统调用对应的号码。该文件的最后，还定义了几个与系统调用相关的关键的宏。</p>
+<h5>2.2.2 系统调用表</h5>
+<p>系统调用表记录了内核中所有已注册的系统调用，它是系统调用的跳转表，实际上是一个函数指针数组，表中依次保存所有系统调用的函数指针，以方便总的系统调用处理函数system_call进行索引。Linux系统调用表保存在arch/i386/kernel/下的entry.S中，其形式如下：</p>
+<pre tabindex="0" aria-label="代码块"><code>ENTRY(sys_call_table)
+.long sys_restart_syscall       /* 0 */
+.long sys_exit                  /* 1 */
+.long sys_fork                  /* 2 */
+.long sys_read                  /* 3 */
+.long sys_write                 /* 4 */
+.long sys_open                  /* 5 */
+......
+......
+.long sys_mq_getsetattr         /* 6 */    
+</code></pre>
+<p>文件中有许多.long SYMBOL_NAME(sys_ni_syscall)的结构，"."代表当前地址，"sys_call_table"代表数组首地址</p>
+<h4>2.3 系统调用处理程序</h4>
+<p>系统调用处理程序是system_call()，该函数的主要工作如下。</p>
+<ul>
+<li>通过宏SAVE_ALL保护异常处理程序中要用到的所有寄存器到寄存器到内核堆栈中，其中，指令地址和处理机状态已在中断进入过程中保护(eflags、cs、eip、ss、esp寄存器除外)</li>
+<li>进行系统调用正确性检查，如对用户态进程传递来的系统调用号进行有效性检查，若该号大于或等于系统调用表的表项数，系统调用处理程序就终止</li>
+<li>根据eax中所包含的系统调用号，调用其对应的服务例程</li>
+<li>系统服务例程结束时，通过宏RESTORE_ALL恢复寄存器，最后通过iret指令返回</li>
+</ul>
+<h3>3. 增加一个新的系统调用方法</h3>
+<p>如果需要扩充Linux系统的功能，增加一个新的系统调用需要做的工作包括以下几个方面：</p>
+<ul>
+<li>描述新增加功能的服务例程</li>
+<li>增加一个新的系统调用号</li>
+<li>在系统调用表中登记新的系统调用号以及对应的服务例程</li>
+<li>新增加的服务例程要被Linux系统接受，必须重新编译内核，生成新的包含新增服务例程的内核</li>
+</ul>
+<p>当要增加一个新的系统调用时，首先要确定新增的服务例程的名字，因为确定了这个名字后，在系统调用中的几个相关的名字也就确定了。如:</p>
+<ul>
+<li>新增加的系统调用名为mysyscall</li>
+<li>系统调用的编号名字为_NR_mysyscall</li>
+<li>内核中系统调用服务例程的名字为sys_mysyscall</li>
+</ul>
+<h4>3.1 添加新的服务例程</h4>
+<p>编写新增的服务例程加到内核中去，即在/usr/src/linux/kernel/sys.c文件中增加一个新的函数，该函数的名字是sys_mysyscall。函数体内是新增加的功能描述，在Linux系统增加一个新的系统调用时，首先要保证整个控制过程正确，所以在开始调试时，新增功能尽量简单，如下例，其功能是返回一个整形值。</p>
+<pre tabindex="0" aria-label="代码块"><code>asmlinkage int sys_mycall(int number) {
+    return number;
+}
+</code></pre>
+<h4>3.2 增加新的系统调用号</h4>
+<p>定义系统调用号，在文件include/asm-i386/unistd.h中添加一项
+<code>#define _NR_mysyscall XX</code>
+XX 为增加的系统调用号，此数字选一未用值，一般在已定义的系统调用号的最后增加一项，如下所示：</p>
+<pre tabindex="0" aria-label="代码块"><code>#define _NR_restart_syscall    0
+#define _NR_exit                      1
+#define _NR_fork                     2
+#define _NR_read                    3
+#define _NR_write                   4
+#define _NR_open                   5
+......
+......
+#define _NR_mq_getsetattr    282
+#define _NR_mysyscall            283
+</code></pre>
+<h4>3.3 修改系统调用表</h4>
+<p>在文件/arch/i386/kernel/entry.S中的系统调用表 sys_call_table中添加新增的系统调用，sys_call_table数组包含指向内核中每个系统调用的指针，这样就在数组中增加了新的内核函数的指针。在清单最后添加一行。如下所示：</p>
+<pre tabindex="0" aria-label="代码块"><code>ENTRY(sys_call_table)
+.long sys_restart_syscall       /* 0 */
+.long sys_exit                         /* 1 */
+.long sys_fork                        /* 2 */
+.long sys_read                       /* 3 */
+.long sys_write                      /* 4 */
+.long sys_open                      /* 5 */
+......
+......
+.long sys_mq_getsetattr       /* 6 */
+.long sys_mysyscall               /* 7 */
+</code></pre>
+<h4>3.4 重新编译内核并启动新内核</h4>
+<p>为使新的系统调用生效，需要重建Linux的内核。
+对于不同的计算机配置、Linux不同的版本等，重新编译内核命令可能会有所不同。</p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

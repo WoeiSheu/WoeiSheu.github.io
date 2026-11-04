@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 简介
+> ViewPager需要import android.support.v4这个jar包才可以使用
+> ViewPager的效果就是能够轻松实现左右滑动屏幕, 不需要使用GestureDetector。在ViewPager的内部可以嵌入PagerTitleStrip或Pager"><title>Android ViewPager的使用 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-android03/"><meta property="og:title" content="Android ViewPager的使用"><meta property="og:description" content="
+### 1. 简介
+> ViewPager需要import android.support.v4这个jar包才可以使用
+> ViewPager的效果就是能够轻松实现左右滑动屏幕, 不需要使用GestureDetector。在ViewPager的内部可以嵌入PagerTitleStrip或Pager"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-android03/"><meta property="og:image" content="https://xuwei.fun/media/blog-android03/617dc5d35e15b8de.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Android ViewPager的使用"><meta name="twitter:description" content="
+### 1. 简介
+> ViewPager需要import android.support.v4这个jar包才可以使用
+> ViewPager的效果就是能够轻松实现左右滑动屏幕, 不需要使用GestureDetector。在ViewPager的内部可以嵌入PagerTitleStrip或Pager"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2014年9月1日</time></div><h1>Android ViewPager的使用</h1><div class="archive-tags"><span>android</span><span>viewpager</span></div></header><figure class="work-cover"><img src="/media/blog-android03/617dc5d35e15b8de.webp" srcset="/media/blog-android03/617dc5d35e15b8de.webp 315w" sizes="(max-width: 650px) 100vw, 1200px" alt="Android ViewPager的使用" width="315" height="645"></figure><div class="prose"><h3>1. 简介</h3>
+<blockquote>
+<p>ViewPager需要import android.support.v4这个jar包才可以使用
+ViewPager的效果就是能够轻松实现左右滑动屏幕, 不需要使用GestureDetector。在ViewPager的内部可以嵌入PagerTitleStrip或PagerTabStrip, 可以用来设置显示页面的title内容, 但是不要妄想把它当作Tab来用(虽然我的意图本来就是这样, 但是很悲剧), 因为它不是固定的
+首先获取ViewPager布局mViewPager, 或者自己用Java实现不用xml, 然后要想实现滑动翻页必须得设置它的Adapter, mViewPager.setAdapter(mAdapter)
+而mAdapter应该是一个继承FragmentPagerAdapter或者FragmentStatePagerAdapter的类的实例, 它应该实现滑动时所需要展示的页面, 而这些页面可以另外用一个继承Fragment的类实现, 然后将所需要的这些页面加入一个List中
+需要注意的地方有: 这其中用到的Fragment应使用android.support.v4.app.Fragment而不是android.app.Fragment, FragmentManager也是如此(因为其中用了getSupportFragmentManager方法, 它的返回值是v4包里的FragmentManager)</p>
+</blockquote>
+<p>以上</p>
+<p>&lt;!--more--&gt;</p>
+<h3>2. 项目结构</h3>
+<p><img src="/media/blog-android03/617dc5d35e15b8de.webp" alt="project structure" /></p>
+<h3>3. 布局</h3>
+<p>main.xml:</p>
+<pre tabindex="0" aria-label="代码块"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical" &gt;
+    &lt;android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"&gt;
+
+        &lt;android.support.v4.view.PagerTabStrip
+            android:id="@+id/pager_tab_strip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#636363"
+            android:textColor="#fff"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"/&gt;
+    &lt;/android.support.v4.view.ViewPager&gt;
+&lt;/LinearLayout&gt;
+</code></pre>
+<h3>4. 逻辑代码</h3>
+<h4>4.1 主Java程序:</h4>
+<pre tabindex="0" aria-label="代码块"><code>package com.hecate.Apollo;
+/**
+ * Created by hecate-xw on 2014/8/30.
+ * It's a demo that display how to swipe pages via class ViewPager.
+ */
+import android.support.v4.app.Fragment;
+import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MyActivity extends FragmentActivity {
+    /** 多个页面的list **/
+    List&lt;Fragment&gt; fragmentList = new ArrayList&lt;Fragment&gt;();
+    /** 多个页面的title list,用来显示PagerTabStrip的内容 **/
+    List&lt;String&gt; titleList = new ArrayList&lt;String&gt;();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        ViewPager mViewPager = (ViewPager) findViewById(R.id.pager);
+        fragmentList.add(new MyFragment("page1"));
+        fragmentList.add(new MyFragment("page2"));
+        fragmentList.add(new MyFragment("page3"));
+
+        titleList.add("Artist");
+        titleList.add("Song");
+        titleList.add("Favorite");
+        MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(
+                getSupportFragmentManager(),fragmentList,titleList);
+        mViewPager.setAdapter(myFragmentPagerAdapter);
+    }
+
+    class MyFragmentPagerAdapter extends FragmentPagerAdapter {
+        private List&lt;Fragment&gt; fragmentList;
+        private List&lt;String&gt; titleList;
+
+        public MyFragmentPagerAdapter(FragmentManager supportFragmentManager, List&lt;Fragment&gt; fragmentList, List&lt;String&gt; titleList) {
+            super(supportFragmentManager);
+            this.fragmentList = fragmentList;
+            this.titleList = titleList;
+        }
+
+        @Override
+        public Fragment getItem(int i) {
+            return (fragmentList == null || fragmentList.size() == 0) ? null : fragmentList.get(i);
+        }
+
+        @Override
+        public int getCount() {
+            return ( fragmentList == null ) ? 0 : fragmentList.size();
+        }
+
+        @Override
+        public CharSequence getPageTitle( int position ) {
+            return (titleList.size() &gt; position) ? titleList.get(position) : "";
+        }
+    }
+}
+</code></pre>
+<h4>4.2 MyFragment.java:</h4>
+<pre tabindex="0" aria-label="代码块"><code>package com.hecate.Apollo;
+
+import android.support.v4.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+/**
+ * Created by hecate-xw on 2014/8/30.
+ * Override some methods of class Fragment.
+ */
+public class MyFragment extends Fragment {
+    private String page;
+    public MyFragment(String page) {
+        super();
+        this.page = page;
+    }
+    @Override
+    public View onCreateView( LayoutInflater inflater,
+                              ViewGroup container, Bundle savedInstanceState) {
+        // The last two arguments ensure LayoutParams are inflated
+        // properly.
+        if( "page1".equals(page) ) {
+            View view = inflater.inflate(
+                    R.layout.swipe_fragment_1, container, false);
+            return view;
+        } else if( "page2".equals(page) ) {
+            View view = inflater.inflate(
+                    R.layout.swipe_fragment_2, container, false);
+            return view;
+        } else if( "page3".equals(page) ) {
+            View view = inflater.inflate(
+                    R.layout.swipe_fragment_3, container, false);
+            return view;
+        } else {
+            View view = inflater.inflate(
+                    R.layout.fragment, container, false);
+            return view;
+        }
+    }
+
+}
+</code></pre>
+<h3>5. 测试运行</h3>
+<p>添加相应的资源文件就可以运行了
+打开app开始显示的页面:
+<img src="/media/blog-android03/0c4f6d89a9b446a5.webp" alt="viewpager_page_1" /></p>
+<p>向左滑动一次或者点击PagerTabStrip的第二个Tab:
+<img src="/media/blog-android03/4bb3a4c6758e4c84.webp" alt="viewpager_page_2" /></p>
+<p>再向左滑动一次或者点击PagerTabStrip的第三个Tab:
+<img src="/media/blog-android03/db41659226510022.webp" alt="viewpager_page_3" /></p>
+<p>附上每个page的xml布局文件，随便写的用来测试:
+swipe_fragment_1:</p>
+<pre tabindex="0" aria-label="代码块"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1"&gt;
+
+    &lt;ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView" android:src="@drawable/img1" android:layout_weight="0.66"/&gt;
+    &lt;TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="This is page1"
+            android:id="@+id/textView"/&gt;
+&lt;/LinearLayout&gt;
+</code></pre>
+<p>swipe_fragment_2:</p>
+<pre tabindex="0" aria-label="代码块"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1"&gt;
+
+    &lt;RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"/&gt;
+    &lt;ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"/&gt;
+    &lt;SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar" android:indeterminate="false"/&gt;
+    &lt;Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"/&gt;
+&lt;/LinearLayout&gt;
+</code></pre>
+<p>swipe_fragment_3:</p>
+<pre tabindex="0" aria-label="代码块"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1" android:orientation="vertical"&gt;
+
+    &lt;EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editText"/&gt;
+    &lt;RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"&gt;
+        &lt;RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadioButton1"
+                android:id="@+id/radioButton" android:checked="false"/&gt;
+        &lt;RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadioButton2"
+                android:id="@+id/radioButton2" android:layout_gravity="center_horizontal" android:checked="false"/&gt;
+        &lt;RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadioButton3"
+                android:id="@+id/radioButton3" android:layout_gravity="right" android:checked="false"/&gt;
+    &lt;/RadioGroup&gt;
+    &lt;TextClock
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textClock" android:layout_gravity="center_horizontal" android:layout_weight="0.07"/&gt;
+&lt;/LinearLayout&gt;
+</code></pre>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

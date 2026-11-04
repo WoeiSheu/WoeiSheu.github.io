@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 前言
+之前写过一篇[安装Ubuntu 15.04之后](/2015/05/26/ubuntu01/). 基本上14.04到17.04应该都可以参照, 在自己电脑上这些版本基本都用过, 没什么大问题.
+前两天在实验室把Ubuntu更新到了17.10, 可能是太久没用Gnome桌面了, 比想象"><title>升级Ubuntu 17.10之后 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-ubuntu02/"><meta property="og:title" content="升级Ubuntu 17.10之后"><meta property="og:description" content="
+### 前言
+之前写过一篇[安装Ubuntu 15.04之后](/2015/05/26/ubuntu01/). 基本上14.04到17.04应该都可以参照, 在自己电脑上这些版本基本都用过, 没什么大问题.
+前两天在实验室把Ubuntu更新到了17.10, 可能是太久没用Gnome桌面了, 比想象"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-ubuntu02/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="升级Ubuntu 17.10之后"><meta name="twitter:description" content="
+### 前言
+之前写过一篇[安装Ubuntu 15.04之后](/2015/05/26/ubuntu01/). 基本上14.04到17.04应该都可以参照, 在自己电脑上这些版本基本都用过, 没什么大问题.
+前两天在实验室把Ubuntu更新到了17.10, 可能是太久没用Gnome桌面了, 比想象"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2017年11月19日</time></div><h1>升级Ubuntu 17.10之后</h1><div class="archive-tags"><span>linux</span><span>ubuntu</span></div></header><div class="prose"><h3>前言</h3>
+<p>之前写过一篇<span class="unavailable-link" title="原文链接缺失或目标尚未收录">安装Ubuntu 15.04之后</span>. 基本上14.04到17.04应该都可以参照, 在自己电脑上这些版本基本都用过, 没什么大问题.
+前两天在实验室把Ubuntu更新到了17.10, 可能是太久没用Gnome桌面了, 比想象中的好、那就用下去呗</p>
+<p>不过也带来了一些问题, 需要一步一步解决</p>
+<p>&lt;!--more--&gt;</p>
+<h3>1. Root登录</h3>
+<p>预警: 一般还是遵循医嘱, 不要学我这种野路子默认root登录...
+两个地方, 一是<code>/etc/gdm3/custom.conf</code>处, 在<code>[Security]</code>下添加<code>AllowRoot=true</code>; 二是<code>/etc/pam.d/gdm-password</code>处, 将<code>auth	required	pam_succeed_if.so user != root quiet_success</code>注释</p>
+<h3>2. Root使用Chrome</h3>
+<p>Unity下使用root登录chrome只需要指定<code>user-data-dir</code>就可以了, gnome不行, 还需要额外指定<code>--no-sandbox</code>, 为了使用以前的<code>user-data-dir</code>和指定<code>no-sandbox</code>, 执行了两步.</p>
+<ul>
+<li>将Chrome的默认配置位置软链接到以前的Data保存位置: <code>ln -s &lt;your-user-data-dir&gt; /root/.config/google-chrome</code></li>
+<li>修改google-chrome可执行文件<code>/usr/bin/google-chrome</code>, 将<code>exec -a "$0" "$HERE/chrome" "$@"</code>改为:<pre tabindex="0" aria-label="代码块"><code>if [[ $EUID -ne 0 ]]; then
+  exec -a "$0" "$HERE/chrome" "$@"
+else
+  exec -a "$0" "$HERE/chrome" "$@" --no-sandbox
+fi
+</code></pre>
+</li>
+</ul>
+<h3>3. 解决出现<code>Invalid MIT-MAGIC-COOKIE-1 key</code>的问题</h3>
+<p>该问题出现在和X桌面相关的程序中, 比如vim运行之后退出就会出现该信息. 解决方法是删除用户目录下的<code>.Xauthority</code>文件即可, 笔者顺手还删了<code>.xsession-errors</code>和<code>.xsession-errors.old</code></p>
+<h3>4. 更改源</h3>
+<p>更新系统之后, <code>/etc/apt/sources.list.d/</code>里添加的第三方源默认会被注释掉, 取消注释, 顺便把冗余文件删除.
+清华的Tuna源很好用, 在上一篇没有提到, 现在改用.</p>
+<h3>5. 卸载Unity</h3>
+<p><code>apt remove unity</code></p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

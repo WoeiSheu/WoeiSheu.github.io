@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 安装Java
+安装的raspbian-jessie-lite系统没有自带Java
+`apt-get install oracle-java7-jdk`
+
+
+### 2. 安装tomcat7
+出现Size mismatch
+`wget http://mirrors.ustc.edu.c"><title>Raspberry PI 3 折腾小记二 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-raspberry02/"><meta property="og:title" content="Raspberry PI 3 折腾小记二"><meta property="og:description" content="
+### 1. 安装Java
+安装的raspbian-jessie-lite系统没有自带Java
+`apt-get install oracle-java7-jdk`
+
+
+### 2. 安装tomcat7
+出现Size mismatch
+`wget http://mirrors.ustc.edu.c"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-raspberry02/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Raspberry PI 3 折腾小记二"><meta name="twitter:description" content="
+### 1. 安装Java
+安装的raspbian-jessie-lite系统没有自带Java
+`apt-get install oracle-java7-jdk`
+
+
+### 2. 安装tomcat7
+出现Size mismatch
+`wget http://mirrors.ustc.edu.c"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2016年4月9日</time></div><h1>Raspberry PI 3 折腾小记二</h1><div class="archive-tags"><span>raspberrypi</span><span>linux</span></div></header><div class="prose"><h3>1. 安装Java</h3>
+<p>安装的raspbian-jessie-lite系统没有自带Java
+<code>apt-get install oracle-java7-jdk</code></p>
+<h3>2. 安装tomcat7</h3>
+<p>出现Size mismatch
+<code>wget http://mirrors.ustc.edu.cn/raspbian/raspbian/pool/main/j/java-common/java-common_0.52_all.deb</code>
+<code>dpkg -i java-common_0.52_all.deb</code>
+再次<code>apt-get install tomcat7</code>
+&lt;!--more--&gt;
+安装成功提示:</p>
+<blockquote>
+<p>Creating config file /etc/default/tomcat7 with new version
+Adding system user <code>tomcat7' (UID 109) ... Adding new user </code>tomcat7' (UID 109) with group <code>tomcat7' ... Not creating home directory </code>/usr/share/tomcat7'.
+Creating config file /etc/logrotate.d/tomcat7 with new version</p>
+</blockquote>
+<p><code>vim /etc/tomcat/server.xml</code> 修改默认webapp位置, <code>mv /var/lib/tomcat7/webapps new_loc</code></p>
+<p>解压war包<code>jar xvf some.war</code>, 将解压出的内容<code>mv * ROOT</code>, 即可根目录访问</p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

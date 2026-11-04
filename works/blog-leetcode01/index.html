@@ -1,0 +1,320 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 前言
+前段时间忙于找工作，因而有正大光明的托词和导师说，11月之后再去做课题相关的事情，也就有了一段较为自由的时间。
+其中诸多准备，免不了在Leetcode上刷题，虽然对于最终的结果来说没有帮助，但刷题过程中遇到了一些解决思路相似的问题，就依次将这些共性问题阐述一遍罢了。
+本系列的第一篇介"><title>Leetcode Summary 01 — Cycle Detection · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-leetcode01/"><meta property="og:title" content="Leetcode Summary 01 — Cycle Detection"><meta property="og:description" content="
+### 前言
+前段时间忙于找工作，因而有正大光明的托词和导师说，11月之后再去做课题相关的事情，也就有了一段较为自由的时间。
+其中诸多准备，免不了在Leetcode上刷题，虽然对于最终的结果来说没有帮助，但刷题过程中遇到了一些解决思路相似的问题，就依次将这些共性问题阐述一遍罢了。
+本系列的第一篇介"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-leetcode01/"><meta property="og:image" content="https://xuwei.fun/media/blog-leetcode01/478599954b3743e9.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Leetcode Summary 01 — Cycle Detection"><meta name="twitter:description" content="
+### 前言
+前段时间忙于找工作，因而有正大光明的托词和导师说，11月之后再去做课题相关的事情，也就有了一段较为自由的时间。
+其中诸多准备，免不了在Leetcode上刷题，虽然对于最终的结果来说没有帮助，但刷题过程中遇到了一些解决思路相似的问题，就依次将这些共性问题阐述一遍罢了。
+本系列的第一篇介"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2018年10月29日</time></div><h1>Leetcode Summary 01 — Cycle Detection</h1><div class="archive-tags"><span>Cycle Detection</span><span>Floyd Cycle Algorithm</span><span>algorithm</span></div></header><figure class="work-cover"><img src="/media/blog-leetcode01/478599954b3743e9.webp" srcset="/media/blog-leetcode01/478599954b3743e9.webp 521w" sizes="(max-width: 650px) 100vw, 1200px" alt="Leetcode Summary 01 — Cycle Detection" width="521" height="187"></figure><div class="prose"><h3>前言</h3>
+<p>前段时间忙于找工作，因而有正大光明的托词和导师说，11月之后再去做课题相关的事情，也就有了一段较为自由的时间。
+其中诸多准备，免不了在Leetcode上刷题，虽然对于最终的结果来说没有帮助，但刷题过程中遇到了一些解决思路相似的问题，就依次将这些共性问题阐述一遍罢了。
+本系列的第一篇介绍的是环检测问题，对应的维基百科页面有<a href="https://en.wikipedia.org/wiki/Cycle_detection">Cycle detection</a>。这类问题最常见的求解算法是Floyd Cycle Algorithm/Floyd's Tortoise and Hare，中文名通常为Floyd判圈算法/龟兔赛跑算法。</p>
+<p>&lt;!--more--&gt;</p>
+<h3>1. 问题描述</h3>
+<p>在计算机科学中，有一类问题称之为<strong>环检测问题</strong>，即对于一个由迭代函数(iterated function)值组成的序列，判断该序列是否有环及环出现的位置。
+关于什么是迭代函数(iterated function)，严格定义可以查看<a href="https://en.wikipedia.org/wiki/Iterated_function">这里</a>，简单来说就是一个函数<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>，其定义域和值域都是集合<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span>，那么对于某个自变量/输入<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span>，其因变量/输出<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span>也可以作为函数<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>的自变量/输入，如此给定一个初始值<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span>，将<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>的每一次输出作为下一次的输入，如此重复<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span>次，就称作函数<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>的第<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span>次迭代。</p>
+<p>对于上述函数<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>，如果其集合<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span>是有限的，那么对于序列:</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo stretchy="false">{</mo><msub><mi>x</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">S = \{x_0, x_1 = f(x_0), x_2 = f(x_1), \cdots, x_i = f(x_{i-1}), \cdots\}</annotation></semantics></math></span>
+<p>那么必然会有两个位置<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span>和<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span>，且<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i &lt; j</annotation></semantics></math></span>，其<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><msub><mi>x</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">x_i = x_j</annotation></semantics></math></span>，一旦出现这种状况，显然在<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span>位置之后，会重复从<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">x_i</annotation></semantics></math></span>到<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">x_{j-1}</annotation></semantics></math></span>的序列。所谓环检测问题，就是给定<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>和<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span>，要求找到<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span>和<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span>。
+当然对于无限集合<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span>，是有可能不存在环的，这取决于<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>和<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span>的共同作用。例如<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f=x^2</annotation></semantics></math></span>，如果<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span>的范围是复数域，那么<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mo>−</mo><mn>1</mn><mo separator="true">,</mo><msup><mi>e</mi><mfrac><mrow><mn>2</mn><mi>π</mi><mrow></mrow><mi>m</mi><mi>i</mi></mrow><mi>n</mi></mfrac></msup></mrow><annotation encoding="application/x-tex">x_0=0,1,-1,e^{\frac{2\pi{}mi}{n}}</annotation></semantics></math></span>，则有环，否则没有。这里<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span>的取值范围是整数，<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span>的取值范围是<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>3</mn><mo separator="true">,</mo><mn>4</mn><mo separator="true">,</mo><mn>6</mn><mo separator="true">,</mo><mn>7</mn><mo separator="true">,</mo><mn>8</mn><mo separator="true">,</mo><mn>12</mn><mo separator="true">,</mo><mn>14</mn><mo separator="true">,</mo><mn>15</mn><mo separator="true">,</mo><mn>16</mn><mo separator="true">,</mo><mn>24</mn><mo separator="true">,</mo><mn>28</mn><mo separator="true">,</mo><mn>30</mn><mo separator="true">,</mo><mn>31</mn><mo separator="true">,</mo><mn>32</mn><mo separator="true">,</mo><mo>⋯</mo></mrow><annotation encoding="application/x-tex">{1,2,3,4,6,7,8,12,14,15,16,24,28,30,31,32,\cdots}</annotation></semantics></math></span>，就不仔细推导了，有兴趣的可以自行推导。</p>
+<h3>2. 求解算法</h3>
+<p>对于上述问题，最常见的算法是Floyd's Tortoise and Hare，其次还有Brent's algorithm和Gosper's algorithm等。
+最直接的想法是记录每次迭代的值，建立一个hash表，这样可以在重复出现时直接定位，但是这种方法空间复杂度太高，故弃。</p>
+<h4>2.1 Floyd's Tortoise and Hare</h4>
+<p>对于问题描述中迭代函数组成的序列，如果存在环，那么对于<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>≥</mo><mrow></mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">i\ge{}\mu</annotation></semantics></math></span>，则<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><msub><mi>x</mi><mrow><mi>i</mi><mo>+</mo><mi>k</mi><mi>λ</mi></mrow></msub></mrow><annotation encoding="application/x-tex">x_i = x_{i+k\lambda}</annotation></semantics></math></span>，其中<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span>是环的长度，<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span>是环的第一个元素出现的位置。
+基于此，可以推出，<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∃</mi><mrow></mrow><mi>i</mi><mo>=</mo><mi>k</mi><mi>λ</mi><mo>≥</mo><mi>μ</mi><mo>⟹</mo><mrow></mrow><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><msub><mi>x</mi><mrow><mn>2</mn><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\exists{}i = k\lambda\ge\mu\Longrightarrow{}x_i = x_{2i}</annotation></semantics></math></span>
+因此，只要设定两个指针<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">P1</annotation></semantics></math></span>和<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P2</annotation></semantics></math></span>，其中<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P2</annotation></semantics></math></span>的步长是2，<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">P1</annotation></semantics></math></span>的步长是1，那么就可以找到两个指针指向值相等的位置，反过来说，即只要存在相等值，就存在环，此时可以得出<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ν</mi><mo>=</mo><mi>P</mi><mn>2</mn><mo>−</mo><mi>P</mi><mn>1</mn><mo>=</mo><mi>P</mi><mn>1</mn><mo>=</mo><mi>k</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">\nu = P2 - P1 = P1 = k\lambda</annotation></semantics></math></span>.
+显然<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mi>μ</mi><mrow></mrow><mo>+</mo><mi>ν</mi></mrow></msub><mo>=</mo><msub><mi>x</mi><mi>μ</mi></msub></mrow><annotation encoding="application/x-tex">x_{\mu{}+\nu} = x_{\mu}</annotation></semantics></math></span>，即<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mi>ν</mi><mrow></mrow><mo>+</mo><mi>μ</mi></mrow></msub><mo>=</mo><msub><mi>x</mi><mi>μ</mi></msub></mrow><annotation encoding="application/x-tex">x_{\nu{}+\mu} = x_{\mu}</annotation></semantics></math></span>，故找到上述位置之后，<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">P1</annotation></semantics></math></span>仍保持原来位置，而<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P2</annotation></semantics></math></span>放回序列最初位置，此时两个指针的推进步长都设置为1，两指针指向的值再次相等时，就是环开始的位置。找到环开始的位置后，向后迭代找到下一次重复位置，就可以得到环的长度<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span>了。
+<img src="/media/blog-leetcode01/478599954b3743e9.webp" alt="img01" /></p>
+<h4>2.2 Brent's algorithm</h4>
+<p>Floyd's Tortoise and Hare算法很精巧，但是判断环存在、找到环开始位置和确定环长度需要分为三步，Brent's algorithm效率更高，且只需要两步。
+Brent's algorithm也是利用了快慢两个指针的想法，但是它的想法是动态增加步长，加快搜索速度。
+其基本意图是设立两个指针，尽快让第一个指针到达环内，然后第二个指针以步长1前进，再次相等时走过的步数正好是环的长度<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span>，具体做法如下。
+首先，设定两个指针<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">P1</annotation></semantics></math></span>和<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P2</annotation></semantics></math></span>，<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P2</annotation></semantics></math></span>第一次先前进<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>0</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^0=1</annotation></semantics></math></span>步，在前进的过程中若始终<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mi>P</mi><mn>2</mn></mrow></msub><mo mathvariant="normal">≠</mo><mrow></mrow><msub><mi>x</mi><mrow><mi>P</mi><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">x_{P2}\ne{}x_{P1}</annotation></semantics></math></span>，则令<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>1</mn><mo>=</mo><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P1 = P2</annotation></semantics></math></span>，然后<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P2</annotation></semantics></math></span>再前进<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>1</mn></msup><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2^1=2</annotation></semantics></math></span>，在前进的过程中若始终<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mi>P</mi><mn>2</mn></mrow></msub><mo mathvariant="normal">≠</mo><mrow></mrow><msub><mi>x</mi><mrow><mi>P</mi><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">x_{P2}\ne{}x_{P1}</annotation></semantics></math></span>，则令<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>1</mn><mo>=</mo><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P1 = P2</annotation></semantics></math></span>，然后<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P2</annotation></semantics></math></span>再前进<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">2^2=4</annotation></semantics></math></span>......
+如此，直到出现相等的位置，在出现相等位置之前，最后一次<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P2</annotation></semantics></math></span>前进的步数就是环的长度<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span>。
+此时，将<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">P1</annotation></semantics></math></span>放于序列开始位置0，<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P2</annotation></semantics></math></span>放于<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span>位置，由于<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>μ</mi></msub><mo>=</mo><msub><mi>x</mi><mrow><mi>λ</mi><mrow></mrow><mo>+</mo><mi>μ</mi></mrow></msub></mrow><annotation encoding="application/x-tex">x_{\mu} = x_{\lambda{}+\mu}</annotation></semantics></math></span>，故只要让<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">P1</annotation></semantics></math></span>和<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">P2</annotation></semantics></math></span>依次向前前进，等到两者指向值相同时，<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">P1</annotation></semantics></math></span>的位置正好就是环的开始位置。
+<img src="/media/blog-leetcode01/2aeb350b1019739f.webp" alt="img02" /></p>
+<p>Brent's algorithm的效率比Floyd's Tortoise and Hare要高，最差情况是Floyd's Tortoise and Hare算法。其主要原因是，步长动态增加，速度提高，以及首次找到相同值时，记录了环的长度，而Floyd's Tortoise and Hare算法首次找到相同值时，并不知道环的长度，只能知道环长度的整数倍。</p>
+<h4>2.3 Gosper's algorithm</h4>
+<p>Gosper算法可以参考<a href="http://www.inwap.com/pdp10/hbaker/hakmem/flows.html">此处</a>，Kino还没有细看，就不细说了。</p>
+<h3>3. 相关练习</h3>
+<p>Leetcode上有以下数题与此相关。</p>
+<h4>3.1 Leetcode 141. Linked List Cycle</h4>
+<p><a href="https://leetcode.com/problems/linked-list-cycle">Link</a></p>
+<blockquote>
+<p>Description: Given a linked list, determine if it has a cycle in it.</p>
+</blockquote>
+<p>Floyd's Tortoise and Hare</p>
+<pre tabindex="0" aria-label="代码块"><code>class Solution {
+public:
+  bool hasCycle(ListNode *head) {
+    if(!head || !(head-&gt;next)) {
+      return false;
+    }
+    ListNode* tortoise = head-&gt;next;
+    ListNode* hare = head-&gt;next-&gt;next;
+    while(hare &amp;&amp; hare-&gt;next) {
+      if(tortoise == hare) {
+        return true;
+      }
+      tortoise = tortoise-&gt;next;
+      hare = hare-&gt;next-&gt;next;
+    }
+    
+    return false;
+  }
+};
+</code></pre>
+<p>Brent's algorithm</p>
+<pre tabindex="0" aria-label="代码块"><code>class Solution {
+public:
+  bool hasCycle(ListNode *head) {
+    if(!head || !(head-&gt;next)) {
+      return false;
+    }
+    int current_step = 1;
+    int limited_step = 1;
+    ListNode* tortoise = head-&gt;next;
+    ListNode* hare = head-&gt;next-&gt;next;
+    while(hare &amp;&amp; hare-&gt;next) {
+      if(tortoise == hare) {
+        return true;
+      }
+      if(current_step == limited_step) {
+        current_step = 0;
+        limited_step *= 2;
+        tortoise = hare;
+      }
+      hare = hare-&gt;next;
+      current_step++;
+    }
+    
+    return false;
+  }
+};
+</code></pre>
+<h4>3.2 Leetcode 142. Linked List Cycle II</h4>
+<p><a href="https://leetcode.com/problems/linked-list-cycle-ii">Link</a></p>
+<blockquote>
+<p>Description: Given a linked list, return the node where the cycle begins. If there is no cycle, return null.</p>
+</blockquote>
+<p>Floyd's Tortoise and Hare</p>
+<pre tabindex="0" aria-label="代码块"><code>class Solution {
+public:
+  ListNode *detectCycle(ListNode *head) {
+    if(!head || !(head-&gt;next)) {
+      return NULL;
+    }
+    ListNode* tortoise = head-&gt;next;
+    ListNode* hare = head-&gt;next-&gt;next;
+    while(tortoise != hare) {
+      if(!hare || !(hare-&gt;next)) {
+        return NULL;
+      }
+      tortoise = tortoise-&gt;next;
+      hare = hare-&gt;next-&gt;next;
+    }
+    
+    tortoise = head;
+    while(tortoise != hare) {
+      tortoise = tortoise-&gt;next;
+      hare = hare-&gt;next;
+    }
+    
+    return tortoise;
+  }
+};
+</code></pre>
+<p>Brent's algorithm</p>
+<pre tabindex="0" aria-label="代码块"><code>class Solution {
+public:
+  ListNode *detectCycle(ListNode *head) {
+    if(!head || !(head-&gt;next)) {
+      return NULL;
+    }
+    int current_step = 1;
+    int limited_step = 1;
+    ListNode* tortoise = head-&gt;next;
+    ListNode* hare = head-&gt;next-&gt;next;
+    while(tortoise != hare) {
+      if(!hare || !(hare-&gt;next)) {
+        return NULL;
+      }
+      if(current_step == limited_step) {
+        current_step = 0;
+        limited_step *= 2;
+        tortoise = hare;
+      }
+      hare = hare-&gt;next;
+      current_step++;
+    }
+    
+    tortoise = head;
+    hare = head;
+    while(current_step--) {
+      tortoise = tortoise-&gt;next;
+    }
+    
+    while(tortoise != hare) {
+      tortoise = tortoise-&gt;next;
+      hare = hare-&gt;next;
+    }
+    
+    return tortoise;
+  }
+};
+</code></pre>
+<h4>3.3 Leetcode 202. Happy Number</h4>
+<p><a href="https://leetcode.com/problems/happy-number/">Link</a></p>
+<blockquote>
+<p>Description: Write an algorithm to determine if a number is "happy".
+A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.</p>
+</blockquote>
+<p>Floyd's Tortoise and Hare</p>
+<pre tabindex="0" aria-label="代码块"><code>class Solution {
+public:
+  bool isHappy(int n) {
+    int tortoise = nextNum(n);
+    int hare = nextNum(nextNum(n));
+    while(tortoise != hare) {
+      tortoise = nextNum(tortoise);
+      hare = nextNum(nextNum(hare));
+    }
+    
+    return tortoise == 1;
+  }
+  
+  int nextNum(int n) {
+    int nxt = 0;
+    while(n) {
+      int digit = n%10;
+      nxt += digit*digit;
+      n /= 10;
+    }
+    
+    return nxt;
+  }
+};
+</code></pre>
+<p>Brent's algorithm</p>
+<pre tabindex="0" aria-label="代码块"><code>class Solution {
+public:
+  bool isHappy(int n) {
+    int current_step = 1;
+    int limited_step = 1;
+    int tortoise = nextNum(n);
+    int hare = nextNum(nextNum(n));
+    while(tortoise != hare) {
+      if(current_step == limited_step) {
+        current_step = 0;
+        limited_step *= 2;
+        tortoise = hare;
+      }
+      hare = nextNum(hare);
+      current_step++;
+    }
+    
+    return tortoise == 1;
+  }
+  
+  int nextNum(int n) {
+    int nxt = 0;
+    while(n) {
+      int digit = n%10;
+      nxt += digit*digit;
+      n /= 10;
+    }
+    
+    return nxt;
+  }
+};
+</code></pre>
+<h4>3.4 Leetcode 287. Find the Duplicate Number</h4>
+<p><a href="https://leetcode.com/problems/find-the-duplicate-number">Link</a></p>
+<blockquote>
+<p>Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.</p>
+</blockquote>
+<p>Floyd's Tortoise and Hare</p>
+<pre tabindex="0" aria-label="代码块"><code>class Solution {
+private:
+  vector&lt;int&gt; nums;
+public:
+  int findDuplicate(vector&lt;int&gt;&amp; nums) {
+    if(nums.empty()) {
+      return -1;
+    }
+    this-&gt;nums = nums;
+    
+    int tortoise = f(nums[0]);
+    int hare = f(f(nums[0]));
+    while(tortoise != hare) {
+      tortoise = f(tortoise);
+      hare = f(f(hare));
+    }
+    
+    tortoise = nums[0];
+    while(tortoise != hare) {
+      tortoise = f(tortoise);
+      hare = f(hare);
+    }
+    
+    return tortoise;
+  }
+  
+  int f(int n) {
+    return nums[n];
+  }
+};
+</code></pre>
+<p>Brent's algorithm</p>
+<pre tabindex="0" aria-label="代码块"><code>class Solution {
+private:
+  vector&lt;int&gt; nums;
+public:
+  int findDuplicate(vector&lt;int&gt;&amp; nums) {
+    if(nums.empty()) {
+      return -1;
+    }
+    this-&gt;nums = nums;
+    
+    int current_step = 1;
+    int limited_step = 1;
+    int tortoise = f(nums[0]);
+    int hare = f(f(nums[0]));
+    while(tortoise != hare) {
+      if(current_step == limited_step) {
+        current_step = 0;
+        limited_step *= 2;
+        tortoise = hare;
+      }
+      hare = f(hare);
+      current_step++;
+    }
+    
+    tortoise = nums[0];
+    hare = nums[0];
+    while(current_step--) {
+      tortoise = f(tortoise);
+    }
+    
+    while(tortoise != hare) {
+      tortoise = f(tortoise);
+      hare = f(hare);
+    }
+    
+    return tortoise;
+  }
+  
+  int f(int n) {
+    return nums[n];
+  }
+};
+</code></pre>
+<h3>4. 实际应用</h3>
+<p>环检测(cycle detection)问题的实际应用有 <em>伪随机数生成器(pseudorandom number generators)强度的度量</em>，比如 <em>线性同余生成器(linear congruential generator)</em>，<em>加密哈希函数的冲突检测</em>，<em>细胞自动机(cellular automaton)的振荡周期配置</em>等</p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

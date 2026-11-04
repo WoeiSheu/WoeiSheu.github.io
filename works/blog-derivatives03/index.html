@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+## 前言
+[衍生品笔记二](/2021/10/04/derivatives02/)中，说起期货和远期的差别，实际上就是场内、场外的区别。除了期货，期权也是场内交易的，但是期权和期货的关系，ummm，就像老婆和老婆饼的关系一样。
+本次先简单学习下期货、期权的一些概念。
+
+<!--more-->
+#"><title>衍生品笔记三 —— 期货期权 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-derivatives03/"><meta property="og:title" content="衍生品笔记三 —— 期货期权"><meta property="og:description" content="
+## 前言
+[衍生品笔记二](/2021/10/04/derivatives02/)中，说起期货和远期的差别，实际上就是场内、场外的区别。除了期货，期权也是场内交易的，但是期权和期货的关系，ummm，就像老婆和老婆饼的关系一样。
+本次先简单学习下期货、期权的一些概念。
+
+<!--more-->
+#"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-derivatives03/"><meta property="og:image" content="https://xuwei.fun/media/blog-derivatives03/a146402a3d982a2a.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="衍生品笔记三 —— 期货期权"><meta name="twitter:description" content="
+## 前言
+[衍生品笔记二](/2021/10/04/derivatives02/)中，说起期货和远期的差别，实际上就是场内、场外的区别。除了期货，期权也是场内交易的，但是期权和期货的关系，ummm，就像老婆和老婆饼的关系一样。
+本次先简单学习下期货、期权的一些概念。
+
+<!--more-->
+#"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2021年10月6日</time></div><h1>衍生品笔记三 —— 期货期权</h1><div class="archive-tags"><span>finance</span><span>invest</span><span>derivatives</span><span>futures</span><span>options</span></div></header><figure class="work-cover"><img src="/media/blog-derivatives03/a146402a3d982a2a.webp" srcset="/media/blog-derivatives03/a37bfb980a5308ab.webp 640w, /media/blog-derivatives03/6da23b2585e2c2ab.webp 1280w, /media/blog-derivatives03/a146402a3d982a2a.webp 1920w" sizes="(max-width: 650px) 100vw, 1200px" alt="衍生品笔记三 —— 期货期权" width="1920" height="1920"></figure><div class="prose"><h2>前言</h2>
+<p><a href="/2021/10/04/derivatives02/">衍生品笔记二</a>中，说起期货和远期的差别，实际上就是场内、场外的区别。除了期货，期权也是场内交易的，但是期权和期货的关系，ummm，就像老婆和老婆饼的关系一样。
+本次先简单学习下期货、期权的一些概念。</p>
+<p>&lt;!--more--&gt;</p>
+<h2>1. 期货合约</h2>
+<p>概念上近似远期协议，约定在未来某一时刻以某一价格交割某一标的资产。
+区别是期货合约是场内交易的，因此是一个标准化的合约，由交易所做出履约保证</p>
+<p>全球各地可以进行期货交易的交易所:</p>
+<ul>
+<li>Chicago Board of Trade</li>
+<li>Chicago Mercantile Exchange</li>
+<li>LIFFE (London)</li>
+<li>Eurex (Europe)</li>
+<li>BM&amp;F (Sao Paulo, Brazil)</li>
+<li>TIFFE (Tokyo)</li>
+<li>上海期货交易所</li>
+<li>郑州商品交易所</li>
+<li>大连商品交易所</li>
+<li>中国金融期货交易所</li>
+<li>上海国际能源交易中心</li>
+<li>......</li>
+</ul>
+<p>期货合约要素<sup class="footnote-ref"><a href="#blog-derivatives03-fn1" id="blog-derivatives03-fnref1">[1]</a></sup>:</p>
+<ul>
+<li>合约名称(Contract Name)</li>
+<li>基础资产(Underlying Assets)</li>
+<li>交易单位(Contract Size)</li>
+<li>报价单位(Price Quotation)</li>
+<li>最小变动价位(Minimum Price Fluctuation)</li>
+<li>涨跌停板幅度(Daily Price Limit)</li>
+<li>合约月份(Contract Months)</li>
+<li>交易时间(Trading Hours)</li>
+<li>最后交易日(Last Trading Day)</li>
+<li>交割日期(Delivery Period)</li>
+<li>交割品级(Grade and Quality Specifications)</li>
+<li>交割地点(Delivery Venue)</li>
+<li>交割单位(Delivery Size)</li>
+<li>最低交易保证金(Minimum Trade Margin)</li>
+<li>交割方式(Settlement Method)</li>
+<li>交易代码(Contract Code)</li>
+<li>上市交易场所(Exchange)</li>
+</ul>
+<h2>2. 期权合约</h2>
+<p>Options 核心是权利，交易的是权利，为了交易权利所付出的金钱称为premium(权利金).
+期权是非对称交易，期权的买方拥有权利没有义务，期权的卖方有义务无权利.
+期权的多头是买入权利，空头是卖出权利，但是买入卖出的权利又可分为看涨(call)/看跌(put)两类</p>
+<ul>
+<li>call: 看涨期权(call option)又称认购期权，买进期权，买方期权，买权，延买期权，或“敲进”，是指期权的购买者拥有在期权合约有效期内按执行价格买进一定数量标的物的权利。看涨期权是这样一种合约: 它给合约持有者（即买方）按照约定的价格从对手手中购买特定数量之特定交易标的物的权利。</li>
+<li>put: 看跌期权(put option)又称认沽期权，看跌期权则与看涨期权正好相反，它赋予了持有者在未来以确定的价格，也就是行权价格卖出的权利，所以看跌期权的持有者会希望标的资产价格的下跌幅度越大越好。</li>
+</ul>
+<p>在到期日(Expiration Date)买入/卖出的价格就是 settle price，也就是行权价格/执行价格...
+而根据权利行权时间的区别，又可分为欧式期权(European Options)和美式期权(American Options)</p>
+<ul>
+<li>欧式期权: 只能在到期日行权</li>
+<li>美式期权: 可以在成交后有效期内任何一天行权</li>
+</ul>
+<p>期权的优势是可以通过对冲平仓免除履约责任.</p>
+<p>期权交易的概念上还算容易理解，就是交易权利嘛，期权卖方赚的就是时间权利金。但是怎么给权利定价呢？股票X票面价值100$，总不能直接就收100$的权利金吧，那铁定没人买啊。期权的价格和标的资产的价格通常差距是很大的，如图所示:
+<img src="/media/blog-derivatives03/a146402a3d982a2a.webp" alt="ge_options" /></p>
+<p>那么究竟怎么给期权定价？实际上期权定价的数学模型都比较复杂，比如常见的有:</p>
+<ul>
+<li>Black-Scholes Option Pricing Model</li>
+<li>Black–Scholes–Merton model</li>
+</ul>
+<p>期权在行权前，也可以在场内互相交易，而由于标的物的价格变化，导致期权有虚值、实值、平值的区别，期权的成交价也会变化。具体这些概念，得单开一文再说，否则会陷入概念循环地狱。</p>
+<p>全球各地可以进行期权交易的交易所:</p>
+<ul>
+<li>Chicago Board Options Exchange</li>
+<li>American Stock Exchange</li>
+<li>Philadelphia Stock Exchange</li>
+<li>Pacific Exchange</li>
+<li>LIFFE (London)</li>
+<li>Eurex (Europe)</li>
+<li>......</li>
+</ul>
+<blockquote>
+<p>Q: 那么中国大陆境内有没有期权交易呢?
+A: 也是有的. 沪深300ETF和上证50ETF</p>
+</blockquote>
+<h2>Footnote</h2>
+<hr />
+<section class="footnotes">
+<ol>
+<li id="blog-derivatives03-fn1"><p>中国证券监督管理委员会. “期货合约要素.” 中国证券监督管理委员会, 26 Feb. 2020, http://www.csrc.gov.cn/pub/zjhpublic/zjh/202002/P020200228535813027616.pdf. <a href="#blog-derivatives03-fnref1">↩︎</a></p>
+</li>
+</ol>
+</section>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

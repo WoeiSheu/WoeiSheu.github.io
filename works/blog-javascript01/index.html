@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. childNodes和children属性
+使用firstChild没有得到想要的结果, 用Chrome去调试发现firstChild竟然是文本元素, 然后又发现DOM节点有两属性childNodes和children, 于是学习记录下.
+#### 1.1. childNodes 属"><title>JavaScript笔谈一 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-javascript01/"><meta property="og:title" content="JavaScript笔谈一"><meta property="og:description" content="
+### 1. childNodes和children属性
+使用firstChild没有得到想要的结果, 用Chrome去调试发现firstChild竟然是文本元素, 然后又发现DOM节点有两属性childNodes和children, 于是学习记录下.
+#### 1.1. childNodes 属"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-javascript01/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="JavaScript笔谈一"><meta name="twitter:description" content="
+### 1. childNodes和children属性
+使用firstChild没有得到想要的结果, 用Chrome去调试发现firstChild竟然是文本元素, 然后又发现DOM节点有两属性childNodes和children, 于是学习记录下.
+#### 1.1. childNodes 属"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2015年2月25日</time></div><h1>JavaScript笔谈一</h1><div class="archive-tags"><span>javaScript</span></div></header><div class="prose"><h3>1. childNodes和children属性</h3>
+<p>使用firstChild没有得到想要的结果, 用Chrome去调试发现firstChild竟然是文本元素, 然后又发现DOM节点有两属性childNodes和children, 于是学习记录下.</p>
+<h4>1.1. childNodes 属性</h4>
+<p>标准的，它返回指定元素的子元素集合，包括HTML节点，所有属性，文本。可以通过nodeType来判断是哪种类型的节点，只有当nodeType==1时才是元素节点，2是属性节点，3是文本节点。有时候需要获取指定元素的第一个HTML子节点（非属性/文本节点），最容易想到的就是firstChild 属性。代码中第一个HTML节点前如果有换行，空格，那么firstChild返回的就不是你想要的了。
+看到这我就明白为什么我的firstChild不对了，因为我在html节点前加了好几个<code>&amp;nbsp</code>;
+&lt;!--more--&gt;</p>
+<h4>1.2 children 属性</h4>
+<p>非标准的，它返回指定元素的子元素集合。经测试，它只返回HTML节点，甚至不返回文本节点。且在所有浏览器下表现惊人的一致。和childNodes 一样，在Firefox下不支持()取集合元素。需注意children在IE中包含注释节点。
+于是用children[0]代替firstChild，得到想要的结果、</p>
+<h3>2. Javascript迭代Object</h3>
+<p>以为对象迭代只需要<code>for(var item in object)</code>即可取出object每个属性+值, 没想到这里的item只代表属性, 若需要得到值, 还需要<code>object[item]</code>
+但是若使用Angular JS的ng-repeat且只使用一个参数 则其自动得到的是值而不是属性
+若想得到key和value, 则<code>(key,val) in data</code></p>
+<h3>3. Cookie for each tab</h3>
+<p>若对浏览器打开某站点的每个tab页面都生成一个id并存储在cookie中, 可以使用SessionStorage
+例如<code>sessionStorage.setItem('id',Date.now().toString());</code>
+需要取出此id时, <code>sessionStorage.getItem('id')</code></p>
+<h3>4. Canvas</h3>
+<p>使用HTML5的Canvas画图, 发现长度不对, 设置style的width为1000px感觉只是scale了一下
+查阅文档发现Canvas作为特殊对象是存在width和height属性的, 应该设置该属性, 而不是style, 即
+<code>&lt;canvas width="1000px"&gt;&lt;/canvas&gt;</code> 不使用 <code>&lt;canvas style="width:1000px"&gt;&lt;/canvas&gt;</code>
+用jQuery的话则是<code>$("#id").attr('width', 1000)</code> 不是 <code>$("#id").css('width',1000)</code></p>
+<h3>5. font-size</h3>
+<p>一直以为font-size的30px表示显示的每个文字都是30px的宽和高, 最近发现font-size只决定高度, 宽度由字符集自己按照比例决定. 如果需要修改可以使用css的<code>transform:scale(2.0,1.0)</code>属性</p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

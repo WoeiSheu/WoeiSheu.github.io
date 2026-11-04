@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. No such file or directory
+`./pwn1`执行后出现错误信息:*./pwn1: No such file or directory*, 可执行权限Kino已经加上了, 查了查可能是因为库的原因, 直接`cat pwn1`看到需要`/lib/ld-linux."><title>Linux琐记五 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-linux05/"><meta property="og:title" content="Linux琐记五"><meta property="og:description" content="
+### 1. No such file or directory
+`./pwn1`执行后出现错误信息:*./pwn1: No such file or directory*, 可执行权限Kino已经加上了, 查了查可能是因为库的原因, 直接`cat pwn1`看到需要`/lib/ld-linux."><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-linux05/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Linux琐记五"><meta name="twitter:description" content="
+### 1. No such file or directory
+`./pwn1`执行后出现错误信息:*./pwn1: No such file or directory*, 可执行权限Kino已经加上了, 查了查可能是因为库的原因, 直接`cat pwn1`看到需要`/lib/ld-linux."><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2016年5月9日</time></div><h1>Linux琐记五</h1><div class="archive-tags"><span>linux</span></div></header><div class="prose"><h3>1. No such file or directory</h3>
+<p><code>./pwn1</code>执行后出现错误信息:<em>./pwn1: No such file or directory</em>, 可执行权限Kino已经加上了, 查了查可能是因为库的原因, 直接<code>cat pwn1</code>看到需要<code>/lib/ld-linux.so</code>, 查了下系统的确没有, 用<code>readelf</code>去查看pwn1的各项信息, 反而没有看到. <code>ld-linux.so</code>这个库是Linux下进行动态库链接的链接器, 无它其他动态库就都无法成功链接, 详细说明可以戳<a href="http://linux.die.net/man/8/ld-linux">这里</a>
+查看怎么安装这个库, 32位系统下是<code>libc6</code>, 64位是<code>libc6-i386</code>, 这是因为64位中默认安装了<code>/lib64/ld-linux-x86-64.so.2</code></p>
+<h3>2. dmesg</h3>
+<p>dmesg用来显示内核环缓冲区(kernel-ring buffer)内容, 内核将各种消息存放在这里. 在系统引导时, 内核将与硬件和模块初始化相关的信息填到这个缓冲区中. 内核环缓冲区中的消息对于诊断系统问题非常有用
+&lt;!--more--&gt;</p>
+<h3>3. ls硬件信息</h3>
+<p><code>lsmod</code>  <code>lscpu</code>  <code>lspci</code>  <code>lsusb</code>等</p>
+<h3>4. 时间</h3>
+<p><a href="http://raspberrypi.stackexchange.com/questions/36674/raspberry-pi-raspbian-tick-rate-in-hz/proc/timer_list">参考1</a>
+<a href="http://raspberrypi.stackexchange.com/questions/7400/how-does-pi-keep-track-of-time-interval">参考2</a>
+<a href="http://www.360doc.com/content/11/1201/09/1317564_168810003.shtml">参考3</a>
+<a href="http://www.advenage.com/topics/linux-timer-interrupt-frequency.php">参考4</a>
+<a href="http://stackoverflow.com/questions/13600592/how-to-determine-timer-frequency-in-linux">参考5</a></p>
+<pre tabindex="0" aria-label="代码块"><code>cat /boot/config-`uname -r` | grep HZ
+cat /proc/interrupts | grep timer &amp;&amp; sleep 1 &amp;&amp; cat /proc/interrupts | grep timer
+</code></pre>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

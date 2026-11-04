@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+## 1. 写在前面
+出于对新事物的好奇, 接触了一下Android, 主要是看书(《Anroid应用开发深入学习实录》 关立勋)、Google和看文档。使用的android-sdk的platform最低是android-14, 然后有android-17,android-20以及android-"><title>Android TabHost的使用 · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-android01/"><meta property="og:title" content="Android TabHost的使用"><meta property="og:description" content="
+## 1. 写在前面
+出于对新事物的好奇, 接触了一下Android, 主要是看书(《Anroid应用开发深入学习实录》 关立勋)、Google和看文档。使用的android-sdk的platform最低是android-14, 然后有android-17,android-20以及android-"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-android01/"><meta property="og:image" content="https://xuwei.fun/media/blog-android01/f58e4d0bc1d72b3c.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Android TabHost的使用"><meta name="twitter:description" content="
+## 1. 写在前面
+出于对新事物的好奇, 接触了一下Android, 主要是看书(《Anroid应用开发深入学习实录》 关立勋)、Google和看文档。使用的android-sdk的platform最低是android-14, 然后有android-17,android-20以及android-"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2014年8月27日</time></div><h1>Android TabHost的使用</h1><div class="archive-tags"><span>android</span><span>tabhost</span></div></header><figure class="work-cover"><img src="/media/blog-android01/f58e4d0bc1d72b3c.webp" srcset="/media/blog-android01/f58e4d0bc1d72b3c.webp 328w" sizes="(max-width: 650px) 100vw, 1200px" alt="Android TabHost的使用" width="328" height="552"></figure><div class="prose"><h2>1. 写在前面</h2>
+<p>出于对新事物的好奇, 接触了一下Android, 主要是看书(《Anroid应用开发深入学习实录》 关立勋)、Google和看文档。使用的android-sdk的platform最低是android-14, 然后有android-17,android-20以及android-L(电脑配置暂时比较低,没法把每个版本都测试一遍）
+此时此刻Intellij IDEA社区版还没法渲染出android-20和android-L，所以我基本都是用的android-17
+<em>虽然书的出版日期比较新, 但其中有些内容还是已经过时了</em>
+&lt;!--more--&gt;</p>
+<h2>2. TabHost的使用详解</h2>
+<h3>2.1 项目结构</h3>
+<p>先新建一个项目，使用以前构建项目的方法(虽然现在有了Gradle, 但是对于初学者来说学习成本稍高, 暂时搁置):
+MySetting.java在这里没用，忽略它......</p>
+<p><img src="/media/blog-android01/f58e4d0bc1d72b3c.webp" alt="project structure" /></p>
+<h3>2.2 App布局</h3>
+<p>布局main.xml:</p>
+<pre tabindex="0" aria-label="代码块"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;TabHost
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabHost"&gt;
+  &lt;LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical"&gt;
+    &lt;TabWidget
+        android:id="@android:id/tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"&gt;
+    &lt;/TabWidget&gt;
+    &lt;FrameLayout
+        android:id="@android:id/tabcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"&gt;
+      &lt;TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/textview1"
+          android:id="@+id/textView1" android:layout_gravity="left|top"/&gt;
+      &lt;TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/textview2"
+          android:id="@+id/textView2" android:layout_gravity="center_horizontal|top"/&gt;
+      &lt;TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/textview3"
+          android:id="@+id/textView3" android:layout_gravity="right|top"/&gt;
+    &lt;/FrameLayout&gt;
+  &lt;/LinearLayout&gt;
+&lt;/TabHost&gt;
+</code></pre>
+<p>strings.xml不放了, 随便什么字符串无所谓</p>
+<h3>2.3 逻辑代码</h3>
+<p>想要实现的就是添加三个Tab标签, 改变Tab标签的时候会弹出一个对话框, 按照书上及网上搜到的大部分代码, MyActivity.java应该是:</p>
+<pre tabindex="0" aria-label="代码块"><code>public class MyActivity extends Activity {
+    @Override
+    public void onCreate( Bundle savedInstanceState ) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        mTabHost = getTabHost();
+        mTabHost.addTab...
+    }
+}
+</code></pre>
+<p>这样的话有个问题: 查文档发现TabActivity在API Level 13中已经被弃用了。有:
+<em>This class was deprecated in API level 13. New applications should use Fragments instead of this class; to continue to run on older devices, you can use the v4 support library which provides a version of theFragment API that is compatible down to DONUT.</em>
+还有一句：
+<em>A replacement for TabActivity can also be implemented by directly using TabHost.</em>
+这其实意味着如果我们不考虑向下兼容的问题, 其实可以直接将上述代码写成:</p>
+<pre tabindex="0" aria-label="代码块"><code>package com.hecate.Apollo;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TabHost;
+
+public class MyActivity extends Activity {
+    /**
+     * Called when the activity is first created.
+     */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        TabHost mTabHost = (TabHost) findViewById(R.id.tabHost);
+        mTabHost.setup();
+        mTabHost.addTab( mTabHost.newTabSpec("first").setIndicator("Tab 1",getResources().getDrawable(R.drawable.img1)).setContent(R.id.textView1) );
+        mTabHost.addTab( mTabHost.newTabSpec("second").setIndicator("Tab 2",getResources().getDrawable(R.drawable.img2)).setContent(R.id.textView2) );
+        mTabHost.addTab( mTabHost.newTabSpec("third").setIndicator("Tab 3",getResources().getDrawable(R.drawable.img3)).setContent(R.id.textView3) );
+
+        mTabHost.setBackgroundColor(Color.parseColor("blue"));
+        mTabHost.setBackgroundResource(R.drawable.background);
+        mTabHost.setCurrentTab(0);
+
+        mTabHost.setOnTabChangedListener( new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged( String tabId ) {
+                Dialog dialog = new AlertDialog.Builder( MyActivity.this )
+                        .setTitle("Change Tabs")
+                        .setMessage("You chosen "+tabId+" Tab")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick( DialogInterface dialogInterface, int whichButton ) {
+                                dialogInterface.cancel();
+                            }
+                        }).create();
+                dialog.show();
+            }
+        });
+
+    }
+}
+</code></pre>
+<p>也就是直接继承Activity, 然后不使用getTabHost()方法而是findViewById(), 这时候又有一个注意点, 在TabHost文档的setup()方法中有:
+<em>Call setup() before adding tabs if loading TabHost using findViewById().</em>
+就是说如果你不是用getTabHost而是findViewById获取的TabHost，那在使用addTab()方法前要使用setup()方法。</p>
+<h3>2.4 运行测试</h3>
+<p>按照以上完成之后, 再添加相应的资源文件就可以成功运行了(在API Level 13以上):
+<img src="/media/blog-android01/07201136126d85bd.webp" alt="tabhost_layout" />
+原谅我的背景图片、、、点击TAB2后弹窗:
+<img src="/media/blog-android01/9093956fdcdab5d7.webp" alt="tabhost_popup" /></p>
+<h3>2.5 向下兼容</h3>
+<p>说完了不向下兼容的方法, 那如果需要向下兼容呢? 正如一开始的文档所说, 使用Fragments和android.support.v4 library即可, 具体可以去查看详细的文档, 里面给了一个示例, 我把示例代码贴出来, 就不分析了:</p>
+<pre tabindex="0" aria-label="代码块"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.v4.app.FragmentTabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"&gt;
+
+    &lt;LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"&gt;
+
+        &lt;TabWidget
+            android:id="@android:id/tabs"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"/&gt;
+
+        &lt;FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0"/&gt;
+
+        &lt;FrameLayout
+            android:id="@+id/realtabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/&gt;
+
+    &lt;/LinearLayout&gt;
+&lt;/android.support.v4.app.FragmentTabHost&gt;
+</code></pre>
+<p>Java代码:</p>
+<pre tabindex="0" aria-label="代码块"><code>import com.example.android.supportv4.R;
+
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTabHost;
+
+/**
+ * This demonstrates how you can implement switching between the tabs of a
+ * TabHost through fragments, using FragmentTabHost.
+ */
+public class FragmentTabs extends FragmentActivity {
+    private FragmentTabHost mTabHost;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.fragment_tabs);
+        mTabHost = (FragmentTabHost)findViewById(android.R.id.tabhost);
+        mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+
+        mTabHost.addTab(mTabHost.newTabSpec("simple").setIndicator("Simple"),
+                FragmentStackSupport.CountingFragment.class, null);
+        mTabHost.addTab(mTabHost.newTabSpec("contacts").setIndicator("Contacts"),
+                LoaderCursorSupport.CursorLoaderListFragment.class, null);
+        mTabHost.addTab(mTabHost.newTabSpec("custom").setIndicator("Custom"),
+                LoaderCustomSupport.AppListFragment.class, null);
+        mTabHost.addTab(mTabHost.newTabSpec("throttle").setIndicator("Throttle"),
+                LoaderThrottleSupport.ThrottledLoaderListFragment.class, null);
+    }
+}
+</code></pre>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

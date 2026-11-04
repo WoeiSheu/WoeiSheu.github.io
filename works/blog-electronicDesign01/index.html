@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ec"><meta name="description" content="
+### 1. 问题
+进行多级放大电路和负反馈放大电路的模拟仿真时，用到了multisim里的function generator(函数发生器)，对其中的参数amplitude产生了困惑，这个amplitude(振幅)指的是峰值还是峰峰值。
+<!--more-->
+
+### 2. 验证
+于是设计了一"><title>Usage of function generator in multisim · 霁月荒馆</title><link rel="canonical" href="https://xuwei.fun/works/blog-electronicDesign01/"><meta property="og:title" content="Usage of function generator in multisim"><meta property="og:description" content="
+### 1. 问题
+进行多级放大电路和负反馈放大电路的模拟仿真时，用到了multisim里的function generator(函数发生器)，对其中的参数amplitude产生了困惑，这个amplitude(振幅)指的是峰值还是峰峰值。
+<!--more-->
+
+### 2. 验证
+于是设计了一"><meta property="og:type" content="article"><meta property="og:url" content="https://xuwei.fun/works/blog-electronicDesign01/"><meta property="og:image" content="https://xuwei.fun/media/blog-electronicDesign01/4aa5cf3cfdb3fb0e.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Usage of function generator in multisim"><meta name="twitter:description" content="
+### 1. 问题
+进行多级放大电路和负反馈放大电路的模拟仿真时，用到了multisim里的function generator(函数发生器)，对其中的参数amplitude产生了困惑，这个amplitude(振幅)指的是峰值还是峰峰值。
+<!--more-->
+
+### 2. 验证
+于是设计了一"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2014年10月26日</time></div><h1>Usage of function generator in multisim</h1><div class="archive-tags"><span>electronic</span><span>multisim</span></div></header><figure class="work-cover"><img src="/media/blog-electronicDesign01/4aa5cf3cfdb3fb0e.webp" srcset="/media/blog-electronicDesign01/98013f0a25b923ff.webp 640w, /media/blog-electronicDesign01/4aa5cf3cfdb3fb0e.webp 847w" sizes="(max-width: 650px) 100vw, 1200px" alt="Usage of function generator in multisim" width="847" height="359"></figure><div class="prose"><h3>1. 问题</h3>
+<p>进行多级放大电路和负反馈放大电路的模拟仿真时，用到了multisim里的function generator(函数发生器)，对其中的参数amplitude产生了困惑，这个amplitude(振幅)指的是峰值还是峰峰值。
+&lt;!--more--&gt;</p>
+<h3>2. 验证</h3>
+<p>于是设计了一个及其简单的电路进行仿真:
+<img src="/media/blog-electronicDesign01/4aa5cf3cfdb3fb0e.webp" alt="simple circuit 1" /></p>
+<p>其中函数发生器的amplitude设为10V，可是multimeter的结果却是14.142V，出乎意料
+于是查阅资料，发现function generator的三个引脚为正、负、接地，并不是负号出接地！这样改过之后，结果为7.071V
+<img src="/media/blog-electronicDesign01/8db09b7cc25ce99d.webp" alt="simple circuit 2" /></p>
+<p>因为multimeter(万用表)测的为正弦交流信号的有效值，可以推测出function generator的amplitude为峰值。后来看见有网友解答说: 单位为Vp时是峰值，Vpp才是峰峰值</p>
+<h3>3. 电路图</h3>
+<p>附上多级放大电路及负反馈电路的电路图：
+<img src="/media/blog-electronicDesign01/6d79a6bc4c3c6996.webp" alt="Simple circuit 3" /></p>
+</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>
