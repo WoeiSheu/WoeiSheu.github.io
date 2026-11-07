@@ -10,7 +10,7 @@
 ## 一、前言
 在和朋友聊天时，突然无话可说，屏幕前的你该如何是好呢? 很多时候屏幕前的我们，都会想到发个表情，然后彼此心照不宣地沉默。如果你用的是windows 10的新版本，按下 `winkey + period` （即windows图标和英文句点按钮），就会有如下的弹出框。
 
-![image"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.BzIhIH2c.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2020年9月7日</time></div><h1>从一个Emoji字符说起</h1><div class="archive-tags"><span>character set</span><span>encode</span><span>emoji</span></div></header><div class="prose"><h2>一、前言</h2>
+![image"><link rel="alternate" type="application/rss+xml" title="霁月荒馆" href="/rss.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/Base.eQ5Gz3jR.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2020年9月7日</time></div><h1>从一个Emoji字符说起</h1><div class="archive-tags"><span>character set</span><span>encode</span><span>emoji</span></div></header><div class="prose"><h2>一、前言</h2>
 <p>在和朋友聊天时，突然无话可说，屏幕前的你该如何是好呢? 很多时候屏幕前的我们，都会想到发个表情，然后彼此心照不宣地沉默。如果你用的是windows 10的新版本，按下 <code>winkey + period</code> （即windows图标和英文句点按钮），就会有如下的弹出框。</p>
 <p><img src="/media/blog-characterset/940695ef7c89db1a.webp" alt="image_1_1.png" /></p>
 <p>&lt;p align="center"&gt;图1.1&lt;/p&gt;</p>
@@ -130,9 +130,9 @@
 <li>😤的码点值为 <code>0x1F624</code>，用UTF-8存储就是：<code>11110000 10011111 10011000 10100100</code></li>
 </ul>
 <p>如果我们算一下四字节的UTF-8实际能表示的范围，会发现理论上应该能表示到 <code>0x1FFFFF</code> ，但是实际上却限制了上限为 <code>0x10FFFF</code> ，这就是上节所述的UTF-16的上限，既然编码空间足够大，目前看来总是够用的，那为了兼容UTF-16，就先这样规定吧。（RFC3629的标准如此规定了上限，大概就是这样想的吧）。</p>
-<p>关于UTF-8，还有一些比较有意思的现象，比如在早期Windows中， <strong>当你在 windows 的记事本里新建一个文件，输入"联通"两个字之后，保存，关闭，然后再次打开，你会发现这两个字已经消失了，代之的是几个乱码</strong> ，这是由于GBK编码和UTF-8编码的识别错误导致的，可以动手搜一搜相应字节码分析一下，然后再看<sup class="footnote-ref"><a href="#blog-characterset-fn1" id="blog-characterset-fnref1">[1]</a></sup>这篇文章，验证下自己的分析是否正确。</p>
+<p>关于UTF-8，还有一些比较有意思的现象，比如在早期Windows中， <strong>当你在 windows 的记事本里新建一个文件，输入"联通"两个字之后，保存，关闭，然后再次打开，你会发现这两个字已经消失了，代之的是几个乱码</strong> ，这是由于GBK编码和UTF-8编码的识别错误导致的，可以动手搜一搜相应字节码分析一下，然后再看<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref1" href="#blog-characterset-fn1" role="doc-noteref" aria-label="查看注释 1">[1]</a></sup>这篇文章，验证下自己的分析是否正确。</p>
 <h3>3.5 大端小端</h3>
-<p>Danny Cohen在论文 <sup class="footnote-ref"><a href="#blog-characterset-fn2" id="blog-characterset-fnref2">[2]</a></sup> 中提出了大端小端的说法，想要结束字节序(Endianness)的“战争”，自那以后，在程序员眼中，大端小端不再是《格列佛游记》的名词，而是字节序的专属名词了。在介绍UTF-32、UTF-16、UTF-8三种编码方式时，我们都没有考虑大端小端的问题，细心的读者可能已经意识到这个问题了，在此我们再简单介绍下。</p>
+<p>Danny Cohen在论文 <sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref2" href="#blog-characterset-fn2" role="doc-noteref" aria-label="查看注释 2">[2]</a></sup> 中提出了大端小端的说法，想要结束字节序(Endianness)的“战争”，自那以后，在程序员眼中，大端小端不再是《格列佛游记》的名词，而是字节序的专属名词了。在介绍UTF-32、UTF-16、UTF-8三种编码方式时，我们都没有考虑大端小端的问题，细心的读者可能已经意识到这个问题了，在此我们再简单介绍下。</p>
 <blockquote>
 <p>大端(Big Endian): 将一个多位数的高位放在较小的地址处，低位放在较大的地址处
 小端(Little Endian): 将一个多位数的低位放在较小的地址处，高位放在较大的地址处</p>
@@ -201,7 +201,7 @@
 <p><strong>这就是Separator(Z)大类中仅有的两个Format Type的字符了</strong>
 <strong>因此, 剩下的所有细分类别, 其实全是Cf类别的字符, 包括了开始所说的<code>0xFEFF</code></strong></p>
 <h4>3.7.3 语言标记</h4>
-<p>不予叙述，可参考<sup class="footnote-ref"><a href="#blog-characterset-fn3" id="blog-characterset-fnref3">[3]</a></sup>的说明。</p>
+<p>不予叙述，可参考<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref3" href="#blog-characterset-fn3" role="doc-noteref" aria-label="查看注释 3">[3]</a></sup>的说明。</p>
 <h4>3.7.4 行间标注</h4>
 <p>3个格式化字符用于支持旁注标记（U+FFF9、U+FFFA、U+FFFB）。</p>
 <blockquote>
@@ -231,12 +231,12 @@
 <p>笔者按: 一个阿拉伯语撑起了字符串处理Bug的半边天...</p>
 </blockquote>
 <h4>3.7.6 异体字选择器</h4>
-<p>异体字的具体说明可参考<sup class="footnote-ref"><a href="#blog-characterset-fn4" id="blog-characterset-fnref4">[4]</a></sup>. 简单来说，就是一种语言中，某一个字有两种写法，但是意义完全相同，因此当初编码时，没有将其区分开，但在实际使用中，可能在用于人名等专有名词时，还是需要进行区分的，因此提供了“异体字选择器”这种控制字符。</p>
+<p>异体字的具体说明可参考<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref4" href="#blog-characterset-fn4" role="doc-noteref" aria-label="查看注释 4">[4]</a></sup>. 简单来说，就是一种语言中，某一个字有两种写法，但是意义完全相同，因此当初编码时，没有将其区分开，但在实际使用中，可能在用于人名等专有名词时，还是需要进行区分的，因此提供了“异体字选择器”这种控制字符。</p>
 <h4>3.7.7 控制字符的图片</h4>
 <p>不予叙述。</p>
 <h3>3.8 组合字符(Combining Character)</h3>
 <h4>3.8.1 组合标记(Combining Marks)</h4>
-<p>上面在说控制字符时，有一类所谓的行间标记提到了“旁注标记”，在汉字上方标注拼音，可以称之为“旁注标记”。那对于某些欧洲语言来说，可以在字母上方加一些变音符号，实质上就表示成了另一个不同的字符，但它又是在原字符基础上变化的，如果每种变化都算作一个新字符，那即使是Unicode，可能也装不下这些排列组合的数量，因此出现了附加组合标记的组合字符。如Wiki的图<sup class="footnote-ref"><a href="#blog-characterset-fn5" id="blog-characterset-fnref5">[5]</a></sup>。</p>
+<p>上面在说控制字符时，有一类所谓的行间标记提到了“旁注标记”，在汉字上方标注拼音，可以称之为“旁注标记”。那对于某些欧洲语言来说，可以在字母上方加一些变音符号，实质上就表示成了另一个不同的字符，但它又是在原字符基础上变化的，如果每种变化都算作一个新字符，那即使是Unicode，可能也装不下这些排列组合的数量，因此出现了附加组合标记的组合字符。如Wiki的图<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref5" href="#blog-characterset-fn5" role="doc-noteref" aria-label="查看注释 5">[5]</a></sup>。</p>
 <p><img src="/media/blog-characterset/f9aac59b39d817e8.webp" alt="image_3_16" /></p>
 <p>&lt;p align="center"&gt;图3.16&lt;/p&gt;</p>
 <p>在统一码中，用于欧洲语言和国际音标的组合用附加符号为〈U+0300–U+036F〉。上图的字符 y̌ 就可以表示成： <code>\u0079\u030C</code> ， <code>\u0079</code> 就是 <code>y</code> ， <code>\u030C</code> 就是变音符号'̌。</p>
@@ -246,7 +246,7 @@
 </blockquote>
 <h4>3.8.2 Grapheme 和 Grapheme Cluster</h4>
 <p>不过，你以为Unicode的组合字符序列到此就结束了吗? まだまだだね
-关于组合字符序列, Unicode官网给出了一些FAQ<sup class="footnote-ref"><a href="#blog-characterset-fn6" id="blog-characterset-fnref6">[6]</a></sup>. 在这些Q&amp;A中, 有一个问题:</p>
+关于组合字符序列, Unicode官网给出了一些FAQ<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref6" href="#blog-characterset-fn6" role="doc-noteref" aria-label="查看注释 6">[6]</a></sup>. 在这些Q&amp;A中, 有一个问题:</p>
 <blockquote>
 <p>Q: So is a combining character sequence the same as a “character”?</p>
 </blockquote>
@@ -256,7 +256,7 @@
 事实上, Unicode引入的字素(grapheme)概念, 也可以称为用户感知字符(user-perceived character), 不仅可以在基础字符上附加组合字符, 用来形成新的字素, 也可以通过控制字符(如方向控制等)来形成新的字素.</p>
 <p>字素的集合, 就可以统一称为 Grapheme Cluster, 或者通俗一点: user-perceived characters</p>
 <p>So... Why? 为什么要划分这么细, 规定这么多细节, 直接认为 y̌ 就是两个字符, 不搞其他一些幺蛾子, 难道不香吗?
-Unicode在TR29的技术报告里<sup class="footnote-ref"><a href="#blog-characterset-fn7" id="blog-characterset-fnref7">[7]</a></sup>，给出了一段话:</p>
+Unicode在TR29的技术报告里<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref7" href="#blog-characterset-fn7" role="doc-noteref" aria-label="查看注释 7">[7]</a></sup>，给出了一段话:</p>
 <blockquote>
 <p>Grapheme cluster boundaries are important for collation, regular expressions, UI interactions, segmentation for vertical text, identification of boundaries for first-letter styling, and counting “character” positions within text. Word boundaries, line boundaries, and sentence boundaries should not occur within a grapheme cluster: in other words, a grapheme cluster should be an atomic unit with respect to the process of determining these other boundaries.</p>
 </blockquote>
@@ -272,7 +272,7 @@ Unicode在TR29的技术报告里<sup class="footnote-ref"><a href="#blog-charact
 <p>上面说完了字素, 又引入了另一个问题, 那就是:
 带变音的拉丁字素等，使用广泛，以及占坑较早，因此，早早地就作为一个个的单独码点在Unicode种有一个码(keng)位了，而后来Unicode又规定了组合字符，这样，同一个字素就有可能有两种编码方式。比如“Å”，既可以是 <code>\u00c5</code> ，也可以是 <code>\u0041\u030A</code> 表示，可以在<a href="https://apps.timwhitlock.info/unicode/inspect">这个网站</a> 试试。这就引入了另一个话题，Unicode equivalence和Normalization，即判断两个字符/素串相等时，是否需要考虑这种等价情况，如果需要考虑这种意义上的等价，那么就需要对字符/素串先进行正规化(Normalization)，再进行比较。</p>
 <blockquote>
-<p>正规化即将彼此等价的序列转成同一列序, Unicode提供了两种等价概念：标准等价(canonically equivalent)和兼容等价(compatible). 两者的具体概念参考<sup class="footnote-ref"><a href="#blog-characterset-fn8" id="blog-characterset-fnref8">[8]</a></sup>. 标准等价的一个示例就是 Å<code>\u00c5</code>和 Å<code>\u0041\u030A</code>, 兼容等价的一个示例就是 ﬀ<code>\ufb00</code> 和 ff<code>\u0066\u0066</code></p>
+<p>正规化即将彼此等价的序列转成同一列序, Unicode提供了两种等价概念：标准等价(canonically equivalent)和兼容等价(compatible). 两者的具体概念参考<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref8" href="#blog-characterset-fn8" role="doc-noteref" aria-label="查看注释 8">[8]</a></sup>. 标准等价的一个示例就是 Å<code>\u00c5</code>和 Å<code>\u0041\u030A</code>, 兼容等价的一个示例就是 ﬀ<code>\ufb00</code> 和 ff<code>\u0066\u0066</code></p>
 </blockquote>
 <p>为了进行正规化, 自然会有两种想法:</p>
 <ul>
@@ -331,7 +331,7 @@ Unicode在TR29的技术报告里<sup class="footnote-ref"><a href="#blog-charact
 <p>既然emoji就是一个字符，那么在计算机程序中，对它的操作、存储，也自然是和普通字符没什么差别，本质就是字符的编码问题。那这是不是意味着，在互联网程序中，凡是可以输入字符的地方，其实也就可以输入emoji、乃至所有unicode字符呢? 最差也就是某些古老的客户端没法正确展示嘛！真是如此，还是说服务器端有必要对unicode字符做一些限制呢? 答案是肯定的，在很多情况下，的确要对字符进行限制。这样做的原因有很多，这里列举以下几个原因，进行说明。</p>
 <h3>4.1 数据库不支持</h3>
 <p>这主要就是MySQL的坑了，MySQL 5.5.3版本之前，设置的所谓utf-8格式，其实只支持三个字节长度的utf-8，不支持四字节长度。之后的版本才支持四字节长度，而为了兼容以前的版本，指定表结构、字段类型为utf-8，其实还是只支持三字节的utf8mb3，只有显示指定utf8mb4，才是支持四字节的utf-8.</p>
-<p>不过这也不能把锅全甩给MySQL，谁让MySQL支持UTF-8太早了呢，根据Wiki<sup class="footnote-ref"><a href="#blog-characterset-fn9" id="blog-characterset-fnref9">[9]</a></sup>所述。</p>
+<p>不过这也不能把锅全甩给MySQL，谁让MySQL支持UTF-8太早了呢，根据Wiki<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref9" href="#blog-characterset-fn9" role="doc-noteref" aria-label="查看注释 9">[9]</a></sup>所述。</p>
 <blockquote>
 <p>这是由于MySQL在4.1版本开始支持UTF-8编码（当时参考UTF-8草案版本为RFC 2279）时，为2003年，并且在同年9月限制了其实现的UTF-8编码的空间占用最多为3字节，而UTF-8正式形成标准化文档（RFC 3629）是其之后。限制UTF-8编码实现的编码空间占用一般被认为是考虑到数据库文件设计的兼容性和读取最优化，但实际上并没有达到目的，而且在UTF-8编码开始出现需要存入非基本多文种平面的Unicode字符（例如emoji字符）时导致无法存入（由于3字节的实现只能存入基本多文种平面内的字符）。直到2010年在5.5版本推出“utf8mb4”来代替、“utf8”重命名为“utf8mb3”并调整“utf8”为“utf8mb3”的别名，并不建议使用旧“utf8”编码，以此修正遗留问题。</p>
 </blockquote>
@@ -356,11 +356,11 @@ Unicode在TR29的技术报告里<sup class="footnote-ref"><a href="#blog-charact
 <p><img src="/media/blog-characterset/a8e1273ea3817376.webp" alt="image_5_1.png" /></p>
 <p>&lt;p align="center"&gt;图5.1&lt;/p&gt;</p>
 <p>不过这块了解不多，也没有查阅太多资料，可能不太准确. 如有错误恳请指出。</p>
-<p>参考<sup class="footnote-ref"><a href="#blog-characterset-fn10" id="blog-characterset-fnref10">[10]</a></sup>, 可以给出稍微细节点的渲染流程, 如图5.2所示.</p>
+<p>参考<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref10" href="#blog-characterset-fn10" role="doc-noteref" aria-label="查看注释 10">[10]</a></sup>, 可以给出稍微细节点的渲染流程, 如图5.2所示.</p>
 <p><img src="/media/blog-characterset/2e58f3e779232f97.webp" alt="image_5_2.png" /></p>
 <p>&lt;p align="center"&gt;图5.2&lt;/p&gt;</p>
 <p>还有一点就是： <strong>现有的TTF和OTF格式，单个字体文件都只能支持65535个字符，因此想要用一个字体文件涵盖所有的Unicode字符是不可能的</strong></p>
-<p>在计算机的文字处理领域，除了底层的编码、字体，还要考虑对字符如何进行排版，而这又是另一个复杂而又宏大的话题了<sup class="footnote-ref"><a href="#blog-characterset-fn10" id="blog-characterset-fnref10:1">[10:1]</a></sup>。就此打住，有机会再研究~</p>
+<p>在计算机的文字处理领域，除了底层的编码、字体，还要考虑对字符如何进行排版，而这又是另一个复杂而又宏大的话题了<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref10-2" href="#blog-characterset-fn10" role="doc-noteref" aria-label="查看注释 10">[10]</a></sup>。就此打住，有机会再研究~</p>
 <h2>六、Q&amp;A</h2>
 <p>好了，说了这么多理论，问几个问题，看你是否都能答对。
 以下涉及编程语言的部分, Java 版本为 Java 11, Python 版本为 Python 3.8.2, Go 版本为 Go 1.13.8
@@ -457,7 +457,7 @@ f0 9f 98 a4
 "\U0001f624"
 </code></pre>
 <p>不科学呀, 怎么和其他语言都不一样呢?
-直接看Go语言的一篇官方博客<sup class="footnote-ref"><a href="#blog-characterset-fn11" id="blog-characterset-fnref11">[11]</a></sup>, <a href="https://blog.golang.org/strings">Strings, bytes, runes and characters in Go</a>
+直接看Go语言的一篇官方博客<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref11" href="#blog-characterset-fn11" role="doc-noteref" aria-label="查看注释 11">[11]</a></sup>, <a href="https://blog.golang.org/strings">Strings, bytes, runes and characters in Go</a>
 这篇博客阐述了Go中关于String的几个关键点.</p>
 <ul>
 <li>Go中字符串实际上就等价于一个字节流, 访问一个字符串的index位置, 得到的其实就是对应位置的字节.</li>
@@ -508,7 +508,7 @@ Go给出的答案是: 语言核心部分不包含该功能, 但是可以使用�
 }
 </code></pre>
 <blockquote>
-<p>实际上, 在Unicode的FAQ中<sup class="footnote-ref"><a href="#blog-characterset-fn6" id="blog-characterset-fnref6:1">[6:1]</a></sup>, 也提到了如何统计string中的字符数量, <a href="http://unicode.org/faq/char_combmark.html#7">点我看看</a>, 其中将统计方法归纳总结成了四类: bytes,Code units,Code points,Grapheme clusters</p>
+<p>实际上, 在Unicode的FAQ中<sup class="footnote-ref"><a class="footnote-marker" id="blog-characterset-fnref6-2" href="#blog-characterset-fn6" role="doc-noteref" aria-label="查看注释 6">[6]</a></sup>, 也提到了如何统计string中的字符数量, <a href="http://unicode.org/faq/char_combmark.html#7">点我看看</a>, 其中将统计方法归纳总结成了四类: bytes,Code units,Code points,Grapheme clusters</p>
 </blockquote>
 <h3>6.2 字符串反转都如何处理?</h3>
 <p>如果只是对bytes反转, 是很简单的, 但很多情况下对终端用户来说, 反转之后的字符串还想能够正常显示的, 因此对于复杂文字来说, 需要以字素为单位切分, 而不仅仅是字符/Code point</p>
@@ -574,32 +574,74 @@ func Reverse(s string) string {
   return returnStr.toString();
 }
 </code></pre>
-<h2>Footnote</h2>
-<hr />
-<section class="footnotes">
-<ol>
-<li id="blog-characterset-fn1"><p>infocodez. “【转载】随便说说字符集和编码.” 博客园, 27 Sept. 2017, www.cnblogs.com/infocodez/p/7600459.html. <a href="#blog-characterset-fnref1">↩︎</a></p>
-</li>
-<li id="blog-characterset-fn2"><p>Cohen, Danny. “ON HOLY WARS AND A PLEA FOR PEACE.” IETF, 1 Apr. 1980, www.ietf.org/rfc/ien/ien137.txt. <a href="#blog-characterset-fnref2">↩︎</a></p>
-</li>
-<li id="blog-characterset-fn3"><p>Wikipedians. “Unicode控制字符.” Wikipedia, Wikimedia Foundation, 28 July 2020, zh.wikipedia.org/wiki/Unicode控制字符. <a href="#blog-characterset-fnref3">↩︎</a></p>
-</li>
-<li id="blog-characterset-fn4"><p>Wikipedians. “異體字選擇器.” Wikipedia, Wikimedia Foundation, 4 Sept. 2020, zh.wikipedia.org/wiki/異體字選擇器. <a href="#blog-characterset-fnref4">↩︎</a></p>
-</li>
-<li id="blog-characterset-fn5"><p>Wikipedians. “組合字符.” Wikipedia, Wikimedia Foundation, 30 May 2019, zh.wikipedia.org/wiki/組合字符. <a href="#blog-characterset-fnref5">↩︎</a></p>
-</li>
-<li id="blog-characterset-fn6"><p>Unicode Consortium. (2020, September 19). Characters and Combining Marks. Retrieved September 19, 2020, from http://unicode.org/faq/char_combmark.html <a href="#blog-characterset-fnref6">↩︎</a> <a href="#blog-characterset-fnref6:1">↩︎</a></p>
-</li>
-<li id="blog-characterset-fn7"><p>Davis, Mark, and Christopher Chapman. Unicode Text Segmentation. 19 Feb. 2020, unicode.org/reports/tr29/. <a href="#blog-characterset-fnref7">↩︎</a></p>
-</li>
-<li id="blog-characterset-fn8"><p>Wikipedians. “Unicode Equivalence.” Wikipedia, Wikimedia Foundation, 7 Aug. 2020, en.wikipedia.org/wiki/Unicode_equivalence. <a href="#blog-characterset-fnref8">↩︎</a></p>
-</li>
-<li id="blog-characterset-fn9"><p>Wikipedians. “UTF-8.” Wikipedia, Wikimedia Foundation, 20 Aug. 2020, zh.wikipedia.org/wiki/UTF-8. <a href="#blog-characterset-fnref9">↩︎</a></p>
-</li>
-<li id="blog-characterset-fn10"><p>Hosken, M., &amp; Gaultney, V. (2003, September 5). Guidelines for Writing System Support: Technical Details: Smart Rendering: Part 1. Retrieved September 20, 2020, from https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi <a href="#blog-characterset-fnref10">↩︎</a> <a href="#blog-characterset-fnref10:1">↩︎</a></p>
-</li>
-<li id="blog-characterset-fn11"><p>Pike, R. (2013, October 23). Strings, bytes, runes and characters in Go. Retrieved September 19, 2020, from https://blog.golang.org/strings <a href="#blog-characterset-fnref11">↩︎</a></p>
-</li>
-</ol>
-</section>
+<section class="footnotes" role="doc-endnotes" aria-label="注释与参考资料"><h2>注释与参考资料</h2><ol class="footnotes-list">
+<li class="footnote-item" id="blog-characterset-fn1"><span class="footnote-label">[1]</span><div class="footnote-content"><p>infocodez. “【转载】随便说说字符集和编码.” 博客园, 27 Sept. 2017, www.cnblogs.com/infocodez/p/7600459.html.</p>
+<a class="footnote-backref" href="#blog-characterset-fnref1" role="doc-backlink" aria-label="返回正文注释 1 第 1 处">↩</a> </div></li>
+<li class="footnote-item" id="blog-characterset-fn2"><span class="footnote-label">[2]</span><div class="footnote-content"><p>Cohen, Danny. “ON HOLY WARS AND A PLEA FOR PEACE.” IETF, 1 Apr. 1980, www.ietf.org/rfc/ien/ien137.txt.</p>
+<a class="footnote-backref" href="#blog-characterset-fnref2" role="doc-backlink" aria-label="返回正文注释 2 第 1 处">↩</a> </div></li>
+<li class="footnote-item" id="blog-characterset-fn3"><span class="footnote-label">[3]</span><div class="footnote-content"><p>Wikipedians. “Unicode控制字符.” Wikipedia, Wikimedia Foundation, 28 July 2020, zh.wikipedia.org/wiki/Unicode控制字符.</p>
+<a class="footnote-backref" href="#blog-characterset-fnref3" role="doc-backlink" aria-label="返回正文注释 3 第 1 处">↩</a> </div></li>
+<li class="footnote-item" id="blog-characterset-fn4"><span class="footnote-label">[4]</span><div class="footnote-content"><p>Wikipedians. “異體字選擇器.” Wikipedia, Wikimedia Foundation, 4 Sept. 2020, zh.wikipedia.org/wiki/異體字選擇器.</p>
+<a class="footnote-backref" href="#blog-characterset-fnref4" role="doc-backlink" aria-label="返回正文注释 4 第 1 处">↩</a> </div></li>
+<li class="footnote-item" id="blog-characterset-fn5"><span class="footnote-label">[5]</span><div class="footnote-content"><p>Wikipedians. “組合字符.” Wikipedia, Wikimedia Foundation, 30 May 2019, zh.wikipedia.org/wiki/組合字符.</p>
+<a class="footnote-backref" href="#blog-characterset-fnref5" role="doc-backlink" aria-label="返回正文注释 5 第 1 处">↩</a> </div></li>
+<li class="footnote-item" id="blog-characterset-fn6"><span class="footnote-label">[6]</span><div class="footnote-content"><p>Unicode Consortium. (2020, September 19). Characters and Combining Marks. Retrieved September 19, 2020, from http://unicode.org/faq/char_combmark.html</p>
+<a class="footnote-backref" href="#blog-characterset-fnref6" role="doc-backlink" aria-label="返回正文注释 6 第 1 处">↩</a> <a class="footnote-backref" href="#blog-characterset-fnref6-2" role="doc-backlink" aria-label="返回正文注释 6 第 2 处">↩2</a> </div></li>
+<li class="footnote-item" id="blog-characterset-fn7"><span class="footnote-label">[7]</span><div class="footnote-content"><p>Davis, Mark, and Christopher Chapman. Unicode Text Segmentation. 19 Feb. 2020, unicode.org/reports/tr29/.</p>
+<a class="footnote-backref" href="#blog-characterset-fnref7" role="doc-backlink" aria-label="返回正文注释 7 第 1 处">↩</a> </div></li>
+<li class="footnote-item" id="blog-characterset-fn8"><span class="footnote-label">[8]</span><div class="footnote-content"><p>Wikipedians. “Unicode Equivalence.” Wikipedia, Wikimedia Foundation, 7 Aug. 2020, en.wikipedia.org/wiki/Unicode_equivalence.</p>
+<a class="footnote-backref" href="#blog-characterset-fnref8" role="doc-backlink" aria-label="返回正文注释 8 第 1 处">↩</a> </div></li>
+<li class="footnote-item" id="blog-characterset-fn9"><span class="footnote-label">[9]</span><div class="footnote-content"><p>Wikipedians. “UTF-8.” Wikipedia, Wikimedia Foundation, 20 Aug. 2020, zh.wikipedia.org/wiki/UTF-8.</p>
+<a class="footnote-backref" href="#blog-characterset-fnref9" role="doc-backlink" aria-label="返回正文注释 9 第 1 处">↩</a> </div></li>
+<li class="footnote-item" id="blog-characterset-fn10"><span class="footnote-label">[10]</span><div class="footnote-content"><p>Hosken, M., &amp; Gaultney, V. (2003, September 5). Guidelines for Writing System Support: Technical Details: Smart Rendering: Part 1. Retrieved September 20, 2020, from https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi</p>
+<a class="footnote-backref" href="#blog-characterset-fnref10" role="doc-backlink" aria-label="返回正文注释 10 第 1 处">↩</a> <a class="footnote-backref" href="#blog-characterset-fnref10-2" role="doc-backlink" aria-label="返回正文注释 10 第 2 处">↩2</a> </div></li>
+<li class="footnote-item" id="blog-characterset-fn11"><span class="footnote-label">[11]</span><div class="footnote-content"><p>Pike, R. (2013, October 23). Strings, bytes, runes and characters in Go. Retrieved September 19, 2020, from https://blog.golang.org/strings</p>
+<a class="footnote-backref" href="#blog-characterset-fnref11" role="doc-backlink" aria-label="返回正文注释 11 第 1 处">↩</a> </div></li>
+<li class="footnote-item" id="blog-characterset-fn12"><span class="footnote-label">[12]</span><div class="footnote-content"><p>Kawasaki, Tamaki. <em>Emoji（表情符号）是如何诞生并在全世界普及的？</em>. 12 Aug. 2018, www.gov-online.go.jp/eng/publicity/book/hlj/html/201808/201808_12_ch.html.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn13"><span class="footnote-label">[13]</span><div class="footnote-content"><p>Wikipedians. “World Emoji Day.” <em>Wikipedia</em>, Wikimedia Foundation, 10 Aug. 2020, en.wikipedia.org/wiki/World_Emoji_Day.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn14"><span class="footnote-label">[14]</span><div class="footnote-content"><p>池昌海 . “语言学概论.” 浙江大学-远程教育学院, 16 Dec. 2010, 218.108.57.198/yyxgl1/.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn15"><span class="footnote-label">[15]</span><div class="footnote-content"><p>李玲璞. "汉字学元点理论及相关问题——兼谈汉字认知的若干误区." 中国文字研究 (2004).</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn16"><span class="footnote-label">[16]</span><div class="footnote-content"><p>Wikipedians. “Character Encoding.” Wikipedia, Wikimedia Foundation, 25 Aug. 2020, en.wikipedia.org/wiki/Character_encoding.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn17"><span class="footnote-label">[17]</span><div class="footnote-content"><p>Tero, Paul. “Unicode, UTF8 &amp; Character Sets: The Ultimate Guide.” Smashing Magazine, 6 June 2012, www.smashingmagazine.com/2012/06/all-about-unicode-utf8-character-sets/.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn18"><span class="footnote-label">[18]</span><div class="footnote-content"><p>Wikipedians. “Plane (Unicode).” <em>Wikipedia</em>, Wikimedia Foundation, 28 Aug. 2020, en.wikipedia.org/wiki/Plane_(Unicode).</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn19"><span class="footnote-label">[19]</span><div class="footnote-content"><p>Unkown. “Unicode Character Table.” ✔️ ❤️ ★ Unicode Character Table, 6 Sept. 2020, unicode-table.com/en/.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn20"><span class="footnote-label">[20]</span><div class="footnote-content"><p>timwhitlock. “Unicode Character Inspector.” <em>apps.timwhitlock.info</em>, 6 Sept. 2020, apps.timwhitlock.info/unicode/inspect.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn21"><span class="footnote-label">[21]</span><div class="footnote-content"><p>纤夫张 . “其实你并不懂 Unicode.” 知乎专栏, 31 Dec. 2018, zhuanlan.zhihu.com/p/53714077.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn22"><span class="footnote-label">[22]</span><div class="footnote-content"><p>Wikipedians. “UTF-8.” Wikipedia, Wikimedia Foundation, 5 Sept. 2020, en.wikipedia.org/wiki/UTF-8.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn23"><span class="footnote-label">[23]</span><div class="footnote-content"><p>F. Yergeau. “UTF-8, a Transformation Format of ISO 10646.” IETF Tools, 1 Nov. 2003, tools.ietf.org/html/rfc3629.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn24"><span class="footnote-label">[24]</span><div class="footnote-content"><p>Wikipedians. “字节序.” Wikipedia, Wikimedia Foundation, 18 Aug. 2020, zh.wikipedia.org/wiki/字节序.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn25"><span class="footnote-label">[25]</span><div class="footnote-content"><p>Unicode. “Glossary of Unicode Terms.” Glossary, 21 May 2020, unicode.org/glossary/.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn26"><span class="footnote-label">[26]</span><div class="footnote-content"><p>Wikipedians. “位元組順序記號.” Wikipedia, Wikimedia Foundation, 30 June 2020, zh.wikipedia.org/wiki/位元組順序記號.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn27"><span class="footnote-label">[27]</span><div class="footnote-content"><p>Zachary. “Emoji与Unicode.” Emoji与Unicode · Zablog, 18 Sept. 2017, zablog.me/2017/09/18/emoji/.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn28"><span class="footnote-label">[28]</span><div class="footnote-content"><p>deerchao. “基本修养：字符集与编码.” 超越代码, 12 Sept. 2019, deerchao.cn/blog/posts/unicode.html.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn29"><span class="footnote-label">[29]</span><div class="footnote-content"><p>vstinner. “Programming with Unicode.” 4. Unicode - Programming with Unicode, 23 June 2017, unicodebook.readthedocs.io/unicode.html.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn30"><span class="footnote-label">[30]</span><div class="footnote-content"><p>Cenalulu(卢钧轶) . “十分钟搞清字符集和字符编码.” Cenalulu's Tech Blog, 25 Jan. 2015, cenalulu.github.io/linux/character-encoding/.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn31"><span class="footnote-label">[31]</span><div class="footnote-content"><p>Wikipedians. “Unicode Font.” Wikipedia, Wikimedia Foundation, 13 July 2020, en.wikipedia.org/wiki/Unicode_font.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn32"><span class="footnote-label">[32]</span><div class="footnote-content"><p>DrStrangeLove. “How Are Character Encodings Related to Fonts?” Super User, 15 Nov. 2011, superuser.com/questions/357530/how-are-character-encodings-related-to-fonts.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn33"><span class="footnote-label">[33]</span><div class="footnote-content"><p>Belleve. “字符编码与字体的关系是什么？.” 知乎, 27 Apr. 2015, www.zhihu.com/question/29924586.</p>
+</div></li>
+<li class="footnote-item" id="blog-characterset-fn34"><span class="footnote-label">[34]</span><div class="footnote-content"><p>Unicode Consortium. (2002, October 28). A General Method for Rendering Combining Marks. Retrieved September 20, 2020, from http://www.unicode.org/notes/tn2/</p>
+</div></li>
+</ol></section>
 </div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer></body></html>

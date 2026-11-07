@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><id>https://xuwei.fun/</id><title>霁月荒馆</title><subtitle>文字、摄影、声音与影像。关于生活，也关于思考。</subtitle><updated>2026-11-04T17:19:21.643Z</updated><link href="https://xuwei.fun/atom.xml" rel="self"/><link href="https://xuwei.fun/"/><author><name>Kino</name></author><entry><id>https://xuwei.fun/works/blog-health01/</id><title>宫颈癌治疗记录</title><link href="https://xuwei.fun/works/blog-health01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2024-11-17T07:33:33.000Z</published><summary type="text">
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><id>https://xuwei.fun/</id><title>霁月荒馆</title><subtitle>文字、摄影、声音与影像。关于生活，也关于思考。</subtitle><updated>2026-11-07T11:27:54.738Z</updated><link href="https://xuwei.fun/atom.xml" rel="self"/><link href="https://xuwei.fun/"/><author><name>Kino</name></author><entry><id>https://xuwei.fun/works/blog-health01/</id><title>宫颈癌治疗记录</title><link href="https://xuwei.fun/works/blog-health01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2024-11-17T07:33:33.000Z</published><summary type="text">
 ## I. 前言
 2024年7月给父母安排了体检, 母亲检查出来有HPV, 数次催促后, 去当地医院复查, 做完活检, 基本确认宫颈癌, 8月中赴上海, 挂号、住院、手术、放化疗, 3个月过去了, 最后一次放疗已经结束了, 现在只需要后面几年持续复查, 祈求一切正常, 并无其他事宜了。
 因此简单写篇文章记录下这3个月的过程, 希望能给其他人有一点点帮助。
@@ -8,30 +8,30 @@
 
 &lt;!--more--&gt;
 ## II. 住院前
-家里有亲戚在医疗相关行业工作, 推荐了瑞金的妇科。约了2024.08.20</summary></entry><entry><id>https://xuwei.fun/works/blog-invest01/</id><title>量化投资从零到一（其一）</title><link href="https://xuwei.fun/works/blog-invest01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2024-02-25T14:30:00.000Z</published><summary type="text">
+家里有亲戚在医疗相关行业工作, 推荐了瑞金的妇科。约了2024.08.20</summary></entry><entry><id>https://xuwei.fun/works/blog-invest01/</id><title>量化投资从零到一（其一）</title><link href="https://xuwei.fun/works/blog-invest01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2024-02-25T14:30:00.000Z</published><summary type="text">
 ## 0. 前言
 过去7年的证券交易经验，在一些交易行为上有了很大的提升，但是人的情绪却始终是无法控制的。
 要真正做到&quot;Make emotion work for you instead of against you.&quot;，靠Kino的意志力基本不现实，所以2024最重要的一件事，还是将交易系统做出来，不能抱着完美主义的想法，而是从0到1，做一个不care编码质量的交易系统，能work就行。（这大概也是这几年社畜的收获之一：能忍受烂工程了）
 
-在主观的交易行为上，要始终牢记“市场永远不缺赚钱的机会”（当然啦，市场也永远不缺亏钱的机会），其实这句话反应到具体的交易行为上基本等价于“做好仓位管理”</summary></entry><entry><id>https://xuwei.fun/works/blog-allAboutPayment02/</id><title>关于支付的一切-其二（现代支付基础）</title><link href="https://xuwei.fun/works/blog-allAboutPayment02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2023-05-02T08:51:00.000Z</published><summary type="text">
+在主观的交易行为上，要始终牢记“市场永远不缺赚钱的机会”（当然啦，市场也永远不缺亏钱的机会），其实这句话反应到具体的交易行为上基本等价于“做好仓位管理”</summary></entry><entry><id>https://xuwei.fun/works/blog-allAboutPayment02/</id><title>关于支付的一切-其二（现代支付基础）</title><link href="https://xuwei.fun/works/blog-allAboutPayment02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2023-05-02T08:51:00.000Z</published><summary type="text">
 ## 0. 前言
 通过上一篇的讲解，我们大概了解了货币的发展历史，和现代信用货币的本质，但是既然当下的信用货币就是一个符号，就是转移债务债权的工具，具体到一笔交易中，如何进行货币的转移也就是支付，货币在各类机构中如何流转，这其中又有哪些基础知识。这一篇我们就来聊聊这些。
 
 ## 1. 基础概念
 ### 1.1 支付过程
-目前，支付过程的划分主要遵循国际清算银行( Bank for International Settlements, BIS)支付结算委员会(Payment and Settlement Systems, CPSS)的划分方法：将支付处理划分为三个标准化过程，即交易过程(tra</summary></entry><entry><id>https://xuwei.fun/works/blog-allAboutPayment01/</id><title>关于支付的一切-其一（货币是什么）</title><link href="https://xuwei.fun/works/blog-allAboutPayment01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2022-07-18T12:44:00.000Z</published><summary type="text">
+目前，支付过程的划分主要遵循国际清算银行( Bank for International Settlements, BIS)支付结算委员会(Payment and Settlement Systems, CPSS)的划分方法：将支付处理划分为三个标准化过程，即交易过程(tra</summary></entry><entry><id>https://xuwei.fun/works/blog-allAboutPayment01/</id><title>关于支付的一切-其一（货币是什么）</title><link href="https://xuwei.fun/works/blog-allAboutPayment01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2022-07-18T12:44:00.000Z</published><summary type="text">
 {% note green &apos;fas fa-cube&apos;%}
 Gold is money, everything else is credit. —— J.P. Morgan
 {% endnote %}
 
 ## 0. Intro
-J.P. Morgan在1912年说过的这句话，听者并不知所谓，初次听到总是会感觉很nb。但只有当你对现代支付体系的本质足够了解，才会理解这句话的精髓，同时也能够对很多经济现象 知其所以然 了，比如你会理解08年时总理说的“信心比黄金更重要”，也能够理解比特币究竟解决了什么问题？央行降准释放流动性的本质是什么？M0、M1、M2是个什么玩意？甚至你会反驳J.P. Mor</summary></entry><entry><id>https://xuwei.fun/works/blog-inTheNameOfZen01/</id><title>以禅之名(In the Name of Zen)其一 —— 序言篇</title><link href="https://xuwei.fun/works/blog-inTheNameOfZen01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2022-05-04T10:27:58.000Z</published><summary type="text">
+J.P. Morgan在1912年说过的这句话，听者并不知所谓，初次听到总是会感觉很nb。但只有当你对现代支付体系的本质足够了解，才会理解这句话的精髓，同时也能够对很多经济现象 知其所以然 了，比如你会理解08年时总理说的“信心比黄金更重要”，也能够理解比特币究竟解决了什么问题？央行降准释放流动性的本质是什么？M0、M1、M2是个什么玩意？甚至你会反驳J.P. Mor</summary></entry><entry><id>https://xuwei.fun/works/blog-inTheNameOfZen01/</id><title>以禅之名(In the Name of Zen)其一 —— 序言篇</title><link href="https://xuwei.fun/works/blog-inTheNameOfZen01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2022-05-04T10:27:58.000Z</published><summary type="text">
 {% note green &apos;fas fa-cube&apos;%}
 The unexamined life is not worth living. —— Socrates
 {% endnote %}
 
 ## 一、楔子
-苏格拉底曾说：“未经审视的人生是不值得过的”。Kino倒不完全赞同，如果一个人能够不需要审视自己的人生、不需要思考人生是否值得，就顺利地度过了一生，哲学家眼中仅此而已的活着，其实已经是超越大多数人的幸运了。如果一个社会，大多数人都可以如此度过一生，那必然是盛世才有的光景。可惜的是，这样的幸运在历史长河中，又能有多久呢？我甚至怀疑，千万年的历史长河中，真的有一人曾如此幸运过吗？总是有一</summary></entry><entry><id>https://xuwei.fun/works/blog-derivatives05/</id><title>衍生品笔记五 —— 期货市场</title><link href="https://xuwei.fun/works/blog-derivatives05/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2021-10-08T14:40:14.000Z</published><summary type="text">
+苏格拉底曾说：“未经审视的人生是不值得过的”。Kino倒不完全赞同，如果一个人能够不需要审视自己的人生、不需要思考人生是否值得，就顺利地度过了一生，哲学家眼中仅此而已的活着，其实已经是超越大多数人的幸运了。如果一个社会，大多数人都可以如此度过一生，那必然是盛世才有的光景。可惜的是，这样的幸运在历史长河中，又能有多久呢？我甚至怀疑，千万年的历史长河中，真的有一人曾如此幸运过吗？总是有一</summary></entry><entry><id>https://xuwei.fun/works/blog-derivatives05/</id><title>衍生品笔记五 —— 期货市场</title><link href="https://xuwei.fun/works/blog-derivatives05/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2021-10-08T14:40:14.000Z</published><summary type="text">
 ## 前言
 由于远期交易、互换交易，基本都是场外交易，通常都是专业的外汇交易员才会接触这些，对于个人投资/投机者来说，接触的可能性较小。因此还是先从期货、期权学起，再到远期、互换比较合理。
 
@@ -41,14 +41,14 @@ The unexamined life is not worth living. —— Socrates
 - 交易所: 规避违约风险(default)
 - 标准化: 促进流动性(liquidity)
 - 保证金: 增加杠杆(leverage)
-- daily settlement: 每日无负债结算, 也可称为mark to market(逐日盯市). 当保证金不足时，会收到Margin Call(追加保证金通知)，提醒需要追加现金或现金</summary></entry><entry><id>https://xuwei.fun/works/blog-derivatives04/</id><title>衍生品笔记四 —— 互换</title><link href="https://xuwei.fun/works/blog-derivatives04/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2021-10-07T10:33:22.000Z</published><summary type="text">
+- daily settlement: 每日无负债结算, 也可称为mark to market(逐日盯市). 当保证金不足时，会收到Margin Call(追加保证金通知)，提醒需要追加现金或现金</summary></entry><entry><id>https://xuwei.fun/works/blog-derivatives04/</id><title>衍生品笔记四 —— 互换</title><link href="https://xuwei.fun/works/blog-derivatives04/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2021-10-07T10:33:22.000Z</published><summary type="text">
 ## 前言
 前面已经介绍了远期、期货、期权，最后再来简单介绍下互换。
 
 &lt;!--more--&gt;
 ## 1. 互换(Swap)
 互换，通常也被称为掉期交易，在Wikipedia上给出的定义是:
-A swap, in finance, is an agreement between two counterparties to exchange financial instruments or cashflows or payments for a certain time. The instruments can be almost anything but most swaps involve</summary></entry><entry><id>https://xuwei.fun/works/blog-derivatives03/</id><title>衍生品笔记三 —— 期货期权</title><link href="https://xuwei.fun/works/blog-derivatives03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2021-10-06T13:27:04.000Z</published><summary type="text">
+A swap, in finance, is an agreement between two counterparties to exchange financial instruments or cashflows or payments for a certain time. The instruments can be almost anything but most swaps involve</summary></entry><entry><id>https://xuwei.fun/works/blog-derivatives03/</id><title>衍生品笔记三 —— 期货期权</title><link href="https://xuwei.fun/works/blog-derivatives03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2021-10-06T13:27:04.000Z</published><summary type="text">
 ## 前言
 [衍生品笔记二](/2021/10/04/derivatives02/)中，说起期货和远期的差别，实际上就是场内、场外的区别。除了期货，期权也是场内交易的，但是期权和期货的关系，ummm，就像老婆和老婆饼的关系一样。
 本次先简单学习下期货、期权的一些概念。
@@ -60,7 +60,7 @@ A swap, in finance, is an agreement between two counterparties to exchange finan
 
 全球各地可以进行期货交易的交易所:
 - Chicago Board of Trade
-- Chicago Mercantile Exch</summary></entry><entry><id>https://xuwei.fun/works/blog-derivatives02/</id><title>衍生品笔记二 —— 远期</title><link href="https://xuwei.fun/works/blog-derivatives02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2021-10-04T02:00:00.000Z</published><summary type="text">
+- Chicago Mercantile Exch</summary></entry><entry><id>https://xuwei.fun/works/blog-derivatives02/</id><title>衍生品笔记二 —— 远期</title><link href="https://xuwei.fun/works/blog-derivatives02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2021-10-04T02:00:00.000Z</published><summary type="text">
 ## 前言
 正如在[衍生品笔记一](/2021/10/03/derivatives01/)提到的开篇提到的猪肉期货，上下游企业都可以通过期货交易来套期保值，远期的出现也是相同的目的，远期和期货本质的区别，其实只是场内还是场外的区别。期货是场内交易，合约标准化，信用风险也由交易所承担了，而远期是场外交易，协议怎么定可以一事一议，只要交易双方都认可就行。
 从另一方面来说，也就是远期定义的要素更少，那就从远期先看起。
@@ -69,10 +69,10 @@ A swap, in finance, is an agreement between two counterparties to exchange finan
 &lt;!--more--&gt;
 ## 1. 远期汇率(外汇远期)
 根据时间不同，同一标的也会有多个远期合约
-由于外汇交易中，是以货币换</summary></entry><entry><id>https://xuwei.fun/works/blog-derivatives01/</id><title>衍生品笔记一 —— 概述</title><link href="https://xuwei.fun/works/blog-derivatives01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2021-10-03T09:53:26.000Z</published><summary type="text">
+由于外汇交易中，是以货币换</summary></entry><entry><id>https://xuwei.fun/works/blog-derivatives01/</id><title>衍生品笔记一 —— 概述</title><link href="https://xuwei.fun/works/blog-derivatives01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2021-10-03T09:53:26.000Z</published><summary type="text">
 ## 前言
 自2018年开始的非洲猪瘟，直到2020年底终于基本在大陆消失了，而在猪瘟这几年里，猪肉价格水涨船高，一度接近牛肉价格，而2021年开始，猪肉价格又开始一路下跌，猪周期终于还是来了，如何才能规避猪肉价格的风险呢？2021年初大连商品交易所（简称大商所）设立的生猪期货又是什么？这对猪肉价格有影响吗？Kino就从简单介绍2021年刚设立的生猪期货合约开始谈起。
-首先期货的标准定义是**由期货交易所统一制定的、规定在将来某一特定的时间和地点交割一定数量和质量标的物的标准化合约。**那么通过大商所的官网，可以查看到[生猪期货合约](http://www.dce.com.cn/dalian</summary></entry><entry><id>https://xuwei.fun/works/blog-csFromZeroToOne01/</id><title>计算机科学从0到1(Part 1)</title><link href="https://xuwei.fun/works/blog-csFromZeroToOne01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2020-11-22T10:55:11.000Z</published><summary type="text">
+首先期货的标准定义是**由期货交易所统一制定的、规定在将来某一特定的时间和地点交割一定数量和质量标的物的标准化合约。**那么通过大商所的官网，可以查看到[生猪期货合约](http://www.dce.com.cn/dalian</summary></entry><entry><id>https://xuwei.fun/works/blog-csFromZeroToOne01/</id><title>计算机科学从0到1(Part 1)</title><link href="https://xuwei.fun/works/blog-csFromZeroToOne01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2020-11-22T10:55:11.000Z</published><summary type="text">
 # 计算机的发展历史
 
 ## 一、前言
@@ -90,7 +90,7 @@ A swap, in finance, is an agreement between two counterparties to exchange finan
 ## 二、计算机历史
 ### 2.1 Calculating Tool
 计算机, 顾名思义, 首先是一种计算工具, 而最早的计算工具, 可以追溯到何时呢?
-- Aba</summary></entry><entry><id>https://xuwei.fun/works/blog-reading12/</id><title>读书笔记十二</title><link href="https://xuwei.fun/works/blog-reading12/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2020-09-13T15:51:33.000Z</published><summary type="text">
+- Aba</summary></entry><entry><id>https://xuwei.fun/works/blog-reading12/</id><title>读书笔记十二</title><link href="https://xuwei.fun/works/blog-reading12/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2020-09-13T15:51:33.000Z</published><summary type="text">
 ### 前言
 《罪与罚》杂谈.
 转录Kino在微信读书上关于《罪与罚》的笔记.
@@ -100,7 +100,7 @@ A swap, in finance, is an agreement between two counterparties to exchange finan
 ### 点评
 看完全书后，过了一遍陀思妥耶夫斯基的生平，发现小说有时还是需要结合作者经历来看。陀神在写“罪与罚”之前，一直患有癫痫-&gt;父亲去世-&gt;当过中尉-&gt;因革命被捕-&gt;被流放到西伯利亚-&gt;服役期间开始笃信宗教-&gt;妻兄逝世-&gt;赌博欠债，而在“罪与罚”中，这一切都呈现了出来，且大多是赋在了主人公拉斯柯尔尼科夫身上。将陀神的经历代入作品后，我甚至会怀疑陀神是否也曾想过自己是更特别的存在，想通过自己的手代替法律执行正义，也会怀疑陀神是否也曾想过自杀。
 
-既然小说中的原型来源于自己的生活，那</summary></entry><entry><id>https://xuwei.fun/works/blog-characterset/</id><title>从一个Emoji字符说起</title><link href="https://xuwei.fun/works/blog-characterset/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2020-09-07T14:22:22.000Z</published><summary type="text">
+既然小说中的原型来源于自己的生活，那</summary></entry><entry><id>https://xuwei.fun/works/blog-characterset/</id><title>从一个Emoji字符说起</title><link href="https://xuwei.fun/works/blog-characterset/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2020-09-07T14:22:22.000Z</published><summary type="text">
 ## 一、前言
 在和朋友聊天时，突然无话可说，屏幕前的你该如何是好呢? 很多时候屏幕前的我们，都会想到发个表情，然后彼此心照不宣地沉默。如果你用的是windows 10的新版本，按下 `winkey + period` （即windows图标和英文句点按钮），就会有如下的弹出框。
 
@@ -108,7 +108,7 @@ A swap, in finance, is an agreement between two counterparties to exchange finan
 
 &lt;p align=&quot;center&quot;&gt;图1.1&lt;/p&gt;
 
-反复斟酌、几度纠结之后，你选择了这样一个表情：😤。将鼠标停留在这个表情上几秒，可以看到提示文字：“傲慢”。如果你用的是andriod、ios，在输</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese12/</id><title>日语学习第十一讲</title><link href="https://xuwei.fun/works/blog-japanese12/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2020-05-04T10:08:23.000Z</published><summary type="text">
+反复斟酌、几度纠结之后，你选择了这样一个表情：😤。将鼠标停留在这个表情上几秒，可以看到提示文字：“傲慢”。如果你用的是andriod、ios，在输</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese12/</id><title>日语学习第十一讲</title><link href="https://xuwei.fun/works/blog-japanese12/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2020-05-04T10:08:23.000Z</published><summary type="text">
 
 ## 前言
 上一篇介绍了一些实用表达，这一篇聊几句语篇。
@@ -118,7 +118,7 @@ A swap, in finance, is an agreement between two counterparties to exchange finan
 
 专业的日语研究者想要看学术性的语篇研究，这篇&quot;现代日语语篇研究&quot;[^3]的论文应该值得一看.
 
-只不过，姑且认为语篇就是文章的一部分的话，那么分析文章、写文章的难点，其</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese11/</id><title>日语学习第十讲</title><link href="https://xuwei.fun/works/blog-japanese11/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2020-05-03T10:58:09.000Z</published><summary type="text">
+只不过，姑且认为语篇就是文章的一部分的话，那么分析文章、写文章的难点，其</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese11/</id><title>日语学习第十讲</title><link href="https://xuwei.fun/works/blog-japanese11/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2020-05-03T10:58:09.000Z</published><summary type="text">
 
 ## 前言
 上一篇总结了日语句子的分析和改造，这一章主要介绍一些实用表达。
@@ -130,7 +130,7 @@ A swap, in finance, is an agreement between two counterparties to exchange finan
 所谓授受表达，即授予和接受，由于在日语文化中，长幼尊卑是非常重要的元素，因此授予的主体不同时，表达也各不相同。
 
 ### 1.1 やる、あげる、さしあげる
-表示说话者一方给另一方东西时，常用到</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese10/</id><title>日语学习第九讲</title><link href="https://xuwei.fun/works/blog-japanese10/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2020-05-02T11:29:53.000Z</published><summary type="text">
+表示说话者一方给另一方东西时，常用到</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese10/</id><title>日语学习第九讲</title><link href="https://xuwei.fun/works/blog-japanese10/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2020-05-02T11:29:53.000Z</published><summary type="text">
 
 ## 前言
 距离上一次写日语学习系列已经快两年了，这两年间日语水平并没有什么长进，甚至还在倒退，但却总有一个心结，想要将这个系列完成。
@@ -141,16 +141,16 @@ A swap, in finance, is an agreement between two counterparties to exchange finan
 ## 1. 分析顺序
 ### 1.1 说明
 给出一句日语，我们如何分析它用了哪些语法结构呢？
-1. 如果这个句子是由多个句子复合而成的句子，首先将句子拆分，按照2至6的步骤分析单个从句，分析完</summary></entry><entry><id>https://xuwei.fun/works/blog-metaheuristicAlgorithm01/</id><title>Metaheuristic algorithm —— Concept</title><link href="https://xuwei.fun/works/blog-metaheuristicAlgorithm01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2018-11-19T13:21:09.000Z</published><summary type="text">
+1. 如果这个句子是由多个句子复合而成的句子，首先将句子拆分，按照2至6的步骤分析单个从句，分析完</summary></entry><entry><id>https://xuwei.fun/works/blog-metaheuristicAlgorithm01/</id><title>Metaheuristic algorithm —— Concept</title><link href="https://xuwei.fun/works/blog-metaheuristicAlgorithm01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2018-11-19T13:21:09.000Z</published><summary type="text">
 
 ### 前言
 Kino的课题常需要用到元启发式算法，就在此稍稍总结。
 元启发式(metaheuristic)，很多时候也被称为智能优化(intelligent optimization)、现代启发式(Modern Heuristic)、智能计算(Intelligent Computation)、自然计算(Natural Computation)等，细分到具体算法有*遗传算法*、*粒子群算法*、*差分进化算法*、*蚁群算法*等。
-**元启发式(metaheuristic)**这个词本身可以拆成两部分来看，*元(meta)*和*启发式(heuristic)*，本文主要从这两方面来阐述元启发式的</summary></entry><entry><id>https://xuwei.fun/works/blog-leetcode01/</id><title>Leetcode Summary 01 — Cycle Detection</title><link href="https://xuwei.fun/works/blog-leetcode01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2018-10-29T08:33:40.000Z</published><summary type="text">
+**元启发式(metaheuristic)**这个词本身可以拆成两部分来看，*元(meta)*和*启发式(heuristic)*，本文主要从这两方面来阐述元启发式的</summary></entry><entry><id>https://xuwei.fun/works/blog-leetcode01/</id><title>Leetcode Summary 01 — Cycle Detection</title><link href="https://xuwei.fun/works/blog-leetcode01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2018-10-29T08:33:40.000Z</published><summary type="text">
 ### 前言
 前段时间忙于找工作，因而有正大光明的托词和导师说，11月之后再去做课题相关的事情，也就有了一段较为自由的时间。
 其中诸多准备，免不了在Leetcode上刷题，虽然对于最终的结果来说没有帮助，但刷题过程中遇到了一些解决思路相似的问题，就依次将这些共性问题阐述一遍罢了。
-本系列的第一篇介绍的是环检测问题，对应的维基百科页面有[Cycle detection](https://en.wikipedia.org/wiki/Cycle_detection)。这类问题最常见的求解算法是Floyd Cycle Algorithm/Floyd&apos;s Tortoise and Hare，中文名通常</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese09/</id><title>日语学习第八讲</title><link href="https://xuwei.fun/works/blog-japanese09/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2018-06-29T13:45:02.000Z</published><summary type="text">
+本系列的第一篇介绍的是环检测问题，对应的维基百科页面有[Cycle detection](https://en.wikipedia.org/wiki/Cycle_detection)。这类问题最常见的求解算法是Floyd Cycle Algorithm/Floyd&apos;s Tortoise and Hare，中文名通常</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese09/</id><title>日语学习第八讲</title><link href="https://xuwei.fun/works/blog-japanese09/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2018-06-29T13:45:02.000Z</published><summary type="text">
 
 ## 前言
 上一篇介绍了敬语系统，这一章主要介绍日语中的复合句。日语中复句的相关概念在维基百科上有複文[^1]和節[^2]等。
@@ -159,13 +159,13 @@ Kino的课题常需要用到元启发式算法，就在此稍稍总结。
 &lt;!--more--&gt;
 ## 1. 分类和结构
 根据日语复句[^3]、试论日语的复合句[^4]和试论日语复句中从属句节的多层立体结构[^5]等文献，可以对日语的分类和结构做出相应总结。
-日语中存在</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese08/</id><title>日语学习第七讲</title><link href="https://xuwei.fun/works/blog-japanese08/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2018-06-18T12:00:35.000Z</published><summary type="text">
+日语中存在</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese08/</id><title>日语学习第七讲</title><link href="https://xuwei.fun/works/blog-japanese08/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2018-06-18T12:00:35.000Z</published><summary type="text">
 
 ## 前言
 上一篇文章介绍了日语的语气，这一篇Kino将要讲解日语的敬语系统。
 日语敬语是日语中用于表达敬意的表达方式，用来表示说话者、说话对象、话中人物之间的社会阶级、亲疏等关系。出席使用日语的许多社交场合必须使用敬语，以表达适当的身份关系和礼貌。
 现代日语敬语的分类研究[^1] 中介绍了几种日语的分类方式，包括以敬意形式进行的分类和待遇表现进行的分类。而现在常用的分类方法还是按照前者进行分类的，一般可分为丁宁语（礼貌语）、尊敬语和谦逊语三大类。有时丁宁语也可以再另分出郑重语和美化语两类敬语。说话人会根据谈话内容以及对象，而使用相关的辞汇或是动词变形。
-根据相关参考资料如日语语法指南[^</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese07/</id><title>日语学习第六讲</title><link href="https://xuwei.fun/works/blog-japanese07/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2018-06-18T04:45:02.000Z</published><summary type="text">
+根据相关参考资料如日语语法指南[^</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese07/</id><title>日语学习第六讲</title><link href="https://xuwei.fun/works/blog-japanese07/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2018-06-18T04:45:02.000Z</published><summary type="text">
 
 ## 前言
 上一篇介绍了日语的语态，这一篇文章开始讲述日语的语气。语气简单来说就是说话者对某一命题的主观意见和心里态度的总称。
@@ -175,7 +175,7 @@ Kino的课题常需要用到元启发式算法，就在此稍稍总结。
 &lt;!--more--&gt;
 ## 1. 语气概述
 ### 1.1 命题与语气的对立
-日语的句子(话语)在语义和句法结构的关系上，大体呈现出表现客观语义的“叙述素材”和表达主观语义的“句子的叙述方式”两个层面，前者称为“命题内容”，日语</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese06/</id><title>日语学习第五讲</title><link href="https://xuwei.fun/works/blog-japanese06/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2018-06-03T13:46:33.000Z</published><summary type="text">
+日语的句子(话语)在语义和句法结构的关系上，大体呈现出表现客观语义的“叙述素材”和表达主观语义的“句子的叙述方式”两个层面，前者称为“命题内容”，日语</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese06/</id><title>日语学习第五讲</title><link href="https://xuwei.fun/works/blog-japanese06/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2018-06-03T13:46:33.000Z</published><summary type="text">
 
 ## 前言
 上一篇叙述了日语中的体，这篇文章Kino将讲解日语中的态。
@@ -188,16 +188,16 @@ Kino的课题常需要用到元启发式算法，就在此稍稍总结。
 
 
 ## 2. 被动态
-被动态表示主语是动作的承受者。从动作承受者的角度，叙</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese05/</id><title>日语学习第四讲</title><link href="https://xuwei.fun/works/blog-japanese05/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2018-06-02T11:49:08.000Z</published><summary type="text">
+被动态表示主语是动作的承受者。从动作承受者的角度，叙</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese05/</id><title>日语学习第四讲</title><link href="https://xuwei.fun/works/blog-japanese05/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2018-06-02T11:49:08.000Z</published><summary type="text">
 
 ## 前言
 [上一篇文章](/2018/06/01/japanese04/)介绍了极性和时轴，这一章主要介绍体的相关语法，体的概念在[第一篇文章](/2017/09/16/japanese01/#2-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)里已经介绍过，此处再介绍一遍: 体表示某个动作或变化在**说话人所设的时间轴**上处于开始、持续和完成状态中的某一阶段，是从时间角度上对动作和变化的描写或把握。**需要注意的是在日语中体仅仅反映在动词上**
-PS: 日语语法在&quot;体&quot;这方面的变化并不是那么明显, 虽然语法概念上可以分很细, 但实际需要进行特殊的变形转换的并</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese04/</id><title>日语学习第三讲</title><link href="https://xuwei.fun/works/blog-japanese04/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2018-06-01T11:04:23.000Z</published><summary type="text">
+PS: 日语语法在&quot;体&quot;这方面的变化并不是那么明显, 虽然语法概念上可以分很细, 但实际需要进行特殊的变形转换的并</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese04/</id><title>日语学习第三讲</title><link href="https://xuwei.fun/works/blog-japanese04/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2018-06-01T11:04:23.000Z</published><summary type="text">
 
 ## 前言
 ————**更新于2018.06.01**————
 [上一篇文章](/2017/09/30/japanese03/)介绍了词类系统和句法成分，这篇文章Kino主要来讲解极性时轴。
-在语言学中，极性———即Polarity———表示该句是肯定还是否定、判断真还是假，具体细节可参考[極性](https://ja.wikipedia.org/wiki/極性_%28言語学%29)[^1]、[Affirmation and negation](https://en.wikipedia.org/wiki/Affirmation_and_negation)[^2]、[Polarity ite</summary></entry><entry><id>https://xuwei.fun/works/blog-blockchain01/</id><title>区块链学习一</title><link href="https://xuwei.fun/works/blog-blockchain01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2018-03-24T07:28:37.000Z</published><summary type="text">
+在语言学中，极性———即Polarity———表示该句是肯定还是否定、判断真还是假，具体细节可参考[極性](https://ja.wikipedia.org/wiki/極性_%28言語学%29)[^1]、[Affirmation and negation](https://en.wikipedia.org/wiki/Affirmation_and_negation)[^2]、[Polarity ite</summary></entry><entry><id>https://xuwei.fun/works/blog-blockchain01/</id><title>区块链学习一</title><link href="https://xuwei.fun/works/blog-blockchain01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2018-03-24T07:28:37.000Z</published><summary type="text">
 ## 前言
 最近在协助一个团队做一个和区块链相关的项目，虽然比较边缘性，和区块链联系没那么紧密，但区块链本身还是需要了解一下的。
 
@@ -208,7 +208,7 @@ PS: 日语语法在&quot;体&quot;这方面的变化并不是那么明显, 虽�
 这一章从数字货币入手，比较了传统纸币和数字货币之间的优劣，概述了设计数字货币时需要解决的技术难点，进而引入了区块链的概念。
 其中一些以前不了解的细节有:
 + 严格来讲, 货币（money）不等于现金或通货（cash，currency），货币的范围更广，维基百科里的相关解释:
-  - Money: Money is any item or verifiable </summary></entry><entry><id>https://xuwei.fun/works/blog-listening03/</id><title>用音乐逃离尘世</title><link href="https://xuwei.fun/works/blog-listening03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-11-19T15:18:23.000Z</published><summary type="text">
+  - Money: Money is any item or verifiable </summary></entry><entry><id>https://xuwei.fun/works/blog-listening03/</id><title>用音乐逃离尘世</title><link href="https://xuwei.fun/works/blog-listening03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-11-19T15:18:23.000Z</published><summary type="text">
 
 ## 前言
 [以前的文章](/2016/04/10/listening01)写到了最爱的十张专辑, 但十张是远不能记录自己的喜好滴. 就把自己硬盘里躺着的歌手、专辑列出来, 顺便按照喜爱程度评个分...
@@ -218,7 +218,7 @@ PS: 日语语法在&quot;体&quot;这方面的变化并不是那么明显, 虽�
 - Adele  ★★★★★★★★★★
 高三毕业之后听了Adele...
 有一次和好友A聊天,A突然说到:&quot;我们当初是怎么熟悉的啊?&quot; 我回答说我也忘了... 其实是假装的,因为莫名感觉有点不好意思哈哈哈
-毕业那个假期大抵有点寂寞,高中才接触网络,却汲汲于学业和种种琐事,于是毕业就成了一个网瘾少年,每天就玩游戏、聊天,在学校的时候对A很好奇却无机会接触</summary></entry><entry><id>https://xuwei.fun/works/blog-ubuntu02/</id><title>升级Ubuntu 17.10之后</title><link href="https://xuwei.fun/works/blog-ubuntu02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-11-19T12:39:06.000Z</published><summary type="text">
+毕业那个假期大抵有点寂寞,高中才接触网络,却汲汲于学业和种种琐事,于是毕业就成了一个网瘾少年,每天就玩游戏、聊天,在学校的时候对A很好奇却无机会接触</summary></entry><entry><id>https://xuwei.fun/works/blog-ubuntu02/</id><title>升级Ubuntu 17.10之后</title><link href="https://xuwei.fun/works/blog-ubuntu02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-11-19T12:39:06.000Z</published><summary type="text">
 ### 前言
 之前写过一篇[安装Ubuntu 15.04之后](/2015/05/26/ubuntu01/). 基本上14.04到17.04应该都可以参照, 在自己电脑上这些版本基本都用过, 没什么大问题.
 前两天在实验室把Ubuntu更新到了17.10, 可能是太久没用Gnome桌面了, 比想象中的好、那就用下去呗
@@ -228,7 +228,7 @@ PS: 日语语法在&quot;体&quot;这方面的变化并不是那么明显, 虽�
 &lt;!--more--&gt;
 ### 1. Root登录
 预警: 一般还是遵循医嘱, 不要学我这种野路子默认root登录...
-两个地方, 一是`/etc/gdm3/custom.conf`处, 在`[Security]`下添加`Allo</summary></entry><entry><id>https://xuwei.fun/works/blog-haskell01/</id><title>一起来学Haskell啦</title><link href="https://xuwei.fun/works/blog-haskell01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-11-12T15:57:23.000Z</published><summary type="text">---
+两个地方, 一是`/etc/gdm3/custom.conf`处, 在`[Security]`下添加`Allo</summary></entry><entry><id>https://xuwei.fun/works/blog-haskell01/</id><title>一起来学Haskell啦</title><link href="https://xuwei.fun/works/blog-haskell01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-11-12T15:57:23.000Z</published><summary type="text">---
 
 
 ### 前言
@@ -238,7 +238,7 @@ PS: 日语语法在&quot;体&quot;这方面的变化并不是那么明显, 虽�
 
 &lt;!--more--&gt;
 ### 1. 安装
-</summary></entry><entry><id>https://xuwei.fun/works/blog-reading10/</id><title>读书笔记十</title><link href="https://xuwei.fun/works/blog-reading10/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-11-12T14:11:55.000Z</published><summary type="text">
+</summary></entry><entry><id>https://xuwei.fun/works/blog-reading10/</id><title>读书笔记十</title><link href="https://xuwei.fun/works/blog-reading10/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-11-12T14:11:55.000Z</published><summary type="text">
 
 ### 前言
 被*梁启超致徐志摩函*里的几句话启发了, 就找了找原文. 原文颇难寻, *饮冰室合集*[^1]应该是有的, 只是太过厚重网上无资源, Kino网上搜索后在*爱眉小札-志摩日记、书信集*[^2]找到了.
@@ -246,7 +246,7 @@ PS: 日语语法在&quot;体&quot;这方面的变化并不是那么明显, 虽�
 
 &lt;!--more--&gt;
 ### 1. 梁启超致徐志摩函
-嘛, 这一篇不是*饮冰室文集*里的, 虽然文集里的文章气势磅礴的多, 思想深刻</summary></entry><entry><id>https://xuwei.fun/works/blog-reading09/</id><title>读书笔记九</title><link href="https://xuwei.fun/works/blog-reading09/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-10-08T14:41:36.000Z</published><summary type="text">
+嘛, 这一篇不是*饮冰室文集*里的, 虽然文集里的文章气势磅礴的多, 思想深刻</summary></entry><entry><id>https://xuwei.fun/works/blog-reading09/</id><title>读书笔记九</title><link href="https://xuwei.fun/works/blog-reading09/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-10-08T14:41:36.000Z</published><summary type="text">
 
 ### 前言
 想重新认真地读一读鲁迅的文章，就买了鲁迅小全集[^1]共5册
@@ -257,23 +257,23 @@ PS: 日语语法在&quot;体&quot;这方面的变化并不是那么明显, 虽�
 先从较能吸引人的小说全集开始读起
 1. 所谓回忆者，虽说可以使人欢欣，有时也不免使人寂寞，使精神的丝缕还牵着己逝的寂寞的时光，又有什么意味呢，而我偏苦于不能全忘却......
 2. 凡有一人的主张，得了赞和，是促其前进的，得了反对，是促其奋斗的，独有叫喊于生人中，而生人并无反应，既非赞同，也无反对，如置身毫无边际的荒原，无可措手了，这是怎样的悲哀呵，我于是以我所感到者而寂寞
-评：这句一</summary></entry><entry><id>https://xuwei.fun/works/blog-economics02/</id><title>金融交易过程</title><link href="https://xuwei.fun/works/blog-economics02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-10-08T13:36:45.000Z</published><summary type="text">
+评：这句一</summary></entry><entry><id>https://xuwei.fun/works/blog-economics02/</id><title>金融交易过程</title><link href="https://xuwei.fun/works/blog-economics02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-10-08T13:36:45.000Z</published><summary type="text">
 
 ### 前言
 接着挖坑吧、、想着哪个假期或者什么时候闲下来再填上，现在连Kino自己都开始怀疑了、
 上一篇说的是个人理财与投资，主要是大局观的建立和一些大概的原则，具体到交易过程上，需要做的就是技术性的分析与工程上的实现了，其实目前有的投资不过是货币基金和股票配置，也都是买着玩，主要是通过这个过程使自己被动地关注市场的变化，了解一些交易规则，总结一些经验、其实最终目标是想做一个可以稳定盈利的投资工具（目前只考虑股票了）
 &lt;!--more--&gt;
-关于理论方面的内容，主要参阅了&quot;投资心理学&quot;[^1]，这主要是源自Kino个人的偏执，Kino以为股票投资最核心的问题是心理问题，在一些投资人的口中</summary></entry><entry><id>https://xuwei.fun/works/blog-economics01/</id><title>个人投资与理财</title><link href="https://xuwei.fun/works/blog-economics01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-10-08T13:07:32.000Z</published><summary type="text">
+关于理论方面的内容，主要参阅了&quot;投资心理学&quot;[^1]，这主要是源自Kino个人的偏执，Kino以为股票投资最核心的问题是心理问题，在一些投资人的口中</summary></entry><entry><id>https://xuwei.fun/works/blog-economics01/</id><title>个人投资与理财</title><link href="https://xuwei.fun/works/blog-economics01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-10-08T13:07:32.000Z</published><summary type="text">
 
 ### 前言
 这个国庆假期没有出游，总不能一直看小说、动画度日啊（虽然最终还是变成了这样、、、）
 花了半天时间在图书馆，挑了一些个人理财与投资类的书籍
 主要阅读了&quot;个人理财&quot;[^1]、&quot;工资是靠不住的&quot;[^2]、&quot;简单的投资学&quot;[^3]这三本书，第二本书的名字听起来尤其像是劣质书籍，但是在书架前站着随手翻的十几页写得倒是和Kino近期炒股得出的经验挺相符，就也借阅了。整体来看，第一本属于教科书类别，内容齐全，可以让人对自己一生的理财有个大局观，后两本就是个人投资的一些技巧性内容，如果更具体的想要系统地学习证券投资的知识，Kino手头还有本吴晓求的证券投资学，只看了前两章，私以为还可以
-本来</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese03/</id><title>日语学习第二讲</title><link href="https://xuwei.fun/works/blog-japanese03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-09-29T16:17:14.000Z</published><summary type="text">
+本来</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese03/</id><title>日语学习第二讲</title><link href="https://xuwei.fun/works/blog-japanese03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-09-29T16:17:14.000Z</published><summary type="text">
 
 ## 前言
 ————**更新于2018.05.25**————
-[上一篇文章](/2017/09/16/japanese01/)介绍了发音系统和书写系统，这一篇文章主要介绍词类系统和句法成分。词类在语法系统中属于传统语法的范畴，英文为*Part of speech*，可以参考[维基百科词条解释](https://en.wikipedia.org/wiki/Part_of_speech)[^1]。而句法成分(sentence element)应该属于功能语言学的范围，可以参考这些词条: [Sentence element](https://en.wiktionary.org/wiki/sen</summary></entry><entry><id>https://xuwei.fun/works/blog-listening02/</id><title>开始使用Podcast吧</title><link href="https://xuwei.fun/works/blog-listening02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-09-24T02:24:22.000Z</published><summary type="text">
+[上一篇文章](/2017/09/16/japanese01/)介绍了发音系统和书写系统，这一篇文章主要介绍词类系统和句法成分。词类在语法系统中属于传统语法的范畴，英文为*Part of speech*，可以参考[维基百科词条解释](https://en.wikipedia.org/wiki/Part_of_speech)[^1]。而句法成分(sentence element)应该属于功能语言学的范围，可以参考这些词条: [Sentence element](https://en.wiktionary.org/wiki/sen</summary></entry><entry><id>https://xuwei.fun/works/blog-listening02/</id><title>开始使用Podcast吧</title><link href="https://xuwei.fun/works/blog-listening02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-09-24T02:24:22.000Z</published><summary type="text">
 ### 前言
 近日看见某友玩兴大发，在荔枝读了几首诗，想起来Kino很久前在podcast订阅了一些节目，可能是当时挑的节目不够有趣或是超出Kino的欣赏水平，渐渐就荒废了，既然又想起它了，那就重新开始玩一玩吧
 
@@ -290,17 +290,17 @@ PS: 日语语法在&quot;体&quot;这方面的变化并不是那么明显, 虽�
 诗歌:
 + 为你读诗
   每天一位特别来宾为你读诗，虽然请来的人朗诵水平不一，但大多数还是可以听的，情感也挺饱满
-+ 每日英语诗歌Englis</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese02/</id><title>日语学习番外篇一</title><link href="https://xuwei.fun/works/blog-japanese02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-09-19T02:35:42.000Z</published><summary type="text">
++ 每日英语诗歌Englis</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese02/</id><title>日语学习番外篇一</title><link href="https://xuwei.fun/works/blog-japanese02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-09-19T02:35:42.000Z</published><summary type="text">
 ### 前言
 在学习[日语比较](http://res.wokanxing.info/jpgramma/comparison.html)相关内容时，看到了“花より団子”这句谚语，直译过来就是“与其花，不如团子”，这种生涩绕口的翻译，却瞬间让Kino想起了一个朋友的签名：“比起花，还是青春”，她曾告诉过Kino这是她在某部韩剧里看到的，但是韩剧名我却已经忘了，也不想再去追问。
-不过还是无意识地点开了一个又一个搜索结果，漫无目的，不知道自己在想什么，却无意间发现了“花より男子”这部漫画，漫画名应该就是套用的“花より団子”，而这部漫画又先后被日本和韩国改编成电视剧“花样男子”，也许，她所说的“比起</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese01/</id><title>日语学习第一讲</title><link href="https://xuwei.fun/works/blog-japanese01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-09-16T14:02:12.000Z</published><summary type="text">
+不过还是无意识地点开了一个又一个搜索结果，漫无目的，不知道自己在想什么，却无意间发现了“花より男子”这部漫画，漫画名应该就是套用的“花より団子”，而这部漫画又先后被日本和韩国改编成电视剧“花样男子”，也许，她所说的“比起</summary></entry><entry><id>https://xuwei.fun/works/blog-japanese01/</id><title>日语学习第一讲</title><link href="https://xuwei.fun/works/blog-japanese01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-09-16T14:02:12.000Z</published><summary type="text">
 
 ## 前言
 ————**更新于2017.09.16**————
 种种原因（其实是一时冲动），报了12月份的JLPT N2，明知时间很紧，难以通过，但这正是我需要的吧，有个短期内想要完成的目标，为此花上所有胡思乱想的时间，それでいい...
 语法和单词是并行着学的，虽然有标准日本语的书籍，但是没有使用，语法主要是参考[日语语法指南](http://res.wokanxing.info/jpgramma/hiragana.html)[^1]学习的，单词目前使用的是[沪江开心词场](https://cichang.hujiang.com/home/)。
-学日语当然得听日语歌啦，于是将以前收藏的歌汇</summary></entry><entry><id>https://xuwei.fun/works/blog-planAndSchedule/</id><title>Plan &amp; Schedule</title><link href="https://xuwei.fun/works/blog-planAndSchedule/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2017-08-28T19:45:08.000Z</published><summary type="text">
-![plan&amp;schedule](/images/planAndSchedule.svg)</summary></entry><entry><id>https://xuwei.fun/works/blog-chickenSoup01/</id><title>为什么大学过的比高中还累</title><link href="https://xuwei.fun/works/blog-chickenSoup01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-06-10T11:39:00.000Z</published><summary type="text">
+学日语当然得听日语歌啦，于是将以前收藏的歌汇</summary></entry><entry><id>https://xuwei.fun/works/blog-planAndSchedule/</id><title>Plan &amp; Schedule</title><link href="https://xuwei.fun/works/blog-planAndSchedule/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2017-08-28T19:45:08.000Z</published><summary type="text">
+![plan&amp;schedule](/images/planAndSchedule.svg)</summary></entry><entry><id>https://xuwei.fun/works/blog-chickenSoup01/</id><title>为什么大学过的比高中还累</title><link href="https://xuwei.fun/works/blog-chickenSoup01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-06-10T11:39:00.000Z</published><summary type="text">
 ### 1. 前言
 本科毕业, 觉得碌碌无为, 又恰在知乎发现了一篇文章, 看完一阵怅然, 留存一份于此, 若是在迷茫时能再给自己一点激励, 也算是有用了。
 原文由 小鸟 发表于知乎, 原答案[戳此](https://www.zhihu.com/question/37148904/answer/82800993)
@@ -309,7 +309,7 @@ PS: 日语语法在&quot;体&quot;这方面的变化并不是那么明显, 虽�
 ### 2. 原文
 谈三点感受：
 #### 2.1 大多数人都只不过是在用战术上的勤奋掩盖战略上的懒惰罢了
-在大学，你每天能够和室友一起去上课，一边玩手机一边听老师讲几句，在那里可以坐几个小时，中午挤食堂吃一顿可口的饭菜，下午没课有时候去参加社团，学生会，</summary></entry><entry><id>https://xuwei.fun/works/blog-linux06/</id><title>Linux琐记六</title><link href="https://xuwei.fun/works/blog-linux06/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-06-07T02:45:00.000Z</published><summary type="text">
+在大学，你每天能够和室友一起去上课，一边玩手机一边听老师讲几句，在那里可以坐几个小时，中午挤食堂吃一顿可口的饭菜，下午没课有时候去参加社团，学生会，</summary></entry><entry><id>https://xuwei.fun/works/blog-linux06/</id><title>Linux琐记六</title><link href="https://xuwei.fun/works/blog-linux06/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-06-07T02:45:00.000Z</published><summary type="text">
 
 ### 1. rename
 `rename &apos;s/(0-9).txt/file_$1.txt/&apos; *.txt`
@@ -339,26 +339,26 @@ lsblk
 
 
 ### 6. ffmpeg 剪切拼接视频
-+ 剪切:</summary></entry><entry><id>https://xuwei.fun/works/blog-hla03/</id><title>HLA 入门三</title><link href="https://xuwei.fun/works/blog-hla03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-05-28T14:24:00.000Z</published><summary type="text">
++ 剪切:</summary></entry><entry><id>https://xuwei.fun/works/blog-hla03/</id><title>HLA 入门三</title><link href="https://xuwei.fun/works/blog-hla03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-05-28T14:24:00.000Z</published><summary type="text">
 ### 1. 问题
 在创建新的联邦时, 将Thesis.xml换成了Test.xml去create, 但CRC端实际显示的还是Thesis.xml, 以为是前端问题或是后端创建时传参问题, 检查没有发现错误
 
 &lt;!--more--&gt;
 ### 2. 解决
 在CRC服务器上关闭了Pitch RTI, 重新打开, 新创建的联邦显示的FOM就是Test.xml了。。。
-</summary></entry><entry><id>https://xuwei.fun/works/blog-web02/</id><title>RESTful推送与异步通信</title><link href="https://xuwei.fun/works/blog-web02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-05-20T08:58:00.000Z</published><summary type="text">
+</summary></entry><entry><id>https://xuwei.fun/works/blog-web02/</id><title>RESTful推送与异步通信</title><link href="https://xuwei.fun/works/blog-web02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-05-20T08:58:00.000Z</published><summary type="text">
 ### 1. 服务器-浏览器通信技术
-服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP/IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通信协议, 每一次请求-响应都是基于一个新建立的HTTP的连接, 这就是使服务器主动通知浏览器成为一个难点. 这是因为在基于请求-响应的模式下, 服务器的角色是主动应答, 无法主动通知浏览器; 另一个</summary></entry><entry><id>https://xuwei.fun/works/blog-linux05/</id><title>Linux琐记五</title><link href="https://xuwei.fun/works/blog-linux05/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-05-09T06:06:00.000Z</published><summary type="text">
+服务器-浏览器通信也可以称为服务器端推送技术, 是一种当服务器端的业务数据、资源状态发生改变时, 服务器可以主动将这一信息通知给相关的浏览器的通信技术。如果服务器与客户端使用TCP/IP协议建立连接, 这样的Socket通信并无特别之处, 一旦连接建立, 在这样的双向通信链路中随时都可以发送通知. 然而REST通信是基于HTTP的通信, 而HTTP是无状态的通信协议, 每一次请求-响应都是基于一个新建立的HTTP的连接, 这就是使服务器主动通知浏览器成为一个难点. 这是因为在基于请求-响应的模式下, 服务器的角色是主动应答, 无法主动通知浏览器; 另一个</summary></entry><entry><id>https://xuwei.fun/works/blog-linux05/</id><title>Linux琐记五</title><link href="https://xuwei.fun/works/blog-linux05/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-05-09T06:06:00.000Z</published><summary type="text">
 ### 1. No such file or directory
 `./pwn1`执行后出现错误信息:*./pwn1: No such file or directory*, 可执行权限Kino已经加上了, 查了查可能是因为库的原因, 直接`cat pwn1`看到需要`/lib/ld-linux.so`, 查了下系统的确没有, 用`readelf`去查看pwn1的各项信息, 反而没有看到. `ld-linux.so`这个库是Linux下进行动态库链接的链接器, 无它其他动态库就都无法成功链接, 详细说明可以戳[这里](http://linux.die.net/man/8/ld-linux)
-</summary></entry><entry><id>https://xuwei.fun/works/blog-interestingMath02/</id><title>数学趣话二</title><link href="https://xuwei.fun/works/blog-interestingMath02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-04-16T07:45:00.000Z</published><summary type="text">
+</summary></entry><entry><id>https://xuwei.fun/works/blog-interestingMath02/</id><title>数学趣话二</title><link href="https://xuwei.fun/works/blog-interestingMath02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-04-16T07:45:00.000Z</published><summary type="text">
 ### 1. 数学符号
 Wiki上有所有数学符号的一个[list](https://en.wikipedia.org/wiki/List_of_mathematical_symbols
 ), 点击每个数学符号link可以查看其具体内容, 然而Kino只是想看一下其Unicode值
 
 &lt;!--more--&gt;
 ### 2. 分形理论
-Benoit Mandelbrot 创立了 分形理论(fractal theory), 基础是分形几何(fractal geometry)</summary></entry><entry><id>https://xuwei.fun/works/blog-methodologyOfMath01/</id><title>数学方法一</title><link href="https://xuwei.fun/works/blog-methodologyOfMath01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-04-16T06:45:00.000Z</published><summary type="text">
+Benoit Mandelbrot 创立了 分形理论(fractal theory), 基础是分形几何(fractal geometry)</summary></entry><entry><id>https://xuwei.fun/works/blog-methodologyOfMath01/</id><title>数学方法一</title><link href="https://xuwei.fun/works/blog-methodologyOfMath01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-04-16T06:45:00.000Z</published><summary type="text">
 ### 1. 前言
 Methodology of Mathematics
 主要记录了《数学方法论稿》[^1] 的内容
@@ -371,11 +371,11 @@ Methodology of Mathematics
 &lt;!--more--&gt;
 ### 3. 重大数学方法与哲学范畴
 #### 3.1 数学方法·形式与内容
-数学的研究对象是形式化的思想材料, 整个数学是一个形式化的思想体系. 数学要形式化, 但是不可局限于形式化, 形式是为内容服务的. 因为形式不能更好的表示内</summary></entry><entry><id>https://xuwei.fun/works/blog-hla02/</id><title>HLA 入门二</title><link href="https://xuwei.fun/works/blog-hla02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-04-11T08:00:00.000Z</published><summary type="text">
+数学的研究对象是形式化的思想材料, 整个数学是一个形式化的思想体系. 数学要形式化, 但是不可局限于形式化, 形式是为内容服务的. 因为形式不能更好的表示内</summary></entry><entry><id>https://xuwei.fun/works/blog-hla02/</id><title>HLA 入门二</title><link href="https://xuwei.fun/works/blog-hla02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-04-11T08:00:00.000Z</published><summary type="text">
 ### 1. RTI中time management相关问题
 #### 1.1 在创建Federate之后如何修改其时间控制策略
 想要在创建Federate后改变其时间控制策略, 且同时修改其前瞻量, 这时会出现相关问题, 当然, 我们先假设三个Federate, A、B、C初始都是Regulating状态, 且A前瞻量2, 步长2, 当前时间为20, B前瞻量4, 步长4, 当前时间60, C前瞻量5, 步长5, 当前时间100&lt;!--more--&gt;
-+ 先修改C为 Regulating and Constrained, 这时若先`rtiAmbassador.enableTimeRegul</summary></entry><entry><id>https://xuwei.fun/works/blog-listening01/</id><title>My 10 favorite albums</title><link href="https://xuwei.fun/works/blog-listening01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-04-10T07:00:00.000Z</published><summary type="text">
++ 先修改C为 Regulating and Constrained, 这时若先`rtiAmbassador.enableTimeRegul</summary></entry><entry><id>https://xuwei.fun/works/blog-listening01/</id><title>My 10 favorite albums</title><link href="https://xuwei.fun/works/blog-listening01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-04-10T07:00:00.000Z</published><summary type="text">
 ### 1. 前言
 无新歌可听, 翻了翻收藏的专辑, 一直打算把自己最爱的10张专辑挑出来, 但是总觉得有更好的音乐, 不过还是留存一份当前最喜欢的几张专辑吧
 
@@ -386,7 +386,7 @@ Methodology of Mathematics
 + Famous Blue Raincoat —— Jennifer Warnes
 + A Sombre Dance —— Estatic Fear
 + 21 —— Adele Laurie Blue Adkins
-+ Where You L</summary></entry><entry><id>https://xuwei.fun/works/blog-linux04/</id><title>Linux琐记四</title><link href="https://xuwei.fun/works/blog-linux04/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-04-10T06:05:00.000Z</published><summary type="text">
++ Where You L</summary></entry><entry><id>https://xuwei.fun/works/blog-linux04/</id><title>Linux琐记四</title><link href="https://xuwei.fun/works/blog-linux04/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-04-10T06:05:00.000Z</published><summary type="text">
 ### 1. Ubuntu ssh 登录提示信息
 修改`/etc/issue`和`/etc/motd`
 前者的内容显示在login提示符之前, 后者显示在用户成功登录系统后, 一般都是希望修改后者
@@ -397,7 +397,7 @@ Methodology of Mathematics
 在post的data中使用变量:
 ```bash
 currentTime=`date +%s`
-curl -i -H &quot;Accept:application</summary></entry><entry><id>https://xuwei.fun/works/blog-raspberry02/</id><title>Raspberry PI 3 折腾小记二</title><link href="https://xuwei.fun/works/blog-raspberry02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-04-09T09:51:00.000Z</published><summary type="text">
+curl -i -H &quot;Accept:application</summary></entry><entry><id>https://xuwei.fun/works/blog-raspberry02/</id><title>Raspberry PI 3 折腾小记二</title><link href="https://xuwei.fun/works/blog-raspberry02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-04-09T09:51:00.000Z</published><summary type="text">
 ### 1. 安装Java
 安装的raspbian-jessie-lite系统没有自带Java
 `apt-get install oracle-java7-jdk`
@@ -409,7 +409,7 @@ curl -i -H &quot;Accept:application</summary></entry><entry><id>https://xuwei.fu
 `dpkg -i java-common_0.52_all.deb`
 再次`apt-get install tomcat7`
 &lt;!--more--&gt;
-安装成功提</summary></entry><entry><id>https://xuwei.fun/works/blog-raspberry01/</id><title>Raspberry PI 3 折腾小记一</title><link href="https://xuwei.fun/works/blog-raspberry01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-04-09T06:51:00.000Z</published><summary type="text">
+安装成功提</summary></entry><entry><id>https://xuwei.fun/works/blog-raspberry01/</id><title>Raspberry PI 3 折腾小记一</title><link href="https://xuwei.fun/works/blog-raspberry01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-04-09T06:51:00.000Z</published><summary type="text">
 ### 1. 安装
 下载官方/第三方镜像压缩包, 解压, SD卡插入手机或其他读卡器, dd命令或者Win32DiskImager写入镜像, Over
 之后将SD卡插入树莓派, 供电
@@ -417,7 +417,7 @@ curl -i -H &quot;Accept:application</summary></entry><entry><id>https://xuwei.fu
 
 ### 2. ssh连接
 树莓派插上网线, 会自动联网分配一个ip, 可以通过路由器管理界面查看ip地址(如果网线接在路由器上)
-之后`ssh pi@192.168.0.104` password:`raspberry`, 即可连接成功, 默认用户名密码参考[官方文档](https://github.com/raspberrypi/documentation/blob/master/remote-acces</summary></entry><entry><id>https://xuwei.fun/works/blog-paperPublishing/</id><title>如何发表论文</title><link href="https://xuwei.fun/works/blog-paperPublishing/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-04-01T09:26:00.000Z</published><summary type="text">
+之后`ssh pi@192.168.0.104` password:`raspberry`, 即可连接成功, 默认用户名密码参考[官方文档](https://github.com/raspberrypi/documentation/blob/master/remote-acces</summary></entry><entry><id>https://xuwei.fun/works/blog-paperPublishing/</id><title>如何发表论文</title><link href="https://xuwei.fun/works/blog-paperPublishing/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-04-01T09:26:00.000Z</published><summary type="text">
 ### 1. 前言
 逛学校论坛时看到网友xiaoyaoyou对于如何发SCI的看法, 觉得有参考价值, 就记录下来
 
@@ -425,7 +425,7 @@ curl -i -H &quot;Accept:application</summary></entry><entry><id>https://xuwei.fu
 1. 多看看，同一领域内别人文章是怎么写的，怎么个思路、新颖在哪里，甚至是格式和每一部分的篇幅
 2. 多思考，平时有些想法就随时记录下来，方便整理
 3. 多尝试，想法多了，就多去试，找一些可行性高又能很方便模拟或者容易用简单方法实验的去试，多试试可能成功，或者有更新的点子出来，即使不成功，也可以在此基础上想改进
-4. 多交流，经常和导师、同学交流，导师经验更丰富些，和其他同学交流也可以给你很多提示，尤其是其他专业的同学，多交流也可以最大限度地避免自己陷入一</summary></entry><entry><id>https://xuwei.fun/works/blog-interestingMath01/</id><title>数学趣话一</title><link href="https://xuwei.fun/works/blog-interestingMath01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-03-25T14:45:00.000Z</published><summary type="text">
+4. 多交流，经常和导师、同学交流，导师经验更丰富些，和其他同学交流也可以给你很多提示，尤其是其他专业的同学，多交流也可以最大限度地避免自己陷入一</summary></entry><entry><id>https://xuwei.fun/works/blog-interestingMath01/</id><title>数学趣话一</title><link href="https://xuwei.fun/works/blog-interestingMath01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-03-25T14:45:00.000Z</published><summary type="text">
 ### 1. 前言
 读过不少数学趣闻, 未成体系, 记录下来仅供娱乐
 
@@ -437,7 +437,7 @@ curl -i -H &quot;Accept:application</summary></entry><entry><id>https://xuwei.fu
 ### 3. 不老蠕虫爬长绳
 假设一条蠕虫，以1cm/s的速度在一根长1m的橡皮绳上从一端爬向另一端。每当蠕虫爬完1cm，橡皮绳就瞬间伸长1m。
 如果橡皮绳可以无限伸长，蠕虫也“长生不老”，试问：蠕虫能爬到绳子的另一端吗？
-乍一想，这蠕虫似乎永远也爬不到绳子的另一端，因为</summary></entry><entry><id>https://xuwei.fun/works/blog-postgresql/</id><title>postgreSQL</title><link href="https://xuwei.fun/works/blog-postgresql/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-03-23T08:00:00.000Z</published><summary type="text">
+乍一想，这蠕虫似乎永远也爬不到绳子的另一端，因为</summary></entry><entry><id>https://xuwei.fun/works/blog-postgresql/</id><title>postgreSQL</title><link href="https://xuwei.fun/works/blog-postgresql/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-03-23T08:00:00.000Z</published><summary type="text">
 ### 1. 前言
 以前只用过数据库MySQL和Rails自带的sqlite3, 最近打算在一个项目里使用postgreSQL, 简要记录下。
 
@@ -450,7 +450,7 @@ curl -i -H &quot;Accept:application</summary></entry><entry><id>https://xuwei.fu
 path = %path%;D:\Programs\pgsql\bin
 set pghost=localhost
 set pglib=D:\Programs\pgsql\lib
-set pgdata=D:\Programs\p</summary></entry><entry><id>https://xuwei.fun/works/blog-windows03/</id><title>Windows 琐记三</title><link href="https://xuwei.fun/works/blog-windows03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-03-15T13:00:00.000Z</published><summary type="text">
+set pgdata=D:\Programs\p</summary></entry><entry><id>https://xuwei.fun/works/blog-windows03/</id><title>Windows 琐记三</title><link href="https://xuwei.fun/works/blog-windows03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-03-15T13:00:00.000Z</published><summary type="text">
 ### 1. cmd下设置字符集
 ```cmd
 chcp 437     // set english       environment
@@ -458,7 +458,7 @@ chcp 932     // set japanese      environment
 chcp 936     // set chinese(sim)  environment
 chcp 949     // set chinese(tra)  environment
 chcp 950     // set korean        environment
-chcp 65001   // set utf-8         environment</summary></entry><entry><id>https://xuwei.fun/works/blog-rubyOnRails01/</id><title>Rails Session</title><link href="https://xuwei.fun/works/blog-rubyOnRails01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-03-07T13:00:00.000Z</published><summary type="text">
+chcp 65001   // set utf-8         environment</summary></entry><entry><id>https://xuwei.fun/works/blog-rubyOnRails01/</id><title>Rails Session</title><link href="https://xuwei.fun/works/blog-rubyOnRails01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-03-07T13:00:00.000Z</published><summary type="text">
 ### 1. 相关概念
 #### 1.1 session
 多数Web框架都有某种形式的Session管理: 为特定于某个客户端浏览会话的数据提供一个持久化的服务器端存储机制
@@ -469,12 +469,12 @@ Rails session存储方法提供了如下特性:
 Rails可以将所有session数据存储在服务器端,或者是基于cookies的session存储方案
 
 #### 2.2 csrf
-跨站请求伪造</summary></entry><entry><id>https://xuwei.fun/works/blog-watching01/</id><title>Movie Projector 01</title><link href="https://xuwei.fun/works/blog-watching01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-02-12T11:12:00.000Z</published><summary type="text">
+跨站请求伪造</summary></entry><entry><id>https://xuwei.fun/works/blog-watching01/</id><title>Movie Projector 01</title><link href="https://xuwei.fun/works/blog-watching01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-02-12T11:12:00.000Z</published><summary type="text">
 ### 1. Planet Earth EP01
 &gt; 1. At this stage, the odds are even.
 &gt; 2. Midsummer on the tundra and the sun does not set.
 &gt; 3. The character of the forest changes as you descend, becoming ever darker and damper, faouring different kinds of animals amd plants.
-&gt; 4. It&apos;s hard not to feel deflated when e</summary></entry><entry><id>https://xuwei.fun/works/blog-ruby01/</id><title>Ruby 琐记一</title><link href="https://xuwei.fun/works/blog-ruby01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-01-01T05:50:00.000Z</published><summary type="text">
+&gt; 4. It&apos;s hard not to feel deflated when e</summary></entry><entry><id>https://xuwei.fun/works/blog-ruby01/</id><title>Ruby 琐记一</title><link href="https://xuwei.fun/works/blog-ruby01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-01-01T05:50:00.000Z</published><summary type="text">
 ### 1、嵌入字符串
 在字符串中使用\#{...}这样的写法, 可以把通过计算得到的值嵌入到字符串中, 输出结果除了可以嵌入变量名也可以嵌入公式
 ```ruby
@@ -495,7 +495,7 @@ end
 符号(symbol)与字符串对象相似,符号也是一种对象,一般作为名称标签来使用,用来表示方法等对象的名称
 可以将符号简单理解为一种轻量级的字符串
 ```ruby
-symb</summary></entry><entry><id>https://xuwei.fun/works/blog-topology02/</id><title>拓扑学入门二</title><link href="https://xuwei.fun/works/blog-topology02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2016-01-01T04:45:00.000Z</published><summary type="text">
+symb</summary></entry><entry><id>https://xuwei.fun/works/blog-topology02/</id><title>拓扑学入门二</title><link href="https://xuwei.fun/works/blog-topology02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2016-01-01T04:45:00.000Z</published><summary type="text">
 
 ### 前言
 江辉有《拓扑学》的内容很全面, 以后再看拓扑学大概就可以对照这这本书的目录来了
@@ -521,22 +521,22 @@ symb</summary></entry><entry><id>https://xuwei.fun/works/blog-topology02/</id><t
 #### Uryshon引理及其应用 
 1. Uryshon引理 
 2. Tietze扩张引理 
-3. Uryshon度量化定理 </summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm08/</id><title>Dancing Links</title><link href="https://xuwei.fun/works/blog-algorithm08/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-11-20T01:00:00.000Z</published><summary type="text">
+3. Uryshon度量化定理 </summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm08/</id><title>Dancing Links</title><link href="https://xuwei.fun/works/blog-algorithm08/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-11-20T01:00:00.000Z</published><summary type="text">
 ### 1. 简介
 参考[维基百科](https://zh.wikipedia.org/wiki/%E8%88%9E%E8%B9%88%E9%93%BE)
 
 
 ### 2. 分析实现
 参考[**这里**](http://www.cnblogs.com/grenet/p/3145800.html), 写的很详细
-</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm07/</id><title>Graph DFS</title><link href="https://xuwei.fun/works/blog-algorithm07/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-11-19T01:00:00.000Z</published><summary type="text">
+</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm07/</id><title>Graph DFS</title><link href="https://xuwei.fun/works/blog-algorithm07/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-11-19T01:00:00.000Z</published><summary type="text">
 ### dfs添加顶点到集合
 在调用dfs的过程中，有四种添加顶点到集合的顺序：
 + Pre-Order，在递归调用dfs之前将当前顶点添加到queue中
 + Reverse Pre-Order，在递归调用dfs之前将当前顶点添加到stack中
 + Post-Order，在递归调用dfs之后将当前顶点添加到queue中
-+ Reverse Post-Order，在递归调用dfs之后将当前顶点添加到stack中</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm06/</id><title>Union-Find Structure</title><link href="https://xuwei.fun/works/blog-algorithm06/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-11-17T14:00:00.000Z</published><summary type="text">
++ Reverse Post-Order，在递归调用dfs之后将当前顶点添加到stack中</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm06/</id><title>Union-Find Structure</title><link href="https://xuwei.fun/works/blog-algorithm06/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-11-17T14:00:00.000Z</published><summary type="text">
 ### 并查集
-[这篇文章](http://blog.csdn.net/dellaserss/article/details/7724401)写的很好懂</summary></entry><entry><id>https://xuwei.fun/works/blog-linux03/</id><title>Linux琐记三</title><link href="https://xuwei.fun/works/blog-linux03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-11-01T05:05:00.000Z</published><summary type="text">
+[这篇文章](http://blog.csdn.net/dellaserss/article/details/7724401)写的很好懂</summary></entry><entry><id>https://xuwei.fun/works/blog-linux03/</id><title>Linux琐记三</title><link href="https://xuwei.fun/works/blog-linux03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-11-01T05:05:00.000Z</published><summary type="text">
 ### 1. who命令
 who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输出包括用户名、终端类型、登录日期及远程主机。
 
@@ -551,7 +551,7 @@ who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输�
 &lt;!--more--&gt;
 
 ### 4. cat命令高级用法
-搭配`EOF`和输入输出流`&gt;&gt;`及`&lt;&lt;`使</summary></entry><entry><id>https://xuwei.fun/works/blog-cpp03/</id><title>C++琐记三</title><link href="https://xuwei.fun/works/blog-cpp03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-10-30T03:22:00.000Z</published><summary type="text">
+搭配`EOF`和输入输出流`&gt;&gt;`及`&lt;&lt;`使</summary></entry><entry><id>https://xuwei.fun/works/blog-cpp03/</id><title>C++琐记三</title><link href="https://xuwei.fun/works/blog-cpp03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-10-30T03:22:00.000Z</published><summary type="text">
 ### 1. C++堆与栈的区别
 和大神一起从良乡回来, 地铁上突然想起了这个问题就问了下, 大神解释之后茅塞顿开、、、回来又查了查网上的东西, 再看发现理解起来轻松了许多
 
@@ -559,7 +559,7 @@ who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输�
 &lt;!--more--&gt;
 
 ### 2. NULL
-在C++中0是NULL</summary></entry><entry><id>https://xuwei.fun/works/blog-cpp02/</id><title>C++琐记二</title><link href="https://xuwei.fun/works/blog-cpp02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-10-27T03:40:00.000Z</published><summary type="text">
+在C++中0是NULL</summary></entry><entry><id>https://xuwei.fun/works/blog-cpp02/</id><title>C++琐记二</title><link href="https://xuwei.fun/works/blog-cpp02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-10-27T03:40:00.000Z</published><summary type="text">
 ### 1. vector
 #### 1.1 erase
 以前用vector时只是使用`push_back()`,`pop_back()`,`begin()`,`end()`,`front()`,`back()`等，没用过`erase()`, 今天搭配iterator用了一下, 才发现很神奇。比如删除一个vector上指定值为val的元素:
@@ -567,9 +567,9 @@ who命令查询utmp文件并报告当前登录的每个用户。Who的缺省输�
 for(vector&lt;int&gt;::iterator it = nums.begin(); it != nums.end(); ) {
     if( nums[i] == val ) {
         nums.erase(it++);
-</summary></entry><entry><id>https://xuwei.fun/works/blog-android05/</id><title>Android Studio 与 Gradle</title><link href="https://xuwei.fun/works/blog-android05/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-10-23T15:00:00.000Z</published><summary type="text">
+</summary></entry><entry><id>https://xuwei.fun/works/blog-android05/</id><title>Android Studio 与 Gradle</title><link href="https://xuwei.fun/works/blog-android05/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-10-23T15:00:00.000Z</published><summary type="text">
 ### 1. 描述
-&gt; 以前是用IntelliJ IDEA直接玩安卓程序的, 但是自从Google根据IDEA开发了新的ide后, 很多开发者都转向Android Studio了, 网络上的有些源代码无法直接在IDEA上编译, 于是下了个Android Studio折腾, 用过IntelliJ IDEA后安装、配置环境都很简单, 不太相同的地方是Google采用Gradle作为Android app开发的包管理器之后, 其自家推出的Android Studio自然得默认下载它, 于是在新建工程的最后一步, 提醒你可能需要配置一下代理才能使用成功的下载安装Gradle, 使用SS代理, 成功下</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem06/</id><title>操作系统六</title><link href="https://xuwei.fun/works/blog-operatingSystem06/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-10-22T03:30:00.000Z</published><summary type="text">
+&gt; 以前是用IntelliJ IDEA直接玩安卓程序的, 但是自从Google根据IDEA开发了新的ide后, 很多开发者都转向Android Studio了, 网络上的有些源代码无法直接在IDEA上编译, 于是下了个Android Studio折腾, 用过IntelliJ IDEA后安装、配置环境都很简单, 不太相同的地方是Google采用Gradle作为Android app开发的包管理器之后, 其自家推出的Android Studio自然得默认下载它, 于是在新建工程的最后一步, 提醒你可能需要配置一下代理才能使用成功的下载安装Gradle, 使用SS代理, 成功下</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem06/</id><title>操作系统六</title><link href="https://xuwei.fun/works/blog-operatingSystem06/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-10-22T03:30:00.000Z</published><summary type="text">
 ### 1. 进程同步和P、V操作
 若有三个并发进程互斥，如果利用信号灯方式控制其同步关系，那么三个进程的同步过程如下图：
 ![first](/images/operatingSystem06_1.png)
@@ -577,7 +577,7 @@ for(vector&lt;int&gt;::iterator it = nums.begin(); it != nums.end(); ) {
 ### 2. Linux系统功能调用的实现机制
 
 #### 2.1 Linux系统调用的进入
-Linux系统的软中断指令是汇编语言指令int 0x80，执行该指令会发生中断，处理机的状态由用户态自陷到内核态(在更新的芯片中添加了sysenter汇编语言指令等)。int 0x80指令使用的异常向量号是128(即16进制的80)，该异常向量包含了内核系统调用程序的入口地址。在内核初始化时，</summary></entry><entry><id>https://xuwei.fun/works/blog-bootstrap01/</id><title>Bootstrap小记一</title><link href="https://xuwei.fun/works/blog-bootstrap01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-10-19T14:40:00.000Z</published><summary type="text">
+Linux系统的软中断指令是汇编语言指令int 0x80，执行该指令会发生中断，处理机的状态由用户态自陷到内核态(在更新的芯片中添加了sysenter汇编语言指令等)。int 0x80指令使用的异常向量号是128(即16进制的80)，该异常向量包含了内核系统调用程序的入口地址。在内核初始化时，</summary></entry><entry><id>https://xuwei.fun/works/blog-bootstrap01/</id><title>Bootstrap小记一</title><link href="https://xuwei.fun/works/blog-bootstrap01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-10-19T14:40:00.000Z</published><summary type="text">
 ### 1. 前言
 把车队主页给换了, 其实就是直接把discuz下的index.php给删了换成自己的, 然而自以为做的差不多了, 没想到好多以前的设计都错了, 其中就有一些关于bootstrap的使用上的错误
 
@@ -588,7 +588,7 @@ Linux系统的软中断指令是汇编语言指令int 0x80，执行该指令会�
 &lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;navbar-header&quot;&gt;
     &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Test&lt;/a&gt;
- </summary></entry><entry><id>https://xuwei.fun/works/blog-discuz/</id><title>折腾车队服务器</title><link href="https://xuwei.fun/works/blog-discuz/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-10-17T15:00:00.000Z</published><summary type="text">
+ </summary></entry><entry><id>https://xuwei.fun/works/blog-discuz/</id><title>折腾车队服务器</title><link href="https://xuwei.fun/works/blog-discuz/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-10-17T15:00:00.000Z</published><summary type="text">
 ### 1. 前言
 飞思卡尔车队有一台服务器一直闲置, 开学没那么多事就帮忙给服务器添加一些功能, 这个过程中有些以前在自己电脑上没有的问题都冒出来了、
 
@@ -598,7 +598,7 @@ Linux系统的软中断指令是汇编语言指令int 0x80，执行该指令会�
 首先是`httpd -k install`时直接提示缺少msvcr110.dll, 安装了`vcredist_x64.exe`还是不行, 想着直接装.net库, 然而并不可以。最后想起来当时下的apache是32位的, 安装了`vcredist_x86.exe`之后apache安装成功。
 &lt;!--more--&gt;
 #### 2.2 Servername错误
-之后出</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem05/</id><title>操作系统五</title><link href="https://xuwei.fun/works/blog-operatingSystem05/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-10-06T03:30:00.000Z</published><summary type="text">
+之后出</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem05/</id><title>操作系统五</title><link href="https://xuwei.fun/works/blog-operatingSystem05/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-10-06T03:30:00.000Z</published><summary type="text">
 文件系统
 ===
 
@@ -620,7 +620,7 @@ Linux系统的软中断指令是汇编语言指令int 0x80，执行该指令会�
 ### 文件的逻辑结构和存取方法
 1. 文件的逻辑结构
     + 流式文件
-</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem04/</id><title>操作系统四</title><link href="https://xuwei.fun/works/blog-operatingSystem04/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-10-02T12:30:00.000Z</published><summary type="text">
+</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem04/</id><title>操作系统四</title><link href="https://xuwei.fun/works/blog-operatingSystem04/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-10-02T12:30:00.000Z</published><summary type="text">
 设备管理
 ===
 
@@ -645,7 +645,7 @@ Linux系统的软中断指令是汇编语言指令int 0x80，执行该指令会�
 
 &lt;!--more--&gt;
 ### 缓冲技术
-1.</summary></entry><entry><id>https://xuwei.fun/works/blog-reading08/</id><title>读书笔记八</title><link href="https://xuwei.fun/works/blog-reading08/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-10-02T07:26:00.000Z</published><summary type="text">
+1.</summary></entry><entry><id>https://xuwei.fun/works/blog-reading08/</id><title>读书笔记八</title><link href="https://xuwei.fun/works/blog-reading08/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-10-02T07:26:00.000Z</published><summary type="text">
 ### 1. 前言
 图书馆再读舒婷
 
@@ -673,7 +673,7 @@ Linux系统的软中断指令是汇编语言指令int 0x80，执行该指令会�
 &gt; 听懂我们的言语。
 &gt; 你有你的铜枝铁干， 
 &gt; 像刀，像剑， 
-&gt; 也像戟，</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem03/</id><title>操作系统三</title><link href="https://xuwei.fun/works/blog-operatingSystem03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-09-27T11:54:00.000Z</published><summary type="text">
+&gt; 也像戟，</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem03/</id><title>操作系统三</title><link href="https://xuwei.fun/works/blog-operatingSystem03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-09-27T11:54:00.000Z</published><summary type="text">
 主存管理
 ===
 
@@ -702,7 +702,7 @@ Linux系统的软中断指令是汇编语言指令int 0x80，执行该指令会�
     + 淘汰策略
 4. 存储保护
 
-### 分</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem02/</id><title>操作系统二——资源分配与调度</title><link href="https://xuwei.fun/works/blog-operatingSystem02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-09-16T09:36:00.000Z</published><summary type="text">
+### 分</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem02/</id><title>操作系统二——资源分配与调度</title><link href="https://xuwei.fun/works/blog-operatingSystem02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-09-16T09:36:00.000Z</published><summary type="text">
 
 ### 1. 资源管理概述
 #### 1.1 资源管理的目的和任务
@@ -717,7 +717,7 @@ Linux系统的软中断指令是汇编语言指令int 0x80，执行该指令会�
 + 资源管理的目的
   - 目的：为用户提供一种简单而有效地使用资源的方法，充分发挥各资源的作用。
   - 应达到的目标：
- </summary></entry><entry><id>https://xuwei.fun/works/blog-windows02/</id><title>Windows 琐记二</title><link href="https://xuwei.fun/works/blog-windows02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-09-14T03:18:00.000Z</published><summary type="text">
+ </summary></entry><entry><id>https://xuwei.fun/works/blog-windows02/</id><title>Windows 琐记二</title><link href="https://xuwei.fun/works/blog-windows02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-09-14T03:18:00.000Z</published><summary type="text">
 ### 1. 修复U盘
 以前用U盘制作Linux启动盘时，制作之后windows下都无法读取了，必须格式化，而格式化之后的U盘容量骤减为几M......磁盘管理里查看直接显示为黑色区域，估计是某些分区读不出来，搜了下解决方法：
 先输入命令diskpart，之后：
@@ -735,14 +735,14 @@ exit
 
 &lt;!--more--&gt;
 ### 2. U盘制作系统盘
-用u盘制作系统启动盘时，以前常用</summary></entry><entry><id>https://xuwei.fun/works/blog-electronicDesign02/</id><title>音乐信号灯电子电路设计</title><link href="https://xuwei.fun/works/blog-electronicDesign02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-09-12T09:00:00.000Z</published><summary type="text">
+用u盘制作系统启动盘时，以前常用</summary></entry><entry><id>https://xuwei.fun/works/blog-electronicDesign02/</id><title>音乐信号灯电子电路设计</title><link href="https://xuwei.fun/works/blog-electronicDesign02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-09-12T09:00:00.000Z</published><summary type="text">
 ### 注意事项：
 + 想使multisim的四路示波器波形相对静止下查看，如果是正弦波可以在示波器上选中波形类型为正弦波，否则可以直接点击暂停仿真使停止
 + 仿真过程极慢，现实1s在multisim中竟然走了3、4s，改multisim步长有时可以解决问题，但若是仿真电路本身的确复杂，则只能靠等待了，毕竟仿真是需要计算时间的
 + Mesurement Probe的确好用，但是有时运行一段时间后，会导致Transient time point calculation did not converge这个错误，出现这个问题的另一个原因可能是示波器未接地。
 
 &lt;!--more--&gt;
-### 一、</summary></entry><entry><id>https://xuwei.fun/works/blog-publicDNS/</id><title>公共DNS</title><link href="https://xuwei.fun/works/blog-publicDNS/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-09-08T02:00:00.000Z</published><summary type="text">
+### 一、</summary></entry><entry><id>https://xuwei.fun/works/blog-publicDNS/</id><title>公共DNS</title><link href="https://xuwei.fun/works/blog-publicDNS/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-09-08T02:00:00.000Z</published><summary type="text">
 ### 各大公司提供的公共DNS
 
 #### Google
@@ -760,12 +760,12 @@ exit
 
 #### 114DNS
     114.114.114.114
-    114.114.115.115</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm05/</id><title>simhash与重复信息识别</title><link href="https://xuwei.fun/works/blog-algorithm05/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-09-02T02:00:00.000Z</published><summary type="text">
+    114.114.115.115</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm05/</id><title>simhash与重复信息识别</title><link href="https://xuwei.fun/works/blog-algorithm05/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-09-02T02:00:00.000Z</published><summary type="text">
 ### Simhash, Minhash
 参考这些文章
 &lt;http://grunt1223.iteye.com/blog/964564&gt;
 &lt;http://blog.csdn.net/heiyeshuwu/article/details/44117473&gt;
-</summary></entry><entry><id>https://xuwei.fun/works/blog-machineLearning05/</id><title>机器学习五</title><link href="https://xuwei.fun/works/blog-machineLearning05/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-08-29T02:00:00.000Z</published><summary type="text">
+</summary></entry><entry><id>https://xuwei.fun/works/blog-machineLearning05/</id><title>机器学习五</title><link href="https://xuwei.fun/works/blog-machineLearning05/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-08-29T02:00:00.000Z</published><summary type="text">
 ### 1. 支持向量机(Support Vector Machines)
 SVM有很多实现，最流行的一种实现是序列最小优化(Sequential Minimal Optimization)算法
 可以使用核函数(kernel)的方式将SVM扩展到更多数据集上
@@ -776,7 +776,7 @@ SVM的优缺点:
 &lt;!--more--&gt;
 ### 2. 基于最大间隔分隔数据
 可以用一条线将两类数据点分开，则这组数据线性可分，否则线性不可分
-线性可分数据集中的分隔界限称为分隔超平面(separating</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem01/</id><title>操作系统一</title><link href="https://xuwei.fun/works/blog-operatingSystem01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-08-26T07:30:00.000Z</published><summary type="text">
+线性可分数据集中的分隔界限称为分隔超平面(separating</summary></entry><entry><id>https://xuwei.fun/works/blog-operatingSystem01/</id><title>操作系统一</title><link href="https://xuwei.fun/works/blog-operatingSystem01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-08-26T07:30:00.000Z</published><summary type="text">
 ### 1. 前言
 **华中科技大学的讲义很不错**
 主要备份了此讲义的内容[^1]
@@ -790,7 +790,7 @@ SVM的优缺点:
 无操作系统:人工操作-&gt;脱机I/O方式
 单道批处理系统-&gt;多道批处理系统-&gt;分时系统-&gt;实时系统-&gt;网络操作系统-&gt;分布式操作系统
 
-###</summary></entry><entry><id>https://xuwei.fun/works/blog-gameTheory01/</id><title>Game Theory 01</title><link href="https://xuwei.fun/works/blog-gameTheory01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-08-26T03:00:00.000Z</published><summary type="text">
+###</summary></entry><entry><id>https://xuwei.fun/works/blog-gameTheory01/</id><title>Game Theory 01</title><link href="https://xuwei.fun/works/blog-gameTheory01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-08-26T03:00:00.000Z</published><summary type="text">
 ### 1. 一场博弈的四个基本要素
 + 至少两个参与者。博弈论的参与者又被称为决策主体，也就是在博弈中制定决策的人
 + 利益
@@ -801,14 +801,14 @@ SVM的优缺点:
 ### 2. 博弈的分类
 #### 2.1 合作博弈和非合作博弈
 根据博弈的参与者之间是否有一个具有约束力的协议，博弈可分为合作博弈和非合作博弈
-- 合作博弈。合作博弈并不是指参与者之间有合作的意向，或是合作态度，而是参与者之间有具有约束力的协议、约定或者契约，参与者必</summary></entry><entry><id>https://xuwei.fun/works/blog-machineLearning04/</id><title>机器学习四</title><link href="https://xuwei.fun/works/blog-machineLearning04/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-08-25T10:00:00.000Z</published><summary type="text">
+- 合作博弈。合作博弈并不是指参与者之间有合作的意向，或是合作态度，而是参与者之间有具有约束力的协议、约定或者契约，参与者必</summary></entry><entry><id>https://xuwei.fun/works/blog-machineLearning04/</id><title>机器学习四</title><link href="https://xuwei.fun/works/blog-machineLearning04/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-08-25T10:00:00.000Z</published><summary type="text">
 ### 1. Logistic回归
 利用Logistic回归进行分类的主要思想是: 根据现有数据对分类边界线建立回归公式,以此进行分类
 
 
 ### 2. 基于Logistic回归和Sigmoid函数的分类
 我们想要的函数是能接受所有的输入然后预测出类别。例如,在两个类的情况下,上述函数输出0或1,我们接触过的函数 Heaviside step function(单位阶跃函数)即是。然而此函数在跳跃点上从0瞬间跳跃到1，这个瞬间跳跃过程有时很难处理。Sigmoid函数有类似的性质但是更容易处理，其具体计算公式为：\\(\\sigma(z)=\\frac{1}{1+e^{-z}}\\)
-为了实现</summary></entry><entry><id>https://xuwei.fun/works/blog-machineLearning03/</id><title>机器学习三</title><link href="https://xuwei.fun/works/blog-machineLearning03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-08-19T08:00:00.000Z</published><summary type="text">
+为了实现</summary></entry><entry><id>https://xuwei.fun/works/blog-machineLearning03/</id><title>机器学习三</title><link href="https://xuwei.fun/works/blog-machineLearning03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-08-19T08:00:00.000Z</published><summary type="text">
 ### 1. 朴素贝叶斯
 朴素贝叶斯的两个假设：
 + 特征之间相互独立，即一个单词出现的可能性与它和其他单词相邻没有关系
@@ -821,7 +821,7 @@ SVM的优缺点:
 ```python
 def loadDataSet():
     postingList=[[&apos;my&apos;, &apos;dog&apos;, &apos;has&apos;, &apos;flea&apos;, &apos;problems&apos;, &apos;help&apos;, &apos;please&apos;],
-                 [&apos;maybe&apos;, &apos;not&apos;, &apos;take&apos;, </summary></entry><entry><id>https://xuwei.fun/works/blog-machineLearning02/</id><title>机器学习二</title><link href="https://xuwei.fun/works/blog-machineLearning02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-08-16T08:00:00.000Z</published><summary type="text">
+                 [&apos;maybe&apos;, &apos;not&apos;, &apos;take&apos;, </summary></entry><entry><id>https://xuwei.fun/works/blog-machineLearning02/</id><title>机器学习二</title><link href="https://xuwei.fun/works/blog-machineLearning02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-08-16T08:00:00.000Z</published><summary type="text">
 ### 1. 决策树定义
 决策树是一个预测模型；他代表的是对象属性与对象值之间的一种映射关系。树中每个节点表示某个对象，而每个分叉路径则代表的某个可能的属性值，而每个叶结点则对应从根节点到该叶节点所经历的路径所表示的对象的值。决策树仅有单一输出，若欲有复数输出，可以建立独立的决策树以处理不同输出。从数据产生决策树的机器学习技术叫做决策树学习, 通俗说就是决策树。
 
@@ -829,7 +829,7 @@ def loadDataSet():
 ### 2. 决策树优缺点
 决策树是一种简单但是广泛使用的分类器。通过训练数据构建决策树，可以高效的对未知的数据进行分类。
 + 决策数有两大优点：
-  - 1、决策树模型可读性好，具有描述性，有助于人工分析</summary></entry><entry><id>https://xuwei.fun/works/blog-patternRecognition01/</id><title>模式识别一</title><link href="https://xuwei.fun/works/blog-patternRecognition01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-08-16T04:00:00.000Z</published><summary type="text">
+  - 1、决策树模型可读性好，具有描述性，有助于人工分析</summary></entry><entry><id>https://xuwei.fun/works/blog-patternRecognition01/</id><title>模式识别一</title><link href="https://xuwei.fun/works/blog-patternRecognition01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-08-16T04:00:00.000Z</published><summary type="text">
 ### 1. 模式识别系统的构成
 ![first](/images/patternRecognition01_1.png)
 其中：
@@ -838,13 +838,13 @@ def loadDataSet():
 
 &lt;!--more--&gt;
 ### 2. 识别方法
-一般来说，描述模式有两种方</summary></entry><entry><id>https://xuwei.fun/works/blog-machineLearning01/</id><title>机器学习一</title><link href="https://xuwei.fun/works/blog-machineLearning01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-08-11T08:16:16.000Z</published><summary type="text">
+一般来说，描述模式有两种方</summary></entry><entry><id>https://xuwei.fun/works/blog-machineLearning01/</id><title>机器学习一</title><link href="https://xuwei.fun/works/blog-machineLearning01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-08-11T08:16:16.000Z</published><summary type="text">
 ### 1. 简介
 学习此书[^1]时的一些记录
 
 
 ### 2. 如何选择合适的算法
-考虑使用机器学习算法的目的, 如果想要预测目标变量的值，则可以选择监督学习算法，否则可以选择无监督学习算法。确定选择监督学习算法后，进一步确定目标变量类型，如果目标变量是离散型，如是/否、1/2/3、A/B/C等，则可以选择分类算法；如果目标变量是连续型的数值，如0.0~100.00、-999~999或者+∞~-∞等，则需要选择回归算法, 如果不想预测目标变量的值，则可以选择无监督算法，进一步分析是否需要将数据划分为离散的组。如果这是唯一的要求，则使用聚类算法，如果还需要估计数据与每个分组的相似程度，则需</summary></entry><entry><id>https://xuwei.fun/works/blog-linux02/</id><title>Linux琐记二</title><link href="https://xuwei.fun/works/blog-linux02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-08-03T15:55:00.000Z</published><summary type="text">
+考虑使用机器学习算法的目的, 如果想要预测目标变量的值，则可以选择监督学习算法，否则可以选择无监督学习算法。确定选择监督学习算法后，进一步确定目标变量类型，如果目标变量是离散型，如是/否、1/2/3、A/B/C等，则可以选择分类算法；如果目标变量是连续型的数值，如0.0~100.00、-999~999或者+∞~-∞等，则需要选择回归算法, 如果不想预测目标变量的值，则可以选择无监督算法，进一步分析是否需要将数据划分为离散的组。如果这是唯一的要求，则使用聚类算法，如果还需要估计数据与每个分组的相似程度，则需</summary></entry><entry><id>https://xuwei.fun/works/blog-linux02/</id><title>Linux琐记二</title><link href="https://xuwei.fun/works/blog-linux02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-08-03T15:55:00.000Z</published><summary type="text">
 
 ### 1. dd命令
 win8.1下镜像直接点击setup.exe无效...系统要求都符合，只是我这是双系统且是BIOS引导，也不是UEFI
@@ -857,7 +857,7 @@ bs=2M情况下最后平均写入速度为7M/s
 
 ### 2. 格式化u盘
 U盘写入到一半时被我中止了，结果就是U盘变成了只读状态，挂载后也无法操作...
-于是`mkfs.vfat</summary></entry><entry><id>https://xuwei.fun/works/blog-windows01/</id><title>Windows 琐记一</title><link href="https://xuwei.fun/works/blog-windows01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-08-03T14:00:00.000Z</published><summary type="text">
+于是`mkfs.vfat</summary></entry><entry><id>https://xuwei.fun/works/blog-windows01/</id><title>Windows 琐记一</title><link href="https://xuwei.fun/works/blog-windows01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-08-03T14:00:00.000Z</published><summary type="text">
 ### 1. Word中字体大小与磅值对应关系
 字号&quot;八号&quot;对应磅值5
 字号&quot;七号&quot;对应磅值5.5
@@ -878,7 +878,7 @@ U盘写入到一半时被我中止了，结果就是U盘变成了只读状态，
 
 &lt;!--more--&gt;
 ### 2. 比较文件命令
-本想用windows自带的fc命令,却发现只可以比较两文件无法比较文件夹,</summary></entry><entry><id>https://xuwei.fun/works/blog-web01/</id><title>前端相关</title><link href="https://xuwei.fun/works/blog-web01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-07-25T09:30:00.000Z</published><summary type="text">
+本想用windows自带的fc命令,却发现只可以比较两文件无法比较文件夹,</summary></entry><entry><id>https://xuwei.fun/works/blog-web01/</id><title>前端相关</title><link href="https://xuwei.fun/works/blog-web01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-07-25T09:30:00.000Z</published><summary type="text">
 ### 1. 响应式网页图标
 &lt;http://www.gbtags.com/gb/share/2774.htm&gt;
 &lt;http://fortawesome.github.io/Font-Awesome/&gt;
@@ -886,7 +886,7 @@ U盘写入到一半时被我中止了，结果就是U盘变成了只读状态，
 ### 2. html编码
 Ascii编码见[这里](http://www.w3chtml.com/html/ref/ascii.html)
 Unicode编码太多, 可网上找工具转换
-例如&quot;你好&quot;可以Unicode编码为`\u4f60\u597d`</summary></entry><entry><id>https://xuwei.fun/works/blog-shadowsocks/</id><title>Shadowsocks 高级教程</title><link href="https://xuwei.fun/works/blog-shadowsocks/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-07-19T09:30:00.000Z</published><summary type="text">
+例如&quot;你好&quot;可以Unicode编码为`\u4f60\u597d`</summary></entry><entry><id>https://xuwei.fun/works/blog-shadowsocks/</id><title>Shadowsocks 高级教程</title><link href="https://xuwei.fun/works/blog-shadowsocks/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-07-19T09:30:00.000Z</published><summary type="text">
 ### 1. HTTP代理
 在网上看到建立shadowsocks之后会自动建立一个http的代理，使用8123端口，知道这一点就可以使用http代理而不仅只是socks5了
 
@@ -898,7 +898,7 @@ Unicode编码太多, 可网上找工具转换
 {
     &quot;server&quot;:&quot;0.0.0.0&quot;,
     &quot;server_port&quot;:443,      #经尝试，443端口比其他端口要快一点
-    &quot;local_port&quot;:1</summary></entry><entry><id>https://xuwei.fun/works/blog-python02/</id><title>Python 琐记二</title><link href="https://xuwei.fun/works/blog-python02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-07-16T09:30:00.000Z</published><summary type="text">
+    &quot;local_port&quot;:1</summary></entry><entry><id>https://xuwei.fun/works/blog-python02/</id><title>Python 琐记二</title><link href="https://xuwei.fun/works/blog-python02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-07-16T09:30:00.000Z</published><summary type="text">
 ### 1. zip函数
 zip函数接受任意多个（包括0个和1个）序列作为参数，返回一个tuple列表
 ```python
@@ -915,13 +915,13 @@ print xyz
 &lt;http://stackoverflow.com/questions/3637350/how-to-write-stereo-wav-files-in-python&gt;
 
 
-### 3. 矩阵</summary></entry><entry><id>https://xuwei.fun/works/blog-control03/</id><title>傅里叶变换窗函数</title><link href="https://xuwei.fun/works/blog-control03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-06-27T09:30:00.000Z</published><summary type="text">
+### 3. 矩阵</summary></entry><entry><id>https://xuwei.fun/works/blog-control03/</id><title>傅里叶变换窗函数</title><link href="https://xuwei.fun/works/blog-control03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-06-27T09:30:00.000Z</published><summary type="text">
 ### 原理
 用窗函数分析信号，相当于将一个待分析信号x1通过一个传输函数为窗函数傅里叶变换的滤波器得到输出信号或分析信号y1
 
 &lt;http://www.cnblogs.com/gaozehua/p/3516556.html&gt;
 &lt;http://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2010/gjm76_asr96/gjm76_asr96/&gt;
-</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm03/</id><title>三字符构成字符串</title><link href="https://xuwei.fun/works/blog-algorithm03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-06-15T09:30:00.000Z</published><summary type="text">
+</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm03/</id><title>三字符构成字符串</title><link href="https://xuwei.fun/works/blog-algorithm03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-06-15T09:30:00.000Z</published><summary type="text">
 ### 1. 描述
 仅由三个字符A、B、C构成字符串，且字符串任意相邻三个元素不能完全相同。如“ACCCAB”不合法，“ABBCBCA”合法。求满足条件的长度为n的字符串个数。假定不考虑整数溢出，要求时间和空间复杂度不高于O(N)。
 
@@ -933,7 +933,7 @@ print xyz
 
 &lt;!--more--&gt;
 ### 3. Solution
-若当前已经有长度为n-1的合法字符串，则在末端增加一个字符，形成长度为n的字符串，n-1的字符串可分为“末端两字</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm04/</id><title>神经网络识别手写体数字</title><link href="https://xuwei.fun/works/blog-algorithm04/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-06-15T09:30:00.000Z</published><summary type="text">
+若当前已经有长度为n-1的合法字符串，则在末端增加一个字符，形成长度为n的字符串，n-1的字符串可分为“末端两字</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm04/</id><title>神经网络识别手写体数字</title><link href="https://xuwei.fun/works/blog-algorithm04/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-06-15T09:30:00.000Z</published><summary type="text">
 ### 1. 前言
 智能控制课程的作业之一就是利用神经网络识别手写体数字, 花了两天时间用Matlab实现了
 
@@ -944,7 +944,7 @@ print xyz
 
 &lt;!--more--&gt;
 ### 3. 源代码
-The source code of this project is [here](https://github.com/zhen-yu/Miscellaneous/tree/master/Recognize</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm02/</id><title>九宫格(八数码)问题</title><link href="https://xuwei.fun/works/blog-algorithm02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-05-29T09:55:00.000Z</published><summary type="text">
+The source code of this project is [here](https://github.com/zhen-yu/Miscellaneous/tree/master/Recognize</summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm02/</id><title>九宫格(八数码)问题</title><link href="https://xuwei.fun/works/blog-algorithm02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-05-29T09:55:00.000Z</published><summary type="text">
 ### 1. 前言
 智能控制基础的课后题，开始以为没什么，但是不写复杂的算法好久~动手写起来还是漏洞百出
 主要参考了[这篇博客](http://blog.csdn.net/acm_cxlove/article/details/7745323)的内容
@@ -956,7 +956,7 @@ The source code of this project is [here](https://github.com/zhen-yu/Miscellaneo
 ```cpp
 class VertexOfGraph {       //定义图的节点类
 public:
-    int vertex[3][</summary></entry><entry><id>https://xuwei.fun/works/blog-interview01/</id><title>民生银行2015笔试</title><link href="https://xuwei.fun/works/blog-interview01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-05-15T09:00:00.000Z</published><summary type="text">
+    int vertex[3][</summary></entry><entry><id>https://xuwei.fun/works/blog-interview01/</id><title>民生银行2015笔试</title><link href="https://xuwei.fun/works/blog-interview01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-05-15T09:00:00.000Z</published><summary type="text">
 ### 1. 前言
 看到群里说有民生银行的内推, 直接去笔试面试即可, 就想着还没有正式去找过工作实习, 权当锻炼自己
 
@@ -966,7 +966,7 @@ public:
 #### 2.1 选择题
 选择题还是很基础的一些题型，感觉就是计院的期末考题(非计算机专业的胡乱猜测)，有算法时间复杂度的，二叉树的各类遍历，Http状态码、数据库的操作语句，简单的加密解密方法、
 #### 2.2 编程题
-+ 第一题应该是最简单的，当然是对其他人而言，考的是数据库的操作，我只会最基本的SELECT语句，稍微复杂点就忘了，都是现用现查，而且我也的确没系统学习过数据库, 所以直接放弃</summary></entry><entry><id>https://xuwei.fun/works/blog-reading07/</id><title>读书笔记七</title><link href="https://xuwei.fun/works/blog-reading07/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-05-08T02:22:00.000Z</published><summary type="text">
++ 第一题应该是最简单的，当然是对其他人而言，考的是数据库的操作，我只会最基本的SELECT语句，稍微复杂点就忘了，都是现用现查，而且我也的确没系统学习过数据库, 所以直接放弃</summary></entry><entry><id>https://xuwei.fun/works/blog-reading07/</id><title>读书笔记七</title><link href="https://xuwei.fun/works/blog-reading07/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-05-08T02:22:00.000Z</published><summary type="text">
 ### 1. Preface
 From *Sand and Foam (excerpt)* by Kahlil Gibran
 
@@ -976,7 +976,7 @@ From *Sand and Foam (excerpt)* by Kahlil Gibran
 Seven times I have despised my soul:
 The first time when I saw her being meek that she might attain height.
 The second time when I saw her limping before the crippled.
-The third time when she was given to c</summary></entry><entry><id>https://xuwei.fun/works/blog-python01/</id><title>Python 琐记一</title><link href="https://xuwei.fun/works/blog-python01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-03-15T09:30:00.000Z</published><summary type="text">
+The third time when she was given to c</summary></entry><entry><id>https://xuwei.fun/works/blog-python01/</id><title>Python 琐记一</title><link href="https://xuwei.fun/works/blog-python01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-03-15T09:30:00.000Z</published><summary type="text">
 ### 1. BOOL
 Python 中bool类型把数0看作false
 `bool(0)`
@@ -993,7 +993,7 @@ f = lambda x,y: x+y
 print f(1,2)
 ```
 但是lambda功能有限，它只是一个表达式，不是一个语句，lambda会返回一个值，而不需要return，事实上使用了return就会出现语法错误
-lambd</summary></entry><entry><id>https://xuwei.fun/works/blog-cpp01/</id><title>C++琐记一</title><link href="https://xuwei.fun/works/blog-cpp01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-03-12T07:40:00.000Z</published><summary type="text">
+lambd</summary></entry><entry><id>https://xuwei.fun/works/blog-cpp01/</id><title>C++琐记一</title><link href="https://xuwei.fun/works/blog-cpp01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-03-12T07:40:00.000Z</published><summary type="text">
 ### 1. 前言
 没有系统地学过C++, 偶尔会把C++当作高级的C语言用下, 用下它的STL库, 有些很基础的东西都不知道。某课程的作业要求只能用C/C++写, 一动手发现全是错误, 故在此记录。
 
@@ -1002,7 +1002,7 @@ lambd</summary></entry><entry><id>https://xuwei.fun/works/blog-cpp01/</id><title
 string类经常使用, 平时还是用来连接下字符串比较多, 还有一些其他常用的方法：
 ```cpp
 substr(int, int)
-str.substr(start,length) //返回str字符串start位置开始的长度为length的字符串，需要依次输出字符串中的字符时，可以变为str.substr(i,1)，而不用str.at(i)，因为str.a</summary></entry><entry><id>https://xuwei.fun/works/blog-control01/</id><title>浅谈泛函、极值及最优化控制问题</title><link href="https://xuwei.fun/works/blog-control01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-03-08T09:30:00.000Z</published><summary type="text">
+str.substr(start,length) //返回str字符串start位置开始的长度为length的字符串，需要依次输出字符串中的字符时，可以变为str.substr(i,1)，而不用str.at(i)，因为str.a</summary></entry><entry><id>https://xuwei.fun/works/blog-control01/</id><title>浅谈泛函、极值及最优化控制问题</title><link href="https://xuwei.fun/works/blog-control01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-03-08T09:30:00.000Z</published><summary type="text">
 ### 1. 前言
 花了几个小时复习自控，其中最后看的内容是关于泛函的，做个笔记，谈谈自己对它的理解。
 
@@ -1010,11 +1010,11 @@ str.substr(start,length) //返回str字符串start位置开始的长度为length
 ### 2. 瞎想
 看到泛函的定义之后，我的第一反应是 这不就是将二维空间的函数上升了一个维度么。说起来，数学和物理领域很多概念都是在原有基础上进行维度的扩展得到的，不过进一步思考，泛函还可以上升到更高维度，简单的是二维空间内的函数对应一个具体数值，即上升到了三维空间，而如果是三维空间内的函数作为自变量(也就是宗量)，那么泛函就应该上升到四维空间了，如此推论，泛函其实可以定义在无限维空间。
 
-从普通函数的维度扩展上来理解，泛函的很多性质，可以尝试着从原来我们所理解的函数基础上去学习，这</summary></entry><entry><id>https://xuwei.fun/works/blog-javascript01/</id><title>JavaScript笔谈一</title><link href="https://xuwei.fun/works/blog-javascript01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2015-02-25T07:40:00.000Z</published><summary type="text">
+从普通函数的维度扩展上来理解，泛函的很多性质，可以尝试着从原来我们所理解的函数基础上去学习，这</summary></entry><entry><id>https://xuwei.fun/works/blog-javascript01/</id><title>JavaScript笔谈一</title><link href="https://xuwei.fun/works/blog-javascript01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2015-02-25T07:40:00.000Z</published><summary type="text">
 ### 1. childNodes和children属性
 使用firstChild没有得到想要的结果, 用Chrome去调试发现firstChild竟然是文本元素, 然后又发现DOM节点有两属性childNodes和children, 于是学习记录下.
 #### 1.1. childNodes 属性
-标准的，它返回指定元素的子元素集合，包括HTML节点，所有属性，文本。可以通过nodeType来判断是哪种类型的节点，只有当nodeType==1时才是元素节点，2是属性节点，3是文本节点。有时候需要获取指定元素的第一个HTML子节点（非属性/文本节点），最容易想到的就是firstChild 属</summary></entry><entry><id>https://xuwei.fun/works/blog-opencv01/</id><title>Configure OpenCV with VS2013</title><link href="https://xuwei.fun/works/blog-opencv01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2014-10-28T08:36:00.000Z</published><summary type="text">
+标准的，它返回指定元素的子元素集合，包括HTML节点，所有属性，文本。可以通过nodeType来判断是哪种类型的节点，只有当nodeType==1时才是元素节点，2是属性节点，3是文本节点。有时候需要获取指定元素的第一个HTML子节点（非属性/文本节点），最容易想到的就是firstChild 属</summary></entry><entry><id>https://xuwei.fun/works/blog-opencv01/</id><title>Configure OpenCV with VS2013</title><link href="https://xuwei.fun/works/blog-opencv01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2014-10-28T08:36:00.000Z</published><summary type="text">
 ### 1. Install
 Download OpenCV from:
 [Lastest](http://sourceforge.net/projects/opencvlibrary/files)
@@ -1025,7 +1025,7 @@ Click the file you downloaded, choose a location to extract it.
 
 ### 2. Configuration
 #### 2.1 Environment
-Configure your environment variables, for example</summary></entry><entry><id>https://xuwei.fun/works/blog-electronicDesign01/</id><title>Usage of function generator in multisim</title><link href="https://xuwei.fun/works/blog-electronicDesign01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2014-10-26T13:30:00.000Z</published><summary type="text">
+Configure your environment variables, for example</summary></entry><entry><id>https://xuwei.fun/works/blog-electronicDesign01/</id><title>Usage of function generator in multisim</title><link href="https://xuwei.fun/works/blog-electronicDesign01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2014-10-26T13:30:00.000Z</published><summary type="text">
 ### 1. 问题
 进行多级放大电路和负反馈放大电路的模拟仿真时，用到了multisim里的function generator(函数发生器)，对其中的参数amplitude产生了困惑，这个amplitude(振幅)指的是峰值还是峰峰值。
 &lt;!--more--&gt;
@@ -1035,11 +1035,11 @@ Configure your environment variables, for example</summary></entry><entry><id>ht
 ![simple circuit 1](/images/analogelec_functionGenerator_1.png)
 
 其中函数发生器的amplitude设为10V，可是multimeter的结果却是14.142V，出乎意料
-于是查阅资料，发现function </summary></entry><entry><id>https://xuwei.fun/works/blog-android03/</id><title>Android ViewPager的使用</title><link href="https://xuwei.fun/works/blog-android03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2014-09-01T14:22:22.000Z</published><summary type="text">
+于是查阅资料，发现function </summary></entry><entry><id>https://xuwei.fun/works/blog-android03/</id><title>Android ViewPager的使用</title><link href="https://xuwei.fun/works/blog-android03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2014-09-01T14:22:22.000Z</published><summary type="text">
 ### 1. 简介
 &gt; ViewPager需要import android.support.v4这个jar包才可以使用
 &gt; ViewPager的效果就是能够轻松实现左右滑动屏幕, 不需要使用GestureDetector。在ViewPager的内部可以嵌入PagerTitleStrip或PagerTabStrip, 可以用来设置显示页面的title内容, 但是不要妄想把它当作Tab来用(虽然我的意图本来就是这样, 但是很悲剧), 因为它不是固定的
-&gt; 首先获取ViewPager布局mViewPager, 或者自己用Java实现不用xml, 然后要想实现滑动翻页必须得设置它的Adapter, </summary></entry><entry><id>https://xuwei.fun/works/blog-android02/</id><title>Android Layout布局</title><link href="https://xuwei.fun/works/blog-android02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2014-08-31T15:00:00.000Z</published><summary type="text">
+&gt; 首先获取ViewPager布局mViewPager, 或者自己用Java实现不用xml, 然后要想实现滑动翻页必须得设置它的Adapter, </summary></entry><entry><id>https://xuwei.fun/works/blog-android02/</id><title>Android Layout布局</title><link href="https://xuwei.fun/works/blog-android02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2014-08-31T15:00:00.000Z</published><summary type="text">
 ## 1. 用Java而非XML布局
 ### 1.1 问题
 &gt; 在大部分应用程序中，我们都使用XML来实现页面布局，但实际上也可以不使用XML而使用Java来布局
@@ -1047,14 +1047,14 @@ Configure your environment variables, for example</summary></entry><entry><id>ht
 &gt; Java处理效率比XML快，所以用Java代码实现布局比XML要优秀，但是对于一个复杂界面来说，用Java会很麻烦。所以并不建议全部用Java来布局
 &gt; 但有些时候，我们的界面不是完全静态的，如果一个View中出现了大量的变化，那原来的XML就成了鸡肋。而且一旦想要将写好的一个Activity封装成JAR包，这时多余的XML就成了累赘
 
-&lt;!</summary></entry><entry><id>https://xuwei.fun/works/blog-android01/</id><title>Android TabHost的使用</title><link href="https://xuwei.fun/works/blog-android01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2014-08-27T10:29:32.000Z</published><summary type="text">
+&lt;!</summary></entry><entry><id>https://xuwei.fun/works/blog-android01/</id><title>Android TabHost的使用</title><link href="https://xuwei.fun/works/blog-android01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2014-08-27T10:29:32.000Z</published><summary type="text">
 ## 1. 写在前面
 出于对新事物的好奇, 接触了一下Android, 主要是看书(《Anroid应用开发深入学习实录》 关立勋)、Google和看文档。使用的android-sdk的platform最低是android-14, 然后有android-17,android-20以及android-L(电脑配置暂时比较低,没法把每个版本都测试一遍）
 此时此刻Intellij IDEA社区版还没法渲染出android-20和android-L，所以我基本都是用的android-17
 *虽然书的出版日期比较新, 但其中有些内容还是已经过时了*
 &lt;!--more--&gt;
 
-## 2. TabHost的</summary></entry><entry><id>https://xuwei.fun/works/blog-c02/</id><title>C语言琐记二</title><link href="https://xuwei.fun/works/blog-c02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2014-07-02T09:30:00.000Z</published><summary type="text">
+## 2. TabHost的</summary></entry><entry><id>https://xuwei.fun/works/blog-c02/</id><title>C语言琐记二</title><link href="https://xuwei.fun/works/blog-c02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2014-07-02T09:30:00.000Z</published><summary type="text">
 ### 一、枚举enum的使用
 ```cpp
 #include &lt;stdio.h&gt;
@@ -1071,14 +1071,14 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
-以上输出结果为-99, 即枚举类型中的值只要不指定, 必然是逐个递增的, 而第一个值不指定则</summary></entry><entry><id>https://xuwei.fun/works/blog-c01/</id><title>C语言琐记一</title><link href="https://xuwei.fun/works/blog-c01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2014-06-04T04:00:00.000Z</published><summary type="text">
+以上输出结果为-99, 即枚举类型中的值只要不指定, 必然是逐个递增的, 而第一个值不指定则</summary></entry><entry><id>https://xuwei.fun/works/blog-c01/</id><title>C语言琐记一</title><link href="https://xuwei.fun/works/blog-c01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2014-06-04T04:00:00.000Z</published><summary type="text">
 ### 1. 问题
 在codewarrior写的程序本来是可以编译的, 但只是调整了一些代码的位置, 将一些变量移到块作用域里, 却发现无法编译了, 以为是编译器配置突然出了问题, 解决了很久问题仍然存在
 
 ### 2. 解决
 最终发现是C语言的问题, C89的标准不允许随便声明变量, 变量声明不能放在任何可执行语句之后, 只允许在函数和块的开始处。
 这么不合理的规定在C99和C++里自然已经解除了。但是我所使用的codewarrior所用的C Compiler版本还是只支持到C89
-</summary></entry><entry><id>https://xuwei.fun/works/blog-reading06/</id><title>读书笔记六</title><link href="https://xuwei.fun/works/blog-reading06/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2013-12-17T07:22:00.000Z</published><summary type="text">
+</summary></entry><entry><id>https://xuwei.fun/works/blog-reading06/</id><title>读书笔记六</title><link href="https://xuwei.fun/works/blog-reading06/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2013-12-17T07:22:00.000Z</published><summary type="text">
 ### 1. Preface
 From *The Wise King* by Kahlil Gibran
 
@@ -1091,7 +1091,7 @@ From *The Wise King* by Kahlil Gibran
 &gt; 一天夜里，当大地万物都沉沉睡去，一个女巫进入城中，在井中点下七滴魔液，然后说：从现在起，凡喝了这井水的人就会发疯。 
 &gt; 
 &gt; 第二天清晨，除了国王和侍卫，所有居民都喝了这井里的水，正如女巫预言的那样，全都变成了疯人。 
-&gt;</summary></entry><entry><id>https://xuwei.fun/works/blog-reading05/</id><title>读书笔记五</title><link href="https://xuwei.fun/works/blog-reading05/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2013-09-16T12:30:00.000Z</published><summary type="text">
+&gt;</summary></entry><entry><id>https://xuwei.fun/works/blog-reading05/</id><title>读书笔记五</title><link href="https://xuwei.fun/works/blog-reading05/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2013-09-16T12:30:00.000Z</published><summary type="text">
 ### 1. Preface
 From *A song of ice and fire*
 
@@ -1100,7 +1100,7 @@ From *A song of ice and fire*
 &gt; 1. fear filled his gut like a meal he could not digest.
 &gt; 2. Ser Waymar was panting from the effort now, his breath steaming in the moonlight.
 &gt; 3. 
-</summary></entry><entry><id>https://xuwei.fun/works/blog-reading04/</id><title>读书笔记四</title><link href="https://xuwei.fun/works/blog-reading04/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2013-07-16T12:21:00.000Z</published><summary type="text">
+</summary></entry><entry><id>https://xuwei.fun/works/blog-reading04/</id><title>读书笔记四</title><link href="https://xuwei.fun/works/blog-reading04/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2013-07-16T12:21:00.000Z</published><summary type="text">
 ### 1. Preface
 From *Waiting for godot* by Samuel Beckett.[^1]
 
@@ -1115,13 +1115,13 @@ From *Waiting for godot* by Samuel Beckett.[^1]
 &gt; Like leaves.
 &gt; Like sand.
 &gt; Like leaves.
-&gt; They all sp</summary></entry><entry><id>https://xuwei.fun/works/blog-reading02/</id><title>读书笔记二</title><link href="https://xuwei.fun/works/blog-reading02/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2013-04-29T09:42:00.000Z</published><summary type="text">
+&gt; They all sp</summary></entry><entry><id>https://xuwei.fun/works/blog-reading02/</id><title>读书笔记二</title><link href="https://xuwei.fun/works/blog-reading02/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2013-04-29T09:42:00.000Z</published><summary type="text">
 ### 1. Preface
 From *Of Human Bondage(Part)* writen by W. Somerset Maugham
 
 
 ### 2. Content
-&gt; It is an illusion that youth is happy, an illusion of those who have lost it; but the young know they are wretched for they are full of the truthless ideal which have been instilled into them, and each tim</summary></entry><entry><id>https://xuwei.fun/works/blog-reading01/</id><title>读书笔记一</title><link href="https://xuwei.fun/works/blog-reading01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2013-03-06T13:52:00.000Z</published><summary type="text">
+&gt; It is an illusion that youth is happy, an illusion of those who have lost it; but the young know they are wretched for they are full of the truthless ideal which have been instilled into them, and each tim</summary></entry><entry><id>https://xuwei.fun/works/blog-reading01/</id><title>读书笔记一</title><link href="https://xuwei.fun/works/blog-reading01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2013-03-06T13:52:00.000Z</published><summary type="text">
 ### 1. 前言
 摘自梁漱溟的《朝话:人生的省悟》[^1]
 
@@ -1133,7 +1133,7 @@ From *Of Human Bondage(Part)* writen by W. Somerset Maugham
 &gt; 
 &gt; 也许他很卖力气，却很不自然，很苦，且难以长进，因为背后存个贪的心，虽有时也会起一个大的反动，也许勉强干。但当自己勉强自己时，读书做事均难入，无法全副精神放在事情上。甚且会自己搪塞自己。
 &gt; 
-&gt; 越聪明的人，越容易有欲望，越不知应在哪个地方搁下那个心。心实在应该搁在当下的。可是聪明的人，老是搁不在当下，老往远处跑，烦躁而不</summary></entry><entry><id>https://xuwei.fun/works/blog-books/</id><title>书单</title><link href="https://xuwei.fun/works/blog-books/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2012-11-22T14:22:22.000Z</published><summary type="text">
+&gt; 越聪明的人，越容易有欲望，越不知应在哪个地方搁下那个心。心实在应该搁在当下的。可是聪明的人，老是搁不在当下，老往远处跑，烦躁而不</summary></entry><entry><id>https://xuwei.fun/works/blog-books/</id><title>书单</title><link href="https://xuwei.fun/works/blog-books/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2012-11-22T14:22:22.000Z</published><summary type="text">
 ### 涉猎书目列表(不加筛选,供以后参考)
 &lt;blockquote&gt;
 《扫起落叶好过冬》                         林达
@@ -1142,40 +1142,40 @@ From *Of Human Bondage(Part)* writen by W. Somerset Maugham
 《萧十一郎》                               古龙
 《多情剑客无情剑》                         古龙
 《楚留香传奇》                             古龙
-《大旗英雄传》                       </summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm01/</id><title>HDU 1003</title><link href="https://xuwei.fun/works/blog-algorithm01/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2013-02-23T01:30:00.000Z</published><summary type="text">
+《大旗英雄传》                       </summary></entry><entry><id>https://xuwei.fun/works/blog-algorithm01/</id><title>HDU 1003</title><link href="https://xuwei.fun/works/blog-algorithm01/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2013-02-23T01:30:00.000Z</published><summary type="text">
 ### Problem Description
 Given a sequence a[1],a[2],a[3]......a[n], your job is to calculate the max sum of a sub-sequence. For example, given (6,-1,5,4,-7), the max sum in this sequence is 6 + (-1) + 5 + 4 = 14.
 
 &lt;!--more--&gt;
 ### Input
-The first line of the input contains an integer T(1&lt;=T&lt;=20) whic</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-002-40f4c4af02/</id><title>摘要-02</title><link href="https://xuwei.fun/works/blog-excerpt-002-40f4c4af02/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 旅客在每一个生人门口敲叩，
+The first line of the input contains an integer T(1&lt;=T&lt;=20) whic</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-002-40f4c4af02/</id><title>摘要-02</title><link href="https://xuwei.fun/works/blog-excerpt-002-40f4c4af02/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 旅客在每一个生人门口敲叩，
 才能敲到自己的家门；
 人要在外面到处漂流，
 最后才能走到最深的内殿。
-—— 泰戈尔《旅行》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-003-e578bcfd14/</id><title>摘要-03</title><link href="https://xuwei.fun/works/blog-excerpt-003-e578bcfd14/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 如果遇到特别的事情，拥有自我的人可以冷静地接受，但是如果太普通，就会被这股浪潮吞没、冲走，这种失控是最危险的。
-——《不吉波普不笑》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-004-1075b1487d/</id><title>摘要-04</title><link href="https://xuwei.fun/works/blog-excerpt-004-1075b1487d/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 1. “我觉得爱就是两个不知如何独处的人一起分享的逃避。很好笑，人们总会说爱是一种完全无私、付出的东西，但仔细想想，没有比爱更自私的东西。”
+—— 泰戈尔《旅行》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-003-e578bcfd14/</id><title>摘要-03</title><link href="https://xuwei.fun/works/blog-excerpt-003-e578bcfd14/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 如果遇到特别的事情，拥有自我的人可以冷静地接受，但是如果太普通，就会被这股浪潮吞没、冲走，这种失控是最危险的。
+——《不吉波普不笑》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-004-1075b1487d/</id><title>摘要-04</title><link href="https://xuwei.fun/works/blog-excerpt-004-1075b1487d/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 1. “我觉得爱就是两个不知如何独处的人一起分享的逃避。很好笑，人们总会说爱是一种完全无私、付出的东西，但仔细想想，没有比爱更自私的东西。”
 2. 你知道别人和你分手为什么会那么糟吗？因为你会想起之前你所抛弃的那些人，他们在你心中是多么的不重要，而今天却换成别人这样来看待你，你想他跟你是一样的痛苦，但其实他心想：“太好了，终于摆脱了！”
 3. “我有成为坚强又独立女性的使命感，不让我的生活以男人为重心，纵然如此，爱一个人和被爱对我来说非常重要...不过我们在生活中所做的一切不就是为了能被多爱一点吗”
-4. “有时候我会梦想，要成为一个好父亲、好丈夫，有些时候我会觉得我真的能做到，但有些时候</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-005-dad2a0b024/</id><title>摘要-05</title><link href="https://xuwei.fun/works/blog-excerpt-005-dad2a0b024/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 我因为爱你，所以常常想跟你道歉。我的爱沉重，污浊，里面带有许多令人不快的东西，比如悲伤，忧愁，想念，自卑，绝望，我的心又这样脆弱不堪。自己总被这些负面情绪打败，好像在一个沼泽里越挣扎越下沉。而我爱你，就是想把你也拖进来，却希望你救我。而你爱我，才是把我从沼泽救出来的力量。
-—— 村上春树《挪威的森林》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-006-9bdf8e9b07/</id><title>摘要-06</title><link href="https://xuwei.fun/works/blog-excerpt-006-9bdf8e9b07/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 我的整个生命，只是一场为了提升社会地位的低俗斗争。
-——《我的天才女友》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-007-cb4f1f8c6c/</id><title>摘要-07</title><link href="https://xuwei.fun/works/blog-excerpt-007-cb4f1f8c6c/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;别为活下去找借口，决定你的生活方式的就是你自己吧&quot;
-——《混沌武士》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-008-6b5d7aba47/</id><title>摘要-08</title><link href="https://xuwei.fun/works/blog-excerpt-008-6b5d7aba47/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 在年老的人看来，青春美妙，我们可以做许多白日梦，可以失败，可以哭泣，光芒万丈。但是，年轻如我们却不知其中的美好，总是在无病强说愁，或者颓废消极地殒磨青春……只有待到青春不再，方知其中的可贵。
-—— 萨特</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-009-01bc028490/</id><title>摘要-09</title><link href="https://xuwei.fun/works/blog-excerpt-009-01bc028490/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 青春是从神明那里借来的宝贵时间，快乐也好，严肃也好，恐怖也好，总有一天都要归还。一把年纪还紧抓着青春的尾巴，可是会付很贵的拖欠款哦。
-——《对不起青春》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-010-2b1526129b/</id><title>摘要-10</title><link href="https://xuwei.fun/works/blog-excerpt-010-2b1526129b/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; “因为没有痛苦也不会有真正的快乐，我只有跟你在一起的时候，才真正快乐”
-——《流星蝴蝶剑》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-011-586e6e07f8/</id><title>摘要-11</title><link href="https://xuwei.fun/works/blog-excerpt-011-586e6e07f8/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;理智使人产生虚荣，而加强虚荣的是思考。&quot;
-—— 卢梭</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-012-c290243cb0/</id><title>摘要-12</title><link href="https://xuwei.fun/works/blog-excerpt-012-c290243cb0/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 一个人自以为刻骨铭心的回忆，别人可能早已忘记。
-—— 张小娴</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-013-8b2ceb582c/</id><title>摘要-13</title><link href="https://xuwei.fun/works/blog-excerpt-013-8b2ceb582c/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 我只担心一件事，我怕我配不上自己所受的苦难。
-—— 陀思妥耶夫斯基</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-014-987ec2f460/</id><title>摘要-14</title><link href="https://xuwei.fun/works/blog-excerpt-014-987ec2f460/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 人类的悲欢并不相通，我只觉得他们吵闹。
-—— 鲁迅</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-015-6d3f399109/</id><title>摘要-15</title><link href="https://xuwei.fun/works/blog-excerpt-015-6d3f399109/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 有样东西他喜欢，但他不说，等到别人放到面前，才说好。</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-016-c686db197b/</id><title>摘要-16</title><link href="https://xuwei.fun/works/blog-excerpt-016-c686db197b/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 1. 从小我就懂得保护自己，我知道要想不被人拒绝，最好的办法就是先拒绝别人。
+4. “有时候我会梦想，要成为一个好父亲、好丈夫，有些时候我会觉得我真的能做到，但有些时候</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-005-dad2a0b024/</id><title>摘要-05</title><link href="https://xuwei.fun/works/blog-excerpt-005-dad2a0b024/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 我因为爱你，所以常常想跟你道歉。我的爱沉重，污浊，里面带有许多令人不快的东西，比如悲伤，忧愁，想念，自卑，绝望，我的心又这样脆弱不堪。自己总被这些负面情绪打败，好像在一个沼泽里越挣扎越下沉。而我爱你，就是想把你也拖进来，却希望你救我。而你爱我，才是把我从沼泽救出来的力量。
+—— 村上春树《挪威的森林》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-006-9bdf8e9b07/</id><title>摘要-06</title><link href="https://xuwei.fun/works/blog-excerpt-006-9bdf8e9b07/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 我的整个生命，只是一场为了提升社会地位的低俗斗争。
+——《我的天才女友》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-007-cb4f1f8c6c/</id><title>摘要-07</title><link href="https://xuwei.fun/works/blog-excerpt-007-cb4f1f8c6c/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;别为活下去找借口，决定你的生活方式的就是你自己吧&quot;
+——《混沌武士》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-008-6b5d7aba47/</id><title>摘要-08</title><link href="https://xuwei.fun/works/blog-excerpt-008-6b5d7aba47/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 在年老的人看来，青春美妙，我们可以做许多白日梦，可以失败，可以哭泣，光芒万丈。但是，年轻如我们却不知其中的美好，总是在无病强说愁，或者颓废消极地殒磨青春……只有待到青春不再，方知其中的可贵。
+—— 萨特</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-009-01bc028490/</id><title>摘要-09</title><link href="https://xuwei.fun/works/blog-excerpt-009-01bc028490/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 青春是从神明那里借来的宝贵时间，快乐也好，严肃也好，恐怖也好，总有一天都要归还。一把年纪还紧抓着青春的尾巴，可是会付很贵的拖欠款哦。
+——《对不起青春》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-010-2b1526129b/</id><title>摘要-10</title><link href="https://xuwei.fun/works/blog-excerpt-010-2b1526129b/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; “因为没有痛苦也不会有真正的快乐，我只有跟你在一起的时候，才真正快乐”
+——《流星蝴蝶剑》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-011-586e6e07f8/</id><title>摘要-11</title><link href="https://xuwei.fun/works/blog-excerpt-011-586e6e07f8/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;理智使人产生虚荣，而加强虚荣的是思考。&quot;
+—— 卢梭</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-012-c290243cb0/</id><title>摘要-12</title><link href="https://xuwei.fun/works/blog-excerpt-012-c290243cb0/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 一个人自以为刻骨铭心的回忆，别人可能早已忘记。
+—— 张小娴</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-013-8b2ceb582c/</id><title>摘要-13</title><link href="https://xuwei.fun/works/blog-excerpt-013-8b2ceb582c/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 我只担心一件事，我怕我配不上自己所受的苦难。
+—— 陀思妥耶夫斯基</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-014-987ec2f460/</id><title>摘要-14</title><link href="https://xuwei.fun/works/blog-excerpt-014-987ec2f460/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 人类的悲欢并不相通，我只觉得他们吵闹。
+—— 鲁迅</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-015-6d3f399109/</id><title>摘要-15</title><link href="https://xuwei.fun/works/blog-excerpt-015-6d3f399109/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 有样东西他喜欢，但他不说，等到别人放到面前，才说好。</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-016-c686db197b/</id><title>摘要-16</title><link href="https://xuwei.fun/works/blog-excerpt-016-c686db197b/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 1. 从小我就懂得保护自己，我知道要想不被人拒绝，最好的办法就是先拒绝别人。
 2. 多年之后，我有个绰号叫西毒，任何人都可以变得狠毒，只要你尝试过什么叫做嫉妒。
 3. 每个人都会经过这个阶段，见到一座山，就想知道山后面是什么。我很想告诉他，可能翻过山后面，你会发现没什么特别。回望之下，可能会觉得这一边更好。
 4. 其实“醉生梦死”只不过是她跟我开的一个玩笑，你越想知道自己是不是忘记的时候，你反而记得更清楚。我曾经听人说过，当你不能够再拥有，你唯一可以做的，就是令自己不要忘记。
-5. 不久前，我遇上一个人，送给我一坛酒，她说那叫“醉生梦死”，喝了之后，可以叫你忘掉以前做过的任何事。我很奇怪，</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-017-96fa844f2d/</id><title>摘要-17</title><link href="https://xuwei.fun/works/blog-excerpt-017-96fa844f2d/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 1. &quot;Rehashing old arguments and defending myself against something she said about me.&quot;
+5. 不久前，我遇上一个人，送给我一坛酒，她说那叫“醉生梦死”，喝了之后，可以叫你忘掉以前做过的任何事。我很奇怪，</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-017-96fa844f2d/</id><title>摘要-17</title><link href="https://xuwei.fun/works/blog-excerpt-017-96fa844f2d/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 1. &quot;Rehashing old arguments and defending myself against something she said about me.&quot;
 2. &quot;The past is just a story we tell ourselves.&quot;
 3. &quot;I think anybody who falls in love is a freak. It&apos;s a crazy thing to do. It&apos;s kind of like a form of socially acceptable insanity.&quot;
-4. &quot;The heart&apos;s not like a </summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-018-2aa6677cd3/</id><title>摘要-18</title><link href="https://xuwei.fun/works/blog-excerpt-018-2aa6677cd3/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 1. 不相信世界就是这样，在明知道有的时候必须低头，有的人必将失去，有的东西命中注定不能长久的时候，依然要说，在第一千个选择之外，还有第一千零一个可能，有一扇窗等着我打开，然后有光透进来。
+4. &quot;The heart&apos;s not like a </summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-018-2aa6677cd3/</id><title>摘要-18</title><link href="https://xuwei.fun/works/blog-excerpt-018-2aa6677cd3/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 1. 不相信世界就是这样，在明知道有的时候必须低头，有的人必将失去，有的东西命中注定不能长久的时候，依然要说，在第一千个选择之外，还有第一千零一个可能，有一扇窗等着我打开，然后有光透进来。
 2. 如果我会发光，就不必害怕黑暗。如果我自己是那么美好，那么一切恐惧就可以烟消云散。于是我开始存下了一点希望——如果我能做到，那么我就战胜了寂寞的命运。
-——王小波《黑铁时代》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-019-525889ae60/</id><title>摘要-19</title><link href="https://xuwei.fun/works/blog-excerpt-019-525889ae60/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 欲洁何曾洁？云空未必空。可怜金玉质，终陷淖泥中。—— 妙玉判词</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-020-47f74c34cb/</id><title>摘要-20</title><link href="https://xuwei.fun/works/blog-excerpt-020-47f74c34cb/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 一霎时把七情俱已昧尽
+——王小波《黑铁时代》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-019-525889ae60/</id><title>摘要-19</title><link href="https://xuwei.fun/works/blog-excerpt-019-525889ae60/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 欲洁何曾洁？云空未必空。可怜金玉质，终陷淖泥中。—— 妙玉判词</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-020-47f74c34cb/</id><title>摘要-20</title><link href="https://xuwei.fun/works/blog-excerpt-020-47f74c34cb/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 一霎时把七情俱已昧尽
 渗透了酸辛处泪湿衣襟
 我只道铁富贵一生铸定
 又谁知人生数顷刻分明
@@ -1184,49 +1184,49 @@ The first line of the input contains an integer T(1&lt;=T&lt;=20) whic</summary>
 这也是老天爷一番教训
 他教我收余恨、免娇嗔、
 且自新、改性情、休恋逝水、苦海回身、早悟兰因
-——《锁麟囊》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-021-40c23078cf/</id><title>摘要-21</title><link href="https://xuwei.fun/works/blog-excerpt-021-40c23078cf/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;要死的话就是现在了，我喜欢现在喜欢到这种地步&quot;
-——《四重奏》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-022-54a6913f07/</id><title>摘要-22</title><link href="https://xuwei.fun/works/blog-excerpt-022-54a6913f07/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; “我这个人虐点特别奇怪，不怕死不怕残不怕分手，但我怕看见诚实的人被迫说谎，正直的人被迫弯腰，直言者被迫噤声，理想主义者亲眼见到理想破碎。
+——《锁麟囊》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-021-40c23078cf/</id><title>摘要-21</title><link href="https://xuwei.fun/works/blog-excerpt-021-40c23078cf/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;要死的话就是现在了，我喜欢现在喜欢到这种地步&quot;
+——《四重奏》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-022-54a6913f07/</id><title>摘要-22</title><link href="https://xuwei.fun/works/blog-excerpt-022-54a6913f07/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; “我这个人虐点特别奇怪，不怕死不怕残不怕分手，但我怕看见诚实的人被迫说谎，正直的人被迫弯腰，直言者被迫噤声，理想主义者亲眼见到理想破碎。
 还有，谎话连篇者最后的一句真话，奴颜婢膝者最后挺直了腰杆，缄口自保者突然仗义执言，曾遭理想背叛的人最后选择为理想而死。”
-—— 虾米尹吾“你笑着流出了泪”网友评论</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-023-afbd118539/</id><title>摘要-23</title><link href="https://xuwei.fun/works/blog-excerpt-023-afbd118539/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 1. &quot;归根结底一切人际交往的纽带，不管是婚姻还是友谊，都是交谈，而交谈必须有个共同的基础。如果双方的文化教养迥异，那唯一可能的共同基础只能建立在最低的层面上。思想和行为上的琐屑讨人喜欢。&quot;
+—— 虾米尹吾“你笑着流出了泪”网友评论</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-023-afbd118539/</id><title>摘要-23</title><link href="https://xuwei.fun/works/blog-excerpt-023-afbd118539/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 1. &quot;归根结底一切人际交往的纽带，不管是婚姻还是友谊，都是交谈，而交谈必须有个共同的基础。如果双方的文化教养迥异，那唯一可能的共同基础只能建立在最低的层面上。思想和行为上的琐屑讨人喜欢。&quot;
 2. &quot;但是我同你相遇,要么太迟要么太早了,我也说不清楚。&quot;
-——《自深深处》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-024-826493dd7c/</id><title>摘要-24</title><link href="https://xuwei.fun/works/blog-excerpt-024-826493dd7c/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 1. &quot;并不合理的推断会被下意识地误解为“事实”，一旦“事实”崩塌，心理上就无法承受。&quot;
+——《自深深处》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-024-826493dd7c/</id><title>摘要-24</title><link href="https://xuwei.fun/works/blog-excerpt-024-826493dd7c/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 1. &quot;并不合理的推断会被下意识地误解为“事实”，一旦“事实”崩塌，心理上就无法承受。&quot;
 2. &quot;不变的自我往往是美好的虚构。&quot;
 3. &quot;很多人做出一个本能的决定，会找出一些大道理来解释自己的决定，并将结果称为常识。&quot;
 4. “时间先安顿我们，继而又迷惑我们。我们以为自己是在慢慢成熟，而其实我们只是安然无恙而已。我们以为自己很有担当，其实我们十分懦弱。我们所谓的务实，充其量不过是逃避现实，绝非直面以对。”
 5. &quot;历史就是胜利者的谎言。…它也是失败者的自欺欺人。&quot;
 6. &quot;不可靠的记忆与不充分的材料相遇所产生的确定性就是历史。&quot;
-7. &quot;我现在明白了。历史其实是那些幸存者的记忆，他们既称不</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-025-92e29e9aa7/</id><title>摘要-25</title><link href="https://xuwei.fun/works/blog-excerpt-025-92e29e9aa7/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;要完全与另一个人发生关联，人必须先跟自己发生关联。如果我们不能拥抱我们自身的孤独，我们只是利用他人作为对抗孤独的一面挡箭牌而已。&quot;
-－欧文亚隆</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-026-ff7bdea8c2/</id><title>摘要-26</title><link href="https://xuwei.fun/works/blog-excerpt-026-ff7bdea8c2/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;每件促使我们注意到他人的事，都能使我们更好的认识自己。&quot;
-—— 卡尔·荣格</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-027-617470420b/</id><title>摘要-27</title><link href="https://xuwei.fun/works/blog-excerpt-027-617470420b/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; “认识一个人的唯一方式是不抱希望地去爱那个人。”
+7. &quot;我现在明白了。历史其实是那些幸存者的记忆，他们既称不</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-025-92e29e9aa7/</id><title>摘要-25</title><link href="https://xuwei.fun/works/blog-excerpt-025-92e29e9aa7/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;要完全与另一个人发生关联，人必须先跟自己发生关联。如果我们不能拥抱我们自身的孤独，我们只是利用他人作为对抗孤独的一面挡箭牌而已。&quot;
+－欧文亚隆</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-026-ff7bdea8c2/</id><title>摘要-26</title><link href="https://xuwei.fun/works/blog-excerpt-026-ff7bdea8c2/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;每件促使我们注意到他人的事，都能使我们更好的认识自己。&quot;
+—— 卡尔·荣格</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-027-617470420b/</id><title>摘要-27</title><link href="https://xuwei.fun/works/blog-excerpt-027-617470420b/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; “认识一个人的唯一方式是不抱希望地去爱那个人。”
 “深知一个人的，唯有不抱希望地爱着他的那一个 么？ ”
-—— 本雅明</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-028-8b564260f4/</id><title>摘要-28</title><link href="https://xuwei.fun/works/blog-excerpt-028-8b564260f4/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 那是一种难堪的相对 
+—— 本雅明</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-028-8b564260f4/</id><title>摘要-28</title><link href="https://xuwei.fun/works/blog-excerpt-028-8b564260f4/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 那是一种难堪的相对 
 她一直羞低着头 
 给他一个接近的机会 
 他没有勇气接近 
 她调转身，走了
-——《花样年华》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-029-d225d5aaf2/</id><title>摘要-29</title><link href="https://xuwei.fun/works/blog-excerpt-029-d225d5aaf2/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; “回忆模糊不清，就给自我欺骗提供了机会。
-—— 石黑一雄「远山淡影」</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-030-84a0088a51/</id><title>摘要-30</title><link href="https://xuwei.fun/works/blog-excerpt-030-84a0088a51/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 1. &quot;搞精神工作的人常会进入一个误区，他们总想穿过具体的生活而直达理论，把手握理论当成获取生命真谛，其实，正是在日复一日的枯燥劳作，匍地细节甚至日常器皿中（也就是理论人想要越过的东西）里，生命才慢慢长出了它的形状。&quot;
+——《花样年华》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-029-d225d5aaf2/</id><title>摘要-29</title><link href="https://xuwei.fun/works/blog-excerpt-029-d225d5aaf2/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; “回忆模糊不清，就给自我欺骗提供了机会。
+—— 石黑一雄「远山淡影」</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-030-84a0088a51/</id><title>摘要-30</title><link href="https://xuwei.fun/works/blog-excerpt-030-84a0088a51/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 1. &quot;搞精神工作的人常会进入一个误区，他们总想穿过具体的生活而直达理论，把手握理论当成获取生命真谛，其实，正是在日复一日的枯燥劳作，匍地细节甚至日常器皿中（也就是理论人想要越过的东西）里，生命才慢慢长出了它的形状。&quot;
 2. “任何一件事，他们都想快点总结出一个道理，然后就觉得获取了意义感，而其实他们错过了真正的重要部分：去经历，去感受，去痛，去哭，去笑，去犯傻，去清醒……他们对生活的分析比生活的本体多，对爱的表达也比爱多，生活的实体部分都被语言和理论给架空和偷换了，他们说的越多，我越有虚浮感。”
-——黎戈</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-031-b473a314df/</id><title>摘要-31</title><link href="https://xuwei.fun/works/blog-excerpt-031-b473a314df/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;我要怎样才能死呢？”
+——黎戈</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-031-b473a314df/</id><title>摘要-31</title><link href="https://xuwei.fun/works/blog-excerpt-031-b473a314df/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;我要怎样才能死呢？”
 “很简单！活下去就好了，只要活着，总有一天会死的”
 “是吗，我得一直活下去吗？直到我明白的那天”
 “没错，只要活下去，人生总有一天会结束，结束了，人就死了。”
 “这样啊，那，我只能这样了吗？那就这样吧”
 “那可不是”
-——《奇诺之旅（2017）》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-032-554fedf660/</id><title>摘要-32</title><link href="https://xuwei.fun/works/blog-excerpt-032-554fedf660/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 别来春半，触目柔肠断。砌下落梅如雪乱，拂了一身还满。
+——《奇诺之旅（2017）》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-032-554fedf660/</id><title>摘要-32</title><link href="https://xuwei.fun/works/blog-excerpt-032-554fedf660/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 别来春半，触目柔肠断。砌下落梅如雪乱，拂了一身还满。
 雁来音信无凭，路遥归梦难成。离恨恰如春草，更行更远还生。
-—— 李煜《清平乐》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-033-6a5bea9452/</id><title>摘要-33</title><link href="https://xuwei.fun/works/blog-excerpt-033-6a5bea9452/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;每个人都想谈一场不徒劳的恋爱，可是每一个人都要经历许多场徒劳。&quot;
-—— 微博用户 田小花原</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-034-cb8ef1d7e9/</id><title>摘要-34</title><link href="https://xuwei.fun/works/blog-excerpt-034-cb8ef1d7e9/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;Some people, they don&apos;t put things behind so easily.&quot;
-——《Blue Jasmine》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-035-c4f32fb623/</id><title>摘要-35</title><link href="https://xuwei.fun/works/blog-excerpt-035-c4f32fb623/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;命运的红线，一旦断了，就再也无法连上了&quot;——《犬夜叉》
+—— 李煜《清平乐》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-033-6a5bea9452/</id><title>摘要-33</title><link href="https://xuwei.fun/works/blog-excerpt-033-6a5bea9452/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;每个人都想谈一场不徒劳的恋爱，可是每一个人都要经历许多场徒劳。&quot;
+—— 微博用户 田小花原</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-034-cb8ef1d7e9/</id><title>摘要-34</title><link href="https://xuwei.fun/works/blog-excerpt-034-cb8ef1d7e9/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;Some people, they don&apos;t put things behind so easily.&quot;
+——《Blue Jasmine》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-035-c4f32fb623/</id><title>摘要-35</title><link href="https://xuwei.fun/works/blog-excerpt-035-c4f32fb623/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;命运的红线，一旦断了，就再也无法连上了&quot;——《犬夜叉》
 经 https://tieba.baidu.com/p/2689707858 考证，原句是“一度络んでしまった运命の糸はもう直せはしない”，更应翻译为“命运的红线，一旦交缠过。就再也无法分开（回到当初）了”
-原帖评论有“就像被染上颜色的纸，就算粉身碎骨，也无法再褪去颜色了”</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-036-e6c0897dc6/</id><title>摘要-36</title><link href="https://xuwei.fun/works/blog-excerpt-036-e6c0897dc6/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;伤害，被伤害。明明是想和某个人牢牢地连结在一起。明明是想和某个人结下深深的羁绊。&quot;
-——《迟开的向日葵》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-037-943ff564a1/</id><title>摘要-37</title><link href="https://xuwei.fun/works/blog-excerpt-037-943ff564a1/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 以前东西坏了都想着修，现在东西坏了都想着换。
-—— 佚名网友</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-038-0023e39d52/</id><title>摘要-38</title><link href="https://xuwei.fun/works/blog-excerpt-038-0023e39d52/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 1. ——I gotta tell you right now, you should give up on looking for &quot;enough&quot;, because it will never be enough.
+原帖评论有“就像被染上颜色的纸，就算粉身碎骨，也无法再褪去颜色了”</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-036-e6c0897dc6/</id><title>摘要-36</title><link href="https://xuwei.fun/works/blog-excerpt-036-e6c0897dc6/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;伤害，被伤害。明明是想和某个人牢牢地连结在一起。明明是想和某个人结下深深的羁绊。&quot;
+——《迟开的向日葵》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-037-943ff564a1/</id><title>摘要-37</title><link href="https://xuwei.fun/works/blog-excerpt-037-943ff564a1/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 以前东西坏了都想着修，现在东西坏了都想着换。
+—— 佚名网友</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-038-0023e39d52/</id><title>摘要-38</title><link href="https://xuwei.fun/works/blog-excerpt-038-0023e39d52/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 1. ——I gotta tell you right now, you should give up on looking for &quot;enough&quot;, because it will never be enough.
 ——I know, it&apos;s so stupid.
 2. ——They say it&apos;s okay to cry, and that I shouldn&apos;t feel bad about feeling bad.
-3. This last year I spent some time away, and it made me realize how special the </summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-039-7b47adb007/</id><title>摘要-39</title><link href="https://xuwei.fun/works/blog-excerpt-039-7b47adb007/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; “又下起雨了，每当下雨的时候，我就得找避雨的地方，因为我从来不带伞，也许那是因为我已经习惯了独立生活，没有人会关心或者担心我，会不会被雨淋是，所以我无所谓带不带伞，爷爷总是说，惠瑛，别担心，雨总会停的，阳光会更加灿烂，有一天，你会找到属于你的人。”
-——《雏菊》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-040-6069b4c55e/</id><title>摘要-40</title><link href="https://xuwei.fun/works/blog-excerpt-040-6069b4c55e/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;那时我并没有学会遗憾，这是大人才有的感情，我只是愤怒，怒火中烧。&quot;
-——陈丹燕《鱼与自行车》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-041-51d9413f00/</id><title>摘要-41</title><link href="https://xuwei.fun/works/blog-excerpt-041-51d9413f00/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 有所思，乃在大海南。
+3. This last year I spent some time away, and it made me realize how special the </summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-039-7b47adb007/</id><title>摘要-39</title><link href="https://xuwei.fun/works/blog-excerpt-039-7b47adb007/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; “又下起雨了，每当下雨的时候，我就得找避雨的地方，因为我从来不带伞，也许那是因为我已经习惯了独立生活，没有人会关心或者担心我，会不会被雨淋是，所以我无所谓带不带伞，爷爷总是说，惠瑛，别担心，雨总会停的，阳光会更加灿烂，有一天，你会找到属于你的人。”
+——《雏菊》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-040-6069b4c55e/</id><title>摘要-40</title><link href="https://xuwei.fun/works/blog-excerpt-040-6069b4c55e/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;那时我并没有学会遗憾，这是大人才有的感情，我只是愤怒，怒火中烧。&quot;
+——陈丹燕《鱼与自行车》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-041-51d9413f00/</id><title>摘要-41</title><link href="https://xuwei.fun/works/blog-excerpt-041-51d9413f00/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 有所思，乃在大海南。
 何用问遗君，双珠瑇瑁簪，
 用玉绍缭之。
 闻君有他心，拉杂摧烧之。
@@ -1236,24 +1236,24 @@ The first line of the input contains an integer T(1&lt;=T&lt;=20) whic</summary>
 妃呼豨！
 秋风肃肃晨风飔
 东方须臾高知之。
-——《汉铙歌十八曲》之一</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-042-5b539fad90/</id><title>摘要-42</title><link href="https://xuwei.fun/works/blog-excerpt-042-5b539fad90/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 凡为夫妇之因，前世三生结缘，始配今生之夫妇。若结缘不合，比是怨家，故来相对，既以二心不同，难归一意，快会及诸亲，各还本道。愿妻娘子相离之后，重梳婵鬓，美扫蛾眉，巧逞窈窕之姿，选聘高官之主。解怨释结，更莫相憎。一别两宽，各生欢喜。
-—— 唐《放妻书》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-043-bb52e724f8/</id><title>摘要-43</title><link href="https://xuwei.fun/works/blog-excerpt-043-bb52e724f8/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 1. “就这样，给我们启示的人正是那些盲人。就这样，那个能够不知不觉地为你正确无误地指明道路的人，他自己却走不了那条道路”
+——《汉铙歌十八曲》之一</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-042-5b539fad90/</id><title>摘要-42</title><link href="https://xuwei.fun/works/blog-excerpt-042-5b539fad90/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 凡为夫妇之因，前世三生结缘，始配今生之夫妇。若结缘不合，比是怨家，故来相对，既以二心不同，难归一意，快会及诸亲，各还本道。愿妻娘子相离之后，重梳婵鬓，美扫蛾眉，巧逞窈窕之姿，选聘高官之主。解怨释结，更莫相憎。一别两宽，各生欢喜。
+—— 唐《放妻书》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-043-bb52e724f8/</id><title>摘要-43</title><link href="https://xuwei.fun/works/blog-excerpt-043-bb52e724f8/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 1. “就这样，给我们启示的人正是那些盲人。就这样，那个能够不知不觉地为你正确无误地指明道路的人，他自己却走不了那条道路”
 2. “从实质上讲，玛伽是个有着自己的个人生活的，尽管我用了很长时间才发觉了这一点。相反，我却感到空虚，我只拥有做梦和游荡的充分自由，所有的玩具都破碎了，再也不会出问题了”
 3. “有哪一种生活不是一场悲剧呢？”
 4. “你不是孤身一人，奥拉西奥，你的孤独纯粹是由于你的虚荣心在作怪”
-——《跳房子》Julio Cortázar</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-044-5243b940ee/</id><title>摘要-44</title><link href="https://xuwei.fun/works/blog-excerpt-044-5243b940ee/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; “内疚是小资的陈词滥调，艺术家能创造出自己的伦理观”
-——《子弹横飞百老汇》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-045-7b698199f2/</id><title>摘要-45</title><link href="https://xuwei.fun/works/blog-excerpt-045-7b698199f2/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; &quot;每个人都很孤独，在人的一生中，遇到爱，遇到性，都不稀罕，稀罕的是遇到了理解&quot;
-—— 廖一梅《柔软》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-046-4538c0496f/</id><title>摘要-46</title><link href="https://xuwei.fun/works/blog-excerpt-046-4538c0496f/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; “这是一个去魅的年代，上帝死了，所以各路大神都宣称自己的手中有解药，于是人们开始相信人手中有解药”
-—— 马克思韦伯</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-047-b292223631/</id><title>摘要-47</title><link href="https://xuwei.fun/works/blog-excerpt-047-b292223631/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; “如果阁下长时间盯着深远，那么，深渊也会同样回望着阁下。”
-—— 尼采</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-048-ff2be4996a/</id><title>摘要-48</title><link href="https://xuwei.fun/works/blog-excerpt-048-ff2be4996a/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; “把狂欢和爱情放在文字里是明智的，因为它们，别无居处”
-—— 福克纳</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-049-ed50dbdc0f/</id><title>摘要-49</title><link href="https://xuwei.fun/works/blog-excerpt-049-ed50dbdc0f/"/><updated>2026-11-04T17:19:21.643Z</updated><summary type="text">&gt; 金缕曲词二首
+——《跳房子》Julio Cortázar</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-044-5243b940ee/</id><title>摘要-44</title><link href="https://xuwei.fun/works/blog-excerpt-044-5243b940ee/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; “内疚是小资的陈词滥调，艺术家能创造出自己的伦理观”
+——《子弹横飞百老汇》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-045-7b698199f2/</id><title>摘要-45</title><link href="https://xuwei.fun/works/blog-excerpt-045-7b698199f2/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; &quot;每个人都很孤独，在人的一生中，遇到爱，遇到性，都不稀罕，稀罕的是遇到了理解&quot;
+—— 廖一梅《柔软》</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-046-4538c0496f/</id><title>摘要-46</title><link href="https://xuwei.fun/works/blog-excerpt-046-4538c0496f/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; “这是一个去魅的年代，上帝死了，所以各路大神都宣称自己的手中有解药，于是人们开始相信人手中有解药”
+—— 马克思韦伯</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-047-b292223631/</id><title>摘要-47</title><link href="https://xuwei.fun/works/blog-excerpt-047-b292223631/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; “如果阁下长时间盯着深远，那么，深渊也会同样回望着阁下。”
+—— 尼采</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-048-ff2be4996a/</id><title>摘要-48</title><link href="https://xuwei.fun/works/blog-excerpt-048-ff2be4996a/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; “把狂欢和爱情放在文字里是明智的，因为它们，别无居处”
+—— 福克纳</summary></entry><entry><id>https://xuwei.fun/works/blog-excerpt-049-ed50dbdc0f/</id><title>摘要-49</title><link href="https://xuwei.fun/works/blog-excerpt-049-ed50dbdc0f/"/><updated>2026-11-07T11:27:54.738Z</updated><summary type="text">&gt; 金缕曲词二首
 寄吴汉槎宁古塔，以词代书，丙辰冬寓京师千佛寺，冰雪中作
 其一
 季子平安否？便归来，平生万事，那堪回首！行路悠悠谁慰藉，母老家贫子幼。记不起，从前杯酒。魑魅搏人应见惯，总输他，覆雨翻云手，冰与雪，周旋久。
 泪痕莫滴牛衣透，数天涯，依然骨肉，几家能够？比似红颜多命薄，更不如今还有。只绝塞，苦寒难受。廿载包胥承一诺，盼乌头马角终相救。置此札，君怀袖。 
 其二
 我亦飘零久！十年来，深恩负尽，死生师友。宿昔齐名非忝窃，只看杜陵消瘦，曾不减，夜郎僝僽，薄命长辞知己别，问人生到此凄凉否？千万恨，为君剖。
-兄生辛未吾丁丑，共此时，冰霜摧折，早衰蒲柳。诗赋从今须少作，留取心魄相守。但愿得，河清</summary></entry><entry><id>https://xuwei.fun/works/blog-reading03/</id><title>读书笔记三</title><link href="https://xuwei.fun/works/blog-reading03/"/><updated>2026-11-04T17:19:21.643Z</updated><published>2013-06-20T06:36:00.000Z</published><summary type="text">
+兄生辛未吾丁丑，共此时，冰霜摧折，早衰蒲柳。诗赋从今须少作，留取心魄相守。但愿得，河清</summary></entry><entry><id>https://xuwei.fun/works/blog-reading03/</id><title>读书笔记三</title><link href="https://xuwei.fun/works/blog-reading03/"/><updated>2026-11-07T11:27:54.738Z</updated><published>2013-06-20T06:36:00.000Z</published><summary type="text">
 ### 1. Preface
 From *The storied life of A.J.Fikry* by Gabrielle Zevin. [^1]
 
