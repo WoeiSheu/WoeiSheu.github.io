@@ -52,196 +52,196 @@
   );
   document.addEventListener("astro:page-load", () => apply());
 })();
-</script><noscript><style>.theme-control{display:none}</style></noscript><link rel="stylesheet" href="/_astro/Base.BdS12A5E.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/about/">关于</a></nav><div class="header-tools"><label class="theme-control"><span>配色</span><select data-theme-control aria-label="配色模式"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></div></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><time>2014年8月27日</time></div><h1>Android TabHost的使用</h1><div class="archive-tags"><span>android</span><span>tabhost</span></div></header><div class="prose"><h2>1. 写在前面</h2>
-<p>出于对新事物的好奇, 接触了一下Android, 主要是看书(《Anroid应用开发深入学习实录》 关立勋)、Google和看文档。使用的android-sdk的platform最低是android-14, 然后有android-17,android-20以及android-L(电脑配置暂时比较低,没法把每个版本都测试一遍）
-此时此刻Intellij IDEA社区版还没法渲染出android-20和android-L，所以我基本都是用的android-17
-<em>虽然书的出版日期比较新, 但其中有些内容还是已经过时了</em>
+</script><noscript><style>.theme-control{display:none}</style></noscript><link rel="stylesheet" href="/_astro/Base.pK7KMVoJ.css"></head><body><a class="skip-link" href="#content">跳至内容</a><header class="site-header"><a href="/" class="wordmark">霁月荒馆<span>KINO'S JOURNAL</span></a><nav aria-label="主导航"><a href="/works/">全部作品</a><a href="/works/?section=writing">文字</a><a href="/works/?section=photography">摄影</a><a href="/works/?section=sound">声音</a><a href="/works/?section=film">影像</a><a href="/collections/">合集</a><a href="/categories/">主题</a><a href="/archives/">归档</a><a href="/about/">关于</a></nav><div class="header-tools"><a class="global-search" href="/works/#search" aria-label="搜索全站作品">搜索</a><label class="theme-control"><span>配色</span><select data-theme-control aria-label="配色模式"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label><a class="rss-link" href="/rss.xml" aria-label="订阅 RSS"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="19" r="1.4" fill="currentColor"></circle><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path></svg></a></div></header><main id="content" tabindex="-1"><article class="single-work article"><header class="work-heading"><a href="/works/" class="back-link">← 返回作品</a><div class="work-byline"><span>文章</span><span>创作于 <time datetime="2014-08-27 18:29:32">2014年8月27日</time></span><span>626 字 / 词 · 约 3 分钟</span></div><h1>Android TabHost的使用</h1><div class="archive-tags"><a href="/tags/android/">android</a><a href="/tags/tabhost/">tabhost</a></div><div class="work-topics"><a href="/categories/technology/cs/">technology › cs</a></div><p class="revision-note">原站标注更新：<time datetime="2022-05-04T10:32:12.235Z">2022年5月4日</time><span> · 历史页面记录</span></p></header><div class="article-reading with-outline"><div class="prose"><h2 id="1-&#x5199;&#x5728;&#x524d;&#x9762;" tabindex="-1">1. &#x5199;&#x5728;&#x524d;&#x9762;<a class="heading-link" href="#1-%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2" aria-label="&#x590d;&#x5236;&#x7ae0;&#x8282;&#x94fe;&#x63a5;&#xff1a;1. &#x5199;&#x5728;&#x524d;&#x9762;" data-copy-heading="1-&#x5199;&#x5728;&#x524d;&#x9762;">#</a></h2>
+<p>&#x51fa;&#x4e8e;&#x5bf9;&#x65b0;&#x4e8b;&#x7269;&#x7684;&#x597d;&#x5947;, &#x63a5;&#x89e6;&#x4e86;&#x4e00;&#x4e0b;Android, &#x4e3b;&#x8981;&#x662f;&#x770b;&#x4e66;(&#x300a;Anroid&#x5e94;&#x7528;&#x5f00;&#x53d1;&#x6df1;&#x5165;&#x5b66;&#x4e60;&#x5b9e;&#x5f55;&#x300b; &#x5173;&#x7acb;&#x52cb;)&#x3001;Google&#x548c;&#x770b;&#x6587;&#x6863;&#x3002;&#x4f7f;&#x7528;&#x7684;android-sdk&#x7684;platform&#x6700;&#x4f4e;&#x662f;android-14, &#x7136;&#x540e;&#x6709;android-17,android-20&#x4ee5;&#x53ca;android-L(&#x7535;&#x8111;&#x914d;&#x7f6e;&#x6682;&#x65f6;&#x6bd4;&#x8f83;&#x4f4e;,&#x6ca1;&#x6cd5;&#x628a;&#x6bcf;&#x4e2a;&#x7248;&#x672c;&#x90fd;&#x6d4b;&#x8bd5;&#x4e00;&#x904d;&#xff09;
+&#x6b64;&#x65f6;&#x6b64;&#x523b;Intellij IDEA&#x793e;&#x533a;&#x7248;&#x8fd8;&#x6ca1;&#x6cd5;&#x6e32;&#x67d3;&#x51fa;android-20&#x548c;android-L&#xff0c;&#x6240;&#x4ee5;&#x6211;&#x57fa;&#x672c;&#x90fd;&#x662f;&#x7528;&#x7684;android-17
+<em>&#x867d;&#x7136;&#x4e66;&#x7684;&#x51fa;&#x7248;&#x65e5;&#x671f;&#x6bd4;&#x8f83;&#x65b0;, &#x4f46;&#x5176;&#x4e2d;&#x6709;&#x4e9b;&#x5185;&#x5bb9;&#x8fd8;&#x662f;&#x5df2;&#x7ecf;&#x8fc7;&#x65f6;&#x4e86;</em>
 </p>
-<h2>2. TabHost的使用详解</h2>
-<h3>2.1 项目结构</h3>
-<p>先新建一个项目，使用以前构建项目的方法(虽然现在有了Gradle, 但是对于初学者来说学习成本稍高, 暂时搁置):
-MySetting.java在这里没用，忽略它......</p>
-<p><img src="/media/blog-android01/f58e4d0bc1d72b3c.webp" alt="project structure" /></p>
-<h3>2.2 App布局</h3>
-<p>布局main.xml:</p>
-<pre tabindex="0" aria-label="代码块"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;TabHost
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tabHost"&gt;
-  &lt;LinearLayout
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:orientation="vertical"&gt;
-    &lt;TabWidget
-        android:id="@android:id/tabs"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"&gt;
-    &lt;/TabWidget&gt;
-    &lt;FrameLayout
-        android:id="@android:id/tabcontent"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"&gt;
-      &lt;TextView
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:text="@string/textview1"
-          android:id="@+id/textView1" android:layout_gravity="left|top"/&gt;
-      &lt;TextView
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:text="@string/textview2"
-          android:id="@+id/textView2" android:layout_gravity="center_horizontal|top"/&gt;
-      &lt;TextView
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:text="@string/textview3"
-          android:id="@+id/textView3" android:layout_gravity="right|top"/&gt;
-    &lt;/FrameLayout&gt;
-  &lt;/LinearLayout&gt;
-&lt;/TabHost&gt;
-</code></pre>
-<p>strings.xml不放了, 随便什么字符串无所谓</p>
-<h3>2.3 逻辑代码</h3>
-<p>想要实现的就是添加三个Tab标签, 改变Tab标签的时候会弹出一个对话框, 按照书上及网上搜到的大部分代码, MyActivity.java应该是:</p>
-<pre tabindex="0" aria-label="代码块"><code>public class MyActivity extends Activity {
-    @Override
-    public void onCreate( Bundle savedInstanceState ) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        mTabHost = getTabHost();
-        mTabHost.addTab...
-    }
-}
-</code></pre>
-<p>这样的话有个问题: 查文档发现TabActivity在API Level 13中已经被弃用了。有:
+<h2 id="2-TabHost&#x7684;&#x4f7f;&#x7528;&#x8be6;&#x89e3;" tabindex="-1">2. TabHost&#x7684;&#x4f7f;&#x7528;&#x8be6;&#x89e3;<a class="heading-link" href="#2-TabHost%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3" aria-label="&#x590d;&#x5236;&#x7ae0;&#x8282;&#x94fe;&#x63a5;&#xff1a;2. TabHost&#x7684;&#x4f7f;&#x7528;&#x8be6;&#x89e3;" data-copy-heading="2-TabHost&#x7684;&#x4f7f;&#x7528;&#x8be6;&#x89e3;">#</a></h2>
+<h3 id="2-1-&#x9879;&#x76ee;&#x7ed3;&#x6784;" tabindex="-1">2.1 &#x9879;&#x76ee;&#x7ed3;&#x6784;<a class="heading-link" href="#2-1-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84" aria-label="&#x590d;&#x5236;&#x7ae0;&#x8282;&#x94fe;&#x63a5;&#xff1a;2.1 &#x9879;&#x76ee;&#x7ed3;&#x6784;" data-copy-heading="2-1-&#x9879;&#x76ee;&#x7ed3;&#x6784;">#</a></h3>
+<p>&#x5148;&#x65b0;&#x5efa;&#x4e00;&#x4e2a;&#x9879;&#x76ee;&#xff0c;&#x4f7f;&#x7528;&#x4ee5;&#x524d;&#x6784;&#x5efa;&#x9879;&#x76ee;&#x7684;&#x65b9;&#x6cd5;(&#x867d;&#x7136;&#x73b0;&#x5728;&#x6709;&#x4e86;Gradle, &#x4f46;&#x662f;&#x5bf9;&#x4e8e;&#x521d;&#x5b66;&#x8005;&#x6765;&#x8bf4;&#x5b66;&#x4e60;&#x6210;&#x672c;&#x7a0d;&#x9ad8;, &#x6682;&#x65f6;&#x6401;&#x7f6e;):
+MySetting.java&#x5728;&#x8fd9;&#x91cc;&#x6ca1;&#x7528;&#xff0c;&#x5ffd;&#x7565;&#x5b83;......</p>
+<p><img src="/media/blog-android01/f58e4d0bc1d72b3c.webp" alt="project structure"></p>
+<h3 id="2-2-App&#x5e03;&#x5c40;" tabindex="-1">2.2 App&#x5e03;&#x5c40;<a class="heading-link" href="#2-2-App%E5%B8%83%E5%B1%80" aria-label="&#x590d;&#x5236;&#x7ae0;&#x8282;&#x94fe;&#x63a5;&#xff1a;2.2 App&#x5e03;&#x5c40;" data-copy-heading="2-2-App&#x5e03;&#x5c40;">#</a></h3>
+<p>&#x5e03;&#x5c40;main.xml:</p>
+<div class="code-block"><div class="code-tools"><span>xml</span><div><button type="button" data-code-wrap aria-pressed="false" hidden>&#x81ea;&#x52a8;&#x6362;&#x884c;</button><button type="button" data-code-copy hidden>&#x590d;&#x5236;&#x4ee3;&#x7801;</button></div></div><pre class="shiki shiki-themes github-light-high-contrast github-dark-high-contrast" style="background-color:#ffffff;--shiki-dark-bg:#0a0c10;color:#0e1116;--shiki-dark:#f0f3f6" tabindex="0" aria-label="xml &#x4ee3;&#x7801;&#x5757;" data-code-index="0"><code><span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">&lt;?</span><span style="color:#024C1A;--shiki-dark:#72F088">xml</span><span style="color:#023B95;--shiki-dark:#91CBFF"> version</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;1.0&quot;</span><span style="color:#023B95;--shiki-dark:#91CBFF"> encoding</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;utf-8&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">?&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">&lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">TabHost</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">    android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;fill_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">    android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;fill_parent&quot;</span><span style="color:#023B95;--shiki-dark:#91CBFF"> xmlns:android</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;http://schemas.android.com/apk/res/android&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">    android:id</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@+id/tabHost&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">  &lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">LinearLayout</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">      android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;fill_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">      android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;fill_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">      android:orientation</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;vertical&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    &lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">TabWidget</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        android:id</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@android:id/tabs&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;fill_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;wrap_content&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    &lt;/</span><span style="color:#024C1A;--shiki-dark:#72F088">TabWidget</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    &lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">FrameLayout</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        android:id</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@android:id/tabcontent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;fill_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;fill_parent&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">      &lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">TextView</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;fill_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;wrap_content&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:text</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@string/textview1&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:id</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@+id/textView1&quot;</span><span style="color:#023B95;--shiki-dark:#91CBFF"> android:layout_gravity</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;left|top&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">/&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">      &lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">TextView</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;fill_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;wrap_content&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:text</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@string/textview2&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:id</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@+id/textView2&quot;</span><span style="color:#023B95;--shiki-dark:#91CBFF"> android:layout_gravity</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;center_horizontal|top&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">/&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">      &lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">TextView</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;fill_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;wrap_content&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:text</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@string/textview3&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">          android:id</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@+id/textView3&quot;</span><span style="color:#023B95;--shiki-dark:#91CBFF"> android:layout_gravity</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;right|top&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">/&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    &lt;/</span><span style="color:#024C1A;--shiki-dark:#72F088">FrameLayout</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">  &lt;/</span><span style="color:#024C1A;--shiki-dark:#72F088">LinearLayout</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">&lt;/</span><span style="color:#024C1A;--shiki-dark:#72F088">TabHost</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"></span></code></pre><p class="sr-only" role="status" data-code-status></p></div>
+<p>strings.xml&#x4e0d;&#x653e;&#x4e86;, &#x968f;&#x4fbf;&#x4ec0;&#x4e48;&#x5b57;&#x7b26;&#x4e32;&#x65e0;&#x6240;&#x8c13;</p>
+<h3 id="2-3-&#x903b;&#x8f91;&#x4ee3;&#x7801;" tabindex="-1">2.3 &#x903b;&#x8f91;&#x4ee3;&#x7801;<a class="heading-link" href="#2-3-%E9%80%BB%E8%BE%91%E4%BB%A3%E7%A0%81" aria-label="&#x590d;&#x5236;&#x7ae0;&#x8282;&#x94fe;&#x63a5;&#xff1a;2.3 &#x903b;&#x8f91;&#x4ee3;&#x7801;" data-copy-heading="2-3-&#x903b;&#x8f91;&#x4ee3;&#x7801;">#</a></h3>
+<p>&#x60f3;&#x8981;&#x5b9e;&#x73b0;&#x7684;&#x5c31;&#x662f;&#x6dfb;&#x52a0;&#x4e09;&#x4e2a;Tab&#x6807;&#x7b7e;, &#x6539;&#x53d8;Tab&#x6807;&#x7b7e;&#x7684;&#x65f6;&#x5019;&#x4f1a;&#x5f39;&#x51fa;&#x4e00;&#x4e2a;&#x5bf9;&#x8bdd;&#x6846;, &#x6309;&#x7167;&#x4e66;&#x4e0a;&#x53ca;&#x7f51;&#x4e0a;&#x641c;&#x5230;&#x7684;&#x5927;&#x90e8;&#x5206;&#x4ee3;&#x7801;, MyActivity.java&#x5e94;&#x8be5;&#x662f;:</p>
+<div class="code-block"><div class="code-tools"><span>java</span><div><button type="button" data-code-wrap aria-pressed="false" hidden>&#x81ea;&#x52a8;&#x6362;&#x884c;</button><button type="button" data-code-copy hidden>&#x590d;&#x5236;&#x4ee3;&#x7801;</button></div></div><pre class="shiki shiki-themes github-light-high-contrast github-dark-high-contrast" style="background-color:#ffffff;--shiki-dark-bg:#0a0c10;color:#0e1116;--shiki-dark:#f0f3f6" tabindex="0" aria-label="java &#x4ee3;&#x7801;&#x5757;" data-code-index="1"><code><span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">public</span><span style="color:#A0111F;--shiki-dark:#FF9492"> class</span><span style="color:#702C00;--shiki-dark:#FFB757"> MyActivity</span><span style="color:#A0111F;--shiki-dark:#FF9492"> extends</span><span style="color:#023B95;--shiki-dark:#91CBFF"> Activity</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> {</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    @</span><span style="color:#A0111F;--shiki-dark:#FF9492">Override</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">    public</span><span style="color:#A0111F;--shiki-dark:#FF9492"> void</span><span style="color:#622CBC;--shiki-dark:#DBB7FF"> onCreate</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">( Bundle </span><span style="color:#702C00;--shiki-dark:#FFB757">savedInstanceState</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> ) {</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        super</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">onCreate</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(savedInstanceState);</span></span>
+<span class="line"><span style="color:#622CBC;--shiki-dark:#DBB7FF">        setContentView</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(R.layout.main);</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost </span><span style="color:#A0111F;--shiki-dark:#FF9492">=</span><span style="color:#622CBC;--shiki-dark:#DBB7FF"> getTabHost</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">();</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.addTab...</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    }</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">}</span></span>
+<span class="line"></span></code></pre><p class="sr-only" role="status" data-code-status></p></div>
+<p>&#x8fd9;&#x6837;&#x7684;&#x8bdd;&#x6709;&#x4e2a;&#x95ee;&#x9898;: &#x67e5;&#x6587;&#x6863;&#x53d1;&#x73b0;TabActivity&#x5728;API Level 13&#x4e2d;&#x5df2;&#x7ecf;&#x88ab;&#x5f03;&#x7528;&#x4e86;&#x3002;&#x6709;:
 <em>This class was deprecated in API level 13. New applications should use Fragments instead of this class; to continue to run on older devices, you can use the v4 support library which provides a version of theFragment API that is compatible down to DONUT.</em>
-还有一句：
+&#x8fd8;&#x6709;&#x4e00;&#x53e5;&#xff1a;
 <em>A replacement for TabActivity can also be implemented by directly using TabHost.</em>
-这其实意味着如果我们不考虑向下兼容的问题, 其实可以直接将上述代码写成:</p>
-<pre tabindex="0" aria-label="代码块"><code>package com.hecate.Apollo;
-
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.TabHost;
-
-public class MyActivity extends Activity {
-    /**
-     * Called when the activity is first created.
-     */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        TabHost mTabHost = (TabHost) findViewById(R.id.tabHost);
-        mTabHost.setup();
-        mTabHost.addTab( mTabHost.newTabSpec("first").setIndicator("Tab 1",getResources().getDrawable(R.drawable.img1)).setContent(R.id.textView1) );
-        mTabHost.addTab( mTabHost.newTabSpec("second").setIndicator("Tab 2",getResources().getDrawable(R.drawable.img2)).setContent(R.id.textView2) );
-        mTabHost.addTab( mTabHost.newTabSpec("third").setIndicator("Tab 3",getResources().getDrawable(R.drawable.img3)).setContent(R.id.textView3) );
-
-        mTabHost.setBackgroundColor(Color.parseColor("blue"));
-        mTabHost.setBackgroundResource(R.drawable.background);
-        mTabHost.setCurrentTab(0);
-
-        mTabHost.setOnTabChangedListener( new TabHost.OnTabChangeListener() {
-            @Override
-            public void onTabChanged( String tabId ) {
-                Dialog dialog = new AlertDialog.Builder( MyActivity.this )
-                        .setTitle("Change Tabs")
-                        .setMessage("You chosen "+tabId+" Tab")
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            public void onClick( DialogInterface dialogInterface, int whichButton ) {
-                                dialogInterface.cancel();
-                            }
-                        }).create();
-                dialog.show();
-            }
-        });
-
-    }
-}
-</code></pre>
-<p>也就是直接继承Activity, 然后不使用getTabHost()方法而是findViewById(), 这时候又有一个注意点, 在TabHost文档的setup()方法中有:
+&#x8fd9;&#x5176;&#x5b9e;&#x610f;&#x5473;&#x7740;&#x5982;&#x679c;&#x6211;&#x4eec;&#x4e0d;&#x8003;&#x8651;&#x5411;&#x4e0b;&#x517c;&#x5bb9;&#x7684;&#x95ee;&#x9898;, &#x5176;&#x5b9e;&#x53ef;&#x4ee5;&#x76f4;&#x63a5;&#x5c06;&#x4e0a;&#x8ff0;&#x4ee3;&#x7801;&#x5199;&#x6210;:</p>
+<div class="code-block"><div class="code-tools"><span>java</span><div><button type="button" data-code-wrap aria-pressed="false" hidden>&#x81ea;&#x52a8;&#x6362;&#x884c;</button><button type="button" data-code-copy hidden>&#x590d;&#x5236;&#x4ee3;&#x7801;</button></div></div><pre class="shiki shiki-themes github-light-high-contrast github-dark-high-contrast" style="background-color:#ffffff;--shiki-dark-bg:#0a0c10;color:#0e1116;--shiki-dark:#f0f3f6" tabindex="0" aria-label="java &#x4ee3;&#x7801;&#x5757;" data-code-index="2"><code><span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">package</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> com.hecate.</span><span style="color:#6E011A;--shiki-light-font-style:italic;--shiki-dark:#FFB1AF;--shiki-dark-font-style:italic">A</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">pollo;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.app.Activity;</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.app.AlertDialog;</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.app.Dialog;</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.content.DialogInterface;</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.content.Intent;</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.graphics.Color;</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.os.Bundle;</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.view.View;</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.widget.TabHost;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">public</span><span style="color:#A0111F;--shiki-dark:#FF9492"> class</span><span style="color:#702C00;--shiki-dark:#FFB757"> MyActivity</span><span style="color:#A0111F;--shiki-dark:#FF9492"> extends</span><span style="color:#023B95;--shiki-dark:#91CBFF"> Activity</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> {</span></span>
+<span class="line"><span style="color:#66707B;--shiki-dark:#BDC4CC">    /**</span></span>
+<span class="line"><span style="color:#66707B;--shiki-dark:#BDC4CC">     * Called when the activity is first created.</span></span>
+<span class="line"><span style="color:#66707B;--shiki-dark:#BDC4CC">     */</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    @</span><span style="color:#A0111F;--shiki-dark:#FF9492">Override</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">    public</span><span style="color:#A0111F;--shiki-dark:#FF9492"> void</span><span style="color:#622CBC;--shiki-dark:#DBB7FF"> onCreate</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(Bundle </span><span style="color:#702C00;--shiki-dark:#FFB757">savedInstanceState</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">) {</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        super</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">onCreate</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(savedInstanceState);</span></span>
+<span class="line"><span style="color:#622CBC;--shiki-dark:#DBB7FF">        setContentView</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(R.layout.main);</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        TabHost</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> mTabHost</span><span style="color:#A0111F;--shiki-dark:#FF9492"> =</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> (TabHost) </span><span style="color:#622CBC;--shiki-dark:#DBB7FF">findViewById</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(R.id.tabHost);</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setup</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">();</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">addTab</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">( mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">newTabSpec</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;first&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">).</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setIndicator</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;Tab 1&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">,</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">getResources</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">().</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">getDrawable</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(R.drawable.img1)).</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setContent</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(R.id.textView1) );</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">addTab</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">( mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">newTabSpec</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;second&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">).</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setIndicator</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;Tab 2&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">,</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">getResources</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">().</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">getDrawable</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(R.drawable.img2)).</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setContent</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(R.id.textView2) );</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">addTab</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">( mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">newTabSpec</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;third&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">).</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setIndicator</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;Tab 3&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">,</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">getResources</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">().</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">getDrawable</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(R.drawable.img3)).</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setContent</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(R.id.textView3) );</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setBackgroundColor</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(Color.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">parseColor</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;blue&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">));</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setBackgroundResource</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(R.drawable.background);</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setCurrentTab</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#023B95;--shiki-dark:#91CBFF">0</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setOnTabChangedListener</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">( </span><span style="color:#A0111F;--shiki-dark:#FF9492">new</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> TabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">OnTabChangeListener</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">() {</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">            @</span><span style="color:#A0111F;--shiki-dark:#FF9492">Override</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">            public</span><span style="color:#A0111F;--shiki-dark:#FF9492"> void</span><span style="color:#622CBC;--shiki-dark:#DBB7FF"> onTabChanged</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">( String tabId ) {</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                Dialog</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> dialog</span><span style="color:#A0111F;--shiki-dark:#FF9492"> =</span><span style="color:#A0111F;--shiki-dark:#FF9492"> new</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> AlertDialog.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">Builder</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">( MyActivity.this )</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                        .</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setTitle</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;Change Tabs&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">)</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                        .</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setMessage</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;You chosen &quot;</span><span style="color:#A0111F;--shiki-dark:#FF9492">+</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">tabId</span><span style="color:#A0111F;--shiki-dark:#FF9492">+</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot; Tab&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">)</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                        .</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setPositiveButton</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;OK&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">, </span><span style="color:#A0111F;--shiki-dark:#FF9492">new</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> DialogInterface.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">OnClickListener</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">() {</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">                            public</span><span style="color:#A0111F;--shiki-dark:#FF9492"> void</span><span style="color:#622CBC;--shiki-dark:#DBB7FF"> onClick</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">( DialogInterface dialogInterface, </span><span style="color:#A0111F;--shiki-dark:#FF9492">int</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> whichButton ) {</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                                dialogInterface.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">cancel</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">();</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                            }</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                        }).</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">create</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">();</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                dialog.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">show</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">();</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">            }</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    }</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">}</span></span>
+<span class="line"></span></code></pre><p class="sr-only" role="status" data-code-status></p></div>
+<p>&#x4e5f;&#x5c31;&#x662f;&#x76f4;&#x63a5;&#x7ee7;&#x627f;Activity, &#x7136;&#x540e;&#x4e0d;&#x4f7f;&#x7528;getTabHost()&#x65b9;&#x6cd5;&#x800c;&#x662f;findViewById(), &#x8fd9;&#x65f6;&#x5019;&#x53c8;&#x6709;&#x4e00;&#x4e2a;&#x6ce8;&#x610f;&#x70b9;, &#x5728;TabHost&#x6587;&#x6863;&#x7684;setup()&#x65b9;&#x6cd5;&#x4e2d;&#x6709;:
 <em>Call setup() before adding tabs if loading TabHost using findViewById().</em>
-就是说如果你不是用getTabHost而是findViewById获取的TabHost，那在使用addTab()方法前要使用setup()方法。</p>
-<h3>2.4 运行测试</h3>
-<p>按照以上完成之后, 再添加相应的资源文件就可以成功运行了(在API Level 13以上):
-<img src="/media/blog-android01/07201136126d85bd.webp" alt="tabhost_layout" />
-原谅我的背景图片、、、点击TAB2后弹窗:
-<img src="/media/blog-android01/9093956fdcdab5d7.webp" alt="tabhost_popup" /></p>
-<h3>2.5 向下兼容</h3>
-<p>说完了不向下兼容的方法, 那如果需要向下兼容呢? 正如一开始的文档所说, 使用Fragments和android.support.v4 library即可, 具体可以去查看详细的文档, 里面给了一个示例, 我把示例代码贴出来, 就不分析了:</p>
-<pre tabindex="0" aria-label="代码块"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;android.support.v4.app.FragmentTabHost
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@android:id/tabhost"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"&gt;
-
-    &lt;LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"&gt;
-
-        &lt;TabWidget
-            android:id="@android:id/tabs"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"/&gt;
-
-        &lt;FrameLayout
-            android:id="@android:id/tabcontent"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0"/&gt;
-
-        &lt;FrameLayout
-            android:id="@+id/realtabcontent"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/&gt;
-
-    &lt;/LinearLayout&gt;
-&lt;/android.support.v4.app.FragmentTabHost&gt;
-</code></pre>
-<p>Java代码:</p>
-<pre tabindex="0" aria-label="代码块"><code>import com.example.android.supportv4.R;
-
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTabHost;
-
-/**
- * This demonstrates how you can implement switching between the tabs of a
- * TabHost through fragments, using FragmentTabHost.
- */
-public class FragmentTabs extends FragmentActivity {
-    private FragmentTabHost mTabHost;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.fragment_tabs);
-        mTabHost = (FragmentTabHost)findViewById(android.R.id.tabhost);
-        mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
-
-        mTabHost.addTab(mTabHost.newTabSpec("simple").setIndicator("Simple"),
-                FragmentStackSupport.CountingFragment.class, null);
-        mTabHost.addTab(mTabHost.newTabSpec("contacts").setIndicator("Contacts"),
-                LoaderCursorSupport.CursorLoaderListFragment.class, null);
-        mTabHost.addTab(mTabHost.newTabSpec("custom").setIndicator("Custom"),
-                LoaderCustomSupport.AppListFragment.class, null);
-        mTabHost.addTab(mTabHost.newTabSpec("throttle").setIndicator("Throttle"),
-                LoaderThrottleSupport.ThrottledLoaderListFragment.class, null);
-    }
-}
-</code></pre>
-</div><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div></footer><aside data-astro-transition-persist="background-music" class="music-dock" aria-label="背景音乐" data-music-dock data-endpoint="https://api.injahow.cn/meting/" data-playlist="7419132999"><div class="music-panel" id="background-music-panel" hidden><header><h2>听一会儿</h2><button type="button" data-music-close aria-label="收起音乐播放器">×</button></header><p class="music-track" data-music-track>旧博客的那份歌单。</p><label>选择歌曲<select data-music-select disabled><option>尚未加载歌单</option></select></label><audio controls preload="none" aria-label="背景音乐播放控制"></audio><div class="music-actions"><button type="button" data-music-previous disabled aria-label="上一首">上一首</button><button type="button" data-music-next disabled aria-label="下一首">下一首</button><button type="button" data-music-stop>停止</button><button type="button" data-music-retry hidden>重试加载</button></div><p role="status" data-music-status>点击后加载歌单，不会自动播放。</p><p class="music-source"><a href="https://music.163.com/#/playlist?id=7419132999" target="_blank" rel="noopener noreferrer">在网易云打开原歌单 ↗</a></p></div><button type="button" class="music-toggle" data-music-toggle aria-expanded="false" aria-controls="background-music-panel" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 18V5l12-2v13M9 8l12-2"></path><ellipse cx="6" cy="18" rx="3" ry="2"></ellipse><ellipse cx="18" cy="16" rx="3" ry="2"></ellipse></svg><span>音乐</span></button><noscript><a class="music-toggle" href="https://music.163.com/#/playlist?id=7419132999">网易云歌单 ↗</a></noscript></aside><script type="module">var e=document.querySelector(`[data-music-dock]`);if(e){let t=e.querySelector(`[data-music-toggle]`),n=e.querySelector(`.music-panel`),r=e.querySelector(`audio`),i=e.querySelector(`select`),a=e.querySelector(`[data-music-track]`),o=e.querySelector(`[data-music-status]`),s=e.querySelector(`[data-music-retry]`),c=e.querySelector(`[data-music-previous]`),l=e.querySelector(`[data-music-next]`),u=[],d=0,f=!1;t.hidden=!1;let p=e=>{try{let t=new URL(e);return t.protocol===`https:`&&/(^|\.)(i-meto\.com|injahow\.cn|meting\.red|music\.126\.net|music\.163\.com|126\.net)$/.test(t.hostname)?t.href:null}catch{return null}},m=e=>{o.textContent=e},h=()=>{s.hidden=!1,m(`当前歌曲暂时无法播放。可重试、换一首，或打开原歌单。`)};function g(e,t=!1){if(!u.length)return;d=(e+u.length)%u.length;let n=u[d];i.value=String(d),r.src=n.url,a.textContent=`${n.title} · ${n.artist}`,s.hidden=!0,m(`使用播放控件开始；切换页面会继续播放。`),t&&r.play().catch(h)}async function _(){if(!f){f=!0,s.hidden=!0,m(`正在加载歌单…`);try{let t=new URL(e.dataset.endpoint);t.search=new URLSearchParams({server:`netease`,type:`playlist`,id:e.dataset.playlist}).toString();let n=await fetch(t,{signal:AbortSignal.timeout(15e3),credentials:`omit`,referrerPolicy:`no-referrer`});if(!n.ok)throw Error(`unavailable`);let r=await n.json();if(!Array.isArray(r))throw Error(`invalid playlist`);if(u=r.slice(0,500).map(e=>({title:String(e.title||e.name||`未命名歌曲`).slice(0,200),artist:String(e.author||e.artist||`未知音乐人`).slice(0,200),url:p(e.url)})).filter(e=>e.url),!u.length)throw Error(`empty playlist`);i.replaceChildren(...u.map((e,t)=>new Option(`${t+1}. ${e.title} · ${e.artist}`,String(t)))),i.disabled=c.disabled=l.disabled=!1,g(Math.min(d,u.length-1))}catch{m(`歌单暂时无法加载。请重试，或在网易云打开原歌单。`),s.hidden=!1}finally{f=!1}}}function v(){n.hidden=!0,t.setAttribute(`aria-expanded`,`false`),t.focus({preventScroll:!0})}t.addEventListener(`click`,()=>{let e=n.hidden;n.hidden=!e,t.setAttribute(`aria-expanded`,String(e)),e&&!u.length&&_()}),e.querySelector(`[data-music-close]`).addEventListener(`click`,v),e.addEventListener(`keydown`,e=>{e.key===`Escape`&&!n.hidden&&(e.preventDefault(),v())}),c.addEventListener(`click`,()=>g(d-1,!r.paused)),l.addEventListener(`click`,()=>g(d+1,!r.paused)),i.addEventListener(`change`,()=>g(Number(i.value),!r.paused)),e.querySelector(`[data-music-stop]`).addEventListener(`click`,()=>{r.pause(),Number.isFinite(r.duration)&&(r.currentTime=0),m(`已停止播放。`)}),s.addEventListener(`click`,_),r.addEventListener(`ended`,()=>g(d+1,!0)),r.addEventListener(`error`,h),r.addEventListener(`play`,()=>{t.dataset.playing=`true`,m(`正在播放。收起播放器后仍会继续。`)}),r.addEventListener(`pause`,()=>{t.dataset.playing=`false`}),document.addEventListener(`play`,e=>{e.target instanceof HTMLMediaElement&&(e.target===r?document.querySelectorAll(`audio,video`).forEach(e=>{e!==r&&e.pause()}):r.pause())},!0)}</script></body></html>
+&#x5c31;&#x662f;&#x8bf4;&#x5982;&#x679c;&#x4f60;&#x4e0d;&#x662f;&#x7528;getTabHost&#x800c;&#x662f;findViewById&#x83b7;&#x53d6;&#x7684;TabHost&#xff0c;&#x90a3;&#x5728;&#x4f7f;&#x7528;addTab()&#x65b9;&#x6cd5;&#x524d;&#x8981;&#x4f7f;&#x7528;setup()&#x65b9;&#x6cd5;&#x3002;</p>
+<h3 id="2-4-&#x8fd0;&#x884c;&#x6d4b;&#x8bd5;" tabindex="-1">2.4 &#x8fd0;&#x884c;&#x6d4b;&#x8bd5;<a class="heading-link" href="#2-4-%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95" aria-label="&#x590d;&#x5236;&#x7ae0;&#x8282;&#x94fe;&#x63a5;&#xff1a;2.4 &#x8fd0;&#x884c;&#x6d4b;&#x8bd5;" data-copy-heading="2-4-&#x8fd0;&#x884c;&#x6d4b;&#x8bd5;">#</a></h3>
+<p>&#x6309;&#x7167;&#x4ee5;&#x4e0a;&#x5b8c;&#x6210;&#x4e4b;&#x540e;, &#x518d;&#x6dfb;&#x52a0;&#x76f8;&#x5e94;&#x7684;&#x8d44;&#x6e90;&#x6587;&#x4ef6;&#x5c31;&#x53ef;&#x4ee5;&#x6210;&#x529f;&#x8fd0;&#x884c;&#x4e86;(&#x5728;API Level 13&#x4ee5;&#x4e0a;):
+<img src="/media/blog-android01/07201136126d85bd.webp" alt="tabhost_layout">
+&#x539f;&#x8c05;&#x6211;&#x7684;&#x80cc;&#x666f;&#x56fe;&#x7247;&#x3001;&#x3001;&#x3001;&#x70b9;&#x51fb;TAB2&#x540e;&#x5f39;&#x7a97;:
+<img src="/media/blog-android01/9093956fdcdab5d7.webp" alt="tabhost_popup"></p>
+<h3 id="2-5-&#x5411;&#x4e0b;&#x517c;&#x5bb9;" tabindex="-1">2.5 &#x5411;&#x4e0b;&#x517c;&#x5bb9;<a class="heading-link" href="#2-5-%E5%90%91%E4%B8%8B%E5%85%BC%E5%AE%B9" aria-label="&#x590d;&#x5236;&#x7ae0;&#x8282;&#x94fe;&#x63a5;&#xff1a;2.5 &#x5411;&#x4e0b;&#x517c;&#x5bb9;" data-copy-heading="2-5-&#x5411;&#x4e0b;&#x517c;&#x5bb9;">#</a></h3>
+<p>&#x8bf4;&#x5b8c;&#x4e86;&#x4e0d;&#x5411;&#x4e0b;&#x517c;&#x5bb9;&#x7684;&#x65b9;&#x6cd5;, &#x90a3;&#x5982;&#x679c;&#x9700;&#x8981;&#x5411;&#x4e0b;&#x517c;&#x5bb9;&#x5462;? &#x6b63;&#x5982;&#x4e00;&#x5f00;&#x59cb;&#x7684;&#x6587;&#x6863;&#x6240;&#x8bf4;, &#x4f7f;&#x7528;Fragments&#x548c;android.support.v4 library&#x5373;&#x53ef;, &#x5177;&#x4f53;&#x53ef;&#x4ee5;&#x53bb;&#x67e5;&#x770b;&#x8be6;&#x7ec6;&#x7684;&#x6587;&#x6863;, &#x91cc;&#x9762;&#x7ed9;&#x4e86;&#x4e00;&#x4e2a;&#x793a;&#x4f8b;, &#x6211;&#x628a;&#x793a;&#x4f8b;&#x4ee3;&#x7801;&#x8d34;&#x51fa;&#x6765;, &#x5c31;&#x4e0d;&#x5206;&#x6790;&#x4e86;:</p>
+<div class="code-block"><div class="code-tools"><span>xml</span><div><button type="button" data-code-wrap aria-pressed="false" hidden>&#x81ea;&#x52a8;&#x6362;&#x884c;</button><button type="button" data-code-copy hidden>&#x590d;&#x5236;&#x4ee3;&#x7801;</button></div></div><pre class="shiki shiki-themes github-light-high-contrast github-dark-high-contrast" style="background-color:#ffffff;--shiki-dark-bg:#0a0c10;color:#0e1116;--shiki-dark:#f0f3f6" tabindex="0" aria-label="xml &#x4ee3;&#x7801;&#x5757;" data-code-index="3"><code><span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">&lt;?</span><span style="color:#024C1A;--shiki-dark:#72F088">xml</span><span style="color:#023B95;--shiki-dark:#91CBFF"> version</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;1.0&quot;</span><span style="color:#023B95;--shiki-dark:#91CBFF"> encoding</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;utf-8&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">?&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">&lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">android.support.v4.app.FragmentTabHost</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">    xmlns:android</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;http://schemas.android.com/apk/res/android&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">    android:id</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@android:id/tabhost&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">    android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;match_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">    android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;match_parent&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    &lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">LinearLayout</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        android:orientation</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;vertical&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;match_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;match_parent&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        &lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">TabWidget</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:id</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@android:id/tabs&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:orientation</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;horizontal&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;match_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;wrap_content&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:layout_weight</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;0&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">/&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        &lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">FrameLayout</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:id</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@android:id/tabcontent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;0dp&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;0dp&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:layout_weight</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;0&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">/&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        &lt;</span><span style="color:#024C1A;--shiki-dark:#72F088">FrameLayout</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:id</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;@+id/realtabcontent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:layout_width</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;match_parent&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:layout_height</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;0dp&quot;</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">            android:layout_weight</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">=</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;1&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">/&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    &lt;/</span><span style="color:#024C1A;--shiki-dark:#72F088">LinearLayout</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">&lt;/</span><span style="color:#024C1A;--shiki-dark:#72F088">android.support.v4.app.FragmentTabHost</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">&gt;</span></span>
+<span class="line"></span></code></pre><p class="sr-only" role="status" data-code-status></p></div>
+<p>Java&#x4ee3;&#x7801;:</p>
+<div class="code-block"><div class="code-tools"><span>java</span><div><button type="button" data-code-wrap aria-pressed="false" hidden>&#x81ea;&#x52a8;&#x6362;&#x884c;</button><button type="button" data-code-copy hidden>&#x590d;&#x5236;&#x4ee3;&#x7801;</button></div></div><pre class="shiki shiki-themes github-light-high-contrast github-dark-high-contrast" style="background-color:#ffffff;--shiki-dark-bg:#0a0c10;color:#0e1116;--shiki-dark:#f0f3f6" tabindex="0" aria-label="java &#x4ee3;&#x7801;&#x5757;" data-code-index="4"><code><span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> com.example.android.supportv4.R;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.os.Bundle;</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.support.v4.app.FragmentActivity;</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">import</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> android.support.v4.app.FragmentTabHost;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#66707B;--shiki-dark:#BDC4CC">/**</span></span>
+<span class="line"><span style="color:#66707B;--shiki-dark:#BDC4CC"> * This demonstrates how you can implement switching between the tabs of a</span></span>
+<span class="line"><span style="color:#66707B;--shiki-dark:#BDC4CC"> * TabHost through fragments, using FragmentTabHost.</span></span>
+<span class="line"><span style="color:#66707B;--shiki-dark:#BDC4CC"> */</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">public</span><span style="color:#A0111F;--shiki-dark:#FF9492"> class</span><span style="color:#702C00;--shiki-dark:#FFB757"> FragmentTabs</span><span style="color:#A0111F;--shiki-dark:#FF9492"> extends</span><span style="color:#023B95;--shiki-dark:#91CBFF"> FragmentActivity</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> {</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">    private</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> FragmentTabHost</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> mTabHost;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    @</span><span style="color:#A0111F;--shiki-dark:#FF9492">Override</span></span>
+<span class="line"><span style="color:#A0111F;--shiki-dark:#FF9492">    protected</span><span style="color:#A0111F;--shiki-dark:#FF9492"> void</span><span style="color:#622CBC;--shiki-dark:#DBB7FF"> onCreate</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(Bundle </span><span style="color:#702C00;--shiki-dark:#FFB757">savedInstanceState</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">) {</span></span>
+<span class="line"><span style="color:#023B95;--shiki-dark:#91CBFF">        super</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">onCreate</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(savedInstanceState);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#622CBC;--shiki-dark:#DBB7FF">        setContentView</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(R.layout.fragment_tabs);</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost </span><span style="color:#A0111F;--shiki-dark:#FF9492">=</span><span style="color:#0E1116;--shiki-dark:#F0F3F6"> (FragmentTabHost)</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">findViewById</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(android.R.id.tabhost);</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setup</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#023B95;--shiki-dark:#91CBFF">this</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">, </span><span style="color:#622CBC;--shiki-dark:#DBB7FF">getSupportFragmentManager</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(), R.id.realtabcontent);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">addTab</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">newTabSpec</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;simple&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">).</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setIndicator</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;Simple&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">),</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                FragmentStackSupport.CountingFragment.class, </span><span style="color:#023B95;--shiki-dark:#91CBFF">null</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">);</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">addTab</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">newTabSpec</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;contacts&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">).</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setIndicator</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;Contacts&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">),</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                LoaderCursorSupport.CursorLoaderListFragment.class, </span><span style="color:#023B95;--shiki-dark:#91CBFF">null</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">);</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">addTab</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">newTabSpec</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;custom&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">).</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setIndicator</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;Custom&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">),</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                LoaderCustomSupport.AppListFragment.class, </span><span style="color:#023B95;--shiki-dark:#91CBFF">null</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">);</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">        mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">addTab</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(mTabHost.</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">newTabSpec</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;throttle&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">).</span><span style="color:#622CBC;--shiki-dark:#DBB7FF">setIndicator</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">(</span><span style="color:#032563;--shiki-dark:#ADDCFF">&quot;Throttle&quot;</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">),</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">                LoaderThrottleSupport.ThrottledLoaderListFragment.class, </span><span style="color:#023B95;--shiki-dark:#91CBFF">null</span><span style="color:#0E1116;--shiki-dark:#F0F3F6">);</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">    }</span></span>
+<span class="line"><span style="color:#0E1116;--shiki-dark:#F0F3F6">}</span></span>
+<span class="line"></span></code></pre><p class="sr-only" role="status" data-code-status></p></div>
+</div><aside class="article-outline" aria-label="文章目录"><details><summary>文章目录</summary><nav aria-label="本文章节"><ol><li style="--level:1"><a href="#1-%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2" data-outline-link>1. 写在前面</a></li><li style="--level:1"><a href="#2-TabHost%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3" data-outline-link>2. TabHost的使用详解</a></li><li style="--level:2"><a href="#2-1-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84" data-outline-link>2.1 项目结构</a></li><li style="--level:2"><a href="#2-2-App%E5%B8%83%E5%B1%80" data-outline-link>2.2 App布局</a></li><li style="--level:2"><a href="#2-3-%E9%80%BB%E8%BE%91%E4%BB%A3%E7%A0%81" data-outline-link>2.3 逻辑代码</a></li><li style="--level:2"><a href="#2-4-%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95" data-outline-link>2.4 运行测试</a></li><li style="--level:2"><a href="#2-5-%E5%90%91%E4%B8%8B%E5%85%BC%E5%AE%B9" data-outline-link>2.5 向下兼容</a></li></ol></nav></details></aside><dialog class="image-viewer" aria-labelledby="image-viewer-title"><div class="viewer-bar"><h2 id="image-viewer-title">查看图片</h2><button type="button" data-viewer-close>关闭</button></div><div class="viewer-viewport"><img data-viewer-image alt=""></div><p data-viewer-caption></p><div class="viewer-actions"><button type="button" data-viewer-prev>上一张</button><button type="button" data-viewer-zoom-out aria-label="缩小图片">−</button><button type="button" data-viewer-reset>适应窗口</button><button type="button" data-viewer-zoom-in aria-label="放大图片">＋</button><button type="button" data-viewer-next>下一张</button><a data-viewer-original target="_blank" rel="noopener noreferrer">打开原图 ↗</a></div><p role="status" data-viewer-status></p></dialog><script type="module" src="/_astro/ReadingTools.astro_astro_type_script_index_0_lang.B7E691wu.js"></script></div><section class="publication-info" aria-label="作品信息与分享"><h2>关于这篇作品</h2><p>作者：Kino · 当前内容版本 1</p><p>作者原创文字沿用原站的 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> 声明。引用、图片及其他第三方材料按各自来源的许可使用。</p><label class="canonical-link">永久链接<input aria-label="作品永久链接" readonly value="https://xuwei.fun/works/blog-android01/"></label><div class="share-actions"><button type="button" data-copy-share="link" hidden>复制链接</button><button type="button" data-copy-share="citation" hidden>复制标题与出处</button><button type="button" data-native-share hidden>系统分享</button><a href="https://blog.xuwei.fun/2014/08/27/android01/">原博客地址 ↗</a></div><p role="status" data-share-status></p></section><aside class="related suggested"><h2>同主题推荐</h2><p>根据这些作品共有的标签与主题整理。</p><a href="/works/blog-android05/">Android Studio 与 Gradle ↗</a><a href="/works/blog-android03/">Android ViewPager的使用 ↗</a><a href="/works/blog-android02/">Android Layout布局 ↗</a><a href="/works/blog-characterset/">从一个Emoji字符说起 ↗</a></aside><nav class="timeline-navigation" aria-label="按时间继续阅读"><h2>继续浏览文章</h2><div class="continue-grid"><a href="/works/blog-android02/"><span>较新一篇</span>Android Layout布局</a><a href="/works/blog-c02/"><span>较早一篇</span>C语言琐记二</a></div></nav><footer class="work-end"><span>— END —</span><p>谢谢你把时间留在这里。</p><a href="/works/">继续浏览作品 ↗</a></footer></article></main><footer class="site-footer"><div><a href="/" class="footer-title">霁月荒馆</a><p>以今日之我与昨日之我战</p></div><div><span>文字 · 摄影 · 声音 · 影像</span><a href="/rss.xml">保持联系 · RSS ↗</a><small>© 2026 Kino · Amor Fati</small></div><div class="footer-social"><a href="https://github.com/WoeiSheu" target="_blank" rel="me noopener noreferrer">GitHub ↗</a><a href="https://twitter.com/KafuuKino" target="_blank" rel="me noopener noreferrer">X / Twitter ↗</a><a href="https://weibo.com/u/2613432527" target="_blank" rel="me noopener noreferrer">微博 ↗</a><a href="/tags/">标签</a></div></footer><aside data-astro-transition-persist="background-music" class="music-dock" aria-label="背景音乐" data-music-dock data-endpoint="https://api.injahow.cn/meting/" data-playlist="7419132999"><div class="music-panel" id="background-music-panel" hidden><header><h2>听一会儿</h2><button type="button" data-music-close aria-label="收起音乐播放器">×</button></header><p class="music-track" data-music-track>旧博客的那份歌单。</p><label>选择歌曲<select data-music-select disabled><option>尚未加载歌单</option></select></label><audio controls preload="none" aria-label="背景音乐播放控制"></audio><div class="music-actions"><button type="button" data-music-previous disabled aria-label="上一首">上一首</button><button type="button" data-music-next disabled aria-label="下一首">下一首</button><button type="button" data-music-stop>停止</button><button type="button" data-music-retry hidden>重试加载</button></div><p role="status" data-music-status>点击后加载歌单，不会自动播放。</p><p class="music-source"><a href="https://music.163.com/#/playlist?id=7419132999" target="_blank" rel="noopener noreferrer">在网易云打开原歌单 ↗</a></p></div><button type="button" class="music-toggle" data-music-toggle aria-expanded="false" aria-controls="background-music-panel" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 18V5l12-2v13M9 8l12-2"></path><ellipse cx="6" cy="18" rx="3" ry="2"></ellipse><ellipse cx="18" cy="16" rx="3" ry="2"></ellipse></svg><span>音乐</span></button><noscript><a class="music-toggle" href="https://music.163.com/#/playlist?id=7419132999">网易云歌单 ↗</a></noscript></aside><script type="module">var e=document.querySelector(`[data-music-dock]`);if(e){let t=e.querySelector(`[data-music-toggle]`),n=e.querySelector(`.music-panel`),r=e.querySelector(`audio`),i=e.querySelector(`select`),a=e.querySelector(`[data-music-track]`),o=e.querySelector(`[data-music-status]`),s=e.querySelector(`[data-music-retry]`),c=e.querySelector(`[data-music-previous]`),l=e.querySelector(`[data-music-next]`),u=[],d=0,f=!1;t.hidden=!1;let p=e=>{try{let t=new URL(e);return t.protocol===`https:`&&/(^|\.)(i-meto\.com|injahow\.cn|meting\.red|music\.126\.net|music\.163\.com|126\.net)$/.test(t.hostname)?t.href:null}catch{return null}},m=e=>{o.textContent=e},h=()=>{s.hidden=!1,m(`当前歌曲暂时无法播放。可重试、换一首，或打开原歌单。`)};function g(e,t=!1){if(!u.length)return;d=(e+u.length)%u.length;let n=u[d];i.value=String(d),r.src=n.url,a.textContent=`${n.title} · ${n.artist}`,s.hidden=!0,m(`使用播放控件开始；切换页面会继续播放。`),t&&r.play().catch(h)}async function _(){if(!f){f=!0,s.hidden=!0,m(`正在加载歌单…`);try{let t=new URL(e.dataset.endpoint);t.search=new URLSearchParams({server:`netease`,type:`playlist`,id:e.dataset.playlist}).toString();let n=await fetch(t,{signal:AbortSignal.timeout(15e3),credentials:`omit`,referrerPolicy:`no-referrer`});if(!n.ok)throw Error(`unavailable`);let r=await n.json();if(!Array.isArray(r))throw Error(`invalid playlist`);if(u=r.slice(0,500).map(e=>({title:String(e.title||e.name||`未命名歌曲`).slice(0,200),artist:String(e.author||e.artist||`未知音乐人`).slice(0,200),url:p(e.url)})).filter(e=>e.url),!u.length)throw Error(`empty playlist`);i.replaceChildren(...u.map((e,t)=>new Option(`${t+1}. ${e.title} · ${e.artist}`,String(t)))),i.disabled=c.disabled=l.disabled=!1,g(Math.min(d,u.length-1))}catch{m(`歌单暂时无法加载。请重试，或在网易云打开原歌单。`),s.hidden=!1}finally{f=!1}}}function v(){n.hidden=!0,t.setAttribute(`aria-expanded`,`false`),t.focus({preventScroll:!0})}t.addEventListener(`click`,()=>{let e=n.hidden;n.hidden=!e,t.setAttribute(`aria-expanded`,String(e)),e&&!u.length&&_()}),e.querySelector(`[data-music-close]`).addEventListener(`click`,v),e.addEventListener(`keydown`,e=>{e.key===`Escape`&&!n.hidden&&(e.preventDefault(),v())}),c.addEventListener(`click`,()=>g(d-1,!r.paused)),l.addEventListener(`click`,()=>g(d+1,!r.paused)),i.addEventListener(`change`,()=>g(Number(i.value),!r.paused)),e.querySelector(`[data-music-stop]`).addEventListener(`click`,()=>{r.pause(),Number.isFinite(r.duration)&&(r.currentTime=0),m(`已停止播放。`)}),s.addEventListener(`click`,_),r.addEventListener(`ended`,()=>g(d+1,!0)),r.addEventListener(`error`,h),r.addEventListener(`play`,()=>{t.dataset.playing=`true`,m(`正在播放。收起播放器后仍会继续。`)}),r.addEventListener(`pause`,()=>{t.dataset.playing=`false`}),document.addEventListener(`play`,e=>{e.target instanceof HTMLMediaElement&&(e.target===r?document.querySelectorAll(`audio,video`).forEach(e=>{e!==r&&e.pause()}):r.pause())},!0)}</script><script type="module" src="/_astro/Base.astro_astro_type_script_index_0_lang.BpcKUU3K.js"></script></body></html>
